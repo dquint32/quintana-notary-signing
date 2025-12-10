@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Quintana Notary & Signing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-help-bar">
+        <a href="tel:+13035004122" class="top-help-link">
+            <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
+            <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
+        </a>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div id="brand-logo">
+                <a href="index.html">
+                    <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+                </a>
+            </div>
+
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="index.html" id="nav-home-es">Inicio</a>
+                <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
+                
+                <a href="services.html" id="nav-services-es">Servicios</a>
+                <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+                
+                <a href="pricing.html" id="nav-pricing-es">Precios</a>
+                <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
+                
+                <a href="about.html" id="nav-about-es">Acerca de</a>
+                <a href="about.html" id="nav-about-en" style="display:none;">About</a>
+                
+                <a href="faq.html" id="nav-faq-es">Preguntas</a>
+                <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
+                
+                <a href="contact.html" id="nav-contact-es">Contacto</a>
+                <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
+                
+                <button class="toggle-btn" onclick="toggleLanguage()">
+                    <span id="toggle-label-en" style="display:none;">Español</span>
+                    <span id="toggle-label-es">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-h1-es">Servicios Notariales Principales</h1>
+            <h1 id="hero-h1-en" style="display:none;">Core Notary Services</h1>
+            
+            <p class="hero-subtitle" id="hero-h2-es">Explicaciones claras de lo que hacemos por usted.</p>
+            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Clear explanations of what we do for you.</p>
+        </div>
+    </section>
+
+    <section class="section container">
+        
+        <div class="intro-card">
+            <div class="card-icon">🌎</div>
+            <h3 id="intro-title-es">Servicios Notariales: Su Servicio Notarial Móvil y Bilingüe</h3>
+            <h3 id="intro-title-en" style="display:none;">Notary Services: Your Mobile & Bilingual Notary Service</h3>
+            
+            <p id="intro-p-es">¡Bienvenidos! Nos dedicamos a hacer que su proceso de firma de documentos sea lo más conveniente, claro y cómodo posible. Ofrecemos todos los actos notariales estándar autorizados en Colorado, con el beneficio adicional del servicio bilingüe (inglés y español) y opciones de servicio flexibles.</p>
+            <p id="intro-p-en" style="display:none;">Welcome! We are dedicated to making your document signing process as convenient, clear, and comfortable as possible. We offer all standard notarial acts authorized in Colorado, with the added benefit of bilingual service (English & Spanish) and flexible service options.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 id="loc-title-es">📍 Ubicaciones de Reunión Sin Cargo</h2>
+        <h2 id="loc-title-en" style="display:none;">📍 Fee-Free Meeting Locations</h2>
+        
+        <p class="section-intro" id="loc-desc-es">Puede eliminar por completo la Tarifa Móvil reuniéndose con el Notario en una de las siguientes ubicaciones comunitarias. <strong>Se requiere cita previa.</strong></p>
+        <p class="section-intro" id="loc-desc-en" style="display:none;">You can completely waive the Mobile & Convenience Fee by meeting the Notary at one of the following community locations. <strong>An appointment is required.</strong></p>
+
+        <div class="location-grid">
+            <div class="card location-card">
+                <div class="location-badge discount">
+                    <span id="loc-badge-1-es">¡Descuento Especial!</span>
+                    <span id="loc-badge-1-en" style="display:none;">Special Discount!</span>
+                </div>
+                <h3>Tienda Salvadoreña</h3>
+                <div class="location-benefit">
+                    <span id="loc-1-es">Además de no cobrar tarifa de transporte, recibe un descuento de <strong>$5 por firma</strong>.</span>
+                    <span id="loc-1-en" style="display:none;">In addition to waiving the transport fee, you receive a <strong>$5 discount per signature</strong>!</span>
+                </div>
+            </div>
+
+            <div class="card location-card">
+                <div class="location-badge discount">
+                    <span id="loc-badge-2-es">¡Descuento Especial!</span>
+                    <span id="loc-badge-2-en" style="display:none;">Special Discount!</span>
+                </div>
+                <h3>MSU Denver</h3>
+                <div class="location-benefit">
+                    <span id="loc-2-es">Además de no cobrar tarifa de transporte, recibe un descuento de <strong>$5 por firma</strong>.</span>
+                    <span id="loc-2-en" style="display:none;">In addition to waiving the transport fee, you receive a <strong>$5 discount per signature</strong>!</span>
+                </div>
+            </div>
+
+            <div class="card location-card">
+                <div class="location-badge free">
+                    <span id="loc-badge-3-es">Sin Cargo</span>
+                    <span id="loc-badge-3-en" style="display:none;">Fee-Free</span>
+                </div>
+                <h3 id="loc-3-title-es">Biblioteca Auraria (Denver)</h3>
+                <h3 id="loc-3-title-en" style="display:none;">Auraria Library (Denver)</h3>
+                <p id="loc-3-es">Ubicación conveniente en el centro de Denver.</p>
+                <p id="loc-3-en" style="display:none;">Convenient Denver downtown location.</p>
+            </div>
+
+            <div class="card location-card">
+                <div class="location-badge free">
+                    <span id="loc-badge-4-es">Sin Cargo</span>
+                    <span id="loc-badge-4-en" style="display:none;">Fee-Free</span>
+                </div>
+                <h3 id="loc-4-title-es">Biblioteca Pública de Denver (Sam Gary)</h3>
+                <h3 id="loc-4-title-en" style="display:none;">Denver Public Library (Sam Gary)</h3>
+                <p id="loc-4-es">Ubicación accesible en el área de Stapleton/Central Park.</p>
+                <p id="loc-4-en" style="display:none;">Accessible location in the Stapleton/Central Park area.</p>
+            </div>
+
+            <div class="card location-card">
+                <div class="location-badge free">
+                    <span id="loc-badge-5-es">Sin Cargo</span>
+                    <span id="loc-badge-5-en" style="display:none;">Fee-Free</span>
+                </div>
+                <h3 id="loc-5-title-es">Biblioteca de Castle Rock (Philip S. Miller)</h3>
+                <h3 id="loc-5-title-en" style="display:none;">Castle Rock Library (Philip S. Miller)</h3>
+                <p id="loc-5-es">Ubicación conveniente para nuestros clientes del área de Castle Rock.</p>
+                <p id="loc-5-en" style="display:none;">Convenient location for our Castle Rock area clients.</p>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <span id="loc-note-es"><strong>Nota:</strong> Si requiere nuestro Servicio de Transporte (que lo lleven a la ubicación), se aplicará la Tarifa Móvil estándar.</span>
+            <span id="loc-note-en" style="display:none;"><strong>Note:</strong> If you require our Transportation Service (a ride to the location), the standard Mobile & Convenience Fee will apply.</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 id="conv-title-es">🚗 Nuestro Compromiso con la Conveniencia y Accesibilidad</h2>
+        <h2 id="conv-title-en" style="display:none;">🚗 Our Commitment to Convenience & Accessibility</h2>
+        
+        <p class="section-intro" id="conv-desc-es">Entendemos que la notarización a veces puede ser una tarea urgente o difícil. Eliminamos las molestias ofreciendo opciones de servicio flexibles:</p>
+        <p class="section-intro" id="conv-desc-en" style="display:none;">We understand that notarization can sometimes be an urgent or difficult errand. We remove the hassle by offering flexible service options:</p>
+
+        <div class="service-options">
+            <div class="card service-option-card">
+                <div class="card-icon">🚙</div>
+                <h3 id="td-1-name-es">Servicio Notarial Móvil</h3>
+                <h3 id="td-1-name-en" style="display:none;">Mobile Notary Service</h3>
+                
+                <div class="service-details">
+                    <div class="detail-item">
+                        <strong id="td-det-es">Detalles:</strong>
+                        <strong id="td-det-en" style="display:none;">Details:</strong>
+                        <span id="td-1-det-es">Viajamos a su ubicación (hogar, oficina, hospital o lugar público) en Castle Rock y las áreas metropolitanas del sur y Denver.</span>
+                        <span id="td-1-det-en" style="display:none;">We travel to your location—home, office, hospital, or public place—anywhere in the Castle Rock, South Metro, and Denver Metro areas.</span>
+                    </div>
+                    <div class="detail-item benefit">
+                        <strong id="td-ben-es">Su Beneficio:</strong>
+                        <strong id="td-ben-en" style="display:none;">Your Benefit:</strong>
+                        <span id="td-1-ben-es">Ahorra tiempo y gasolina evitando el viaje y la espera (Aplica Tarifa de Viaje).</span>
+                        <span id="td-1-ben-en" style="display:none;">You save time and gas by skipping the travel and waiting (Travel Fee Applies).</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card service-option-card">
+                <div class="card-icon">🚕</div>
+                <h3 id="td-2-name-es">Servicio de Transporte</h3>
+                <h3 id="td-2-name-en" style="display:none;">Transportation Service</h3>
+                
+                <div class="service-details">
+                    <div class="detail-item">
+                        <strong id="td-det-es">Detalles:</strong>
+                        <strong id="td-det-en" style="display:none;">Details:</strong>
+                        <span id="td-2-det-es">¿Necesita un aventón? Ofrecemos transporte hacia y desde su cita notarial en una de nuestras Ubicaciones Sin Cargo.</span>
+                        <span id="td-2-det-en" style="display:none;">Need a ride? We offer transportation to and from your notary appointment at one of our Fee-Free Meeting Locations.</span>
+                    </div>
+                    <div class="detail-item benefit">
+                        <strong id="td-ben-es">Su Beneficio:</strong>
+                        <strong id="td-ben-en" style="display:none;">Your Benefit:</strong>
+                        <span id="td-2-ben-es">Conveniente para clientes sin transporte o que prefieren evitar conducir (Aplica Tarifa de Viaje).</span>
+                        <span id="td-2-ben-en" style="display:none;">Convenient for clients without transportation or who prefer to avoid driving (Travel Fee Applies).</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card service-option-card">
+                <div class="card-icon">🌐</div>
+                <h3 id="td-3-name-es">Apoyo Bilingüe</h3>
+                <h3 id="td-3-name-en" style="display:none;">Bilingual Support</h3>
+                
+                <div class="service-details">
+                    <div class="detail-item">
+                        <strong id="td-det-es">Detalles:</strong>
+                        <strong id="td-det-en" style="display:none;">Details:</strong>
+                        <span id="td-3-det-es">Todos nuestros servicios se ofrecen con fluidez en inglés y español.</span>
+                        <span id="td-3-det-en" style="display:none;">All our services are offered fluently in English and Spanish.</span>
+                    </div>
+                    <div class="detail-item benefit">
+                        <strong id="td-ben-es">Su Beneficio:</strong>
+                        <strong id="td-ben-en" style="display:none;">Your Benefit:</strong>
+                        <span id="td-3-ben-es">Asegura que comprenda completamente el proceso en el idioma con el que se sienta más cómodo.</span>
+                        <span id="td-3-ben-en" style="display:none;">Ensures you fully understand the process in the language you are most comfortable with.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 id="acts-title-es">🔐 Actos Notariales Principales</h2>
+        <h2 id="acts-title-en" style="display:none;">🔐 Core Notarial Acts We Perform</h2>
+        <p class="section-intro" id="acts-sub-es">Cada acto notarial se realiza de acuerdo con la ley del estado de Colorado para prevenir el fraude y proteger a todas las partes. (La tarifa estatutaria se detalla en nuestra Página de Precios.)</p>
+        <p class="section-intro" id="acts-sub-en" style="display:none;">Every notarial act is performed according to Colorado state law to prevent fraud and protect all parties. (The statutory fee for each of these acts is listed on our Pricing Page.)</p>
+
+        <div class="notarial-acts">
+            <div class="card act-card">
+                <h3 id="ack-es">Reconocimientos (Acknowledgments)</h3>
+                <h3 id="ack-en" style="display:none;">Acknowledgments</h3>
+                
+                <div class="act-details">
+                    <div class="act-item">
+                        <strong id="act-what-es">Lo que implica:</strong>
+                        <strong id="act-what-en" style="display:none;">What it involves:</strong>
+                        <span id="ack-inv-es">Usted confirma al Notario que firmó voluntariamente.</span>
+                        <span id="ack-inv-en" style="display:none;">You confirm to the Notary you signed willingly.</span>
+                    </div>
+                    <div class="act-item">
+                        <strong id="act-bring-es">Qué traer:</strong>
+                        <strong id="act-bring-en" style="display:none;">What to bring:</strong>
+                        <span id="ack-bring-es">Documento (firmado o sin firmar) y una identificación válida.</span>
+                        <span id="ack-bring-en" style="display:none;">Document (signed or unsigned) and valid ID.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card act-card">
+                <h3 id="oath-es">Juramentos y Declaraciones Juradas (Jurats)</h3>
+                <h3 id="oath-en" style="display:none;">Oaths & Affirmations (Jurats)</h3>
+                
+                <div class="act-details">
+                    <div class="act-item">
+                        <strong id="act-what-es">Lo que implica:</strong>
+                        <strong id="act-what-en" style="display:none;">What it involves:</strong>
+                        <span id="oath-inv-es">Usted jura o afirma que las declaraciones son verdaderas y firma en presencia del Notario.</span>
+                        <span id="oath-inv-en" style="display:none;">You swear or affirm statements are true and sign in the Notary's presence.</span>
+                    </div>
+                    <div class="act-item">
+                        <strong id="act-bring-es">Qué traer:</strong>
+                        <strong id="act-bring-en" style="display:none;">What to bring:</strong>
+                        <span id="oath-bring-es">Documento (sin firmar) y una identificación válida.</span>
+                        <span id="oath-bring-en" style="display:none;">Document (unsigned) and valid ID.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card act-card">
+                <h3 id="sig-es">Testimonio de Firmas</h3>
+                <h3 id="sig-en" style="display:none;">Signature Witnessing</h3>
+                
+                <div class="act-details">
+                    <div class="act-item">
+                        <strong id="act-what-es">Lo que implica:</strong>
+                        <strong id="act-what-en" style="display:none;">What it involves:</strong>
+                        <span id="sig-inv-es">El Notario verifica su identidad y lo observa firmar.</span>
+                        <span id="sig-inv-en" style="display:none;">Notary verifies identity and watches you sign.</span>
+                    </div>
+                    <div class="act-item">
+                        <strong id="act-bring-es">Qué traer:</strong>
+                        <strong id="act-bring-en" style="display:none;">What to bring:</strong>
+                        <span id="sig-bring-es">Documento (sin firmar) y una identificación válida.</span>
+                        <span id="sig-bring-en" style="display:none;">Document (unsigned) and valid ID.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card act-card">
+                <h3 id="copy-es">Certificación de Copias</h3>
+                <h3 id="copy-en" style="display:none;">Copy Certifications</h3>
+                
+                <div class="act-details">
+                    <div class="act-item">
+                        <strong id="act-what-es">Lo que implica:</strong>
+                        <strong id="act-what-en" style="display:none;">What it involves:</strong>
+                        <span id="copy-inv-es">El Notario certifica que una copia coincide con el original (donde lo permita la ley de CO).</span>
+                        <span id="copy-inv-en" style="display:none;">Notary certifies a copy matches the original (where allowed by CO law).</span>
+                    </div>
+                    <div class="act-item">
+                        <strong id="act-bring-es">Qué traer:</strong>
+                        <strong id="act-bring-en" style="display:none;">What to bring:</strong>
+                        <span id="copy-bring-es">Registro original y una copia limpia.</span>
+                        <span id="copy-bring-en" style="display:none;">Original record and clean copy.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card act-card">
+                <h3 id="i9-es">Servicios de Representante Autorizado I-9</h3>
+                <h3 id="i9-en" style="display:none;">I-9 Authorized Representative Services</h3>
+                
+                <div class="act-details">
+                    <div class="act-item">
+                        <strong id="act-what-es">Lo que implica:</strong>
+                        <strong id="act-what-en" style="display:none;">What it involves:</strong>
+                        <span id="i9-inv-es">El Notario actúa por el empleador para examinar identificaciones y completar la Sección 2 (No se usa sello notarial).</span>
+                        <span id="i9-inv-en" style="display:none;">Notary acts for employer to examine IDs and complete Section 2. (No notary seal is used)</span>
+                    </div>
+                    <div class="act-item">
+                        <strong id="act-bring-es">Qué traer:</strong>
+                        <strong id="act-bring-en" style="display:none;">What to bring:</strong>
+                        <span id="i9-bring-es">Formulario I-9, instrucciones del empleador e identificaciones originales vigentes.</span>
+                        <span id="i9-bring-en" style="display:none;">I-9 form, employer instructions, and original, unexpired IDs.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="card-icon">💡</div>
+            <h3 id="notes-es">Notas Importantes</h3>
+            <h3 id="notes-en" style="display:none;">Important Notes</h3>
+            
+            <div class="warning-content">
+                <div class="warning-item">
+                    <strong id="note-title-1-es">Asesoría Legal:</strong>
+                    <strong id="note-title-1-en" style="display:none;">Legal Advice:</strong>
+                    <span id="note-legal-es">No somos abogados y no podemos dar asesoría legal. No podemos elegir el certificado notarial correcto por usted ni aconsejarle sobre el significado de su documento.</span>
+                    <span id="note-legal-en" style="display:none;">We are not attorneys and cannot provide legal advice. We cannot choose the correct notarial certificate for you or counsel you on the meaning of your document.</span>
+                </div>
+
+                <div class="warning-item">
+                    <strong id="note-title-2-es">Precios y Programación:</strong>
+                    <strong id="note-title-2-en" style="display:none;">Pricing and Scheduling:</strong>
+                    <span id="note-price-es">Para precios detallados, incluyendo la tarifa de $15 por sello, niveles de viaje móvil y cargos premium, visite nuestra <a href="pricing.html">Página de Precios</a>. Todos los servicios requieren cita previa.</span>
+                    <span id="note-price-en" style="display:none;">For detailed pricing, including the $15 per-seal fee, mobile travel tiers, and premium charges, please visit our <a href="pricing.html">Pricing Page</a>. All services require an appointment.</span>
+                </div>
+
+                <div class="warning-item highlight">
+                    <strong id="note-title-3-es">Huella Dactilar Voluntaria:</strong>
+                    <strong id="note-title-3-en" style="display:none;">Voluntary Thumbprint:</strong>
+                    <span id="note-print-es">Como medida extra para proteger contra el fraude de identidad, podemos solicitar que los clientes proporcionen voluntariamente una huella dactilar en nuestro diario notarial seguro. Proporcionar una huella dactilar es opcional y no es requerido por la ley de Colorado para que la notarización sea válida.</span>
+                    <span id="note-print-en" style="display:none;">As an extra measure to protect against identity fraud, we may request that clients voluntarily provide a thumbprint in our secure Notary journal. Providing a thumbprint is optional and is not required by Colorado law for the notarization to be valid.</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p id="footer-main-es">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Precios transparentes · Servicio bilingüe · Enfoque comunitario
+        </p>
+        <p id="footer-main-en" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
+        </p>
+
+        <div class="disclaimer">
+            <div id="disclaimer-es">
+                <strong>Aviso Legal (ES)</strong>
+                Soy Notario Público de Colorado. No soy abogado autorizado para ejercer la abogacía y no doy asesoría legal. Los actos notariales se realizan únicamente en persona.
+            </div>
+            <div id="disclaimer-en" style="display:none;">
+                <strong>Legal Notice (EN)</strong>
+                I am a Colorado Notary Public. I am not an attorney licensed to practice law and I do not give legal advice. Notarial acts are performed in person only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
