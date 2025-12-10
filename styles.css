@@ -409,13 +409,16 @@ nav a:hover {
   border-color: var(--navy);
 }
 
+/* UPDATED: Made card-highlight match standard .card 
+  to ensure uniform color across all three info cards.
+*/
 .card-highlight {
-  border-color: var(--orange);
-  background: linear-gradient(135deg, #FFF5EB 0%, var(--white) 100%);
+  border-color: var(--border-gray);
+  background: var(--white);
 }
 
 .card-highlight:hover {
-  border-color: var(--orange);
+  border-color: var(--navy);
 }
 
 .card-icon {
@@ -1815,14 +1818,56 @@ footer {
   font-weight: 600;
 }
 
+/* === UPDATED: Contact Details & Hours === */
 .contact-details {
   margin-top: var(--space-xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  text-align: center;
+  align-items: center; /* Ensures items are centered on mobile */
 }
 
+/* New style for the hours container */
+.hours-details {
+  width: 100%;
+  max-width: 600px;
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.1); /* Matches other glass elements */
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+  text-align: left; /* Clean list alignment */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hours-details h3 {
+  color: var(--white);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: var(--space-sm);
+}
+
+.hours-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours-details li {
+  margin-bottom: var(--space-sm);
+  color: var(--white);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hours-details li strong {
+  color: var(--orange);
+  display: block; /* Stacks label for clarity */
+  margin-bottom: 0.25rem;
+}
+
+/* Refined Detail Row (Email/Phone) */
 .detail-row {
   display: flex;
   flex-direction: column;
@@ -1831,6 +1876,10 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
   backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 
 .detail-row strong {
@@ -2120,20 +2169,23 @@ footer {
     grid-template-columns: 1fr;
   }
   
+  /* Adjusted Desktop View for Contact Details 
+     Kept centered and stacked to handle variable text length cleanly */
   .contact-details {
-    flex-direction: row;
+    /* flex-direction row removed to keep vertical stack */
     justify-content: center;
-    text-align: left;
   }
   
   .detail-row {
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: var(--space-md);
   }
   
   .detail-row strong {
-    min-width: 120px;
+    min-width: auto;
+    margin-right: var(--space-sm);
   }
 }
 
