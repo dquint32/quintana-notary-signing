@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Quintana Notary & Signing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-help-bar">
+        <a href="tel:+13035004122" class="top-help-link">
+            <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
+            <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
+        </a>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div id="brand-logo">
+                <a href="index.html">
+                    <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+                </a>
+            </div>
+
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="index.html" id="nav-home-es">Inicio</a>
+                <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
+                
+                <a href="services.html" id="nav-services-es">Servicios</a>
+                <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+                
+                <a href="pricing.html" id="nav-pricing-es">Precios</a>
+                <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
+                
+                <a href="about.html" id="nav-about-es">Acerca de</a>
+                <a href="about.html" id="nav-about-en" style="display:none;">About</a>
+                
+                <a href="faq.html" id="nav-faq-es">Preguntas</a>
+                <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
+                
+                <a href="contact.html" id="nav-contact-es">Contacto</a>
+                <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
+                
+                <button class="toggle-btn" onclick="toggleLanguage()">
+                    <span id="toggle-label-en" style="display:none;">Español</span>
+                    <span id="toggle-label-es">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="title-es">Contacto y Ubicación</h1>
+            <h1 id="title-en" style="display:none;">Contact & Location</h1>
+            
+            <p class="hero-subtitle" id="subtitle-es">Estamos aquí para ayudarle. Programe su cita hoy.</p>
+            <p class="hero-subtitle" id="subtitle-en" style="display:none;">We're here to help. Schedule your appointment today.</p>
+        </div>
+    </section>
+
+    <main class="section container">
+        
+        <div class="contact-info-card">
+            <div class="card-icon">📞</div>
+            <h2 id="cta-heading-es">Información de Contacto</h2>
+            <h2 id="cta-heading-en" style="display:none;">Contact Information</h2>
+
+            <div class="info-box appointment-note">
+                <p id="appt-note-es">⚠️ <strong>Nota:</strong> Todos los servicios son solo con cita previa.</p>
+                <p id="appt-note-en" style="display:none;">⚠️ <strong>Note:</strong> All services are by appointment only.</p>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="tel:+13035004122" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📱</span>
+                    <span id="btn-call-es">Llamar 303-500-4122</span>
+                    <span id="btn-call-en" style="display:none;">Call 303-500-4122</span>
+                </a>
+                
+                <a href="https://wa.me/13035004122" class="btn btn-whatsapp btn-large">
+                    <span class="btn-icon">💬</span>
+                    <span id="btn-wa-es">WhatsApp</span>
+                    <span id="btn-wa-en" style="display:none;">WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="contact-details">
+                <div class="detail-row">
+                    <strong id="hours-label-es">Horario:</strong>
+                    <strong id="hours-label-en" style="display:none;">Business Hours:</strong>
+                    <span id="hours-value-es">Disponibilidad regular y fuera de horario</span>
+                    <span id="hours-value-en" style="display:none;">Regular and after-hours availability</span>
+                </div>
+                <div class="detail-row">
+                    <strong>Email:</strong>
+                    <a href="mailto:placasfirmas.david@gmail.com">placasfirmas.david@gmail.com</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 id="loc-heading-es">📍 Ubicaciones de Servicio</h2>
+        <h2 id="loc-heading-en" style="display:none;">📍 Service Locations</h2>
+
+        <div class="contact-location-grid">
+            <div class="card contact-location-card">
+                <div class="card-icon">🚙</div>
+                <h3 id="mobile-h-es">Servicio Móvil</h3>
+                <h3 id="mobile-h-en" style="display:none;">Mobile Service</h3>
+                <p id="mobile-p-es">
+                    Disponible en domicilios de clientes o lugares públicos (ej. Starbucks).
+                </p>
+                <p id="mobile-p-en" style="display:none;">
+                    Available at client homes or public places (e.g., Starbucks).
+                </p>
+                <div class="location-note">
+                    <strong id="mobile-note-es">Nota:</strong>
+                    <strong id="mobile-note-en" style="display:none;">Note:</strong>
+                    <span id="mobile-note-text-es">Se aplican cargos de transporte según el millaje.</span>
+                    <span id="mobile-note-text-en" style="display:none;">Transport fees apply based on mileage.</span>
+                </div>
+            </div>
+
+            <div class="card contact-location-card free-locations">
+                <div class="card-icon">✅</div>
+                <h3 id="free-h-es">Ubicaciones Sin Cargo de Viaje</h3>
+                <h3 id="free-h-en" style="display:none;">Fee-Free Meeting Locations</h3>
+                <p class="free-subtitle" id="free-sub-es">Sin cargo de transporte si nos reunimos aquí:</p>
+                <p class="free-subtitle" id="free-sub-en" style="display:none;">No transport charge if we meet here:</p>
+                
+                <div class="location-list">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=1100+Lawrence+Street,+Denver,+CO+80204" target="_blank" class="location-item">
+                        <div class="location-name">Auraria Library (Denver)</div>
+                        <div class="location-address">1100 Lawrence Street, Denver, CO 80204</div>
+                        <div class="location-directions">
+                            <span id="dir-text-1-es">Obtener Direcciones →</span>
+                            <span id="dir-text-1-en" style="display:none;">Get Directions →</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=2961+Roslyn+Street,+Denver,+CO+80238" target="_blank" class="location-item">
+                        <div class="location-name">Denver Public Library – Sam Gary Branch</div>
+                        <div class="location-address">2961 Roslyn Street, Denver, CO 80238</div>
+                        <div class="location-directions">
+                            <span id="dir-text-2-es">Obtener Direcciones →</span>
+                            <span id="dir-text-2-en" style="display:none;">Get Directions →</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=100+S+Wilcox+Street,+Castle+Rock,+CO+80104" target="_blank" class="location-item">
+                        <div class="location-name">Castle Rock Library (Philip S. Miller)</div>
+                        <div class="location-address">100 S Wilcox Street, Castle Rock, CO 80104</div>
+                        <div class="location-directions">
+                            <span id="dir-text-3-es">Obtener Direcciones →</span>
+                            <span id="dir-text-3-en" style="display:none;">Get Directions →</span>
+                        </div>
+                    </a>
+
+                    <div class="location-item">
+                        <div class="location-name">Tienda Salvadoreña</div>
+                        <div class="location-address">5128 E Colfax Avenue, Denver, CO 80220</div>
+                        
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=5128+E+Colfax+Avenue,+Denver,+CO+80220" target="_blank" class="location-directions" style="display: block; margin-bottom: 0.5rem;">
+                            <span id="dir-text-4-es">Obtener Direcciones →</span>
+                            <span id="dir-text-4-en" style="display:none;">Get Directions →</span>
+                        </a>
+                        
+                        <a href="http://tiendasalvadorenadenver.com/" target="_blank" class="location-directions" style="color: #0F47AF; display: block;">
+                            <span id="site-text-es">Visitar el sitio web →</span>
+                            <span id="site-text-en" style="display:none;">Visit Website →</span>
+                        </a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="discount-highlight-box">
+            <div class="card-icon">💰</div>
+            <h3 id="discount-h-es">Descuento Especial</h3>
+            <h3 id="discount-h-en" style="display:none;">Special Discount</h3>
+            
+            <p id="discount-p-es">
+                Si se reúne en <strong>Tienda Salvadoreña</strong> o <strong>MSU Denver (Auraria)</strong>, recibe <strong>$5 de descuento</strong> en la notarización (Total: $10 en lugar de $15).
+            </p>
+            <p id="discount-p-en" style="display:none;">
+                If you meet at <strong>Tienda Salvadoreña</strong> or <strong>MSU Denver (Auraria)</strong>, you receive <strong>$5 off</strong> notarization (Total: $10 instead of $15).
+            </p>
+            <p class="discount-note" id="discount-note-es">*Aplica solo a citas programadas en esas ubicaciones.</p>
+            <p class="discount-note" id="discount-note-en" style="display:none;">*Applies only to appointments scheduled at those locations.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-section">
+            <div class="card-icon">🚗</div>
+            <h2 id="trans-h-es">Notas de Transporte</h2>
+            <h2 id="trans-h-en" style="display:none;">Transportation Notes</h2>
+            
+            <ul class="info-list" id="trans-list-es">
+                <li><strong>¿Necesita transporte?</strong> Si necesita que lo llevemos a una de las ubicaciones públicas, se aplican cargos de transporte (por nivel de millaje).</li>
+                <li><strong>Origen del Millaje:</strong> El transporte se mide desde el <em>Castle Rock Community Recreation Center</em>.</li>
+                <li><strong>Servicio a Domicilio:</strong> También puede solicitar servicio en su casa u otro lugar público; se aplican cargos por millaje.</li>
+            </ul>
+            <ul class="info-list" id="trans-list-en" style="display:none;">
+                <li><strong>Need a ride?</strong> If you need a ride to one of the public meeting locations, transport fees apply (charged by mileage tier).</li>
+                <li><strong>Mileage Origin:</strong> Transport is measured from <em>Castle Rock Community Recreation Center</em>.</li>
+                <li><strong>Home Service:</strong> You can also request service at your home or another public place; mileage fees apply.</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-section">
+            <div class="card-icon">📅</div>
+            <h2 id="policy-h-es">Política de Citas</h2>
+            <h2 id="policy-h-en" style="display:none;">Appointment Policy</h2>
+
+            <ul class="info-list" id="policy-list-es">
+                <li><strong>Solo con Cita:</strong> Por favor llame al número del negocio para agendar.</li>
+                <li><strong>Depósitos:</strong> Pueden ser requeridos dependiendo del tipo de servicio (ver página de precios).</li>
+                <li><strong>Período de Gracia:</strong> Ofrecemos una ventana de espera de <strong>15 minutos</strong>. Después de eso, la cita puede marcarse como no presentado.</li>
+            </ul>
+            <ul class="info-list" id="policy-list-en" style="display:none;">
+                <li><strong>By Appointment Only:</strong> Please call the business number to schedule.</li>
+                <li><strong>Deposits:</strong> May be required depending on service type (see pricing page).</li>
+                <li><strong>Grace Period:</strong> We offer a <strong>15-minute wait window</strong>. After that, the appointment may be marked as a no-show.</li>
+            </ul>
+        </div>
+
+        <div class="checklist-card">
+            <div class="card-icon">✅</div>
+            <h3 id="checklist-h-es">Pasos para el Cliente</h3>
+            <h3 id="checklist-h-en" style="display:none;">What Clients Should Do</h3>
+
+            <ol class="checklist" id="checklist-es">
+                <li><strong>Paso 1:</strong> Llame al número del negocio para agendar.</li>
+                <li><strong>Paso 2:</strong> Elija su ubicación de reunión (casa, lugar público, o biblioteca/Tienda sin cargo).</li>
+                <li><strong>Paso 3:</strong> Confirme si necesita transporte o si llegará por su cuenta.</li>
+                <li><strong>Paso 4:</strong> Traiga los documentos requeridos y las tarifas gubernamentales (tarifas de DMV/Estado/USCIS no incluidas en nuestros precios).</li>
+            </ol>
+            <ol class="checklist" id="checklist-en" style="display:none;">
+                <li><strong>Step 1:</strong> Call the business number to schedule.</li>
+                <li><strong>Step 2:</strong> Choose your meeting location (home, public place, or fee-free library/Tienda Salvadoreña).</li>
+                <li><strong>Step 3:</strong> Confirm if you need transport or will arrive yourself.</li>
+                <li><strong>Step 4:</strong> Bring required documents and government fees (DMV/State/USCIS fees not included in our prices).</li>
+            </ol>
+        </div>
+
+    </main>
+
+    <footer>
+        <p id="footer-es">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Precios transparentes · Servicio bilingüe · Enfoque comunitario
+        </p>
+        <p id="footer-en" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
+        </p>
+
+        <div class="disclaimer">
+            <div id="disclaimer-es">
+                <strong>Aviso Legal (ES)</strong>
+                Soy Notario Público de Colorado. No soy abogado autorizado para ejercer la abogacía y no doy asesoría legal. Los actos notariales se realizan únicamente en persona; no estoy certificado para notarizaciones en línea.
+            </div>
+            <div id="disclaimer-en" style="display:none;">
+                <strong>Legal Notice (EN)</strong>
+                I am a Colorado Notary Public. I am not an attorney licensed to practice law and I do not give legal advice. Notarial acts are performed in person only; I am not certified to perform online notarizations.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

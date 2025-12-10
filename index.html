@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Quintana Notary & Signing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-help-bar">
+        <a href="tel:+13035004122" class="top-help-link">
+            <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
+            <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
+        </a>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div id="brand-logo">
+                <a href="index.html">
+                    <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+                </a>
+            </div>
+
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="index.html" id="nav-home-es">Inicio</a>
+                <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
+                
+                <a href="services.html" id="nav-services-es">Servicios</a>
+                <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+                
+                <a href="pricing.html" id="nav-pricing-es">Precios</a>
+                <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
+                
+                <a href="about.html" id="nav-about-es">Acerca de</a>
+                <a href="about.html" id="nav-about-en" style="display:none;">About</a>
+                
+                <a href="faq.html" id="nav-faq-es">Preguntas</a>
+                <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
+                
+                <a href="contact.html" id="nav-contact-es">Contacto</a>
+                <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
+                
+                <button class="toggle-btn" onclick="toggleLanguage()">
+                    <span id="toggle-label-en" style="display:none;">Español</span>
+                    <span id="toggle-label-es">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
+            <h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
+            
+            <p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar preferido en Castle Rock y Denver Metro.</p>
+            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">We bring professional notary services to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
+
+            <div class="cta-buttons">
+                <a href="pricing.html" class="btn btn-primary" id="cta-price-es">
+                    <span class="btn-icon">💰</span>
+                    <span>Ver Precios y Reservar</span>
+                </a>
+                <a href="pricing.html" class="btn btn-primary" id="cta-price-en" style="display:none;">
+                    <span class="btn-icon">💰</span>
+                    <span>View Pricing & Book Now</span>
+                </a>
+                
+                <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
+                    <span class="btn-icon">📞</span>
+                    <span>Llámanos o Envíanos un Mensaje</span>
+                </a>
+                <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-en" style="display:none;">
+                    <span class="btn-icon">📞</span>
+                    <span>Call or Text Us</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        
+        <div class="info-cards">
+            <div class="card">
+                <div class="card-icon">📍</div>
+                <h3 id="area-title-es">Área de Servicio</h3>
+                <h3 id="area-title-en" style="display:none;">Service Area</h3>
+                <p id="area-desc-es">Castle Rock, Highlands Ranch, y toda el área Metropolitana de Denver.</p>
+                <p id="area-desc-en" style="display:none;">Castle Rock, Highlands Ranch, and the entire Denver Metro area.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">⏰</div>
+                <h3 id="hours-title-es">Horario de Operación</h3>
+                <h3 id="hours-title-en" style="display:none;">Operating Hours</h3>
+                <p id="hours-desc-es">Lunes – Viernes: 7:00 AM – 3:00 PM</p>
+                <p id="hours-desc-en" style="display:none;">Monday – Friday: 7:00 AM – 3:00 PM</p>
+            </div>
+            
+            <div class="card card-highlight">
+                <div class="card-icon">⭐</div>
+                <h3 id="general-price-title-es">Tarifa Notarial Estándar</h3>
+                <h3 id="general-price-title-en" style="display:none;">Standard Notary Fee</h3>
+                <p id="general-price-desc-es">Tarifa estatutaria de Colorado: <strong>$15 por sello notarial</strong>. (Las tarifas de viaje son separadas).</p>
+                <p id="general-price-desc-en" style="display:none;">Colorado statutory fee: <strong>$15 per notarial seal</strong>. (Travel/Convenience fees are separate).</p>
+                <a href="pricing.html" id="general-price-link-es" class="card-link">Ver estructura de precios completa →</a>
+                <a href="pricing.html" id="general-price-link-en" style="display:none;" class="card-link">View full pricing structure →</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 id="about-title-es">Acerca de Nuestros Servicios de Notaría Móvil</h2>
+        <h2 id="about-title-en" style="display:none;">About Our Mobile Notary Services</h2>
+        <p id="about-p-es">Quintana Notaría y Firmas ofrece servicios de notario público móvil profesionales, confiables y convenientes para individuos y empresas. Nos especializamos en trabajo notarial general, firmas de préstamos hipotecarios y más. Nuestro Agente de Firma Notarial certificado viaja a su ubicación preferida—casa, oficina, hospital o cafetería—para ejecutar sus documentos importantes de forma rápida y precisa.</p>
+        <p id="about-p-en" style="display:none;">Quintana Notary & Signing offers professional, reliable, and convenient mobile public notary services for individuals and businesses. We specialize in general notarial work, mortgage loan signings, and more. Our certified Notary Signing Agent travels to your preferred location—home, office, hospital, or coffee shop—to execute your important documents quickly and accurately.</p>
+
+        <div class="services-card">
+            <h3 id="needs-title-es">Necesidades Notariales Comunes Que Manejamos:</h3>
+            <h3 id="needs-title-en" style="display:none;">Common Notarial Needs We Handle:</h3>
+            <ul id="needs-list-es" class="services-list">
+                <li>Documentos de Préstamo (Refinanciamientos, Compras, HELOCs)</li>
+                <li>Poderes Notariales y Fideicomisos</li>
+                <li>Declaraciones Juradas y Deposiciones</li>
+                <li>Directivas Médicas y Planificación Patrimonial</li>
+                <li>Transferencias de Título de Vehículo</li>
+            </ul>
+            <ul id="needs-list-en" style="display:none;" class="services-list">
+                <li>Loan Documents (Refinances, Purchases, HELOCs)</li>
+                <li>Powers of Attorney and Trusts</li>
+                <li>Affidavits and Depositions</li>
+                <li>Medical Directives and Estate Planning</li>
+                <li>Vehicle Title Transfers</li>
+            </ul>
+            <a href="services.html" class="btn btn-outline" id="view-all-es">Ver la Lista Completa de Servicios →</a>
+            <a href="services.html" class="btn btn-outline" id="view-all-en" style="display:none;">View Complete List of Services →</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p id="footer-main-es">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Precios transparentes · Servicio bilingüe · Enfoque comunitario
+        </p>
+        <p id="footer-main-en" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
+        </p>
+
+        <div class="disclaimer">
+            <div id="disclaimer-es">
+                <strong>Aviso Legal (ES)</strong>
+                Quintana Notary & Signing ofrece servicios notariales en cumplimiento con la ley de Colorado. Los honorarios legales están limitados a $15 por documento. Los cargos de viaje y conveniencia son separados y se informan por escrito antes de las citas. Los notarios no son abogados autorizados para ejercer la abogacía y no pueden dar asesoría legal.
+            </div>
+            <div id="disclaimer-en" style="display:none;">
+                <strong>Legal Notice (EN)</strong>
+                Quintana Notary & Signing offers notarial services in compliance with Colorado law. Statutory fees are limited to $15 per document. Travel and convenience fees are separate and disclosed in writing before appointments. Notaries are not attorneys licensed to practice law and cannot give legal advice.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Quintana Notary & Signing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-help-bar">
+        <a href="tel:+13035004122" class="top-help-link">
+            <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
+            <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
+        </a>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div id="brand-logo">
+                <a href="index.html">
+                    <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+                </a>
+            </div>
+
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav">
+                <a href="index.html" id="nav-home-es">Inicio</a>
+                <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
+                
+                <a href="services.html" id="nav-services-es">Servicios</a>
+                <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+                
+                <a href="pricing.html" id="nav-pricing-es">Precios</a>
+                <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
+                
+                <a href="about.html" id="nav-about-es">Acerca de</a>
+                <a href="about.html" id="nav-about-en" style="display:none;">About</a>
+                
+                <a href="faq.html" id="nav-faq-es">Preguntas</a>
+                <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
+                
+                <a href="contact.html" id="nav-contact-es">Contacto</a>
+                <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
+                
+                <button class="toggle-btn" onclick="toggleLanguage()">
+                    <span id="toggle-label-en" style="display:none;">Español</span>
+                    <span id="toggle-label-es">English</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="faq-title-es">Preguntas Frecuentes</h1>
+            <h1 id="faq-title-en" style="display:none;">Frequently Asked Questions</h1>
+            
+            <p class="hero-subtitle" id="faq-subtitle-es">Encuentre respuestas rápidas a preguntas comunes sobre nuestros servicios notariales.</p>
+            <p class="hero-subtitle" id="faq-subtitle-en" style="display:none;">Find quick answers to common questions about our notary services.</p>
+        </div>
+    </section>
+
+    <section class="section container">
+        
+        <!-- General Questions -->
+        <div class="faq-category">
+            <div class="category-header">
+                <span class="category-icon">❓</span>
+                <div>
+                    <h2 id="cat-general-es">Preguntas Generales</h2>
+                    <h2 id="cat-general-en" style="display:none;">General Questions</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q1-es">¿Qué servicios ofrece?</span>
+                    <span id="q1-en" style="display:none;">What services do you provide?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a1-es">Ofrezco servicios notariales móviles en Castle Rock y Denver, paquetes de firmas de préstamos, servicio como representante autorizado para I-9, testimonio de firmas, copias certificadas y asistencia con impresión.</span>
+                    <span id="a1-en" style="display:none;">I provide mobile notary services across Castle Rock and Denver, loan signing packages, I-9 authorized representative services, document witnessing, certified copies, and printing assistance.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q2-es">¿Habla español?</span>
+                    <span id="q2-en" style="display:none;">Do you speak Spanish?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a2-es">Sí. Soy bilingüe y puedo realizar servicios notariales en inglés o en español.</span>
+                    <span id="a2-en" style="display:none;">Yes. I am bilingual and can perform notarial services in English or Spanish.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q3-es">¿Es usted abogado?</span>
+                    <span id="q3-en" style="display:none;">Are you an attorney?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a3-es">No. Soy Notario Público de Colorado, no soy abogado y no doy asesoría legal.</span>
+                    <span id="a3-en" style="display:none;">No. I am a Colorado Notary Public and not an attorney. I do not provide legal advice.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appointments, Locations and Mobile Service -->
+        <div class="faq-category">
+            <div class="category-header">
+                <span class="category-icon">📅</span>
+                <div>
+                    <h2 id="cat-appt-es">Citas, Ubicaciones y Servicio Móvil</h2>
+                    <h2 id="cat-appt-en" style="display:none;">Appointments, Locations and Mobile Service</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q4-es">¿Cómo reservo una cita?</span>
+                    <span id="q4-en" style="display:none;">How do I book an appointment?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a4-es">Llámame o envíame un mensaje de texto, escríbeme por correo electrónico o usa el formulario de contacto en la web. Para firmas de préstamos, solicita fechas disponibles y te confirmaré.</span>
+                    <span id="a4-en" style="display:none;">Call or text my business number, email me, or use the contact form on the website. For loan signings please request available dates and I will confirm.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q5-es">¿Viaja a mi hogar o lugar de trabajo?</span>
+                    <span id="q5-en" style="display:none;">Do you travel to my home or workplace?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a5-es">Sí. Ofrezco notarizaciones móviles. Las tarifas de viaje dependen de la ubicación: Castle Rock local, área metropolitana de Denver o viajes extendidos; consulta Precios para detalles. En ubicaciones comunitarias como la Biblioteca de Castle Rock o la Tienda Salvadoreña, el servicio puede estar al precio estándar.</span>
+                    <span id="a5-en" style="display:none;">Yes. I offer mobile notarizations. Travel fees depend on location: local Castle Rock, Denver metro, or extended travel—see Pricing for details. Community locations like the Castle Rock Library or Tienda Salvadoreña may be available at the standard rate.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q6-es">¿Qué pasa si necesito servicio fuera de horario o fines de semana?</span>
+                    <span id="q6-en" style="display:none;">What if I need after-hours or weekend service?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a6-es">Ofrezco citas fuera de horario y fines de semana con un recargo adicional. Solicita disponibilidad con anticipación.</span>
+                    <span id="a6-en" style="display:none;">I offer after-hours and weekend appointments for an additional premium. Please request availability in advance.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents, Identification and Preparation -->
+        <div class="faq-category">
+            <div class="category-header">
+                <span class="category-icon">📄</span>
+                <div>
+                    <h2 id="cat-docs-es">Documentos, Identificación y Preparación</h2>
+                    <h2 id="cat-docs-en" style="display:none;">Documents, Identification and Preparation</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q7-es">¿Qué identificación debo traer?</span>
+                    <span id="q7-en" style="display:none;">What ID do I need to bring?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a7-es">Trae una identificación oficial con foto, como licencia de conducir, identificación estatal o pasaporte. Las identificaciones deben estar vigentes y no vencidas.</span>
+                    <span id="a7-en" style="display:none;">Bring a valid government issued photo ID such as a driver's license, state ID, or passport. IDs must be current and not expired.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q8-es">¿Acepta fotocopias o identificaciones digitales?</span>
+                    <span id="q8-en" style="display:none;">Do you accept photocopies or digital IDs?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a8-es">No. Debo ver la identificación física original en persona. No se aceptan fotocopias ni capturas de pantalla.</span>
+                    <span id="a8-en" style="display:none;">No. I must see the original physical ID in person. Photocopies or screenshots are not acceptable for notarization.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q9-es">¿Cómo debo preparar mis documentos?</span>
+                    <span id="q9-en" style="display:none;">How should I prepare my documents?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a9-es">No firmes los documentos antes de la cita a menos que se te indique. Trae todas las páginas necesarias, testigos si se requieren y documentos de respaldo. Si necesitas impresión, puedo imprimir por una tarifa de conveniencia o puedes imprimir en la biblioteca a sus tarifas.</span>
+                    <span id="a9-en" style="display:none;">Do not sign documents before the appointment unless instructed. Bring all required pages, any witnesses if needed, and any supporting documents. If printing is required, I can print for you for a convenience fee or you can print at the library at their rates.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loan Signings and I-9 Services -->
+        <div class="faq-category">
+            <div class="category-header">
+                <span class="category-icon">🏠</span>
+                <div>
+                    <h2 id="cat-loan-es">Firmas de Préstamos y Servicios I-9</h2>
+                    <h2 id="cat-loan-en" style="display:none;">Loan Signings and I-9 Services</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q10-es">¿Maneja firmas de préstamos?</span>
+                    <span id="q10-en" style="display:none;">Do you handle loan signings?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a10-es">Sí. Ofrezco paquetes para firmas de préstamos y coordino con servicios de firmas o compañías de título. Preparo, reviso la integridad y notarizo según sea necesario. Se aplica el precio por paquete.</span>
+                    <span id="a10-en" style="display:none;">Yes. I offer loan signing packages and will coordinate with signing services or title companies. I prepare, review for completeness, and notarize as required. Package pricing applies.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q11-es">¿Puede actuar como representante autorizado para I-9?</span>
+                    <span id="q11-en" style="display:none;">Can you act as an I-9 authorized representative?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a11-es">Sí. Puedo completar la verificación I-9 del empleador como representante autorizado. Esto no es una notarización y se factura por separado.</span>
+                    <span id="a11-en" style="display:none;">Yes. I can complete the employer's I-9 verification as an authorized representative. This is not a notarization and is billed separately.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing, Payments and Printing -->
+        <div class="faq-category">
+            <div class="category-header">
+                <span class="category-icon">💰</span>
+                <div>
+                    <h2 id="cat-pricing-es">Precios, Pagos e Impresión</h2>
+                    <h2 id="cat-pricing-en" style="display:none;">Pricing, Payments and Printing</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q12-es">¿Cuánto cobra?</span>
+                    <span id="q12-en" style="display:none;">How much do you charge?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a12-es">Las notarizaciones estándar en lugares comunitarios son $15 por notarización. Las tarifas de viaje móvil, recargos fuera de horario y paquetes de firmas de préstamos tienen tarifas separadas. La impresión y las tarifas de conveniencia son adicionales. Consulta la página de Precios para más detalles.</span>
+                    <span id="a12-en" style="display:none;">Standard community notarizations are $15 per notarization. Mobile travel fees, after-hours premiums, and loan signing packages have separate rates. Printing and convenience fees are additional. See the Pricing page for full details.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q13-es">¿Qué métodos de pago acepta?</span>
+                    <span id="q13-en" style="display:none;">What payment methods do you accept?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a13-es">Acepto efectivo, tarjetas de débito/crédito principales y pagos electrónicos como Venmo o Zelle. Confirma el método de pago al reservar.</span>
+                    <span id="a13-en" style="display:none;">I accept cash, major debit/credit cards, and electronic payments such as Venmo or Zelle. Please confirm payment method when booking.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q14-es">¿Cuáles son sus tarifas de impresión?</span>
+                    <span id="q14-en" style="display:none;">What are your printing rates?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a14-es">La impresión en blanco y negro en la biblioteca cuesta $0.10 por página; a color $0.25 por página. Si yo imprimo por conveniencia, cobro $0.25 por página en blanco y negro y $1.00 por página a color.</span>
+                    <span id="a14-en" style="display:none;">Library black and white is $0.10 per page; library color is $0.25 per page. If I print for you as a convenience, I charge $0.25 per page black and white and $1.00 per page color.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legal Limits, Aftercare and Document Tracking -->
+        <div class="faq-category">
+            <div class="category-header">
+                <span class="category-icon">⚖️</span>
+                <div>
+                    <h2 id="cat-legal-es">Límites Legales, Cuidado Posterior y Seguimiento de Documentos</h2>
+                    <h2 id="cat-legal-en" style="display:none;">Legal Limits, Aftercare and Document Tracking</h2>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q15-es">¿Puede dar asesoría legal o redactar documentos?</span>
+                    <span id="q15-en" style="display:none;">Can you give legal advice or draft documents?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a15-es">No. No puedo dar asesoría legal ni redactar documentos legales. Puedo explicar el proceso notarial e indicar dónde se requieren firmas y fechas. Para asesoría legal consulta a un abogado autorizado.</span>
+                    <span id="a15-en" style="display:none;">No. I cannot provide legal advice or draft legal documents. I can explain the notarial process and identify where signatures and dates are required. For legal advice consult a licensed attorney.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q16-es">¿Qué pasa si un documento está incompleto o tiene espacios en blanco?</span>
+                    <span id="q16-en" style="display:none;">What if a document is incomplete or has blank spaces?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a16-es">No notarizaré documentos incompletos ni con espacios en blanco que puedan llenarse después. Completaremos el documento juntos o reprogramaremos cuando esté listo.</span>
+                    <span id="a16-en" style="display:none;">I will not notarize incomplete documents or documents with blank spaces that could be filled later. We will either complete the document together or reschedule once it is ready.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q17-es">¿Guarda copias de documentos notarizados?</span>
+                    <span id="q17-en" style="display:none;">Do you keep copies of notarized documents?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a17-es">Llevo un registro de actos notariales según lo exige la ley de Colorado, que registra la fecha, el tipo de acto y la identidad del firmante. No conservo copias de los clientes a menos que se solicite y acuerde. El seguimiento y almacenamiento de documentos están disponibles por una tarifa adicional con el consentimiento del cliente.</span>
+                    <span id="a17-en" style="display:none;">I keep a journal of notarial acts as required by Colorado law, which records the date, type of act, and signer identity. I do not retain client copies unless requested and agreed upon. Document tracking and storage are available for an additional fee with client consent.</span>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span id="q18-es">¿Ofrece seguimiento o almacenamiento de documentos y cuáles son los niveles?</span>
+                    <span id="q18-en" style="display:none;">Do you offer document tracking or storage and what are the tiers?</span>
+                </div>
+                <div class="faq-answer">
+                    <span id="a18-es">Sí. Por una tarifa adicional puedo llevar un registro seguro y almacenar copias de sus documentos notarizados por un periodo definido. <strong>Registro Básico</strong> – solo índice, retención 1 año ($10 pago único); <strong>Almacenamiento de Documentos</strong> – copia escaneada + índice, retención 1 año ($25 pago único); <strong>Almacenamiento Extendido</strong> – copia escaneada + índice, retención 3 años, recuperación prioritaria ($60 pago único). Las copias escaneadas se guardan cifradas y se conservan solo con su consentimiento por escrito; los archivos se eliminan a petición o al finalizar el periodo de retención.</span>
+                    <span id="a18-en" style="display:none;">Yes. For an additional fee I can securely track and store copies of your notarized documents for a defined period. Tiers: <strong>Basic Log</strong> – index entry only, 1 year retention ($10 one-time); <strong>Document Storage</strong> – scanned copy + index, 1 year retention ($25 one-time); <strong>Extended Storage</strong> – scanned copy + index, 3 year retention, priority retrieval ($60 one-time). Stored scans are kept encrypted and retained only with your written consent; files are deleted on request or at the end of the retention period.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Box -->
+        <div class="faq-cta-box">
+            <div class="card-icon">💬</div>
+            <h3 id="cta-title-es">¿Aún tiene preguntas?</h3>
+            <h3 id="cta-title-en" style="display:none;">Still have questions?</h3>
+            <p id="cta-desc-es">No dude en contactarnos. Estamos aquí para ayudarle con cualquier pregunta adicional.</p>
+            <p id="cta-desc-en" style="display:none;">Don't hesitate to contact us. We're here to help with any additional questions.</p>
+            
+            <a href="tel:+13035004122" class="btn btn-primary btn-large">
+                <span class="btn-icon">📞</span>
+                <span id="cta-btn-es">Llamar Ahora: 303-500-4122</span>
+                <span id="cta-btn-en" style="display:none;">Call Now: 303-500-4122</span>
+            </a>
+        </div>
+
+    </section>
+
+    <footer>
+        <p id="footer-es">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Precios transparentes · Servicio bilingüe · Enfoque comunitario
+        </p>
+        <p id="footer-en" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
+        </p>
+
+        <div class="disclaimer">
+            <div id="disclaimer-es">
+                <strong>Aviso Legal (ES)</strong>
+                Soy Notario Público de Colorado. No soy abogado autorizado para ejercer la abogacía y no doy asesoría legal. Los actos notariales se realizan únicamente en persona; no estoy certificado para notarizaciones en línea.
+            </div>
+            <div id="disclaimer-en" style="display:none;">
+                <strong>Legal Notice (EN)</strong>
+                I am a Colorado Notary Public. I am not an attorney licensed to practice law and I do not give legal advice. Notarial acts are performed in person only; I am not certified to perform online notarizations.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
