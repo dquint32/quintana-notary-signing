@@ -1,61 +1,69 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | Quintana Notary & Signing</title>
+    <title>Servicios de Traducción | Quintana Notary & Signing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="top-help-bar">
-        <a href="tel:+13035004122" class="top-help-link">
-            <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
-            <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
-        </a>
-    </div>
+```
+<!-- Top Help Bar - Existing CSS: .top-help-bar, .top-help-link -->
+<div class="top-help-bar">
+    <a href="tel:+13035004122" class="top-help-link">
+        <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
+        <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
+    </a>
+</div>
 
-    <header>
-        <div class="header-container">
-            <div id="brand-logo">
-                <a href="index.html">
-                    <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
-                </a>
-            </div>
-
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav id="main-nav">
-                <a href="index.html" id="nav-home-es">Inicio</a>
-                <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
-                
-                <a href="services.html" id="nav-services-es">Servicios</a>
-                <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
-                
-                <a href="pricing.html" id="nav-pricing-es">Precios</a>
-                <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
-                
-                <a href="about.html" id="nav-about-es">Acerca de</a>
-                <a href="about.html" id="nav-about-en" style="display:none;">About</a>
-                
-                <a href="faq.html" id="nav-faq-es">Preguntas</a>
-                <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
-                
-                <a href="contact.html" id="nav-contact-es">Contacto</a>
-                <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
-                
-                <button class="toggle-btn" onclick="toggleLanguage()">
-                    <span id="toggle-label-en" style="display:none;">Español</span>
-                    <span id="toggle-label-es">English</span>
-                </button>
-            </nav>
+<!-- Header - Existing CSS: header, .header-container, #brand-logo, .hamburger, nav -->
+<!-- JS Functions: toggleMenu(), toggleLanguage() -->
+<header>
+    <div class="header-container">
+        <div id="brand-logo">
+            <a href="index.html">
+                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+            </a>
         </div>
-    </header>
+
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav">
+            <a href="index.html" id="nav-home-es">Inicio</a>
+            <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
+            
+            <a href="services.html" id="nav-services-es">Servicios</a>
+            <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+            
+            <a href="translate.html" id="nav-translate-es">Traducciones</a>
+            <a href="translate.html" id="nav-translate-en" style="display:none;">Translations</a>
+            
+            <a href="pricing.html" id="nav-pricing-es">Precios</a>
+            <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
+            
+            <a href="about.html" id="nav-about-es">Acerca de</a>
+            <a href="about.html" id="nav-about-en" style="display:none;">About</a>
+            
+            <a href="faq.html" id="nav-faq-es">Preguntas</a>
+            <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
+            
+            <a href="contact.html" id="nav-contact-es">Contacto</a>
+            <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
+            
+            <button class="toggle-btn" onclick="toggleLanguage()">
+                <span id="toggle-label-en" style="display:none;">Español</span>
+                <span id="toggle-label-es">English</span>
+            </button>
+        </nav>
+    </div>
+</header>
 
     <section class="hero">
         <div class="hero-content">
