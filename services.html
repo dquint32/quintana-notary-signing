@@ -10,16 +10,25 @@
 </head>
 <body>
 
-<!-- Top Help Bar - Existing CSS: .top-help-bar, .top-help-link -->
 <div class="top-help-bar">
-    <a href="tel:+13035004122" class="top-help-link">
-        <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
-        <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
-    </a>
+    <div class="top-help-content">
+        <span class="top-help-message">
+            <span id="help-text-es">¿Necesitas ayuda?</span>
+            <span id="help-text-en" style="display:none;">Need help?</span>
+        </span>
+        <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
+            <span class="btn-icon">📞</span>
+            <span id="help-call-es">Llamar / Mensaje</span>
+            <span id="help-call-en" style="display:none;">Call / Text</span>
+        </a>
+        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
+            <span class="btn-icon">💬</span>
+            <span id="help-whatsapp-es">WhatsApp</span>
+            <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
+        </a>
+    </div>
 </div>
 
-<!-- Header - Existing CSS: header, .header-container, #brand-logo, .hamburger, nav -->
-<!-- JS Functions: toggleMenu(), toggleLanguage() -->
 <header>
     <div class="header-container">
         <div id="brand-logo">
@@ -367,10 +376,36 @@
                 </div>
             </div>
         </div>
+        
+        <div class="cta-buttons">
+            <a href="tel:+13035004122" class="btn btn-primary btn-large">
+                <span class="btn-icon">📞</span>
+                <span id="cta-phone-es">Llamar Ahora: 303-500-4122</span>
+                <span id="cta-phone-en" style="display:none;">Call Now: 303-500-4122</span>
+            </a>
+            <a href="sms:+13035004122" class="btn btn-secondary btn-large">
+                <span class="btn-icon">💬</span>
+                <span id="cta-text-es">Enviar Mensaje</span>
+                <span id="cta-text-en" style="display:none;">Send Text Message</span>
+            </a>
+        </div>
 
     </section>
 
     <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
+                <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
+                <a href="tel:+13035004122">303-500-4122</a>
+            </div>
+            <div class="contact-item">
+                <strong id="contact-email-es">Correo Electrónico:</strong>
+                <strong id="contact-email-en" style="display:none;">Email:</strong>
+                <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+            </div>
+        </div>
+        
         <p id="footer-main-es">
             © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
             Precios transparentes · Servicio bilingüe · Enfoque comunitario
