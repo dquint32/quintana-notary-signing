@@ -1,44 +1,53 @@
-# Quintana Notary & Signing
+Quintana Notary & Signing – Official Website  
+Welcome to the official repository for Quintana Notary & Signing!  
+This repository contains the source code and assets for a bilingual (Spanish/English) website designed to provide mobile Colorado notary services, translation support, and community-focused accessibility.
 
-Official website for **Quintana Notary & Signing** – mobile Colorado notary services with bilingual support (English & Spanish).
+📘 About the Project  
+Business: Quintana Notary & Signing – Mobile Notary & Translation Services  
+Location: Castle Rock, Highlands Ranch, Aurora, and Denver Metro Area  
+Founder: David Quintana, Senior in Human-Centered Information Systems (HCIS), MSU Denver  
+This project demonstrates:
 
-## 🚀 Project Overview
-This repository contains the source code for the Quintana Notary & Signing website.  
-The site provides information about:
-- Mobile notary services across Castle Rock, Highlands Ranch, Aurora, and the Denver Metro area
-- Bilingual support for Spanish-speaking clients
-- Pricing, FAQs, and contact details
-- Translation services and community-focused mission
+- Accessible, bilingual (Spanish/English) web design  
+- Professional branding and layout consistency across multiple service pages  
+- Clear disclaimers and compliance with Colorado notary law  
+- Integration of translation services and community-focused mission  
 
-## 🛠️ Tech Stack
-- **HTML5** and **CSS3** for structure and styling
-- **JavaScript** for interactive features (menu toggle, bilingual language switch)
-- **Google Fonts** (Inter, Merriweather)
-- Responsive design for desktop and mobile
+🌐 Live Site  
+The project is hosted on GitHub Pages:  
+👉 View Quintana Notary & Signing  
 
-## 📂 Project Structure
-- `index.html` – Homepage
-- `services.html` – Services overview
-- `translate.html` – Translation services
-- `pricing.html` – Pricing details
-- `about.html` – About the notary
-- `faq.html` – Frequently asked questions
-- `contact.html` – Contact form and location
-- `styles.css` – Global stylesheet
-- `README.md` – Project documentation
+📂 Repository Contents  
+- `index.html` – Home page  
+- `services.html` – Services overview  
+- `translate.html` – Translation services  
+- `pricing.html` – Pricing details  
+- `about.html` – About the notary  
+- `faq.html` – Frequently asked questions  
+- `contact.html` – Contact & location info  
+- `styles.css` – Global stylesheet  
+- `images/` – Logo and service-related visuals  
+- `README.md` – Project documentation  
 
-## ⚡ Features
-- Bilingual toggle (English/Spanish)
-- Mobile-friendly navigation menu
-- Clear disclaimers and legal notices
-- Call-to-action buttons (phone & SMS)
+👨‍🎓 About Me  
+I’m a senior at MSU Denver studying Human-Centered Information Systems (HCIS).  
+My focus is on:
 
-## 📖 Author Notes
-- **Author:** David Quintana  
-- **Purpose:** Business portfolio and client-facing website  
-- **Generative AI Used:** Copilot, Gemini, Claude  
-- **Gemini Use Case:** Logo image created from nanobanana concept  
+- Building accessible, bilingual web experiences  
+- Designing systems that balance compliance, usability, and professionalism  
+- Supporting families, seniors, and small businesses through technology and clear communication  
 
-## 📌 License
-This project is for educational and business portfolio purposes.  
-Not intended for redistribution without permission.
+I also run entrepreneurial projects like **Quintana Notary & Signing** and **Ayuda DMV**, combining academic knowledge with real-world service.
+
+⚖️ Purpose  
+This repository exists to:
+
+- Provide a live, accessible demo site for clients and community members  
+- Showcase my ability to combine technical skills with professional service delivery  
+- Document the official website for Quintana Notary & Signing  
+
+📬 Contact  
+For questions about this project or services:  
+**David Quintana**  
+Quintana Notary & Signing – Mobile Colorado Notary  
+MSU Denver – HCIS Program  
