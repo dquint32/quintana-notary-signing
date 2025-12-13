@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -10,16 +9,25 @@
 </head>
 <body>
 
-<!-- Top Help Bar - Existing CSS: .top-help-bar, .top-help-link -->
 <div class="top-help-bar">
-    <a href="tel:+13035004122" class="top-help-link">
-        <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
-        <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
-    </a>
+    <div class="top-help-content">
+        <span class="top-help-message">
+            <span id="help-text-es">¿Necesitas ayuda?</span>
+            <span id="help-text-en" style="display:none;">Need help?</span>
+        </span>
+        <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
+            <span class="btn-icon">📞</span>
+            <span id="help-call-es">Llamar / Mensaje</span>
+            <span id="help-call-en" style="display:none;">Call / Text</span>
+        </a>
+        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
+            <span class="btn-icon">💬</span>
+            <span id="help-whatsapp-es">WhatsApp</span>
+            <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
+        </a>
+    </div>
 </div>
 
-<!-- Header - Existing CSS: header, .header-container, #brand-logo, .hamburger, nav -->
-<!-- JS Functions: toggleMenu(), toggleLanguage() -->
 <header>
     <div class="header-container">
         <div id="brand-logo">
@@ -64,296 +72,301 @@
     </div>
 </header>
 
-<!-- Hero Section - Existing CSS: .hero, .hero-content, .hero-subtitle -->
-<section class="hero">
-    <div class="hero-content">
-        <h1 id="hero-h1-es">📜 Servicios de Traducción</h1>
-        <h1 id="hero-h1-en" style="display:none;">📜 Translation Services</h1>
-        
-        <p class="hero-subtitle" id="hero-h2-es">Traducciones certificadas del español al inglés y viceversa, aceptadas por USCIS, DMV de Colorado y el Estado.</p>
-        <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Certified translations from Spanish to English and vice versa, accepted by USCIS, Colorado DMV, and the State.</p>
-    </div>
-</section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-h1-es">📜 Servicios de Traducción</h1>
+            <h1 id="hero-h1-en" style="display:none;">📜 Translation Services</h1>
+            
+            <p class="hero-subtitle" id="hero-h2-es">Traducciones certificadas del español al inglés y viceversa, aceptadas por USCIS, DMV de Colorado y el Estado.</p>
+            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Certified translations from Spanish to English and vice versa, accepted by USCIS, Colorado DMV, and the State.</p>
+        </div>
+    </section>
 
-<!-- Main Content - Existing CSS: .section, .container -->
-<main class="section container">
-    
-    <!-- Intro Card - Existing CSS: .intro-card, .card-icon -->
-    <div class="intro-card">
-        <div class="card-icon">🌎</div>
-        <h3 id="intro-title-es">Quintana Notary & Signing — Servicios de Traducción</h3>
-        <h3 id="intro-title-en" style="display:none;">Quintana Notary & Signing — Translation Services</h3>
+    <main class="section container">
         
-        <p id="intro-p-es">
-            ¡Hola! Somos una notaría y servicio de traducción bilingüe, dedicados a traducir sus papeles importantes—como certificados de nacimiento, diplomas y récords—del español al inglés y viceversa. Queremos que el proceso sea sencillo y cómodo para usted.
+        <div class="intro-card">
+            <div class="card-icon">🌎</div>
+            <h3 id="intro-title-es">Quintana Notary & Signing — Servicios de Traducción</h3>
+            <h3 id="intro-title-en" style="display:none;">Quintana Notary & Signing — Translation Services</h3>
+            
+            <p id="intro-p-es">
+                ¡Hola! Somos una notaría y servicio de traducción bilingüe, dedicados a traducir sus papeles importantes—como certificados de nacimiento, diplomas y récords—del español al inglés y viceversa. Queremos que el proceso sea sencillo y cómodo para usted.
+            </p>
+            <p id="intro-p-en" style="display:none;">
+                Hello! We are a bilingual notary and translation service, dedicated to translating your important papers—such as birth certificates, diplomas, and records—from Spanish to English and vice versa. We want to make the process simple and comfortable for you.
+            </p>
+            
+            <div class="info-box">
+                <p id="cert-note-es">✅ <strong>Nuestras traducciones son certificadas</strong> y aceptadas por USCIS, el DMV de Colorado y el Estado.</p>
+                <p id="cert-note-en" style="display:none;">✅ <strong>Our translations are certified</strong> and accepted by USCIS, the Colorado DMV, and the State.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="pricing-section">
+            <h2 class="pricing-section-title">
+                <span class="section-number">1</span>
+                <div>
+                    <span id="section-1-title-es">💵 Precios Estándar de Traducción (Por Página)</span>
+                    <span id="section-1-title-en" style="display:none;">💵 Standard Translation Pricing (Per Page)</span>
+                    <p class="section-subtitle" id="section-1-desc-es">El precio base incluye la Declaración Certificada de nuestro traductor.</p>
+                    <p class="section-subtitle" id="section-1-desc-en" style="display:none;">Base price includes our translator's Certified Declaration.</p>
+                </div>
+            </h2>
+            
+            <div class="pricing-cards">
+                <div class="card pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 id="price-1-title-es">Traducción de 1 Página</h3>
+                        <h3 id="price-1-title-en" style="display:none;">1-Page Translation</h3>
+                        <div class="pricing-amount">$30</div>
+                    </div>
+                    <p class="pricing-description" id="price-1-desc-es">Hasta 250 palabras. Este es el precio por la primera página de su documento.</p>
+                    <p class="pricing-description" id="price-1-desc-en" style="display:none;">Up to 250 words. This is the price for the first page of your document.</p>
+                </div>
+
+                <div class="card pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 id="price-2-title-es">Páginas Adicionales</h3>
+                        <h3 id="price-2-title-en" style="display:none;">Extra Pages</h3>
+                        <div class="pricing-amount">$25</div>
+                    </div>
+                    <p class="pricing-description" id="price-2-desc-es">Por página después de la primera. Un descuento para documentos más largos.</p>
+                    <p class="pricing-description" id="price-2-desc-en" style="display:none;">Per page after the first. A discount for longer documents.</p>
+                </div>
+
+                <div class="card pricing-card">
+                    <div class="pricing-card-header">
+                        <h3 id="price-3-title-es">Servicio Súper Urgente (24 horas)</h3>
+                        <h3 id="price-3-title-en" style="display:none;">Super Rush Service (24 hours)</h3>
+                        <div class="pricing-amount">+$10</div>
+                    </div>
+                    <p class="pricing-description" id="price-3-desc-es">Por página. Garantizamos que su traducción estará lista en un día hábil.</p>
+                    <p class="pricing-description" id="price-3-desc-en" style="display:none;">Per page. We guarantee your translation will be ready in one business day.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="pricing-section">
+            <h2 class="pricing-section-title discount">
+                <span class="section-number">2</span>
+                <div>
+                    <span id="section-2-title-es">🤝 Paquetes Fáciles para Ahorrar</span>
+                    <span id="section-2-title-en" style="display:none;">🤝 Easy Saver Packages</span>
+                    <p class="section-subtitle green" id="section-2-desc-es">Diseñados para sus trámites de Inmigración, Escuela o Familia.</p>
+                    <p class="section-subtitle green" id="section-2-desc-en" style="display:none;">Designed for your Immigration, School, or Family needs.</p>
+                </div>
+            </h2>
+
+            <div class="discount-locations">
+                <div class="card discount-card">
+                    <div class="location-badge discount">¡Ahorro!</div>
+                    <h3 id="pkg-1-title-es">Paquete Familiar</h3>
+                    <h3 id="pkg-1-title-en" style="display:none;">Family Bundle</h3>
+                    
+                    <div class="discount-pricing">
+                        <div class="discount-item">
+                            <span class="discount-label" id="pkg-1-inc-es">Incluye:</span>
+                            <span class="discount-label" id="pkg-1-inc-en" style="display:none;">Includes:</span>
+                            <span class="discount-value" id="pkg-1-docs-es">3 documentos vitales</span>
+                            <span class="discount-value" id="pkg-1-docs-en" style="display:none;">3 vital records</span>
+                        </div>
+                        <div class="discount-item">
+                            <span class="discount-label">Precio:</span>
+                            <span class="discount-value">$80</span>
+                            <span class="discount-note" id="pkg-1-save-es">(Ahorras $10)</span>
+                            <span class="discount-note" id="pkg-1-save-en" style="display:none;">(Save $10)</span>
+                        </div>
+                    </div>
+                    <p id="pkg-1-detail-es" style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">1 Certificado de Nacimiento, 1 de Matrimonio y 1 de Defunción.</p>
+                    <p id="pkg-1-detail-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">1 Birth Certificate, 1 Marriage Certificate, and 1 Death Certificate.</p>
+                </div>
+
+                <div class="card discount-card">
+                    <div class="location-badge discount">¡Ahorro!</div>
+                    <h3 id="pkg-2-title-es">🏔️ Paquete Listo para Inmigración CO</h3>
+                    <h3 id="pkg-2-title-en" style="display:none;">🏔️ CO Immigration Ready Package</h3>
+                    
+                    <div class="discount-pricing">
+                        <div class="discount-item">
+                            <span class="discount-label" id="pkg-2-inc-es">Incluye:</span>
+                            <span class="discount-label" id="pkg-2-inc-en" style="display:none;">Includes:</span>
+                            <span class="discount-value">4 documentos</span>
+                        </div>
+                        <div class="discount-item">
+                            <span class="discount-label">Precio:</span>
+                            <span class="discount-value">$115</span>
+                        </div>
+                    </div>
+                    <p id="pkg-2-detail-es" style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Certificado de Nacimiento + Certificado de Matrimonio + Declaración Jurada de Apoyo (Affidavit) + 1 página extra de evidencia.</p>
+                    <p id="pkg-2-detail-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Birth Certificate + Marriage Certificate + Affidavit of Support + 1 extra page of evidence.</p>
+                </div>
+
+                <div class="card discount-card">
+                    <div class="location-badge discount">Descuento</div>
+                    <h3 id="pkg-3-title-es">Archivos Grandes (10+ Páginas)</h3>
+                    <h3 id="pkg-3-title-en" style="display:none;">Large Files (10+ Pages)</h3>
+                    
+                    <div class="discount-pricing">
+                        <div class="discount-item">
+                            <span class="discount-label">Precio:</span>
+                            <span class="discount-value">$22/página</span>
+                        </div>
+                    </div>
+                    <p id="pkg-3-detail-es" style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Si trae 10 páginas o más, la tarifa baja a $22 por página para todas las páginas que apliquen.</p>
+                    <p id="pkg-3-detail-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">If you bring 10 pages or more, the rate drops to $22 per page for all applicable pages.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-section">
+            <div class="card-icon">➕</div>
+            <h2 id="addl-title-es">Servicios Notariales y Descuentos Aplicables a Traducciones</h2>
+            <h2 id="addl-title-en" style="display:none;">Notarial Services and Discounts Applicable to Translations</h2>
+
+            <ul class="info-list" id="addl-list-es">
+                <li>
+                    <strong>Combo Traducción + Notaría ($40 por documento):</strong> Necesario si la agencia que recibe el documento pide que la firma del traductor sea Notarizada. Cubre el costo de la traducción y la notarización. Para más información sobre Actos Notariales y nuestra tarifa estándar de $15, visite la página de <a href="pricing.html">Precios</a>.
+                </li>
+                <li>
+                    <strong>Descuento Estudiantil (10% OFF):</strong> 10% de descuento en la traducción de sus diplomas o certificados académicos.
+                </li>
+                <li>
+                    <strong>¡Descuento de la Tienda! ($5 OFF):</strong> Muestre un recibo de Tienda Salvadoreña de este mes. Aplican a paquetes de más de $50.
+                </li>
+            </ul>
+            <ul class="info-list" id="addl-list-en" style="display:none;">
+                <li>
+                    <strong>Translation + Notary Combo ($40 per document):</strong> Required if the receiving agency asks for the translator's signature to be notarized. Covers the cost of translation and notarization. For more information about Notarial Acts and our standard $15 fee, visit the <a href="pricing.html">Pricing</a> page.
+                </li>
+                <li>
+                    <strong>Student Discount (10% OFF):</strong> 10% off translation of your diplomas or academic certificates.
+                </li>
+                <li>
+                    <strong>Store Discount! ($5 OFF):</strong> Show a receipt from Tienda Salvadoreña from this month. Applies to packages over $50.
+                </li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="services-card">
+            <div class="card-icon">📄</div>
+            <h3 id="docs-title-es">Documentos Comunes Que Traducimos</h3>
+            <h3 id="docs-title-en" style="display:none;">Common Documents We Translate</h3>
+            
+            <ul class="services-list" id="docs-list-es">
+                <li>Certificados de Nacimiento, Matrimonio, Divorcio y Defunción</li>
+                <li>Documentos para Inmigración (USCIS), Real ID/Licencias de Conducir (DMV de CO)</li>
+                <li>Certificados Académicos, Títulos y Diplomas</li>
+                <li>Expedientes Médicos y Registros de Vacunación</li>
+                <li>Declaraciones Juradas (Affidavits), Contratos, Poderes Notariales</li>
+                <li>Registros de Empleo, Estados de Cuenta Bancarios y de Impuestos</li>
+            </ul>
+            <ul class="services-list" id="docs-list-en" style="display:none;">
+                <li>Birth, Marriage, Divorce, and Death Certificates</li>
+                <li>Immigration Documents (USCIS), Real ID/Driver's Licenses (CO DMV)</li>
+                <li>Academic Certificates, Degrees, and Diplomas</li>
+                <li>Medical Records and Vaccination Records</li>
+                <li>Affidavits, Contracts, Powers of Attorney</li>
+                <li>Employment Records, Bank and Tax Statements</li>
+            </ul>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="warning-box">
+            <div class="card-icon">💡</div>
+            <h3 id="notes-title-es">Notas Importantes y Proceso</h3>
+            <h3 id="notes-title-en" style="display:none;">Important Notes and Process</h3>
+            
+            <div class="warning-content">
+                <div class="warning-item">
+                    <strong id="note-1-title-es">Traductor Certificado:</strong>
+                    <strong id="note-1-title-en" style="display:none;">Certified Translator:</strong>
+                    <span id="note-1-text-es">Cada traducción incluye una Declaración firmada por el traductor, garantizando que el trabajo es correcto y fiel al original.</span>
+                    <span id="note-1-text-en" style="display:none;">Each translation includes a Declaration signed by the translator, guaranteeing that the work is accurate and faithful to the original.</span>
+                </div>
+
+                <div class="warning-item">
+                    <strong id="note-2-title-es">Proceso Estándar:</strong>
+                    <strong id="note-2-title-en" style="display:none;">Standard Process:</strong>
+                    <span id="note-2-text-es">Las traducciones regulares están listas en 3 días hábiles (lunes a viernes).</span>
+                    <span id="note-2-text-en" style="display:none;">Regular translations are ready in 3 business days (Monday to Friday).</span>
+                </div>
+
+                <div class="warning-item">
+                    <strong id="note-3-title-es">Servicio Móvil:</strong>
+                    <strong id="note-3-title-en" style="display:none;">Mobile Service:</strong>
+                    <span id="note-3-text-es">Si usted necesita que el notario viaje para firmar una Declaración Jurada (Affidavit) o cualquier otro documento adicional a la traducción, se aplicará la Tarifa Móvil. Consulte nuestra página <a href="pricing.html">Precios</a> para tarifas de viaje.</span>
+                    <span id="note-3-text-en" style="display:none;">If you need the notary to travel to sign an Affidavit or any other document in addition to the translation, the Mobile Fee will apply. See our <a href="pricing.html">Pricing</a> page for travel fees.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-card">
+            <div class="card-icon">📞</div>
+            <h2 id="cta-ready-es">¿Listo para traducir sus documentos?</h2>
+            <h2 id="cta-ready-en" style="display:none;">Ready to translate your documents?</h2>
+            <p id="cta-desc-es">Contáctenos hoy para obtener una cotización y comenzar su traducción certificada.</p>
+            <p id="cta-desc-en" style="display:none;">Contact us today to get a quote and start your certified translation.</p>
+            
+            <div class="cta-buttons">
+                <a href="tel:+13035004122" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📞</span>
+                    <span id="cta-call-es">Llamar Ahora: 303-500-4122</span>
+                    <span id="cta-call-en" style="display:none;">Call Now: 303-500-4122</span>
+                </a>
+                <a href="sms:+13035004122" class="btn btn-secondary btn-large">
+                    <span class="btn-icon">💬</span>
+                    <span id="cta-text-es">Enviar Mensaje</span>
+                    <span id="cta-text-en" style="display:none;">Send Text Message</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
+                <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
+                <a href="tel:+13035004122">303-500-4122</a>
+            </div>
+            <div class="contact-item">
+                <strong id="contact-email-es">Correo Electrónico:</strong>
+                <strong id="contact-email-en" style="display:none;">Email:</strong>
+                <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+            </div>
+        </div>
+        
+        <p id="footer-main-es">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Precios transparentes · Servicio bilingüe · Enfoque comunitario
         </p>
-        <p id="intro-p-en" style="display:none;">
-            Hello! We are a bilingual notary and translation service, dedicated to translating your important papers—such as birth certificates, diplomas, and records—from Spanish to English and vice versa. We want to make the process simple and comfortable for you.
+        <p id="footer-main-en" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
         </p>
-        
-        <div class="info-box">
-            <p id="cert-note-es">✅ <strong>Nuestras traducciones son certificadas</strong> y aceptadas por USCIS, el DMV de Colorado y el Estado.</p>
-            <p id="cert-note-en" style="display:none;">✅ <strong>Our translations are certified</strong> and accepted by USCIS, the Colorado DMV, and the State.</p>
-        </div>
-    </div>
 
-    <div class="divider"></div>
-
-    <!-- Standard Pricing Section - Existing CSS: .pricing-section, .pricing-section-title -->
-    <div class="pricing-section">
-        <h2 class="pricing-section-title">
-            <span class="section-number">1</span>
-            <div>
-                <span id="section-1-title-es">💵 Precios Estándar de Traducción (Por Página)</span>
-                <span id="section-1-title-en" style="display:none;">💵 Standard Translation Pricing (Per Page)</span>
-                <p class="section-subtitle" id="section-1-desc-es">El precio base incluye la Declaración Certificada de nuestro traductor.</p>
-                <p class="section-subtitle" id="section-1-desc-en" style="display:none;">Base price includes our translator's Certified Declaration.</p>
+        <div class="disclaimer">
+            <div id="disclaimer-es">
+                <strong>Aviso Legal (ES)</strong>
+                Quintana Notary & Signing ofrece servicios de traducción certificada y notariales en cumplimiento con la ley de Colorado. Los traductores no son abogados autorizados y no pueden dar asesoría legal.
             </div>
-        </h2>
-        
-        <!-- Pricing Cards - Existing CSS: .pricing-cards, .card, .pricing-card -->
-        <div class="pricing-cards">
-            <div class="card pricing-card">
-                <div class="pricing-card-header">
-                    <h3 id="price-1-title-es">Traducción de 1 Página</h3>
-                    <h3 id="price-1-title-en" style="display:none;">1-Page Translation</h3>
-                    <div class="pricing-amount">$30</div>
-                </div>
-                <p class="pricing-description" id="price-1-desc-es">Hasta 250 palabras. Este es el precio por la primera página de su documento.</p>
-                <p class="pricing-description" id="price-1-desc-en" style="display:none;">Up to 250 words. This is the price for the first page of your document.</p>
-            </div>
-
-            <div class="card pricing-card">
-                <div class="pricing-card-header">
-                    <h3 id="price-2-title-es">Páginas Adicionales</h3>
-                    <h3 id="price-2-title-en" style="display:none;">Extra Pages</h3>
-                    <div class="pricing-amount">$25</div>
-                </div>
-                <p class="pricing-description" id="price-2-desc-es">Por página después de la primera. Un descuento para documentos más largos.</p>
-                <p class="pricing-description" id="price-2-desc-en" style="display:none;">Per page after the first. A discount for longer documents.</p>
-            </div>
-
-            <div class="card pricing-card">
-                <div class="pricing-card-header">
-                    <h3 id="price-3-title-es">Servicio Súper Urgente (24 horas)</h3>
-                    <h3 id="price-3-title-en" style="display:none;">Super Rush Service (24 hours)</h3>
-                    <div class="pricing-amount">+$10</div>
-                </div>
-                <p class="pricing-description" id="price-3-desc-es">Por página. Garantizamos que su traducción estará lista en un día hábil.</p>
-                <p class="pricing-description" id="price-3-desc-en" style="display:none;">Per page. We guarantee your translation will be ready in one business day.</p>
+            <div id="disclaimer-en" style="display:none;">
+                <strong>Legal Notice (EN)</strong>
+                Quintana Notary & Signing offers certified translation and notarial services in compliance with Colorado law. Translators are not licensed attorneys and cannot provide legal advice.
             </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="divider"></div>
-
-    <!-- Saver Packages Section - Existing CSS: .pricing-section, .discount-card -->
-    <div class="pricing-section">
-        <h2 class="pricing-section-title discount">
-            <span class="section-number">2</span>
-            <div>
-                <span id="section-2-title-es">🤝 Paquetes Fáciles para Ahorrar</span>
-                <span id="section-2-title-en" style="display:none;">🤝 Easy Saver Packages</span>
-                <p class="section-subtitle green" id="section-2-desc-es">Diseñados para sus trámites de Inmigración, Escuela o Familia.</p>
-                <p class="section-subtitle green" id="section-2-desc-en" style="display:none;">Designed for your Immigration, School, or Family needs.</p>
-            </div>
-        </h2>
-
-        <!-- Package Cards - Existing CSS: .discount-locations, .card, .discount-card -->
-        <div class="discount-locations">
-            <div class="card discount-card">
-                <div class="location-badge discount">¡Ahorro!</div>
-                <h3 id="pkg-1-title-es">Paquete Familiar</h3>
-                <h3 id="pkg-1-title-en" style="display:none;">Family Bundle</h3>
-                
-                <div class="discount-pricing">
-                    <div class="discount-item">
-                        <span class="discount-label" id="pkg-1-inc-es">Incluye:</span>
-                        <span class="discount-label" id="pkg-1-inc-en" style="display:none;">Includes:</span>
-                        <span class="discount-value" id="pkg-1-docs-es">3 documentos vitales</span>
-                        <span class="discount-value" id="pkg-1-docs-en" style="display:none;">3 vital records</span>
-                    </div>
-                    <div class="discount-item">
-                        <span class="discount-label">Precio:</span>
-                        <span class="discount-value">$80</span>
-                        <span class="discount-note" id="pkg-1-save-es">(Ahorras $10)</span>
-                        <span class="discount-note" id="pkg-1-save-en" style="display:none;">(Save $10)</span>
-                    </div>
-                </div>
-                <p id="pkg-1-detail-es" style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">1 Certificado de Nacimiento, 1 de Matrimonio y 1 de Defunción.</p>
-                <p id="pkg-1-detail-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">1 Birth Certificate, 1 Marriage Certificate, and 1 Death Certificate.</p>
-            </div>
-
-            <div class="card discount-card">
-                <div class="location-badge discount">¡Ahorro!</div>
-                <h3 id="pkg-2-title-es">🏔️ Paquete Listo para Inmigración CO</h3>
-                <h3 id="pkg-2-title-en" style="display:none;">🏔️ CO Immigration Ready Package</h3>
-                
-                <div class="discount-pricing">
-                    <div class="discount-item">
-                        <span class="discount-label" id="pkg-2-inc-es">Incluye:</span>
-                        <span class="discount-label" id="pkg-2-inc-en" style="display:none;">Includes:</span>
-                        <span class="discount-value">4 documentos</span>
-                    </div>
-                    <div class="discount-item">
-                        <span class="discount-label">Precio:</span>
-                        <span class="discount-value">$115</span>
-                    </div>
-                </div>
-                <p id="pkg-2-detail-es" style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Certificado de Nacimiento + Certificado de Matrimonio + Declaración Jurada de Apoyo (Affidavit) + 1 página extra de evidencia.</p>
-                <p id="pkg-2-detail-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Birth Certificate + Marriage Certificate + Affidavit of Support + 1 extra page of evidence.</p>
-            </div>
-
-            <div class="card discount-card">
-                <div class="location-badge discount">Descuento</div>
-                <h3 id="pkg-3-title-es">Archivos Grandes (10+ Páginas)</h3>
-                <h3 id="pkg-3-title-en" style="display:none;">Large Files (10+ Pages)</h3>
-                
-                <div class="discount-pricing">
-                    <div class="discount-item">
-                        <span class="discount-label">Precio:</span>
-                        <span class="discount-value">$22/página</span>
-                    </div>
-                </div>
-                <p id="pkg-3-detail-es" style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">Si trae 10 páginas o más, la tarifa baja a $22 por página para todas las páginas que apliquen.</p>
-                <p id="pkg-3-detail-en" style="display:none; margin-top: 1rem; font-size: 0.95rem; color: var(--gray);">If you bring 10 pages or more, the rate drops to $22 per page for all applicable pages.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Additional Services Section - Existing CSS: .info-section, .info-list -->
-    <div class="info-section">
-        <div class="card-icon">➕</div>
-        <h2 id="addl-title-es">Servicios Notariales y Descuentos Aplicables a Traducciones</h2>
-        <h2 id="addl-title-en" style="display:none;">Notarial Services and Discounts Applicable to Translations</h2>
-
-        <ul class="info-list" id="addl-list-es">
-            <li>
-                <strong>Combo Traducción + Notaría ($40 por documento):</strong> Necesario si la agencia que recibe el documento pide que la firma del traductor sea Notarizada. Cubre el costo de la traducción y la notarización. Para más información sobre Actos Notariales y nuestra tarifa estándar de $15, visite la página de <a href="pricing.html">Precios</a>.
-            </li>
-            <li>
-                <strong>Descuento Estudiantil (10% OFF):</strong> 10% de descuento en la traducción de sus diplomas o certificados académicos.
-            </li>
-            <li>
-                <strong>¡Descuento de la Tienda! ($5 OFF):</strong> Muestre un recibo de Tienda Salvadoreña de este mes. Aplican a paquetes de más de $50.
-            </li>
-        </ul>
-        <ul class="info-list" id="addl-list-en" style="display:none;">
-            <li>
-                <strong>Translation + Notary Combo ($40 per document):</strong> Required if the receiving agency asks for the translator's signature to be notarized. Covers the cost of translation and notarization. For more information about Notarial Acts and our standard $15 fee, visit the <a href="pricing.html">Pricing</a> page.
-            </li>
-            <li>
-                <strong>Student Discount (10% OFF):</strong> 10% off translation of your diplomas or academic certificates.
-            </li>
-            <li>
-                <strong>Store Discount! ($5 OFF):</strong> Show a receipt from Tienda Salvadoreña from this month. Applies to packages over $50.
-            </li>
-        </ul>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Common Documents Section - Existing CSS: .services-card, .services-list -->
-    <div class="services-card">
-        <div class="card-icon">📄</div>
-        <h3 id="docs-title-es">Documentos Comunes Que Traducimos</h3>
-        <h3 id="docs-title-en" style="display:none;">Common Documents We Translate</h3>
-        
-        <ul class="services-list" id="docs-list-es">
-            <li>Certificados de Nacimiento, Matrimonio, Divorcio y Defunción</li>
-            <li>Documentos para Inmigración (USCIS), Real ID/Licencias de Conducir (DMV de CO)</li>
-            <li>Certificados Académicos, Títulos y Diplomas</li>
-            <li>Expedientes Médicos y Registros de Vacunación</li>
-            <li>Declaraciones Juradas (Affidavits), Contratos, Poderes Notariales</li>
-            <li>Registros de Empleo, Estados de Cuenta Bancarios y de Impuestos</li>
-        </ul>
-        <ul class="services-list" id="docs-list-en" style="display:none;">
-            <li>Birth, Marriage, Divorce, and Death Certificates</li>
-            <li>Immigration Documents (USCIS), Real ID/Driver's Licenses (CO DMV)</li>
-            <li>Academic Certificates, Degrees, and Diplomas</li>
-            <li>Medical Records and Vaccination Records</li>
-            <li>Affidavits, Contracts, Powers of Attorney</li>
-            <li>Employment Records, Bank and Tax Statements</li>
-        </ul>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Important Notes Section - Existing CSS: .warning-box, .warning-content, .warning-item -->
-    <div class="warning-box">
-        <div class="card-icon">💡</div>
-        <h3 id="notes-title-es">Notas Importantes y Proceso</h3>
-        <h3 id="notes-title-en" style="display:none;">Important Notes and Process</h3>
-        
-        <div class="warning-content">
-            <div class="warning-item">
-                <strong id="note-1-title-es">Traductor Certificado:</strong>
-                <strong id="note-1-title-en" style="display:none;">Certified Translator:</strong>
-                <span id="note-1-text-es">Cada traducción incluye una Declaración firmada por el traductor, garantizando que el trabajo es correcto y fiel al original.</span>
-                <span id="note-1-text-en" style="display:none;">Each translation includes a Declaration signed by the translator, guaranteeing that the work is accurate and faithful to the original.</span>
-            </div>
-
-            <div class="warning-item">
-                <strong id="note-2-title-es">Proceso Estándar:</strong>
-                <strong id="note-2-title-en" style="display:none;">Standard Process:</strong>
-                <span id="note-2-text-es">Las traducciones regulares están listas en 3 días hábiles (lunes a viernes).</span>
-                <span id="note-2-text-en" style="display:none;">Regular translations are ready in 3 business days (Monday to Friday).</span>
-            </div>
-
-            <div class="warning-item">
-                <strong id="note-3-title-es">Servicio Móvil:</strong>
-                <strong id="note-3-title-en" style="display:none;">Mobile Service:</strong>
-                <span id="note-3-text-es">Si usted necesita que el notario viaje para firmar una Declaración Jurada (Affidavit) o cualquier otro documento adicional a la traducción, se aplicará la Tarifa Móvil. Consulte nuestra página <a href="pricing.html">Precios</a> para tarifas de viaje.</span>
-                <span id="note-3-text-en" style="display:none;">If you need the notary to travel to sign an Affidavit or any other document in addition to the translation, the Mobile Fee will apply. See our <a href="pricing.html">Pricing</a> page for travel fees.</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Card - Existing CSS: .cta-card, .btn, .btn-primary, .btn-large -->
-    <div class="cta-card">
-        <div class="card-icon">📞</div>
-        <h2 id="cta-ready-es">¿Listo para traducir sus documentos?</h2>
-        <h2 id="cta-ready-en" style="display:none;">Ready to translate your documents?</h2>
-        <p id="cta-desc-es">Contáctenos hoy para obtener una cotización y comenzar su traducción certificada.</p>
-        <p id="cta-desc-en" style="display:none;">Contact us today to get a quote and start your certified translation.</p>
-        
-        <a href="tel:+13035004122" class="btn btn-primary btn-large">
-            <span class="btn-icon">📞</span>
-            <span id="cta-call-es">Llamar 303-500-4122</span>
-            <span id="cta-call-en" style="display:none;">Call 303-500-4122</span>
-        </a>
-    </div>
-
-</main>
-
-<!-- Footer - Existing CSS: footer, .disclaimer -->
-<footer>
-    <p id="footer-main-es">
-        © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
-        Precios transparentes · Servicio bilingüe · Enfoque comunitario
-    </p>
-    <p id="footer-main-en" style="display:none;">
-        © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
-        Transparent pricing · Bilingual service · Community-focused
-    </p>
-
-    <div class="disclaimer">
-        <div id="disclaimer-es">
-            <strong>Aviso Legal (ES)</strong>
-            Quintana Notary & Signing ofrece servicios de traducción certificada y notariales en cumplimiento con la ley de Colorado. Los traductores no son abogados autorizados y no pueden dar asesoría legal.
-        </div>
-        <div id="disclaimer-en" style="display:none;">
-            <strong>Legal Notice (EN)</strong>
-            Quintana Notary & Signing offers certified translation and notarial services in compliance with Colorado law. Translators are not licensed attorneys and cannot provide legal advice.
-        </div>
-    </div>
-</footer>
-
-<!-- JS File - toggleMenu(), toggleLanguage(), initLanguage() -->
-<script src="script.js"></script>
-```
-
+    <script src="script.js"></script>
 </body>
 </html>
