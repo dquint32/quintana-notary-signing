@@ -1,6 +1,7 @@
 /* ============================================
    QUINTANA NOTARY & SIGNING - UPDATED STYLES
    Mobile-first, consistent spacing, improved hierarchy
+   Hero section with logo background on all pages
    ============================================ */
 
 :root {
@@ -69,31 +70,68 @@ img {
 }
 
 /* ============================================
-   TOP HELP BAR
+   TOP HELP BAR - DUAL BUTTON STRUCTURE
    ============================================ */
 
 .top-help-bar {
-  background: var(--orange);
+  background-color: var(--navy);
   color: var(--white);
+  padding: var(--space-xs) 0;
   text-align: center;
-  padding: var(--space-sm) var(--space-md);
-  font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.top-help-link {
-  color: var(--white);
-  text-decoration: none;
-  display: block;
-  transition: opacity 0.2s;
+.top-help-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  flex-wrap: wrap;
 }
 
-.top-help-link:hover {
-  opacity: 0.9;
-  text-decoration: underline;
+.top-help-message {
+  padding-right: var(--space-lg);
+  font-weight: 600;
+}
+
+.top-help-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: var(--space-md);
+  transition: background-color 0.3s;
+}
+
+.top-help-btn .btn-icon {
+  margin-right: 0.3rem;
+  font-size: 1.1em;
+}
+
+.top-help-btn-call {
+  background-color: #0D3A8A;
+  color: var(--white);
+}
+
+.top-help-btn-call:hover {
+  background-color: #0A2D69;
+}
+
+.top-help-btn-whatsapp {
+  background-color: #25D366;
+  color: var(--white);
+}
+
+.top-help-btn-whatsapp:hover {
+  background-color: #1DA853;
 }
 
 /* ============================================
@@ -214,18 +252,28 @@ nav a:hover {
 }
 
 /* ============================================
-   HERO SECTION - DOMINANT FOCAL POINT
+   HERO SECTION - WITH LOGO BACKGROUND
+   Applied consistently across all pages
    ============================================ */
 
 .hero {
-  background: linear-gradient(135deg, var(--navy), #1a5fd9);
+  position: relative;
   color: var(--white);
   padding: var(--space-3xl) var(--space-lg);
   text-align: center;
-  position: relative;
   overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy), #1a5fd9);
+  background-image: url('Quintana-notary-signing_logo.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
 }
 
+/* Gradient Overlay - Creates the fade effect from left to right */
 .hero::before {
   content: '';
   position: absolute;
@@ -233,15 +281,23 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(255, 102, 0, 0.1) 0%, transparent 60%);
+  background: linear-gradient(
+    to right,
+    rgba(15, 71, 175, 0.3) 0%,
+    rgba(15, 71, 175, 0.75) 40%,
+    rgba(15, 71, 175, 0.95) 70%,
+    rgba(15, 71, 175, 1) 100%
+  );
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 {
@@ -250,7 +306,8 @@ nav a:hover {
   font-weight: 700;
   margin-bottom: var(--space-lg);
   line-height: 1.2;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  color: var(--white);
 }
 
 .hero-subtitle {
@@ -258,7 +315,35 @@ nav a:hover {
   font-weight: 400;
   margin-bottom: var(--space-2xl);
   line-height: 1.5;
-  opacity: 0.95;
+  color: var(--white);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced button contrast for logo background */
+.hero .btn {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero .btn-primary {
+  background: var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.hero .btn-primary:hover {
+  background: var(--hover-orange);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.5);
+}
+
+.hero .btn-secondary {
+  background: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--white);
+}
+
+.hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--navy);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
 /* ============================================
@@ -308,7 +393,6 @@ nav a:hover {
 }
 
 .btn-secondary {
-  /* Fix: Set background and border for high contrast button */
   background: var(--navy);
   color: var(--white);
   border-color: var(--navy);
@@ -409,9 +493,6 @@ nav a:hover {
   border-color: var(--navy);
 }
 
-/* UPDATED: Made card-highlight match standard .card 
-  to ensure uniform color across all three info cards.
-*/
 .card-highlight {
   border-color: var(--border-gray);
   background: var(--white);
@@ -515,6 +596,44 @@ footer {
   line-height: 1.8;
 }
 
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  margin: 0 var(--space-lg);
+  text-align: center;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #B0B0B0;
+  margin-bottom: 0.2rem;
+}
+
+.contact-item a {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+footer a {
+  color: #E0E0E0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
 .disclaimer {
   border-top: 1px solid #555;
   margin-top: var(--space-xl);
@@ -535,131 +654,157 @@ footer {
 }
 
 /* ============================================
-   RESPONSIVE - MOBILE FIRST
+   HOMEPAGE SPECIFIC STYLES
    ============================================ */
 
-/* Tablet: 768px and up */
-@media (min-width: 768px) {
-  .info-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .cta-buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .btn {
-    min-width: 240px;
-  }
-  
-  .logo-img {
-    height: 75px;
-  }
-  
-  .why-reasons {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.quick-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
 }
 
-/* Desktop: 1024px and up */
-@media (min-width: 1024px) {
-  .info-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .hero {
-    padding: var(--space-3xl) var(--space-2xl);
-  }
-  
-  .section {
-    padding: var(--space-3xl) var(--space-2xl);
-  }
+.quick-link-card {
+  background: var(--white);
+  border: 2px solid var(--border-gray);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  text-decoration: none;
+  color: var(--gray);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  display: block;
 }
 
-/* Mobile: Below 768px */
-@media (max-width: 767px) {
-  .hamburger {
-    display: flex;
-  }
-  
-  nav {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    background: var(--navy);
-    padding: var(--space-lg) 0;
-    gap: 0;
-  }
-  
-  nav.active {
-    display: flex;
-  }
-  
-  nav a {
-    width: 100%;
-    text-align: center;
-    padding: var(--space-lg);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  nav .toggle-btn {
-    width: 90%;
-    margin: var(--space-lg) auto 0;
-  }
-  
-  .header-container {
-    padding: var(--space-sm) var(--space-md);
-  }
-  
-  .logo-img {
-    height: 50px;
-  }
-  
-  .hero {
-    padding: var(--space-2xl) var(--space-md);
-  }
-  
-  .section {
-    margin: var(--space-lg) var(--space-md);
-    padding: var(--space-xl) var(--space-md);
-  }
-  
-  .btn {
-    width: 100%;
-    max-width: 350px;
-  }
-  
-  .card {
-    padding: var(--space-lg);
-  }
+.quick-link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--navy);
 }
 
-/* Small Mobile: Below 480px */
-@media (max-width: 479px) {
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  .btn {
-    font-size: 1rem;
-    padding: var(--space-md) var(--space-lg);
-  }
-  
-  .card-icon {
-    font-size: 2rem;
-  }
+.quick-link-card .card-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.quick-link-card h3 {
+  color: var(--navy);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.quick-link-card p {
+  color: var(--gray);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.section-with-icon {
+  margin-bottom: var(--space-3xl);
+}
+
+.section-with-icon > .card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.why-reasons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.reason-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--light-gray);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s;
+}
+
+.reason-item:hover {
+  transform: translateX(5px);
+}
+
+.reason-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.reason-item strong {
+  display: block;
+  color: var(--navy);
+  margin-bottom: var(--space-xs);
+}
+
+.reason-item p {
+  margin: 0;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.service-card {
+  border-left: 4px solid var(--navy);
+}
+
+.service-card h3 {
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+}
+
+.cta-services-nudge {
+  margin-top: var(--space-2xl);
+}
+
+.pricing-overview {
+  margin-top: var(--space-xl);
+}
+
+.pricing-card-overview {
+  background: linear-gradient(135deg, #EAF0FF 0%, var(--white) 100%);
+  border: 2px solid var(--navy);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.pricing-item strong {
+  color: var(--navy);
+}
+
+.pricing-item.discount {
+  background: linear-gradient(135deg, #F0FFF4 0%, var(--white) 100%);
+  border-left: 4px solid var(--green);
+}
+
+.pricing-item.discount strong {
+  color: var(--green);
 }
 
 /* ============================================
    SERVICES PAGE SPECIFIC STYLES
    ============================================ */
 
-/* Intro Card */
 .intro-card {
   background: linear-gradient(135deg, #EAF0FF 0%, var(--white) 100%);
   border: 2px solid var(--navy);
@@ -686,7 +831,6 @@ footer {
   margin: 0;
 }
 
-/* Section Intro Text */
 .section-intro {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -698,7 +842,6 @@ footer {
   color: var(--navy);
 }
 
-/* Location Grid */
 .location-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -746,7 +889,6 @@ footer {
   color: var(--green);
 }
 
-/* Info Box */
 .info-box {
   background: #F0F7FF;
   border: 2px solid #B8D4FF;
@@ -761,7 +903,6 @@ footer {
   font-style: normal;
 }
 
-/* Service Options */
 .service-options {
   display: grid;
   grid-template-columns: 1fr;
@@ -806,7 +947,6 @@ footer {
   color: var(--orange);
 }
 
-/* Notarial Acts */
 .notarial-acts {
   display: grid;
   grid-template-columns: 1fr;
@@ -849,7 +989,6 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Warning Box */
 .warning-box {
   background: linear-gradient(135deg, #FFF5EB 0%, #FFEDE0 100%);
   border: 3px solid var(--orange);
@@ -890,7 +1029,6 @@ footer {
   font-size: 1.05rem;
 }
 
-/* Updated highlight item to match standard cards */
 .warning-item.highlight {
   background: var(--white);
   border: none;
@@ -908,54 +1046,9 @@ footer {
 }
 
 /* ============================================
-   SERVICES PAGE RESPONSIVE
-   ============================================ */
-
-@media (min-width: 768px) {
-  .location-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .service-options {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .notarial-acts {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .location-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .service-options {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .intro-card {
-    padding: var(--space-xl) var(--space-lg);
-  }
-  
-  .location-badge {
-    position: static;
-    display: inline-block;
-    margin-bottom: var(--space-md);
-  }
-  
-  .warning-box {
-    padding: var(--space-xl) var(--space-lg);
-  }
-}
-
-/* ============================================
    PRICING PAGE SPECIFIC STYLES
    ============================================ */
 
-/* Pricing Section Container */
 .pricing-section {
   margin-bottom: var(--space-3xl);
 }
@@ -1015,7 +1108,6 @@ footer {
   color: var(--green);
 }
 
-/* Pricing Cards - General Notarial Acts */
 .pricing-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -1049,7 +1141,6 @@ footer {
   margin: 0;
 }
 
-/* Discount Location Cards */
 .discount-locations {
   display: grid;
   grid-template-columns: 1fr;
@@ -1109,7 +1200,6 @@ footer {
   font-style: italic;
 }
 
-/* Travel Info Box */
 .travel-info-box {
   background: #F0F7FF;
   border: 2px solid var(--navy);
@@ -1132,7 +1222,6 @@ footer {
   border-left: 3px solid var(--orange);
 }
 
-/* Travel Tier Cards */
 .travel-tiers {
   display: grid;
   grid-template-columns: 1fr;
@@ -1216,7 +1305,6 @@ footer {
   color: var(--gray);
 }
 
-/* Premium Service Cards */
 .premium-services {
   display: grid;
   grid-template-columns: 1fr;
@@ -1279,7 +1367,6 @@ footer {
   margin: 0;
 }
 
-/* Printing Options */
 .printing-options {
   display: flex;
   flex-direction: column;
@@ -1307,7 +1394,6 @@ footer {
   color: var(--orange);
 }
 
-/* CTA Card */
 .cta-card {
   background: linear-gradient(135deg, var(--navy) 0%, #1a5fd9 100%);
   color: var(--white);
@@ -1344,100 +1430,9 @@ footer {
 }
 
 /* ============================================
-   PRICING PAGE RESPONSIVE
-   ============================================ */
-
-@media (min-width: 768px) {
-  .pricing-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .discount-locations {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .travel-tiers {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .premium-services {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .premium-card.featured {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .travel-tiers {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .travel-tier-card.beyond {
-    grid-column: 2 / 3;
-  }
-  
-  .premium-services {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .pricing-section-title {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-  
-  .section-number {
-    align-self: flex-start;
-  }
-  
-  .pricing-amount {
-    font-size: 2rem;
-  }
-  
-  .tier-price {
-    font-size: 2rem;
-  }
-  
-  .premium-price {
-    font-size: 1.75rem;
-  }
-  
-  .tier-badge,
-  .premium-badge {
-    position: static;
-    display: inline-block;
-    margin-bottom: var(--space-md);
-  }
-  
-  .discount-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-xs);
-  }
-  
-  .discount-label {
-    min-width: auto;
-  }
-  
-  .cta-card {
-    padding: var(--space-2xl) var(--space-lg);
-  }
-  
-  .btn-large {
-    min-width: auto;
-    width: 100%;
-    max-width: 350px;
-  }
-}
-
-/* ============================================
    ABOUT PAGE SPECIFIC STYLES
    ============================================ */
 
-/* About Intro Card */
 .about-intro-card {
   background: linear-gradient(135deg, #EAF0FF 0%, var(--white) 100%);
   border: 2px solid var(--navy);
@@ -1469,7 +1464,6 @@ footer {
   margin-bottom: 0;
 }
 
-/* Mission Card */
 .mission-card {
   background: linear-gradient(135deg, #FFF5EB 0%, var(--white) 100%);
   border: 2px solid var(--orange);
@@ -1500,7 +1494,6 @@ footer {
   margin-bottom: 0;
 }
 
-/* Help Card */
 .help-card {
   background: var(--white);
   border: 2px solid var(--border-gray);
@@ -1527,7 +1520,6 @@ footer {
   color: var(--gray);
 }
 
-/* Credentials Section */
 .credentials-section {
   margin: var(--space-2xl) 0;
 }
@@ -1595,7 +1587,6 @@ footer {
   margin-right: var(--space-xs);
 }
 
-/* Why Choose Card */
 .why-choose-card {
   background: linear-gradient(135deg, #F0FFF4 0%, var(--white) 100%);
   border: 2px solid var(--green);
@@ -1615,102 +1606,6 @@ footer {
   margin-bottom: var(--space-xl);
 }
 
-.why-reasons {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
-}
-
-.reason-item {
-  /* Fix: Set display flex to align icon and text side-by-side */
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-lg);
-  padding: var(--space-lg);
-  background: var(--white);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s, box-shadow 0.3s;
-  height: 100%;
-}
-
-.reason-item > div {
-  /* Fix: Allow text wrapper to fill space and ensure long text wraps */
-  flex: 1;
-  min-width: 0;
-}
-
-.reason-item:hover {
-  transform: translateX(5px);
-  box-shadow: var(--shadow-md);
-}
-
-.reason-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--light-gray);
-  border-radius: 50%;
-}
-
-.reason-item strong {
-  display: block;
-  color: var(--navy);
-  font-size: 1.1rem;
-  margin-bottom: var(--space-xs);
-}
-
-.reason-item p {
-  margin: 0;
-  color: var(--gray);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* ============================================
-   FIX FOR BROKEN HTML IN 4TH REASON ITEM
-   Targeting the specific item where malformed HTML 
-   causes the text to nest inside the icon span.
-   ============================================ */
-.why-reasons .reason-item:nth-child(4) .reason-icon {
-  /* The broken tag consumes the content, so we need to treat this span as the container */
-  width: 100%;
-  height: auto;
-  border-radius: 0;
-  background: transparent;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-lg);
-  font-size: 1rem; /* RESET font size here so children don't inherit 2rem */
-  font-weight: normal;
-}
-
-/* We need to re-add the icon via pseudo-element since the original is consumed by the tag error */
-.why-reasons .reason-item:nth-child(4) .reason-icon::before {
-  content: "⏱️";
-  font-size: 2rem; /* Give the icon its size back */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background: var(--light-gray);
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* Ensure the text container (div) behaves correctly */
-.why-reasons .reason-item:nth-child(4) .reason-icon > div {
-  flex: 1;
-  min-width: 0;
-  font-size: 1rem; /* Explicitly ensure text is normal size */
-}
-
-/* Legal Notice Card */
 .legal-notice-card {
   background: #FFF8F0;
   border: 3px solid var(--orange);
@@ -1736,7 +1631,6 @@ footer {
   color: var(--gray);
 }
 
-/* Help Nudge */
 .help-nudge {
   margin-top: var(--space-2xl);
   text-align: center;
@@ -1747,41 +1641,9 @@ footer {
 }
 
 /* ============================================
-   ABOUT PAGE RESPONSIVE
-   ============================================ */
-
-@media (min-width: 768px) {
-  .credentials-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .about-intro-card,
-  .mission-card,
-  .help-card,
-  .why-choose-card,
-  .legal-notice-card {
-    padding: var(--space-xl) var(--space-lg);
-  }
-  
-  .reason-item {
-    /* Revert to side-by-side layout for better space usage on small screens */
-    flex-direction: row;
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .reason-icon {
-    margin: 0; /* Remove auto margin added for centered mobile view */
-  }
-}
-
-/* ============================================
    CONTACT PAGE SPECIFIC STYLES
    ============================================ */
 
-/* Contact Info Card */
 .contact-info-card {
   background: linear-gradient(135deg, var(--navy) 0%, #1a5fd9 100%);
   color: var(--white);
@@ -1818,24 +1680,22 @@ footer {
   font-weight: 600;
 }
 
-/* === UPDATED: Contact Details & Hours === */
 .contact-details {
   margin-top: var(--space-xl);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  align-items: center; /* Ensures items are centered on mobile */
+  align-items: center;
 }
 
-/* New style for the hours container */
 .hours-details {
   width: 100%;
   max-width: 600px;
   padding: var(--space-lg);
-  background: rgba(255, 255, 255, 0.1); /* Matches other glass elements */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   backdrop-filter: blur(10px);
-  text-align: left; /* Clean list alignment */
+  text-align: left;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -1863,11 +1723,10 @@ footer {
 
 .hours-details li strong {
   color: var(--orange);
-  display: block; /* Stacks label for clarity */
+  display: block;
   margin-bottom: 0.25rem;
 }
 
-/* Refined Detail Row (Email/Phone) */
 .detail-row {
   display: flex;
   flex-direction: column;
@@ -1900,7 +1759,6 @@ footer {
   text-decoration: underline;
 }
 
-/* WhatsApp Button */
 .btn-whatsapp {
   background: #25D366;
   border-color: #25D366;
@@ -1912,7 +1770,6 @@ footer {
   border-color: #20BA5A;
 }
 
-/* Contact Location Grid */
 .contact-location-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1969,7 +1826,6 @@ footer {
   margin-right: var(--space-xs);
 }
 
-/* Location List */
 .location-list {
   display: flex;
   flex-direction: column;
@@ -2023,7 +1879,6 @@ footer {
   color: var(--hover-green);
 }
 
-/* Discount Highlight Box */
 .discount-highlight-box {
   background: linear-gradient(135deg, #e6ffed 0%, #f0fff4 100%);
   border: 3px solid var(--green);
@@ -2058,13 +1913,6 @@ footer {
   color: var(--green);
 }
 
-.discount-note {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: var(--gray);
-}
-
-/* Info Section */
 .info-section {
   margin-bottom: var(--space-2xl);
 }
@@ -2118,7 +1966,6 @@ footer {
   color: var(--orange);
 }
 
-/* Checklist Card */
 .checklist-card {
   background: linear-gradient(135deg, var(--navy) 0%, #1a5fd9 100%);
   color: var(--white);
@@ -2161,63 +2008,9 @@ footer {
 }
 
 /* ============================================
-   CONTACT PAGE RESPONSIVE
-   ============================================ */
-
-@media (min-width: 768px) {
-  .contact-location-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  /* Adjusted Desktop View for Contact Details 
-     Kept centered and stacked to handle variable text length cleanly */
-  .contact-details {
-    /* flex-direction row removed to keep vertical stack */
-    justify-content: center;
-  }
-  
-  .detail-row {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-md);
-  }
-  
-  .detail-row strong {
-    min-width: auto;
-    margin-right: var(--space-sm);
-  }
-}
-
-@media (min-width: 1024px) {
-  .contact-location-grid {
-    grid-template-columns: 1fr 1.5fr;
-  }
-}
-
-@media (max-width: 767px) {
-  .contact-info-card {
-    padding: var(--space-2xl) var(--space-lg);
-  }
-  
-  .discount-highlight-box {
-    padding: var(--space-xl) var(--space-lg);
-  }
-  
-  .checklist-card {
-    padding: var(--space-xl) var(--space-lg);
-  }
-  
-  .checklist {
-    padding-left: var(--space-lg);
-  }
-}
-
-/* ============================================
    FAQ PAGE SPECIFIC STYLES
    ============================================ */
 
-/* FAQ Category */
 .faq-category {
   margin-bottom: var(--space-3xl);
 }
@@ -2244,7 +2037,6 @@ footer {
   border: none;
 }
 
-/* FAQ Item */
 .faq-item {
   margin-bottom: var(--space-lg);
   border: 2px solid var(--border-gray);
@@ -2298,7 +2090,6 @@ footer {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/* FAQ Answer */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -2319,7 +2110,6 @@ footer {
   font-weight: 700;
 }
 
-/* FAQ CTA Box */
 .faq-cta-box {
   background: linear-gradient(135deg, #EAF0FF 0%, var(--white) 100%);
   border: 3px solid var(--navy);
@@ -2349,10 +2139,361 @@ footer {
 }
 
 /* ============================================
-   FAQ PAGE RESPONSIVE
+   RESPONSIVE - MOBILE FIRST
    ============================================ */
 
+/* Mobile Top Help Bar */
+@media (max-width: 600px) {
+  .top-help-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .top-help-message {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .top-help-btn {
+    margin: 0.2rem 0;
+    justify-content: center;
+  }
+}
+
+/* Mobile Footer Contact Info */
+@media (max-width: 500px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-item {
+    margin: 0.5rem 0;
+    padding: 0.5rem var(--space-md);
+    text-align: center;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+  .contact-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Tablet: 768px and up */
+@media (min-width: 768px) {
+  .info-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .btn {
+    min-width: 240px;
+  }
+  
+  .logo-img {
+    height: 75px;
+  }
+  
+  .why-reasons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Hero adjustments for tablet */
+  .hero {
+    min-height: 550px;
+    padding: var(--space-3xl) var(--space-2xl);
+    background-size: 45% auto;
+    background-position: 10% center;
+  }
+  
+  .quick-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .location-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .notarial-acts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .discount-locations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .travel-tiers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .premium-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .premium-card.featured {
+    grid-column: 1 / -1;
+  }
+  
+  .credentials-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-location-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-details {
+    justify-content: center;
+  }
+  
+  .detail-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+  
+  .detail-row strong {
+    min-width: auto;
+    margin-right: var(--space-sm);
+  }
+}
+
+/* Desktop: 1024px and up */
+@media (min-width: 1024px) {
+  .info-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .section {
+    padding: var(--space-3xl) var(--space-2xl);
+  }
+  
+  /* Hero adjustments for desktop */
+  .hero {
+    min-height: 600px;
+    background-size: 40% auto;
+    background-position: 15% center;
+  }
+  
+  .hero-content {
+    margin-left: auto;
+    margin-right: 5%;
+    max-width: 700px;
+  }
+  
+  .quick-links {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .location-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .service-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .travel-tiers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .travel-tier-card.beyond {
+    grid-column: 2 / 3;
+  }
+  
+  .premium-services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contact-location-grid {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
+
+/* Mobile: Below 768px */
 @media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: var(--navy);
+    padding: var(--space-lg) 0;
+    gap: 0;
+  }
+  
+  nav.active {
+    display: flex;
+  }
+  
+  nav a {
+    width: 100%;
+    text-align: center;
+    padding: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  nav .toggle-btn {
+    width: 90%;
+    margin: var(--space-lg) auto 0;
+  }
+  
+  .header-container {
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .logo-img {
+    height: 50px;
+  }
+  
+  .section {
+    margin: var(--space-lg) var(--space-md);
+    padding: var(--space-xl) var(--space-md);
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .card {
+    padding: var(--space-lg);
+  }
+  
+  /* Hero adjustments for mobile - logo on top, content below */
+  .hero {
+    min-height: 500px;
+    padding: var(--space-2xl) var(--space-md);
+    background-size: 80% auto;
+    background-position: center 20%;
+  }
+  
+  .hero::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 71, 175, 0.3) 0%,
+      rgba(15, 71, 175, 0.85) 35%,
+      rgba(15, 71, 175, 0.95) 60%,
+      rgba(15, 71, 175, 1) 100%
+    );
+  }
+  
+  .hero-content {
+    margin-top: auto;
+  }
+  
+  .intro-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .location-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: var(--space-md);
+  }
+  
+  .warning-box {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .pricing-section-title {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .section-number {
+    align-self: flex-start;
+  }
+  
+  .pricing-amount {
+    font-size: 2rem;
+  }
+  
+  .tier-price {
+    font-size: 2rem;
+  }
+  
+  .premium-price {
+    font-size: 1.75rem;
+  }
+  
+  .tier-badge,
+  .premium-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: var(--space-md);
+  }
+  
+  .discount-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+  
+  .discount-label {
+    min-width: auto;
+  }
+  
+  .cta-card {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+  
+  .btn-large {
+    min-width: auto;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .about-intro-card,
+  .mission-card,
+  .help-card,
+  .why-choose-card,
+  .legal-notice-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .reason-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .reason-icon {
+    margin: 0;
+  }
+  
+  .contact-info-card {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+  
+  .discount-highlight-box {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .checklist-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .checklist {
+    padding-left: var(--space-lg);
+  }
+  
   .category-header {
     flex-direction: column;
     align-items: flex-start;
@@ -2384,5 +2525,32 @@ footer {
   
   .faq-cta-box {
     padding: var(--space-2xl) var(--space-lg);
+  }
+}
+
+/* Small Mobile: Below 480px */
+@media (max-width: 479px) {
+  .card-icon {
+    font-size: 2rem;
+  }
+  
+  /* Hero adjustments for small mobile */
+  .hero {
+    min-height: 550px;
+    background-size: 90% auto;
+    background-position: center 15%;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: var(--space-md) var(--space-lg);
   }
 }
