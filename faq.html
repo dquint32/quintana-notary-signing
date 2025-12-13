@@ -10,16 +10,25 @@
 </head>
 <body>
 
-<!-- Top Help Bar - Existing CSS: .top-help-bar, .top-help-link -->
 <div class="top-help-bar">
-    <a href="tel:+13035004122" class="top-help-link">
-        <span id="help-text-es">¿Necesitas ayuda? Llámanos o mándanos un mensaje ahora: 303-500-4122</span>
-        <span id="help-text-en" style="display:none;">Need help? Call or text us now: 303-500-4122</span>
-    </a>
+    <div class="top-help-content">
+        <span class="top-help-message">
+            <span id="help-text-es">¿Necesitas ayuda?</span>
+            <span id="help-text-en" style="display:none;">Need help?</span>
+        </span>
+        <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
+            <span class="btn-icon">📞</span>
+            <span id="help-call-es">Llamar / Mensaje</span>
+            <span id="help-call-en" style="display:none;">Call / Text</span>
+        </a>
+        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
+            <span class="btn-icon">💬</span>
+            <span id="help-whatsapp-es">WhatsApp</span>
+            <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
+        </a>
+    </div>
 </div>
 
-<!-- Header - Existing CSS: header, .header-container, #brand-logo, .hamburger, nav -->
-<!-- JS Functions: toggleMenu(), toggleLanguage() -->
 <header>
     <div class="header-container">
         <div id="brand-logo">
@@ -76,7 +85,6 @@
 
     <section class="section container">
         
-        <!-- General Questions -->
         <div class="faq-category">
             <div class="category-header">
                 <span class="category-icon">❓</span>
@@ -120,7 +128,6 @@
             </div>
         </div>
 
-        <!-- Appointments, Locations and Mobile Service -->
         <div class="faq-category">
             <div class="category-header">
                 <span class="category-icon">📅</span>
@@ -164,7 +171,6 @@
             </div>
         </div>
 
-        <!-- Documents, Identification and Preparation -->
         <div class="faq-category">
             <div class="category-header">
                 <span class="category-icon">📄</span>
@@ -208,7 +214,6 @@
             </div>
         </div>
 
-        <!-- Loan Signings and I-9 Services -->
         <div class="faq-category">
             <div class="category-header">
                 <span class="category-icon">🏠</span>
@@ -241,7 +246,6 @@
             </div>
         </div>
 
-        <!-- Pricing, Payments and Printing -->
         <div class="faq-category">
             <div class="category-header">
                 <span class="category-icon">💰</span>
@@ -285,7 +289,6 @@
             </div>
         </div>
 
-        <!-- Legal Limits, Aftercare and Document Tracking -->
         <div class="faq-category">
             <div class="category-header">
                 <span class="category-icon">⚖️</span>
@@ -340,7 +343,6 @@
             </div>
         </div>
 
-        <!-- CTA Box -->
         <div class="faq-cta-box">
             <div class="card-icon">💬</div>
             <h3 id="cta-title-es">¿Aún tiene preguntas?</h3>
@@ -358,6 +360,19 @@
     </section>
 
     <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
+                <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
+                <a href="tel:+13035004122">303-500-4122</a>
+            </div>
+            <div class="contact-item">
+                <strong id="contact-email-es">Correo Electrónico:</strong>
+                <strong id="contact-email-en" style="display:none;">Email:</strong>
+                <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+            </div>
+        </div>
+        
         <p id="footer-es">
             © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
             Precios transparentes · Servicio bilingüe · Enfoque comunitario
@@ -381,4 +396,4 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+</html>v
