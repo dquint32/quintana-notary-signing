@@ -1,9 +1,7 @@
 /* ============================================
    QUINTANA NOTARY & SIGNING - REFACTORED STYLES
-   Author: David Quintana
    Professional, clean, structured design
-   Update Comment: Enhanced tables, forms, FAQ, and visual hierarchy.
-   Date of last modification: 12/15/2025
+   Enhanced tables, forms, FAQ, and visual hierarchy
    ============================================ */
 
 :root {
@@ -1736,24 +1734,27 @@ button[type="submit"]:hover {
   nav {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100vh;
     background: var(--navy);
     box-shadow: var(--shadow-lg);
     z-index: 998;
-    padding: var(--space-md) 0;
+    padding: 80px var(--space-md) var(--space-md);
+    overflow-y: auto;
   }
 
-  nav.open {
+  nav.active {
     display: flex;
   }
-
-  nav a {
-    width: 100%;
+  
+  nav.active a {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: var(--space-lg);
     text-align: center;
-    padding: var(--space-lg) var(--space-md);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
