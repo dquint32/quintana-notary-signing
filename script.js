@@ -1,8 +1,6 @@
 // Global JavaScript for Quintana Notary & Signing
-// Author: David Quintana
 // Handles language switching, mobile menu, and interactive elements
-// Modified: 12/15/2025
-// Modification Note: Fixed toggle issues with language.
+
 // ============================================
 // LANGUAGE TOGGLE FUNCTION
 // ============================================
