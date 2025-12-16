@@ -1,6 +1,8 @@
 // Global JavaScript for Quintana Notary & Signing
+// Author: David Quintana
 // Handles language switching, mobile menu, and interactive elements
-
+// Modified: 12/15/2025
+// Modification Note: Fixed toggle issues with language.
 // ============================================
 // LANGUAGE TOGGLE FUNCTION
 // ============================================
@@ -29,6 +31,8 @@ function toggleLanguage(specificLang) {
     } catch (e) {
         console.warn('Could not save language preference:', e);
     }
+    
+    console.log('Language switched to:', newLang); // Debug log
 }
 
 // ============================================
@@ -137,7 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize language
     initLanguage();
     
-    // 2. Initialize Hamburger Menu
+    // 2. Initialize Language Toggle Button (works for both onclick and event listener)
+    const langToggleButtons = document.querySelectorAll('.toggle-btn, #lang-toggle');
+    langToggleButtons.forEach(btn => {
+        // Remove inline onclick to prevent double-toggling
+        if (btn.hasAttribute('onclick')) {
+            btn.removeAttribute('onclick');
+        }
+        
+        // Add event listener
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleLanguage();
+        });
+    });
+    
+    // 3. Initialize Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     if (hamburger) {
         // CLEANUP: Remove inline onclick if it exists to prevent double-toggling
@@ -160,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Hamburger button ID="hamburger" not found in HTML');
     }
     
-    // 3. Close menu when clicking nav links
+    // 4. Close menu when clicking nav links
     const navLinks = document.querySelectorAll('#main-nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -170,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // 4. Initialize FAQ
+    // 5. Initialize FAQ
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', (e) => {
@@ -179,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Handle Resize
+    // 6. Handle Resize
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) closeMobileMenu();
     });
