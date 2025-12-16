@@ -17,12 +17,10 @@ function toggleLanguage(specificLang) {
     
     // Show/hide elements based on language
     enElements.forEach(el => {
-        // Use default display ('') for visibility, 'none' for hidden
         el.style.display = (newLang === 'en') ? '' : 'none';
     });
     
     esElements.forEach(el => {
-        // Use default display ('') for visibility, 'none' for hidden
         el.style.display = (newLang === 'es') ? '' : 'none';
     });
     
@@ -32,11 +30,11 @@ function toggleLanguage(specificLang) {
     
     if (langBtnEn && langBtnEs) {
         if (newLang === 'es') {
-            langBtnEs.style.display = '';    // Show "English" (option to switch to)
+            langBtnEs.style.display = '';
             langBtnEn.style.display = 'none';
         } else {
             langBtnEs.style.display = 'none';
-            langBtnEn.style.display = '';    // Show "Español" (option to switch to)
+            langBtnEn.style.display = '';
         }
     }
 
@@ -78,14 +76,21 @@ function toggleMenu() {
     const nav = document.getElementById('main-nav');
     const hamburger = document.querySelector('.hamburger');
     
+    console.log('Toggle menu called'); // Debug log
+    
     if (nav) {
+        const isActive = nav.classList.contains('active');
+        console.log('Menu active before toggle:', isActive); // Debug log
+        
         nav.classList.toggle('active');
+        
+        console.log('Menu active after toggle:', nav.classList.contains('active')); // Debug log
     }
     
     if (hamburger) {
         hamburger.classList.toggle('active');
         
-        // Accessibility: Update aria-expanded if applicable
+        // Accessibility: Update aria-expanded
         const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
         hamburger.setAttribute('aria-expanded', !expanded);
     }
@@ -108,7 +113,6 @@ function closeMobileMenuOnClick() {
     
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // Check for mobile screen size before closing (good for preventing issues on desktop)
             if (window.innerWidth <= 768) {
                 if (nav) nav.classList.remove('active');
                 if (hamburger) hamburger.classList.remove('active');
@@ -127,9 +131,7 @@ function closeMobileMenuOnOutsideClick() {
         const hamburger = document.querySelector('.hamburger');
         const header = document.querySelector('header');
         
-        // Only execute if menu is currently active and screen is mobile
         if (window.innerWidth <= 768 && nav && hamburger && nav.classList.contains('active')) {
-            // Check if the click was OUTSIDE the header/nav/hamburger
             if (!header.contains(e.target) && !hamburger.contains(e.target)) {
                 nav.classList.remove('active');
                 hamburger.classList.remove('active');
@@ -140,26 +142,20 @@ function closeMobileMenuOnOutsideClick() {
 }
 
 // ============================================
-// FAQ ACCORDION TOGGLE FUNCTION (Updated for smooth max-height transition)
+// FAQ ACCORDION TOGGLE FUNCTION
 // ============================================
 function toggleFaq(element) {
-    // The question is the element clicked. The answer is the immediate next sibling.
     const question = element;
-    const answer = question.nextElementSibling; // Should be the .faq-answer container
+    const answer = question.nextElementSibling;
     
     if (!answer) return;
 
-    // Toggle custom classes for styling/visual cues (arrow rotation, etc.)
     question.classList.toggle('active');
     
-    // Check if the answer is currently open (has a max-height value)
     if (answer.style.maxHeight) {
-        // If open, close it (by setting max-height to null/0)
         answer.style.maxHeight = null;
         question.setAttribute('aria-expanded', 'false');
     } else {
-        // If closed, open it (by setting max-height to its scrollHeight)
-        // The answer content must be wrapped in a container where max-height can be applied.
         answer.style.maxHeight = answer.scrollHeight + "px";
         question.setAttribute('aria-expanded', 'true');
     }
@@ -172,25 +168,20 @@ function initFaqAccordion() {
     const faqQuestions = document.querySelectorAll('.faq-question');
     
     faqQuestions.forEach(question => {
-        // Check if the question is within the expected structure (e.g., using a non-details tag)
         if (question.tagName.toLowerCase() === 'summary') {
-            console.warn('FAQ Question is a <summary> tag. Using native <details> functionality is simpler or requires a different JS approach for smooth transitions. Applying custom click handler anyway.');
+            console.warn('FAQ Question is a <summary> tag. Using native <details> functionality.');
         }
 
-        // Ensure only one listener is attached 
         if (question.hasAttribute('data-listener')) return;
 
         question.addEventListener('click', (e) => {
             e.preventDefault();
-            // Call the toggler with the element that was clicked
             toggleFaq(question);
         });
         
-        // Add accessibility attribute and mark as initialized
         question.setAttribute('aria-expanded', 'false');
         question.setAttribute('data-listener', 'true'); 
         
-        // Ensure the answer starts closed for the max-height logic
         const answer = question.nextElementSibling;
         if (answer && !answer.style.maxHeight) {
              answer.style.maxHeight = null;
@@ -215,7 +206,6 @@ function initSmoothScroll() {
             if (target) {
                 e.preventDefault();
                 
-                // Close mobile menu if open
                 const nav = document.getElementById('main-nav');
                 const hamburger = document.querySelector('.hamburger');
                 if (nav && nav.classList.contains('active')) {
@@ -224,7 +214,6 @@ function initSmoothScroll() {
                     document.body.style.overflow = '';
                 }
                 
-                // Smooth scroll to target
                 target.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -240,7 +229,6 @@ function initSmoothScroll() {
 function initLazyLoading() {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        // Only set if not already present, respecting existing attributes
         if (!img.hasAttribute('loading')) {
             img.setAttribute('loading', 'lazy');
         }
@@ -254,7 +242,6 @@ function handleResize() {
     const nav = document.getElementById('main-nav');
     const hamburger = document.querySelector('.hamburger');
     
-    // Reset menu state when resizing above mobile breakpoint
     if (window.innerWidth > 768) {
         if (nav) nav.classList.remove('active');
         if (hamburger) hamburger.classList.remove('active');
@@ -262,7 +249,7 @@ function handleResize() {
     }
 }
 
-// Debounce function to limit resize event firing
+// Debounce function
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -279,15 +266,36 @@ function debounce(func, wait) {
 // INITIALIZE ALL FUNCTIONALITY
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded - Initializing...'); // Debug log
+    
     // Initialize language
     initLanguage();
     
     // Attach event listener to Hamburger Button
     const hamburger = document.querySelector('.hamburger');
     if (hamburger) {
+        console.log('Hamburger found, attaching click listener'); // Debug log
+        
         hamburger.addEventListener('click', (e) => {
+            e.preventDefault();
             e.stopPropagation();
+            console.log('Hamburger clicked!'); // Debug log
             toggleMenu();
+        });
+    } else {
+        console.warn('Hamburger button not found!'); // Debug log
+    }
+    
+    // Attach event listener to Language Toggle Button
+    const toggleBtn = document.querySelector('.toggle-btn');
+    if (toggleBtn) {
+        console.log('Toggle button found, attaching click listener'); // Debug log
+        
+        toggleBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Language toggle clicked!'); // Debug log
+            toggleLanguage();
         });
     }
 
