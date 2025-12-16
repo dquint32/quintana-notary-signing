@@ -1,322 +1,186 @@
-<!-- 
-Author: David Quintana
-Date Created: 11/02/2025
-Modified: 12/15/2025
-Update Note: Fixed hamburger menu - removed onclick, added IDs
-Filename: index.html
-Purpose: Business portfolio page
-Editor: Notepad
-Generative AI Used: Yes
-Specific Tools Used: Copilot, Gemini, Claude
-Image Use Case: Logo image created from nanobanana concept.
--->
+// Global JavaScript for Quintana Notary & Signing
+// Handles language switching, mobile menu, and interactive elements
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Notariales: Confiables, Móviles y Bilingües | Quintana Notary & Signing</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<div class="top-help-bar">
-    <div class="top-help-content">
-        <span class="top-help-message">
-            <span id="help-text-es">¿Necesitas ayuda?</span>
-            <span id="help-text-en" style="display:none;">Need help?</span>
-        </span>
-        <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
-            <span class="btn-icon">📞</span>
-            <span id="help-call-es">Llamar / Mensaje</span>
-            <span id="help-call-en" style="display:none;">Call / Text</span>
-        </a>
-        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
-            <span class="btn-icon">💬</span>
-            <span id="help-whatsapp-es">WhatsApp</span>
-            <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
-        </a>
-    </div>
-</div>
-
-<header>
-    <div class="header-container">
-        <div id="brand-logo">
-            <a href="index.html">
-                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
-            </a>
-        </div>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav id="main-nav">
-            <a href="index.html" id="nav-home-es">Inicio</a>
-            <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
-            
-            <a href="services.html" id="nav-services-es">Servicios</a>
-            <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
-            
-            <a href="translate.html" id="nav-translate-es">Traducciones</a>
-            <a href="translate.html" id="nav-translate-en" style="display:none;">Translations</a>
-            
-            <a href="pricing.html" id="nav-pricing-es">Precios</a>
-            <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
-            
-            <a href="about.html" id="nav-about-es">Acerca de</a>
-            <a href="about.html" id="nav-about-en" style="display:none;">About</a>
-            
-            <a href="faq.html" id="nav-faq-es">Preguntas</a>
-            <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
-            
-            <a href="contact.html" id="nav-contact-es">Contacto</a>
-            <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
-            
-            <button class="toggle-btn" id="lang-toggle">
-                <span id="toggle-label-en" style="display:none;">Español</span>
-                <span id="toggle-label-es">English</span>
-            </button>
-        </nav>
-    </div>
-</header>
-
-<section class="hero hero-with-logo">
-	<div class="hero-overlay"></div>
-	<div class="hero-content">
-		<h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
-		<h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
-		<p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar preferido en Castle Rock y Denver Metro.</p>
-		<p class="hero-subtitle" id="hero-h2-en" style="display:none;">We bring professional notary services to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
-
-		<div class="cta-buttons">
-			<a href="pricing.html" class="btn btn-primary" id="cta-price-es">
-				<span class="btn-icon">💰</span>
-				<span>Ver Precios y Reservar</span>
-			</a>
-			<a href="pricing.html" class="btn btn-primary" id="cta-price-en" style="display:none;">
-				<span class="btn-icon">💰</span>
-				<span>View Pricing & Book Now</span>
-			</a>
-			<a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
-				<span class="btn-icon">📞</span>
-				<span>Llámanos o Envíanos un Mensaje</span>
-			</a>
-			<a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-en" style="display:none;">
-				<span class="btn-icon">📞</span>
-				<span>Call or Text Us</span>
-			</a>
-		</div>
-	</div>
-</section>
-
-<main class="section container">
-    <div class="quick-links">
-        <a href="services.html" class="quick-link-card">
-            <span class="card-icon">🚙</span>
-            <h3 id="quick-link-1-es">Servicio Notarial Móvil</h3>
-            <h3 id="quick-link-1-en" style="display:none;">Mobile Notary Service</h3>
-            <p id="quick-link-1-desc-es">Le encontramos donde esté: hogar, oficina, hospital o cafetería.</p>
-            <p id="quick-link-1-desc-en" style="display:none;">We meet you where you are: home, office, hospital, or coffee shop.</p>
-        </a>
-
-        <a href="translate.html" class="quick-link-card">
-            <span class="card-icon">🌐</span>
-            <h3 id="quick-link-2-es">Traducciones Certificadas</h3>
-            <h3 id="quick-link-2-en" style="display:none;">Certified Translations</h3>
-            <p id="quick-link-2-desc-es">Traducciones rápidas de español a inglés de documentos oficiales (USCIS).</p>
-            <p id="quick-link-2-desc-en" style="display:none;">Quick Spanish-to-English translations for official documents (USCIS).</p>
-        </a>
-        
-        <a href="pricing.html" class="quick-link-card">
-            <span class="card-icon">💰</span>
-            <h3 id="quick-link-3-es">Precios Transparentes</h3>
-            <h3 id="quick-link-3-en" style="display:none;">Transparent Pricing</h3>
-            <p id="quick-link-3-desc-es">Conozca el costo exacto por adelantado. Incluye tarifas locales con descuento.</p>
-            <p id="quick-link-3-desc-en" style="display:none;">Know the exact cost upfront. Includes local, discounted rates.</p>
-        </a>
-    </div>
-
-    <div class="divider"></div>
-
-    <section class="section-with-icon">
-        <div class="card-icon">💡</div>
-        <h2 id="why-choose-es">Por Qué Elegir Quintana Notary & Signing</h2>
-        <h2 id="why-choose-en" style="display:none;">Why Choose Quintana Notary & Signing</h2>
-        
-        <div class="why-reasons">
-            <div class="reason-item">
-                <span class="reason-icon">⭐</span>
-                <div>
-                    <strong id="why-1-title-es">Bilingüe y Bicultural</strong>
-                    <strong id="why-1-title-en" style="display:none;">Bilingual & Bicultural</strong>
-                    <p id="why-1-desc-es">Comunicación clara en español e inglés, asegurando que cada cliente se sienta cómodo e informado.</p>
-                    <p id="why-1-desc-en" style="display:none;">Clear communication in Spanish and English, ensuring every client feels comfortable and informed.</p>
-                </div>
-            </div>
-
-            <div class="reason-item">
-                <span class="reason-icon">⏱️</span>
-                <div>
-                    <strong id="why-2-title-es">Servicio a la Medida</strong>
-                    <strong id="why-2-title-en" style="display:none;">Tailored Service</strong>
-                    <p id="why-2-desc-es">Horarios flexibles, incluyendo tardes y fines de semana, adaptándonos a su ocupada agenda.</p>
-                    <p id="why-2-desc-en" style="display:none;">Flexible hours, including evenings and weekends, adapting to your busy schedule.</p>
-                </div>
-            </div>
-
-            <div class="reason-item">
-                <span class="reason-icon">🤝</span>
-                <div>
-                    <strong id="why-3-title-es">Enfoque Comunitario</strong>
-                    <strong id="why-3-title-en" style="display:none;">Community Focus</strong>
-                    <p id="why-3-desc-es">Descuentos especiales por reunirnos en ubicaciones comunitarias seleccionadas (Tienda Salvadoreña, MSU Denver).</p>
-                    <p id="why-3-desc-en" style="display:none;">Special discounts for meeting at select community locations (Tienda Salvadoreña, MSU Denver).</p>
-                </div>
-            </div>
-
-            <div class="reason-item">
-                <span class="reason-icon">💡</span>
-                <div>
-                    <strong id="why-4-title-es">Precios Anticipados</strong>
-                    <strong id="why-4-title-en" style="display:none;">Upfront Pricing</strong>
-                    <p id="why-4-desc-es">Siempre cotizamos el precio exacto (tarifa notarial + tarifa de viaje) antes de la cita, sin sorpresas.</p>
-                    <p id="why-4-desc-en" style="display:none;">We always quote the exact price (notary fee + travel fee) before the appointment, with no surprises.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section-with-icon">
-        <div class="card-icon">🔒</div>
-        <h2 id="services-title-es">Nuestros Servicios Principales</h2>
-        <h2 id="services-title-en" style="display:none;">Our Core Services</h2>
-        
-        <div class="service-grid">
-            <div class="card service-card">
-                <h3 id="service-1-es">Notarización General</h3>
-                <h3 id="service-1-en" style="display:none;">General Notarization</h3>
-                <p id="service-1-desc-es">Juramentos, declaraciones juradas, poderes notariales, títulos de vehículos y cualquier documento que requiera un sello notarial.</p>
-                <p id="service-1-desc-en" style="display:none;">Oaths, affidavits, power of attorney, vehicle titles, and any document requiring a notary seal.</p>
-            </div>
-            
-            <div class="card service-card">
-                <h3 id="service-2-es">Firmas de Préstamo (Loan Signing)</h3>
-                <h3 id="service-2-en" style="display:none;">Loan Signings</h3>
-                <p id="service-2-desc-es">Especialistas en la firma de paquetes de préstamos hipotecarios residenciales (compras, refinanciamientos, HELOCs).</p>
-                <p id="service-2-desc-en" style="display:none;">Specializing in the signing of residential mortgage loan packages (purchases, refinances, HELOCs).</p>
-            </div>
-
-            <div class="card service-card">
-                <h3 id="service-3-es">Traducciones Certificadas</h3>
-                <h3 id="service-3-en" style="display:none;">Certified Translations</h3>
-                <p id="service-3-desc-es">Traducciones certificadas (español a inglés) para USCIS, DMV y más. ¡Rápido y preciso!</p>
-                <p id="service-3-desc-en" style="display:none;">Certified translations (Spanish to English) for USCIS, DMV, and more. Fast and accurate!</p>
-            </div>
-
-            <div class="card service-card">
-                <h3 id="service-4-es">Verificación I-9</h3>
-                <h3 id="service-4-en" style="display:none;">I-9 Verification</h3>
-                <p id="service-4-desc-es">Actuamos como Representante Autorizado para completar la Sección 2 de su Formulario I-9.</p>
-                <p id="service-4-desc-en" style="display:none;">We act as an Authorized Representative to complete Section 2 of your I-9 Form.</p>
-            </div>
-        </div>
-        
-        <div class="cta-buttons cta-services-nudge">
-            <a href="services.html" class="btn btn-primary" id="cta-services-es">
-                <span class="btn-icon">📚</span>
-                <span>Ver Todos los Servicios</span>
-            </a>
-            <a href="services.html" class="btn btn-primary" id="cta-services-en" style="display:none;">
-                <span class="btn-icon">📚</span>
-                <span>View All Services</span>
-            </a>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section-with-icon">
-        <div class="card-icon">💰</div>
-        <h2 id="pricing-title-es">Precios Transparentes y Descuentos</h2>
-        <h2 id="pricing-title-en" style="display:none;">Transparent Pricing & Discounts</h2>
-
-        <div class="pricing-overview">
-            <div class="card pricing-card-overview">
-                <div class="pricing-item">
-                    <strong id="pricing-item-1-es">Costo Notarial Estatuario:</strong>
-                    <strong id="pricing-item-1-en" style="display:none;">Statutory Notary Fee:</strong>
-                    <span>$15 por sello (fijado por ley de CO)</span>
-                </div>
-                <div class="pricing-item">
-                    <strong id="pricing-item-2-es">Cargo de Conveniencia Móvil:</strong>
-                    <strong id="pricing-item-2-en" style="display:none;">Mobile Convenience Fee:</strong>
-                    <span>Cotizado por adelantado por distancia</span>
-                </div>
-                <div class="pricing-item discount">
-                    <strong id="pricing-item-3-es">¡Descuento Comunitario!</strong>
-                    <strong id="pricing-item-3-en" style="display:none;">Community Discount!</strong>
-                    <span id="pricing-item-3-desc-es"><strong>$10 por sello</strong> al reunirse en ubicaciones especiales.</span>
-                    <span id="pricing-item-3-desc-en" style="display:none;"><strong>$10 per seal</strong> when meeting at special locations.</span>
-                </div>
-            </div>
-
-            <div class="cta-buttons cta-services-nudge">
-                <a href="pricing.html" class="btn btn-primary" id="cta-pricing-es">
-                    <span class="btn-icon">💲</span>
-                    <span>Ver Precios Detallados</span>
-                </a>
-                <a href="pricing.html" class="btn btn-primary" id="cta-pricing-en" style="display:none;">
-                    <span class="btn-icon">💲</span>
-                    <span>View Detailed Pricing</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="contact-info">
-        <div class="contact-item">
-            <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
-            <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
-            <a href="tel:+13035004122">303-500-4122</a>
-        </div>
-        <div class="contact-item">
-            <strong id="contact-email-es">Correo Electrónico:</strong>
-            <strong id="contact-email-en" style="display:none;">Email:</strong>
-            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
-        </div>
-    </div>
+// ============================================
+// LANGUAGE TOGGLE FUNCTION
+// ============================================
+function toggleLanguage(specificLang) {
+    const enElements = document.querySelectorAll('[id$="-en"]');
+    const esElements = document.querySelectorAll('[id$="-es"]');
     
-    <p id="footer-main-es">
-        © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
-        Precios transparentes · Servicio bilingüe · Enfoque comunitario
-    </p>
-    <p id="footer-main-en" style="display:none;">
-        © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
-        Transparent pricing · Bilingual service · Community-focused
-    </p>
+    // Determine new language: use passed argument OR toggle current
+    const currentLang = document.documentElement.lang;
+    const newLang = specificLang ? specificLang : (currentLang === 'es' ? 'en' : 'es');
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = newLang;
+    
+    // Show/hide elements based on language
+    enElements.forEach(el => {
+        el.style.display = (newLang === 'en') ? '' : 'none';
+    });
+    
+    esElements.forEach(el => {
+        el.style.display = (newLang === 'es') ? '' : 'none';
+    });
 
-    <div class="disclaimer">
-        <div id="disclaimer-es">
-            <strong>Aviso Legal (ES)</strong>
-            Quintana Notary & Signing ofrece servicios notariales en cumplimiento con la ley de Colorado. Los honorarios legales están limitados a $15 por documento. Los cargos de viaje y conveniencia son separados y se informan por escrito antes de las citas. Los notarios no son abogados autorizados para ejercer la abogacía y no pueden dar asesoría legal.
-        </div>
-        <div id="disclaimer-en" style="display:none;">
-            <strong>Legal Notice (EN)</strong>
-            Quintana Notary & Signing offers notarial services in compliance with Colorado law. Statutory fees are limited to $15 per document. Travel and convenience fees are separate and disclosed in writing before appointments. Notaries are not attorneys licensed to practice law and cannot give legal advice.
-        </div>
-    </div>
-</footer>
+    try {
+        localStorage.setItem('preferredLanguage', newLang);
+    } catch (e) {
+        console.warn('Could not save language preference:', e);
+    }
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+// ============================================
+// INITIALIZE LANGUAGE ON PAGE LOAD
+// ============================================
+function initLanguage() {
+    let savedLang = null;
+    try {
+        savedLang = localStorage.getItem('preferredLanguage');
+    } catch (e) {}
+    
+    if (!document.documentElement.lang) {
+        document.documentElement.lang = 'es';
+    }
+
+    if (savedLang && savedLang !== document.documentElement.lang) {
+        toggleLanguage(savedLang);
+    }
+}
+
+// ============================================
+// MOBILE HAMBURGER MENU TOGGLE
+// ============================================
+function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    const hamburger = document.getElementById('hamburger');
+    
+    if (!nav || !hamburger) {
+        console.error('Nav or hamburger element not found. Check HTML IDs.');
+        return;
+    }
+    
+    const isActive = nav.classList.contains('active');
+    
+    if (isActive) {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = ''; 
+    } else {
+        nav.classList.add('active');
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden'; 
+    }
+}
+
+// ============================================
+// CLOSE MOBILE MENU
+// ============================================
+function closeMobileMenu() {
+    const nav = document.getElementById('main-nav');
+    const hamburger = document.getElementById('hamburger');
+    
+    if (nav) nav.classList.remove('active');
+    if (hamburger) {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+    document.body.style.overflow = '';
+}
+
+// ============================================
+// FAQ ACCORDION TOGGLE
+// ============================================
+function toggleFaq(element) {
+    const question = element;
+    const answer = question.nextElementSibling;
+    const accordionContainer = question.closest('.faq-accordion-container');
+    
+    if (!answer || !accordionContainer) return;
+
+    const isOpening = !question.classList.contains('active');
+
+    // Close others
+    accordionContainer.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
+        if (activeQuestion !== question) {
+            activeQuestion.classList.remove('active');
+            activeQuestion.closest('.faq-item').classList.remove('active');
+            activeQuestion.setAttribute('aria-expanded', 'false');
+            const activeAnswer = activeQuestion.nextElementSibling;
+            if (activeAnswer) activeAnswer.style.maxHeight = null; 
+        }
+    });
+
+    // Toggle current
+    if (isOpening) {
+        question.classList.add('active');
+        question.closest('.faq-item').classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        question.setAttribute('aria-expanded', 'true');
+    } else {
+        question.classList.remove('active');
+        question.closest('.faq-item').classList.remove('active');
+        answer.style.maxHeight = null;
+        question.setAttribute('aria-expanded', 'false');
+    }
+}
+
+// ============================================
+// INITIALIZE ALL FUNCTIONALITY
+// ============================================
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded - Initializing...');
+    
+    // 1. Initialize language
+    initLanguage();
+    
+    // 2. Initialize Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+        // CLEANUP: Remove inline onclick if it exists to prevent double-toggling
+        if (hamburger.hasAttribute('onclick')) {
+            hamburger.removeAttribute('onclick');
+        }
+        
+        // Remove existing listeners (by cloning) to prevent duplicates if script runs twice
+        const newHamburger = hamburger.cloneNode(true);
+        hamburger.parentNode.replaceChild(newHamburger, hamburger);
+        
+        // Add single, clean event listener
+        newHamburger.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+        });
+        console.log('Hamburger menu initialized');
+    } else {
+        console.warn('Hamburger button ID="hamburger" not found in HTML');
+    }
+    
+    // 3. Close menu when clicking nav links
+    const navLinks = document.querySelectorAll('#main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                closeMobileMenu();
+            }
+        });
+    });
+    
+    // 4. Initialize FAQ
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleFaq(question);
+        });
+    });
+
+    // 5. Handle Resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) closeMobileMenu();
+    });
+});
