@@ -1,23 +1,10 @@
-<!-- 
-Author: David Quintana
-Date Created: 11/02/2025
-Modified: 12/15/2025
-Update Note: Fixed CSS style.
-Filename: about.html
-Purpose: Business portfolio page
-Editor: Notepad
-Generative AI Used: Yes
-Specific Tools Used: Copilot, Gemini, Claude
-Image Use Case: Logo image created from nanobanana concept.
--->
-
 <!DOCTYPE html>
 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Traducción | Quintana Notary & Signing</title>
+    <title>Acerca de Nosotros | Quintana Notary & Signing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -50,7 +37,7 @@ Image Use Case: Logo image created from nanobanana concept.
             </a>
         </div>
 
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
@@ -88,142 +75,62 @@ Image Use Case: Logo image created from nanobanana concept.
 
     <section class="hero">
         <div class="hero-content">
-            <h1 id="hero-h1-es">Conozca a Su Notario</h1>
-            <h1 id="hero-h1-en" style="display:none;">Meet Your Notary</h1>
+            <h1 id="hero-h1-es">👥 Acerca de Quintana Notary & Signing</h1>
+            <h1 id="hero-h1-en" style="display:none;">👥 About Quintana Notary & Signing</h1>
             
-            <p class="hero-subtitle" id="hero-h2-es">Servicio profesional con un toque personal.</p>
-            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Professional service with a personal touch.</p>
+            <p class="hero-subtitle" id="hero-h2-es">Su notario móvil y bilingüe de confianza, sirviendo a Denver, Castle Rock y el Sur de Colorado.</p>
+            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Your trusted mobile, bilingual notary, serving Denver, Castle Rock, and South Colorado.</p>
         </div>
     </section>
 
-    <section class="section container">
-        <h2 id="about-title-es">Sobre Quintana Notary & Signing</h2>
-        <h2 id="about-title-en" style="display:none;">About Quintana Notary & Signing</h2>
+    <main class="section container">
         
-        <div class="about-intro-card">
-            <div class="card-icon">👋</div>
-            <h3 id="who-title-es">Quién Soy</h3>
-            <h3 id="who-title-en" style="display:none;">Who I Am</h3>
+        <div class="intro-card">
+            <div class="card-icon">⭐</div>
+            <h2 id="intro-title-es">Nuestra Misión y Enfoque</h2>
+            <h2 id="intro-title-en" style="display:none;">Our Mission and Focus</h2>
             
-            <p id="about-p1-es">
-                Mi nombre es David Quintana, su notario público móvil de confianza sirviendo a Castle Rock, Highlands Ranch, Aurora y toda el área metropolitana de Denver. Fundé este servicio con una misión simple: hacer que la notarización sea fácil, accesible y libre de estrés para todos en mi comunidad.
+            <p id="mission-p-es">
+                En <strong>Quintana Notary & Signing</strong>, nuestra misión es simple: proporcionar servicios notariales y de traducción con honestidad, transparencia y conveniencia. Entendemos que los documentos importantes a menudo vienen con estrés. Nuestro servicio es móvil y completamente bilingüe (Español/Inglés) para que el proceso sea lo más fluido posible para usted, en donde sea que esté en el área metropolitana de Denver y más allá.
             </p>
-            <p id="about-p1-en" style="display:none;">
-                My name is David Quintana, your trusted mobile notary public serving Castle Rock, Highlands Ranch, Aurora, and the entire Denver Metro area. I founded this service with a simple mission: to make notarization easy, accessible, and stress-free for everyone in my community.
+            <p id="mission-p-en" style="display:none;">
+                At <strong>Quintana Notary & Signing</strong>, our mission is simple: to provide notarial and translation services with honesty, transparency, and convenience. We understand that important documents often come with stress. Our service is mobile and fully bilingual (Spanish/English) to make the process as smooth as possible for you, wherever you are in the Denver metro area and beyond.
             </p>
-
-            <p id="about-p2-es">
-                Actualmente soy estudiante de último año en MSU Denver, estudiando Sistemas de Información de Atención Médica (HCIS) y me graduaré en 2026. Mi trayectoria académica refleja mi pasión por ayudar a las personas a navegar sistemas complejos con claridad y confianza.
-            </p>
-            <p id="about-p2-en" style="display:none;">
-                I am currently a senior at MSU Denver, studying Health Care Information Systems (HCIS) and set to graduate in 2026. My academic journey reflects my passion for helping people navigate complex systems with clarity and confidence.
-            </p>
-
-            <p id="about-p3-es">
-                Con años de experiencia apoyando a familias, pequeños negocios y adultos mayores, entiendo la importancia de cada documento que firman. Mi papel no es dar asesoría legal, sino compartir conocimiento público y hacer que los procesos sean más fáciles de entender.
-            </p>
-            <p id="about-p3-en" style="display:none;">
-                With years of experience supporting families, small businesses, and seniors, I understand the importance of every document you sign. My role is not to provide legal advice, but to share public knowledge and make processes easier to understand.
-            </p>
-
-            <p id="about-p4-es">
-                También me importa profundamente asegurar que los clientes de habla hispana entiendan completamente lo que están firmando. Si se necesita traducción, ofrezco un apoyo bilingüe claro para que cada cliente se sienta informado y respetado. Me especializo en llevar servicios notariales profesionales directamente a su hogar, oficina, hospital o cafetería favorita—donde sea más conveniente para usted.
-            </p>
-            <p id="about-p4-en" style="display:none;">
-                I also care deeply about ensuring Spanish-speaking clients fully understand what they are signing. If translation is needed, I provide clear bilingual support so that every client feels informed and respected. I specialize in bringing professional notary services directly to your home, office, hospital, or favorite coffee shop—wherever is most convenient for you.
-            </p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="mission-card">
-            <div class="card-icon">🎯</div>
-            <h3 id="mission-title-es">Nuestra Misión</h3>
-            <h3 id="mission-title-en" style="display:none;">My Mission</h3>
-
-            <p id="mission-p1-es">
-                Sé que necesitar un notario a menudo viene con plazos urgentes y documentos importantes. Ya sea que esté comprando una casa, otorgando un poder notarial, firmando documentos de adopción o simplemente necesite una declaración jurada, mi misión es asegurar que el proceso se haga bien la primera vez.
-            </p>
-            <p id="mission-p1-en" style="display:none;">
-                I know that needing a notary often comes with tight deadlines and important documents. Whether you're buying a home, granting a power of attorney, signing adoption papers, or simply need an affidavit, my mission is to ensure the process is done right the first time.
-            </p>
-
-            <p id="mission-p2-es">
-                Me enfoco en hacer que la notarización sea fácil, accesible y libre de estrés, mientras ayudo a los clientes de habla hispana a entender completamente lo que firman. Mi papel no es dar asesoría legal, sino compartir conocimiento público y claridad para que cada cliente se sienta seguro y respetado.
-            </p>
-            <p id="mission-p2-en" style="display:none;">
-                I focus on making notarization easy, accessible, and stress-free, while also helping Spanish-speaking clients fully understand what they are signing. My role is not to provide legal advice, but to share public knowledge and clarity so every client feels confident and respected.
-            </p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="help-card">
-            <div class="card-icon">🤝</div>
-            <h3 id="help-title-es">Cómo Le Puedo Ayudar</h3>
-            <h3 id="help-title-en" style="display:none;">How I Can Help You</h3>
             
-            <p id="help-p-es">
-                Ofrezco horarios flexibles, incluyendo tardes y fines de semana, porque sé que la vida no se detiene por el papeleo. Mi objetivo es encontrarle donde esté – ya sea en casa, la oficina o un espacio público conveniente – y hacer que el proceso de notarización sea lo más fluido posible. Hablo español e inglés, y me tomo el tiempo de explicar cada paso del proceso en el idioma con el que se sienta más cómodo. De esta manera, puede firmar con confianza, sabiendo exactamente lo que significan sus documentos.
-            </p>
-            <p id="help-p-en" style="display:none;">
-                I offer flexible hours, including evenings and weekends, because I know life doesn't pause for paperwork. My goal is to meet you where you are – whether at home, the office, or a convenient public space – and make the notarization process as smooth as possible. I speak both Spanish and English, and I take the time to explain every step of the process in whichever language you feel most comfortable with. This way, you can sign with confidence, knowing exactly what your documents mean.
-            </p>
+            <div class="info-box">
+                <p id="bilingual-note-es">🤝 <strong>Somos un Negocio Bilingüe:</strong> Hacemos negocios en inglés y español. Su notario es bilingüe y traductor certificado.</p>
+                <p id="bilingual-note-en" style="display:none;">🤝 <strong>We Are a Bilingual Business:</strong> We conduct business in both English and Spanish. Your notary is fully bilingual and a certified translator.</p>
+            </div>
         </div>
 
         <div class="divider"></div>
 
-        <div class="credentials-section">
-            <div class="credentials-cards">
-                <div class="card credentials-card">
-                    <div class="card-icon">📜</div>
-                    <h3 id="credentials-title-es">Credenciales y Compromiso</h3>
-                    <h3 id="credentials-title-en" style="display:none;">Credentials & Commitment</h3>
-
-                    <ul class="credentials-list">
-                        <li id="cred-1-es">Comisionado por el Estado de Colorado</li>
-                        <li id="cred-1-en" style="display:none;">Commissioned by the State of Colorado</li>
-
-                        <li id="cred-2-es">Agente de Firma Notarial Certificado</li>
-                        <li id="cred-2-en" style="display:none;">Certified Notary Signing Agent</li>
-
-                        <li id="cred-3-es">Estudiante Senior en MSU Denver (HCIS, graduación 2026)</li>
-                        <li id="cred-3-en" style="display:none;">Senior at MSU Denver (HCIS program, graduating 2026)</li>
-
-                        <li id="cred-4-es">Bilingüe (Español e Inglés)</li>
-                        <li id="cred-4-en" style="display:none;">Bilingual (Spanish & English)</li>
-                        
-                        <li id="cred-5-es">Verificación de Antecedentes Completada</li>
-                        <li id="cred-5-en" style="display:none;">Background Screened</li>
-
-                        <li id="cred-6-es">Experiencia apoyando familias, adultos mayores y pequeños negocios</li>
-                        <li id="cred-6-en" style="display:none;">Experienced in supporting families, seniors, and small businesses</li>
+        <div class="profile-section">
+            <h2 id="profile-title-es">Conozca a David Quintana (Notario Principal)</h2>
+            <h2 id="profile-title-en" style="display:none;">Meet David Quintana (Lead Notary)</h2>
+            
+            <div class="profile-card">
+                <img src="david-quintana-profile.jpg" alt="David Quintana, Notary Public & Certified Translator" class="profile-img">
+                
+                <div class="profile-details">
+                    <h3 id="profile-name-es">David Quintana</h3>
+                    <h3 id="profile-name-en" style="display:none;">David Quintana</h3>
+                    <p class="profile-role" id="profile-role-es">Notario Público, Agente de Firma de Préstamos (NSA) & Traductor Certificado</p>
+                    <p class="profile-role" id="profile-role-en" style="display:none;">Notary Public, Loan Signing Agent (NSA) & Certified Translator</p>
+                    
+                    <ul class="profile-facts" id="facts-es">
+                        <li><strong>Autorizado por Colorado:</strong> Comisión de Notario Público vigente.</li>
+                        <li><strong>Experiencia:</strong> Más de 5 años de servicio al cliente y administración de documentos.</li>
+                        <li><strong>Bilingüe:</strong> Completamente fluido en español e inglés, proporcionando una comunicación clara.</li>
+                        <li><strong>Educación:</strong> Graduado de la Universidad Estatal de Colorado (CSU).</li>
+                        <li><strong>Enfoque Comunitario:</strong> Dedicado a servir a la comunidad del Sur y Metro Denver.</li>
                     </ul>
-                </div>
-
-                <div class="card expectations-card">
-                    <div class="card-icon">⭐</div>
-                    <h3 id="expect-title-es">Lo Que Puede Esperar</h3>
-                    <h3 id="expect-title-en" style="display:none;">What You Can Expect</h3>
-
-                    <ul class="expect-list">
-                        <li id="expect-1-es">Puntualidad garantizada – llego a tiempo, siempre</li>
-                        <li id="expect-1-en" style="display:none;">Guaranteed punctuality – I arrive on time, every time</li>
-
-                        <li id="expect-2-es">Comunicación clara en Español e Inglés – para que entienda cada paso</li>
-                        <li id="expect-2-en" style="display:none;">Clear communication in Spanish & English – so you understand every step</li>
-
-                        <li id="expect-3-es">Revisión cuidadosa de sus documentos – precisión y atención al detalle</li>
-                        <li id="expect-3-en" style="display:none;">Careful review of your documents – accuracy and attention to detail</li>
-
-                        <li id="expect-4-es">Respeto por su privacidad y tiempo – servicio profesional y discreto</li>
-                        <li id="expect-4-en" style="display:none;">Respect for your privacy and time – professional and discreet service</li>
-
-                        <li id="expect-5-es">Paciencia y comprensión – me tomo el tiempo para responder preguntas</li>
-                        <li id="expect-5-en" style="display:none;">Patience and understanding – I take the time to answer questions and guide you through the process</li>
-
-                        <li id="expect-6-es">Precios transparentes sin sorpresas – tarifas justas y amigables para estudiantes</li>
-                        <li id="expect-6-en" style="display:none;">Transparent pricing with no surprises – fair, student friendly rates</li>
+                    <ul class="profile-facts" id="facts-en" style="display:none;">
+                        <li><strong>Colorado Commissioned:</strong> Current Notary Public commission.</li>
+                        <li><strong>Experience:</strong> 5+ years in customer service and document administration.</li>
+                        <li><strong>Bilingual:</strong> Fully fluent in Spanish and English, ensuring clear communication.</li>
+                        <li><strong>Education:</strong> Graduate of Colorado State University (CSU).</li>
+                        <li><strong>Community Focus:</strong> Dedicated to serving the South and Metro Denver community.</li>
                     </ul>
                 </div>
             </div>
@@ -231,97 +138,89 @@ Image Use Case: Logo image created from nanobanana concept.
 
         <div class="divider"></div>
 
-        <div class="why-choose-card">
-            <div class="card-icon">💡</div>
-            <h3 id="why-title-es">Por Qué Los Clientes Me Eligen</h3>
-            <h3 id="why-title-en" style="display:none;">Why Clients Choose Me</h3>
-            
-            <div class="why-reasons">
-                <div class="reason-item">
-                    <span class="reason-icon">🚙</span>
-                    <div>
-                        <strong id="why-1-title-es">Servicio notarial móvil</strong>
-                        <strong id="why-1-title-en" style="display:none;">Mobile notary service</strong>
-                        <p id="why-1-desc-es">Le encuentro donde sea más conveniente: hogar, oficina, hospital o cafetería</p>
-                        <p id="why-1-desc-en" style="display:none;">I meet you wherever is most convenient: home, office, hospital, or coffee shop</p>
-                    </div>
-                </div>
+        <div class="services-card">
+            <div class="card-icon">🛡️</div>
+            <h2 id="values-title-es">Nuestros Valores Centrales</h2>
+            <h2 id="values-title-en" style="display:none;">Our Core Values</h2>
 
-                <div class="reason-item">
-                    <span class="reason-icon">📅</span>
-                    <div>
-                        <strong id="why-2-title-es">Horarios flexibles</strong>
-                        <strong id="why-2-title-en" style="display:none;">Flexible scheduling</strong>
-                        <p id="why-2-desc-es">Tardes y fines de semana disponibles, porque la vida no se detiene por el papeleo</p>
-                        <p id="why-2-desc-en" style="display:none;">Evenings and weekends available, because life doesn't pause for paperwork</p>
-                    </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <span class="value-icon">✅</span>
+                    <h3 id="value-1-h-es">Transparencia</h3>
+                    <h3 id="value-1-h-en" style="display:none;">Transparency</h3>
+                    <p id="value-1-p-es">Precios claros y sin cargos ocultos. Siempre sabrá el costo total antes de su cita.</p>
+                    <p id="value-1-p-en" style="display:none;">Clear pricing with no hidden fees. You will always know the total cost before your appointment.</p>
                 </div>
-
-                <div class="reason-item">
-                    <span class="reason-icon">🌐</span>
-                    <div>
-                        <strong id="why-3-title-es">Apoyo bilingüe</strong>
-                        <strong id="why-3-title-en" style="display:none;">Bilingual support</strong>
-                        <p id="why-3-desc-es">Comunicación clara en español e inglés para que entienda cada paso</p>
-                        <p id="why-3-desc-en" style="display:none;">Clear communication in both Spanish and English so you understand every step</p>
-                    </div>
+                <div class="value-item">
+                    <span class="value-icon">📍</span>
+                    <h3 id="value-2-h-es">Conveniencia Móvil</h3>
+                    <h3 id="value-2-h-en" style="display:none;">Mobile Convenience</h3>
+                    <p id="value-2-p-es">Vamos a su casa, oficina o un lugar público neutral. Hacemos que la notarización y traducción sean fáciles.</p>
+                    <p id="value-2-p-en" style="display:none;">We come to your home, office, or a neutral public location. We make notarization and translation easy.</p>
                 </div>
-
-                <div class="reason-item">
-                    <span class="reason-icon">⏱️</span>
-                    <div>
-                        <strong id="why-4-title-es">Paciencia y comprensión</strong>
-                        <strong id="why-4-title-en" style="display:none;">Patience and understanding</strong>
-                        <p id="why-4-desc-es">Me tomo el tiempo de guiarle a través del proceso sin prisas</p>
-                        <p id="why-4-desc-en" style="display:none;">I take the time to guide you through the process without rushing</p>
-                    </div>
-                </div>
-
-                <div class="reason-item">
-                    <span class="reason-icon">✨</span>
-                    <div>
-                        <strong id="why-5-title-es">Transparencia ante todo</strong>
-                        <strong id="why-5-title-en" style="display:none;">Transparency first</strong>
-                        <p id="why-5-desc-es">Precios directos y orientación honesta, sin sorpresas</p>
-                        <p id="why-5-desc-en" style="display:none;">Straightforward pricing and honest guidance, no surprises</p>
-                    </div>
+                <div class="value-item">
+                    <span class="value-icon">🌎</span>
+                    <h3 id="value-3-h-es">Bilingüismo</h3>
+                    <h3 id="value-3-h-en" style="display:none;">Bilingual Service</h3>
+                    <p id="value-3-p-es">Servicio completo en inglés y español. Nadie se queda atrás por una barrera de idioma.</p>
+                    <p id="value-3-p-en" style="display:none;">Full service in both English and Spanish. No one is left behind due to a language barrier.</p>
                 </div>
             </div>
         </div>
 
-        <div class="legal-notice-card">
+        <div class="divider"></div>
+
+        <div class="disclaimer-section">
             <div class="card-icon">⚖️</div>
-            <h3>Nota Importante</h3>
-            <p id="legal-es">
-                Como notario público, mi papel es verificar identidades y atestiguar firmas. No puedo dar asesoría legal ni interpretar el significado de sus documentos. Si tiene preguntas legales o necesita orientación sobre lo que significa un documento, le recomiendo consultar con un abogado licenciado. Mi objetivo es simplemente hacer que el proceso de firma sea más fácil, claro y libre de estrés.
-            </p>
-            <p id="legal-en" style="display:none;">
-                As a notary public, my role is to verify identities and witness signatures. I cannot provide legal advice or interpret the meaning of your documents. If you have legal questions or need guidance on what a document means, I recommend consulting with a licensed attorney. My goal is simply to make the signing process easier, clearer, and stress free.
-            </p>
+            <h2 id="disclaimer-title-es">Aviso Legal Importante</h2>
+            <h2 id="disclaimer-title-en" style="display:none;">Important Legal Disclaimer</h2>
+            
+            <div class="info-box legal-box">
+                <h3 id="legal-h3-es">Nuestra Capacidad vs. Leyes de Colorado</h3>
+                <h3 id="legal-h3-en" style="display:none;">Our Capacity vs. Colorado Law</h3>
+                
+                <p id="legal-p-1-es">
+                    Soy Notario Público y Traductor Certificado. Sin embargo, no estoy autorizado a ejercer la abogacía en Colorado.
+                </p>
+                <p id="legal-p-1-en" style="display:none;">
+                    I am a Notary Public and Certified Translator. However, I am not licensed to practice law in Colorado.
+                </p>
+
+                <ul class="legal-list" id="legal-list-es">
+                    <li><strong>No Asesoría Legal:</strong> No puedo darle consejo legal, ni aceptar tarifas por asesoría legal.</li>
+                    <li><strong>No Selección de Documentos:</strong> No puedo ayudarle a elegir el tipo de acto notarial necesario para su documento.</li>
+                    <li><strong>Actos Notariales en Persona:</strong> Todos los actos notariales se realizan en persona. No estoy certificado para notarizaciones en línea (RON).</li>
+                </ul>
+                <ul class="legal-list" id="legal-list-en" style="display:none;">
+                    <li><strong>No Legal Advice:</strong> I cannot give you legal advice or accept fees for legal advice.</li>
+                    <li><strong>No Document Selection:</strong> I cannot help you choose the type of notarial act needed for your document.</li>
+                    <li><strong>In-Person Notarial Acts:</strong> All notarial acts are performed in person. I am not certified for Remote Online Notarization (RON).</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="info-box help-nudge">
-            <p id="nudge-es">
-                💬 <strong>¿No está seguro de qué tipo de notarización necesita?</strong> Llámenos y le explicamos el proceso sin compromiso. Estamos aquí para ayudar.
-            </p>
-            <p id="nudge-en" style="display:none;">
-                💬 <strong>Not sure what type of notarization you need?</strong> Call us and we'll explain the process with no obligation. We're here to help.
-            </p>
+        <div class="cta-card">
+            <div class="card-icon">📅</div>
+            <h2 id="cta-ready-es">¿Listo para agendar su cita?</h2>
+            <h2 id="cta-ready-en" style="display:none;">Ready to schedule your appointment?</h2>
+            <p id="cta-desc-es">Vea nuestros precios y contáctenos para comenzar.</p>
+            <p id="cta-desc-en" style="display:none;">View our pricing and contact us to get started.</p>
+            
+            <div class="cta-buttons">
+                <a href="pricing.html" class="btn btn-primary btn-large">
+                    <span class="btn-icon">💰</span>
+                    <span id="cta-price-es">Ver Precios</span>
+                    <span id="cta-price-en" style="display:none;">View Pricing</span>
+                </a>
+                <a href="contact.html" class="btn btn-secondary btn-large">
+                    <span class="btn-icon">📞</span>
+                    <span id="cta-contact-es">Contáctenos</span>
+                    <span id="cta-contact-en" style="display:none;">Contact Us</span>
+                </a>
+            </div>
         </div>
 
-        <div class="cta-buttons">
-            <a href="tel:+13035004122" class="btn btn-primary btn-large">
-                <span class="btn-icon">📞</span>
-                <span id="cta-phone-es">Llamar Ahora: 303-500-4122</span>
-                <span id="cta-phone-en" style="display:none;">Call Now: 303-500-4122</span>
-            </a>
-            <a href="sms:+13035004122" class="btn btn-secondary btn-large">
-                <span class="btn-icon">💬</span>
-                <span id="cta-text-es">Enviar Mensaje</span>
-                <span id="cta-text-en" style="display:none;">Send Text Message</span>
-            </a>
-        </div>
-    </section>
+    </main>
 
     <footer>
         <div class="contact-info">
