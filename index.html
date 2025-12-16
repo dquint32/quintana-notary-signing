@@ -2,7 +2,7 @@
 Author: David Quintana
 Date Created: 11/02/2025
 Modified: 12/15/2025
-Update Note: Fixed CSS style.
+Update Note: Fixed hamburger menu - removed onclick, added IDs
 Filename: index.html
 Purpose: Business portfolio page
 Editor: Notepad
@@ -49,7 +49,7 @@ Image Use Case: Logo image created from nanobanana concept.
             </a>
         </div>
 
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -77,7 +77,7 @@ Image Use Case: Logo image created from nanobanana concept.
             <a href="contact.html" id="nav-contact-es">Contacto</a>
             <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
             
-            <button class="toggle-btn" onclick="toggleLanguage()">
+            <button class="toggle-btn" id="lang-toggle">
                 <span id="toggle-label-en" style="display:none;">Español</span>
                 <span id="toggle-label-es">English</span>
             </button>
@@ -90,7 +90,7 @@ Image Use Case: Logo image created from nanobanana concept.
 	<div class="hero-content">
 		<h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
 		<h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
-		 	<p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar preferido en Castle Rock y Denver Metro.</p>
+		<p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar preferido en Castle Rock y Denver Metro.</p>
 		<p class="hero-subtitle" id="hero-h2-en" style="display:none;">We bring professional notary services to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
 
 		<div class="cta-buttons">
@@ -102,7 +102,7 @@ Image Use Case: Logo image created from nanobanana concept.
 				<span class="btn-icon">💰</span>
 				<span>View Pricing & Book Now</span>
 			</a>
-			 	<a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
+			<a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
 				<span class="btn-icon">📞</span>
 				<span>Llámanos o Envíanos un Mensaje</span>
 			</a>
@@ -194,7 +194,7 @@ Image Use Case: Logo image created from nanobanana concept.
     <div class="divider"></div>
 
     <section class="section-with-icon">
-        <div class="card-icon">📑</div>
+        <div class="card-icon">🔒</div>
         <h2 id="services-title-es">Nuestros Servicios Principales</h2>
         <h2 id="services-title-en" style="display:none;">Our Core Services</h2>
         
