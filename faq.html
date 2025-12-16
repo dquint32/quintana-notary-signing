@@ -1,23 +1,10 @@
-<!-- 
-Author: David Quintana
-Date Created: 11/02/2025
-Modified: 12/15/2025
-Update Note: Fixed CSS style. Added more specific questions and answers regarding identification requirements for the state of Colorado. 
-Filename: faq.html
-Purpose: Business portfolio page
-Editor: Notepad
-Generative AI Used: Yes
-Specific Tools Used: Copilot, Gemini, Claude
-Image Use Case: Logo image created from nanobanana concept.
--->
-
 <!DOCTYPE html>
 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Traducción | Quintana Notary & Signing</title>
+    <title>Preguntas Frecuentes | Quintana Notary & Signing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -50,7 +37,7 @@ Image Use Case: Logo image created from nanobanana concept.
             </a>
         </div>
 
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
@@ -86,251 +73,262 @@ Image Use Case: Logo image created from nanobanana concept.
     </div>
 </header>
 
-<main>
-    <section class="hero">
-        <div class="hero-content">
-            <h1 id="hero-h1-es">Preguntas Frecuentes</h1>
-            <h1 id="hero-h1-en" style="display:none;">Frequently Asked Questions</h1>
-            <p class="hero-subtitle" id="hero-h2-es">Respuestas rápidas a sus dudas sobre notaría móvil, traducción y regulaciones de Colorado.</p>
-            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Quick answers to your questions about mobile notary, translation, and Colorado regulations.</p>
-        </div>
-    </section>
+<section class="hero">
+    <div class="hero-content">
+        <h1 id="hero-h1-es">❓ Preguntas Frecuentes (FAQ)</h1>
+        <h1 id="hero-h1-en" style="display:none;">❓ Frequently Asked Questions (FAQ)</h1>
+        
+        <p class="hero-subtitle" id="hero-h2-es">Respuestas rápidas sobre notarización, identificación, y nuestros servicios.</p>
+        <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Quick answers about notarization, identification, and our services.</p>
+    </div>
+</section>
 
-    <section class="section faq-section">
-        <div class="container">
-            
-            
-            <div class="faq-list">
-                <h2 id="general-es">Preguntas Generales sobre Notarios</h2>
-                <h2 id="general-en" style="display:none;">General Notary Questions</h2>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-role-es">¿Qué hace exactamente un notario público?</span>
-                        <span id="q-role-en" style="display:none;">What does a notary public do, exactly?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-role-es">Un notario público es un testigo imparcial, comisionado por el estado, que sirve al público como agente antifraude. Confirmamos la identidad de los firmantes del documento y aseguramos que firmen de manera voluntaria y con conocimiento. <strong>No</strong> verificamos el contenido del documento en sí.</p>
-                        <p id="a-role-en" style="display:none;">A notary public is a state-commissioned, impartial witness who serves the public as an anti-fraud agent. We confirm the identity of the document signer(s) and ensure they sign willingly and knowingly. We do <strong>not</strong> verify the content of the document itself.</p>
-                    </div>
-                </details>
+<main class="section container">
+    
+    <div class="faq-accordion-container">
 
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-docs-es">¿Qué tipos de documentos pueden ser notarizados?</span>
-                        <span id="q-docs-en" style="display:none;">What kinds of documents can you notarize?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-docs-es">Podemos notarizar casi cualquier documento que requiera un acto notarial formal (como un reconocimiento o un <em>jurat</em>), siempre que se firme en nuestra presencia. Los ejemplos comunes incluyen declaraciones juradas, poderes notariales, documentos inmobiliarios, contratos y escrituras.</p>
-                        <p id="a-docs-en" style="display:none;">We can notarize almost any document that requires a formal notarial act (like an acknowledgment or a jurat), provided it is signed in our presence. Common examples include affidavits, powers of attorney, real estate documents, contracts, and deeds.</p>
-                    </div>
-                </details>
+        <h2 class="faq-section-title">
+            <span class="section-number">1</span>
+            <span id="sec-1-title-es">Servicios y Proceso Notarial</span>
+            <span id="sec-1-title-en" style="display:none;">Notarial Services & Process</span>
+        </h2>
 
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-vslawyer-es">¿Puede explicar la diferencia entre un notario y un abogado?</span>
-                        <span id="q-vslawyer-en" style="display:none;">Can you explain the difference between a notary and an attorney?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-vslawyer-es">Esta es una distinción crucial. Un <strong>notario público</strong> es un testigo imparcial centrado en verificar la identidad y la naturaleza voluntaria de la firma. Un <strong>abogado</strong> es un profesional legal que puede ofrecer asesoría, redactar documentos y representarlo en la corte. Un notario no puede realizar ninguno de estos servicios legales.</p>
-                        <p id="a-vslawyer-en" style="display:none;">This is a crucial distinction. A <strong>notary public</strong> is an impartial witness focused on verifying identity and the voluntary nature of the signature. An <strong>attorney</strong> (abogado) is a legal professional who can offer advice, draft documents, and represent you in court. A notary cannot perform any of these legal services.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-mobile-es">¿Ofrecen servicios de notario móvil y cómo funcionan?</span>
-                        <span id="q-mobile-en" style="display:none;">Do you offer mobile notary services, and how do they work?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-mobile-es"><strong>¡Sí, ofrecemos servicios de notario móvil!</strong> Esto significa que viajamos a su ubicación preferida—su hogar, oficina, hospital o una cafetería local—a una hora programada. Esto ofrece máxima comodidad. Nuestra tarifa incluye el cargo notarial permitido por el estado más una tarifa separada por viaje y conveniencia.</p>
-                        <p id="a-mobile-en" style="display:none;"><strong>Yes, we are a mobile notary service!</strong> This means we travel to your preferred location—your home, office, hospital, or a local coffee shop—at a scheduled time. This offers maximum convenience. Our fee includes the state-allowed notarial fee plus a separate travel/convenience fee.</p>
-                    </div>
-                </details>
-
-                <h2 id="legal-es">Asesoría Legal y Limitaciones</h2>
-                <h2 id="legal-en" style="display:none;">Legal Advice and Limitations</h2>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-whichact-es">¿Puede decirme qué tipo de notarización necesito (Jurat vs. Reconocimiento)?</span>
-                        <span id="q-whichact-en" style="display:none;">Can you tell me which notarial act I need (Jurat vs. Acknowledgment)?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-whichact-es"><strong>No</strong>, como notario público, no puedo asesorarle sobre el tipo específico de acto notarial requerido. Esto se considera ejercicio de la abogacía. Usted debe determinar el acto requerido (por ejemplo, Reconocimiento, <em>Jurat</em>, Certificación de Copia) basándose en las instrucciones del documento o el consejo del destinatario del documento o un abogado.</p>
-                        <p id="a-whichact-en" style="display:none;"><strong>No</strong>, as a notary public, I cannot advise you on the specific type of notarial act required. This falls under the definition of practicing law. You must determine the required act (e.g., Acknowledgment, Jurat, Copy Certification) based on the document's instructions or the advice of the document recipient or an attorney.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-reviewdoc-es">¿Puede revisar mi documento y decirme si es correcto o legalmente válido?</span>
-                        <span id="q-reviewdoc-en" style="display:none;">Can you review my document and tell me if it is correct or legally valid?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-reviewdoc-es"><strong>No.</strong> Nuestro deber se limita estrictamente al acto notarial. No podemos leer, revisar o evaluar el contenido de su documento para verificar su corrección, integridad o validez legal. Si el documento tiene espacios en blanco (aparte del certificado notarial), debemos devolvérselo para que lo complete antes de que se pueda realizar la notarización.</p>
-                        <p id="a-reviewdoc-en" style="display:none;"><strong>No.</strong> Our duty is strictly limited to the notarial act itself. We cannot read, review, or assess the content of your document for correctness, completeness, or legal validity. If the document has blanks (other than the notarial certificate), we must return it to you to be completed before the notarization can take place.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-nolegal-es">¿Por qué no puede darme asesoría legal si es notario?</span>
-                        <span id="q-nolegal-en" style="display:none;">Why can you not give me legal advice if you are a notary?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-nolegal-es">Por ley, un notario tiene prohibido explícitamente ofrecer asesoría legal, que incluye elegir un tipo de documento, interpretar los términos del documento u ofrecer una opinión sobre su legalidad. Esta separación previene un conflicto de interés y protege al público. Solo soy un testigo imparcial, no un asesor legal.</p>
-                        <p id="a-nolegal-en" style="display:none;">By law, a notary is explicitly prohibited from offering legal advice, which includes choosing a document type, interpreting document terms, or offering an opinion on its legality. This separation prevents a conflict of interest and protects the public. I am only an impartial witness, not a legal advisor.</p>
-                    </div>
-                </details>
-
-                <h2 id="id-es">Requisitos de Identificación y del Firmante</h2>
-                <h2 id="id-en" style="display:none;">Identification and Signer Requirements</h2>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-idform-es">¿Qué tipo de identificación debo traer para la notarización?</span>
-                        <span id="q-idform-en" style="display:none;">What forms of ID do I need to bring for notarization?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-idform-es">Debe traer una identificación válida, no vencida y emitida por el gobierno que contenga su firma y fotografía. La <strong>ley de Colorado</strong> acepta varias formas, incluyendo una licencia de conducir o tarjeta de identificación emitida por un estado de EE. UU., un pasaporte de EE. UU. o un pasaporte extranjero sellado por los Servicios de Ciudadanía e Inmigración de EE. UU. (USCIS).</p>
-                        <p id="a-idform-en" style="display:none;">You must bring one valid, unexpired government-issued ID that contains your signature and photograph. The <strong>Colorado law</strong> accepts several forms, including a U.S. state-issued driver's license or ID card, a U.S. Passport, or a foreign passport stamped by U.S. Citizenship and Immigration Services (USCIS).</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-idexpired-es">¿Puedo usar una identificación vencida o una foto de mi ID en el teléfono?</span>
-                        <span id="q-idexpired-en" style="display:none;">Can I use an expired ID or a photo of my ID on my phone?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-idexpired-es"><strong>No.</strong> La ley de Colorado exige que la identificación sea <strong>vigente (no vencida)</strong> y <strong>original</strong>. Una fotografía, fotocopia o versión digital de una identificación mostrada en un teléfono no es aceptable, incluso si la fecha de vencimiento está vigente.</p>
-                        <p id="a-idexpired-en" style="display:none;"><strong>No.</strong> Colorado law requires that the identification be <strong>current (unexpired)</strong> and <strong>original</strong>. A photograph, photocopy, or digital version of an ID displayed on a phone is not acceptable, even if the expiration date is current.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-noid-es">¿Qué pasa si no tengo una identificación aceptable?</span>
-                        <span id="q-noid-en" style="display:none;">What if I do not have any acceptable ID?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-noid-es">Si no tiene una identificación principal aceptable, la notarización aún podría ser posible utilizando un método llamado <strong>Identificación por Testigo Creíble</strong>. Esto requiere dos testigos creíbles que lo conozcan personalmente a usted y al notario, y que cumplan con requisitos legales específicos. Por favor, contáctenos con anticipación si planea utilizar este método.</p>
-                        <p id="a-noid-en" style="display:none;">If you do not have an acceptable primary ID, the notarization may still be possible using a method called <strong>Credible Witness Identification</strong>. This requires two credible witnesses who personally know you and the notary, and who meet specific legal requirements. Please contact us in advance if you plan to use this method.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-notpresent-es">¿Puede notarizar un documento si el firmante no está presente?</span>
-                        <span id="q-notpresent-en" style="display:none;">Can you notarize a document if the signer is not present?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-notpresent-es"><strong>Absolutamente no.</strong> El deber principal de un notario es confirmar la identidad del firmante y ser testigo de su firma. El firmante <strong>debe</strong> comparecer físicamente ante el notario en el momento de la notarización. Cualquier intento de notarizar una firma sin la presencia del firmante es ilegal.</p>
-                        <p id="a-notpresent-en" style="display:none;"><strong>Absolutely not.</strong> The core duty of a notary is to confirm the signer's identity and witness their signature. The signer <strong>must</strong> appear physically before the notary at the time of the notarization. Any attempt to notarize a signature without the signer being present is illegal.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-duress-es">¿Qué pasa si el firmante no entiende lo que firma o está bajo presión?</span>
-                        <span id="q-duress-en" style="display:none;">What happens if the signer does not understand what they are signing or is under pressure?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-duress-es">El notario debe rechazar la notarización si el firmante no parece comprender la naturaleza o el contenido del documento, o si hay alguna señal de <strong>coacción o coerción</strong> (presión). El firmante debe estar dispuesto y ser consciente de la transacción. El notario debe detener el servicio para proteger al público y la integridad del acto notarial.</p>
-                        <p id="a-duress-en" style="display:none;">The notary must decline the notarization if the signer does not appear to understand the document's nature or content, or if there is any sign of <strong>duress or coercion</strong> (pressure). The signer must be willing and aware of the transaction. The notary must stop the service to protect the public and the integrity of the notarial act.</p>
-                    </div>
-                </details>
-                
-                <h2 id="translation-es">Idioma Extranjero y Traducción</h2>
-                <h2 id="translation-en" style="display:none;">Foreign Language and Translation</h2>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-forlangdoc-es">¿Puede notarizar documentos escritos en español u otro idioma?</span>
-                        <span id="q-forlangdoc-en" style="display:none;">Can you notarize documents written in Spanish or another language?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-forlangdoc-es"><strong>Sí</strong>, un notario público de Colorado puede notarizar un documento escrito en cualquier idioma, incluyendo español, siempre y cuando el notario y el firmante puedan <strong>comunicarse directamente</strong> con respecto al <strong>acto notarial en sí</strong> (es decir, el <em>tipo</em> de acto, y que el firmante está firmando voluntariamente). El notario no necesita entender el contenido del documento.</p>
-                        <p id="a-forlangdoc-en" style="display:none;"><strong>Yes</strong>, a Colorado notary public can notarize a document written in any language, including Spanish, as long as the notary and the signer can <strong>communicate directly</strong> regarding the <strong>notarial act itself</strong> (i.e., the <em>type</em> of act, and that the signer is signing willingly). The notary does not need to understand the document's content.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-certlang-es">¿En qué idioma aparecerán el sello y el certificado notarial?</span>
-                        <span id="q-certlang-en" style="display:none;">In what language will the notary certificate and stamp appear?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-certlang-es">El certificado notarial (la redacción notarial adjunta al documento) y el sello del notario <strong>deben</strong> estar en <strong>inglés</strong>. Incluso en el caso de un documento en español, la redacción y el sello notarial oficiales requeridos por el estado de Colorado deben estar en inglés.</p>
-                        <p id="a-certlang-en" style="display:none;">The notary certificate (the notarial wording attached to the document) and the notary stamp <strong>must</strong> be in <strong>English</strong>. Even in the case of a Spanish-language document, the official notarial wording and seal required by the state of Colorado must be in English.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-translate-es">¿Puede traducir mi documento y notarizarlo en la misma cita?</span>
-                        <span id="q-translate-en" style="display:none;">Can you translate my document and notarize it at the same appointment?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-translate-es"><strong>No, yo no puedo traducir personalmente un documento por usted.</strong> Sin embargo, Quintana Notary &amp; Signing trabaja con colegas profesionales, incluidos traductores certificados de la Universidad, que pueden proporcionar una <strong>Traducción Certificada</strong>. Una vez que el traductor certificado prepara el documento, yo puedo notarizar la declaración firmada del traductor (Affidavit de Exactitud de la Traducción) en la misma cita, confirmando la identidad del traductor.</p>
-                        <p id="a-translate-en" style="display:none;"><strong>No, I cannot personally translate a document for you.</strong> However, Quintana Notary &amp; Signing works with professional colleagues, including certified translators from the University, who can provide a <strong>Certified Translation</strong>. Once the certified translator prepares the document, I can then notarize the translator's signed statement (Affidavit of Translation Accuracy) at the same appointment, confirming the translator's identity.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">
-                        <span id="q-transvsnot-es">¿Cuál es la diferencia entre una traducción certificada y una traducción notarizada?</span>
-                        <span id="q-transvsnot-en" style="display:none;">What is the difference between a certified translation and a notarized translation?</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p id="a-transvsnot-es">Una <strong>Traducción Certificada</strong> es completada por un traductor profesional que adjunta una declaración firmada (un Affidavit de Traducción) confirmando que la traducción es completa y precisa. Una <strong>Traducción Notarizada</strong> es simplemente cuando un notario público es testigo de la firma de ese traductor en su Affidavit. El notario solo confirma la <em>identidad</em> del traductor, no la exactitud de la traducción en sí.</p>
-                        <p id="a-transvsnot-en" style="display:none;">A <strong>Certified Translation</strong> is completed by a professional translator who attaches a signed statement (an Affidavit of Translation) confirming the translation is complete and accurate. A <strong>Notarized Translation</strong> is simply when a notary public witnesses the signature of that translator on their Affidavit. The notary only confirms the <em>identity</em> of the translator, not the accuracy of the translation itself.</p>
-                    </div>
-                </details>
-            </div>
-            <div class="cta-card">
-                <div class="cta-content">
-                    <h2 id="cta-h2-es">¿Listo para Reservar?</h2>
-                    <h2 id="cta-h2-en" style="display:none;">Ready to Book?</h2>
-                    <p id="cta-p-es">Vea nuestros precios transparentes y programe una cita en línea o llámenos directamente.</p>
-                    <p id="cta-p-en" style="display:none;">View our transparent pricing and schedule an appointment online or call us directly.</p>
-                    <div class="cta-buttons">
-                        <a href="pricing.html" class="btn btn-primary" id="cta-price-es">
-                            <span class="btn-icon">💰</span>
-                            <span>Ver Precios y Reservar</span>
-                        </a>
-                        <a href="pricing.html" class="btn btn-primary" id="cta-price-en" style="display:none;">
-                            <span class="btn-icon">💰</span>
-                            <span>View Pricing & Book Now</span>
-                        </a>
-                        <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
-                            <span class="btn-icon">📞</span>
-                            <span>Llámanos o Envíanos un Mensaje</span>
-                        </a>
-                        <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-en" style="display:none;">
-                            <span class="btn-icon">📞</span>
-                            <span>Call or Text Us</span>
-                        </a>
-                    </div>
-                </div>
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q1-es">¿Qué es un Notario Público?</span>
+                <span id="q1-en" style="display:none;">What is a Notary Public?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a1-es">
+                    Un Notario Público es un funcionario autorizado por el estado (en nuestro caso, Colorado) para servir como testigo imparcial en la firma de documentos importantes. Un notario verifica la identidad del firmante y se asegura de que la firma se realice sin coerción, ayudando a prevenir el fraude.
+                </p>
+                <p id="a1-en" style="display:none;">
+                    A Notary Public is an official authorized by the state (in our case, Colorado) to serve as an impartial witness to the signing of important documents. A notary verifies the signer's identity and ensures the signing is done without coercion, helping to prevent fraud.
+                </p>
             </div>
         </div>
-    </section>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q2-es">¿Puede un Notario darme asesoría legal?</span>
+                <span id="q2-en" style="display:none;">Can a Notary give me legal advice?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a2-es">
+                    <strong>¡No!</strong> Por ley, los Notarios Públicos en Colorado (y la mayoría de los estados) no somos abogados y no estamos autorizados a dar asesoría legal, seleccionar documentos o guiarlo sobre cómo llenar un formulario legal. Nuestro papel es solo confirmar la identidad y presenciar la firma.
+                </p>
+                <p id="a2-en" style="display:none;">
+                    <strong>No!</strong> By law, Notaries Public in Colorado (and most states) are not attorneys and are not authorized to give legal advice, select documents, or guide you on how to fill out a legal form. Our role is only to confirm identity and witness the signature.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q3-es">¿Ofrecen notarización en línea (RON)?</span>
+                <span id="q3-en" style="display:none;">Do you offer Remote Online Notarization (RON)?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a3-es">
+                    Actualmente, <strong>no ofrecemos notarización en línea (RON)</strong>. Todos nuestros actos notariales requieren la presencia física del firmante y del notario, ya sea en su domicilio, en nuestra oficina o en un lugar público acordado.
+                </p>
+                <p id="a3-en" style="display:none;">
+                    Currently, <strong>we do not offer Remote Online Notarization (RON)</strong>. All our notarial acts require the physical presence of the signer and the notary, either at your location, our office, or an agreed-upon public location.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q4-es">¿El notario puede actuar como testigo?</span>
+                <span id="q4-en" style="display:none;">Can the notary also act as a witness?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a4-es">
+                    Sí, el Notario Público puede actuar como testigo si su documento lo requiere. Sin embargo, no se recomienda, ya que la imparcialidad del notario podría verse comprometida. Si su documento requiere testigos adicionales además del notario, usted debe proporcionarlos. Si no tiene uno, podemos cotizar el suministro de un testigo por una tarifa adicional.
+                </p>
+                <p id="a4-en" style="display:none;">
+                    Yes, the Notary Public can act as a witness if your document requires it. However, it is not recommended, as the notary's impartiality could be compromised. If your document requires additional witnesses besides the notary, you must provide them. If you do not have one, we can quote providing a witness for an additional fee.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q5-es">¿Cómo funciona el servicio de traducción certificada?</span>
+                <span id="q5-en" style="display:none;">How does the certified translation service work?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a5-es">
+                    Traducimos documentos del español al inglés y viceversa. Una traducción certificada incluye una Declaración Jurada firmada por el traductor, garantizando la precisión del documento. Esta es la traducción aceptada por USCIS y el DMV de Colorado. No se requiere la presencia del cliente.
+                </p>
+                <p id="a5-en" style="display:none;">
+                    We translate documents from Spanish to English and vice versa. A certified translation includes a sworn declaration signed by the translator, guaranteeing the document's accuracy. This is the translation accepted by USCIS and the Colorado DMV. Client presence is not required.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="faq-section-title">
+            <span class="section-number">2</span>
+            <span id="sec-2-title-es">Identificación Válida Requerida</span>
+            <span id="sec-2-title-en" style="display:none;">Valid Identification Required</span>
+        </h2>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q6-es">¿Qué tipo de identificación es aceptable?</span>
+                <span id="q6-en" style="display:none;">What kind of identification is acceptable?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a6-es">
+                    La ley de Colorado exige que el notario identifique al firmante basándose en una identificación emitida por el gobierno que esté vigente, que contenga la foto y firma del firmante.
+                    <br>
+                    <strong>Ejemplos Comunes Aceptables:</strong>
+                </p>
+                <p id="a6-en" style="display:none;">
+                    Colorado law requires the notary to identify the signer based on a government-issued ID that is current, contains the signer's photo, and signature.
+                    <br>
+                    <strong>Common Acceptable Examples:</strong>
+                </p>
+                <ul id="a6-list-es">
+                    <li>Pasaporte de EE. UU. o Pasaporte de una nación extranjera (debe ser legible en inglés).</li>
+                    <li>Licencia de conducir de EE. UU. o Tarjeta de identificación estatal de EE. UU.</li>
+                    <li>Licencia de conducir de Colorado o Tarjeta de identificación estatal de Colorado (incluyendo la Licencia de Conducir/Tarjeta de Identificación SB-251).</li>
+                    <li>Tarjeta de Identificación Militar de EE. UU.</li>
+                    <li>Tarjeta de Residente Permanente ("Green Card") de EE. UU.</li>
+                    <li>Cualquier otra identificación válida aprobada por la ley de Colorado.</li>
+                </ul>
+                <ul id="a6-list-en" style="display:none;">
+                    <li>U.S. Passport or Foreign National Passport (must be English legible).</li>
+                    <li>U.S. Driver's License or U.S. State ID Card.</li>
+                    <li>Colorado Driver's License or Colorado State ID Card (including SB-251 Driver's License/ID Card).</li>
+                    <li>U.S. Military ID Card.</li>
+                    <li>U.S. Permanent Resident Card ("Green Card").</li>
+                    <li>Any other valid ID approved by Colorado law.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q7-es">¿Mi pasaporte extranjero sin traducción es válido?</span>
+                <span id="q7-en" style="display:none;">Is my foreign passport without translation valid?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a7-es">
+                    Sí, <strong>un pasaporte extranjero es aceptable</strong>, pero debe estar emitido en un idioma que el notario pueda leer, que incluye inglés y español. Si el pasaporte está en otro idioma (ej. ruso o chino), no podremos realizar el acto notarial.
+                </p>
+                <p id="a7-en" style="display:none;">
+                    Yes, <strong>a foreign passport is acceptable</strong>, but it must be issued in a language that the notary can read, which includes English and Spanish. If the passport is in another language (e.g., Russian or Chinese), we will not be able to perform the notarial act.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q8-es">¿Mi pasaporte o licencia de conducir está vencido, sirve?</span>
+                <span id="q8-en" style="display:none;">Is my expired passport or driver's license acceptable?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a8-es">
+                    <strong>¡No!</strong> La ley de Colorado requiere que toda identificación presentada para un acto notarial esté <strong>vigente</strong> y <strong>no vencida</strong>. Si su identificación expiró, no podremos realizar el acto notarial.
+                </p>
+                <p id="a8-en" style="display:none;">
+                    <strong>No!</strong> Colorado law requires all identification presented for a notarial act to be <strong>current</strong> and <strong>unexpired</strong>. If your ID has expired, we will not be able to perform the notarial act.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="faq-section-title">
+            <span class="section-number">3</span>
+            <span id="sec-3-title-es">Precios y Logística del Servicio Móvil</span>
+            <span id="sec-3-title-en" style="display:none;">Pricing & Mobile Service Logistics</span>
+        </h2>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q9-es">¿Cuánto cobra por un sello notarial?</span>
+                <span id="q9-en" style="display:none;">How much do you charge for a notarial seal?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a9-es">
+                    La tarifa legal máxima permitida en Colorado es de <strong>$15 por cada acto notarial (sello)</strong>. Tenga en cuenta que esta tarifa es solo por el sello en sí. Si requiere que viajemos a su ubicación, se aplicará un cargo de conveniencia móvil adicional.
+                </p>
+                <p id="a9-en" style="display:none;">
+                    The maximum statutory fee allowed in Colorado is <strong>$15 for each notarial act (seal)</strong>. Please note that this fee is only for the seal itself. If you require us to travel to your location, an additional mobile convenience fee will apply.
+                </p>
+                <p id="a9-link-es">
+                    Vea nuestra página de <a href="pricing.html">Precios</a> para un desglose detallado de todos los cargos.
+                </p>
+                <p id="a9-link-en" style="display:none;">
+                    See our <a href="pricing.html">Pricing</a> page for a detailed breakdown of all fees.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q10-es">¿Cómo se calcula el cargo móvil (cargo de viaje)?</span>
+                <span id="q10-en" style="display:none;">How is the mobile fee (travel charge) calculated?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a10-es">
+                    El cargo móvil se cobra una sola vez por cita (no por sello) y se basa en el millaje de ida y vuelta desde Castle Rock. Se cotiza por adelantado para que sepa el costo total.
+                </p>
+                <p id="a10-en" style="display:none;">
+                    The mobile fee is charged once per appointment (not per seal) and is based on the round-trip mileage from Castle Rock. It is quoted upfront so you know the total cost.
+                </p>
+                <p id="a10-link-es">
+                    La tarifa móvil es <strong>exenta</strong> si nos reunimos en una de nuestras ubicaciones de descuento especial (ej. Auraria Library o Tienda Salvadoreña).
+                </p>
+                <p id="a10-link-en" style="display:none;">
+                    The mobile fee is <strong>waived</strong> if we meet at one of our special discount locations (e.g., Auraria Library or Tienda Salvadoreña).
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                <span id="q11-es">¿Puedo pagar con tarjeta de crédito?</span>
+                <span id="q11-en" style="display:none;">Can I pay with a credit card?</span>
+            </button>
+            <div class="faq-answer">
+                <p id="a11-es">
+                    Sí. Aceptamos la mayoría de las principales tarjetas de crédito, Venmo, Zelle y efectivo. El pago se cobra al finalizar el acto notarial.
+                </p>
+                <p id="a11-en" style="display:none;">
+                    Yes. We accept most major credit cards, Venmo, Zelle, and cash. Payment is collected upon completion of the notarial act.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="cta-card">
+        <div class="card-icon">📞</div>
+        <h2 id="cta-ready-es">¿Tiene otra pregunta o necesita agendar?</h2>
+        <h2 id="cta-ready-en" style="display:none;">Have another question or need to schedule?</h2>
+        <p id="cta-desc-es">Contáctenos hoy para obtener una respuesta o para agendar su cita.</p>
+        <p id="cta-desc-en" style="display:none;">Contact us today to get an answer or to schedule your appointment.</p>
+        
+        <a href="contact.html" class="btn btn-primary btn-large">
+            <span class="btn-icon">💬</span>
+            <span id="cta-contact-es">Ir a la página de Contacto</span>
+            <span id="cta-contact-en" style="display:none;">Go to Contact Page</span>
+        </a>
+    </div>
 
 </main>
 
-<footer class="main-footer">
-    <div class="container footer-content">
-        <div class="footer-contact">
+<footer>
+    <div class="footer-content">
+        <div class="contact-info">
             <div class="contact-item">
-                <span class="btn-icon">📞</span>
-                <strong id="contact-phone-es">Teléfono:</strong>
-                <strong id="contact-phone-en" style="display:none;">Phone:</strong>
+                <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
+                <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
                 <a href="tel:+13035004122">303-500-4122</a>
             </div>
             <div class="contact-item">
-                <span class="btn-icon">✉️</span>
                 <strong id="contact-email-es">Correo Electrónico:</strong>
                 <strong id="contact-email-en" style="display:none;">Email:</strong>
                 <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
