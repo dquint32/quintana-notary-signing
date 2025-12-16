@@ -38,7 +38,7 @@ function toggleLanguage(specificLang) {
         }
     }
 
-    // Save language preference to localStorage
+    // Save language preference (with error handling for environments without localStorage)
     try {
         localStorage.setItem('preferredLanguage', newLang);
     } catch (e) {
@@ -132,7 +132,7 @@ function closeMobileMenuOnOutsideClick() {
         const header = document.querySelector('header');
         
         if (window.innerWidth <= 768 && nav && hamburger && nav.classList.contains('active')) {
-            if (!header.contains(e.target) && !hamburger.contains(e.target)) {
+            if (!header.contains(e.target)) {
                 nav.classList.remove('active');
                 hamburger.classList.remove('active');
                 document.body.style.overflow = '';
@@ -170,6 +170,7 @@ function initFaqAccordion() {
     faqQuestions.forEach(question => {
         if (question.tagName.toLowerCase() === 'summary') {
             console.warn('FAQ Question is a <summary> tag. Using native <details> functionality.');
+            return; // Skip if it's a native details/summary
         }
 
         if (question.hasAttribute('data-listener')) return;
@@ -271,34 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize language
     initLanguage();
     
-    // Attach event listener to Hamburger Button
-    const hamburger = document.querySelector('.hamburger');
-    if (hamburger) {
-        console.log('Hamburger found, attaching click listener'); // Debug log
-        
-        hamburger.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Hamburger clicked!'); // Debug log
-            toggleMenu();
-        });
-    } else {
-        console.warn('Hamburger button not found!'); // Debug log
-    }
+    // NOTE: Hamburger and language toggle buttons use inline onclick attributes
+    // so we don't attach additional listeners here to avoid conflicts
     
-    // Attach event listener to Language Toggle Button
-    const toggleBtn = document.querySelector('.toggle-btn');
-    if (toggleBtn) {
-        console.log('Toggle button found, attaching click listener'); // Debug log
-        
-        toggleBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('Language toggle clicked!'); // Debug log
-            toggleLanguage();
-        });
-    }
-
     // Initialize mobile menu interactions
     closeMobileMenuOnClick();
     closeMobileMenuOnOutsideClick();    
