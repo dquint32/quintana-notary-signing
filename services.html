@@ -6,6 +6,58 @@
     <title>Servicios Notariales: Confiables, Móviles y Bilingües | Quintana Notary & Signing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Mobile-optimized card layout for document acceptance section */
+        .mobile-responsive-list {
+            display: grid;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .mobile-responsive-card {
+            background: var(--light-gray, #F8F9FA);
+            border-left: 4px solid var(--teal, #00897B);
+            padding: 1rem;
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        .mobile-responsive-card strong {
+            display: block;
+            color: var(--navy, #0F47AF);
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .mobile-responsive-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--gray, #333333);
+        }
+        
+        /* Two-column layout on larger screens */
+        @media (min-width: 640px) {
+            .mobile-responsive-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Ensure long words break properly */
+        .warning-content h4,
+        .warning-content p,
+        .mobile-responsive-card strong {
+            word-break: break-word;
+            overflow-wrap: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;
+        }
+    </style>
 </head>
 <body>
 
@@ -64,7 +116,7 @@
                 <a href="contact.html" id="nav-contact-es">Contacto</a>
                 <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
                 
-                <button class="toggle-btn" onclick="toggleLanguage()">
+                <button class="toggle-btn" id="lang-toggle">
                     <span id="toggle-label-en" style="display:none;">Español</span>
                     <span id="toggle-label-es">English</span>
                 </button>
@@ -183,7 +235,7 @@
                     </div>
 
                     <div class="card service-option-card">
-                        <span class="card-icon">🌐</span>
+                        <span class="card-icon">🌍</span>
                         <h3>Apoyo Bilingüe</h3>
                         <p>Todos nuestros servicios se ofrecen con fluidez en inglés y español, en todas las etapas del proceso.</p>
                         <div class="detail-item benefit">
@@ -262,20 +314,13 @@
 
                     <p><strong>Política de Servicio:</strong> Los actos notariales se realizan únicamente en persona.</p>
 
-                    <table class="disclaimer-table">
-                        <thead>
-                            <tr>
-                                <th>English Disclaimer (Required)</th>
-                                <th>Spanish Disclaimer (Required)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</strong></td>
-                                <td><strong>NO SOY ABOGADO con licencia para practicar leyes en el estado de Colorado y NO PUEDO DAR ASESORÍA LEGAL ni aceptar tarifas por asesoría legal.</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="info-box" style="background: #FFF3CD; border-left-color: #FF9800;">
+                        <p><strong>English Disclaimer (Required):</strong><br>
+                        I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
+                        
+                        <p><strong>Spanish Disclaimer (Required):</strong><br>
+                        NO SOY ABOGADO con licencia para practicar leyes en el estado de Colorado y NO PUEDO DAR ASESORÍA LEGAL ni aceptar tarifas por asesoría legal.</p>
+                    </div>
                 </div>
 
                 <div class="warning-box">
@@ -286,54 +331,73 @@
                         
                         <h4>1. El Alcance de Nuestro Servicio</h4>
                         <p>Nuestro papel es verificar la identidad, atestiguar la firma y administrar juramentos, actuando como un testigo oficial e imparcial.</p>
-                        <table class="role-table">
-                            <thead>
-                                <tr>
-                                    <th>❌ NO PODEMOS DAR ASESORÍA LEGAL (UPL)</th>
-                                    <th>✅ SÍ PODEMOS HACER (Notary Duties)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Explicar el significado de cualquier cláusula o término legal en su documento.</td>
-                                    <td>Verificar la identidad del firmante con una <strong> Identificación vigente</strong>.</td>
-                                </tr>
-                                <tr>
-                                    <td>Decidir si usted necesita un Juramento (Jurat) o un Reconocimiento (Acknowledgment).</td>
-                                    <td>Administrar un juramento o promesa (Jurat), si el cliente lo solicita.</td>
-                                </tr>
-                                <tr>
-                                    <td>Llenar espacios en blanco o corregir el documento.</td>
-                                    <td>Atestiguar la firma y fechar el certificado notarial.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        
+                        <div class="mobile-responsive-list">
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NO PODEMOS:</strong>
+                                <p>Explicar el significado de cualquier cláusula o término legal en su documento</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ SÍ PODEMOS:</strong>
+                                <p>Verificar la identidad del firmante con una identificación vigente</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NO PODEMOS:</strong>
+                                <p>Decidir si usted necesita un Juramento (Jurat) o un Reconocimiento (Acknowledgment)</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ SÍ PODEMOS:</strong>
+                                <p>Administrar un juramento o promesa (Jurat), si el cliente lo solicita</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NO PODEMOS:</strong>
+                                <p>Llenar espacios en blanco o corregir el documento</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ SÍ PODEMOS:</strong>
+                                <p>Atestiguar la firma y fechar el certificado notarial</p>
+                            </div>
+                        </div>
 
                         <h4>2. Identificación Requerida (ID Acceptable)</h4>
                         <p>La ley de Colorado requiere que tengamos "pruebas satisfactorias" de su identidad. Debe presentar el <strong>documento ORIGINAL</strong> que esté <strong>VIGENTE (No Expirado)</strong>.</p>
 
-                        <table class="id-table">
-                            <thead>
-                                <tr>
-                                    <th>Identificación Aceptable (Vigente Solamente)</th>
-                                    <th>Identificación NO Aceptable</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Licencia de Conducir o Tarjeta de Identificación de EE. UU.</td>
-                                    <td>Tarjetas del Seguro Social o <strong> CUALQUIER ID EXPIRADA</strong>.</td>
-                                </tr>
-                                <tr>
-                                    <td>Pasaporte de EE. UU. o Pasaporte Extranjero (vigente).</td>
-                                    <td>Copias, fotos o documentos vencidos por más de cero días.</td>
-                                </tr>
-                                <tr>
-                                    <td>Tarjeta de Residente Permanente ("Green Card") de EE. UU.</td>
-                                    <td>Tarjetas de Crédito o Identificaciones Escolares.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="mobile-responsive-list">
+                            <div class="mobile-responsive-card">
+                                <strong>✅ ACEPTABLE:</strong>
+                                <p>Licencia de Conducir o Tarjeta de Identificación de EE. UU.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NO ACEPTABLE:</strong>
+                                <p>Tarjetas del Seguro Social o CUALQUIER ID EXPIRADA</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ ACEPTABLE:</strong>
+                                <p>Pasaporte de EE. UU. o Pasaporte Extranjero (vigente)</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NO ACEPTABLE:</strong>
+                                <p>Copias, fotos o documentos vencidos por más de cero días</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ ACEPTABLE:</strong>
+                                <p>Tarjeta de Residente Permanente ("Green Card") de EE. UU.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NO ACEPTABLE:</strong>
+                                <p>Tarjetas de Crédito o Identificaciones Escolares</p>
+                            </div>
+                        </div>
 
                         <div class="warning-item highlight">
                             <strong>Nota Importante para Documentos Extranjeros:</strong> Podemos notarizar documentos escritos en español o cualquier idioma extranjero, pero el sello y certificado notarial oficial que reciba de nosotros estará <strong>en inglés</strong> (según lo requiere la ley de Colorado).
@@ -427,7 +491,7 @@
                     </div>
 
                     <div class="card service-option-card">
-                        <span class="card-icon">🌐</span>
+                        <span class="card-icon">🌍</span>
                         <h3>Bilingual Support</h3>
                         <p>All our services are offered fluently in English and Spanish, at every stage of the process.</p>
                         <div class="detail-item benefit">
@@ -506,20 +570,13 @@
 
                     <p><strong>Service Policy:</strong> Notarial acts are performed in-person only.</p>
 
-                    <table class="disclaimer-table">
-                        <thead>
-                            <tr>
-                                <th>English Disclaimer (Required)</th>
-                                <th>Spanish Disclaimer (Required)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</strong></td>
-                                <td><strong>NO SOY ABOGADO con licencia para practicar leyes en el estado de Colorado y NO PUEDO DAR ASESORÍA LEGAL ni aceptar tarifas por asesoría legal.</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="info-box" style="background: #FFF3CD; border-left-color: #FF9800;">
+                        <p><strong>English Disclaimer (Required):</strong><br>
+                        I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
+                        
+                        <p><strong>Spanish Disclaimer (Required):</strong><br>
+                        NO SOY ABOGADO con licencia para practicar leyes en el estado de Colorado y NO PUEDO DAR ASESORÍA LEGAL ni aceptar tarifas por asesoría legal.</p>
+                    </div>
                 </div>
 
                 <div class="warning-box">
@@ -528,56 +585,75 @@
 
                     <div class="warning-content">
                         
-                        <h4>1. The Scope of Our Service (What We Do)</h4>
+                        <h4>1. The Scope of Our Service</h4>
                         <p>Our role is to verify identity, witness the signature, and administer oaths, acting as an official and impartial witness.</p>
-                        <table class="role-table">
-                            <thead>
-                                <tr>
-                                    <th>❌ WE CANNOT GIVE LEGAL ADVICE (UPL)</th>
-                                    <th>✅ WE CAN DO (Notary Duties)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Explain the meaning of any clause or legal term in your document.</td>
-                                    <td>Verify the signer's identity with a <strong>current ID</strong>.</td>
-                                </tr>
-                                <tr>
-                                    <td>Decide if you need a Jurat or an Acknowledgment.</td>
-                                    <td>Administer an oath or affirmation (Jurat), if the client requests it.</td>
-                                </tr>
-                                <tr>
-                                    <td>Fill in blanks or correct the document.</td>
-                                    <td>Witness the signature and date the notary certificate.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        
+                        <div class="mobile-responsive-list">
+                            <div class="mobile-responsive-card">
+                                <strong>❌ WE CANNOT:</strong>
+                                <p>Explain the meaning of any clause or legal term in your document.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ WE CAN:</strong>
+                                <p>Verify the signer's identity with a current ID.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ WE CANNOT:</strong>
+                                <p>Decide if you need a Jurat or an Acknowledgment.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ WE CAN:</strong>
+                                <p>Administer an oath or affirmation (Jurat), if the client requests it.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ WE CANNOT:</strong>
+                                <p>Fill in blanks or correct the document.</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ WE CAN:</strong>
+                                <p>Witness the signature and date the notary certificate.</p>
+                            </div>
+                        </div>
 
                         <h4>2. Required Identification (ID Acceptable)</h4>
-                        <p>Colorado law requires that we have "satisfactory evidence" of your identity. You must present the <strong>document ORIGINAL</strong> that is <strong>CURRENT (Not Expired)</strong>.</p>
+                        <p>Colorado law requires that we have "satisfactory evidence" of your identity. You must present the <strong>ORIGINAL document</strong> that is <strong>CURRENT (Not Expired)</strong>.</p>
 
-                        <table class="id-table">
-                            <thead>
-                                <tr>
-                                    <th>Acceptable Identification (Current Only)</th>
-                                    <th>Unacceptable Identification</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>US Driver's License or ID Card.</td>
-                                    <td>Social Security Cards or <strong>ANY EXPIRED ID</strong>.</td>
-                                </tr>
-                                <tr>
-                                    <td>Pasaporte de EE. UU. o Pasaporte Extranjero (vigente).</td>
-                                    <td>Copias, fotos o documentos vencidos por más de cero días.</td>
-                                </tr>
-                                <tr>
-                                    <td>US Permanent Resident Card ("Green Card").</td>
-                                    <td>Credit Cards or School IDs.</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="mobile-responsive-list">
+                            <div class="mobile-responsive-card">
+                                <strong>✅ ACCEPTABLE:</strong>
+                                <p>US Driver's License or ID Card</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NOT ACCEPTABLE:</strong>
+                                <p>Social Security Cards or ANY EXPIRED ID</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ ACCEPTABLE:</strong>
+                                <p>US Passport or Foreign Passport (current)</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NOT ACCEPTABLE:</strong>
+                                <p>Copies, photos, or documents expired by more than zero days</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>✅ ACCEPTABLE:</strong>
+                                <p>US Permanent Resident Card ("Green Card")</p>
+                            </div>
+                            
+                            <div class="mobile-responsive-card">
+                                <strong>❌ NOT ACCEPTABLE:</strong>
+                                <p>Credit Cards or School IDs</p>
+                            </div>
+                        </div>
 
                         <div class="warning-item highlight">
                             <strong>Important Note for Foreign Documents:</strong> We can notarize documents written in Spanish or any foreign language, but the official notary stamp and certificate you receive from us will be <strong>in English</strong> (as required by Colorado law).
@@ -588,7 +664,7 @@
 
             <div class="cta-services-nudge">
                 <a href="pricing.html" class="btn btn-primary btn-large">
-                    <span class="btn-icon">📅</span> View Pricing & Book Your Appointment
+                    <span class="btn-icon">📅</span> View Pricing & Book Now
                 </a>
             </div>
         </div>
