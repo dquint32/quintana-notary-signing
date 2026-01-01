@@ -531,6 +531,28 @@ ul ul {
 }
 
 /* ============================================
+   PROFILE IMAGE - MODERN PROFESSIONAL STYLING
+   ============================================ */
+
+.profile-image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 3px solid var(--teal-light);
+  box-shadow: var(--shadow-md);
+  margin: 0 auto var(--space-xl);
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--teal);
+}
+
+/* ============================================
    TABLES - COMPREHENSIVE STYLING
    ============================================ */
 
@@ -1810,6 +1832,11 @@ button[type="submit"]:hover {
     padding: var(--space-lg) var(--space-md);
   }
 
+  /* Profile Image - Slightly Smaller on Mobile */
+  .profile-image {
+    max-width: 160px;
+  }
+
   /* Responsive Tables */
   table {
     display: block;
@@ -1846,7 +1873,7 @@ button[type="submit"]:hover {
     font-weight: 600;
     color: var(--navy);
   }
-} /* <--- THIS WAS THE MISSING BRACE */
+}
 
 @media (min-width: 768px) {
   nav {
