@@ -535,13 +535,13 @@ ul ul {
    ============================================ */
 
 .profile-image {
-  max-width: 200px;
+  max-width: 280px;
   width: 100%;
   height: auto;
   border-radius: var(--radius-lg);
   border: 3px solid var(--teal-light);
   box-shadow: var(--shadow-md);
-  margin: 0 auto var(--space-xl);
+  margin: var(--space-xl) auto;
   display: block;
   transition: all 0.3s ease;
 }
@@ -550,6 +550,54 @@ ul ul {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--teal);
+}
+
+/* About Section - Profile Layout */
+.about-profile-section {
+  text-align: center;
+  margin: var(--space-2xl) 0;
+}
+
+.about-profile-section h2 {
+  color: var(--navy);
+  margin-bottom: var(--space-xl);
+}
+
+.about-profile-section h3 {
+  color: var(--teal-dark);
+  font-size: 1.5rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.about-profile-section p {
+  color: var(--gray);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-lg);
+}
+
+.about-profile-section ul {
+  text-align: left;
+  max-width: 700px;
+  margin: var(--space-lg) auto;
+  list-style: none;
+  padding: 0;
+}
+
+.about-profile-section ul li {
+  padding: var(--space-sm) 0 var(--space-sm) var(--space-xl);
+  position: relative;
+  margin-bottom: var(--space-sm);
+  line-height: 1.7;
+}
+
+.about-profile-section ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 /* ============================================
@@ -1832,9 +1880,9 @@ button[type="submit"]:hover {
     padding: var(--space-lg) var(--space-md);
   }
 
-  /* Profile Image - Slightly Smaller on Mobile */
+  /* Profile Image - Better Proportions on Mobile */
   .profile-image {
-    max-width: 160px;
+    max-width: 220px;
   }
 
   /* Responsive Tables */
