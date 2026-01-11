@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes | Quintana Notary & Signing</title>
+    <title>Frequently Asked Questions | Quintana Notary & Signing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+   
 </head>
-<body>
+<body id="top">
 
 <div class="top-help-bar">
     <div class="top-help-content">
         <span class="top-help-message">
-            <span id="help-text-es">¿Necesitas ayuda?</span>
-            <span id="help-text-en" style="display:none;">Need help?</span>
+            <span id="help-text-es" style="display:none;">¿Necesitas ayuda?</span>
+            <span id="help-text-en">Need help?</span>
         </span>
         <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
             <span class="btn-icon">📞</span>
-            <span id="help-call-es">Llamar / Mensaje</span>
-            <span id="help-call-en" style="display:none;">Call / Text</span>
+            <span id="help-call-es" style="display:none;">Llamar / Mensaje</span>
+            <span id="help-call-en">Call / Text</span>
         </a>
-        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
+        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="WhatsApp Message">
             <span class="btn-icon">💬</span>
-            <span id="help-whatsapp-es">WhatsApp</span>
-            <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
+            <span id="help-whatsapp-es" style="display:none;">WhatsApp</span>
+            <span id="help-whatsapp-en">WhatsApp</span>
         </a>
     </div>
 </div>
@@ -43,30 +44,30 @@
         </button>
 
         <nav id="main-nav">
-            <a href="index.html" id="nav-home-es">Inicio</a>
-            <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
+            <a href="index.html" id="nav-home-es" style="display:none;">Inicio</a>
+            <a href="index.html" id="nav-home-en">Home</a>
             
-            <a href="services.html" id="nav-services-es">Servicios</a>
-            <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+            <a href="services.html" id="nav-services-es" style="display:none;">Servicios</a>
+            <a href="services.html" id="nav-services-en">Services</a>
             
-            <a href="translate.html" id="nav-translate-es">Traducciones</a>
-            <a href="translate.html" id="nav-translate-en" style="display:none;">Translations</a>
+            <a href="translate.html" id="nav-translate-es" style="display:none;">Traducciones</a>
+            <a href="translate.html" id="nav-translate-en">Translations</a>
             
-            <a href="pricing.html" id="nav-pricing-es">Precios</a>
-            <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
+            <a href="pricing.html" id="nav-pricing-es" style="display:none;">Precios</a>
+            <a href="pricing.html" id="nav-pricing-en">Pricing</a>
             
-            <a href="about.html" id="nav-about-es">Acerca de</a>
-            <a href="about.html" id="nav-about-en" style="display:none;">About</a>
+            <a href="about.html" id="nav-about-es" style="display:none;">Acerca de</a>
+            <a href="about.html" id="nav-about-en">About</a>
             
-            <a href="faq.html" id="nav-faq-es">Preguntas</a>
-            <a href="faq.html" id="nav-faq-en" style="display:none;">FAQ</a>
+            <a href="faq.html" id="nav-faq-es" style="display:none;">Preguntas</a>
+            <a href="faq.html" id="nav-faq-en">FAQ</a>
             
-            <a href="contact.html" id="nav-contact-es">Contacto</a>
-            <a href="contact.html" id="nav-contact-en" style="display:none;">Contact</a>
+            <a href="contact.html" id="nav-contact-es" style="display:none;">Contacto</a>
+            <a href="contact.html" id="nav-contact-en">Contact</a>
             
             <button class="toggle-btn" onclick="toggleLanguage()">
-                <span id="toggle-label-en" style="display:none;">Español</span>
-                <span id="toggle-label-es">English</span>
+                <span id="toggle-label-en">Español</span>
+                <span id="toggle-label-es" style="display:none;">English</span>
             </button>
         </nav>
     </div>
@@ -74,34 +75,45 @@
 
 <section class="hero">
     <div class="hero-content">
-        <h1 id="hero-h1-es">❓ Preguntas Frecuentes (FAQ)</h1>
-        <h1 id="hero-h1-en" style="display:none;">❓ Frequently Asked Questions (FAQ)</h1>
+        <h1 id="hero-h1-es" style="display:none;">❓ Preguntas Frecuentes (FAQ)</h1>
+        <h1 id="hero-h1-en">❓ Frequently Asked Questions (FAQ)</h1>
         
-        <p class="hero-subtitle" id="hero-h2-es">Respuestas rápidas sobre notarización, identificación, y nuestros servicios.</p>
-        <p class="hero-subtitle" id="hero-h2-en" style="display:none;">Quick answers about notarization, identification, and our services.</p>
+        <p class="hero-subtitle" id="hero-h2-es" style="display:none;">Respuestas rápidas sobre notarización, identificación, y nuestros servicios.</p>
+        <p class="hero-subtitle" id="hero-h2-en">Quick answers about notarization, identification, and our services.</p>
     </div>
 </section>
 
 <main class="section container">
+
+    <div class="faq-controls">
+        <button class="btn btn-secondary btn-control" onclick="expandAllFaqs()">
+            <span id="btn-expand-es" style="display:none;">Expandir Todo</span>
+            <span id="btn-expand-en">Expand All</span>
+        </button>
+        <button class="btn btn-secondary btn-control" onclick="collapseAllFaqs()">
+            <span id="btn-collapse-es" style="display:none;">Colapsar Todo</span>
+            <span id="btn-collapse-en">Collapse All</span>
+        </button>
+    </div>
     
     <div class="faq-accordion-container">
 
         <h2 class="faq-section-title">
             <span class="section-number">1</span>
-            <span id="sec-1-title-es">Servicios y Proceso Notarial</span>
-            <span id="sec-1-title-en" style="display:none;">Notarial Services & Process</span>
+            <span id="sec-1-title-es" style="display:none;">Servicios y Proceso Notarial</span>
+            <span id="sec-1-title-en">Notarial Services & Process</span>
         </h2>
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q1-es">¿Qué es un Notario Público?</span>
-                <span id="q1-en" style="display:none;">What is a Notary Public?</span>
+                <span id="q1-es" style="display:none;">¿Qué es un Notario Público?</span>
+                <span id="q1-en">What is a Notary Public?</span>
             </button>
             <div class="faq-answer">
-                <p id="a1-es">
+                <p id="a1-es" style="display:none;">
                     Un Notario Público es un funcionario autorizado por el estado (en nuestro caso, Colorado) para servir como testigo imparcial en la firma de documentos importantes. Un notario verifica la identidad del firmante y se asegura de que la firma se realice sin coerción, ayudando a prevenir el fraude.
                 </p>
-                <p id="a1-en" style="display:none;">
+                <p id="a1-en">
                     A Notary Public is an official authorized by the state (in our case, Colorado) to serve as an impartial witness to the signing of important documents. A notary verifies the signer's identity and ensures the signing is done without coercion, helping to prevent fraud.
                 </p>
             </div>
@@ -109,14 +121,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q2-es">¿Puede un Notario darme asesoría legal?</span>
-                <span id="q2-en" style="display:none;">Can a Notary give me legal advice?</span>
+                <span id="q2-es" style="display:none;">¿Puede un Notario darme asesoría legal?</span>
+                <span id="q2-en">Can a Notary give me legal advice?</span>
             </button>
             <div class="faq-answer">
-                <p id="a2-es">
+                <p id="a2-es" style="display:none;">
                     <strong>¡No!</strong> Por ley, los Notarios Públicos en Colorado (y la mayoría de los estados) no somos abogados y no estamos autorizados a dar asesoría legal, seleccionar documentos o guiarlo sobre cómo llenar un formulario legal. Nuestro papel es solo confirmar la identidad y presenciar la firma.
                 </p>
-                <p id="a2-en" style="display:none;">
+                <p id="a2-en">
                     <strong>No!</strong> By law, Notaries Public in Colorado (and most states) are not attorneys and are not authorized to give legal advice, select documents, or guide you on how to fill out a legal form. Our role is only to confirm identity and witness the signature.
                 </p>
             </div>
@@ -124,14 +136,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q3-es">¿Ofrecen notarización en línea (RON)?</span>
-                <span id="q3-en" style="display:none;">Do you offer Remote Online Notarization (RON)?</span>
+                <span id="q3-es" style="display:none;">¿Ofrecen notarización en línea (RON)?</span>
+                <span id="q3-en">Do you offer Remote Online Notarization (RON)?</span>
             </button>
             <div class="faq-answer">
-                <p id="a3-es">
+                <p id="a3-es" style="display:none;">
                     Actualmente, <strong>no ofrecemos notarización en línea (RON)</strong>. Todos nuestros actos notariales requieren la presencia física del firmante y del notario, ya sea en su domicilio, en nuestra oficina o en un lugar público acordado.
                 </p>
-                <p id="a3-en" style="display:none;">
+                <p id="a3-en">
                     Currently, <strong>we do not offer Remote Online Notarization (RON)</strong>. All our notarial acts require the physical presence of the signer and the notary, either at your location, our office, or an agreed-upon public location.
                 </p>
             </div>
@@ -139,14 +151,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q4-es">¿El notario puede actuar como testigo?</span>
-                <span id="q4-en" style="display:none;">Can the notary also act as a witness?</span>
+                <span id="q4-es" style="display:none;">¿El notario puede actuar como testigo?</span>
+                <span id="q4-en">Can the notary also act as a witness?</span>
             </button>
             <div class="faq-answer">
-                <p id="a4-es">
+                <p id="a4-es" style="display:none;">
                     Sí, el Notario Público puede actuar como testigo si su documento lo requiere. Sin embargo, no se recomienda, ya que la imparcialidad del notario podría verse comprometida. Si su documento requiere testigos adicionales además del notario, usted debe proporcionarlos. Si no tiene uno, podemos cotizar el suministro de un testigo por una tarifa adicional.
                 </p>
-                <p id="a4-en" style="display:none;">
+                <p id="a4-en">
                     Yes, the Notary Public can act as a witness if your document requires it. However, it is not recommended, as the notary's impartiality could be compromised. If your document requires additional witnesses besides the notary, you must provide them. If you do not have one, we can quote providing a witness for an additional fee.
                 </p>
             </div>
@@ -154,14 +166,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q5-es">¿Cómo funciona el servicio de traducción certificada?</span>
-                <span id="q5-en" style="display:none;">How does the certified translation service work?</span>
+                <span id="q5-es" style="display:none;">¿Cómo funciona el servicio de traducción certificada?</span>
+                <span id="q5-en">How does the certified translation service work?</span>
             </button>
             <div class="faq-answer">
-                <p id="a5-es">
+                <p id="a5-es" style="display:none;">
                     Traducimos documentos del español al inglés y viceversa. Una traducción certificada incluye una Declaración Jurada firmada por el traductor, garantizando la precisión del documento. Esta es la traducción aceptada por USCIS y el DMV de Colorado. No se requiere la presencia del cliente.
                 </p>
-                <p id="a5-en" style="display:none;">
+                <p id="a5-en">
                     We translate documents from Spanish to English and vice versa. A certified translation includes a sworn declaration signed by the translator, guaranteeing the document's accuracy. This is the translation accepted by USCIS and the Colorado DMV. Client presence is not required.
                 </p>
             </div>
@@ -169,27 +181,27 @@
 
         <h2 class="faq-section-title">
             <span class="section-number">2</span>
-            <span id="sec-2-title-es">Identificación Válida Requerida</span>
-            <span id="sec-2-title-en" style="display:none;">Valid Identification Required</span>
+            <span id="sec-2-title-es" style="display:none;">Identificación Válida Requerida</span>
+            <span id="sec-2-title-en">Valid Identification Required</span>
         </h2>
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q6-es">¿Qué tipo de identificación es aceptable?</span>
-                <span id="q6-en" style="display:none;">What kind of identification is acceptable?</span>
+                <span id="q6-es" style="display:none;">¿Qué tipo de identificación es aceptable?</span>
+                <span id="q6-en">What kind of identification is acceptable?</span>
             </button>
             <div class="faq-answer">
-                <p id="a6-es">
+                <p id="a6-es" style="display:none;">
                     La ley de Colorado exige que el notario identifique al firmante basándose en una identificación emitida por el gobierno que esté vigente, que contenga la foto y firma del firmante.
                     <br>
                     <strong>Ejemplos Comunes Aceptables:</strong>
                 </p>
-                <p id="a6-en" style="display:none;">
+                <p id="a6-en">
                     Colorado law requires the notary to identify the signer based on a government-issued ID that is current, contains the signer's photo, and signature.
                     <br>
                     <strong>Common Acceptable Examples:</strong>
                 </p>
-                <ul id="a6-list-es">
+                <ul id="a6-list-es" style="display:none;">
                     <li>Pasaporte de EE. UU. o Pasaporte de una nación extranjera (debe ser legible en inglés).</li>
                     <li>Licencia de conducir de EE. UU. o Tarjeta de identificación estatal de EE. UU.</li>
                     <li>Licencia de conducir de Colorado o Tarjeta de identificación estatal de Colorado (incluyendo la Licencia de Conducir/Tarjeta de Identificación SB-251).</li>
@@ -197,7 +209,7 @@
                     <li>Tarjeta de Residente Permanente ("Green Card") de EE. UU.</li>
                     <li>Cualquier otra identificación válida aprobada por la ley de Colorado.</li>
                 </ul>
-                <ul id="a6-list-en" style="display:none;">
+                <ul id="a6-list-en">
                     <li>U.S. Passport or Foreign National Passport (must be English legible).</li>
                     <li>U.S. Driver's License or U.S. State ID Card.</li>
                     <li>Colorado Driver's License or Colorado State ID Card (including SB-251 Driver's License/ID Card).</li>
@@ -210,14 +222,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q7-es">¿Mi pasaporte extranjero sin traducción es válido?</span>
-                <span id="q7-en" style="display:none;">Is my foreign passport without translation valid?</span>
+                <span id="q7-es" style="display:none;">¿Mi pasaporte extranjero sin traducción es válido?</span>
+                <span id="q7-en">Is my foreign passport without translation valid?</span>
             </button>
             <div class="faq-answer">
-                <p id="a7-es">
+                <p id="a7-es" style="display:none;">
                     Sí, <strong>un pasaporte extranjero es aceptable</strong>, pero debe estar emitido en un idioma que el notario pueda leer, que incluye inglés y español. Si el pasaporte está en otro idioma (ej. ruso o chino), no podremos realizar el acto notarial.
                 </p>
-                <p id="a7-en" style="display:none;">
+                <p id="a7-en">
                     Yes, <strong>a foreign passport is acceptable</strong>, but it must be issued in a language that the notary can read, which includes English and Spanish. If the passport is in another language (e.g., Russian or Chinese), we will not be able to perform the notarial act.
                 </p>
             </div>
@@ -225,14 +237,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q8-es">¿Mi pasaporte o licencia de conducir está vencido, sirve?</span>
-                <span id="q8-en" style="display:none;">Is my expired passport or driver's license acceptable?</span>
+                <span id="q8-es" style="display:none;">¿Mi pasaporte o licencia de conducir está vencido, sirve?</span>
+                <span id="q8-en">Is my expired passport or driver's license acceptable?</span>
             </button>
             <div class="faq-answer">
-                <p id="a8-es">
+                <p id="a8-es" style="display:none;">
                     <strong>¡No!</strong> La ley de Colorado requiere que toda identificación presentada para un acto notarial esté <strong>vigente</strong> y <strong>no vencida</strong>. Si su identificación expiró, no podremos realizar el acto notarial.
                 </p>
-                <p id="a8-en" style="display:none;">
+                <p id="a8-en">
                     <strong>No!</strong> Colorado law requires all identification presented for a notarial act to be <strong>current</strong> and <strong>unexpired</strong>. If your ID has expired, we will not be able to perform the notarial act.
                 </p>
             </div>
@@ -240,26 +252,26 @@
 
         <h2 class="faq-section-title">
             <span class="section-number">3</span>
-            <span id="sec-3-title-es">Precios y Logística del Servicio Móvil</span>
-            <span id="sec-3-title-en" style="display:none;">Pricing & Mobile Service Logistics</span>
+            <span id="sec-3-title-es" style="display:none;">Precios y Logística del Servicio Móvil</span>
+            <span id="sec-3-title-en">Pricing & Mobile Service Logistics</span>
         </h2>
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q9-es">¿Cuánto cobra por un sello notarial?</span>
-                <span id="q9-en" style="display:none;">How much do you charge for a notarial seal?</span>
+                <span id="q9-es" style="display:none;">¿Cuánto cobra por un sello notarial?</span>
+                <span id="q9-en">How much do you charge for a notarial seal?</span>
             </button>
             <div class="faq-answer">
-                <p id="a9-es">
+                <p id="a9-es" style="display:none;">
                     La tarifa legal máxima permitida en Colorado es de <strong>$15 por cada acto notarial (sello)</strong>. Tenga en cuenta que esta tarifa es solo por el sello en sí. Si requiere que viajemos a su ubicación, se aplicará un cargo de conveniencia móvil adicional.
                 </p>
-                <p id="a9-en" style="display:none;">
+                <p id="a9-en">
                     The maximum statutory fee allowed in Colorado is <strong>$15 for each notarial act (seal)</strong>. Please note that this fee is only for the seal itself. If you require us to travel to your location, an additional mobile convenience fee will apply.
                 </p>
-                <p id="a9-link-es">
+                <p id="a9-link-es" style="display:none;">
                     Vea nuestra página de <a href="pricing.html">Precios</a> para un desglose detallado de todos los cargos.
                 </p>
-                <p id="a9-link-en" style="display:none;">
+                <p id="a9-link-en">
                     See our <a href="pricing.html">Pricing</a> page for a detailed breakdown of all fees.
                 </p>
             </div>
@@ -267,20 +279,20 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q10-es">¿Cómo se calcula el cargo móvil (cargo de viaje)?</span>
-                <span id="q10-en" style="display:none;">How is the mobile fee (travel charge) calculated?</span>
+                <span id="q10-es" style="display:none;">¿Cómo se calcula el cargo móvil (cargo de viaje)?</span>
+                <span id="q10-en">How is the mobile fee (travel charge) calculated?</span>
             </button>
             <div class="faq-answer">
-                <p id="a10-es">
+                <p id="a10-es" style="display:none;">
                     El cargo móvil se cobra una sola vez por cita (no por sello) y se basa en el millaje de ida y vuelta desde Castle Rock. Se cotiza por adelantado para que sepa el costo total.
                 </p>
-                <p id="a10-en" style="display:none;">
+                <p id="a10-en">
                     The mobile fee is charged once per appointment (not per seal) and is based on the round-trip mileage from Castle Rock. It is quoted upfront so you know the total cost.
                 </p>
-                <p id="a10-link-es">
+                <p id="a10-link-es" style="display:none;">
                     La tarifa móvil es <strong>exenta</strong> si nos reunimos en una de nuestras ubicaciones de descuento especial (ej. Auraria Library o Tienda Salvadoreña).
                 </p>
-                <p id="a10-link-en" style="display:none;">
+                <p id="a10-link-en">
                     The mobile fee is <strong>waived</strong> if we meet at one of our special discount locations (e.g., Auraria Library or Tienda Salvadoreña).
                 </p>
             </div>
@@ -288,14 +300,14 @@
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q11-es">¿Puedo pagar con tarjeta de crédito?</span>
-                <span id="q11-en" style="display:none;">Can I pay with a credit card?</span>
+                <span id="q11-es" style="display:none;">¿Puedo pagar con tarjeta de crédito?</span>
+                <span id="q11-en">Can I pay with a credit card?</span>
             </button>
             <div class="faq-answer">
-                <p id="a11-es">
+                <p id="a11-es" style="display:none;">
                     Sí. Aceptamos la mayoría de las principales tarjetas de crédito, Venmo, Zelle y efectivo. El pago se cobra al finalizar el acto notarial.
                 </p>
-                <p id="a11-en" style="display:none;">
+                <p id="a11-en">
                     Yes. We accept most major credit cards, Venmo, Zelle, and cash. Payment is collected upon completion of the notarial act.
                 </p>
             </div>
@@ -305,15 +317,22 @@
 
     <div class="cta-card">
         <div class="card-icon">📞</div>
-        <h2 id="cta-ready-es">¿Tiene otra pregunta o necesita agendar?</h2>
-        <h2 id="cta-ready-en" style="display:none;">Have another question or need to schedule?</h2>
-        <p id="cta-desc-es">Contáctenos hoy para obtener una respuesta o para agendar su cita.</p>
-        <p id="cta-desc-en" style="display:none;">Contact us today to get an answer or to schedule your appointment.</p>
+        <h2 id="cta-ready-es" style="display:none;">¿Tiene otra pregunta o necesita agendar?</h2>
+        <h2 id="cta-ready-en">Have another question or need to schedule?</h2>
+        <p id="cta-desc-es" style="display:none;">Contáctenos hoy para obtener una respuesta o para agendar su cita.</p>
+        <p id="cta-desc-en">Contact us today to get an answer or to schedule your appointment.</p>
         
         <a href="contact.html" class="btn btn-primary btn-large">
             <span class="btn-icon">💬</span>
-            <span id="cta-contact-es">Ir a la página de Contacto</span>
-            <span id="cta-contact-en" style="display:none;">Go to Contact Page</span>
+            <span id="cta-contact-es" style="display:none;">Ir a la página de Contacto</span>
+            <span id="cta-contact-en">Go to Contact Page</span>
+        </a>
+    </div>
+
+    <div class="back-to-top-container">
+        <a href="#top" class="btn btn-secondary btn-control">
+            <span id="btn-top-es" style="display:none;">↑ Volver Arriba</span>
+            <span id="btn-top-en">↑ Back to Top</span>
         </a>
     </div>
 
@@ -323,51 +342,39 @@
     <div class="footer-content">
         <div class="contact-info">
             <div class="contact-item">
-                <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
-                <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
+                <strong id="contact-call-es" style="display:none;">Llámanos/Envíanos Mensaje:</strong>
+                <strong id="contact-call-en">Call/Text Us:</strong>
                 <a href="tel:+13035004122">303-500-4122</a>
             </div>
             <div class="contact-item">
-                <strong id="contact-email-es">Correo Electrónico:</strong>
-                <strong id="contact-email-en" style="display:none;">Email:</strong>
+                <strong id="contact-email-es" style="display:none;">Correo Electrónico:</strong>
+                <strong id="contact-email-en">Email:</strong>
                 <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
             </div>
         </div>
         
-        <!-- Main Footer Text -->
-        <p id="footer-es">
-            © 2026 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
-            Una marca de <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
+        <p id="footer-es" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
             Precios transparentes · Servicio bilingüe · Enfoque comunitario
         </p>
-
-        <p id="footer-en" style="display:none;">
-            © 2026 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
-            A brand of <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
-            Transparent pricing · Bilingual service · Community focused
+        <p id="footer-en">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
         </p>
 
-        <!-- Legal Notices -->
         <div class="disclaimer">
-            <div id="disclaimer-es">
-                <strong>Aviso Legal (ES)</strong><br/>
-                Quintana Notaría y Firmas ofrece servicios notariales de acuerdo con la ley de Colorado. 
-                Los honorarios notariales están limitados por ley a $15 por documento. 
-                Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita. 
-                Los notarios no son abogados y no pueden brindar asesoría legal.
-            </div>
-
-            <div id="disclaimer-en" style="display:none;">
-                <strong>Legal Notice (EN)</strong><br/>
-                Quintana Notary & Signing provides notarial services in accordance with Colorado law. 
-                Statutory notary fees are limited to $15 per notarized document. 
-                Mobile travel and convenience fees are separate and always disclosed in writing before the appointment. 
-                Notaries are not attorneys licensed to practice law and cannot provide legal advice.
-            </div>
+        <div id="disclaimer-es" style="display:none;">
+            <strong>Aviso Legal (ES)</strong>
+            Quintana Notary & Signing ofrece servicios notariales en cumplimiento con la ley de Colorado. Los honorarios legales están limitados a $15 por documento. Los cargos de viaje y conveniencia son separados y se informan por escrito antes de las citas. Los notarios no son abogados autorizados para ejercer la abogacía y no pueden dar asesoría legal.
+        </div>
+        <div id="disclaimer-en">
+            <strong>Legal Notice (EN)</strong>
+            Quintana Notary & Signing offers notarial services in compliance with Colorado law. Statutory fees are limited to $15 per document. Travel and convenience fees are separate and disclosed in writing before appointments. Notaries are not attorneys licensed to practice law and cannot give legal advice.
         </div>
     </div>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
