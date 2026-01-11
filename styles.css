@@ -80,11 +80,13 @@ h2 {
   margin-top: var(--space-xl);
   padding-bottom: var(--space-sm);
   border-bottom: 2px solid var(--teal-light);
+  text-align: center;
 }
 
 h3 {
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   color: var(--teal-dark);
+  text-align: center;
 }
 
 p {
@@ -496,16 +498,32 @@ main .btn-secondary:hover {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: var(--space-md);
+  padding: var(--space-lg);
 }
 
 .section {
   background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  padding: var(--space-xl) var(--space-md);
-  margin: var(--space-lg) auto;
+  padding: var(--space-2xl) var(--space-lg);
+  margin: var(--space-xl) auto;
   word-wrap: break-word;
+}
+
+.section-with-icon {
+  text-align: center;
+  margin: var(--space-2xl) 0;
+}
+
+.section-with-icon .card-icon {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+}
+
+.section-with-icon h2 {
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: var(--space-xl);
 }
 
 main {
@@ -826,12 +844,26 @@ table tbody td strong {
 
 .pricing-section-title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: var(--space-md);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-md);
   border-bottom: 3px solid var(--teal);
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.pricing-section-title > div {
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+
+.pricing-section-title h2 {
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
 }
 
 .pricing-section-title.discount {
@@ -1677,11 +1709,11 @@ footer a:hover {
   
   /* Container & Sections */
   .container {
-    padding: var(--space-sm);
+    padding: var(--space-md);
   }
   
   .section {
-    padding: var(--space-lg) var(--space-sm);
+    padding: var(--space-xl) var(--space-md);
     margin: var(--space-md) 0;
   }
   
@@ -1692,10 +1724,24 @@ footer a:hover {
   /* Typography */
   h2 {
     font-size: 1.4rem;
+    text-align: center;
   }
   
   h3 {
     font-size: 1.15rem;
+    text-align: center;
+  }
+  
+  /* Text alignment for better mobile readability */
+  .section p,
+  .card p {
+    text-align: left;
+  }
+  
+  .intro-card p,
+  .services-card p,
+  .cta-card p {
+    text-align: center;
   }
   
   /* Grids */
@@ -1724,7 +1770,12 @@ footer a:hover {
   /* Pricing */
   .pricing-section-title {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .pricing-section-title > div {
+    width: 100%;
   }
   
   .pricing-amount {
@@ -1734,6 +1785,18 @@ footer a:hover {
   .tier-price,
   .premium-price {
     font-size: 1.75rem;
+  }
+  
+  .pricing-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xs);
+  }
+  
+  .pricing-item strong,
+  .pricing-item span {
+    text-align: center;
+    width: 100%;
   }
   
   /* Tables */
