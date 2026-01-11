@@ -202,3 +202,36 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 768) closeMobileMenu();
     });
 });
+
+// Functions for "Expand All" and "Collapse All" logic
+    function expandAllFaqs() {
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(q => {
+            const answer = q.nextElementSibling;
+            const item = q.closest('.faq-item');
+            
+            // Force active states
+            q.classList.add('active');
+            q.setAttribute('aria-expanded', 'true');
+            if(item) item.classList.add('active');
+            
+            // Manually set height to scrollHeight to open it
+            if(answer) answer.style.maxHeight = answer.scrollHeight + "px";
+        });
+    }
+
+    function collapseAllFaqs() {
+        const questions = document.querySelectorAll('.faq-question');
+        questions.forEach(q => {
+            const answer = q.nextElementSibling;
+            const item = q.closest('.faq-item');
+            
+            // Remove active states
+            q.classList.remove('active');
+            q.setAttribute('aria-expanded', 'false');
+            if(item) item.classList.remove('active');
+            
+            // Reset height
+            if(answer) answer.style.maxHeight = null;
+        });
+    }
