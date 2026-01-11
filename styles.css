@@ -1975,3 +1975,56 @@ footer a:hover {
     border: 1px solid #ccc;
   }
 }
+
+/* ============================================
+   ACCESSIBILITY & CONTRAST OVERRIDE
+   ============================================ */
+
+/* 1. Force a clean, high-contrast background for the banner */
+.verification-banner {
+    background-color: #ffffff !important; 
+    border: 3px solid var(--navy) !important;
+    color: #1a1a1a !important; /* Near black for maximum readability */
+    padding: 2rem !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* 2. Fix the "Dark Green" readability issue */
+/* Assuming this is a heading or instructional text */
+.verification-banner h2, 
+.verification-banner h3,
+.verification-banner p {
+    color: #000000 !important; /* Force black text */
+    text-shadow: none !important;
+}
+
+/* 3. Fix the "Blue on Blue" (The Button/Link) */
+/* This makes the button pop with your brand orange against the white/navy */
+.verification-banner .btn-primary, 
+.verification-banner a.btn {
+    background-color: var(--orange) !important;
+    color: white !important;
+    border: none !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    padding: 12px 24px !important;
+}
+
+/* 4. Improve the ID/Expires layout so it's not cramped */
+.commission-details {
+    display: flex;
+    gap: 15px;
+    background: #f1f3f5 !important; /* Very light gray */
+    padding: 10px 15px !important;
+    border-radius: 6px;
+    margin: 15px 0 !important;
+    border-left: 4px solid var(--navy) !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Language toggle safety: ensure spans don't disappear */
+.verification-banner span[lang] {
+    display: inline-block;
+}
+
