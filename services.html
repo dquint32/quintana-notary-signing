@@ -3,61 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios Notariales: Confiables, Móviles y Bilingües | Quintana Notary & Signing</title>
+    <title>Servicios Notariales | Quintana Notary & Signing</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Mobile-optimized card layout for document acceptance section */
-        .mobile-responsive-list {
-            display: grid;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .mobile-responsive-card {
-            background: var(--light-gray, #F8F9FA);
-            border-left: 4px solid var(--teal, #00897B);
-            padding: 1rem;
-            border-radius: 8px;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            hyphens: auto;
-        }
-        
-        .mobile-responsive-card strong {
-            display: block;
-            color: var(--navy, #0F47AF);
-            font-size: 1rem;
-            line-height: 1.4;
-            margin-bottom: 0.5rem;
-        }
-        
-        .mobile-responsive-card p {
-            margin: 0;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: var(--gray, #333333);
-        }
-        
-        /* Two-column layout on larger screens */
-        @media (min-width: 640px) {
-            .mobile-responsive-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        /* Ensure long words break properly */
-        .warning-content h4,
-        .warning-content p,
-        .mobile-responsive-card strong {
-            word-break: break-word;
-            overflow-wrap: break-word;
-            -webkit-hyphens: auto;
-            -moz-hyphens: auto;
-            hyphens: auto;
-        }
-    </style>
 </head>
 <body>
 
@@ -98,8 +46,8 @@
                 <a href="index.html" id="nav-home-es">Inicio</a>
                 <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
                 
-                <a href="services.html" id="nav-services-es">Servicios</a>
-                <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+                <a href="services.html" id="nav-services-es" class="active">Servicios</a>
+                <a href="services.html" id="nav-services-en" style="display:none;" class="active">Services</a>
                 
                 <a href="translate.html" id="nav-translate-es">Traducciones</a>
                 <a href="translate.html" id="nav-translate-en" style="display:none;">Translations</a>
@@ -125,13 +73,12 @@
     </header>
     
     <section class="hero hero-with-logo">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
             <h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
             
-            <p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar preferido en Castle Rock y Denver Metro.</p>
-            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">We bring professional notary services to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
+            <p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar público seguro en Castle Rock y Denver Metro.</p>
+            <p class="hero-subtitle" id="hero-h2-en" style="display:none;">We bring professional notary services to your home, office, or a safe public location across Castle Rock and the Denver Metro area.</p>
 
             <div class="cta-buttons">
                 <a href="pricing.html" class="btn btn-primary" id="cta-price-es">
@@ -158,121 +105,119 @@
     <main class="container">
 
         <div id="services-body-es">
-            <p class="section-intro">
-                ¡Bienvenidos! Nos dedicamos a hacer que su proceso de firma de documentos sea lo más conveniente, claro y cómodo posible. Ofrecemos todos los actos notariales estándar autorizados en Colorado, con el beneficio adicional del servicio bilingüe (inglés y español) y opciones de servicio flexibles.
-            </p>
-
-            <section class="section location-section">
-                <h2>📍 Ubicaciones de Reunión Sin Cargo</h2>
-                <p>Puede eliminar por completo la Tarifa Móvil reuniéndose con el Notario en una de las siguientes ubicaciones comunitarias. <strong>Se requiere cita previa.</strong></p>
-                
-                <div class="location-grid">
-                    
-                    <div class="card location-card location-discount">
-                        <span class="location-badge discount">¡Descuento Especial!</span>
-                        <h3>Tienda Salvadoreña</h3>
-                        <div class="location-benefit">
-                            <strong>Beneficio:</strong> Sin Tarifa de Transporte + $5 de descuento por firma.
-                        </div>
-                    </div>
-
-                    <div class="card location-card location-discount">
-                        <span class="location-badge discount">¡Descuento Especial!</span>
-                        <h3>MSU Denver</h3>
-                        <div class="location-benefit">
-                            <strong>Beneficio:</strong> Sin Tarifa de Transporte + $5 de descuento por firma.
-                        </div>
-                    </div>
-
-                    <div class="card location-card">
-                        <span class="location-badge free">Sin Cargo</span>
-                        <h3>Biblioteca Auraria (Denver)</h3>
-                        <p>Ubicación conveniente en el centro de Denver.</p>
-                    </div>
-
-                    <div class="card location-card">
-                        <span class="location-badge free">Sin Cargo</span>
-                        <h3>Biblioteca Pública de Denver (Sam Gary)</h3>
-                        <p>Ubicación accesible en el área de Stapleton/Central Park.</p>
-                    </div>
-
-                    <div class="card location-card">
-                        <span class="location-badge free">Sin Cargo</span>
-                        <h3>Biblioteca de Castle Rock (Philip S. Miller)</h3>
-                        <p>Ubicación conveniente para nuestros clientes del área de Castle Rock.</p>
-                    </div>
+            
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">🎯</span>
+                    <h2>Bienvenido a Nuestros Servicios</h2>
                 </div>
-                
-                <div class="info-box">
-                    <strong>Nota:</strong> Si requiere nuestro Servicio de Transporte (que lo lleven a la ubicación), se aplicará la Tarifa Móvil estándar.
-                </div>
+                <p>Nos dedicamos a hacer que su proceso de firma de documentos sea claro, seguro y conveniente. Ofrecemos todos los actos notariales estándar autorizados en Colorado, con servicio completamente bilingüe (inglés/español) y opciones de reunión flexibles.</p>
             </section>
 
-            <hr class="divider">
+            <section class="section warning-box">
+                <span class="card-icon">⚠️</span>
+                <h2>Divulgación Legal Obligatoria (Requerida por la Ley de Colorado)</h2>
 
-            <section class="section convenience-section">
-                <h2>🚗 Nuestro Compromiso con la Conveniencia y Accesibilidad</h2>
-                <p>Eliminamos las molestias ofreciendo opciones de servicio flexibles:</p>
-                
-                <div class="service-options">
+                <div class="warning-content">
+                    <div class="warning-item">
+                        <strong>INGLÉS:</strong><br>
+                        We are not attorneys licensed to practice law in the State of Colorado. We cannot give legal advice, tell you which forms you need, or explain how to complete forms to achieve a legal result.
+                    </div>
                     
-                    <div class="card service-option-card">
-                        <span class="card-icon">🚙</span>
-                        <h3>Servicio Notarial Móvil</h3>
-                        <p>Viajamos a su ubicación (hogar, oficina, hospital o lugar público) en Castle Rock y las áreas metropolitanas del sur y Denver.</p>
-                        <div class="detail-item benefit">
-                            <strong>Su Beneficio:</strong> Ahorra tiempo y gasolina evitando el viaje y la espera (Aplica Tarifa de Viaje).
-                        </div>
-                    </div>
-
-                    <div class="card service-option-card">
-                        <span class="card-icon">🚕</span>
-                        <h3>Servicio de Transporte</h3>
-                        <p>Ofrecemos transporte hacia y desde su cita notarial en una de nuestras Ubicaciones Sin Cargo.</p>
-                        <div class="detail-item benefit">
-                            <strong>Su Beneficio:</strong> Conveniente para clientes sin transporte o que prefieren evitar conducir (Aplica Tarifa de Viaje).
-                        </div>
-                    </div>
-
-                    <div class="card service-option-card">
-                        <span class="card-icon">🌍</span>
-                        <h3>Apoyo Bilingüe</h3>
-                        <p>Todos nuestros servicios se ofrecen con fluidez en inglés y español, en todas las etapas del proceso.</p>
-                        <div class="detail-item benefit">
-                            <strong>Su Beneficio:</strong> Asegura que comprenda completamente el proceso en el idioma con el que se sienta más cómodo.
-                        </div>
+                    <div class="warning-item highlight">
+                        <strong>ESPAÑOL:</strong><br>
+                        No somos abogados con licencia para ejercer la abogacía en el Estado de Colorado. No podemos dar asesoría legal, decirle qué formularios necesita ni explicar cómo completar formularios para lograr un resultado legal.
                     </div>
                 </div>
             </section>
 
-            <hr class="divider">
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">📋</span>
+                    <h2>Servicios Notariales Profesionales</h2>
+                </div>
+                <p class="text-center">Actos notariales conformes a Colorado realizados bajo C.R.S. Title 24, Article 21.</p>
 
-            <section class="section notarial-acts-section">
-                <h2>📝 Actos Notariales Principales</h2>
-                <p>Cada acto notarial se realiza de acuerdo con la ley del estado de Colorado para prevenir el fraude y proteger a todas las partes.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Categoría</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>📍 Dónde Nos Reunimos</strong></td>
+                            <td>
+                                • Su hogar<br>
+                                • Su oficina<br>
+                                • Un lugar público (biblioteca, cafetería, etc.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>🕐 Horario de Citas</strong></td>
+                            <td>
+                                • Citas estándar: 24–48 horas de anticipación<br>
+                                • Citas el mismo día: Según disponibilidad
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>💵 Precios</strong></td>
+                            <td>
+                                • Tarifa Notarial: $15 por firma/sello (regulado por el estado)<br>
+                                • Descuento en Centro Comunitario: $10 por firma<br>
+                                • Tarifa de Servicio Móvil: $0.65 por milla (ida y vuelta desde Castle Rock)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section checklist-card">
+                <div class="text-center">
+                    <span class="card-icon">✅</span>
+                    <h2>Antes de Su Cita</h2>
+                </div>
+                <p class="text-center">Para garantizar una cita sin contratiempos, asegúrese de:</p>
+                
+                <div class="checklist">
+                    <ul class="profile-facts">
+                        <li>Traer una identificación válida y vigente</li>
+                        <li>Todos los firmantes deben estar presentes</li>
+                        <li>Los documentos deben estar completos (excepto las firmas)</li>
+                        <li>Recordar que no podemos llenar espacios en blanco ni corregir documentos</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">📝</span>
+                    <h2>Actos Notariales Principales</h2>
+                </div>
                 
                 <div class="notarial-acts">
                     
                     <div class="card act-card">
-                        <h3>Reconocimientos (Acknowledgments)</h3>
+                        <h3>Reconocimientos<br>(Acknowledgments)</h3>
                         <div class="act-details">
                             <div class="act-item">
                                 <strong>Lo que implica:</strong> Usted confirma al Notario que firmó voluntariamente.
                             </div>
                             <div class="act-item">
-                                <strong>Qué traer:</strong> Documento (firmado o sin firmar) y una <strong>identificación válida y vigente.</strong>
+                                <strong>Qué traer:</strong> Documento (firmado o sin firmar) + una identificación válida y vigente.
                             </div>
                         </div>
                     </div>
 
                     <div class="card act-card">
-                        <h3>Juramentos y Declaraciones Juradas (Jurats)</h3>
+                        <h3>Juramentos y Declaraciones<br>(Jurats)</h3>
                         <div class="act-details">
                             <div class="act-item">
                                 <strong>Lo que implica:</strong> Usted jura o afirma que las declaraciones son verdaderas y firma en presencia del Notario.
                             </div>
                             <div class="act-item">
-                                <strong>Qué traer:</strong> Documento (sin firmar) y una <strong>identificación válida y vigente.</strong>
+                                <strong>Qué traer:</strong> Documento (sin firmar) + una identificación válida y vigente.
                             </div>
                         </div>
                     </div>
@@ -284,228 +229,216 @@
                                 <strong>Lo que implica:</strong> El Notario verifica su identidad y lo observa firmar.
                             </div>
                             <div class="act-item">
-                                <strong>Qué traer:</strong> Documento (sin firmar) y una <strong>identificación válida y vigente.</strong>
+                                <strong>Qué traer:</strong> Documento (sin firmar) + una identificación válida y vigente.
                             </div>
                         </div>
                     </div>
 
                     <div class="card act-card">
-                        <h3>Servicios de Representante Autorizado I-9</h3>
+                        <h3>Servicios I-9<br>(Representante Autorizado)</h3>
                         <div class="act-details">
                             <div class="act-item">
-                                <strong>Lo que implica:</strong> El Notario actúa por el empleador para examinar identificaciones y completar la Sección 2 (No se usa sello notarial).
+                                <strong>Lo que implica:</strong> Actuamos en nombre del empleador para completar la Sección 2. (No se usa sello notarial).
                             </div>
                             <div class="act-item">
-                                <strong>Qué traer:</strong> Formulario I-9, instrucciones del empleador e identificaciones originales <strong>vigentes</strong>.
+                                <strong>Qué traer:</strong> Formulario I-9 + instrucciones del empleador + identificaciones originales.
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <hr class="divider">
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">💡</span>
+                    <h2>Entendiendo los Servicios Notariales</h2>
+                </div>
 
-            <section class="section legal-and-id-section">
-                <h2>💡 Entendiendo los Servicios Notariales</h2>
+                <h3>I. Aceptación de Documentos y Rol del Notario</h3>
 
-                <div class="legal-notice-card">
-                    <span class="card-icon">⚠️</span>
-                    <h3>I. Aviso Legal Requerido (Mandatory Legal Disclaimer)</h3>
-
-                    <p><strong>Política de Servicio:</strong> Los actos notariales se realizan únicamente en persona.</p>
-
-                    <div class="info-box" style="background: #FFF3CD; border-left-color: #FF9800;">
-                        <p><strong>English Disclaimer (Required):</strong><br>
-                        I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
-                        
-                        <p><strong>Spanish Disclaimer (Required):</strong><br>
-                        NO SOY ABOGADO con licencia para practicar leyes en el estado de Colorado y NO PUEDO DAR ASESORÍA LEGAL ni aceptar tarifas por asesoría legal.</p>
+                <div class="guidelines-grid">
+                    <div class="guideline-card">
+                        <strong>❌ NO PODEMOS:</strong>
+                        <ul>
+                            <li>Explicar términos o cláusulas legales</li>
+                            <li>Decirle qué acto notarial necesita</li>
+                            <li>Llenar espacios en blanco o corregir documentos</li>
+                            <li>Proporcionar asesoría legal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guideline-card">
+                        <strong>✅ SÍ PODEMOS:</strong>
+                        <ul>
+                            <li>Verificar identidad con una identificación válida y vigente</li>
+                            <li>Administrar un juramento o afirmación (si se solicita)</li>
+                            <li>Atestiguar firmas y completar el certificado notarial</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="warning-box">
-                    <span class="card-icon">🚨</span>
-                    <h3>II. Aceptación de Documentos y Rol del Notario</h3>
+                <h3>II. Identificación Requerida</h3>
+                <p>La ley de Colorado requiere pruebas satisfactorias de identidad. La identificación debe ser original y vigente.</p>
 
-                    <div class="warning-content">
-                        
-                        <h4>1. El Alcance de Nuestro Servicio</h4>
-                        <p>Nuestro papel es verificar la identidad, atestiguar la firma y administrar juramentos, actuando como un testigo oficial e imparcial.</p>
-                        
-                        <div class="mobile-responsive-list">
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NO PODEMOS:</strong>
-                                <p>Explicar el significado de cualquier cláusula o término legal en su documento</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ SÍ PODEMOS:</strong>
-                                <p>Verificar la identidad del firmante con una identificación vigente</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NO PODEMOS:</strong>
-                                <p>Decidir si usted necesita un Juramento (Jurat) o un Reconocimiento (Acknowledgment)</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ SÍ PODEMOS:</strong>
-                                <p>Administrar un juramento o promesa (Jurat), si el cliente lo solicita</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NO PODEMOS:</strong>
-                                <p>Llenar espacios en blanco o corregir el documento</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ SÍ PODEMOS:</strong>
-                                <p>Atestiguar la firma y fechar el certificado notarial</p>
-                            </div>
-                        </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>✅ Identificación Aceptable</th>
+                            <th>❌ Identificación NO Aceptable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                • Licencia de Conducir o Tarjeta de Identificación de EE. UU.<br>
+                                • Pasaporte de EE. UU. o Pasaporte Extranjero<br>
+                                • Tarjeta de Residente Permanente ("Green Card") de EE. UU.
+                            </td>
+                            <td>
+                                • Tarjetas del Seguro Social<br>
+                                • Identificaciones expiradas<br>
+                                • Copias o fotos<br>
+                                • Tarjetas de crédito o identificaciones escolares
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                        <h4>2. Identificación Requerida (ID Acceptable)</h4>
-                        <p>La ley de Colorado requiere que tengamos "pruebas satisfactorias" de su identidad. Debe presentar el <strong>documento ORIGINAL</strong> que esté <strong>VIGENTE (No Expirado)</strong>.</p>
-
-                        <div class="mobile-responsive-list">
-                            <div class="mobile-responsive-card">
-                                <strong>✅ ACEPTABLE:</strong>
-                                <p>Licencia de Conducir o Tarjeta de Identificación de EE. UU.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NO ACEPTABLE:</strong>
-                                <p>Tarjetas del Seguro Social o CUALQUIER ID EXPIRADA</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ ACEPTABLE:</strong>
-                                <p>Pasaporte de EE. UU. o Pasaporte Extranjero (vigente)</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NO ACEPTABLE:</strong>
-                                <p>Copias, fotos o documentos vencidos por más de cero días</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ ACEPTABLE:</strong>
-                                <p>Tarjeta de Residente Permanente ("Green Card") de EE. UU.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NO ACEPTABLE:</strong>
-                                <p>Tarjetas de Crédito o Identificaciones Escolares</p>
-                            </div>
-                        </div>
-
-                        <div class="warning-item highlight">
-                            <strong>Nota Importante para Documentos Extranjeros:</strong> Podemos notarizar documentos escritos en español o cualquier idioma extranjero, pero el sello y certificado notarial oficial que reciba de nosotros estará <strong>en inglés</strong> (según lo requiere la ley de Colorado).
-                        </div>
-                    </div>
+                <div class="info-box">
+                    <strong>💡 Documentos Extranjeros:</strong><br>
+                    Podemos notarizar documentos en cualquier idioma, pero el certificado notarial debe estar en inglés (requerido por la ley de Colorado).
                 </div>
             </section>
 
-            <div class="cta-services-nudge">
-                <a href="pricing.html" class="btn btn-primary btn-large">
-                    <span class="btn-icon">📅</span> Ver Precios y Reservar Su Cita
-                </a>
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">🛡️</span>
+                    <h2>Divulgaciones y Avisos</h2>
+                </div>
+
+                <h3>Divulgación de IA y Privacidad</h3>
+                <p>Podemos utilizar Inteligencia Artificial (IA) as a clerical tool to help organize, translate, or draft documents. However:</p>
+                <ul>
+                    <li>Cada documento es revisado y editado personalmente por David Quintana para garantizar una precisión del 100% antes de la entrega.</li>
+                    <li>Nunca ingresamos su información de identificación personal (números de Seguro Social, nombres completos o direcciones) en ningún sistema de IA público.</li>
+                    <li>La IA no toma decisiones legales o administrativas: siempre está trabajando con una persona real.</li>
+                </ul>
+
+                <h3>Aviso Legal</h3>
+                <p>Quintana Notary & Signing es un servicio de apoyo independiente y no está afiliado con el DMV de Colorado, USCIS ni ninguna agencia gubernamental. Asistimos con la preparación de documentos, traducción y orientación administrativa. No representamos a clientes ante ninguna agencia gubernamental.</p>
+
+                <h3>Divulgación Obligatoria</h3>
+                <p>No soy abogado con licencia para ejercer la abogacía en el Estado de Colorado y no puedo dar asesoría legal ni aceptar tarifas por asesoría legal.</p>
+
+                <h3>Aviso de Marca</h3>
+                <p>Quintana Notary & Signing es una marca de Servicios Quintana LLC.</p>
+            </section>
+
+            <div class="cta-card">
+                <div class="cta-content">
+                    <span class="card-icon">📅</span>
+                    <h2>¿Listo para Programar Su Cita?</h2>
+                    <p>Reserve hoy y experimente un servicio notarial profesional, conveniente y bilingüe.</p>
+                    <div class="cta-buttons">
+                        <a href="pricing.html" class="btn btn-primary btn-large">
+                            <span class="btn-icon">💰</span> Ver Precios y Reservar
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="services-body-en" style="display:none;">
-            <p class="section-intro">
-                Welcome! We are dedicated to making your document signing process as convenient, clear, and comfortable as possible. We offer all standard notarial acts authorized in Colorado, with the added benefit of bilingual service (English and Spanish) and flexible service options.
-            </p>
-
-            <section class="section location-section">
-                <h2>📍 No-Charge Meeting Locations</h2>
-                <p>You can completely eliminate the Mobile Fee by meeting the Notary at one of the following community locations. <strong>Appointment required.</strong></p>
-                
-                <div class="location-grid">
-                    
-                    <div class="card location-card location-discount">
-                        <span class="location-badge discount">Special Discount!</span>
-                        <h3>Tienda Salvadoreña</h3>
-                        <div class="location-benefit">
-                            <strong>Benefit:</strong> No Travel Fee + $5 off per signature.
-                        </div>
-                    </div>
-
-                    <div class="card location-card location-discount">
-                        <span class="location-badge discount">Special Discount!</span>
-                        <h3>MSU Denver</h3>
-                        <div class="location-benefit">
-                            <strong>Benefit:</strong> No Travel Fee + $5 off per signature.
-                        </div>
-                    </div>
-
-                    <div class="card location-card">
-                        <span class="location-badge free">No Charge</span>
-                        <h3>Auraria Library (Denver)</h3>
-                        <p>Convenient location in downtown Denver.</p>
-                    </div>
-
-                    <div class="card location-card">
-                        <span class="location-badge free">No Charge</span>
-                        <h3>Denver Public Library (Sam Gary)</h3>
-                        <p>Accessible location in the Stapleton/Central Park area.</p>
-                    </div>
-
-                    <div class="card location-card">
-                        <span class="location-badge free">No Charge</span>
-                        <h3>Castle Rock Library (Philip S. Miller)</h3>
-                        <p>Convenient location for our Castle Rock area clients.</p>
-                    </div>
+            
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">🎯</span>
+                    <h2>Welcome to Our Services</h2>
                 </div>
-                
-                <div class="info-box">
-                    <strong>Note:</strong> If you require our Transportation Service (a ride to the location), the standard Mobile Fee applies.
-                </div>
+                <p>We are dedicated to making your document signing process clear, secure, and convenient. We offer all standard notarial acts authorized in Colorado, with fully bilingual service (English/Spanish) and flexible meeting options.</p>
             </section>
 
-            <hr class="divider">
+            <section class="section warning-box">
+                <span class="card-icon">⚠️</span>
+                <h2>Mandatory Legal Disclosure (Required by Colorado Law)</h2>
 
-            <section class="section convenience-section">
-                <h2>🚗 Our Commitment to Convenience and Accessibility</h2>
-                <p>We remove the hassle by offering flexible service options:</p>
-                
-                <div class="service-options">
+                <div class="warning-content">
+                    <div class="warning-item highlight">
+                        <strong>ENGLISH:</strong><br>
+                        We are not attorneys licensed to practice law in the State of Colorado. We cannot give legal advice, tell you which forms you need, or explain how to complete forms to achieve a legal result.
+                    </div>
                     
-                    <div class="card service-option-card">
-                        <span class="card-icon">🚙</span>
-                        <h3>Mobile Notary Service</h3>
-                        <p>We travel to your location (home, office, hospital, or public place) in Castle Rock and the South Denver Metro areas.</p>
-                        <div class="detail-item benefit">
-                            <strong>Your Benefit:</strong> Save time and gas by avoiding the trip and the wait (Travel Fee applies).
-                        </div>
-                    </div>
-
-                    <div class="card service-option-card">
-                        <span class="card-icon">🚕</span>
-                        <h3>Transportation Service</h3>
-                        <p>We offer transportation to and from your notary appointment at one of our No-Charge Locations.</p>
-                        <div class="detail-item benefit">
-                            <strong>Your Benefit:</strong> Convenient for clients without transportation or who prefer not to drive (Travel Fee applies).
-                        </div>
-                    </div>
-
-                    <div class="card service-option-card">
-                        <span class="card-icon">🌍</span>
-                        <h3>Bilingual Support</h3>
-                        <p>All our services are offered fluently in English and Spanish, at every stage of the process.</p>
-                        <div class="detail-item benefit">
-                            <strong>Your Benefit:</strong> Ensures you fully understand the process in the language you are most comfortable with.
-                        </div>
+                    <div class="warning-item">
+                        <strong>ESPAÑOL:</strong><br>
+                        No somos abogados con licencia para ejercer la abogacía en el Estado de Colorado. No podemos dar asesoría legal, decirle qué formularios necesita ni explicar cómo completar formularios para lograr un resultado legal.
                     </div>
                 </div>
             </section>
 
-            <hr class="divider">
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">📋</span>
+                    <h2>Professional Notary Services</h2>
+                </div>
+                <p class="text-center">Colorado-compliant notarial acts performed under C.R.S. Title 24, Article 21.</p>
 
-            <section class="section notarial-acts-section">
-                <h2>📝 Key Notarial Acts</h2>
-                <p>Each notarial act is performed in accordance with Colorado state law to prevent fraud and protect all parties.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>📍 Where We Meet</strong></td>
+                            <td>
+                                • Your home<br>
+                                • Your office<br>
+                                • A public location (library, coffee shop, etc.)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>🕐 Appointment Timing</strong></td>
+                            <td>
+                                • Standard appointments: 24–48 hours in advance<br>
+                                • Same-day appointments: Based on availability
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>💵 Pricing</strong></td>
+                            <td>
+                                • Notary Fee: $15 per signature/seal (state-regulated)<br>
+                                • Community Hub Discount: $10 per signature<br>
+                                • Mobile Service Fee: $0.65 per mile (round-trip from Castle Rock)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section checklist-card">
+                <div class="text-center">
+                    <span class="card-icon">✅</span>
+                    <h2>Before Your Appointment</h2>
+                </div>
+                <p class="text-center">To ensure a smooth appointment, please:</p>
+                
+                <div class="checklist">
+                    <ul class="profile-facts">
+                        <li>Bring a valid, unexpired ID</li>
+                        <li>Ensure all signers are present</li>
+                        <li>Have documents complete (except signatures)</li>
+                        <li>Remember we cannot fill in blanks or correct documents</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">📝</span>
+                    <h2>Key Notarial Acts</h2>
+                </div>
                 
                 <div class="notarial-acts">
                     
@@ -516,19 +449,19 @@
                                 <strong>What it involves:</strong> You confirm to the Notary that you signed voluntarily.
                             </div>
                             <div class="act-item">
-                                <strong>What to bring:</strong> Document (signed or unsigned) and a <strong>valid, unexpired ID.</strong>
+                                <strong>What to bring:</strong> Document (signed or unsigned) + a valid, unexpired ID.
                             </div>
                         </div>
                     </div>
 
                     <div class="card act-card">
-                        <h3>Oaths and Affirmations (Jurats)</h3>
+                        <h3>Oaths and Affirmations<br>(Jurats)</h3>
                         <div class="act-details">
                             <div class="act-item">
-                                <strong>What it involves:</strong> You swear or affirm that the statements are true and sign in the presence of the Notary.
+                                <strong>What it involves:</strong> You swear or affirm that the statements are true and sign in the Notary's presence.
                             </div>
                             <div class="act-item">
-                                <strong>What to bring:</strong> Document (unsigned) and a <strong>valid, unexpired ID.</strong>
+                                <strong>What to bring:</strong> Document (unsigned) + a valid, unexpired ID.
                             </div>
                         </div>
                     </div>
@@ -540,132 +473,122 @@
                                 <strong>What it involves:</strong> The Notary verifies your identity and watches you sign.
                             </div>
                             <div class="act-item">
-                                <strong>What to bring:</strong> Document (unsigned) and a <strong>valid, unexpired ID.</strong>
+                                <strong>What to bring:</strong> Document (unsigned) + a valid, unexpired ID.
                             </div>
                         </div>
                     </div>
 
                     <div class="card act-card">
-                        <h3>I-9 Authorized Representative Services</h3>
+                        <h3>I-9 Services<br>(Authorized Representative)</h3>
                         <div class="act-details">
                             <div class="act-item">
-                                <strong>What it involves:</strong> The Notary acts for the employer to examine IDs and complete Section 2 (No notary stamp used).
+                                <strong>What it involves:</strong> We act on behalf of the employer to complete Section 2. (No notary stamp used).
                             </div>
                             <div class="act-item">
-                                <strong>What to bring:</strong> Form I-9, employer instructions, and original <strong>current</strong> IDs.
+                                <strong>What to bring:</strong> Form I-9 + employer instructions + original IDs.
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <hr class="divider">
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">💡</span>
+                    <h2>Understanding Notary Services</h2>
+                </div>
 
-            <section class="section legal-and-id-section">
-                <h2>💡 Understanding Notary Services</h2>
+                <h3>I. Document Acceptance and Notary Role</h3>
 
-                <div class="legal-notice-card">
-                    <span class="card-icon">⚠️</span>
-                    <h3>I. Mandatory Legal Disclaimer</h3>
-
-                    <p><strong>Service Policy:</strong> Notarial acts are performed in-person only.</p>
-
-                    <div class="info-box" style="background: #FFF3CD; border-left-color: #FF9800;">
-                        <p><strong>English Disclaimer (Required):</strong><br>
-                        I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
-                        
-                        <p><strong>Spanish Disclaimer (Required):</strong><br>
-                        NO SOY ABOGADO con licencia para practicar leyes en el estado de Colorado y NO PUEDO DAR ASESORÍA LEGAL ni aceptar tarifas por asesoría legal.</p>
+                <div class="guidelines-grid">
+                    <div class="guideline-card">
+                        <strong>❌ WE CANNOT:</strong>
+                        <ul>
+                            <li>Explain legal terms or clauses</li>
+                            <li>Tell you which notarial act you need</li>
+                            <li>Fill in blanks or correct documents</li>
+                            <li>Provide legal advice</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="guideline-card">
+                        <strong>✅ WE CAN:</strong>
+                        <ul>
+                            <li>Verify identity with a valid, unexpired ID</li>
+                            <li>Administer an oath or affirmation (if requested)</li>
+                            <li>Witness signatures and complete the notarial certificate</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="warning-box">
-                    <span class="card-icon">🚨</span>
-                    <h3>II. Document Acceptance and Notary Role</h3>
+                <h3>II. Required Identification</h3>
+                <p>Colorado law requires satisfactory evidence of identity. ID must be original and unexpired.</p>
 
-                    <div class="warning-content">
-                        
-                        <h4>1. The Scope of Our Service</h4>
-                        <p>Our role is to verify identity, witness the signature, and administer oaths, acting as an official and impartial witness.</p>
-                        
-                        <div class="mobile-responsive-list">
-                            <div class="mobile-responsive-card">
-                                <strong>❌ WE CANNOT:</strong>
-                                <p>Explain the meaning of any clause or legal term in your document.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ WE CAN:</strong>
-                                <p>Verify the signer's identity with a current ID.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ WE CANNOT:</strong>
-                                <p>Decide if you need a Jurat or an Acknowledgment.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ WE CAN:</strong>
-                                <p>Administer an oath or affirmation (Jurat), if the client requests it.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ WE CANNOT:</strong>
-                                <p>Fill in blanks or correct the document.</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ WE CAN:</strong>
-                                <p>Witness the signature and date the notary certificate.</p>
-                            </div>
-                        </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>✅ Acceptable ID</th>
+                            <th>❌ NOT Acceptable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                • U.S. Driver's License or ID Card<br>
+                                • U.S. Passport or Foreign Passport<br>
+                                • U.S. Permanent Resident Card ("Green Card")
+                            </td>
+                            <td>
+                                • Social Security Cards<br>
+                                • Expired IDs<br>
+                                • Copies or photos<br>
+                                • Credit cards or school IDs
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                        <h4>2. Required Identification (ID Acceptable)</h4>
-                        <p>Colorado law requires that we have "satisfactory evidence" of your identity. You must present the <strong>ORIGINAL document</strong> that is <strong>CURRENT (Not Expired)</strong>.</p>
-
-                        <div class="mobile-responsive-list">
-                            <div class="mobile-responsive-card">
-                                <strong>✅ ACCEPTABLE:</strong>
-                                <p>US Driver's License or ID Card</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NOT ACCEPTABLE:</strong>
-                                <p>Social Security Cards or ANY EXPIRED ID</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ ACCEPTABLE:</strong>
-                                <p>US Passport or Foreign Passport (current)</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NOT ACCEPTABLE:</strong>
-                                <p>Copies, photos, or documents expired by more than zero days</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>✅ ACCEPTABLE:</strong>
-                                <p>US Permanent Resident Card ("Green Card")</p>
-                            </div>
-                            
-                            <div class="mobile-responsive-card">
-                                <strong>❌ NOT ACCEPTABLE:</strong>
-                                <p>Credit Cards or School IDs</p>
-                            </div>
-                        </div>
-
-                        <div class="warning-item highlight">
-                            <strong>Important Note for Foreign Documents:</strong> We can notarize documents written in Spanish or any foreign language, but the official notary stamp and certificate you receive from us will be <strong>in English</strong> (as required by Colorado law).
-                        </div>
-                    </div>
+                <div class="info-box">
+                    <strong>💡 Foreign Documents:</strong><br>
+                    We can notarize documents in any language, but the notarial certificate must be in English (required by Colorado law).
                 </div>
             </section>
 
-            <div class="cta-services-nudge">
-                <a href="pricing.html" class="btn btn-primary btn-large">
-                    <span class="btn-icon">📅</span> View Pricing & Book Now
-                </a>
+            <section class="section">
+                <div class="text-center">
+                    <span class="card-icon">🛡️</span>
+                    <h2>Disclosures & Notices</h2>
+                </div>
+
+                <h3>AI Disclosure & Privacy</h3>
+                <p>We may use Artificial Intelligence (AI) as a clerical tool to help organize, translate, or draft documents. However:</p>
+                <ul>
+                    <li>Every document is personally reviewed and edited by David Quintana to ensure 100% accuracy before delivery.</li>
+                    <li>We never input your personal identifying information (Social Security numbers, full names, or addresses) into any public AI system.</li>
+                    <li>AI does not make legal or administrative decisions — you are always working with a real person.</li>
+                </ul>
+
+                <h3>Legal Notice</h3>
+                <p>Quintana Notary & Signing is an independent support service and is not affiliated with the Colorado DMV, USCIS, or any government agency. We assist with document preparation, translation, and administrative guidance. We do not represent clients before any government agency.</p>
+
+                <h3>Mandatory Disclosure</h3>
+                <p>I am not an attorney licensed to practice law in the State of Colorado and I may not give legal advice or accept fees for legal advice.</p>
+
+                <h3>Brand Notice</h3>
+                <p>Quintana Notary & Signing is a brand of Servicios Quintana LLC.</p>
+            </section>
+
+            <div class="cta-card">
+                <div class="cta-content">
+                    <span class="card-icon">📅</span>
+                    <h2>Ready to Schedule Your Appointment?</h2>
+                    <p>Book today and experience professional, convenient, and bilingual notary service.</p>
+                    <div class="cta-buttons">
+                        <a href="pricing.html" class="btn btn-primary btn-large">
+                            <span class="btn-icon">💰</span> View Pricing & Book Now
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -674,31 +597,38 @@
     <footer>
         <div class="contact-info">
             <div class="contact-item">
-                <strong id="contact-ph-es">Teléfono</strong>
-                <strong id="contact-ph-en" style="display:none;">Phone</strong>
-                <a href="tel:3035004122">303-500-4122</a>
+                <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
+                <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
+                <a href="tel:+13035004122">303-500-4122</a>
             </div>
             <div class="contact-item">
-                <strong>Email</strong>
+                <strong id="contact-email-es">Correo Electrónico:</strong>
+                <strong id="contact-email-en" style="display:none;">Email:</strong>
                 <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
             </div>
         </div>
-
-        <p>&copy; 2025 Quintana Notary & Signing. <span id="rights-es">Todos los derechos reservados.</span><span id="rights-en" style="display:none;">All rights reserved.</span></p>
         
+        <p id="footer-main-es">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Precios transparentes · Servicio bilingüe · Enfoque comunitario
+        </p>
+        <p id="footer-main-en" style="display:none;">
+            © 2025 Quintana Notary & Signing · Quintana Notaría y Firmas<br/>
+            Transparent pricing · Bilingual service · Community-focused
+        </p>
+
         <div class="disclaimer">
-        <div id="disclaimer-es">
-            <strong>Aviso Legal (ES)</strong>
-            Quintana Notary & Signing ofrece servicios notariales en cumplimiento con la ley de Colorado. Los honorarios legales están limitados a $15 por documento. Los cargos de viaje y conveniencia son separados y se informan por escrito antes de las citas. Los notarios no son abogados autorizados para ejercer la abogacía y no pueden dar asesoría legal.
+            <div id="disclaimer-es">
+                <strong>Aviso Legal (ES)</strong>
+                Quintana Notary & Signing ofrece servicios notariales en cumplimiento con la ley de Colorado. Los honorarios legales están limitados a $15 por documento. Los cargos de viaje y conveniencia son separados y se informan por escrito antes de las citas. Los notarios no son abogados autorizados para ejercer la abogacía y no pueden dar asesoría legal.
+            </div>
+            <div id="disclaimer-en" style="display:none;">
+                <strong>Legal Notice (EN)</strong>
+                Quintana Notary & Signing offers notary services in compliance with Colorado law. Legal fees are capped at $15 per document. Travel and convenience fees are separate and disclosed in writing prior to appointments. Notaries are not attorneys licensed to practice law and cannot give legal advice.
+            </div>
         </div>
-        <div id="disclaimer-en" style="display:none;">
-            <strong>Legal Notice (EN)</strong>
-            Quintana Notary & Signing offers notarial services in compliance with Colorado law. Statutory fees are limited to $15 per document. Travel and convenience fees are separate and disclosed in writing before appointments. Notaries are not attorneys licensed to practice law and cannot give legal advice.
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
