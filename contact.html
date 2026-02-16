@@ -94,35 +94,88 @@
                 <p id="appt-note-en" style="display:none;">⚠️ <strong>Note:</strong> All services are by appointment only.</p>
             </div>
 
-            <div class="cta-buttons">
-                <a href="tel:+13035004122" class="btn btn-primary btn-large">
-                    <span class="btn-icon">📱</span>
-                    <span id="btn-call-es">Llamar 303-500-4122</span>
-                    <span id="btn-call-en" style="display:none;">Call 303-500-4122</span>
-                </a>
-                
-                <a href="https://wa.me/13035004122" class="btn btn-whatsapp btn-large">
-                    <span class="btn-icon">💬</span>
-                    <span id="btn-wa-es">WhatsApp</span>
-                    <span id="btn-wa-en" style="display:none;">WhatsApp</span>
-                </a>
-            </div>
-
+            <!-- ===== HOURS & AVAILABILITY SECTION ===== -->
             <div class="contact-details">
-                <div class="hours-details">
-                    <h3 id="hours-h-es">Horario de Operación</h3>
-                    <h3 id="hours-h-en" style="display:none;">Hours of Operation</h3>
-                    <ul>
-                        <li><strong>Lunes – Viernes / Monday–Friday:</strong>10:00 AM – 5:00 PM</li>
-                        <li><strong>Prima fuera de horario / After-Hours Premium:</strong> $20 — 7:00 PM – 10:00 AM (Se añade a la tarifa base/de viaje / Added to base/travel fee)</li>
-                        <li><strong>Prima de fin de semana / Weekend Premium:</strong> $15 — Sábado/Domingo / Saturday–Sunday (Se añade a la tarifa base/de viaje / Added to base/travel fee)</li>
-                    </ul>
+
+                <!-- 1. Response & Scheduling Hours -->
+                <div class="hours-block">
+                    <h3 id="avail-h-es">🕐 Horario de Respuesta y Citas</h3>
+                    <h3 id="avail-h-en" style="display:none;">🕐 Response &amp; Scheduling Hours</h3>
+
+                    <div class="hours-availability-box">
+                        <div class="hours-main-row">
+                            <span class="hours-label" id="avail-days-es">Lunes – Viernes</span>
+                            <span class="hours-label" id="avail-days-en" style="display:none;">Monday – Friday</span>
+                            <span class="hours-time">10:00 AM – 5:00 PM</span>
+                        </div>
+                        <p class="hours-note" id="avail-note-es">
+                            Durante este horario respondo llamadas y mensajes activamente. Si estoy con otro cliente, le devolveré la llamada lo antes posible.
+                        </p>
+                        <p class="hours-note" id="avail-note-en" style="display:none;">
+                            During these hours I actively return calls and messages. If I'm with another client, I will respond as soon as possible.
+                        </p>
+                        <p class="hours-appt-note" id="avail-appt-es">
+                            📅 Las citas pueden programarse en cualquier horario disponible, incluyendo noches y fines de semana (se aplican tarifas especiales).
+                        </p>
+                        <p class="hours-appt-note" id="avail-appt-en" style="display:none;">
+                            📅 Appointments may be scheduled for any available time slot, including evenings and weekends (premium fees apply).
+                        </p>
+                    </div>
                 </div>
-                <div class="detail-row">
-                    <strong>Email:</strong>
-                    <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+
+                <!-- 2. Premium Fees -->
+                <div class="hours-block">
+                    <h3 id="premium-h-es">💰 Tarifas Especiales de Horario</h3>
+                    <h3 id="premium-h-en" style="display:none;">💰 Premium Hour Fees</h3>
+
+                    <div class="premium-fees-grid">
+                        <div class="premium-fee-item">
+                            <div class="premium-fee-badge" id="afterhours-label-es">Fuera de Horario</div>
+                            <div class="premium-fee-badge" id="afterhours-label-en" style="display:none;">After-Hours</div>
+                            <div class="premium-fee-amount">+ $20</div>
+                            <div class="premium-fee-time">7:00 PM – 10:00 AM</div>
+                            <p class="premium-fee-note" id="afterhours-note-es">Se añade a la tarifa base y/o de viaje.</p>
+                            <p class="premium-fee-note" id="afterhours-note-en" style="display:none;">Added to base notarization and/or travel fee.</p>
+                        </div>
+                        <div class="premium-fee-item">
+                            <div class="premium-fee-badge weekend" id="weekend-label-es">Fin de Semana</div>
+                            <div class="premium-fee-badge weekend" id="weekend-label-en" style="display:none;">Weekend</div>
+                            <div class="premium-fee-amount">+ $15</div>
+                            <div class="premium-fee-time" id="weekend-days-es">Sábado – Domingo</div>
+                            <div class="premium-fee-time" id="weekend-days-en" style="display:none;">Saturday – Sunday</div>
+                            <p class="premium-fee-note" id="weekend-note-es">Se añade a la tarifa base y/o de viaje.</p>
+                            <p class="premium-fee-note" id="weekend-note-en" style="display:none;">Added to base notarization and/or travel fee.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- 3. Contact Methods -->
+                <div class="hours-block">
+                    <h3 id="contact-methods-h-es">📬 Cómo Contactarnos</h3>
+                    <h3 id="contact-methods-h-en" style="display:none;">📬 How to Reach Us</h3>
+
+                    <div class="cta-buttons" style="margin-top: 1rem;">
+                        <a href="tel:+13035004122" class="btn btn-primary btn-large">
+                            <span class="btn-icon">📱</span>
+                            <span id="btn-call-es">Llamar 303-500-4122</span>
+                            <span id="btn-call-en" style="display:none;">Call 303-500-4122</span>
+                        </a>
+                        
+                        <a href="https://wa.me/13035004122" class="btn btn-whatsapp btn-large">
+                            <span class="btn-icon">💬</span>
+                            <span id="btn-wa-es">WhatsApp</span>
+                            <span id="btn-wa-en" style="display:none;">WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <div class="detail-row" style="margin-top: 1.25rem; text-align: center;">
+                        <strong>Email:</strong>
+                        <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+                    </div>
+                </div>
+
             </div>
+            <!-- ===== END HOURS & AVAILABILITY SECTION ===== -->
         </div>
 
         <div class="divider"></div>
@@ -198,7 +251,7 @@
                             <span id="site-text-en" style="display:none;">Visit Website →</span>
                         </a>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
 
@@ -309,6 +362,169 @@
 </div>
 
 </footer>
+
+<!-- New styles for the updated hours section -->
+<style>
+/* ============================================
+   HOURS & AVAILABILITY BLOCK STYLES
+   ============================================ */
+
+.hours-block {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border-gray);
+}
+
+.hours-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Response & Scheduling Hours Box */
+.hours-availability-box {
+    background: var(--gray-light);
+    border-left: 4px solid var(--navy);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1.25rem 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.hours-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.hours-label {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 1.05rem;
+}
+
+.hours-time {
+    font-weight: 700;
+    color: var(--teal-dark);
+    font-size: 1.05rem;
+    background: var(--teal-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-pill);
+}
+
+.hours-note {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.hours-appt-note {
+    color: var(--navy);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    font-weight: 500;
+    background: rgba(15, 71, 175, 0.06);
+    padding: 0.6rem 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-top: 0.5rem;
+}
+
+/* Premium Fees Grid */
+.premium-fees-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 480px) {
+    .premium-fees-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.premium-fee-item {
+    background: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.premium-fee-badge {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: 0.6rem;
+}
+
+.premium-fee-badge.weekend {
+    background: var(--orange);
+}
+
+.premium-fee-amount {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+}
+
+.premium-fee-time {
+    font-size: 0.88rem;
+    color: var(--gray);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.premium-fee-note {
+    font-size: 0.82rem;
+    color: #666;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* Detail row for email */
+.detail-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+
+.contact-info-card .cta-buttons {
+    justify-content: flex-start;
+}
+
+@media (max-width: 600px) {
+    .hours-main-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-info-card .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .contact-info-card .btn {
+        max-width: 100%;
+    }
+    .detail-row {
+        justify-content: center;
+    }
+}
+</style>
 
 <script src="script.js"></script>
 
