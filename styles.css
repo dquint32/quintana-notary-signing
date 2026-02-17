@@ -1139,3 +1139,55 @@ footer {
   .section { box-shadow: none; border: 1px solid #ccc; }
 }
 
+/* ============================================
+   UPDATES FOR NEW SERVICES PAGE LAYOUT
+   ============================================ */
+
+/* Simple list style without dashed lines, for standard bullets */
+.simple-list {
+  list-style: disc;
+  padding-left: var(--space-xl);
+}
+.simple-list li {
+  border: none;
+  padding: 0;
+  margin-bottom: var(--space-xs);
+}
+.simple-list li::before {
+  content: none;
+}
+
+/* Location Highlight Box */
+.location-highlight {
+  background-color: var(--teal-light);
+  border: 1px solid var(--teal);
+  box-shadow: var(--shadow-sm);
+}
+
+.location-highlight h3 {
+  text-align: left;
+  border-bottom: none;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+/* Split Column Layout for Checklist (What to Expect) */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .checklist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Red Cross List for 'What We Cannot Do' */
+.profile-facts.cross-list li::before {
+  content: '❌';
+  color: var(--orange);
+}
+
