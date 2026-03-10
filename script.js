@@ -9,7 +9,7 @@ function toggleLanguage(specificLang) {
     const esElements = document.querySelectorAll('[id$="-es"]');
     
     // Determine new language: use passed argument OR toggle current
-    const currentLang = document.documentElement.lang;
+    const currentLang = document.documentElement.lang || 'es';
     const newLang = specificLang ? specificLang : (currentLang === 'es' ? 'en' : 'es');
     
     // Update HTML lang attribute
@@ -43,11 +43,14 @@ function initLanguage() {
     } catch (e) {}
     
     if (!document.documentElement.lang) {
-        document.documentElement.lang = 'es';
+        document.documentElement.lang = 'es'; // Default fallback
     }
 
     if (savedLang && savedLang !== document.documentElement.lang) {
         toggleLanguage(savedLang);
+    } else {
+        // Run once to ensure initial display matches the lang attribute
+        toggleLanguage(document.documentElement.lang);
     }
 }
 
@@ -66,10 +69,7 @@ function toggleMenu() {
     const isActive = nav.classList.contains('active');
     
     if (isActive) {
-        nav.classList.remove('active');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = ''; 
+        closeMobileMenu();
     } else {
         nav.classList.add('active');
         hamburger.classList.add('active');
@@ -94,7 +94,7 @@ function closeMobileMenu() {
 }
 
 // ============================================
-// FAQ ACCORDION TOGGLE
+// FAQ ACCORDION LOGIC
 // ============================================
 function toggleFaq(element) {
     const question = element;
@@ -109,8 +109,12 @@ function toggleFaq(element) {
     accordionContainer.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
         if (activeQuestion !== question) {
             activeQuestion.classList.remove('active');
-            activeQuestion.closest('.faq-item').classList.remove('active');
+            
+            const activeItem = activeQuestion.closest('.faq-item');
+            if (activeItem) activeItem.classList.remove('active');
+            
             activeQuestion.setAttribute('aria-expanded', 'false');
+            
             const activeAnswer = activeQuestion.nextElementSibling;
             if (activeAnswer) activeAnswer.style.maxHeight = null; 
         }
@@ -119,15 +123,47 @@ function toggleFaq(element) {
     // Toggle current
     if (isOpening) {
         question.classList.add('active');
-        question.closest('.faq-item').classList.add('active');
+        const item = question.closest('.faq-item');
+        if (item) item.classList.add('active');
+        
         answer.style.maxHeight = answer.scrollHeight + "px";
         question.setAttribute('aria-expanded', 'true');
     } else {
         question.classList.remove('active');
-        question.closest('.faq-item').classList.remove('active');
+        const item = question.closest('.faq-item');
+        if (item) item.classList.remove('active');
+        
         answer.style.maxHeight = null;
         question.setAttribute('aria-expanded', 'false');
     }
+}
+
+function expandAllFaqs() {
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+        const answer = q.nextElementSibling;
+        const item = q.closest('.faq-item');
+        
+        if (!q.classList.contains('active')) {
+            q.classList.add('active');
+            q.setAttribute('aria-expanded', 'true');
+            if(item) item.classList.add('active');
+            if(answer) answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+}
+
+function collapseAllFaqs() {
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+        const answer = q.nextElementSibling;
+        const item = q.closest('.faq-item');
+        
+        q.classList.remove('active');
+        q.setAttribute('aria-expanded', 'false');
+        if(item) item.classList.remove('active');
+        if(answer) answer.style.maxHeight = null;
+    });
 }
 
 // ============================================
@@ -139,15 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize language
     initLanguage();
     
-    // 2. Initialize Language Toggle Button (works for both onclick and event listener)
+    // 2. Initialize Language Toggle Button
     const langToggleButtons = document.querySelectorAll('.toggle-btn, #lang-toggle');
     langToggleButtons.forEach(btn => {
-        // Remove inline onclick to prevent double-toggling
         if (btn.hasAttribute('onclick')) {
             btn.removeAttribute('onclick');
         }
-        
-        // Add event listener
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -158,16 +191,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Initialize Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     if (hamburger) {
-        // CLEANUP: Remove inline onclick if it exists to prevent double-toggling
         if (hamburger.hasAttribute('onclick')) {
             hamburger.removeAttribute('onclick');
         }
         
-        // Remove existing listeners (by cloning) to prevent duplicates if script runs twice
         const newHamburger = hamburger.cloneNode(true);
         hamburger.parentNode.replaceChild(newHamburger, hamburger);
         
-        // Add single, clean event listener
         newHamburger.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -202,36 +232,3 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth > 768) closeMobileMenu();
     });
 });
-
-// Functions for "Expand All" and "Collapse All" logic
-    function expandAllFaqs() {
-        const questions = document.querySelectorAll('.faq-question');
-        questions.forEach(q => {
-            const answer = q.nextElementSibling;
-            const item = q.closest('.faq-item');
-            
-            // Force active states
-            q.classList.add('active');
-            q.setAttribute('aria-expanded', 'true');
-            if(item) item.classList.add('active');
-            
-            // Manually set height to scrollHeight to open it
-            if(answer) answer.style.maxHeight = answer.scrollHeight + "px";
-        });
-    }
-
-    function collapseAllFaqs() {
-        const questions = document.querySelectorAll('.faq-question');
-        questions.forEach(q => {
-            const answer = q.nextElementSibling;
-            const item = q.closest('.faq-item');
-            
-            // Remove active states
-            q.classList.remove('active');
-            q.setAttribute('aria-expanded', 'false');
-            if(item) item.classList.remove('active');
-            
-            // Reset height
-            if(answer) answer.style.maxHeight = null;
-        });
-    }
