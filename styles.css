@@ -1191,3 +1191,227 @@ footer {
   color: var(--orange);
 }
 
+/* ============================================
+   PRICING PAGE CONTRAST FIXES (WCAG AA) & CUSTOM CARDS
+   ============================================ */
+
+/* Green subtitle text on white — deepened for AA */
+.section-subtitle.green {
+    color: #1B5E20;
+    font-weight: 600;
+}
+
+/* "WAIVED / EXENTA" — must be dark green on white */
+.discount-value.waived {
+    color: #1B5E20;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Discount dollar value */
+.discount-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1B5E20;
+}
+
+/* Mileage text under tier title */
+.tier-miles {
+    color: #4A4A4A;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Small note text */
+.note-text {
+    color: #1A1A1A;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+/* Discount "($ off)" label */
+.discount-note {
+    color: #1B5E20;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Discount row label */
+.discount-label {
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+/* Standard info box overrides for contrast */
+.info-box {
+    color: #1A1A1A;
+}
+.info-box strong {
+    color: #004D40;
+}
+.info-box ul li,
+.info-box ol li,
+.info-box p {
+    color: #1A1A1A;
+}
+
+/* Orange/priority info box — separate class for apostille handling fee */
+.info-box-orange {
+    background: #FFF3E0;
+    border-left: 4px solid #B34600;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    color: #1A1A1A;
+}
+.info-box-orange strong {
+    color: #7A2800;
+}
+.info-box-orange ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+.info-box-orange li {
+    color: #1A1A1A;
+    margin-bottom: 0.4rem;
+}
+.info-box-orange p {
+    color: #1A1A1A;
+}
+
+/* Warning box contrast */
+.warning-box {
+    color: #1A1A1A;
+}
+.warning-box h3 {
+    color: #5A3700 !important;
+}
+.warning-box strong {
+    color: #5A3700;
+}
+.warning-box li,
+.warning-box p {
+    color: #1A1A1A;
+}
+
+/* Card body text */
+.premium-description {
+    color: #2C2C2C;
+    font-size: 0.97rem;
+    line-height: 1.6;
+}
+.pricing-description {
+    color: #2C2C2C;
+    line-height: 1.7;
+}
+.section-subtitle {
+    color: #2C2C2C;
+    font-size: 0.97rem;
+}
+
+/* Subsection headings */
+.subsection-title {
+    color: #004D40;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1.75rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #E0F2F1;
+    text-align: left;
+}
+
+/* Tier badge */
+.tier-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+.tier-badge.local    { background: #00796B; }
+.tier-badge.standard { background: #0F47AF; }
+.tier-badge.metro    { background: #B34600; }
+.tier-badge.extended { background: #6A1B9A; }
+.tier-badge.beyond   { background: #B71C1C; }
+
+/* Premium featured badge */
+.premium-badge {
+    background: #B34600;
+    color: #fff;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Featured card highlight border */
+.card.premium-card.featured {
+    border: 2px solid #00796B;
+}
+
+/* Printing options */
+.printing-options { margin-top: 0.75rem; }
+.print-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #ccc;
+}
+.print-type { color: #1A1A1A; font-weight: 600; }
+.print-price { color: #00796B; font-weight: 700; }
+
+/* Price unit and label */
+.price-unit  { font-size: 1rem; color: #2C2C2C; font-weight: 400; }
+.price-label { font-size: 1rem; color: #2C2C2C; font-weight: 400; }
+
+/* CTA card paragraph text */
+.cta-card p { color: #E0F2F1 !important; }
+
+/* Discount card positioning */
+.discount-card { position: relative; }
+
+/* ============================================
+   NEW: Entry-level consultation card accent
+   ============================================ */
+.card.premium-card.entry-consult {
+    border: 2px solid #B34600;
+    position: relative;
+}
+.entry-badge {
+    background: #B34600;
+    color: #fff;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+.entry-consult .premium-price {
+    color: #B34600;
+}
+.entry-consult-note {
+    background: #FFF3E0;
+    border-left: 3px solid #B34600;
+    padding: 0.6rem 0.9rem;
+    margin-top: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: #1A1A1A;
+    line-height: 1.55;
+}
+.entry-consult-note strong {
+    color: #7A2800;
+}
