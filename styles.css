@@ -413,7 +413,7 @@ nav a.active {
   text-decoration: none;
 }
 
-/* Language Toggle */
+/* Language Toggle — always visible, lives outside nav */
 .toggle-btn {
   background: var(--orange);
   border: none;
@@ -425,6 +425,11 @@ nav a.active {
   font-size: 0.9rem;
   transition: background 0.3s;
   white-space: nowrap;
+  /* Always visible — not hidden by nav mobile rules */
+  display: inline-flex !important;
+  align-items: center;
+  flex-shrink: 0;
+  order: 2; /* sits between logo and hamburger on mobile */
 }
 
 .toggle-btn:hover {
@@ -1023,9 +1028,24 @@ footer {
   color: #ccc;
 }
 
+/* Back to Top — responsive, bilingual, smooth scroll */
 .back-to-top-container {
   text-align: center;
   margin: 2rem 0;
+}
+
+.back-to-top-container .btn {
+  display: inline-flex;
+  width: auto;
+  min-width: 160px;
+  max-width: 260px;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.back-to-top-container .btn:hover {
+  background: var(--white);
+  color: var(--gray);
 }
 
 /* ============================================
@@ -1039,10 +1059,33 @@ footer {
     padding: var(--space-sm);
   }
 
-  .header-container { padding: var(--space-sm); }
+  .header-container {
+    padding: var(--space-sm);
+    /* logo | toggle | hamburger */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  #brand-logo { flex: 1; }
+
+  /* Toggle button: always visible between logo and hamburger */
+  .toggle-btn {
+    order: 2;
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    padding: 0.4rem 0.75rem;
+  }
+
   .logo-img { height: 45px; }
   
-  .hamburger { display: flex; }
+  .hamburger {
+    display: flex;
+    order: 3;
+    flex-shrink: 0;
+  }
 
   nav {
     display: none; /* Hidden by default */
@@ -1054,6 +1097,7 @@ footer {
     z-index: 998;
     padding: 80px var(--space-md);
     overflow-y: auto;
+    /* No toggle-btn inside nav on mobile */
   }
 
   nav.active { display: flex; }
@@ -1107,6 +1151,15 @@ footer {
   }
 
   .hamburger { display: none; }
+
+  /* On desktop, toggle-btn lives in header-container, after nav — push it to end */
+  .header-container {
+    /* logo | nav | toggle */
+  }
+
+  .toggle-btn {
+    order: 3;
+  }
 
   .cta-buttons {
     flex-direction: row;
