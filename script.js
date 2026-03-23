@@ -176,6 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
     
     // 2. Initialize Language Toggle Button
+    // NOTE: #lang-toggle is now in .header-container directly (outside nav),
+    // so it is always visible on both mobile and desktop.
     const langToggleButtons = document.querySelectorAll('.toggle-btn, #lang-toggle');
     langToggleButtons.forEach(btn => {
         if (btn.hasAttribute('onclick')) {
@@ -230,5 +232,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Handle Resize
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) closeMobileMenu();
+    });
+
+    // 7. Back to Top — smooth scroll (supports browsers without native scroll-behavior)
+    document.querySelectorAll('a[href="#top"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
 });
