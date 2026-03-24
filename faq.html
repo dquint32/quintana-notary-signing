@@ -36,7 +36,13 @@
             </a>
         </div>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <!-- Language toggle outside nav — always visible on mobile & desktop -->
+        <button class="toggle-btn" id="lang-toggle">
+            <span id="toggle-label-en">Español</span>
+            <span id="toggle-label-es" style="display:none;">English</span>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -45,29 +51,24 @@
         <nav id="main-nav">
             <a href="index.html" id="nav-home-es" style="display:none;">Inicio</a>
             <a href="index.html" id="nav-home-en">Home</a>
-            
+
             <a href="services.html" id="nav-services-es" style="display:none;">Servicios</a>
             <a href="services.html" id="nav-services-en">Services</a>
-            
+
             <a href="translate.html" id="nav-translate-es" style="display:none;">Traducciones</a>
             <a href="translate.html" id="nav-translate-en">Translations</a>
-            
+
             <a href="pricing.html" id="nav-pricing-es" style="display:none;">Precios</a>
             <a href="pricing.html" id="nav-pricing-en">Pricing</a>
-            
+
             <a href="about.html" id="nav-about-es" style="display:none;">Acerca de</a>
             <a href="about.html" id="nav-about-en">About</a>
-            
+
             <a href="faq.html" id="nav-faq-es" style="display:none;">Preguntas</a>
             <a href="faq.html" id="nav-faq-en">FAQ</a>
-            
+
             <a href="contact.html" id="nav-contact-es" style="display:none;">Contacto</a>
             <a href="contact.html" id="nav-contact-en">Contact</a>
-            
-            <button class="toggle-btn" onclick="toggleLanguage()">
-                <span id="toggle-label-en">Español</span>
-                <span id="toggle-label-es" style="display:none;">English</span>
-            </button>
         </nav>
     </div>
 </header>
@@ -76,7 +77,7 @@
     <div class="hero-content">
         <h1 id="hero-h1-es" style="display:none;">❓ Preguntas Frecuentes (FAQ)</h1>
         <h1 id="hero-h1-en">❓ Frequently Asked Questions (FAQ)</h1>
-        
+
         <p class="hero-subtitle" id="hero-h2-es" style="display:none;">Respuestas rápidas sobre notarización, identificación y nuestros servicios.</p>
         <p class="hero-subtitle" id="hero-h2-en">Quick answers about notarization, identification, and our services.</p>
     </div>
@@ -94,13 +95,13 @@
             <span id="btn-collapse-en">Collapse All</span>
         </button>
     </div>
-    
+
     <div class="faq-accordion-container">
 
         <h2 class="faq-section-title">
             <span class="section-number">1</span>
             <span id="sec-1-title-es" style="display:none;">Servicios y Proceso Notarial</span>
-            <span id="sec-1-title-en">Notarial Services & Process</span>
+            <span id="sec-1-title-en">Notarial Services &amp; Process</span>
         </h2>
 
         <div class="faq-item">
@@ -198,7 +199,7 @@
                     Colorado law requires the notary to identify the signer based on a government-issued ID that is current, contains the signer's photo, and signature.
                     <br><strong>Common Acceptable Examples:</strong>
                 </p>
-                
+
                 <ul id="a6-list-es" style="display:none;">
                     <li>Pasaporte de EE. UU. o Pasaporte Extranjero (debe ser legible en inglés/español).</li>
                     <li>Licencia de conducir de EE. UU. o Tarjeta de identificación estatal de EE. UU.</li>
@@ -249,7 +250,7 @@
         <h2 class="faq-section-title">
             <span class="section-number">3</span>
             <span id="sec-3-title-es" style="display:none;">Precios y Logística del Servicio Móvil</span>
-            <span id="sec-3-title-en">Pricing & Mobile Service Logistics</span>
+            <span id="sec-3-title-en">Pricing &amp; Mobile Service Logistics</span>
         </h2>
 
         <div class="faq-item">
@@ -300,7 +301,7 @@
         <h2 class="faq-section-title">
             <span class="section-number">4</span>
             <span id="sec-4-title-es" style="display:none;">Conserjería y Preparación de Pasaportes de EE. UU.</span>
-            <span id="sec-4-title-en">U.S. Passport Concierge & Preparation</span>
+            <span id="sec-4-title-en">U.S. Passport Concierge &amp; Preparation</span>
         </h2>
 
         <div class="faq-item">
@@ -362,7 +363,7 @@
                 </p>
             </div>
         </div>
-        
+
     </div>
 
     <div class="cta-card">
@@ -371,7 +372,7 @@
         <h2 id="cta-ready-en">Have another question or need to schedule?</h2>
         <p id="cta-desc-es" style="display:none;">Contáctenos hoy para obtener una respuesta o para agendar su cita.</p>
         <p id="cta-desc-en">Contact us today to get an answer or to schedule your appointment.</p>
-        
+
         <a href="contact.html" class="btn btn-primary btn-large">
             <span class="btn-icon">💬</span>
             <span id="cta-contact-es" style="display:none;">Ir a la página de Contacto</span>
@@ -403,13 +404,13 @@
 </div>
 
 <p id="footer-main-es">
-    © 2026 Quintana Notary & Signing<br/>
+    © 2026 Quintana Notary &amp; Signing<br/>
     Una marca de <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
     Precios transparentes · Servicio bilingüe · Enfoque comunitario
 </p>
 
 <p id="footer-main-en" style="display:none;">
-    © 2026 Quintana Notary & Signing<br/>
+    © 2026 Quintana Notary &amp; Signing<br/>
     A brand of <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
     Transparent pricing · Bilingual service · Community focused
 </p>
@@ -417,17 +418,17 @@
 <div class="disclaimer">
     <div id="disclaimer-es">
         <strong>Aviso Legal (ES)</strong><br/>
-        Quintana Notary & Signing ofrece servicios notariales y de traducción certificada en cumplimiento con la ley de Colorado. 
-        Los honorarios notariales están limitados por ley a $15 por documento. 
-        Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita. 
+        Quintana Notary &amp; Signing ofrece servicios notariales y de traducción certificada en cumplimiento con la ley de Colorado.
+        Los honorarios notariales están limitados por ley a $15 por documento.
+        Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita.
         Los notarios y traductores no son abogados y no pueden brindar asesoría legal.
     </div>
 
     <div id="disclaimer-en" style="display:none;">
         <strong>Legal Notice (EN)</strong><br/>
-        Quintana Notary & Signing provides notary and certified translation services in accordance with Colorado law. 
-        Statutory notary fees are limited to $15 per notarized document. 
-        Mobile travel and convenience fees are separate and always disclosed in writing before the appointment. 
+        Quintana Notary &amp; Signing provides notary and certified translation services in accordance with Colorado law.
+        Statutory notary fees are limited to $15 per notarized document.
+        Mobile travel and convenience fees are separate and always disclosed in writing before the appointment.
         Notaries and translators are not attorneys licensed to practice law and cannot provide legal advice.
     </div>
 </div>
