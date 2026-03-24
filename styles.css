@@ -305,7 +305,7 @@ ul li, ol li {
 }
 
 .top-help-btn-call:hover {
-  background-color: #001f4d; /* Even darker for hover */
+  background-color: #001f4d;
 }
 
 .top-help-btn-whatsapp {
@@ -326,7 +326,7 @@ header {
   color: var(--white);
   box-shadow: var(--shadow-md);
   position: sticky;
-  top: 36px; /* Adjust based on top-bar height approx */
+  top: 36px;
   z-index: 999;
 }
 
@@ -338,6 +338,10 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: var(--space-md);
+}
+
+#brand-logo {
+  flex: 1;
 }
 
 #brand-logo a {
@@ -366,6 +370,8 @@ header {
   padding: var(--space-sm);
   gap: 5px;
   z-index: 1001;
+  order: 3;
+  flex-shrink: 0;
 }
 
 .hamburger span {
@@ -394,6 +400,7 @@ nav {
   gap: var(--space-sm);
   align-items: center;
   flex-wrap: wrap;
+  order: 2;
 }
 
 nav a {
@@ -413,7 +420,11 @@ nav a.active {
   text-decoration: none;
 }
 
-/* Language Toggle — always visible, lives outside nav */
+/* ============================================
+   LANGUAGE TOGGLE BUTTON
+   Always visible — lives in .header-container directly,
+   NOT inside <nav>, so it is never hidden by mobile nav rules.
+   ============================================ */
 .toggle-btn {
   background: var(--orange);
   border: none;
@@ -425,15 +436,14 @@ nav a.active {
   font-size: 0.9rem;
   transition: background 0.3s;
   white-space: nowrap;
-  /* Always visible — not hidden by nav mobile rules */
   display: inline-flex !important;
   align-items: center;
   flex-shrink: 0;
-  order: 2; /* sits between logo and hamburger on mobile */
+  order: 2; /* sits between logo (order:1) and hamburger (order:3) on mobile */
 }
 
 .toggle-btn:hover {
-  background: #B34600; /* Darker orange */
+  background: #B34600;
 }
 
 /* ============================================
@@ -1028,7 +1038,7 @@ footer {
   color: #ccc;
 }
 
-/* Back to Top — responsive, bilingual, smooth scroll */
+/* Back to Top */
 .back-to-top-container {
   text-align: center;
   margin: 2rem 0;
@@ -1061,7 +1071,6 @@ footer {
 
   .header-container {
     padding: var(--space-sm);
-    /* logo | toggle | hamburger */
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -1069,9 +1078,13 @@ footer {
     gap: var(--space-sm);
   }
 
-  #brand-logo { flex: 1; }
+  /* logo: order 1, stretches to fill available space */
+  #brand-logo {
+    flex: 1;
+    order: 1;
+  }
 
-  /* Toggle button: always visible between logo and hamburger */
+  /* toggle: order 2, always visible between logo and hamburger */
   .toggle-btn {
     order: 2;
     flex-shrink: 0;
@@ -1079,16 +1092,16 @@ footer {
     padding: 0.4rem 0.75rem;
   }
 
-  .logo-img { height: 45px; }
-  
+  /* hamburger: order 3 */
   .hamburger {
     display: flex;
     order: 3;
     flex-shrink: 0;
   }
 
+  /* nav: hidden off-screen, toggled via JS */
   nav {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     position: fixed;
     top: 0; right: 0;
@@ -1097,7 +1110,6 @@ footer {
     z-index: 998;
     padding: 80px var(--space-md);
     overflow-y: auto;
-    /* No toggle-btn inside nav on mobile */
   }
 
   nav.active { display: flex; }
@@ -1148,17 +1160,22 @@ footer {
     padding: 0;
     flex-direction: row;
     overflow-y: visible;
+    order: 2;
+    flex: 1;
+    justify-content: flex-end;
   }
 
   .hamburger { display: none; }
 
-  /* On desktop, toggle-btn lives in header-container, after nav — push it to end */
-  .header-container {
-    /* logo | nav | toggle */
+  /* On desktop: logo | nav (flex:1, right-aligned) | toggle */
+  #brand-logo {
+    flex: 0 0 auto;
+    order: 1;
   }
 
   .toggle-btn {
     order: 3;
+    flex-shrink: 0;
   }
 
   .cta-buttons {
@@ -1196,7 +1213,6 @@ footer {
    UPDATES FOR NEW SERVICES PAGE LAYOUT
    ============================================ */
 
-/* Simple list style without dashed lines, for standard bullets */
 .simple-list {
   list-style: disc;
   padding-left: var(--space-xl);
@@ -1210,7 +1226,6 @@ footer {
   content: none;
 }
 
-/* Location Highlight Box */
 .location-highlight {
   background-color: var(--teal-light);
   border: 1px solid var(--teal);
@@ -1224,7 +1239,6 @@ footer {
   font-size: 1.2rem;
 }
 
-/* Split Column Layout for Checklist (What to Expect) */
 .checklist-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1238,7 +1252,6 @@ footer {
   }
 }
 
-/* Red Cross List for 'What We Cannot Do' */
 .profile-facts.cross-list li::before {
   content: '❌';
   color: var(--orange);
@@ -1248,27 +1261,23 @@ footer {
    PRICING PAGE CONTRAST FIXES (WCAG AA) & CUSTOM CARDS
    ============================================ */
 
-/* Green subtitle text on white — deepened for AA */
 .section-subtitle.green {
     color: #1B5E20;
     font-weight: 600;
 }
 
-/* "WAIVED / EXENTA" — must be dark green on white */
 .discount-value.waived {
     color: #1B5E20;
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-/* Discount dollar value */
 .discount-value {
     font-size: 1.5rem;
     font-weight: 700;
     color: #1B5E20;
 }
 
-/* Mileage text under tier title */
 .tier-miles {
     color: #4A4A4A;
     font-weight: 600;
@@ -1276,7 +1285,6 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* Small note text */
 .note-text {
     color: #1A1A1A;
     font-size: 0.95rem;
@@ -1284,20 +1292,17 @@ footer {
     line-height: 1.6;
 }
 
-/* Discount "($ off)" label */
 .discount-note {
     color: #1B5E20;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
-/* Discount row label */
 .discount-label {
     color: #1A1A1A;
     font-weight: 600;
 }
 
-/* Standard info box overrides for contrast */
 .info-box {
     color: #1A1A1A;
 }
@@ -1310,7 +1315,6 @@ footer {
     color: #1A1A1A;
 }
 
-/* Orange/priority info box — separate class for apostille handling fee */
 .info-box-orange {
     background: #FFF3E0;
     border-left: 4px solid #B34600;
@@ -1334,7 +1338,6 @@ footer {
     color: #1A1A1A;
 }
 
-/* Warning box contrast */
 .warning-box {
     color: #1A1A1A;
 }
@@ -1349,7 +1352,6 @@ footer {
     color: #1A1A1A;
 }
 
-/* Card body text */
 .premium-description {
     color: #2C2C2C;
     font-size: 0.97rem;
@@ -1364,7 +1366,6 @@ footer {
     font-size: 0.97rem;
 }
 
-/* Subsection headings */
 .subsection-title {
     color: #004D40;
     font-size: 1.1rem;
@@ -1375,7 +1376,6 @@ footer {
     text-align: left;
 }
 
-/* Tier badge */
 .tier-badge {
     display: inline-block;
     padding: 0.25rem 0.75rem;
@@ -1393,7 +1393,6 @@ footer {
 .tier-badge.extended { background: #6A1B9A; }
 .tier-badge.beyond   { background: #B71C1C; }
 
-/* Premium featured badge */
 .premium-badge {
     background: #B34600;
     color: #fff;
@@ -1406,12 +1405,10 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* Featured card highlight border */
 .card.premium-card.featured {
     border: 2px solid #00796B;
 }
 
-/* Printing options */
 .printing-options { margin-top: 0.75rem; }
 .print-option {
     display: flex;
@@ -1423,19 +1420,13 @@ footer {
 .print-type { color: #1A1A1A; font-weight: 600; }
 .print-price { color: #00796B; font-weight: 700; }
 
-/* Price unit and label */
 .price-unit  { font-size: 1rem; color: #2C2C2C; font-weight: 400; }
 .price-label { font-size: 1rem; color: #2C2C2C; font-weight: 400; }
 
-/* CTA card paragraph text */
 .cta-card p { color: #E0F2F1 !important; }
 
-/* Discount card positioning */
 .discount-card { position: relative; }
 
-/* ============================================
-   NEW: Entry-level consultation card accent
-   ============================================ */
 .card.premium-card.entry-consult {
     border: 2px solid #B34600;
     position: relative;
