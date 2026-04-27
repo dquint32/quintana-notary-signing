@@ -458,15 +458,25 @@ header {
 }
 
 /* Logo watermark variant */
+/* ============================================================
+   PATCH: Hero logo background with contrast overlay
+   Replace the existing .hero-with-logo block in styles.css
+   ============================================================ */
+ 
+/* Hero — logo as full background image */
 .hero-with-logo {
   background-image: url('Quintana-notary-signing_logo.png');
-  background-size: 80%;
+  background-size: 420px 420px;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: var(--navy-dark);
 }
-
-@media (min-width: 600px) { .hero-with-logo { background-size: 55%; } }
-@media (min-width: 900px) { .hero-with-logo { background-size: 40%; } }
+ 
+.hero-with-logo::before {
+  background: rgba(10, 45, 105, 0.78);
+}
+   ============================================================ */
+ 
 
 /* Always-present overlay — covers background logo */
 .hero::before {
