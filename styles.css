@@ -463,22 +463,34 @@ header {
   background-color: var(--navy-dark);
 }
 
-/* Strong ::before overlay — ensures WCAG AA contrast on all hero pages */
-.hero::before {
+/* Suppress the generic ::before on logo hero pages so logo isn't buried */
+.hero-with-logo::before {
+  display: none;
+}
+
+/* Single overlay pseudo for plain hero (no logo bg) */
+.hero:not(.hero-with-logo)::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 45, 105, 0.92);
+  background: rgba(10, 45, 105, 0.88);
   z-index: 1;
   pointer-events: none;
 }
 
-/* Explicit overlay div (used in index.html) — matches ::before strength */
-.hero-overlay {
+/* Logo hero — single lighter overlay, logo shows through clearly */
+.hero-with-logo::after {
+  content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 45, 105, 0.92);
+  background: rgba(10, 45, 105, 0.78);
   z-index: 1;
+  pointer-events: none;
+}
+
+/* Hide explicit overlay div — ::after handles it now */
+.hero-overlay {
+  display: none;
 }
 
 .hero-content {
