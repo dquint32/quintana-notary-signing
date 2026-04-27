@@ -462,8 +462,28 @@ header {
    PATCH: Hero logo background with contrast overlay
    Replace the existing .hero-with-logo block in styles.css
    ============================================================ */
- 
+
 /* Hero — logo as full background image */
+.hero-with-logo {
+  background-image: url('Quintana-notary-signing_logo.png');
+  background-size: cover;          /* fill the entire hero */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--navy-dark); /* fallback while image loads */
+}
+
+/* Keep the existing overlay rule but make it a bit stronger
+   so white text stays WCAG AA on top of the colorful logo.
+   The ::before pseudo is already defined on .hero — just
+   update the rgba value: */
+.hero-with-logo::before {
+  background: rgba(10, 45, 105, 0.82); /* was 0.88 — slightly lighter lets logo show */
+}
+
+/* ============================================================
+   OR — if you prefer the logo centered/contained (stamp look)
+   rather than fully covering, use these values instead:
+
 .hero-with-logo {
   background-image: url('Quintana-notary-signing_logo.png');
   background-size: 420px 420px;
@@ -471,12 +491,11 @@ header {
   background-repeat: no-repeat;
   background-color: var(--navy-dark);
 }
- 
+
 .hero-with-logo::before {
   background: rgba(10, 45, 105, 0.78);
 }
-   ============================================================ */
- 
+   ============================================================ */ 
 
 /* Always-present overlay — covers background logo */
 .hero::before {
