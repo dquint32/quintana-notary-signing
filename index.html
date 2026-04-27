@@ -36,7 +36,6 @@
             </a>
         </div>
 
-        <!-- Language toggle is NOW outside nav so it's always visible on mobile & desktop -->
         <button class="toggle-btn" id="lang-toggle">
             <span id="toggle-label-en" style="display:none;">Español</span>
             <span id="toggle-label-es">English</span>
@@ -67,33 +66,44 @@
     </div>
 </header>
 
-<section class="hero hero-with-logo">
-	<div class="hero-overlay"></div>
-	<div class="hero-content">
-		<h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
-		<h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
-		<p class="hero-subtitle" id="hero-h2-es">Llevamos el servicio de notario público a su hogar, oficina o lugar preferido en Castle Rock y Denver Metro.</p>
-		<p class="hero-subtitle" id="hero-h2-en" style="display:none;">We bring professional notary services to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
+<div class="statutory-bar">
+    <span id="legal-disclosure-es">
+        ⚖️ <strong>Aviso Legal (C.R.S. § 24-21-525):</strong>
+        <span class="statutory-es"><strong>NO SOY ABOGADO LICENCIADO PARA EJERCER EL DERECHO EN EL ESTADO DE COLORADO Y NO PUEDO DAR CONSEJOS LEGALES NI ACEPTAR HONORARIOS POR CONSEJOS LEGALES.</strong></span>
+    </span>
+    <span id="legal-disclosure-en" style="display:none;">
+        ⚖️ <strong>Legal Disclosure (C.R.S. § 24-21-525):</strong>
+        <span class="statutory-en"><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</strong></span>
+    </span>
+</div>
 
-		<div class="cta-buttons">
-			<a href="pricing.html" class="btn btn-primary" id="cta-price-es">
-				<span class="btn-icon">💰</span>
-				<span>Ver Precios y Reservar</span>
-			</a>
-			<a href="pricing.html" class="btn btn-primary" id="cta-price-en" style="display:none;">
-				<span class="btn-icon">💰</span>
-				<span>View Pricing & Book Now</span>
-			</a>
-			<a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
-				<span class="btn-icon">📞</span>
-				<span>Llámanos o Envíanos un Mensaje</span>
-			</a>
-			<a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-en" style="display:none;">
-				<span class="btn-icon">📞</span>
-				<span>Call or Text Us</span>
-			</a>
-		</div>
-	</div>
+<section class="hero hero-with-logo">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
+        <h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
+        <p class="hero-subtitle" id="hero-h2-es">Llevo servicios notariales profesionales directamente a su hogar, oficina o lugar preferido en Castle Rock y el área metropolitana de Denver.</p>
+        <p class="hero-subtitle" id="hero-h2-en" style="display:none;">I bring professional notary services directly to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
+
+        <div class="cta-buttons">
+            <a href="pricing.html" class="btn btn-primary" id="cta-price-es">
+                <span class="btn-icon">💰</span>
+                <span>Ver Precios y Reservar</span>
+            </a>
+            <a href="pricing.html" class="btn btn-primary" id="cta-price-en" style="display:none;">
+                <span class="btn-icon">💰</span>
+                <span>View Pricing & Book Now</span>
+            </a>
+            <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es">
+                <span class="btn-icon">📞</span>
+                <span>Llámame o Envíame un Mensaje</span>
+            </a>
+            <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-en" style="display:none;">
+                <span class="btn-icon">📞</span>
+                <span>Call or Text Me</span>
+            </a>
+        </div>
+    </div>
 </section>
 
 <main class="section container">
@@ -123,15 +133,15 @@
     </div>
 
     <div class="quick-links">
-        <a href="services.html" class="quick-link-card">
+        <a href="services.html" class="card quick-link-card">
             <span class="card-icon">🚙</span>
             <h3 id="quick-link-1-es">Servicio Notarial Móvil</h3>
             <h3 id="quick-link-1-en" style="display:none;">Mobile Notary Service</h3>
-            <p id="quick-link-1-desc-es">Le encontramos donde esté: hogar, oficina, hospital o cafetería.</p>
-            <p id="quick-link-1-desc-en" style="display:none;">We meet you where you are: home, office, hospital, or coffee shop.</p>
+            <p id="quick-link-1-desc-es">Le encuentro donde esté: hogar, oficina, hospital o cafetería.</p>
+            <p id="quick-link-1-desc-en" style="display:none;">I meet you where you are: home, office, hospital, or coffee shop.</p>
         </a>
 
-        <a href="translate.html" class="quick-link-card">
+        <a href="translate.html" class="card quick-link-card">
             <span class="card-icon">🌐</span>
             <h3 id="quick-link-2-es">Traducciones Certificadas</h3>
             <h3 id="quick-link-2-en" style="display:none;">Certified Translations</h3>
@@ -139,7 +149,7 @@
             <p id="quick-link-2-desc-en" style="display:none;">Quick Spanish-to-English translations for official documents (USCIS).</p>
         </a>
         
-        <a href="pricing.html" class="quick-link-card">
+        <a href="pricing.html" class="card quick-link-card">
             <span class="card-icon">💰</span>
             <h3 id="quick-link-3-es">Precios Transparentes</h3>
             <h3 id="quick-link-3-en" style="display:none;">Transparent Pricing</h3>
@@ -152,47 +162,47 @@
 
     <section class="section-with-icon">
         <div class="card-icon">💡</div>
-        <h2 id="why-choose-es">Por Qué Elegir Quintana Notary & Signing</h2>
-        <h2 id="why-choose-en" style="display:none;">Why Choose Quintana Notary & Signing</h2>
+        <h2 id="why-choose-es">Por Qué Elegirme</h2>
+        <h2 id="why-choose-en" style="display:none;">Why Choose Me</h2>
         
-        <div class="why-reasons">
-            <div class="reason-item">
-                <span class="reason-icon">⭐</span>
+        <div class="why-reasons pricing-cards">
+            <div class="card reason-item">
+                <span class="reason-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">⭐</span>
                 <div>
                     <strong id="why-1-title-es">Bilingüe y Bicultural</strong>
                     <strong id="why-1-title-en" style="display:none;">Bilingual & Bicultural</strong>
-                    <p id="why-1-desc-es">Comunicación clara en español e inglés, asegurando que cada cliente se sienta cómodo e informado.</p>
-                    <p id="why-1-desc-en" style="display:none;">Clear communication in Spanish and English, ensuring every client feels comfortable and informed.</p>
+                    <p id="why-1-desc-es" style="margin-top: 0.5rem;">Comunicación clara en español e inglés, asegurando que cada cliente se sienta cómodo e informado.</p>
+                    <p id="why-1-desc-en" style="display:none;" style="margin-top: 0.5rem;">Clear communication in Spanish and English, ensuring every client feels comfortable and informed.</p>
                 </div>
             </div>
 
-            <div class="reason-item">
-                <span class="reason-icon">⏱️</span>
+            <div class="card reason-item">
+                <span class="reason-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">⏱️</span>
                 <div>
                     <strong id="why-2-title-es">Servicio a la Medida</strong>
                     <strong id="why-2-title-en" style="display:none;">Tailored Service</strong>
-                    <p id="why-2-desc-es">Horarios flexibles, incluyendo tardes y fines de semana, adaptándonos a su ocupada agenda.</p>
-                    <p id="why-2-desc-en" style="display:none;">Flexible hours, including evenings and weekends, adapting to your busy schedule.</p>
+                    <p id="why-2-desc-es" style="margin-top: 0.5rem;">Horarios flexibles, incluyendo tardes y fines de semana, adaptándome a su ocupada agenda.</p>
+                    <p id="why-2-desc-en" style="display:none;" style="margin-top: 0.5rem;">Flexible hours, including evenings and weekends, adapting to your busy schedule.</p>
                 </div>
             </div>
 
-            <div class="reason-item">
-                <span class="reason-icon">🤝</span>
+            <div class="card reason-item">
+                <span class="reason-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🤝</span>
                 <div>
                     <strong id="why-3-title-es">Enfoque Comunitario</strong>
                     <strong id="why-3-title-en" style="display:none;">Community Focus</strong>
-                    <p id="why-3-desc-es">Descuentos especiales por reunirnos en ubicaciones comunitarias seleccionadas (Tienda Salvadoreña, MSU Denver).</p>
-                    <p id="why-3-desc-en" style="display:none;">Special discounts for meeting at select community locations (Tienda Salvadoreña, MSU Denver).</p>
+                    <p id="why-3-desc-es" style="margin-top: 0.5rem;">Descuentos especiales por reunirnos en ubicaciones comunitarias seleccionadas (Tienda Salvadoreña, MSU Denver).</p>
+                    <p id="why-3-desc-en" style="display:none;" style="margin-top: 0.5rem;">Special discounts for meeting at select community locations (Tienda Salvadoreña, MSU Denver).</p>
                 </div>
             </div>
 
-            <div class="reason-item">
-                <span class="reason-icon">💡</span>
+            <div class="card reason-item">
+                <span class="reason-icon" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">💡</span>
                 <div>
                     <strong id="why-4-title-es">Precios Anticipados</strong>
                     <strong id="why-4-title-en" style="display:none;">Upfront Pricing</strong>
-                    <p id="why-4-desc-es">Siempre cotizamos el precio exacto (tarifa notarial + tarifa de viaje) antes de la cita, sin sorpresas.</p>
-                    <p id="why-4-desc-en" style="display:none;">We always quote the exact price (notary fee + travel fee) before the appointment, with no surprises.</p>
+                    <p id="why-4-desc-es" style="margin-top: 0.5rem;">Siempre cotizo el precio exacto (tarifa notarial + tarifa de viaje) antes de la cita, sin sorpresas.</p>
+                    <p id="why-4-desc-en" style="display:none;" style="margin-top: 0.5rem;">I always quote the exact price (notary fee + travel fee) before the appointment, with no surprises.</p>
                 </div>
             </div>
         </div>
@@ -202,8 +212,8 @@
 
     <section class="section-with-icon">
         <div class="card-icon">🔒</div>
-        <h2 id="services-title-es">Nuestros Servicios Principales</h2>
-        <h2 id="services-title-en" style="display:none;">Our Core Services</h2>
+        <h2 id="services-title-es">Mis Servicios Principales</h2>
+        <h2 id="services-title-en" style="display:none;">My Core Services</h2>
         
         <div class="service-grid">
             <div class="card service-card">
@@ -216,7 +226,7 @@
             <div class="card service-card">
                 <h3 id="service-2-es">Firmas de Préstamo (Loan Signing)</h3>
                 <h3 id="service-2-en" style="display:none;">Loan Signings</h3>
-                <p id="service-2-desc-es">Especialistas en la firma de paquetes de préstamos hipotecarios residenciales (compras, refinanciamientos, HELOCs).</p>
+                <p id="service-2-desc-es">Especialista en la firma de paquetes de préstamos hipotecarios residenciales (compras, refinanciamientos, HELOCs).</p>
                 <p id="service-2-desc-en" style="display:none;">Specializing in the signing of residential mortgage loan packages (purchases, refinances, HELOCs).</p>
             </div>
 
@@ -230,12 +240,12 @@
             <div class="card service-card">
                 <h3 id="service-4-es">Verificación I-9</h3>
                 <h3 id="service-4-en" style="display:none;">I-9 Verification</h3>
-                <p id="service-4-desc-es">Actuamos como Representante Autorizado para completar la Sección 2 de su Formulario I-9.</p>
-                <p id="service-4-desc-en" style="display:none;">We act as an Authorized Representative to complete Section 2 of your I-9 Form.</p>
+                <p id="service-4-desc-es">Actúo como Representante Autorizado para completar la Sección 2 de su Formulario I-9.</p>
+                <p id="service-4-desc-en" style="display:none;">I act as an Authorized Representative to complete Section 2 of your I-9 Form.</p>
             </div>
         </div>
         
-        <div class="cta-buttons cta-services-nudge">
+        <div class="cta-buttons cta-services-nudge" style="margin-top: 2rem;">
             <a href="services.html" class="btn btn-primary" id="cta-services-es">
                 <span class="btn-icon">📚</span>
                 <span>Ver Todos los Servicios</span>
@@ -254,91 +264,89 @@
         <h2 id="pricing-title-es">Precios Transparentes y Descuentos</h2>
         <h2 id="pricing-title-en" style="display:none;">Transparent Pricing & Discounts</h2>
 
-        <div class="pricing-overview">
-            <div class="card pricing-card-overview">
-                <div class="pricing-item">
-                    <strong id="pricing-item-1-es">Costo Notarial Estatuario:</strong>
-                    <strong id="pricing-item-1-en" style="display:none;">Statutory Notary Fee:</strong>
-                    <span>$15 por sello (fijado por ley de CO)</span>
-                </div>
-                <div class="pricing-item">
-                    <strong id="pricing-item-2-es">Cargo de Conveniencia Móvil:</strong>
-                    <strong id="pricing-item-2-en" style="display:none;">Mobile Convenience Fee:</strong>
-                    <span>Cotizado por adelantado por distancia</span>
-                </div>
-                <div class="pricing-item discount">
-                    <strong id="pricing-item-3-es">¡Descuento Comunitario!</strong>
-                    <strong id="pricing-item-3-en" style="display:none;">Community Discount!</strong>
-                    <span id="pricing-item-3-desc-es"><strong>$10 por sello</strong> al reunirse en ubicaciones especiales.</span>
-                    <span id="pricing-item-3-desc-en" style="display:none;"><strong>$10 per seal</strong> when meeting at special locations.</span>
-                </div>
+        <div class="pricing-overview info-box-orange" style="max-width: 600px; margin: 0 auto 2rem auto;">
+            <div class="pricing-item" style="margin-bottom: 0.75rem;">
+                <strong id="pricing-item-1-es">Costo Notarial Estatuario:</strong>
+                <strong id="pricing-item-1-en" style="display:none;">Statutory Notary Fee:</strong>
+                <span>$15 por sello (fijado por ley de CO)</span>
             </div>
+            <div class="pricing-item" style="margin-bottom: 0.75rem;">
+                <strong id="pricing-item-2-es">Cargo de Conveniencia Móvil:</strong>
+                <strong id="pricing-item-2-en" style="display:none;">Mobile Convenience Fee:</strong>
+                <span>Cotizado por adelantado por distancia</span>
+            </div>
+            <div class="pricing-item discount" style="border-top: 1px dashed #B34600; padding-top: 0.75rem; margin-top: 0.75rem;">
+                <strong id="pricing-item-3-es" style="color: #1B5E20; display: block; margin-bottom: 0.25rem;">¡Descuento Comunitario!</strong>
+                <strong id="pricing-item-3-en" style="display:none; color: #1B5E20; margin-bottom: 0.25rem;">Community Discount!</strong>
+                <span id="pricing-item-3-desc-es"><strong>$10 por sello</strong> al reunirnos en ubicaciones especiales.</span>
+                <span id="pricing-item-3-desc-en" style="display:none;"><strong>$10 per seal</strong> when we meet at special locations.</span>
+            </div>
+        </div>
 
-            <div class="cta-buttons cta-services-nudge">
-                <a href="pricing.html" class="btn btn-primary" id="cta-pricing-es">
-                    <span class="btn-icon">💲</span>
-                    <span>Ver Precios Detallados</span>
-                </a>
-                <a href="pricing.html" class="btn btn-primary" id="cta-pricing-en" style="display:none;">
-                    <span class="btn-icon">💲</span>
-                    <span>View Detailed Pricing</span>
-                </a>
-            </div>
+        <div class="cta-buttons cta-services-nudge">
+            <a href="pricing.html" class="btn btn-primary" id="cta-pricing-es">
+                <span class="btn-icon">💲</span>
+                <span>Ver Precios Detallados</span>
+            </a>
+            <a href="pricing.html" class="btn btn-primary" id="cta-pricing-en" style="display:none;">
+                <span class="btn-icon">💲</span>
+                <span>View Detailed Pricing</span>
+            </a>
         </div>
     </section>
 
 </main>
 
 <footer>
-<div class="contact-info">
-    <div class="contact-item">
-        <strong id="contact-call-es">Llámanos/Envíanos Mensaje:</strong>
-        <strong id="contact-call-en" style="display:none;">Call/Text Us:</strong>
-        <a href="tel:+13035004122">303-500-4122</a>
-    </div>
-    <div class="contact-item">
-        <strong id="contact-email-es">Correo Electrónico:</strong>
-        <strong id="contact-email-en" style="display:none;">Email:</strong>
-        <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
-    </div>
-</div>
-
-<p id="footer-main-es">
-    © 2026 Quintana Notary & Signing<br/>
-    Una marca de <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
-    Precios transparentes · Servicio bilingüe · Enfoque comunitario
-</p>
-
-<p id="footer-main-en" style="display:none;">
-    © 2026 Quintana Notary & Signing<br/>
-    A brand of <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
-    Transparent pricing · Bilingual service · Community focused
-</p>
-
-<div class="disclaimer">
-    <div id="disclaimer-es">
-        <strong>Aviso Legal (ES)</strong><br/>
-        Quintana Notary & Signing ofrece servicios notariales y de traducción certificada en cumplimiento con la ley de Colorado. 
-        Los honorarios notariales están limitados por ley a $15 por documento. 
-        Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita. 
-        Los notarios y traductores no son abogados y no pueden brindar asesoría legal.
+    <div class="contact-info">
+        <div class="contact-item">
+            <strong id="contact-call-es">Llámame/Envíame Mensaje:</strong>
+            <strong id="contact-call-en" style="display:none;">Call/Text Me:</strong>
+            <a href="tel:+13035004122">303-500-4122</a>
+        </div>
+        <div class="contact-item">
+            <strong id="contact-email-es">Correo Electrónico:</strong>
+            <strong id="contact-email-en" style="display:none;">Email:</strong>
+            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+        </div>
     </div>
 
-    <div id="disclaimer-en" style="display:none;">
-        <strong>Legal Notice (EN)</strong><br/>
-        Quintana Notary & Signing provides notary and certified translation services in accordance with Colorado law. 
-        Statutory notary fees are limited to $15 per notarized document. 
-        Mobile travel and convenience fees are separate and always disclosed in writing before the appointment. 
-        Notaries and translators are not attorneys licensed to practice law and cannot provide legal advice.
-    </div>
-</div>
+    <p id="footer-main-es">
+        © 2026 Quintana Notary & Signing<br/>
+        Una marca de <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
+        Precios transparentes · Servicio bilingüe · Enfoque comunitario
+    </p>
 
-<div class="back-to-top-container">
-    <a href="#top" class="btn btn-secondary">
-        <span id="back-top-es">Volver Arriba</span>
-        <span id="back-top-en" style="display:none;">Back to Top</span>
-    </a>
-</div>
+    <p id="footer-main-en" style="display:none;">
+        © 2026 Quintana Notary & Signing<br/>
+        A brand of <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
+        Transparent pricing · Bilingual service · Community focused
+    </p>
+
+    <div class="disclaimer">
+        <div id="disclaimer-es">
+            <strong>Aviso Legal (ES)</strong><br/>
+            Quintana Notary & Signing ofrece servicios notariales y de traducción certificada en cumplimiento con la ley de Colorado. 
+            Los honorarios notariales están limitados por ley a un máximo de $15 por documento. 
+            Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita. 
+            No soy un abogado licenciado para ejercer el derecho en Colorado y no puedo brindar asesoría legal.
+        </div>
+
+        <div id="disclaimer-en" style="display:none;">
+            <strong>Legal Notice (EN)</strong><br/>
+            Quintana Notary & Signing provides notary and certified translation services in accordance with Colorado law. 
+            Statutory notary fees are limited to a maximum of $15 per notarized document. 
+            Mobile travel and convenience fees are separate and always disclosed in writing before the appointment. 
+            I am not an attorney licensed to practice law in Colorado and cannot provide legal advice.
+        </div>
+    </div>
+
+    <div class="back-to-top-container">
+        <a href="#top" class="btn btn-secondary">
+            <span id="back-top-es">Volver Arriba</span>
+            <span id="back-top-en" style="display:none;">Back to Top</span>
+        </a>
+    </div>
 
 </footer>
 
