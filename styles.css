@@ -164,7 +164,6 @@ strong { color: var(--navy); font-weight: 600; }
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
   white-space: nowrap;
   box-shadow: var(--shadow-sm);
-  /* No forced width here — context controls width */
 }
 
 .btn:hover {
@@ -275,7 +274,6 @@ strong { color: var(--navy); font-weight: 600; }
 header {
   background: var(--navy);
   position: sticky;
-  /* Stack below help bar — JS will set this dynamically, fallback: */
   top: var(--help-bar-h);
   z-index: 1000;
   box-shadow: var(--shadow-md);
@@ -288,7 +286,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.6rem var(--s-md);
-  /* Three zones: logo | toggle | hamburger */
 }
 
 /* Logo */
@@ -446,7 +443,7 @@ header {
    ============================================ */
 .hero {
   position: relative;
-  background: var(--navy);
+  background: var(--navy-dark);
   color: var(--white);
   padding: var(--s-2xl) var(--s-md);
   text-align: center;
@@ -457,61 +454,30 @@ header {
   overflow: hidden;
 }
 
-/* Logo watermark variant */
-/* ============================================================
-   PATCH: Hero logo background with contrast overlay
-   Replace the existing .hero-with-logo block in styles.css
-   ============================================================ */
-
-/* Hero — logo as full background image */
+/* Logo as full background — cover so it fills at all sizes */
 .hero-with-logo {
   background-image: url('Quintana-notary-signing_logo.png');
-  background-size: cover;          /* fill the entire hero */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--navy-dark); /* fallback while image loads */
-}
-
-/* Keep the existing overlay rule but make it a bit stronger
-   so white text stays WCAG AA on top of the colorful logo.
-   The ::before pseudo is already defined on .hero — just
-   update the rgba value: */
-.hero-with-logo::before {
-  background: rgba(10, 45, 105, 0.82); /* was 0.88 — slightly lighter lets logo show */
-}
-
-/* ============================================================
-   OR — if you prefer the logo centered/contained (stamp look)
-   rather than fully covering, use these values instead:
-
-.hero-with-logo {
-  background-image: url('Quintana-notary-signing_logo.png');
-  background-size: 420px 420px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--navy-dark);
 }
 
-.hero-with-logo::before {
-  background: rgba(10, 45, 105, 0.78);
-}
-   ============================================================ */ 
-
-/* Always-present overlay — covers background logo */
+/* Strong ::before overlay — ensures WCAG AA contrast on all hero pages */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(10, 45, 105, 0.88);
+  background: rgba(10, 45, 105, 0.92);
   z-index: 1;
   pointer-events: none;
 }
 
-/* For pages that use an explicit .hero-overlay div */
+/* Explicit overlay div (used in index.html) — matches ::before strength */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(10, 45, 105, 0.88);
+  background: rgba(10, 45, 105, 0.92);
   z-index: 1;
 }
 
