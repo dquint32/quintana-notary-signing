@@ -1,5 +1,7 @@
-// Global JavaScript for Quintana Notary & Signing
+// ============================================
+// QUINTANA NOTARY & SIGNING - GLOBAL JAVASCRIPT
 // Handles language switching, mobile menu, and interactive elements
+// ============================================
 
 // ============================================
 // LANGUAGE TOGGLE FUNCTION
@@ -24,13 +26,12 @@ function toggleLanguage(specificLang) {
         el.style.display = (newLang === 'es') ? '' : 'none';
     });
 
+    // Save preference to local storage
     try {
         localStorage.setItem('preferredLanguage', newLang);
     } catch (e) {
         console.warn('Could not save language preference:', e);
     }
-    
-    console.log('Language switched to:', newLang); // Debug log
 }
 
 // ============================================
@@ -43,7 +44,7 @@ function initLanguage() {
     } catch (e) {}
     
     if (!document.documentElement.lang) {
-        document.documentElement.lang = 'es'; // Default fallback
+        document.documentElement.lang = 'es'; // Default fallback to Spanish
     }
 
     if (savedLang && savedLang !== document.documentElement.lang) {
@@ -74,7 +75,7 @@ function toggleMenu() {
         nav.classList.add('active');
         hamburger.classList.add('active');
         hamburger.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 }
 
@@ -90,11 +91,11 @@ function closeMobileMenu() {
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
     }
-    document.body.style.overflow = '';
+    document.body.style.overflow = ''; // Restore background scrolling
 }
 
 // ============================================
-// FAQ ACCORDION LOGIC
+// FAQ ACCORDION LOGIC (For future use/expansion)
 // ============================================
 function toggleFaq(element) {
     const question = element;
@@ -105,7 +106,7 @@ function toggleFaq(element) {
 
     const isOpening = !question.classList.contains('active');
 
-    // Close others
+    // Close other open FAQs
     accordionContainer.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
         if (activeQuestion !== question) {
             activeQuestion.classList.remove('active');
@@ -120,7 +121,7 @@ function toggleFaq(element) {
         }
     });
 
-    // Toggle current
+    // Toggle current FAQ
     if (isOpening) {
         question.classList.add('active');
         const item = question.closest('.faq-item');
@@ -138,48 +139,17 @@ function toggleFaq(element) {
     }
 }
 
-function expandAllFaqs() {
-    const questions = document.querySelectorAll('.faq-question');
-    questions.forEach(q => {
-        const answer = q.nextElementSibling;
-        const item = q.closest('.faq-item');
-        
-        if (!q.classList.contains('active')) {
-            q.classList.add('active');
-            q.setAttribute('aria-expanded', 'true');
-            if(item) item.classList.add('active');
-            if(answer) answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-    });
-}
-
-function collapseAllFaqs() {
-    const questions = document.querySelectorAll('.faq-question');
-    questions.forEach(q => {
-        const answer = q.nextElementSibling;
-        const item = q.closest('.faq-item');
-        
-        q.classList.remove('active');
-        q.setAttribute('aria-expanded', 'false');
-        if(item) item.classList.remove('active');
-        if(answer) answer.style.maxHeight = null;
-    });
-}
-
 // ============================================
 // INITIALIZE ALL FUNCTIONALITY
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM Content Loaded - Initializing...');
-    
-    // 1. Initialize language
+    // 1. Initialize language based on saved preferences
     initLanguage();
     
     // 2. Initialize Language Toggle Button
-    // NOTE: #lang-toggle is now in .header-container directly (outside nav),
-    // so it is always visible on both mobile and desktop.
     const langToggleButtons = document.querySelectorAll('.toggle-btn, #lang-toggle');
     langToggleButtons.forEach(btn => {
+        // Remove inline onclick if it exists to prevent double-firing
         if (btn.hasAttribute('onclick')) {
             btn.removeAttribute('onclick');
         }
@@ -197,6 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.removeAttribute('onclick');
         }
         
+        // Clone and replace to strip any old event listeners
         const newHamburger = hamburger.cloneNode(true);
         hamburger.parentNode.replaceChild(newHamburger, hamburger);
         
@@ -205,12 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             toggleMenu();
         });
-        console.log('Hamburger menu initialized');
-    } else {
-        console.warn('Hamburger button ID="hamburger" not found in HTML');
     }
     
-    // 4. Close menu when clicking nav links
+    // 4. Close menu when clicking navigation links (Mobile)
     const navLinks = document.querySelectorAll('#main-nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
@@ -220,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // 5. Initialize FAQ
+    // 5. Initialize FAQ Accordions (if present on the page)
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', (e) => {
@@ -229,12 +197,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Handle Resize
+    // 6. Handle Window Resize (Close mobile menu if expanded to desktop)
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) closeMobileMenu();
     });
 
-    // 7. Back to Top — smooth scroll (supports browsers without native scroll-behavior)
+    // 7. Back to Top — Smooth Scroll Support
     document.querySelectorAll('a[href="#top"]').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
