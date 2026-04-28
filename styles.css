@@ -538,10 +538,24 @@ header {
 
 .hero-subtitle {
   font-size: clamp(0.95rem, 3.5vw, 1.2rem);
-  color: var(--teal-light) !important;
+  color: var(--white) !important;
   text-shadow: 0 2px 8px rgba(0,0,0,0.45);
   margin-bottom: var(--s-xl);
   font-weight: 400;
+}
+
+/* All inline emphasis inside a hero must be white — the global
+   strong { color: var(--navy) } rule would otherwise put dark-navy
+   text on a dark-navy background (zero contrast). */
+.hero-subtitle strong,
+.hero-subtitle em,
+.hero strong,
+.hero em,
+.hero-content strong,
+.hero-content em,
+.hero-with-logo strong,
+.hero-with-logo em {
+  color: var(--white) !important;
 }
 
 /* Hero button overrides */
