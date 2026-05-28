@@ -1,6 +1,7 @@
 // ============================================
 // QUINTANA NOTARY & SIGNING — script.js
 // Language toggle | Mobile menu | FAQ accordion
+// WCAG 2.1 AA | ES6+
 // ============================================
 
 (function () {
@@ -9,108 +10,83 @@
   // ============================================
   // CONSTANTS
   // ============================================
-  const LANG_KEY   = 'qns_lang';
-  const DEFAULT_LANG = 'es';
+  const LANG_KEY     = 'qns_lang';
+  const DEFAULT_LANG = 'es';          // Site defaults to Spanish
+  const LANGS        = ['en', 'es'];
 
   // ============================================
   // LANGUAGE MANAGEMENT
+  // ─────────────────────────────────────────────
+  // Strategy: CSS classes .lang-en / .lang-es on
+  // child spans, controlled by data-lang="en|es"
+  // on <html>. No more per-element style.display
+  // toggling; CSS handles visibility entirely.
   // ============================================
 
-  /**
-   * Returns the currently stored language preference.
-   * Falls back to the <html lang> attribute, then DEFAULT_LANG.
-   */
-  function getSavedLang() {
-    try {
-      return localStorage.getItem(LANG_KEY);
-    } catch (_) {
-      return null;
-    }
+  function getSavedLang () {
+    try { return localStorage.getItem(LANG_KEY); } catch (_) { return null; }
+  }
+
+  function saveLang (lang) {
+    try { localStorage.setItem(LANG_KEY, lang); } catch (_) { /* silent */ }
   }
 
   /**
-   * Persists the language preference.
+   * Apply a language to the entire document.
+   * 1. Sets data-lang on <html> (CSS uses this selector)
+   * 2. Sets lang attribute on <html> for screen readers
+   * 3. Updates toggle button aria-label & aria-pressed
    */
-  function saveLang(lang) {
-    try {
-      localStorage.setItem(LANG_KEY, lang);
-    } catch (_) {
-      // Silently ignore — private/restricted browsing
-    }
-  }
+  function applyLang (lang) {
+    if (!LANGS.includes(lang)) return;
 
-  /**
-   * Applies a language to the document by showing/hiding
-   * all elements whose id ends with "-en" or "-es".
-   * Works with both block and inline elements by restoring
-   * the element's natural display value.
-   *
-   * @param {string} lang - 'en' or 'es'
-   */
-  function applyLang(lang) {
-    if (lang !== 'en' && lang !== 'es') return;
+    const root       = document.documentElement;
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
 
-    // Update <html lang="…">
-    document.documentElement.lang = lang;
+    root.setAttribute('data-lang', lang);
+    root.setAttribute('lang', lang);
 
-    // All elements that participate in bilingual toggling
-    const all = document.querySelectorAll('[id$="-en"], [id$="-es"]');
-
-    all.forEach(function (el) {
-      const isEn = el.id.endsWith('-en');
-      const isEs = el.id.endsWith('-es');
-
-      if (!isEn && !isEs) return;
-
-      const shouldShow = (lang === 'en' && isEn) || (lang === 'es' && isEs);
-
-      if (shouldShow) {
-        // Restore natural display.
-        // Buttons, spans, and a-tags are inline; divs/sections are block.
-        el.style.display = '';
-      } else {
-        el.style.display = 'none';
-      }
+    toggleBtns.forEach(function (btn) {
+      // aria-pressed: true = currently showing this language
+      // Semantically: "this button IS the Spanish button" → pressed when lang=es
+      btn.setAttribute('aria-pressed', lang === 'es' ? 'true' : 'false');
+      btn.setAttribute(
+        'aria-label',
+        lang === 'es'
+          ? 'Cambiar idioma a inglés / Switch language to English'
+          : 'Cambiar idioma a español / Switch language to Spanish'
+      );
     });
   }
 
-  /**
-   * Toggles between 'en' and 'es', or forces a specific language.
-   *
-   * @param {string|null} forceLang - optional; if supplied, sets that language directly
-   */
-  function toggleLanguage(forceLang) {
-    const current = document.documentElement.lang || DEFAULT_LANG;
-    const next    = forceLang || (current === 'es' ? 'en' : 'es');
+  function toggleLanguage () {
+    const current = document.documentElement.getAttribute('data-lang') || DEFAULT_LANG;
+    const next    = current === 'es' ? 'en' : 'es';
     applyLang(next);
     saveLang(next);
   }
 
   /**
-   * Reads the saved preference (or html[lang]) and initialises
-   * the page language WITHOUT flashing the wrong language.
-   * Called as early as possible — before DOMContentLoaded isn't
-   * always safe for querySelector, so we run it inside DOMContentLoaded
-   * but before any other visual work.
+   * Initialise language from saved preference, then the HTML lang
+   * attribute, then DEFAULT_LANG. Runs early to prevent flash.
    */
-  function initLang() {
-    const saved   = getSavedLang();
-    // The HTML file sets lang="es" or lang="en" at authoring time.
-    const htmlLang = document.documentElement.lang || DEFAULT_LANG;
-    // Stored preference wins; then fall back to what the HTML says.
-    const target  = saved || htmlLang;
+  function initLang () {
+    const saved    = getSavedLang();
+    const htmlLang = document.documentElement.getAttribute('lang') || DEFAULT_LANG;
+    const target   = (saved && LANGS.includes(saved)) ? saved : htmlLang;
     applyLang(target);
   }
+
+  // Expose for any inline onclick still present in older page files
+  window.toggleLanguage = toggleLanguage;
 
   // ============================================
   // MOBILE MENU
   // ============================================
+  let navEl       = null;
+  let hamburgerEl = null;
 
-  /** Cache menu references after DOM is ready */
-  let navEl        = null;
-  let hamburgerEl  = null;
-
-  function openMenu() {
+  function openMenu () {
     if (!navEl || !hamburgerEl) return;
     navEl.classList.add('active');
     hamburgerEl.classList.add('active');
@@ -118,7 +94,7 @@
     document.body.style.overflow = 'hidden';
   }
 
-  function closeMenu() {
+  function closeMenu () {
     if (!navEl || !hamburgerEl) return;
     navEl.classList.remove('active');
     hamburgerEl.classList.remove('active');
@@ -126,24 +102,24 @@
     document.body.style.overflow = '';
   }
 
-  function toggleMenu() {
+  function toggleMenu () {
     if (!navEl) return;
     navEl.classList.contains('active') ? closeMenu() : openMenu();
   }
 
   // ============================================
   // STICKY HEADER OFFSET
-  // Calculates the real height of the help-bar
-  // and applies it as the header's `top` value.
-  // This avoids hardcoding the pixel value in CSS.
+  // ─────────────────────────────────────────────
+  // Measures the help bar's real rendered height
+  // and sets it as the header's `top` value plus
+  // the --help-bar-h CSS variable.
   // ============================================
-  function updateHeaderOffset() {
+  function updateHeaderOffset () {
     const helpBar = document.querySelector('.top-help-bar');
     const header  = document.querySelector('header');
     if (!helpBar || !header) return;
     const h = helpBar.getBoundingClientRect().height;
     header.style.top = h + 'px';
-    // Keep the CSS var in sync for any other consumers
     document.documentElement.style.setProperty('--help-bar-h', h + 'px');
   }
 
@@ -151,17 +127,12 @@
   // FAQ ACCORDION
   // ============================================
 
-  /**
-   * Opens a single FAQ answer panel, closes siblings.
-   *
-   * @param {HTMLElement} btn - the .faq-question button
-   */
-  function openFaq(btn) {
+  function openFaq (btn) {
     const item   = btn.closest('.faq-item');
     const answer = btn.nextElementSibling;
     if (!item || !answer) return;
 
-    // Close any open FAQ within the same container
+    // Close siblings in the same container
     const container = btn.closest('.faq-accordion-container');
     if (container) {
       container.querySelectorAll('.faq-question.active').forEach(function (openBtn) {
@@ -175,12 +146,7 @@
     answer.style.maxHeight = answer.scrollHeight + 'px';
   }
 
-  /**
-   * Closes a single FAQ answer panel.
-   *
-   * @param {HTMLElement} btn - the .faq-question button
-   */
-  function closeFaq(btn) {
+  function closeFaq (btn) {
     const item   = btn.closest('.faq-item');
     const answer = btn.nextElementSibling;
     if (!item || !answer) return;
@@ -191,34 +157,18 @@
     answer.style.maxHeight = null;
   }
 
-  /**
-   * Toggles a FAQ item open/closed.
-   */
-  function toggleFaq(btn) {
+  function toggleFaq (btn) {
     btn.classList.contains('active') ? closeFaq(btn) : openFaq(btn);
   }
 
-  // ============================================
-  // GLOBALLY EXPOSED HELPERS (used by inline
-  // onclick in faq.html — expandAllFaqs / collapseAllFaqs)
-  // ============================================
-
-  window.expandAllFaqs = function () {
-    document.querySelectorAll('.faq-question').forEach(openFaq);
-  };
-
-  window.collapseAllFaqs = function () {
-    document.querySelectorAll('.faq-question').forEach(closeFaq);
-  };
-
-  // Also expose toggleLanguage globally so any page can call it
-  // from an onclick attribute if needed (backwards compatibility).
-  window.toggleLanguage = toggleLanguage;
+  // Globally accessible for inline onclick in older pages
+  window.expandAllFaqs   = function () { document.querySelectorAll('.faq-question').forEach(openFaq); };
+  window.collapseAllFaqs = function () { document.querySelectorAll('.faq-question').forEach(closeFaq); };
 
   // ============================================
-  // SMOOTH SCROLL FOR "#top" LINKS
+  // SMOOTH SCROLL
   // ============================================
-  function initSmoothScroll() {
+  function initSmoothScroll () {
     document.querySelectorAll('a[href="#top"]').forEach(function (link) {
       link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -228,11 +178,52 @@
   }
 
   // ============================================
+  // KEYBOARD TRAP FOR OPEN MOBILE MENU
+  // ─────────────────────────────────────────────
+  // Keeps Tab focus inside the nav overlay when
+  // it is open (WCAG 2.1 success criterion 2.1.2).
+  // ============================================
+  function initMenuKeyboardTrap () {
+    document.addEventListener('keydown', function (e) {
+      if (!navEl || !navEl.classList.contains('active')) return;
+
+      if (e.key === 'Escape') {
+        closeMenu();
+        if (hamburgerEl) hamburgerEl.focus();
+        return;
+      }
+
+      if (e.key !== 'Tab') return;
+
+      const focusable = Array.from(
+        navEl.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])')
+      ).filter(function (el) { return !el.hidden && el.offsetParent !== null; });
+
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last  = focusable[focusable.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  }
+
+  // ============================================
   // DOM READY — WIRE EVERYTHING UP
   // ============================================
   document.addEventListener('DOMContentLoaded', function () {
 
-    // 1. Apply language FIRST — minimises visible language flash
+    // 1. Apply language FIRST — prevents visible flash
     initLang();
 
     // 2. Cache nav elements
@@ -240,9 +231,7 @@
     hamburgerEl = document.getElementById('hamburger');
 
     // 3. Language toggle button(s)
-    //    Supports multiple toggle buttons on the same page.
     document.querySelectorAll('#lang-toggle, .toggle-btn').forEach(function (btn) {
-      // Remove any pre-existing onclick set in HTML to avoid double-firing
       btn.removeAttribute('onclick');
       btn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -270,13 +259,13 @@
       });
     }
 
-    // 6. Close mobile menu on resize to desktop
+    // 6. Close menu & recalculate offset on resize
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 860) closeMenu();
       updateHeaderOffset();
     });
 
-    // 7. Calculate sticky header offset
+    // 7. Initial sticky header offset
     updateHeaderOffset();
 
     // 8. FAQ accordion
@@ -289,11 +278,13 @@
       });
     });
 
-    // 9. Smooth scroll back-to-top links
+    // 9. Smooth scroll
     initSmoothScroll();
 
-    // 10. Ensure FAQ answers have maxHeight recalculated if the
-    //     window is resized while one is open (prevents clipping)
+    // 10. Keyboard trap for mobile nav
+    initMenuKeyboardTrap();
+
+    // 11. Recalculate open FAQ answer heights on resize
     window.addEventListener('resize', function () {
       document.querySelectorAll('.faq-question.active').forEach(function (btn) {
         const answer = btn.nextElementSibling;
