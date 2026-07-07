@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Notariales: Confiables, Móviles y Bilingües | Quintana Notary & Signing</title>
+    <meta name="description" content="Mobile bilingual (English/Spanish) notary public serving Castle Rock and the Denver Metro area. Same-day appointments, upfront transparent pricing, certified translations, and loan signing services. Notario público móvil y bilingüe en Castle Rock y el área metropolitana de Denver.">
+    <link rel="canonical" href="https://www.quintananotarysigning.com/">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <!-- ============================================================
+         LOCAL BUSINESS / NOTARY STRUCTURED DATA (schema.org JSON-LD)
+         ------------------------------------------------------------
+         NOTE: replace the placeholder "url" / "image" values below
+         with your real live domain once the site is deployed —
+         search engines validate that these URLs actually resolve.
+         Schema.org has no dedicated "Notary" type, so this uses the
+         broadly-supported "LocalBusiness" type plus an
+         "additionalType" link to the Wikidata concept for "Notary"
+         for extra machine-readable specificity.
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "additionalType": "https://www.wikidata.org/wiki/Q294126",
+      "name": "Quintana Notary & Signing",
+      "alternateName": "Servicios Quintana LLC",
+      "url": "https://www.quintananotarysigning.com/",
+      "image": "https://www.quintananotarysigning.com/Quintana-notary-signing_logo.png",
+      "logo": "https://www.quintananotarysigning.com/Quintana-notary-signing_logo.png",
+      "telephone": "+1-303-500-4122",
+      "email": "info@quintananotarysigning.com",
+      "description": "Mobile, bilingual (English/Spanish) notary public and loan signing agent serving Castle Rock and the Denver Metro area. Same-day appointments, transparent pricing, certified translations, apostille processing, and B2B loan signing services.",
+      "priceRange": "$15-$700",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Venmo, Zelle, Credit Card, Debit Card",
+      "knowsLanguage": ["en", "es"],
+      "areaServed": [
+        { "@type": "City", "name": "Castle Rock, CO" },
+        { "@type": "City", "name": "Denver, CO" },
+        { "@type": "City", "name": "Highlands Ranch, CO" },
+        { "@type": "City", "name": "Parker, CO" },
+        { "@type": "City", "name": "Aurora, CO" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "10:00",
+          "closes": "17:00"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "David Quintana",
+        "jobTitle": "Colorado-Commissioned Notary Public & Loan Signing Agent"
+      },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Notary Public Commission",
+        "recognizedBy": {
+          "@type": "State",
+          "name": "State of Colorado"
+        }
+      },
+      "sameAs": [
+        "https://serviciosquintana.com/"
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -79,6 +143,11 @@
 
 <section class="hero hero-with-logo">
     <div class="hero-content">
+        <div class="hero-badge" style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.5); color:var(--white); padding:0.45rem 1.1rem; border-radius:var(--r-pill); font-size:0.85rem; font-weight:700; letter-spacing:0.02em; margin-bottom:1.25rem;">
+            <span id="hero-badge-es">Citas el Mismo Día Disponibles</span>
+            <span id="hero-badge-en" style="display:none;">Same-Day Appointments Available</span>
+        </div>
+
         <h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
         <h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
         <p class="hero-subtitle" id="hero-h2-es">Llevo servicios notariales profesionales directamente a su hogar, oficina o lugar preferido en Castle Rock y el área metropolitana de Denver.</p>
