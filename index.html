@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios Notariales: Confiables, Móviles y Bilingües | Quintana Notary & Signing</title>
-    <meta name="description" content="Mobile bilingual (English/Spanish) notary public serving Castle Rock and the Denver Metro area. Same-day appointments, upfront transparent pricing, certified translations, and loan signing services. Notario público móvil y bilingüe en Castle Rock y el área metropolitana de Denver.">
+    <meta name="description" content="Mobile bilingual (English/Spanish) notary public serving Castle Rock and the Denver Metro area. By appointment only. Same-day appointments, upfront transparent pricing, certified translations, airport notarizations (DIA), and loan signing services. Notario público móvil y bilingüe en Castle Rock y el área metropolitana de Denver. Solo con cita previa.">
     <link rel="canonical" href="https://www.quintananotarysigning.com/">
+    <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/">
+    <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0A2D69">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-
     <!-- ============================================================
          LOCAL BUSINESS / NOTARY STRUCTURED DATA (schema.org JSON-LD)
-         ------------------------------------------------------------
-         NOTE: replace the placeholder "url" / "image" values below
-         with your real live domain once the site is deployed —
-         search engines validate that these URLs actually resolve.
-         Schema.org has no dedicated "Notary" type, so this uses the
-         broadly-supported "LocalBusiness" type plus an
-         "additionalType" link to the Wikidata concept for "Notary"
-         for extra machine-readable specificity.
          ============================================================ -->
     <script type="application/ld+json">
     {
@@ -32,17 +31,19 @@
       "logo": "https://www.quintananotarysigning.com/Quintana-notary-signing_logo.png",
       "telephone": "+1-303-500-4122",
       "email": "info@quintananotarysigning.com",
-      "description": "Mobile, bilingual (English/Spanish) notary public and loan signing agent serving Castle Rock and the Denver Metro area. Same-day appointments, transparent pricing, certified translations, apostille processing, and B2B loan signing services.",
+      "description": "Mobile, bilingual (English/Spanish) notary public and loan signing agent serving Castle Rock and the Denver Metro area. By appointment only. Same-day appointments, transparent pricing, certified translations, airport notarizations, apostille processing, and B2B loan signing services.",
       "priceRange": "$15-$700",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Venmo, Zelle, Credit Card, Debit Card",
       "knowsLanguage": ["en", "es"],
+      "availableLanguage": ["en", "es"],
       "areaServed": [
         { "@type": "City", "name": "Castle Rock, CO" },
         { "@type": "City", "name": "Denver, CO" },
         { "@type": "City", "name": "Highlands Ranch, CO" },
         { "@type": "City", "name": "Parker, CO" },
-        { "@type": "City", "name": "Aurora, CO" }
+        { "@type": "City", "name": "Aurora, CO" },
+        { "@type": "Airport", "name": "Denver International Airport", "iataCode": "DEN" }
       ],
       "openingHoursSpecification": [
         {
@@ -72,7 +73,6 @@
     </script>
 </head>
 <body>
-
 <div class="top-help-bar">
     <div class="top-help-content">
         <span class="top-help-message">
@@ -83,13 +83,12 @@
             <span id="help-call-es">Llamar / Mensaje</span>
             <span id="help-call-en" style="display:none;">Call / Text</span>
         </a>
-        <a href="https://wa.me/13035004122" target="_blank" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
+        <a href="https://wa.me/13035004122" target="_blank" rel="noopener" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
             <span id="help-whatsapp-es">WhatsApp</span>
             <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
         </a>
     </div>
 </div>
-
 <header>
     <div class="header-container">
         <div id="brand-logo">
@@ -97,23 +96,22 @@
                 <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
             </a>
         </div>
-
         <button class="toggle-btn" id="lang-toggle">
             <span id="toggle-label-en" style="display:none;">Español</span>
             <span id="toggle-label-es">English</span>
         </button>
-
         <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
         <nav id="main-nav">
             <a href="index.html" id="nav-home-es" class="active">Inicio</a>
             <a href="index.html" id="nav-home-en" style="display:none;" class="active">Home</a>
             <a href="services.html" id="nav-services-es">Servicios</a>
             <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+            <a href="airport-notarizations.html" id="nav-airport-es">Aeropuerto</a>
+            <a href="airport-notarizations.html" id="nav-airport-en" style="display:none;">Airport</a>
             <a href="translate.html" id="nav-translate-es">Traducciones</a>
             <a href="translate.html" id="nav-translate-en" style="display:none;">Translations</a>
             <a href="pricing.html" id="nav-pricing-es">Precios</a>
@@ -129,7 +127,10 @@
         </nav>
     </div>
 </header>
-
+<div class="appointment-bar" role="note">
+    <span id="appt-bar-es">Solo con cita previa &middot; Reserve primero — soy móvil y no atiendo sin cita en ningún local.</span>
+    <span id="appt-bar-en" style="display:none;">By appointment only &middot; Please book first — I'm mobile and don't take walk-ins at any location.</span>
+</div>
 <div class="statutory-bar">
     <span id="legal-disclosure-es">
         <strong>Aviso Legal (C.R.S. § 24-21-525):</strong>
@@ -140,19 +141,16 @@
         <span class="statutory-en"><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</strong></span>
     </span>
 </div>
-
 <section class="hero hero-with-logo">
     <div class="hero-content">
-        <div class="hero-badge" style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.5); color:var(--white); padding:0.45rem 1.1rem; border-radius:var(--r-pill); font-size:0.85rem; font-weight:700; letter-spacing:0.02em; margin-bottom:1.25rem;">
-            <span id="hero-badge-es">Citas el Mismo Día Disponibles</span>
-            <span id="hero-badge-en" style="display:none;">Same-Day Appointments Available</span>
+        <div class="hero-badge">
+            <span id="hero-badge-es">Citas el Mismo Día &middot; Solo con Cita Previa</span>
+            <span id="hero-badge-en" style="display:none;">Same-Day Appointments &middot; By Appointment Only</span>
         </div>
-
         <h1 id="hero-h1-es">Servicios Notariales: Confiables, Móviles y Bilingües</h1>
         <h1 id="hero-h1-en" style="display:none;">Notary Services: Reliable, Mobile, and Bilingual</h1>
         <p class="hero-subtitle" id="hero-h2-es">Llevo servicios notariales profesionales directamente a su hogar, oficina o lugar preferido en Castle Rock y el área metropolitana de Denver.</p>
         <p class="hero-subtitle" id="hero-h2-en" style="display:none;">I bring professional notary services directly to your home, office, or preferred location across Castle Rock and the Denver Metro area.</p>
-
         <div class="cta-buttons">
             <a href="pricing.html" class="btn btn-primary" id="cta-price-es">
                 <span>Ver Precios y Reservar</span>
@@ -169,16 +167,13 @@
         </div>
     </div>
 </section>
-
 <main class="section container">
-
     <div class="verification-banner">
         <div class="verification-text">
             <h3 id="verify-h3-es">Verifique mi Comisión de Notario</h3>
             <h3 id="verify-h3-en" style="display:none;">Verify My Notary Commission</h3>
             <p id="verify-p-es">Haga clic en el botón, elija "Verify a Notary" e ingrese mi ID.</p>
             <p id="verify-p-en" style="display:none;">Click the button, select "Verify a Notary," and enter my ID.</p>
-
             <div class="commission-details">
                 <span id="verify-name-es"><strong>Nombre:</strong> David Quintana</span>
                 <span id="verify-name-en" style="display:none;"><strong>Name:</strong> David Quintana</span>
@@ -191,11 +186,10 @@
             </div>
         </div>
         <div class="verification-action">
-            <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" class="btn btn-secondary" id="verify-btn-es">Verificar Ahora</a>
-            <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" class="btn btn-secondary" id="verify-btn-en" style="display:none;">Verify Now</a>
+            <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener" class="btn btn-secondary" id="verify-btn-es">Verificar Ahora</a>
+            <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener" class="btn btn-secondary" id="verify-btn-en" style="display:none;">Verify Now</a>
         </div>
     </div>
-
     <div class="quick-links">
         <a href="services.html" class="card quick-link-card">
             <h3 id="quick-link-1-es">Servicio Notarial Móvil</h3>
@@ -203,35 +197,29 @@
             <p id="quick-link-1-desc-es">Le encuentro donde esté: hogar, oficina, hospital o cafetería.</p>
             <p id="quick-link-1-desc-en" style="display:none;">I meet you where you are: home, office, hospital, or coffee shop.</p>
         </a>
-
         <a href="translate.html" class="card quick-link-card">
             <h3 id="quick-link-2-es">Traducciones Certificadas</h3>
             <h3 id="quick-link-2-en" style="display:none;">Certified Translations</h3>
             <p id="quick-link-2-desc-es">Traducciones rápidas de español a inglés de documentos oficiales (USCIS).</p>
             <p id="quick-link-2-desc-en" style="display:none;">Quick Spanish-to-English translations for official documents (USCIS).</p>
         </a>
-
         <a href="pricing.html" class="card quick-link-card">
             <h3 id="quick-link-3-es">Precios Transparentes</h3>
             <h3 id="quick-link-3-en" style="display:none;">Transparent Pricing</h3>
             <p id="quick-link-3-desc-es">Conozca el costo exacto por adelantado. Incluye tarifas locales con descuento.</p>
             <p id="quick-link-3-desc-en" style="display:none;">Know the exact cost upfront. Includes local, discounted rates.</p>
         </a>
-
-        <a href="b2b-real-estate.html" class="card quick-link-card">
-            <h3 id="quick-link-4-es">B2B y Bienes Raíces</h3>
-            <h3 id="quick-link-4-en" style="display:none;">B2B & Real Estate</h3>
-            <p id="quick-link-4-desc-es">Soluciones notariales para agencias, prestamistas, títulos y equipos de bienes raíces.</p>
-            <p id="quick-link-4-desc-en" style="display:none;">Notary solutions for agencies, lenders, title companies, and real estate teams.</p>
+        <a href="airport-notarizations.html" class="card quick-link-card">
+            <h3 id="quick-link-4-es">Notarizaciones en el Aeropuerto</h3>
+            <h3 id="quick-link-4-en" style="display:none;">Airport Notarizations</h3>
+            <p id="quick-link-4-desc-es">Notario móvil dentro de las terminales de DIA. Tarifa fija de $95.</p>
+            <p id="quick-link-4-desc-en" style="display:none;">Mobile notary inside the DIA terminals. Flat $95 rate.</p>
         </a>
     </div>
-
     <div class="divider"></div>
-
     <section class="section-with-icon">
         <h2 id="why-choose-es">Por Qué Elegirme</h2>
         <h2 id="why-choose-en" style="display:none;">Why Choose Me</h2>
-
         <div class="why-reasons pricing-cards">
             <div class="card reason-item">
                 <div>
@@ -241,7 +229,6 @@
                     <p id="why-1-desc-en" style="display:none; margin-top: 0.5rem;">Clear communication in Spanish and English, ensuring every client feels comfortable and informed.</p>
                 </div>
             </div>
-
             <div class="card reason-item">
                 <div>
                     <strong id="why-2-title-es">Servicio a la Medida</strong>
@@ -250,7 +237,6 @@
                     <p id="why-2-desc-en" style="display:none; margin-top: 0.5rem;">Flexible hours, including evenings and weekends, adapting to your busy schedule.</p>
                 </div>
             </div>
-
             <div class="card reason-item">
                 <div>
                     <strong id="why-3-title-es">Enfoque Comunitario</strong>
@@ -259,7 +245,6 @@
                     <p id="why-3-desc-en" style="display:none; margin-top: 0.5rem;">Special discounts for meeting at select community locations (Tienda Salvadoreña, MSU Denver).</p>
                 </div>
             </div>
-
             <div class="card reason-item">
                 <div>
                     <strong id="why-4-title-es">Precios Anticipados</strong>
@@ -270,13 +255,10 @@
             </div>
         </div>
     </section>
-
     <div class="divider"></div>
-
     <section class="section-with-icon">
         <h2 id="services-title-es">Mis Servicios Principales</h2>
         <h2 id="services-title-en" style="display:none;">My Core Services</h2>
-
         <div class="service-grid">
             <div class="card service-card">
                 <h3 id="service-1-es">Notarización General</h3>
@@ -284,29 +266,37 @@
                 <p id="service-1-desc-es">Juramentos, declaraciones juradas, poderes notariales, títulos de vehículos y cualquier documento que requiera un sello notarial.</p>
                 <p id="service-1-desc-en" style="display:none;">Oaths, affidavits, power of attorney, vehicle titles, and any document requiring a notary seal.</p>
             </div>
-
             <div class="card service-card">
                 <h3 id="service-2-es">Firmas de Préstamo (Loan Signing)</h3>
                 <h3 id="service-2-en" style="display:none;">Loan Signings</h3>
                 <p id="service-2-desc-es">Especialista en la firma de paquetes de préstamos hipotecarios residenciales (compras, refinanciamientos, HELOCs).</p>
                 <p id="service-2-desc-en" style="display:none;">Specializing in the signing of residential mortgage loan packages (purchases, refinances, HELOCs).</p>
             </div>
-
             <div class="card service-card">
                 <h3 id="service-3-es">Traducciones Certificadas</h3>
                 <h3 id="service-3-en" style="display:none;">Certified Translations</h3>
                 <p id="service-3-desc-es">Traducciones certificadas (español a inglés) para USCIS, DMV y más. ¡Rápido y preciso!</p>
                 <p id="service-3-desc-en" style="display:none;">Certified translations (Spanish to English) for USCIS, DMV, and more. Fast and accurate!</p>
             </div>
-
             <div class="card service-card">
                 <h3 id="service-4-es">Verificación I-9</h3>
                 <h3 id="service-4-en" style="display:none;">I-9 Verification</h3>
                 <p id="service-4-desc-es">Actúo como Representante Autorizado para completar la Sección 2 de su Formulario I-9.</p>
                 <p id="service-4-desc-en" style="display:none;">I act as an Authorized Representative to complete Section 2 of your I-9 Form.</p>
             </div>
+            <div class="card service-card">
+                <h3 id="service-5-es">Notarizaciones en el Aeropuerto (DIA)</h3>
+                <h3 id="service-5-en" style="display:none;">Airport Notarizations (DIA)</h3>
+                <p id="service-5-desc-es">Notario móvil dentro de las terminales del Aeropuerto de Denver. Tarifa fija de $95 (estacionamiento incluido) + $10 por firma. Ideal para viajeros.</p>
+                <p id="service-5-desc-en" style="display:none;">Mobile notary inside the Denver International Airport terminals. Flat $95 (parking included) + $10 per signature. Ideal for travelers.</p>
+            </div>
+            <div class="card service-card">
+                <h3 id="service-6-es">Cartas de Permiso de Viaje para Menores</h3>
+                <h3 id="service-6-en" style="display:none;">Minor Travel Consent Letters</h3>
+                <p id="service-6-desc-es">Notarizo las firmas de los padres en cartas de autorización de viaje (permiso de viaje) para menores. Notarizo firmas únicamente — sin asesoría legal.</p>
+                <p id="service-6-desc-en" style="display:none;">I notarize parents' signatures on minor travel-authorization letters (permiso de viaje). Signatures only — no legal advice.</p>
+            </div>
         </div>
-
         <div class="cta-buttons cta-services-nudge" style="margin-top: 2rem;">
             <a href="services.html" class="btn btn-primary" id="cta-services-es">
                 <span>Ver Todos los Servicios</span>
@@ -316,15 +306,12 @@
             </a>
         </div>
     </section>
-
     <div class="divider"></div>
-
     <section class="section-with-icon">
         <h2 id="b2b-title-es">Soluciones para Empresas y Bienes Raíces</h2>
         <h2 id="b2b-title-en" style="display:none;">Business & Real Estate Solutions</h2>
         <p id="b2b-desc-es" style="max-width: 700px; margin: 0 auto 1.5rem auto;">Apoyo notarial confiable para agencias inmobiliarias, compañías de título, prestamistas y equipos de RR.HH. que necesitan firmas consistentes y puntuales.</p>
         <p id="b2b-desc-en" style="display:none; max-width: 700px; margin: 0 auto 1.5rem auto;">Reliable notary support for real estate agencies, title companies, lenders, and HR teams that need consistent, on-time signings.</p>
-
         <div class="cta-buttons cta-services-nudge">
             <a href="b2b-real-estate.html" class="btn btn-primary" id="cta-b2b-es">
                 <span>Ver Soluciones B2B y Bienes Raíces</span>
@@ -334,13 +321,10 @@
             </a>
         </div>
     </section>
-
     <div class="divider"></div>
-
     <section class="section-with-icon">
         <h2 id="pricing-title-es">Precios Transparentes y Descuentos</h2>
         <h2 id="pricing-title-en" style="display:none;">Transparent Pricing & Discounts</h2>
-
         <div class="pricing-overview info-box-orange" style="max-width: 600px; margin: 0 auto 2rem auto;">
             <div class="pricing-item" style="margin-bottom: 0.75rem;">
                 <strong id="pricing-item-1-es">Costo Notarial Estatuario:</strong>
@@ -359,7 +343,6 @@
                 <span id="pricing-item-3-desc-en" style="display:none;"><strong>$10 per seal</strong> when we meet at special locations.</span>
             </div>
         </div>
-
         <div class="cta-buttons cta-services-nudge">
             <a href="pricing.html" class="btn btn-primary" id="cta-pricing-es">
                 <span>Ver Precios Detallados</span>
@@ -369,9 +352,7 @@
             </a>
         </div>
     </section>
-
 </main>
-
 <footer>
     <div class="contact-info">
         <div class="contact-item">
@@ -385,19 +366,16 @@
             <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
         </div>
     </div>
-
     <p id="footer-main-es">
         © 2026 Quintana Notary & Signing<br/>
-        Una marca de <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
+        Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
         Precios transparentes · Servicio bilingüe · Enfoque comunitario
     </p>
-
     <p id="footer-main-en" style="display:none;">
         © 2026 Quintana Notary & Signing<br/>
-        A brand of <a href="https://serviciosquintana.com/" target="_blank">Servicios Quintana LLC</a><br/>
+        A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
         Transparent pricing · Bilingual service · Community focused
     </p>
-
     <div class="disclaimer">
         <div id="disclaimer-es">
             <strong>Aviso Legal (ES)</strong><br/>
@@ -406,7 +384,6 @@
             Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita.
             No soy un abogado licenciado para ejercer el derecho en Colorado y no puedo brindar asesoría legal.
         </div>
-
         <div id="disclaimer-en" style="display:none;">
             <strong>Legal Notice (EN)</strong><br/>
             Quintana Notary & Signing provides notary and certified translation services in accordance with Colorado law.
@@ -415,17 +392,13 @@
             I am not an attorney licensed to practice law in Colorado and cannot provide legal advice.
         </div>
     </div>
-
     <div class="back-to-top-container">
         <a href="#top" class="btn btn-secondary">
             <span id="back-top-es">Volver Arriba</span>
             <span id="back-top-en" style="display:none;">Back to Top</span>
         </a>
     </div>
-
 </footer>
-
 <script src="script.js"></script>
-
 </body>
 </html>
