@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ============================================================
+         SEO — BILINGUAL TITLE + META DESCRIPTION
+         Single URL serves both languages via the JS toggle, so the
+         title/keywords carry BOTH English and Spanish terms, and
+         hreflang points search engines at this page for en + es.
+         (For maximum per-language SEO you would eventually split into
+         /airport-notarizations.html and /es/airport-notarizations.html
+         — noted for you; the bilingual page below captures both now.)
+         ============================================================ -->
+    <title>Airport Notary at Denver International Airport (DIA) | Notario en el Aeropuerto de Denver (DIA) | Quintana Notary &amp; Signing</title>
+    <meta name="description" content="Same-day mobile airport notary at Denver International Airport (DIA). Notario público móvil y bilingüe en el aeropuerto de Denver. Flat $95 + $10/signature. Text to book / Envíe un mensaje.">
+    <meta name="keywords" content="airport notary Denver, DIA notary, Denver International Airport notary, notario aeropuerto Denver, notario DIA, notario público aeropuerto, mobile notary airport, same-day notary DIA, travel document notary, immigration notary Denver, notario bilingüe Denver">
+
+    <link rel="canonical" href="https://www.quintananotarysigning.com/airport-notarizations.html">
+    <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/airport-notarizations.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/airport-notarizations.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/airport-notarizations.html">
+
+    <!-- Open Graph / social preview (English + Spanish alternate locale) -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_US">
+    <meta property="og:title" content="Airport Notary at Denver International Airport (DIA) | Notario en el Aeropuerto de Denver">
+    <meta property="og:description" content="Same-day bilingual mobile notary inside DIA terminals. Notario móvil bilingüe en el aeropuerto de Denver. Flat $95 + $10/signature, parking included.">
+    <meta property="og:url" content="https://www.quintananotarysigning.com/airport-notarizations.html">
+    <meta property="og:image" content="https://www.quintananotarysigning.com/og-image.png">
+
+    <!-- ============================================================
+         STRUCTURED DATA (schema.org JSON-LD)
+         LocalBusiness + Notary (additionalType Wikidata Q294126),
+         bilingual (knowsLanguage en/es), with an Offer carrying the
+         $95 flat airport rate and the DEN airport service area.
+         ============================================================ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "additionalType": "https://www.wikidata.org/wiki/Q294126",
+      "name": "Quintana Notary & Signing",
+      "alternateName": "Servicios Quintana LLC",
+      "url": "https://www.quintananotarysigning.com/airport-notarizations.html",
+      "image": "https://www.quintananotarysigning.com/Quintana-notary-signing_logo.png",
+      "logo": "https://www.quintananotarysigning.com/Quintana-notary-signing_logo.png",
+      "telephone": "+1-303-500-4122",
+      "email": "info@quintananotarysigning.com",
+      "priceRange": "$95-$700",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Venmo, Zelle, Credit Card, Debit Card",
+      "knowsLanguage": ["en", "es"],
+      "areaServed": [
+        { "@type": "Airport", "name": "Denver International Airport", "iataCode": "DEN" },
+        { "@type": "City", "name": "Denver, CO" }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "David Quintana",
+        "jobTitle": "Colorado-Commissioned Notary Public & Loan Signing Agent"
+      },
+      "makesOffer": {
+        "@type": "Offer",
+        "name": "Airport Notarization at Denver International Airport (DIA)",
+        "description": "Mobile, same-day bilingual notary service delivered inside DIA terminals. Includes terminal meet-up, parking, and 30 minutes on-site.",
+        "priceCurrency": "USD",
+        "price": "95.00",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "95.00",
+          "priceCurrency": "USD",
+          "description": "Flat rate $95 (parking included) plus $10 per signature notarized. Additional on-site time billed only if a flight is delayed."
+        },
+        "areaServed": { "@type": "Airport", "name": "Denver International Airport", "iataCode": "DEN" },
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Mobile Airport Notary Public",
+          "provider": { "@type": "LocalBusiness", "name": "Quintana Notary & Signing" }
+        }
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#0A2D69">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+
+<div class="top-help-bar">
+    <div class="top-help-content">
+        <span class="top-help-message">
+            <span id="help-text-es" style="display:none;">¿Necesitas ayuda?</span>
+            <span id="help-text-en">Need help?</span>
+        </span>
+        <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
+            <span id="help-call-es" style="display:none;">Llamar / Mensaje</span>
+            <span id="help-call-en">Call / Text</span>
+        </a>
+        <a href="https://wa.me/13035004122" target="_blank" rel="noopener" class="top-help-btn top-help-btn-whatsapp" title="WhatsApp">
+            <span id="help-whatsapp-es" style="display:none;">WhatsApp</span>
+            <span id="help-whatsapp-en">WhatsApp</span>
+        </a>
+    </div>
+</div>
+
+<header>
+    <div class="header-container">
+        <div id="brand-logo">
+            <a href="index.html">
+                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary &amp; Signing — Denver airport notary" class="logo-img">
+            </a>
+        </div>
+
+        <button class="toggle-btn" id="lang-toggle">
+            <span id="toggle-label-en">Español</span>
+            <span id="toggle-label-es" style="display:none;">English</span>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="main-nav">
+            <a href="index.html" id="nav-home-es" style="display:none;">Inicio</a>
+            <a href="index.html" id="nav-home-en">Home</a>
+            <a href="services.html" id="nav-services-es" style="display:none;">Servicios</a>
+            <a href="services.html" id="nav-services-en">Services</a>
+            <a href="airport-notarizations.html" id="nav-airport-es" style="display:none;" class="active">Aeropuerto</a>
+            <a href="airport-notarizations.html" id="nav-airport-en" class="active">Airport</a>
+            <a href="translate.html" id="nav-translate-es" style="display:none;">Traducciones</a>
+            <a href="translate.html" id="nav-translate-en">Translations</a>
+            <a href="pricing.html" id="nav-pricing-es" style="display:none;">Precios</a>
+            <a href="pricing.html" id="nav-pricing-en">Pricing</a>
+            <a href="b2b-real-estate.html" id="nav-b2b-es" style="display:none;">B2B y Bienes Raíces</a>
+            <a href="b2b-real-estate.html" id="nav-b2b-en">B2B &amp; Real Estate</a>
+            <a href="about.html" id="nav-about-es" style="display:none;">Acerca de</a>
+            <a href="about.html" id="nav-about-en">About</a>
+            <a href="faq.html" id="nav-faq-es" style="display:none;">Preguntas</a>
+            <a href="faq.html" id="nav-faq-en">FAQ</a>
+            <a href="contact.html" id="nav-contact-es" style="display:none;">Contacto</a>
+            <a href="contact.html" id="nav-contact-en">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- APPOINTMENT-ONLY BAR (bilingual) -->
+<div class="appointment-bar" role="note">
+    <span id="appt-bar-es" style="display:none;">Solo con cita previa &middot; Envíe un mensaje para confirmar su terminal y horario antes de reservar.</span>
+    <span id="appt-bar-en">By appointment only &middot; Text to confirm your terminal and timing before booking.</span>
+</div>
+
+<div class="statutory-bar">
+    <span id="legal-disclosure-es" style="display:none;">
+        <strong>Aviso Legal (C.R.S. § 24-21-525):</strong>
+        <span class="statutory-es"><strong>NO SOY ABOGADO LICENCIADO PARA EJERCER EL DERECHO EN EL ESTADO DE COLORADO Y NO PUEDO DAR CONSEJOS LEGALES NI ACEPTAR HONORARIOS POR CONSEJOS LEGALES.</strong></span>
+    </span>
+    <span id="legal-disclosure-en">
+        <strong>Legal Disclosure (C.R.S. § 24-21-525):</strong>
+        <span class="statutory-en"><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</strong></span>
+    </span>
+</div>
+
+<!-- ============================================================
+     HERO / PAGE HEADER (semantic <section class="hero"> region)
+     ALT TEXT note: brand logo alt already set above; any airplane
+     icon added here should be aria-hidden="true" if decorative.
+     ============================================================ -->
+<section class="hero hero-with-logo" aria-labelledby="airport-h1">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span id="badge-airport-es" style="display:none;">Aeropuerto de Denver (DIA) &middot; El Mismo Día</span>
+            <span id="badge-airport-en">Denver International Airport (DIA) &middot; Same-Day</span>
+        </div>
+
+        <!-- H1: one per page, keyword + location, both languages -->
+        <h1 id="airport-h1-es" style="display:none;">Notario en el Aeropuerto de Denver (DIA)</h1>
+        <h1 id="airport-h1-en">Airport Notary at Denver International Airport (DIA)</h1>
+
+        <p class="hero-subtitle" id="hero-sub-es" style="display:none;">
+            ¿Necesita notarizar un documento <strong>ahora mismo</strong> en el Aeropuerto Internacional de Denver?
+            Llevo un servicio de notario móvil rápido y confiable directamente a las terminales &mdash;
+            ideal para viajeros de negocios, documentos de inmigración, formularios de último minuto y necesidades urgentes de viaje.
+        </p>
+        <p class="hero-subtitle" id="hero-sub-en">
+            Need a document notarized <strong>right now</strong> at Denver International Airport?
+            I bring fast, reliable mobile notary service directly to you inside the terminals &mdash;
+            built for business travelers, immigration paperwork, last-minute forms, and urgent travel deadlines.
+        </p>
+
+        <div class="cta-buttons">
+            <a href="sms:+13035004122" class="btn btn-primary" id="cta-text-es" style="display:none;"
+               aria-label="Enviar un mensaje de texto para confirmar su terminal y horario para una notarización en el aeropuerto">
+                <span>Enviar Mensaje para Confirmar Terminal</span>
+            </a>
+            <a href="sms:+13035004122" class="btn btn-primary" id="cta-text-en"
+               aria-label="Text David to confirm your terminal and timing for an airport notarization">
+                <span>Text to Confirm My Terminal</span>
+            </a>
+            <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-es" style="display:none;"
+               aria-label="Llamar a Quintana Notary and Signing al 303-500-4122">
+                <span>Llamar 303-500-4122</span>
+            </a>
+            <a href="tel:+13035004122" class="btn btn-secondary" id="cta-call-en"
+               aria-label="Call Quintana Notary and Signing at 303-500-4122">
+                <span>Call 303-500-4122</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="section container">
+
+    <!-- SERVICE OVERVIEW (semantic <article>) -->
+    <article class="section-with-icon" aria-labelledby="overview-h2-en overview-h2-es">
+        <h2 id="overview-h2-es" style="display:none;">Servicio Notarial Rápido y Confiable Dentro de las Terminales de DIA</h2>
+        <h2 id="overview-h2-en">Fast, Reliable Notary Service Inside DIA Terminals</h2>
+
+        <p id="overview-p-es" style="display:none; max-width:720px; margin:0 auto 1.5rem auto;">
+            Los vuelos no esperan &mdash; y su papeleo tampoco debería. Me reúno con usted justo donde esté en el
+            Aeropuerto Internacional de Denver, verifico su identificación y notarizo sus documentos en el momento.
+            Precios claros, coordinación rápida y servicio profesional que cabe en una ventana de viaje ajustada.
+        </p>
+        <p id="overview-p-en" style="max-width:720px; margin:0 auto 1.5rem auto;">
+            Flights don&rsquo;t wait &mdash; and neither should your paperwork. I meet you exactly where you are
+            at Denver International Airport, verify your ID, and notarize your documents on the spot.
+            Clear pricing, quick coordination, and professional service that fits into a tight travel window.
+        </p>
+
+        <ul class="simple-list" id="overview-list-es" style="display:none; max-width:720px; margin:0 auto;">
+            <li><strong>Viajeros de negocios</strong> &mdash; contratos, declaraciones juradas y autorizaciones entre vuelos.</li>
+            <li><strong>Clientes de inmigración</strong> &mdash; documentos de viaje y formularios que deben firmarse antes de salir.</li>
+            <li><strong>Necesidades urgentes y de último minuto</strong> &mdash; formularios con plazos que no puede resolver saliendo del aeropuerto.</li>
+        </ul>
+        <ul class="simple-list" id="overview-list-en" style="max-width:720px; margin:0 auto;">
+            <li><strong>Business travelers</strong> &mdash; contracts, affidavits, and authorizations between flights.</li>
+            <li><strong>Immigration clients</strong> &mdash; travel documents and forms that must be signed before departure.</li>
+            <li><strong>Last-minute &amp; urgent needs</strong> &mdash; time-sensitive forms you can&rsquo;t leave the airport to handle.</li>
+        </ul>
+    </article>
+
+    <div class="divider" role="presentation"></div>
+
+    <!-- PRICING -->
+    <section aria-labelledby="pricing-h2-en pricing-h2-es">
+        <h2 id="pricing-h2-es" class="text-center" style="display:none; border:none;">Precios de Aeropuerto Claros y Fijos</h2>
+        <h2 id="pricing-h2-en" class="text-center" style="border:none;">Simple, Flat Airport Pricing</h2>
+
+        <div class="pricing-cards">
+            <article class="card pricing-card featured">
+                <div class="pricing-card-header">
+                    <h3 id="price-card-title-es" style="display:none;">Notarización en el Aeropuerto (DIA)</h3>
+                    <h3 id="price-card-title-en">DIA Airport Notarization</h3>
+                    <p class="pricing-amount">$95</p>
+                    <p style="text-align:center; font-weight:600;">
+                        <span id="price-flat-es" style="display:none;">Tarifa fija &middot; estacionamiento incluido</span>
+                        <span id="price-flat-en">Flat rate &middot; parking included</span>
+                    </p>
+                </div>
+                <div class="pricing-description">
+                    <p id="price-per-sig-es" style="display:none;"><strong>+ $10 por firma</strong> notarizada.</p>
+                    <p id="price-per-sig-en"><strong>+ $10 per signature</strong> notarized.</p>
+                    <p id="price-detail-es" style="display:none;">Incluye reunión en la terminal, estacionamiento y <strong>30 minutos en el lugar</strong>.
+                       El tiempo adicional se cobra <strong>solo si su vuelo se retrasa</strong> &mdash; sin sorpresas.</p>
+                    <p id="price-detail-en">Includes terminal meet-up, parking, and <strong>30 minutes on-site</strong>.
+                       Extra time is billed <strong>only if your flight is delayed</strong> &mdash; never a surprise.</p>
+                </div>
+            </article>
+        </div>
+
+        <h3 class="subsection-title text-center">
+            <span id="incl-title-es" style="display:none;">Qué Incluye</span>
+            <span id="incl-title-en">What&rsquo;s Included</span>
+        </h3>
+        <div class="service-grid">
+            <article class="card act-card">
+                <h3 id="incl-1-es" style="display:none;">Reunión en la Terminal</h3>
+                <h3 id="incl-1-en">Terminal Meet-Up</h3>
+                <p id="incl-1d-es" style="display:none;">Voy a su sala de abordar, salón (lounge) o punto de recogida en la acera dentro de DIA.</p>
+                <p id="incl-1d-en">I come to your gate area, lounge, or curbside pickup point at DIA.</p>
+            </article>
+            <article class="card act-card">
+                <h3 id="incl-2-es" style="display:none;">Estacionamiento Cubierto</h3>
+                <h3 id="incl-2-en">Parking Covered</h3>
+                <p id="incl-2d-es" style="display:none;">El estacionamiento del aeropuerto está incluido en la tarifa fija de $95 &mdash; sin cargos adicionales.</p>
+                <p id="incl-2d-en">Airport parking is built into the flat $95 &mdash; no add-on fees.</p>
+            </article>
+            <article class="card act-card">
+                <h3 id="incl-3-es" style="display:none;">30 Minutos en el Lugar</h3>
+                <h3 id="incl-3-en">30 Minutes On-Site</h3>
+                <p id="incl-3d-es" style="display:none;">Tiempo suficiente para verificar identificación y notarizar. ¿Vuelo retrasado? Tiempo extra solo si se necesita.</p>
+                <p id="incl-3d-en">Ample time to verify ID and notarize. Delayed flight? Extra time only if needed.</p>
+            </article>
+            <article class="card act-card">
+                <h3 id="incl-4-es" style="display:none;">Tarifa Clara por Firma</h3>
+                <h3 id="incl-4-en">Clear Per-Signature Rate</h3>
+                <p id="incl-4d-es" style="display:none;">Solo $10 por firma notarizada &mdash; cotizado por adelantado y por escrito.</p>
+                <p id="incl-4d-en">Just $10 per signature notarized &mdash; quoted upfront, in writing.</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="divider" role="presentation"></div>
+
+    <!-- HOW IT WORKS -->
+    <section aria-labelledby="how-h2-en how-h2-es">
+        <h2 id="how-h2-es" class="text-center" style="display:none; border:none;">Cómo Funciona la Notarización en el Aeropuerto</h2>
+        <h2 id="how-h2-en" class="text-center" style="border:none;">How Airport Notarization Works</h2>
+        <ol class="simple-list" id="how-list-es" style="display:none; max-width:640px; margin:1.5rem auto;">
+            <li><strong>Envíeme un mensaje</strong> con su terminal, aerolínea y horario antes de reservar.</li>
+            <li><strong>Reciba una cotización por escrito</strong> &mdash; $95 fijo + $10 por firma &mdash; y confirme.</li>
+            <li><strong>Reúnase conmigo dentro de DIA</strong> con una identificación con foto vigente emitida por el gobierno y sus documentos completos (sin firmar).</li>
+            <li><strong>Firme y continúe</strong> &mdash; notarizo en el momento para que alcance su vuelo.</li>
+        </ol>
+        <ol class="simple-list" id="how-list-en" style="max-width:640px; margin:1.5rem auto;">
+            <li><strong>Text me</strong> your terminal, airline, and timing before booking.</li>
+            <li><strong>Get a written quote</strong> &mdash; $95 flat + $10 per signature &mdash; and confirm.</li>
+            <li><strong>Meet inside DIA</strong> with a valid government photo ID and your completed (unsigned) documents.</li>
+            <li><strong>Sign &amp; go</strong> &mdash; I notarize on the spot so you make your flight.</li>
+        </ol>
+    </section>
+
+    <!-- COMPLIANCE NOTE (role="note") -->
+    <aside class="warning-box" role="note" aria-label="Important notary requirements / Requisitos importantes">
+        <h3 style="text-align:left; border:none; margin-top:0;">
+            <span id="bring-title-es" style="display:none;">Por Favor Traiga</span>
+            <span id="bring-title-en">Please Bring</span>
+        </h3>
+        <p id="bring-desc-es" style="display:none;">Una identificación con foto <strong>vigente</strong> emitida por el gobierno y sus documentos completamente llenos
+           &mdash; pero <strong>no los firme</strong> hasta que estemos frente a frente. Como notario de Colorado verifico la identidad
+           y presencio las firmas; no soy abogado y no puedo dar asesoría legal ni elegir qué tipo de notarización necesita.</p>
+        <p id="bring-desc-en">A valid, unexpired government-issued <strong>photo ID</strong> and your documents filled out completely
+           &mdash; but <strong>do not sign them</strong> until we&rsquo;re face-to-face. As a Colorado notary I verify identity
+           and witness signatures; I am not an attorney and cannot give legal advice or choose which notarization you need.</p>
+    </aside>
+
+    <!-- FINAL CTA -->
+    <section class="cta-card" aria-labelledby="cta-h2-en cta-h2-es">
+        <h2 id="cta-h2-es" style="display:none;">Envíe un Mensaje para Reservar su Notario en el Aeropuerto</h2>
+        <h2 id="cta-h2-en">Text to Book Your Airport Notary</h2>
+        <p id="cta-desc-es" style="display:none;">Confirme su terminal y horario y me reuniré con usted en DIA &mdash; rápido, profesional y puntual.</p>
+        <p id="cta-desc-en">Confirm your terminal and timing and I&rsquo;ll meet you at DIA &mdash; fast, professional, and right on schedule.</p>
+        <a href="sms:+13035004122" class="btn btn-primary btn-large" id="cta-final-es" style="display:none;"
+           aria-label="Envíe un mensaje al 303-500-4122 para reservar una notarización en el aeropuerto">
+            <span>Enviar Mensaje 303-500-4122</span>
+        </a>
+        <a href="sms:+13035004122" class="btn btn-primary btn-large" id="cta-final-en"
+           aria-label="Text David at 303-500-4122 to book an airport notarization">
+            <span>Text 303-500-4122</span>
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <address class="contact-info" style="font-style:normal;">
+        <div class="contact-item">
+            <strong id="contact-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
+            <strong id="contact-call-en">Call/Text Me:</strong>
+            <a href="tel:+13035004122">303-500-4122</a>
+        </div>
+        <div class="contact-item">
+            <strong id="contact-email-es" style="display:none;">Correo Electrónico:</strong>
+            <strong id="contact-email-en">Email:</strong>
+            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+        </div>
+    </address>
+
+    <p id="footer-main-es" style="display:none;">
+        © 2026 Quintana Notary &amp; Signing<br/>
+        Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
+        Precios transparentes · Servicio bilingüe · Enfoque comunitario
+    </p>
+    <p id="footer-main-en">
+        © 2026 Quintana Notary &amp; Signing<br/>
+        A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
+        Transparent pricing · Bilingual service · Community focused
+    </p>
+
+    <div class="disclaimer">
+        <div id="disclaimer-es" style="display:none;">
+            <strong>Aviso Legal (ES)</strong><br/>
+            Quintana Notary &amp; Signing presta servicios notariales y administrativos de conformidad con la ley de Colorado.
+            Los honorarios notariales están limitados por ley a un máximo de $15 por acto notarial; las tarifas móviles, de aeropuerto y de conveniencia son separadas y se informan por escrito antes de la cita.
+            No soy un abogado licenciado para ejercer el derecho en Colorado y no puedo brindar asesoría legal.
+        </div>
+        <div id="disclaimer-en">
+            <strong>Legal Notice (EN)</strong><br/>
+            Quintana Notary &amp; Signing provides notarial and administrative services in accordance with Colorado law.
+            Statutory notary fees are limited to a maximum of $15 per notarial act; mobile, airport, and convenience fees are separate and disclosed in writing before your appointment.
+            I am not an attorney licensed to practice law in Colorado and cannot provide legal advice.
+        </div>
+    </div>
+
+    <div class="back-to-top-container">
+        <a href="#top" class="btn btn-secondary">
+            <span id="back-top-es" style="display:none;">Volver Arriba</span>
+            <span id="back-top-en">Back to Top</span>
+        </a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
