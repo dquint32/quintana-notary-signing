@@ -1,0 +1,7 @@
+# robots.txt for Quintana Notary & Signing
+# https://www.quintananotarysigning.com/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.quintananotarysigning.com/sitemap.xml
