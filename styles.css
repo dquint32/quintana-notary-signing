@@ -501,6 +501,212 @@ header {
 }
 
 /* ============================================================
+   8b. APPOINTMENT-ONLY BAR
+   ------------------------------------------------------------
+   Slim, high-contrast site-wide notice that sits directly under
+   the header. Dark text (#1A1A1A) on light amber (#FFF3E0) gives
+   a contrast ratio well above the WCAG 2.1 AA 4.5:1 minimum, and
+   the orange bottom border ties it to the brand accent without
+   relying on color alone to convey meaning.
+   ============================================================ */
+.appointment-bar {
+  background: var(--orange-light);
+  color: var(--gray-dark);
+  border-bottom: 2px solid var(--orange);
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+.appointment-bar strong { color: var(--orange); }
+
+@media (max-width: 600px) {
+  .appointment-bar { font-size: 0.78rem; padding: 0.5rem 0.9rem; }
+}
+
+/* ============================================================
+   8c. HERO BADGE (reusable)
+   ------------------------------------------------------------
+   Promotes the inline badge markup previously hard-coded on the
+   homepage into a shared class so every hero can use the same
+   pill. Semi-transparent white on the dark hero keeps AA contrast.
+   ============================================================ */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--white);
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--r-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================================
+   8d. FLOATING BACK-TO-TOP BUTTON
+   ------------------------------------------------------------
+   Injected by script.js on every page. Hidden until the user
+   scrolls down (>.visible class added in JS). 48x48px meets the
+   WCAG 2.5.5 target size; white arrow on navy is high contrast;
+   focus-visible ring keeps it keyboard-accessible.
+   ============================================================ */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 5.5rem; /* stacks directly above the floating WhatsApp button */
+  right: 1.25rem;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.scroll-top-btn:hover { background: var(--navy-dark); }
+.scroll-top-btn:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .scroll-top-btn { bottom: 5rem; right: 1rem; width: 44px; height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-top-btn { transition: opacity 0.01ms; transform: none; }
+}
+@media print {
+  .scroll-top-btn { display: none !important; }
+}
+
+/* ============================================================
+   8e. FLOATING WHATSAPP BUTTON
+   ------------------------------------------------------------
+   Injected by script.js on every page. Always visible in the
+   bottom-right corner; the back-to-top button stacks above it.
+   Uses WhatsApp brand green with a white glyph; a defining ring
+   + shadow give the control a visible boundary against the page
+   (WCAG 2.1 1.4.11 non-text contrast).
+   ============================================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.whatsapp-float svg { width: 30px; height: 30px; display: block; }
+.whatsapp-float:hover { background: #1EBE57; transform: scale(1.06); }
+.whatsapp-float:focus-visible {
+  outline: 3px solid var(--navy);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float { bottom: 1rem; right: 1rem; width: 52px; height: 52px; }
+  .whatsapp-float svg { width: 28px; height: 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float { transition: none; }
+}
+@media print {
+  .whatsapp-float { display: none !important; }
+}
+
+/* ============================================================
+   8f. PREMIUM MICRO-INTERACTIONS  (text hover + magnetic CTAs)
+   ------------------------------------------------------------
+   Subtle, brand-aligned polish:
+   - Content links keep a resting underline (never color-only —
+     WCAG 1.4.1) that thickens and lifts on hover/focus.
+   - Desktop nav items gain an orange sliding underline.
+   - Primary CTAs get a light magnetic pull applied inline by
+     script.js (.is-magnetic).
+   All motion is disabled under prefers-reduced-motion.
+   ============================================================ */
+
+/* Content-link underline: present at rest, animates on hover/focus */
+main a:not(.btn) {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0, 121, 107, 0.45);
+  transition: text-decoration-color var(--transition-fast),
+              text-decoration-thickness var(--transition-fast),
+              text-underline-offset var(--transition-fast);
+}
+main a:not(.btn):hover,
+main a:not(.btn):focus-visible {
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* Desktop nav: orange sliding underline on hover / focus / active */
+@media (min-width: 860px) {
+  #main-nav a { position: relative; }
+  #main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.2rem;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--transition-fast) ease;
+  }
+  #main-nav a:hover::after,
+  #main-nav a:focus-visible::after,
+  #main-nav a.active::after,
+  #main-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+}
+
+/* Magnetic CTA buttons — movement applied inline by script.js */
+.btn.is-magnetic { will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  main a:not(.btn) { transition: none; }
+  #main-nav a::after { transition: none; }
+  .btn.is-magnetic { will-change: auto; }
+}
+
+/* ============================================================
    9. HERO SECTIONS
    ------------------------------------------------------------
    Both .hero and .hero-with-logo declare position:relative +
