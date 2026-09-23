@@ -1451,3 +1451,59 @@ footer strong  { color: var(--white); }
   .section { box-shadow: none; border: 1px solid #ccc; }
   .hero::before, .hero-with-logo::after { display: none; }
 }
+
+/* ============================================================
+   COOKIE CONSENT BANNER + FOOTER LEGAL LINKS (consent.js)
+   Accept and Decline share identical styling on purpose:
+   Colorado consent rules require equal choices.
+   ============================================================ */
+.cookie-banner {
+  position: fixed;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-4);
+  z-index: 10000;
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--white);
+  color: var(--gray);
+  border: 1px solid var(--border-gray);
+  border-top: 4px solid var(--navy);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+.cookie-banner[hidden] { display: none; }
+.cookie-banner-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+}
+.cookie-banner-title { display: block; color: var(--navy-dark); font-size: 1rem; margin-bottom: var(--space-1); }
+.cookie-banner p { margin: 0; font-size: 0.92rem; line-height: 1.5; }
+.cookie-banner-gpc { margin-top: var(--space-2) !important; font-style: italic; color: var(--gray-mid); }
+.cookie-banner a { color: var(--navy); text-decoration: underline; }
+.cookie-banner-actions { display: flex; gap: var(--space-3); }
+.cookie-btn {
+  flex: 1 1 0;
+  min-height: 44px;
+  padding: 0.65rem 1.25rem;
+  font: 600 0.95rem 'Inter', system-ui, sans-serif;
+  color: var(--white);
+  background: var(--navy);
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.cookie-btn:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
+.cookie-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+@media (min-width: 700px) {
+  .cookie-banner-inner { flex-direction: row; align-items: center; }
+  .cookie-banner-actions { flex: 0 0 auto; }
+  .cookie-btn { flex: 0 0 auto; min-width: 120px; }
+}
+@media print { .cookie-banner { display: none !important; } }
+
+.footer-legal-links { margin-top: var(--space-4); font-size: 0.9rem; }
+.footer-legal-links a { margin: 0 var(--space-2); }
