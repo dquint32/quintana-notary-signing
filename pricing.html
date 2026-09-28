@@ -53,6 +53,8 @@
             <a href="index.html" id="nav-home-en" style="display:none;">Home</a>
             <a href="services.html" id="nav-services-es">Servicios</a>
             <a href="services.html" id="nav-services-en" style="display:none;">Services</a>
+            <a href="services.html#apostille" id="nav-apostille-es">Apostillas</a>
+            <a href="services.html#apostille" id="nav-apostille-en" style="display:none;">Apostille Services</a>
             <a href="airport-notarizations.html" id="nav-airport-es">Aeropuerto</a>
             <a href="airport-notarizations.html" id="nav-airport-en" style="display:none;">Airport</a>
             <a href="translate.html" id="nav-translate-es">Traducciones</a>
@@ -354,7 +356,7 @@
             <div class="card premium-card">
                 <h3 id="prem-wit-es">Suministro de Testigo Adicional</h3>
                 <h3 id="prem-wit-en" style="display:none;">Providing Additional Witness</h3>
-                <div class="premium-price">Desde $30</div>
+                <div class="premium-price"><span id="prem-wit-price-es">Desde $30</span><span id="prem-wit-price-en" style="display:none;">From $30</span></div>
                 <p class="premium-description" id="prem-wit-detail-es">El precio varía según la ubicación, el tiempo y los requisitos de programación.</p>
                 <p class="premium-description" id="prem-wit-detail-en" style="display:none;">Pricing varies based on location, time, and scheduling requirements.</p>
             </div>
@@ -401,70 +403,68 @@
         </div>
     </div>
     <div class="divider"></div>
-    <div class="pricing-section">
+    <div class="pricing-section" id="apostille-pricing">
         <h2 class="pricing-section-title">
             <span class="section-number">5</span>
             <div>
-                <span id="section-5-title-es">Servicios de Procesamiento de Apostilla</span>
-                <span id="section-5-title-en" style="display:none;">Apostille Processing Services</span>
-                <p class="section-subtitle" id="section-5-desc-es">Ofrezco gestión clerical completa para documentos que requieren apostilla o autenticación para uso internacional. Preparo, organizo y presento sus documentos ante la Secretaría de Estado de Colorado; todas las <strong>tarifas gubernamentales son separadas</strong> y las paga usted directamente.</p>
-                <p class="section-subtitle" id="section-5-desc-en" style="display:none;">I provide end-to-end clerical handling for documents requiring apostille or authentication for international use. I prepare, organize, and submit your documents to the Colorado Secretary of State; all <strong>government filing fees are separate</strong> and paid directly by you.</p>
+                <span id="section-5-title-es">Precios de Apostilla y Autenticación Estatal</span>
+                <span id="section-5-title-en" style="display:none;">Apostille &amp; State Authentication Pricing</span>
+                <p class="section-subtitle" id="section-5-desc-es">Tres opciones según lo que usted necesite. ¿No sabe cuál elegir? <a href="services.html#apostille">Compare las opciones</a>.</p>
+                <p class="section-subtitle" id="section-5-desc-en" style="display:none;">Three options depending on what you need. Not sure which one to pick? <a href="services.html#apostille">Compare the options</a>.</p>
             </div>
         </h2>
-        <h3 class="subsection-title">
-            <span id="sub-apost-svc-es">Tarifas de Servicio Clerical (Por Pedido)</span>
-            <span id="sub-apost-svc-en" style="display:none;">Clerical Service Fees (Per Order)</span>
-        </h3>
-        <div class="premium-services">
-            <div class="card premium-card">
-                <h3 id="apost-std-es">Estándar (Gestión por Correo)</h3>
-                <h3 id="apost-std-en" style="display:none;">Standard (Mail-In Handling)</h3>
-                <div class="premium-price">$75</div>
-                <p class="premium-description">
-                    <span id="apost-std-detail-es">Revisión documental, organización, envío seguro y seguimiento del estado del trámite.</span>
-                    <span id="apost-std-detail-en" style="display:none;">Document review, organization, secure mailing, and status tracking.</span>
-                </p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="apost-rush-es">Urgente (Entrega al Día Siguiente al SOS)</h3>
-                <h3 id="apost-rush-en" style="display:none;">Rush (Next-Day SOS Drop-Off)</h3>
-                <div class="premium-price">+$75</div>
-                <p class="premium-description">
-                    <span id="apost-rush-detail-es">Presento su solicitud de apostilla en persona ante la Secretaría de Estado a <strong>primera hora del siguiente día hábil</strong>.</span>
-                    <span id="apost-rush-detail-en" style="display:none;">I submit your apostille request in person to the Secretary of State the <strong>next business morning</strong>.</span>
-                </p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="apost-same-es">Entrega Mismo Día al SOS</h3>
-                <h3 id="apost-same-en" style="display:none;">Same-Day SOS Drop-Off</h3>
-                <div class="premium-price">+$100</div>
-                <p class="premium-description">
-                    <span id="apost-same-detail-es">Entrega al SOS el mismo día. <strong>Solo disponible si la notarización y la recepción del documento se completan antes de las 12:00 PM.</strong></span>
-                    <span id="apost-same-detail-en" style="display:none;">Same-day submission to SOS. <strong>Available only if notarization and document intake are completed before 12:00 PM.</strong></span>
-                </p>
-            </div>
-            <div class="card premium-card featured">
-                <div class="premium-badge">
-                    <span id="badge-super-rush-es">Super Urgente</span>
-                    <span id="badge-super-rush-en" style="display:none;">Super Rush</span>
+        <div class="premium-services apostille-tiers">
+            <div class="card premium-card apostille-tier featured">
+                <div class="premium-badge"><span id="apx-t-full-badge-es">Servicio Completo</span><span id="apx-t-full-badge-en" style="display:none;">Full Service</span></div>
+                <h3 id="apx-t-full-title-es">Apostilla de Servicio Completo (Notarización + Mensajería)</h3>
+                <h3 id="apx-t-full-title-en" style="display:none;">Full-Service Apostille (Notarization + Courier)</h3>
+                <div class="premium-price">$150 <span class="price-label"><span id="apx-t-full-unit-es">Base</span><span id="apx-t-full-unit-en" style="display:none;">Base</span></span></div>
+                <p class="premium-description" id="apx-t-full-inc-es"><strong>Incluye:</strong> Traslado móvil a su ubicación en Denver o Castle Rock, notarización de hasta 3 documentos, revisión de errores, entrega física en mano en la Secretaría de Estado de Colorado y envío seguro de regreso.</p>
+                <p class="premium-description" id="apx-t-full-inc-en" style="display:none;"><strong>Includes:</strong> Mobile travel to your Denver/Castle Rock location, notarization of up to 3 documents, error-checking, physical hand-delivery to the CO SOS, and secure return dispatch.</p>
+                <p class="tier-fine" id="apx-t-full-x0-es">(Las tarifas de procesamiento del Estado de Colorado se facturan por separado, al costo).</p>
+                <p class="tier-fine" id="apx-t-full-x0-en" style="display:none;">(State of Colorado processing fees are billed separately at cost).</p>
+                <div class="tier-cta">
+                    <a href="https://wa.me/13035004122?text=Hola%2C%20quiero%20reservar%20el%20servicio%20de%20Apostilla%20Completa%20%28notarizaci%C3%B3n%20%2B%20entrega%20en%20la%20Secretar%C3%ADa%20de%20Estado%29." target="_blank" rel="noopener" class="btn btn-whatsapp" id="apx-cta-full-es">Reservar Apostilla Completa</a>
+                    <a href="https://wa.me/13035004122?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Full-Service%20Apostille%20%28notarization%20%2B%20Secretary%20of%20State%20hand-delivery%29." target="_blank" rel="noopener" class="btn btn-whatsapp" id="apx-cta-full-en" style="display:none;">Book Full-Service Apostille</a>
                 </div>
-                <h3 id="apost-super-es">Super Urgente (Entrega + Recogida + Entrega al Cliente)</h3>
-                <h3 id="apost-super-en" style="display:none;">Super Rush (Drop-Off + Pickup + Delivery)</h3>
-                <div class="premium-price">+$150</div>
-                <p class="premium-description">
-                    <span id="apost-super-detail-es">Entrega al SOS el mismo día (sujeto al horario del SOS), recogida el mismo día y <strong>entrega local</strong> a usted dentro del área metropolitana de Denver.</span>
-                    <span id="apost-super-detail-en" style="display:none;">Same-day SOS submission (subject to SOS business hours), same-day pickup, and <strong>local hand delivery</strong> to you within the Denver Metro area.</span>
-                </p>
+            </div>
+            <div class="card premium-card apostille-tier">
+                <h3 id="apx-t-cour-title-es">Mensajería Local en Denver (Solo Entrega en Mano)</h3>
+                <h3 id="apx-t-cour-title-en" style="display:none;">Local Denver Courier (Hand-Delivery Only)</h3>
+                <div class="premium-price">$85 <span class="price-label"><span id="apx-t-cour-unit-es">Base</span><span id="apx-t-cour-unit-en" style="display:none;">Base</span></span></div>
+                <p class="premium-description" id="apx-t-cour-inc-es"><strong>Incluye:</strong> Usted entrega sus documentos ya notarizados en nuestra ubicación de Denver (con cita previa). Nosotros los entregamos en mano en la Secretaría de Estado en el centro y nos encargamos de la recogida y devolución.</p>
+                <p class="premium-description" id="apx-t-cour-inc-en" style="display:none;"><strong>Includes:</strong> You drop off your pre-notarized documents at our Denver location (by appointment). We hand-deliver them to the SOS downtown and manage the pickup/return.</p>
+                <p class="tier-fine" id="apx-t-cour-x0-es"><strong>Complemento por volumen:</strong> $10 por cada documento adicional después de los primeros 3.</p>
+                <p class="tier-fine" id="apx-t-cour-x0-en" style="display:none;"><strong>Volume Add-on:</strong> $10 per additional document after the first 3.</p>
+                <div class="tier-cta">
+                    <a href="https://wa.me/13035004122?text=Hola%2C%20quiero%20solicitar%20la%20entrega%20por%20mensajer%C3%ADa%20a%20la%20Secretar%C3%ADa%20de%20Estado%20en%20Denver.%20Mis%20documentos%20ya%20est%C3%A1n%20notarizados." target="_blank" rel="noopener" class="btn btn-whatsapp" id="apx-cta-cour-es">Solicitar Entrega por Mensajería</a>
+                    <a href="https://wa.me/13035004122?text=Hi%2C%20I%27d%20like%20to%20request%20a%20courier%20drop-off%20to%20the%20Secretary%20of%20State%20in%20Denver.%20My%20documents%20are%20already%20notarized." target="_blank" rel="noopener" class="btn btn-whatsapp" id="apx-cta-cour-en" style="display:none;">Request Courier Drop-Off</a>
+                </div>
+            </div>
+            <div class="card premium-card apostille-tier">
+                <h3 id="apx-t-state-title-es">Mensajería Exprés Estatal (Envío por Correo a Entrega en Mano)</h3>
+                <h3 id="apx-t-state-title-en" style="display:none;">Statewide Expedited Courier (Mail-In to Hand-Delivery)</h3>
+                <div class="premium-price">$115 <span class="price-label"><span id="apx-t-state-unit-es">Base + envío de regreso</span><span id="apx-t-state-unit-en" style="display:none;">Base + Return Shipping</span></span></div>
+                <p class="premium-description" id="apx-t-state-inc-es"><strong>Incluye:</strong> Usted envía sus documentos ya notarizados por servicio nocturno desde cualquier parte de Colorado a nuestra oficina. Recibimos el paquete, hacemos la entrega en mano en la Secretaría de Estado en Denver el mismo día o al día siguiente, y le enviamos los documentos autenticados de regreso por FedEx/UPS.</p>
+                <p class="premium-description" id="apx-t-state-inc-en" style="display:none;"><strong>Includes:</strong> You overnight your pre-notarized documents from anywhere in Colorado to our office. We intercept the package, execute a same-day or next-day hand-delivery to the SOS in Denver, and dispatch the authenticated documents back to you via FedEx/UPS.</p>
+                <div class="tier-cta">
+                    <a href="https://wa.me/13035004122?text=Hola%2C%20quiero%20iniciar%20una%20solicitud%20de%20Apostilla%20Expr%C3%A9s%20Estatal.%20Estoy%20en%20la%20ciudad%20de%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" id="apx-cta-state-es">Iniciar Solicitud Exprés Estatal</a>
+                    <a href="https://wa.me/13035004122?text=Hi%2C%20I%27d%20like%20to%20start%20a%20Statewide%20Expedited%20Apostille%20request.%20I%27m%20located%20in%3A%20" target="_blank" rel="noopener" class="btn btn-whatsapp" id="apx-cta-state-en" style="display:none;">Start Statewide Expedited Request</a>
+                </div>
             </div>
         </div>
+        <div class="info-box-orange apostille-appt-note">
+            <p id="apx-price-appt-es"><strong>Solo con cita previa.</strong> No atiendo sin cita en ninguna ubicación — ni para entregas de documentos. La mejor forma de contactarme es por <a href="https://wa.me/13035004122" target="_blank" rel="noopener"><strong>WhatsApp</strong></a> o por teléfono/mensaje de texto al <a href="tel:+13035004122"><strong>303-500-4122</strong></a>. Atención en inglés y español.</p>
+            <p id="apx-price-appt-en" style="display:none;"><strong>By appointment only.</strong> I don't take walk-ins at any location — including document drop-offs. The best way to reach me is <a href="https://wa.me/13035004122" target="_blank" rel="noopener"><strong>WhatsApp</strong></a> or call/text <a href="tel:+13035004122"><strong>303-500-4122</strong></a>. Service in English and Spanish.</p>
+        </div>
         <h3 class="subsection-title">
-            <span id="sub-gov-fees-es">Tarifas Gubernamentales y de Gestión (Por Documento)</span>
-            <span id="sub-gov-fees-en" style="display:none;">Government &amp; Handling Fees (Per Document)</span>
+            <span id="sub-gov-fees-es">Tarifas Gubernamentales (Por Documento)</span>
+            <span id="sub-gov-fees-en" style="display:none;">Government Fees (Per Document)</span>
         </h3>
         <div class="info-box">
             <p style="font-weight:700; margin-bottom:0.75rem;">
-                <span id="gov-fees-subtitle-es">Tarifas del Estado de Colorado — Pagadas directamente al SOS por el cliente (las tarifas pueden cambiar si cambia la ley):</span>
-                <span id="gov-fees-subtitle-en" style="display:none;">Colorado State Fees — Paid directly to the SOS by the client (fees may change if the law changes):</span>
+                <span id="gov-fees-subtitle-es">Tarifas del Estado de Colorado — Facturadas por separado, al costo (las tarifas pueden cambiar si cambia la ley):</span>
+                <span id="gov-fees-subtitle-en" style="display:none;">Colorado State Fees — Billed separately at cost (fees may change if the law changes):</span>
             </p>
             <ul style="margin:0; padding-left:1.5rem;">
                 <li style="margin-bottom:0.5rem;">
@@ -477,18 +477,8 @@
                 </li>
             </ul>
         </div>
-        <div class="info-box-orange">
-            <p style="font-weight:700; margin-bottom:0.75rem;">
-                <span id="handling-fee-title-es">Cargo de Gestión Urgente — Pagado a Quintana Notary &amp; Signing:</span>
-                <span id="handling-fee-title-en" style="display:none;">Priority Handling Fee — Paid to Quintana Notary &amp; Signing:</span>
-            </p>
-            <ul>
-                <li>
-                    <span id="handling-fee-detail-es"><strong>+$15.00 por documento</strong> — Cargo por coordinación, verificación y entrega en mano de su pedido urgente a la Secretaría de Estado el mismo día o al día siguiente. Este cargo es <strong>adicional</strong> a la tarifa de servicio de apostilla y a las tarifas gubernamentales.</span>
-                    <span id="handling-fee-detail-en" style="display:none;"><strong>+$15.00 per document</strong> — Fee for coordination, verification, and hand-delivery of your rush order to the Secretary of State same-day or next-day. This is <strong>in addition to</strong> your apostille service fee and government fees.</span>
-                </li>
-            </ul>
-        </div>
+        <p class="tier-fine" id="apx-statutory-es">Las tarifas notariales incluidas en la Apostilla de Servicio Completo no exceden el máximo legal de Colorado de $15 por acto notarial; el resto de la tarifa base cubre traslado, revisión y mensajería.</p>
+        <p class="tier-fine" id="apx-statutory-en" style="display:none;">Notarial fees included in the Full-Service Apostille do not exceed Colorado's $15 statutory maximum per notarial act; the rest of the base rate covers travel, review, and courier service.</p>
         <div class="warning-box" style="margin-top:1rem;">
             <p id="apost-disclaimer-es"><strong>Aviso Importante:</strong> Los tiempos de procesamiento son determinados exclusivamente por la carga de trabajo y los procedimientos de la oficina de la Secretaría de Estado. <strong>No controlo ni garantizo</strong> el tiempo exacto de devolución de ningún documento procesado por el gobierno.</p>
             <p id="apost-disclaimer-en" style="display:none;"><strong>Important Disclaimer:</strong> Processing times are determined solely by the Secretary of State's office workload and procedures. I do <strong>not</strong> control or guarantee the exact return time of any government-processed document.</p>

@@ -1507,3 +1507,25 @@ footer strong  { color: var(--white); }
 
 .footer-legal-links { margin-top: var(--space-4); font-size: 0.9rem; }
 .footer-legal-links a { margin: 0 var(--space-2); }
+
+
+/* ============================================================
+   APOSTILLE WORKFLOWS & PRICING TIERS
+   ============================================================ */
+.apostille-workflows .card,
+.apostille-tiers .card { gap: 0.5rem; }
+.workflow-number {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--navy); color: var(--white); font-weight: 700;
+}
+.workflow-best { font-size: 0.92rem; color: var(--gray-mid); }
+.workflow-price-link { font-weight: 600; }
+.tier-cta { margin-top: auto; padding-top: var(--space-3); display: flex; flex-direction: column; gap: 0.4rem; }
+.tier-cta .btn { width: 100%; white-space: normal; }
+.tier-cta-alt { margin: 0; font-size: 0.85rem; color: var(--gray-mid); text-align: center; }
+.tier-fine { font-size: 0.85rem; color: var(--gray-mid); margin: 0.25rem 0; }
+.consumer-apostille-link { margin-top: var(--space-5); font-weight: 600; }
+@media (min-width: 960px) {
+  .apostille-tiers, .apostille-workflows { grid-template-columns: repeat(3, 1fr); }
+}
