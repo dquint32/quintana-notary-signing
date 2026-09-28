@@ -6,6 +6,9 @@
     <title>Privacy Policy | Quintana Notary & Signing</title>
     <meta name="description" content="Privacy and cookie policy for Quintana Notary & Signing: what we collect, how we use Microsoft Clarity analytics, and your Colorado privacy rights.">
     <link rel="canonical" href="https://www.quintananotarysigning.com/privacy.html">
+    <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/privacy.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/privacy.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -37,7 +40,7 @@
     <div class="header-container">
         <div id="brand-logo">
             <a href="index.html">
-                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary &amp; Signing — home" class="logo-img">
             </a>
         </div>
 
@@ -46,41 +49,60 @@
             <span id="toggle-label-es" style="display:none;">English</span>
         </button>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
         </button>
 
-        <nav id="main-nav">
+        <nav id="main-nav" aria-label="Main">
             <a href="index.html" id="nav-home-es" style="display:none;">Inicio</a>
-            <a href="index.html" id="nav-home-en">Home</a>
-
-            <a href="services.html" id="nav-services-es" style="display:none;">Servicios</a>
-            <a href="services.html" id="nav-services-en">Services</a>
-            <a href="services.html#apostille" id="nav-apostille-es">Apostillas</a>
-            <a href="services.html#apostille" id="nav-apostille-en" style="display:none;">Apostille Services</a>
-
-            <a href="airport-notarizations.html" id="nav-airport-es" style="display:none;">Aeropuerto</a>
-            <a href="airport-notarizations.html" id="nav-airport-en">Airport</a>
-
-            <a href="translate.html" id="nav-translate-es" style="display:none;">Traducciones</a>
-            <a href="translate.html" id="nav-translate-en">Translations</a>
-
+                <a href="index.html" id="nav-home-en">Home</a>
+            <div class="nav-group">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-services">
+                    <span id="navg-services-label-es" style="display:none;">Servicios</span><span id="navg-services-label-en">Services</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-services">
+                <a href="services.html" id="navd-mobile-es" style="display:none;">Notario Móvil</a>
+                <a href="services.html" id="navd-mobile-en">Mobile Notary</a>
+                <a href="apostille.html" id="navd-apost-es" style="display:none;">Apostillas</a>
+                <a href="apostille.html" id="navd-apost-en">Apostilles</a>
+                <a href="translate.html" id="navd-transl-es" style="display:none;">Traducciones Certificadas</a>
+                <a href="translate.html" id="navd-transl-en">Certified Translations</a>
+                <a href="airport-notarizations.html" id="navd-airport-es" style="display:none;">Notario en el Aeropuerto (DIA)</a>
+                <a href="airport-notarizations.html" id="navd-airport-en">Airport Notary (DIA)</a>
+                <a href="services.html#passport-i9" id="navd-passport-es" style="display:none;">Ayuda con Pasaporte e I-9</a>
+                <a href="services.html#passport-i9" id="navd-passport-en">Passport &amp; I-9 Help</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-business">
+                    <span id="navg-business-label-es" style="display:none;">Para Empresas</span><span id="navg-business-label-en">For Business</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-business">
+                <a href="b2b-real-estate.html" id="navd-realestate-es" style="display:none;">Títulos y Bienes Raíces</a>
+                <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
+                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
+                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en">Immigration Attorneys (Aurora ICE)</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Notarios</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
+                <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
+                <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
+                </div>
+            </div>
             <a href="pricing.html" id="nav-pricing-es" style="display:none;">Precios</a>
-            <a href="pricing.html" id="nav-pricing-en">Pricing</a>
-
-            <a href="b2b-real-estate.html" id="nav-b2b-es" style="display:none;">B2B y Bienes Raíces</a>
-            <a href="b2b-real-estate.html" id="nav-b2b-en">B2B &amp; Real Estate</a>
-
-            <a href="about.html" id="nav-about-es" style="display:none;">Acerca de</a>
-            <a href="about.html" id="nav-about-en">About</a>
-
-            <a href="faq.html" id="nav-faq-es" style="display:none;">Preguntas</a>
-            <a href="faq.html" id="nav-faq-en">FAQ</a>
-
-            <a href="contact.html" id="nav-contact-es" style="display:none;">Contacto</a>
-            <a href="contact.html" id="nav-contact-en">Contact</a>
+                <a href="pricing.html" id="nav-pricing-en">Pricing</a>
+            <div class="nav-group nav-dropdown-right">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-about">
+                    <span id="navg-about-label-es" style="display:none;">Acerca de</span><span id="navg-about-label-en">About</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-about">
+                <a href="about.html" id="navd-about-es" style="display:none;">Acerca de David</a>
+                <a href="about.html" id="navd-about-en">About David</a>
+                <a href="faq.html" id="navd-faq-es" style="display:none;">Preguntas Frecuentes</a>
+                <a href="faq.html" id="navd-faq-en">FAQ</a>
+                </div>
+            </div>
+            <a href="contact.html" id="nav-contact-es" class="nav-cta" style="display:none;">Reservar / Contacto</a>
+                <a href="contact.html" id="nav-contact-en" class="nav-cta">Book / Contact</a>
         </nav>
     </div>
 </header>
@@ -185,63 +207,92 @@
 </main>
 
 <footer>
-<div class="contact-info">
-    <div class="contact-item">
-        <strong id="contact-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
-        <strong id="contact-call-en">Call/Text Me:</strong>
-        <a href="tel:+13035004122">303-500-4122</a>
+    <nav class="footer-sitemap" aria-label="Site">
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-svc-title-es" style="display:none;">Servicios</span><span id="ft-svc-title-en">Services</span></h2>
+            <ul>
+                <li><a href="services.html" id="ft-svc-mobile-es" style="display:none;">Notario Móvil</a><a href="services.html" id="ft-svc-mobile-en">Mobile Notary</a></li>
+                <li><a href="apostille.html" id="ft-svc-apost-es" style="display:none;">Apostillas</a><a href="apostille.html" id="ft-svc-apost-en">Apostilles</a></li>
+                <li><a href="translate.html" id="ft-svc-transl-es" style="display:none;">Traducciones Certificadas</a><a href="translate.html" id="ft-svc-transl-en">Certified Translations</a></li>
+                <li><a href="airport-notarizations.html" id="ft-svc-airport-es" style="display:none;">Notario en el Aeropuerto (DIA)</a><a href="airport-notarizations.html" id="ft-svc-airport-en">Airport Notary (DIA)</a></li>
+                <li><a href="services.html#passport-i9" id="ft-svc-passport-es" style="display:none;">Ayuda con Pasaporte e I-9</a><a href="services.html#passport-i9" id="ft-svc-passport-en">Passport &amp; I-9 Help</a></li>
+                <li><a href="pricing.html" id="ft-svc-pricing-es" style="display:none;">Precios</a><a href="pricing.html" id="ft-svc-pricing-en">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-biz-title-es" style="display:none;">Para Empresas</span><span id="ft-biz-title-en">For Business</span></h2>
+            <ul>
+                <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
+                <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Notarios</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-co-title-es" style="display:none;">Acerca de</span><span id="ft-co-title-en">About</span></h2>
+            <ul>
+                <li><a href="about.html" id="ft-co-about-es" style="display:none;">Acerca de David</a><a href="about.html" id="ft-co-about-en">About David</a></li>
+                <li><a href="faq.html" id="ft-co-faq-es" style="display:none;">Preguntas Frecuentes</a><a href="faq.html" id="ft-co-faq-en">FAQ</a></li>
+                <li><a href="contact.html#locations" id="ft-co-contact-es" style="display:none;">Contacto y Ubicaciones</a><a href="contact.html#locations" id="ft-co-contact-en">Contact &amp; Locations</a></li>
+                <li><a href="privacy.html" id="ft-co-privacy-es" style="display:none;">Política de Privacidad</a><a href="privacy.html" id="ft-co-privacy-en">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <strong id="ft-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
+            <strong id="ft-call-en">Call/Text Me:</strong>
+            <a href="tel:+13035004122">303-500-4122</a>
+        </div>
+        <div class="contact-item">
+            <strong id="ft-email-es" style="display:none;">Correo Electrónico:</strong>
+            <strong id="ft-email-en">Email:</strong>
+            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+        </div>
     </div>
-    <div class="contact-item">
-        <strong id="contact-email-es" style="display:none;">Correo Electrónico:</strong>
-        <strong id="contact-email-en">Email:</strong>
-        <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+
+    <p id="footer-main-es" style="display:none;">
+        © 2026 Quintana Notary &amp; Signing<br/>
+        Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
+        Precios transparentes · Servicio bilingüe · Enfoque comunitario
+    </p>
+    <p id="footer-main-en">
+        © 2026 Quintana Notary &amp; Signing<br/>
+        A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
+        Transparent pricing · Bilingual service · Community focused
+    </p>
+
+    <div class="disclaimer">
+        <div id="disclaimer-es" style="display:none;">
+            <strong>Aviso Legal (ES)</strong><br/>
+            Quintana Notary &amp; Signing presta servicios notariales, de traducción certificada y de apoyo administrativo de conformidad con la ley de Colorado (C.R.S. § 24-21-525 y § 24-21-529).
+            Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong>; las tarifas de viaje, conveniencia y servicios administrativos son separadas y se acuerdan con el cliente por anticipado.
+            Los notarios no son abogados y no pueden brindar asesoría ni representación legal.
+            No estoy afiliado con ninguna agencia gubernamental local, estatal ni federal.
+        </div>
+        <div id="disclaimer-en">
+            <strong>Legal Notice (EN)</strong><br/>
+            Quintana Notary &amp; Signing provides notary, certified translation, and administrative support services in accordance with Colorado law (C.R.S. § 24-21-525 and § 24-21-529).
+            Statutory notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong>; travel, convenience, and clerical service fees are separate and agreed upon with the client in advance.
+            Notaries are not attorneys and cannot provide legal advice or legal representation.
+            I am not affiliated with any local, state, or federal government agency.
+        </div>
     </div>
-</div>
 
-<p id="footer-main-es" style="display:none;">
-    © 2026 Quintana Notary &amp; Signing<br/>
-    Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-    Precios transparentes · Servicio bilingüe · Enfoque comunitario
-</p>
-
-<p id="footer-main-en">
-    © 2026 Quintana Notary &amp; Signing<br/>
-    A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-    Transparent pricing · Bilingual service · Community focused
-</p>
-
-<div class="disclaimer">
-    <div id="disclaimer-es" style="display:none;">
-        <strong>Aviso Legal (ES)</strong><br/>
-        Quintana Notary &amp; Signing ofrece servicios notariales y de traducción certificada en cumplimiento con la ley de Colorado.
-        Los honorarios notariales están limitados por ley a $15 por documento.
-        Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita.
-        No soy un abogado licenciado para ejercer el derecho en Colorado y no puedo brindar asesoría legal.
+    <div class="back-to-top-container">
+        <a href="#top" class="btn btn-secondary">
+            <span id="back-top-es" style="display:none;">Volver Arriba</span>
+            <span id="back-top-en">Back to Top</span>
+        </a>
     </div>
-
-    <div id="disclaimer-en">
-        <strong>Legal Notice (EN)</strong><br/>
-        Quintana Notary &amp; Signing provides notary and certified translation services in accordance with Colorado law.
-        Statutory notary fees are limited to $15 per notarized document.
-        Mobile travel and convenience fees are separate and always disclosed in writing before the appointment.
-        I am not an attorney licensed to practice law in Colorado and cannot provide legal advice.
-    </div>
-</div>
-
-<div class="back-to-top-container">
-    <a href="#top" class="btn btn-secondary">
-        <span id="back-top-es" style="display:none;">Volver Arriba</span>
-        <span id="back-top-en">Back to Top</span>
-    </a>
-</div>
-
-<p class="footer-legal-links">
-    <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de Privacidad</a>
-    <a href="privacy.html" id="footer-privacy-en">Privacy Policy</a>
-    ·
-    <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de Cookies</a>
-    <a href="#" data-cookie-settings id="footer-cookies-en">Cookie Settings</a>
-</p>
+    <p class="footer-legal-links">
+        <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de Privacidad</a>
+        <a href="privacy.html" id="footer-privacy-en">Privacy Policy</a>
+        ·
+        <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de Cookies</a>
+        <a href="#" data-cookie-settings id="footer-cookies-en">Cookie Settings</a>
+    </p>
 </footer>
 
 <script src="script.js"></script>

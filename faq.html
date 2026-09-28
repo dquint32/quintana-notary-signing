@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frequently Asked Questions | Quintana Notary & Signing</title>
+    <link rel="canonical" href="https://www.quintananotarysigning.com/faq.html">
+    <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/faq.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/faq.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/faq.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -35,7 +39,7 @@
     <div class="header-container">
         <div id="brand-logo">
             <a href="index.html">
-                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary & Signing Logo" class="logo-img">
+                <img src="Quintana-notary-signing_logo.png" alt="Quintana Notary &amp; Signing — home" class="logo-img">
             </a>
         </div>
 
@@ -44,41 +48,60 @@
             <span id="toggle-label-es" style="display:none;">English</span>
         </button>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
         </button>
 
-        <nav id="main-nav">
+        <nav id="main-nav" aria-label="Main">
             <a href="index.html" id="nav-home-es" style="display:none;">Inicio</a>
-            <a href="index.html" id="nav-home-en">Home</a>
-
-            <a href="services.html" id="nav-services-es" style="display:none;">Servicios</a>
-            <a href="services.html" id="nav-services-en">Services</a>
-            <a href="services.html#apostille" id="nav-apostille-es">Apostillas</a>
-            <a href="services.html#apostille" id="nav-apostille-en" style="display:none;">Apostille Services</a>
-
-            <a href="airport-notarizations.html" id="nav-airport-es" style="display:none;">Aeropuerto</a>
-            <a href="airport-notarizations.html" id="nav-airport-en">Airport</a>
-
-            <a href="translate.html" id="nav-translate-es" style="display:none;">Traducciones</a>
-            <a href="translate.html" id="nav-translate-en">Translations</a>
-
+                <a href="index.html" id="nav-home-en">Home</a>
+            <div class="nav-group">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-services">
+                    <span id="navg-services-label-es" style="display:none;">Servicios</span><span id="navg-services-label-en">Services</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-services">
+                <a href="services.html" id="navd-mobile-es" style="display:none;">Notario Móvil</a>
+                <a href="services.html" id="navd-mobile-en">Mobile Notary</a>
+                <a href="apostille.html" id="navd-apost-es" style="display:none;">Apostillas</a>
+                <a href="apostille.html" id="navd-apost-en">Apostilles</a>
+                <a href="translate.html" id="navd-transl-es" style="display:none;">Traducciones Certificadas</a>
+                <a href="translate.html" id="navd-transl-en">Certified Translations</a>
+                <a href="airport-notarizations.html" id="navd-airport-es" style="display:none;">Notario en el Aeropuerto (DIA)</a>
+                <a href="airport-notarizations.html" id="navd-airport-en">Airport Notary (DIA)</a>
+                <a href="services.html#passport-i9" id="navd-passport-es" style="display:none;">Ayuda con Pasaporte e I-9</a>
+                <a href="services.html#passport-i9" id="navd-passport-en">Passport &amp; I-9 Help</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-business">
+                    <span id="navg-business-label-es" style="display:none;">Para Empresas</span><span id="navg-business-label-en">For Business</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-business">
+                <a href="b2b-real-estate.html" id="navd-realestate-es" style="display:none;">Títulos y Bienes Raíces</a>
+                <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
+                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
+                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en">Immigration Attorneys (Aurora ICE)</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Notarios</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
+                <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
+                <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
+                </div>
+            </div>
             <a href="pricing.html" id="nav-pricing-es" style="display:none;">Precios</a>
-            <a href="pricing.html" id="nav-pricing-en">Pricing</a>
-
-            <a href="b2b-real-estate.html" id="nav-b2b-es" style="display:none;">B2B y Bienes Raíces</a>
-            <a href="b2b-real-estate.html" id="nav-b2b-en">B2B &amp; Real Estate</a>
-
-            <a href="about.html" id="nav-about-es" style="display:none;">Acerca de</a>
-            <a href="about.html" id="nav-about-en">About</a>
-
-            <a href="faq.html" id="nav-faq-es" style="display:none;" class="active">Preguntas</a>
-            <a href="faq.html" id="nav-faq-en" class="active">FAQ</a>
-
-            <a href="contact.html" id="nav-contact-es" style="display:none;">Contacto</a>
-            <a href="contact.html" id="nav-contact-en">Contact</a>
+                <a href="pricing.html" id="nav-pricing-en">Pricing</a>
+            <div class="nav-group active nav-dropdown-right">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-about">
+                    <span id="navg-about-label-es" style="display:none;">Acerca de</span><span id="navg-about-label-en">About</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-about">
+                <a href="about.html" id="navd-about-es" style="display:none;">Acerca de David</a>
+                <a href="about.html" id="navd-about-en">About David</a>
+                <a href="faq.html" id="navd-faq-es" aria-current="page" style="display:none;">Preguntas Frecuentes</a>
+                <a href="faq.html" id="navd-faq-en" aria-current="page">FAQ</a>
+                </div>
+            </div>
+            <a href="contact.html" id="nav-contact-es" class="nav-cta" style="display:none;">Reservar / Contacto</a>
+                <a href="contact.html" id="nav-contact-en" class="nav-cta">Book / Contact</a>
         </nav>
     </div>
 </header>
@@ -320,10 +343,10 @@
             </button>
             <div class="faq-answer">
                 <p id="a10-es" style="display:none;">
-                    El cargo móvil se cobra una sola vez por cita (no por sello) y se basa en el millaje de ida y vuelta desde mis centros de servicio. Se cotiza por adelantado para que sepa el costo total. La tarifa móvil es <strong>exenta</strong> si nos reunimos en una de mis ubicaciones de descuento especial (ej. MSU Denver o Tienda Salvadoreña).
+                    El cargo móvil se cobra una sola vez por cita (no por sello) y se basa en el millaje de ida y vuelta desde mis centros de servicio. Se cotiza por adelantado para que sepa el costo total. La tarifa móvil es <strong>exenta</strong> si nos reunimos en una de mis ubicaciones de descuento especial (Tienda Salvadoreña, MSU Denver en la Biblioteca Auraria o la Biblioteca Pública de Denver, Sam Gary), donde además la notarización cuesta $10 por acto.
                 </p>
                 <p id="a10-en">
-                    The mobile fee is charged once per appointment (not per seal) and is based on the round-trip mileage from my service hubs. It is quoted upfront so you know the total cost. The mobile fee is <strong>waived</strong> if we meet at one of my special discount locations (e.g., MSU Denver or Tienda Salvadoreña).
+                    The mobile fee is charged once per appointment (not per seal) and is based on the round-trip mileage from my service hubs. It is quoted upfront so you know the total cost. The mobile fee is <strong>waived</strong> if we meet at one of my special discount locations (Tienda Salvadoreña, MSU Denver at the Auraria Library, or Denver Public Library, Sam Gary), where notarization is also $10 per act.
                 </p>
             </div>
         </div>
@@ -375,8 +398,8 @@
 
         <h2 class="faq-section-title">
             <span class="section-number">4</span>
-            <span id="sec-4-title-es" style="display:none;">B2B, Bienes Raíces y Apostillas</span>
-            <span id="sec-4-title-en">B2B, Real Estate &amp; Apostilles</span>
+            <span id="sec-4-title-es" style="display:none;">Empresas, Abogados y Apostillas</span>
+            <span id="sec-4-title-en">Business, Attorneys &amp; Apostilles</span>
         </h2>
 
         <div class="faq-item">
@@ -416,87 +439,27 @@
             </button>
             <div class="faq-answer">
                 <p id="a14-es" style="display:none;">
-                    Sí. Ofrezco tres opciones: <strong>Servicio Completo</strong> (notarizo sus documentos y los llevo a la Secretaría de Estado; solo local), <strong>Mensajería Local en Denver</strong> y <strong>Mensajería Exprés Estatal</strong> para documentos ya notarizados. Entrego todo en mano en la Secretaría de Estado de Colorado en Denver. <a href="services.html#apostille">Vea las opciones</a> y <a href="pricing.html#apostille-pricing">los precios</a>.
+                    Sí. Ofrezco tres opciones: <strong>Servicio Completo</strong> (notarizo sus documentos y los llevo a la Secretaría de Estado; solo local), <strong>Mensajería Local en Denver</strong> y <strong>Mensajería Exprés Estatal</strong> para documentos ya notarizados. Entrego todo en mano en la Secretaría de Estado de Colorado en Denver. <a href="apostille.html">Vea las opciones, precios, la lista de requisitos y más preguntas sobre apostillas</a>.
                 </p>
                 <p id="a14-en">
-                    Yes. I offer three options: <strong>Full-Service</strong> (I notarize your documents and take them to the Secretary of State; local only), <strong>Local Denver Courier</strong>, and <strong>Statewide Expedited Courier</strong> for documents that are already notarized. I hand-deliver everything to the Colorado Secretary of State in Denver. <a href="services.html#apostille">See the options</a> and <a href="pricing.html#apostille-pricing">pricing</a>.
-                </p>
-            </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                <span id="q22-es" style="display:none;">¿Mis documentos deben estar notarizados antes de usar la mensajería?</span>
-                <span id="q22-en">Do my documents need to be notarized before I use the courier service?</span>
-            </button>
-            <div class="faq-answer">
-                <p id="a22-es" style="display:none;">
-                    Sí. La <strong>Mensajería Local en Denver</strong> y la <strong>Mensajería Exprés Estatal</strong> son solo para documentos que <strong>ya están notarizados por un notario de Colorado</strong>. No notarizo documentos que llegan por correo. Si todavía necesita la notarización, elija la <strong>Apostilla de Servicio Completo</strong> (solo local).
-                </p>
-                <p id="a22-en">
-                    Yes. The <strong>Local Denver Courier</strong> and <strong>Statewide Expedited Courier</strong> are only for documents that are <strong>already notarized by a Colorado notary</strong>. I do not notarize documents that arrive by mail. If you still need the notarization, choose the <strong>Full-Service Apostille</strong> (local only).
+                    Yes. I offer three options: <strong>Full-Service</strong> (I notarize your documents and take them to the Secretary of State; local only), <strong>Local Denver Courier</strong>, and <strong>Statewide Expedited Courier</strong> for documents that are already notarized. I hand-deliver everything to the Colorado Secretary of State in Denver. <a href="apostille.html">See the options, prices, requirements checklist, and apostille FAQ</a>.
                 </p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question">
-                <span id="q23-es" style="display:none;">¿Por qué la Secretaría de Estado rechaza documentos?</span>
-                <span id="q23-en">Why does the Secretary of State reject documents?</span>
+                <span id="q27-es" style="display:none;">¿Puede notarizar para un cliente detenido en el centro de ICE de Aurora?</span>
+                <span id="q27-en">Can you notarize for a client detained at the Aurora ICE facility?</span>
             </button>
             <div class="faq-answer">
-                <p id="a23-es" style="display:none;">
-                    Casi siempre por errores pequeños del notario: falta el <strong>condado</strong>, falta la <strong>fecha</strong>, el <strong>sello está incompleto o borroso</strong>, la redacción del certificado es incorrecta o quedan <strong>espacios en blanco</strong>. También rechazan copias que un notario no puede certificar, como actas de nacimiento. Revise la <a href="services.html#apostille-checklist">lista de requisitos</a> antes de enviar.
+                <p id="a27-es" style="display:none;">
+                    Sí, a petición del abogado de registro. El abogado me autoriza como su representante legal con el Formulario G-28, una carta de autorización y una copia de mi identificación, al menos 24 horas antes. Vea el proceso completo en la página para <a href="immigration-attorney-notary-aurora-ice.html">abogados de inmigración</a>.
                 </p>
-                <p id="a23-en">
-                    Almost always because of small notary mistakes: a missing <strong>county</strong>, a missing <strong>date</strong>, an <strong>incomplete or blurry stamp</strong>, wrong certificate wording, or <strong>blank spaces</strong> left in the document. They also reject copies a notary is not allowed to certify, such as birth certificates. Check the <a href="services.html#apostille-checklist">requirements list</a> before you send anything.
-                </p>
-            </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                <span id="q24-es" style="display:none;">¿Ofrece la Apostilla de Servicio Completo fuera de Denver o Castle Rock?</span>
-                <span id="q24-en">Do you offer the Full-Service Apostille outside Denver or Castle Rock?</span>
-            </button>
-            <div class="faq-answer">
-                <p id="a24-es" style="display:none;">
-                    El Servicio Completo es <strong>solo local</strong>: Castle Rock y el área metropolitana de Denver. Fuera de esta zona puedo ir si se paga la <a href="pricing.html#travel-fees">tarifa de millaje</a>. Si vive lejos, lo más fácil es notarizar sus documentos con un notario de Colorado cerca de usted y usar la <strong>Mensajería Exprés Estatal</strong>.
-                </p>
-                <p id="a24-en">
-                    Full-Service is <strong>local only</strong>: Castle Rock and the Denver Metro area. Outside this area I can travel if the <a href="pricing.html#travel-fees">mileage fee</a> is paid. If you live far away, the easiest option is to have your documents notarized by a Colorado notary near you and use the <strong>Statewide Expedited Courier</strong>.
+                <p id="a27-en">
+                    Yes, at the request of the attorney of record. The attorney clears me as their legal proxy with Form G-28, a Letter of Authorization, and a scan of my ID, at least 24 hours in advance. See the full process on the <a href="immigration-attorney-notary-aurora-ice.html">immigration attorneys</a> page.
                 </p>
             </div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                <span id="q25-es" style="display:none;">¿Puede apostillar un documento notarizado en otro estado?</span>
-                <span id="q25-en">Can you apostille a document notarized in another state?</span>
-            </button>
-            <div class="faq-answer">
-                <p id="a25-es" style="display:none;">
-                    No. La Secretaría de Estado de Colorado solo autentica firmas de notarios y funcionarios de <strong>Colorado</strong>. Un documento notarizado en otro estado debe enviarse a la Secretaría de Estado de ese estado. Los documentos federales (por ejemplo, del FBI) se autentican en el Departamento de Estado de EE. UU.
-                </p>
-                <p id="a25-en">
-                    No. The Colorado Secretary of State only authenticates signatures of <strong>Colorado</strong> notaries and officials. A document notarized in another state must go to that state's Secretary of State. Federal documents (for example, FBI background checks) are authenticated by the U.S. Department of State.
-                </p>
-            </div>
-
-        <div class="faq-item">
-            <button class="faq-question">
-                <span id="q26-es" style="display:none;">¿Qué aparece en mi recibo de apostilla?</span>
-                <span id="q26-en">What will my Apostille receipt show?</span>
-            </button>
-            <div class="faq-answer">
-                <p id="a26-es" style="display:none;">
-                    Cada cargo aparece por separado, de principio a fin: la <strong>notarización</strong> ($15 por acto notarial, el máximo legal de Colorado; en el Servicio Completo se detalla dentro de la tarifa base de $150), la tarifa del <strong>servicio de apostilla o mensajería</strong>, el <strong>traslado o millaje</strong> si aplica, las <strong>tarifas del Estado</strong> al costo ($15 mismo día o $5 estándar por documento) y el <strong>envío de regreso</strong> si aplica.
-                </p>
-                <p id="a26-en">
-                    Every charge is listed separately, start to finish: the <strong>notarization</strong> ($15 per notarial act, the Colorado maximum; for Full-Service it is itemized within the $150 base), the <strong>apostille or courier service</strong> fee, <strong>travel or mileage</strong> if it applies, <strong>State fees</strong> at cost ($15 same-day or $5 standard per document), and <strong>return shipping</strong> if it applies.
-                </p>
-            </div>
-        </div>
-        </div>
         </div>
 
         <h2 class="faq-section-title">
@@ -589,63 +552,92 @@
 </main>
 
 <footer>
-<div class="contact-info">
-    <div class="contact-item">
-        <strong id="contact-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
-        <strong id="contact-call-en">Call/Text Me:</strong>
-        <a href="tel:+13035004122">303-500-4122</a>
+    <nav class="footer-sitemap" aria-label="Site">
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-svc-title-es" style="display:none;">Servicios</span><span id="ft-svc-title-en">Services</span></h2>
+            <ul>
+                <li><a href="services.html" id="ft-svc-mobile-es" style="display:none;">Notario Móvil</a><a href="services.html" id="ft-svc-mobile-en">Mobile Notary</a></li>
+                <li><a href="apostille.html" id="ft-svc-apost-es" style="display:none;">Apostillas</a><a href="apostille.html" id="ft-svc-apost-en">Apostilles</a></li>
+                <li><a href="translate.html" id="ft-svc-transl-es" style="display:none;">Traducciones Certificadas</a><a href="translate.html" id="ft-svc-transl-en">Certified Translations</a></li>
+                <li><a href="airport-notarizations.html" id="ft-svc-airport-es" style="display:none;">Notario en el Aeropuerto (DIA)</a><a href="airport-notarizations.html" id="ft-svc-airport-en">Airport Notary (DIA)</a></li>
+                <li><a href="services.html#passport-i9" id="ft-svc-passport-es" style="display:none;">Ayuda con Pasaporte e I-9</a><a href="services.html#passport-i9" id="ft-svc-passport-en">Passport &amp; I-9 Help</a></li>
+                <li><a href="pricing.html" id="ft-svc-pricing-es" style="display:none;">Precios</a><a href="pricing.html" id="ft-svc-pricing-en">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-biz-title-es" style="display:none;">Para Empresas</span><span id="ft-biz-title-en">For Business</span></h2>
+            <ul>
+                <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
+                <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Notarios</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-co-title-es" style="display:none;">Acerca de</span><span id="ft-co-title-en">About</span></h2>
+            <ul>
+                <li><a href="about.html" id="ft-co-about-es" style="display:none;">Acerca de David</a><a href="about.html" id="ft-co-about-en">About David</a></li>
+                <li><a href="faq.html" id="ft-co-faq-es" style="display:none;">Preguntas Frecuentes</a><a href="faq.html" id="ft-co-faq-en">FAQ</a></li>
+                <li><a href="contact.html#locations" id="ft-co-contact-es" style="display:none;">Contacto y Ubicaciones</a><a href="contact.html#locations" id="ft-co-contact-en">Contact &amp; Locations</a></li>
+                <li><a href="privacy.html" id="ft-co-privacy-es" style="display:none;">Política de Privacidad</a><a href="privacy.html" id="ft-co-privacy-en">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contact-info">
+        <div class="contact-item">
+            <strong id="ft-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
+            <strong id="ft-call-en">Call/Text Me:</strong>
+            <a href="tel:+13035004122">303-500-4122</a>
+        </div>
+        <div class="contact-item">
+            <strong id="ft-email-es" style="display:none;">Correo Electrónico:</strong>
+            <strong id="ft-email-en">Email:</strong>
+            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+        </div>
     </div>
-    <div class="contact-item">
-        <strong id="contact-email-es" style="display:none;">Correo Electrónico:</strong>
-        <strong id="contact-email-en">Email:</strong>
-        <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+
+    <p id="footer-main-es" style="display:none;">
+        © 2026 Quintana Notary &amp; Signing<br/>
+        Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
+        Precios transparentes · Servicio bilingüe · Enfoque comunitario
+    </p>
+    <p id="footer-main-en">
+        © 2026 Quintana Notary &amp; Signing<br/>
+        A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
+        Transparent pricing · Bilingual service · Community focused
+    </p>
+
+    <div class="disclaimer">
+        <div id="disclaimer-es" style="display:none;">
+            <strong>Aviso Legal (ES)</strong><br/>
+            Quintana Notary &amp; Signing presta servicios notariales, de traducción certificada y de apoyo administrativo de conformidad con la ley de Colorado (C.R.S. § 24-21-525 y § 24-21-529).
+            Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong>; las tarifas de viaje, conveniencia y servicios administrativos son separadas y se acuerdan con el cliente por anticipado.
+            Los notarios no son abogados y no pueden brindar asesoría ni representación legal.
+            No estoy afiliado con ninguna agencia gubernamental local, estatal ni federal.
+        </div>
+        <div id="disclaimer-en">
+            <strong>Legal Notice (EN)</strong><br/>
+            Quintana Notary &amp; Signing provides notary, certified translation, and administrative support services in accordance with Colorado law (C.R.S. § 24-21-525 and § 24-21-529).
+            Statutory notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong>; travel, convenience, and clerical service fees are separate and agreed upon with the client in advance.
+            Notaries are not attorneys and cannot provide legal advice or legal representation.
+            I am not affiliated with any local, state, or federal government agency.
+        </div>
     </div>
-</div>
 
-<p id="footer-main-es" style="display:none;">
-    © 2026 Quintana Notary &amp; Signing<br/>
-    Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-    Precios transparentes · Servicio bilingüe · Enfoque comunitario
-</p>
-
-<p id="footer-main-en">
-    © 2026 Quintana Notary &amp; Signing<br/>
-    A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-    Transparent pricing · Bilingual service · Community focused
-</p>
-
-<div class="disclaimer">
-    <div id="disclaimer-es" style="display:none;">
-        <strong>Aviso Legal (ES)</strong><br/>
-        Quintana Notary &amp; Signing ofrece servicios notariales y de traducción certificada en cumplimiento con la ley de Colorado.
-        Los honorarios notariales están limitados por ley a $15 por documento.
-        Las tarifas de viaje y conveniencia son adicionales y siempre se informan por escrito antes de la cita.
-        No soy un abogado licenciado para ejercer el derecho en Colorado y no puedo brindar asesoría legal.
+    <div class="back-to-top-container">
+        <a href="#top" class="btn btn-secondary">
+            <span id="back-top-es" style="display:none;">Volver Arriba</span>
+            <span id="back-top-en">Back to Top</span>
+        </a>
     </div>
-
-    <div id="disclaimer-en">
-        <strong>Legal Notice (EN)</strong><br/>
-        Quintana Notary &amp; Signing provides notary and certified translation services in accordance with Colorado law.
-        Statutory notary fees are limited to $15 per notarized document.
-        Mobile travel and convenience fees are separate and always disclosed in writing before the appointment.
-        I am not an attorney licensed to practice law in Colorado and cannot provide legal advice.
-    </div>
-</div>
-
-<div class="back-to-top-container">
-    <a href="#top" class="btn btn-secondary">
-        <span id="back-top-es" style="display:none;">Volver Arriba</span>
-        <span id="back-top-en">Back to Top</span>
-    </a>
-</div>
-
-<p class="footer-legal-links">
-    <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de Privacidad</a>
-    <a href="privacy.html" id="footer-privacy-en">Privacy Policy</a>
-    ·
-    <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de Cookies</a>
-    <a href="#" data-cookie-settings id="footer-cookies-en">Cookie Settings</a>
-</p>
+    <p class="footer-legal-links">
+        <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de Privacidad</a>
+        <a href="privacy.html" id="footer-privacy-en">Privacy Policy</a>
+        ·
+        <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de Cookies</a>
+        <a href="#" data-cookie-settings id="footer-cookies-en">Cookie Settings</a>
+    </p>
 </footer>
 
 <script src="script.js"></script>

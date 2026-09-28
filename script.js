@@ -476,6 +476,76 @@
   })();
 
   // ==========================================================
+  // GROUPED NAV (Services / For Business / About)
+  // Phones: tap a group to expand it inside the menu.
+  // Desktop: hover or focus opens the panel; click toggles it.
+  // ==========================================================
+  const NavGroups = (function () {
+    function setOpen(group, open) {
+      group.classList.toggle('open', open);
+      const btn = group.querySelector('.nav-group-btn');
+      if (btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    function closeAll(except) {
+      document.querySelectorAll('.nav-group.open').forEach(function (g) {
+        if (g !== except) setOpen(g, false);
+      });
+    }
+    function init() {
+      document.querySelectorAll('.nav-group-btn').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const group = btn.closest('.nav-group');
+          const willOpen = !group.classList.contains('open');
+          closeAll(group);
+          setOpen(group, willOpen);
+        });
+      });
+      document.addEventListener('click', function (e) {
+        if (window.innerWidth >= 1200 && !e.target.closest('.nav-group')) closeAll();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && window.innerWidth >= 1200) {
+          const open = document.querySelector('.nav-group.open');
+          closeAll();
+          if (open) { const b = open.querySelector('.nav-group-btn'); if (b) b.focus(); }
+        }
+      });
+      // Phones: open the group that contains the current page
+      if (window.innerWidth < 1200) {
+        const current = document.querySelector('.nav-group.active');
+        if (current) setOpen(current, true);
+      }
+    }
+    return { init: init };
+  })();
+
+  // ==========================================================
+  // LANGUAGE-AWARE ANCHORS
+  // Some sections exist once per language (id="x-es" / "x-en").
+  // A link to "#x" scrolls to the version currently shown.
+  // ==========================================================
+  const LangAnchors = (function () {
+    function target(hash) {
+      if (!hash || hash.length < 2) return null;
+      const id = decodeURIComponent(hash.slice(1));
+      if (document.getElementById(id)) return null; // normal anchor, browser handles it
+      const lang = document.documentElement.getAttribute('data-lang') || 'es';
+      return document.getElementById(id + '-' + lang);
+    }
+    function go(hash, smooth) {
+      const el = target(hash);
+      if (el) el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    }
+    function init() {
+      if (location.hash) setTimeout(function () { go(location.hash, false); }, 60);
+      window.addEventListener('hashchange', function () { go(location.hash, true); });
+    }
+    return { init: init };
+  })();
+
+  // ==========================================================
   // BOOTSTRAP — wire everything up once the DOM is ready
   // ==========================================================
   document.addEventListener('DOMContentLoaded', function () {
@@ -493,9 +563,11 @@
       });
     });
 
-    // 3. Mobile nav + keyboard trap
+    // 3. Mobile nav + keyboard trap + grouped dropdowns
     MobileMenu.init();
     MenuKeyboardTrap.init();
+    NavGroups.init();
+    LangAnchors.init();
 
     // 4. Sticky header offset (initial + on resize)
     HeaderOffset.init();

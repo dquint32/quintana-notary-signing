@@ -1579,3 +1579,192 @@ footer strong  { color: var(--white); }
 @media (max-width: 699px) { .profile-card { flex-direction: column; } .profile-img { width: 100%; max-height: 380px; border-radius: var(--r-lg) var(--r-lg) 0 0; } }
 .pricing-card-header h3 { min-width: 12rem; }
 .pricing-card-header > p { flex-basis: 100%; }
+
+/* ============================================================
+   GROUPED NAVIGATION, FOOTER SITEMAP & JUMP LINKS  (2026-09-28)
+   Mobile-first: base rules are for phones; the desktop dropdown
+   layout switches on at the same 1200px breakpoint as the menu.
+   ============================================================ */
+
+/* ---- Phone / tablet: full-screen menu with accordion groups ---- */
+#main-nav { justify-content: flex-start; }
+
+.nav-group { width: 100%; max-width: 320px; }
+
+.nav-group-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 48px;                 /* comfortable tap target */
+  padding: 0.8rem 1.2rem;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-md);
+  color: var(--white);
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.nav-group-btn:hover,
+.nav-group.open > .nav-group-btn,
+.nav-group.active > .nav-group-btn { background: rgba(255,255,255,0.12); }
+.nav-group-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+.nav-caret {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform var(--transition-fast);
+}
+.nav-group.open .nav-caret { transform: rotate(-135deg) translateY(-2px); }
+
+.nav-dropdown { display: none; padding: 0.25rem 0 0.5rem; }
+.nav-group.open .nav-dropdown { display: block; }
+
+#main-nav .nav-dropdown a {
+  max-width: none;
+  min-height: 44px;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.65rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0;
+}
+#main-nav .nav-dropdown a:hover,
+#main-nav .nav-dropdown a[aria-current="page"] { background: rgba(255,255,255,0.14); }
+
+#main-nav a.nav-cta {
+  margin-top: var(--space-3);
+  background: var(--orange);
+  border-bottom: none;
+}
+#main-nav a.nav-cta:hover { background: #B34600; }
+
+/* ---- Desktop: horizontal bar with drop-down panels ---- */
+@media (min-width: 1200px) {
+  .nav-group { position: relative; width: auto; max-width: none; }
+
+  .nav-group-btn {
+    width: auto;
+    min-height: 0;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.85rem;
+    border-bottom: none;
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+    gap: 0.4rem;
+  }
+  .nav-caret { width: 0.4rem; height: 0.4rem; }
+
+  .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    padding: 0.4rem;
+    background: var(--white);
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-md);
+    z-index: 1100;
+  }
+  .nav-dropdown-right .nav-dropdown { left: auto; right: 0; }
+  /* hover bridge so the panel doesn't close crossing the gap */
+  .nav-dropdown::before { content: ""; position: absolute; left: 0; right: 0; top: -8px; height: 8px; }
+
+  .nav-group:hover .nav-dropdown,
+  .nav-group:focus-within .nav-dropdown,
+  .nav-group.open .nav-dropdown { display: block; }
+
+  #main-nav .nav-dropdown a {
+    color: var(--navy-dark) !important;
+    background: none;
+    font-size: 0.9rem;
+    min-height: 0;
+    padding: 0.55rem 0.75rem;
+    border-bottom: none;
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+    text-align: left;
+  }
+  #main-nav .nav-dropdown a::after { display: none; }
+  #main-nav .nav-dropdown a:hover { background: var(--teal-light); }
+  #main-nav .nav-dropdown a[aria-current="page"] {
+    background: var(--teal-light);
+    border-left: 3px solid var(--orange);
+  }
+
+  #main-nav a.nav-cta { margin: 0 0 0 0.4rem; padding: 0.45rem 0.9rem; }
+  #main-nav a.nav-cta::after { display: none; }
+}
+
+/* ---- Footer site links: 1 column on phones, 3 on wider screens ---- */
+.footer-sitemap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  max-width: 960px;
+  margin: 0 auto var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  text-align: left;
+}
+.footer-col-title {
+  color: var(--white);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+.footer-col ul { list-style: none; margin: 0; padding: 0; }
+.footer-col li a {
+  display: inline-block;
+  padding: 0.45rem 0;               /* ~44px tall rows on phones */
+  min-height: 44px;
+  line-height: 1.8;
+}
+@media (min-width: 600px) {
+  .footer-sitemap { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+  .footer-col li a { min-height: 0; padding: 0.15rem 0; }
+}
+
+/* ---- "Jump to" links on long pages (wrap into pills on phones) ---- */
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gray-mid);
+}
+.jump-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--navy);
+  text-decoration: none;
+}
+.jump-links a:hover { background: var(--teal-light); border-color: var(--teal); }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-caret, .nav-group-btn { transition: none; }
+}
+/* Bigger tap targets for the footer phone/email links on phones */
+footer .contact-item a { display: inline-block; padding: 0.6rem 0.25rem; }
+@media (min-width: 600px) { footer .contact-item a { padding: 0.15rem 0.25rem; } }
