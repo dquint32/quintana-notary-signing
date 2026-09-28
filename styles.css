@@ -844,7 +844,7 @@ main a:not(.btn):focus-visible {
   margin: var(--space-5) 0;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
   .service-grid, .why-reasons, .pricing-cards, .premium-services,
   .discount-locations, .quick-links, .values-grid, .guidelines-grid,
   .travel-tiers, .checklist-grid, .location-cards {
@@ -852,7 +852,7 @@ main a:not(.btn):focus-visible {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 960px) {
   .service-grid, .why-reasons, .discount-locations, .values-grid, .guidelines-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1316,7 +1316,7 @@ tbody td { padding: 0.8rem 1rem; vertical-align: top; color: var(--gray); }
 
 /* Mobile-first: on phones each table row becomes a stacked card
    (title, then price, then details) so nothing runs off the screen. */
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   table, thead, tbody, tr, td { display: block; width: 100%; }
   table { min-width: 0; box-shadow: none; background: transparent; }
   thead { display: none; }
@@ -1570,3 +1570,12 @@ footer strong  { color: var(--white); }
 .apostille-checklist h4 { color: var(--navy); margin-bottom: var(--space-2); }
 .apostille-checklist .checklist-grid { margin: var(--space-3) 0; }
 .b2b-sub { color: var(--navy); margin: var(--space-5) 0 0; }
+.itemized-receipt ul { margin: 0.5rem 0 0; padding-left: 1.5rem; }
+.itemized-receipt li { margin-bottom: 0.3rem; }
+/* Legibility: never squeeze text into thin columns */
+.profile-details { flex: 1 1 auto; min-width: 0; }
+.profile-img { object-fit: cover; }
+@media (min-width: 700px) { .profile-img { width: 300px; flex: 0 0 300px; } }
+@media (max-width: 699px) { .profile-card { flex-direction: column; } .profile-img { width: 100%; max-height: 380px; border-radius: var(--r-lg) var(--r-lg) 0 0; } }
+.pricing-card-header h3 { min-width: 12rem; }
+.pricing-card-header > p { flex-basis: 100%; }
