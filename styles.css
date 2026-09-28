@@ -1313,10 +1313,22 @@ tbody tr:last-child { border-bottom: none; }
 tbody tr:nth-child(even) { background: var(--gray-light); }
 tbody td { padding: 0.8rem 1rem; vertical-align: top; color: var(--gray); }
 
+/* Mobile-first: on phones each table row becomes a stacked card
+   (title, then price, then details) so nothing runs off the screen. */
 @media (max-width: 599px) {
-  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table { min-width: 480px; }
-  section table { display: block; overflow-x: auto; white-space: nowrap; }
+  table, thead, tbody, tr, td { display: block; width: 100%; }
+  table { min-width: 0; box-shadow: none; background: transparent; }
+  thead { display: none; }
+  tbody tr {
+    background: var(--white) !important;
+    border: 1px solid var(--border-gray) !important;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-xs);
+    padding: 0.85rem 1rem;
+    margin-bottom: var(--space-3);
+  }
+  tbody td { padding: 0.15rem 0 !important; white-space: normal; }
+  tbody td:first-child { font-size: 1rem; color: var(--navy); }
 }
 
 /* ============================================================
@@ -1531,3 +1543,13 @@ footer strong  { color: var(--white); }
 @media (min-width: 960px) {
   .apostille-tiers, .apostille-workflows { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* ============================================================
+   MOBILE-FIRST SAFETY NET
+   Keeps long words, emails and badges inside small screens.
+   ============================================================ */
+.hero-content { width: 100%; min-width: 0; }
+.hero-badge { flex-wrap: wrap; justify-content: center; max-width: 100%; white-space: normal; }
+.contact-item { flex-wrap: wrap; justify-content: center; text-align: center; max-width: 100%; }
+.contact-item a, footer a[href^="mailto:"] { overflow-wrap: anywhere; }
+.card, .card > *, .profile-details { min-width: 0; }
