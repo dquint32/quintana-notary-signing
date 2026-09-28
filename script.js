@@ -179,13 +179,13 @@
       if (navEl) {
         navEl.querySelectorAll('a').forEach(function (link) {
           link.addEventListener('click', function () {
-            if (window.innerWidth < 860) close();
+            if (window.innerWidth < 1200) close();
           });
         });
       }
 
       window.addEventListener('resize', function () {
-        if (window.innerWidth >= 860) close();
+        if (window.innerWidth >= 1200) close();
       });
     }
 

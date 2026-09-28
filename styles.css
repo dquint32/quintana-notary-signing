@@ -448,7 +448,7 @@ header {
 }
 #main-nav a[aria-current="page"] { border-left: 3px solid var(--orange); }
 
-@media (min-width: 860px) {
+@media (min-width: 1200px) {
   .hamburger { display: none; }
 
   #main-nav {
@@ -457,7 +457,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.1rem;
     background: transparent;
     padding: 0;
@@ -468,8 +468,9 @@ header {
   #main-nav a {
     width: auto;
     max-width: none;
-    font-size: 0.88rem;
-    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.55rem;
+    white-space: nowrap;
     border-bottom: none;
     border-left: none;
     border-radius: var(--r-sm);
@@ -674,13 +675,13 @@ main a:not(.btn):focus-visible {
 }
 
 /* Desktop nav: orange sliding underline on hover / focus / active */
-@media (min-width: 860px) {
+@media (min-width: 1200px) {
   #main-nav a { position: relative; }
   #main-nav a::after {
     content: "";
     position: absolute;
-    left: 0.75rem;
-    right: 0.75rem;
+    left: 0.55rem;
+    right: 0.55rem;
     bottom: 0.2rem;
     height: 2px;
     background: var(--orange);
@@ -1553,3 +1554,18 @@ footer strong  { color: var(--white); }
 .contact-item { flex-wrap: wrap; justify-content: center; text-align: center; max-width: 100%; }
 .contact-item a, footer a[href^="mailto:"] { overflow-wrap: anywhere; }
 .card, .card > *, .profile-details { min-width: 0; }
+
+/* Apostille labels & checklist */
+.tag-local, .tag-required {
+  display: inline-block; vertical-align: middle;
+  font: 700 0.7rem/1.2 'Inter', sans-serif; letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 0.2rem 0.5rem; border-radius: var(--r-pill); margin-left: 0.25rem;
+}
+.tag-local    { background: var(--teal-light); color: var(--teal-dark); }
+.tag-required { background: var(--orange-light); color: #8A3A00; }
+.workflow-note { font-size: 0.9rem; background: var(--teal-light); border-radius: var(--r-md); padding: 0.5rem 0.75rem; margin: 0.25rem 0; }
+.workflow-note.required { background: var(--orange-light); }
+.apostille-checklist { margin-top: var(--space-5); }
+.apostille-checklist h3 { text-align: center; }
+.apostille-checklist h4 { color: var(--navy); margin-bottom: var(--space-2); }
+.apostille-checklist .checklist-grid { margin: var(--space-3) 0; }
