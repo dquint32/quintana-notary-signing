@@ -1569,3 +1569,4 @@ footer strong  { color: var(--white); }
 .apostille-checklist h3 { text-align: center; }
 .apostille-checklist h4 { color: var(--navy); margin-bottom: var(--space-2); }
 .apostille-checklist .checklist-grid { margin: var(--space-3) 0; }
+.b2b-sub { color: var(--navy); margin: var(--space-5) 0 0; }
