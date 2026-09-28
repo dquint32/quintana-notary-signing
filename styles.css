@@ -1522,7 +1522,9 @@ footer strong  { color: var(--white); }
 .workflow-best { font-size: 0.92rem; color: var(--gray-mid); }
 .workflow-price-link { font-weight: 600; }
 .tier-cta { margin-top: auto; padding-top: var(--space-3); display: flex; flex-direction: column; gap: 0.4rem; }
-.tier-cta .btn { width: 100%; white-space: normal; }
+.tier-cta-label { margin: 0; font-weight: 700; color: var(--navy); text-align: center; }
+.tier-cta-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.tier-cta .btn { width: 100%; white-space: normal; padding-left: 0.75rem; padding-right: 0.75rem; }
 .tier-cta-alt { margin: 0; font-size: 0.85rem; color: var(--gray-mid); text-align: center; }
 .tier-fine { font-size: 0.85rem; color: var(--gray-mid); margin: 0.25rem 0; }
 .consumer-apostille-link { margin-top: var(--space-5); font-weight: 600; }
