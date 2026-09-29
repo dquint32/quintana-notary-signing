@@ -4,7 +4,7 @@ This repository contains the source code and assets for a bilingual (Spanish/Eng
 
 📘 About the Project  
 Business: Quintana Notary & Signing – Mobile Notary & Translation Services  
-Location: Castle Rock, Highlands Ranch, Aurora, and Denver Metro Area  
+Location: Denver Metro Area (including Aurora and Highlands Ranch)  
 Founder: David Quintana, Senior in Human-Centered Information Systems (HCIS), MSU Denver  
 This project demonstrates:
 
