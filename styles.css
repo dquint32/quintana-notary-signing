@@ -1768,3 +1768,158 @@ footer strong  { color: var(--white); }
 /* Bigger tap targets for the footer phone/email links on phones */
 footer .contact-item a { display: inline-block; padding: 0.6rem 0.25rem; }
 @media (min-width: 600px) { footer .contact-item a { padding: 0.15rem 0.25rem; } }
+
+
+/* ============================================================
+   DARK THEME + THEME TOGGLE  (2026-09-28)
+   Light is the designed default. html[data-theme="dark"] flips
+   the neutral tokens; the generated block below re-colours rules
+   that use brand colours as TEXT (too dark on a dark page) and
+   turns white surfaces into dark cards. Brand backgrounds (navy
+   header, orange/teal buttons) are kept as they are.
+   ============================================================ */
+.theme-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.theme-btn:hover { background: rgba(255,255,255,0.18); }
+.theme-btn:active { transform: scale(0.94); }
+.theme-btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+.theme-btn .icon-sun { display: none; }
+html[data-theme="dark"] .theme-btn .icon-sun { display: block; }
+html[data-theme="dark"] .theme-btn .icon-moon { display: none; }
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --surface:      #172131;
+  --gray-light:   #0e1420;
+  --gray-dark:    #e6ebf2;
+  --gray:         #d0d7e2;
+  --gray-mid:     #a9b4c4;
+  --border-gray:  #2b3647;
+  --teal-light:   #133532;
+  --teal-dark:    #80d8ca;
+  --orange-light: #33210f;
+  --green-light:  #14301c;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.45);
+  --shadow-md: 0 4px 14px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 28px rgba(0,0,0,0.55);
+}
+:root { --surface: #FFFFFF; --teal-ink: #00796B; --wa-green: #0E7A3E; }
+html[data-theme="dark"] { --teal-ink: #4fd1c0; }
+
+/* WhatsApp buttons: white text on bright #25D366 is only 2:1.
+   A deeper WhatsApp green keeps the brand and passes 4.5:1 in both themes. */
+.btn-whatsapp, .top-help-btn-whatsapp, .whatsapp-float { background: var(--wa-green) !important; border-color: var(--wa-green) !important; }
+.btn-whatsapp:hover, .top-help-btn-whatsapp:hover, .whatsapp-float:hover { background: #0A6231 !important; border-color: #0A6231 !important; }
+
+/* headings & links */
+:where(html[data-theme="dark"]) :is(h1, h2, h3, h4, h5, h6) { color: #9dbcff; }
+:where(html[data-theme="dark"]) main a:not(.btn) { color: #7fd8ca; }
+:where(html[data-theme="dark"]) main a:not(.btn):hover { color: #b2ece3; }
+
+/* inline style="" colours in the pages */
+html[data-theme="dark"] [style*="color:VAR(--NAVY)"], html[data-theme="dark"] [style*="color: VAR(--NAVY)"], html[data-theme="dark"] [style*="color:var(--navy)"], html[data-theme="dark"] [style*="color: var(--navy)"] { color: #9dbcff !important; }
+html[data-theme="dark"] [style*="color:VAR(--TEAL-DARK)"], html[data-theme="dark"] [style*="color: VAR(--TEAL-DARK)"], html[data-theme="dark"] [style*="color:var(--teal-dark)"], html[data-theme="dark"] [style*="color: var(--teal-dark)"] { color: #80d8ca !important; }
+html[data-theme="dark"] [style*="color:VAR(--TEAL)"], html[data-theme="dark"] [style*="color: VAR(--TEAL)"], html[data-theme="dark"] [style*="color:var(--teal)"], html[data-theme="dark"] [style*="color: var(--teal)"] { color: #4fd1c0 !important; }
+html[data-theme="dark"] [style*="color:VAR(--TEAL-LIGHT)"], html[data-theme="dark"] [style*="color: VAR(--TEAL-LIGHT)"], html[data-theme="dark"] [style*="color:var(--teal-light)"], html[data-theme="dark"] [style*="color: var(--teal-light)"] { color: #E0F2F1 !important; }
+html[data-theme="dark"] [style*="color:VAR(--GREEN)"], html[data-theme="dark"] [style*="color: VAR(--GREEN)"], html[data-theme="dark"] [style*="color:var(--green)"], html[data-theme="dark"] [style*="color: var(--green)"] { color: #86d993 !important; }
+html[data-theme="dark"] [style*="color:VAR(--ORANGE)"], html[data-theme="dark"] [style*="color: VAR(--ORANGE)"], html[data-theme="dark"] [style*="color:var(--orange)"], html[data-theme="dark"] [style*="color: var(--orange)"] { color: #ff9a52 !important; }
+html[data-theme="dark"] [style*="color:#7A2800"], html[data-theme="dark"] [style*="color: #7A2800"], html[data-theme="dark"] [style*="color:#7a2800"], html[data-theme="dark"] [style*="color: #7a2800"], html[data-theme="dark"] [style*="color:rgb(122, 40, 0)"], html[data-theme="dark"] [style*="color: rgb(122, 40, 0)"] { color: #ffb584 !important; }
+html[data-theme="dark"] [style*="color:#5A3700"], html[data-theme="dark"] [style*="color: #5A3700"], html[data-theme="dark"] [style*="color:#5a3700"], html[data-theme="dark"] [style*="color: #5a3700"], html[data-theme="dark"] [style*="color:rgb(90, 55, 0)"], html[data-theme="dark"] [style*="color: rgb(90, 55, 0)"] { color: #f3c98b !important; }
+html[data-theme="dark"] [style*="color:#333"], html[data-theme="dark"] [style*="color: #333"], html[data-theme="dark"] [style*="color:rgb(51, 51, 51)"], html[data-theme="dark"] [style*="color: rgb(51, 51, 51)"] { color: #d0d7e2 !important; }
+html[data-theme="dark"] [style*="color:#1B5E20"], html[data-theme="dark"] [style*="color: #1B5E20"], html[data-theme="dark"] [style*="color:#1b5e20"], html[data-theme="dark"] [style*="color: #1b5e20"], html[data-theme="dark"] [style*="color:rgb(27, 94, 32)"], html[data-theme="dark"] [style*="color: rgb(27, 94, 32)"] { color: #9be3a6 !important; }
+html[data-theme="dark"] [style*="color:#004D40"], html[data-theme="dark"] [style*="color: #004D40"], html[data-theme="dark"] [style*="color:#004d40"], html[data-theme="dark"] [style*="color: #004d40"], html[data-theme="dark"] [style*="color:rgb(0, 77, 64)"], html[data-theme="dark"] [style*="color: rgb(0, 77, 64)"] { color: #80d8ca !important; }
+html[data-theme="dark"] [style*="background:WHITE"], html[data-theme="dark"] [style*="background: WHITE"], html[data-theme="dark"] [style*="background:white"], html[data-theme="dark"] [style*="background: white"], html[data-theme="dark"] [style*="background:#FFF"], html[data-theme="dark"] [style*="background: #FFF"], html[data-theme="dark"] [style*="background:#fff"], html[data-theme="dark"] [style*="background: #fff"], html[data-theme="dark"] [style*="background:rgb(255, 255, 255)"], html[data-theme="dark"] [style*="background: rgb(255, 255, 255)"] { background: var(--surface) !important; }
+html[data-theme="dark"] [style*="border-left:3PX SOLID #5A3700"], html[data-theme="dark"] [style*="border-left: 3PX SOLID #5A3700"], html[data-theme="dark"] [style*="border-left:3px solid #5A3700"], html[data-theme="dark"] [style*="border-left: 3px solid #5A3700"], html[data-theme="dark"] [style*="border-left:3px solid #5a3700"], html[data-theme="dark"] [style*="border-left: 3px solid #5a3700"] { border-left-color: #f3c98b !important; }
+/* FAQ page: the in-page "Back to Top" button inherited the footer's white text (invisible on the page) */
+main .back-to-top-container .btn-secondary { color: var(--teal) !important; border-color: var(--teal); }
+main .back-to-top-container .btn-secondary:hover { color: var(--white) !important; }
+:where(html[data-theme="dark"]) main .back-to-top-container .btn-secondary { color: #4fd1c0 !important; border-color: #4fd1c0; }
+
+/* photos & logos stay natural; white logo plates stay white */
+html[data-theme="dark"] img { color-scheme: light; }
+
+/* ---- generated from the rules above ---- */
+:where(html[data-theme="dark"]) a { color: #4fd1c0; }
+:where(html[data-theme="dark"]) h1, :where(html[data-theme="dark"]) h2, :where(html[data-theme="dark"]) h3, :where(html[data-theme="dark"]) h4, :where(html[data-theme="dark"]) h5, :where(html[data-theme="dark"]) h6 { color: #9dbcff; }
+:where(html[data-theme="dark"]) strong { color: #9dbcff; }
+:where(html[data-theme="dark"]) .btn-primary { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .btn-primary:hover { background: #004D40; border-color: #004D40; color: var(--white) !important; }
+:where(html[data-theme="dark"]) .btn-secondary { color: #4fd1c0 !important; }
+:where(html[data-theme="dark"]) .btn-secondary:hover { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .btn-whatsapp { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .btn-whatsapp:hover { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .statutory-bar strong { color: #fff; }
+:where(html[data-theme="dark"]) .appointment-bar strong { color: #ff9a52; }
+:where(html[data-theme="dark"]) .scroll-top-btn { color: var(--white); }
+:where(html[data-theme="dark"]) .hero .btn-primary, :where(html[data-theme="dark"]) .hero-content .btn-primary { color: #004D40 !important; }
+:where(html[data-theme="dark"]) .hero .btn-primary:hover, :where(html[data-theme="dark"]) .hero-content .btn-primary:hover { background: #E0F2F1; border-color: #E0F2F1; }
+:where(html[data-theme="dark"]) .card { background: var(--surface); }
+:where(html[data-theme="dark"]) .discount-badge { color: #86d993; }
+:where(html[data-theme="dark"]) .section { background: var(--surface); }
+:where(html[data-theme="dark"]) .section-number, :where(html[data-theme="dark"]) span.section-number { color: var(--white); }
+:where(html[data-theme="dark"]) .section-subtitle.green { color: #86d993; }
+:where(html[data-theme="dark"]) .premium-badge { color: var(--white); }
+:where(html[data-theme="dark"]) .premium-price { color: #9dbcff; }
+:where(html[data-theme="dark"]) .location-badge.discount { color: var(--white); }
+:where(html[data-theme="dark"]) .location-badge.free { color: var(--white); }
+:where(html[data-theme="dark"]) .discount-value.waived { color: #86d993; }
+:where(html[data-theme="dark"]) .tier-badge { color: var(--white); }
+:where(html[data-theme="dark"]) .tier-price { color: #9dbcff; }
+:where(html[data-theme="dark"]) .info-box strong { color: #9dbcff; }
+:where(html[data-theme="dark"]) .info-box-orange strong { color: #f3c98b; }
+:where(html[data-theme="dark"]) .warning-box { background: #2e2614; }
+:where(html[data-theme="dark"]) .warning-box h3 { color: #e7c9b8; }
+:where(html[data-theme="dark"]) .checklist-col h3 { color: #9dbcff; }
+:where(html[data-theme="dark"]) .cross-list li::before { color: #ff8a80; }
+:where(html[data-theme="dark"]) .simple-list li::before { color: #4fd1c0; }
+:where(html[data-theme="dark"]) .cta-card { background: linear-gradient(135deg, #004D40 0%, var(--navy) 100%); }
+:where(html[data-theme="dark"]) .cta-card .btn-primary { color: #004D40 !important; }
+:where(html[data-theme="dark"]) .cta-card .btn-primary:hover { background: #E0F2F1; border-color: #E0F2F1; }
+:where(html[data-theme="dark"]) .verification-banner { background: var(--surface); }
+:where(html[data-theme="dark"]) .verification-banner h3 { color: #9dbcff !important; }
+:where(html[data-theme="dark"]) .commission-details .separator { color: #8b95a5; }
+:where(html[data-theme="dark"]) .verification-action .btn { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .verification-action .btn:hover { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .profile-card { background: var(--surface); }
+:where(html[data-theme="dark"]) .faq-section-title { color: #9dbcff; }
+:where(html[data-theme="dark"]) .faq-question { background: var(--surface); color: #9dbcff; }
+:where(html[data-theme="dark"]) .faq-question::after { color: #4fd1c0; }
+:where(html[data-theme="dark"]) .faq-answer { background: var(--surface); }
+:where(html[data-theme="dark"]) thead tr { color: var(--white); }
+:where(html[data-theme="dark"]) thead th { color: var(--white); }
+@media (max-width: 767px) { :where(html[data-theme="dark"]) tbody tr { background: var(--surface) !important; } }
+@media (max-width: 767px) { :where(html[data-theme="dark"]) tbody td:first-child { color: #9dbcff; } }
+:where(html[data-theme="dark"]) .entry-badge { color: var(--white); }
+:where(html[data-theme="dark"]) .pricing-item.discount { color: #86d993; }
+:where(html[data-theme="dark"]) footer { background: #0b0f17; }
+:where(html[data-theme="dark"]) footer a:hover { color: var(--white); }
+:where(html[data-theme="dark"]) footer strong { color: var(--white); }
+:where(html[data-theme="dark"]) .back-to-top-container .btn { color: var(--white) !important; }
+:where(html[data-theme="dark"]) .cookie-banner { background: var(--surface); }
+:where(html[data-theme="dark"]) .cookie-banner-title { color: #b9cff9; }
+:where(html[data-theme="dark"]) .cookie-banner a { color: #9dbcff; }
+:where(html[data-theme="dark"]) .cookie-btn { color: var(--white); }
+:where(html[data-theme="dark"]) .workflow-number { color: var(--white); }
+:where(html[data-theme="dark"]) .tier-cta-label { color: #9dbcff; }
+:where(html[data-theme="dark"]) .tag-required { color: #ffb584; }
+:where(html[data-theme="dark"]) .apostille-checklist h4 { color: #9dbcff; }
+:where(html[data-theme="dark"]) .b2b-sub { color: #9dbcff; }
+:where(html[data-theme="dark"]) .nav-group-btn { color: var(--white); }
+@media (min-width: 1200px) { :where(html[data-theme="dark"]) .nav-dropdown { background: var(--surface); } }
+@media (min-width: 1200px) { :where(html[data-theme="dark"]) #main-nav .nav-dropdown a { color: #b9cff9 !important; } }
+:where(html[data-theme="dark"]) .footer-col-title { color: var(--white); }
+:where(html[data-theme="dark"]) .jump-links a { background: var(--surface); color: #9dbcff; }

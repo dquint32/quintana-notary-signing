@@ -546,6 +546,46 @@
   })();
 
   // ==========================================================
+  // LIGHT / DARK THEME TOGGLE
+  // The <head> script sets data-theme before paint (saved choice,
+  // else the system setting); this wires the header button.
+  // ==========================================================
+  const ThemeToggle = (function () {
+    const KEY = 'qnsTheme';
+    function label() {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const es = (document.documentElement.getAttribute('data-lang') || 'es') === 'es';
+      if (dark) return es ? 'Cambiar a modo claro' : 'Switch to light mode';
+      return es ? 'Cambiar a modo oscuro' : 'Switch to dark mode';
+    }
+    function refresh() {
+      const btn = document.getElementById('theme-toggle');
+      if (btn) { btn.setAttribute('aria-label', label()); btn.title = label(); }
+    }
+    function set(mode) {
+      document.documentElement.setAttribute('data-theme', mode);
+      try { localStorage.setItem(KEY, mode); } catch (_) {}
+      refresh();
+    }
+    function init() {
+      if (!document.documentElement.getAttribute('data-theme')) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+      const btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          set(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+      }
+      // keep the label in the current language
+      new MutationObserver(refresh).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
+      refresh();
+    }
+    return { init: init };
+  })();
+
+  // ==========================================================
   // BOOTSTRAP — wire everything up once the DOM is ready
   // ==========================================================
   document.addEventListener('DOMContentLoaded', function () {
@@ -567,6 +607,7 @@
     MobileMenu.init();
     MenuKeyboardTrap.init();
     NavGroups.init();
+    ThemeToggle.init();
     LangAnchors.init();
 
     // 4. Sticky header offset (initial + on resize)
