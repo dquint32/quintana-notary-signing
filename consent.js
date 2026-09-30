@@ -26,7 +26,7 @@
 (function () {
   'use strict';
 
-  var CLARITY_PROJECT_ID = 'PASTE_CLARITY_ID_HERE';
+  var CLARITY_PROJECT_ID = 'yq4usoko9p';
 
   var STORAGE_KEY  = 'qns_consent';   // 'granted' | 'denied'
   var CLARITY_COOKIES = ['_clck', '_clsk', 'CLID', 'ANONCHK', 'MR', 'MUID', 'SM'];
