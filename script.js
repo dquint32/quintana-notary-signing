@@ -101,27 +101,38 @@
       });
     }
 
+    /**
+     * The ADDRESS decides the language: pages under /es/ are Spanish,
+     * everything else is English. Each page has a twin at the other
+     * address (built by build_es.py), so search engines can index the
+     * Spanish pages on their own.
+     */
+    function pageLang() {
+      return /\/es\/[^\/]*$/.test(location.pathname) ? 'es' : 'en';
+    }
+
+    function twinUrl(next) {
+      const file = location.pathname.split('/').pop() || '';
+      const page = (file === 'index.html') ? '' : file;
+      return (next === 'es' ? 'es/' + page : '../' + page) + location.search + location.hash;
+    }
+
+    /** The language button remembers the choice and opens the twin page. */
     function toggle() {
-      const current = document.documentElement.getAttribute('data-lang') || DEFAULT_LANG;
-      const next = current === 'es' ? 'en' : 'es';
-      applyLang(next);
+      const next = pageLang() === 'es' ? 'en' : 'es';
       saveLang(next);
+      location.href = twinUrl(next);
     }
 
     /**
-     * Initialise language from (in priority order): a saved
-     * preference, the page's own <html lang="..."> attribute,
-     * then the site default. Runs before paint to avoid a
-     * flash of the wrong language.
+     * Initialise language from the page's address (see pageLang).
      */
     function init() {
       collectPairedElements();
 
-      const saved    = getSavedLang();
-      const htmlLang = document.documentElement.getAttribute('lang') || DEFAULT_LANG;
-      const target   = (saved && SUPPORTED.includes(saved)) ? saved : htmlLang;
-
-      applyLang(target);
+      // A Spanish device with no saved choice is sent to the /es/ twin by
+      // the small script in each page's <head>, before anything is drawn.
+      applyLang(pageLang());
     }
 
     return { init: init, toggle: toggle, apply: applyLang };

@@ -30,7 +30,7 @@ The project is hosted on GitHub Pages:
 - `README.md` – Project documentation  
 
 👨‍🎓 About Me  
-I’m a senior at MSU Denver studying Human-Centered Information Systems (HCIS).  
+I’m a Health Informatics (B.S.) graduate of MSU Denver.  
 My focus is on:
 
 - Building accessible, bilingual web experiences  
@@ -50,4 +50,20 @@ This repository exists to:
 For questions about this project or services:  
 **David Quintana**  
 Quintana Notary & Signing – Mobile Colorado Notary  
-MSU Denver – HCIS Program  
+MSU Denver – Health Informatics (B.S.) graduate  
+
+🌐 Languages (English and Spanish pages)
+
+Every page in this folder holds both languages. English is the one visible in the file; the Spanish twin of each page lives in `es/` and is **generated**:
+
+1. Edit the pages in this folder (never the copies in `es/`).
+2. Run `python build_es.py`. It rebuilds `es/*.html` and `sitemap.xml`.
+3. Commit everything, including the `es/` folder.
+
+How visitors get their language:
+
+- The address decides: `/es/...` is Spanish, everything else is English.
+- A phone or browser set to Spanish is sent to the Spanish page on its first visit.
+- The language button opens the twin page and remembers the choice.
+
+Wording rule (C.R.S. 24-21-525): the Spanish noun for a notary, and the word for a notary's office, must never appear anywhere, including titles, descriptions and keywords. Say "Notary Public" or "servicios notariales". `build_es.py` stops if it finds either word.

@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notary FAQ for Denver | Preguntas Frecuentes sobre Servicios Notariales | Quintana Notary &amp; Signing</title>
-    <meta name="description" content="Answers about notarization in Denver, Colorado: accepted ID, fees ($15 per act), mobile travel, apostilles, certified copies and translations. Preguntas frecuentes sobre servicios notariales en español en Denver.">
+    <title>Notary FAQ for Denver, Colorado | Quintana Notary &amp; Signing</title>
+    <meta name="description" content="Answers about notarization in Denver, Colorado: accepted ID, fees ($15 per act), mobile travel, apostilles, certified copies and translations.">
     <link rel="canonical" href="https://www.quintananotarysigning.com/faq.html">
     <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/faq.html">
-    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/faq.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/faq.html">
     <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/faq.html">
+    <!-- lang-redirect -->
+    <script>
+        /* Spanish devices start on the Spanish page (es/). A choice made with the language button wins. Runs before paint. */
+        (function () {
+            try {
+                var saved = null;
+                try { saved = localStorage.getItem('qns_lang'); } catch (e) {}
+                var dev = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+                var wantEs = saved ? saved === 'es' : /^es\b/i.test(dev);
+                if (!wantEs) return;
+                var file = location.pathname.split('/').pop() || 'index.html';
+                location.replace('es/' + (file === 'index.html' ? '' : file) + location.search + location.hash);
+            } catch (e) {}
+        })();
+    </script>
+    <!-- /lang-redirect -->
     <script>
         /* Light/dark: saved choice, else the visitor's system setting. Runs before paint. */
         (function () {
@@ -102,7 +118,7 @@
                 <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en">Immigration Attorneys (Aurora ICE)</a>
-                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Notaries Public</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Colegas</a>
                 <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
@@ -185,10 +201,10 @@
             </button>
             <div class="faq-answer">
                 <p id="a1-es" style="display:none;">
-                    Un Notary Public es un funcionario autorizado por el estado (en mi caso, Colorado) para servir como testigo imparcial en la firma de documentos importantes. Como Notary Public, verifico la identidad del firmante y me aseguro de que la firma se realice sin coerción, ayudando a prevenir el fraude.
+                    Un Notary Public es un funcionario autorizado por el estado (en mi caso, Colorado) para servir como testigo imparcial en la firma de documentos importantes. Como Notary Public, verifico la identidad del firmante y me aseguro de que la firma se realice sin coerción, ayudando a prevenir el fraude. Un Notary Public no es abogado y no da asesoría legal; en Estados Unidos su función es distinta a la que este cargo tiene en otros países.
                 </p>
                 <p id="a1-en">
-                    A Notary Public is an official authorized by the state (in my case, Colorado) to serve as an impartial witness to the signing of important documents. As a notary, I verify the signer's identity and ensure the signing is done without coercion, helping to prevent fraud.
+                    A Notary Public is an official authorized by the state (in my case, Colorado) to serve as an impartial witness to the signing of important documents. As a notary, I verify the signer's identity and ensure the signing is done without coercion, helping to prevent fraud. A Notary Public is not an attorney and does not give legal advice; in the United States the role is different from the one this office has in other countries.
                 </p>
             </div>
         </div>
@@ -394,10 +410,10 @@
             </button>
             <div class="faq-answer">
                 <p id="a11-es" style="display:none;">
-                    Sí. Acepto la mayoría de las principales tarjetas de crédito (los pagos con tarjeta de crédito tienen un recargo de procesamiento que agrega al pagar mi procesador de pagos, Helcim; vea el aviso en <a href="pricing.html#policies">Precios</a>), Venmo, Zelle y efectivo. El pago es requerido para confirmar su cita.
+                    Sí. Acepto la mayoría de las principales tarjetas de crédito (los pagos con tarjeta de crédito tienen un recargo de procesamiento de 2%; las tarjetas de débito no tienen recargo; vea el aviso en <a href="pricing.html#policies">Precios</a>), Venmo, Zelle y efectivo. El pago es requerido para confirmar su cita.
                 </p>
                 <p id="a11-en">
-                    Yes. I accept most major credit cards (credit card payments have a processing surcharge added at checkout by my payment processor, Helcim; see the notice on <a href="pricing.html#policies">Pricing</a>), Venmo, Zelle, and cash. Payment is required to confirm your appointment.
+                    Yes. I accept most major credit cards (credit card payments have a 2% processing surcharge; debit cards have none; see the notice on <a href="pricing.html#policies">Pricing</a>), Venmo, Zelle, and cash. Payment is required to confirm your appointment.
                 </p>
             </div>
         </div>
@@ -606,7 +622,7 @@
             <ul>
                 <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
                 <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
-                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Notaries Public</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Colegas</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
                 <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
             </ul>
         </div>

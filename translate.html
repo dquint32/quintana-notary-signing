@@ -1,14 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certified Spanish–English Translations in Denver | Traducciones Certificadas | Quintana Notary &amp; Signing</title>
-    <meta name="description" content="Certified Spanish–English translations in Denver from $30 per page: birth, marriage and death certificates, diplomas and DMV documents. Traducciones certificadas español–inglés en Denver. Translation only, no legal advice.">
+    <title>Certified Spanish–English Translations in Denver | Quintana Notary &amp; Signing</title>
+    <meta name="description" content="Certified Spanish–English translations in Denver from $30 per page: birth, marriage and death certificates, diplomas and DMV documents. Translation only, no legal advice.">
     <link rel="canonical" href="https://www.quintananotarysigning.com/translate.html">
     <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/translate.html">
-    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/translate.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/translate.html">
     <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/translate.html">
+    <!-- lang-redirect -->
+    <script>
+        /* Spanish devices start on the Spanish page (es/). A choice made with the language button wins. Runs before paint. */
+        (function () {
+            try {
+                var saved = null;
+                try { saved = localStorage.getItem('qns_lang'); } catch (e) {}
+                var dev = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+                var wantEs = saved ? saved === 'es' : /^es\b/i.test(dev);
+                if (!wantEs) return;
+                var file = location.pathname.split('/').pop() || 'index.html';
+                location.replace('es/' + (file === 'index.html' ? '' : file) + location.search + location.hash);
+            } catch (e) {}
+        })();
+    </script>
+    <!-- /lang-redirect -->
     <script>
         /* Light/dark: saved choice, else the visitor's system setting. Runs before paint. */
         (function () {
@@ -102,7 +118,7 @@
                 <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en">Immigration Attorneys (Aurora ICE)</a>
-                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Notaries Public</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Colegas</a>
                 <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
@@ -325,7 +341,7 @@
                         <span id="bun-1f-en">Death Certificate</span>
                     </li>
                 </ul>
-                <p class="discount-note" style="margin-top: 0.5rem;" id="bun-1g-es" style="display:none;">El paquete aplica a documentos de 1 página. Páginas adicionales usan tarifa estándar.</p>
+                <p class="discount-note" style="display:none; margin-top: 0.5rem;" id="bun-1g-es" style="display:none;">El paquete aplica a documentos de 1 página. Páginas adicionales usan tarifa estándar.</p>
                 <p class="discount-note" style="margin-top: 0.5rem;" id="bun-1g-en">Bundle applies to 1‑page documents. Additional pages follow standard rates.</p>
             </div>
 
@@ -368,7 +384,7 @@
                         <span id="bun-2g-en">One additional page of supporting evidence</span>
                     </li>
                 </ul>
-                <p class="discount-note" style="margin-top: 0.5rem;" id="bun-2h-es" style="display:none;">Páginas adicionales usan precios estándar.</p>
+                <p class="discount-note" style="display:none; margin-top: 0.5rem;" id="bun-2h-es" style="display:none;">Páginas adicionales usan precios estándar.</p>
                 <p class="discount-note" style="margin-top: 0.5rem;" id="bun-2h-en">Additional pages follow standard pricing.</p>
             </div>
 
@@ -388,7 +404,7 @@
                         <span class="discount-value" id="bun-3b-en">$22 per page</span>
                     </div>
                 </div>
-                <p style="margin-top: 1rem; font-size: 0.95rem;" id="bun-3c-es" style="display:none;">Para documentos de 10 páginas o más.</p>
+                <p style="display:none; margin-top: 1rem; font-size: 0.95rem;" id="bun-3c-es" style="display:none;">Para documentos de 10 páginas o más.</p>
                 <p style="margin-top: 1rem; font-size: 0.95rem;" id="bun-3c-en">For documents with 10+ pages.</p>
             </div>
         </div>
@@ -624,7 +640,7 @@
             <ul>
                 <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
                 <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
-                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Notaries Public</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Colegas</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
                 <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
             </ul>
         </div>

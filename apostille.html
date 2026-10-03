@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorado Apostille Services in Denver | Apostillas en Colorado | Quintana Notary &amp; Signing</title>
+    <title>Colorado Apostille Services in Denver | Quintana Notary &amp; Signing</title>
     <meta name="description" content="Colorado apostilles hand-delivered to the Secretary of State in Denver. Full-Service ($150, local), Denver Courier ($85) or Statewide Courier ($115). Bilingual EN/ES. Requirements checklist included.">
     <meta name="keywords" content="Colorado apostille, apostille Denver, Colorado Secretary of State apostille, apostille courier Denver, statewide apostille Colorado, apostilla Colorado, apostilla Denver, apostillar documentos Colorado">
     <link rel="canonical" href="https://www.quintananotarysigning.com/apostille.html">
     <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/apostille.html">
-    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/apostille.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/apostille.html">
     <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/apostille.html">
 
     <meta property="og:type" content="website">
@@ -150,6 +150,22 @@
 }
     </script>
 
+    <!-- lang-redirect -->
+    <script>
+        /* Spanish devices start on the Spanish page (es/). A choice made with the language button wins. Runs before paint. */
+        (function () {
+            try {
+                var saved = null;
+                try { saved = localStorage.getItem('qns_lang'); } catch (e) {}
+                var dev = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+                var wantEs = saved ? saved === 'es' : /^es\b/i.test(dev);
+                if (!wantEs) return;
+                var file = location.pathname.split('/').pop() || 'index.html';
+                location.replace('es/' + (file === 'index.html' ? '' : file) + location.search + location.hash);
+            } catch (e) {}
+        })();
+    </script>
+    <!-- /lang-redirect -->
     <script>
         /* Light/dark: saved choice, else the visitor's system setting. Runs before paint. */
         (function () {
@@ -243,7 +259,7 @@
                 <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en">Immigration Attorneys (Aurora ICE)</a>
-                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Notaries Public</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Colegas</a>
                 <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
@@ -549,7 +565,7 @@
                 <span id="q25-en">Can you apostille a document notarized in another state?</span>
             </button>
             <div class="faq-answer">
-                <p id="a25-es" style="display:none;">No. La Secretaría de Estado de Colorado solo autentica firmas de Notaries Public y funcionarios de <strong>Colorado</strong>. Un documento notarizado en otro estado debe enviarse a la Secretaría de Estado de ese estado. Los documentos federales (por ejemplo, del FBI) se autentican en el Departamento de Estado de EE. UU.</p>
+                <p id="a25-es" style="display:none;">No. La Secretaría de Estado de Colorado solo autentica la firma de un Notary Public o funcionario de <strong>Colorado</strong>. Un documento notarizado en otro estado debe enviarse a la Secretaría de Estado de ese estado. Los documentos federales (por ejemplo, del FBI) se autentican en el Departamento de Estado de EE. UU.</p>
                 <p id="a25-en">No. The Colorado Secretary of State only authenticates signatures of <strong>Colorado</strong> notaries and officials. A document notarized in another state must go to that state's Secretary of State. Federal documents (for example, FBI background checks) are authenticated by the U.S. Department of State.</p>
             </div>
         </div>
@@ -565,7 +581,7 @@
         </div>
         </div>
         <p class="consumer-apostille-link">
-            <span id="apx-b2b-es" style="display:none;">¿Es Notary Public y quiere subcontratar las apostillas de sus clientes? Vea el <a href="b2b-real-estate.html#notary-support">apoyo entre Notaries Public</a>.</span>
+            <span id="apx-b2b-es" style="display:none;">¿Es Notary Public y quiere subcontratar las apostillas de sus clientes? Vea el <a href="b2b-real-estate.html#notary-support">apoyo entre colegas</a>.</span>
             <span id="apx-b2b-en">Are you a notary who wants to outsource your clients' apostilles? See <a href="b2b-real-estate.html#notary-support">Notary-to-Notary Support</a>.</span>
         </p>
     </div>
@@ -602,7 +618,7 @@
             <ul>
                 <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
                 <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
-                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Notaries Public</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Colegas</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
                 <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
             </ul>
         </div>

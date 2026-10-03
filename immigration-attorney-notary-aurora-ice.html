@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurora ICE Facility Notary for Immigration Attorneys | Servicio Notarial para Abogados de Inmigración | Quintana Notary &amp; Signing</title>
+    <title>Aurora ICE Facility Notary for Immigration Attorneys | Quintana Notary &amp; Signing</title>
     <meta name="description" content="Bilingual mobile notary for immigration attorneys at the Aurora ICE Processing Center (GEO). Cleared as your legal proxy via G-28 + authorization letter. 7 days, 8am–9pm.">
     <meta name="keywords" content="Aurora ICE notary, ICE detention center notary, immigration attorney notary Colorado, Aurora ICE Processing Center notary, GEO Aurora legal visit notary, detainee notary Aurora, legal proxy notary G-28, mobile notary for immigration lawyers Denver, servicio notarial centro de detención Aurora, notarización para abogados de inmigración, servicio notarial bilingüe Aurora">
 
     <link rel="canonical" href="https://www.quintananotarysigning.com/immigration-attorney-notary-aurora-ice.html">
     <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/immigration-attorney-notary-aurora-ice.html">
-    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/immigration-attorney-notary-aurora-ice.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/immigration-attorney-notary-aurora-ice.html">
     <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/immigration-attorney-notary-aurora-ice.html">
 
     <meta property="og:type" content="website">
@@ -177,6 +177,22 @@
 }
     </script>
 
+    <!-- lang-redirect -->
+    <script>
+        /* Spanish devices start on the Spanish page (es/). A choice made with the language button wins. Runs before paint. */
+        (function () {
+            try {
+                var saved = null;
+                try { saved = localStorage.getItem('qns_lang'); } catch (e) {}
+                var dev = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+                var wantEs = saved ? saved === 'es' : /^es\b/i.test(dev);
+                if (!wantEs) return;
+                var file = location.pathname.split('/').pop() || 'index.html';
+                location.replace('es/' + (file === 'index.html' ? '' : file) + location.search + location.hash);
+            } catch (e) {}
+        })();
+    </script>
+    <!-- /lang-redirect -->
     <script>
         /* Light/dark: saved choice, else the visitor's system setting. Runs before paint. */
         (function () {
@@ -270,7 +286,7 @@
                 <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" aria-current="page" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en" aria-current="page">Immigration Attorneys (Aurora ICE)</a>
-                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Notaries Public</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Colegas</a>
                 <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
@@ -613,7 +629,7 @@
             <ul>
                 <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
                 <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
-                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Notaries Public</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Colegas</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
                 <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
             </ul>
         </div>
