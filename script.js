@@ -117,10 +117,83 @@
       return (next === 'es' ? 'es/' + page : '../' + page) + location.search + location.hash;
     }
 
-    /** The language button remembers the choice and opens the twin page. */
+    /**
+     * Keep the reader's place when switching language.
+     * Before leaving, note which paired element ("x-en"/"x-es") sits
+     * at the top of the screen and how far down it is. The twin page
+     * has the same element in the other language ("x-es"/"x-en"),
+     * so on arrival we scroll that one to the same spot. If no match
+     * is found, fall back to the same fraction of the page.
+     */
+    const PLACE_KEY = 'qns_lang_place';
+    const SKIP_AREAS = 'header, .top-help-bar, .lang-float, .appointment-bar, .statutory-bar, .cookie-banner';
+
+    function topEdge() {
+      const h = document.querySelector('header');
+      const b = h ? h.getBoundingClientRect().bottom : 0;
+      return Math.max(0, b);
+    }
+
+    function rememberPlace(fromLang) {
+      try {
+        const edge = topEdge();
+        let below = null, above = null;
+        idPairedElements.forEach(function (item) {
+          if (item.lang !== fromLang || item.el.closest(SKIP_AREAS)) return;
+          const r = item.el.getBoundingClientRect();
+          if (!r.width && !r.height) return;                 // hidden
+          if (r.top >= edge && r.top < window.innerHeight) {
+            if (!below || r.top < below.top) below = { el: item.el, top: r.top };
+          } else if (r.top < edge && r.bottom > edge) {
+            if (!above || r.top > above.top) above = { el: item.el, top: r.top };
+          }
+        });
+        const pick = below || above;
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        sessionStorage.setItem(PLACE_KEY, JSON.stringify({
+          file: location.pathname.split('/').pop() || 'index.html',
+          base: pick ? pick.el.id.replace(/-(en|es)$/, '') : null,
+          top: pick ? pick.top : 0,
+          ratio: max > 0 ? window.pageYOffset / max : 0,
+          at: Date.now()
+        }));
+      } catch (_) { /* storage unavailable: the twin page simply opens at the top */ }
+    }
+
+    function restorePlace(lang) {
+      let place = null;
+      try { place = JSON.parse(sessionStorage.getItem(PLACE_KEY) || 'null'); } catch (_) {}
+      if (!place) return;
+      const file = location.pathname.split('/').pop() || 'index.html';
+      if (place.file !== file || Date.now() - place.at > 15000) {
+        try { sessionStorage.removeItem(PLACE_KEY); } catch (_) {}
+        return;
+      }
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      function go() {
+        const el = place.base && document.getElementById(place.base + '-' + lang);
+        let y;
+        if (el && el.getClientRects().length) {
+          y = el.getBoundingClientRect().top + window.pageYOffset - place.top;
+        } else {
+          y = place.ratio * (document.documentElement.scrollHeight - window.innerHeight);
+        }
+        window.scrollTo({ top: Math.max(0, y), left: 0, behavior: 'instant' });
+      }
+      go();
+      // Fonts and images can shift the layout after first paint; settle once more.
+      window.addEventListener('load', function () {
+        go();
+        try { sessionStorage.removeItem(PLACE_KEY); } catch (_) {}
+      }, { once: true });
+    }
+
+    /** The language button remembers the choice and opens the twin page at the same spot. */
     function toggle() {
-      const next = pageLang() === 'es' ? 'en' : 'es';
+      const now = pageLang();
+      const next = now === 'es' ? 'en' : 'es';
       saveLang(next);
+      rememberPlace(now);
       location.href = twinUrl(next);
     }
 
@@ -133,6 +206,7 @@
       // A Spanish device with no saved choice is sent to the /es/ twin by
       // the small script in each page's <head>, before anything is drawn.
       applyLang(pageLang());
+      restorePlace(pageLang());
     }
 
     return { init: init, toggle: toggle, apply: applyLang };
