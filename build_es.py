@@ -73,7 +73,7 @@ BANNED = re.compile(r"\bnotar[ií][oa]s?\b", re.I)
 LANG_TAG = re.compile(r'<[A-Za-z][^<>]*?\bid="[^"<>]*-(es|en)"[^<>]*>')
 ASSET = re.compile(
     r'\b(href|src)="(?!https?:|//|/|#|\.\./|mailto:|tel:|sms:|data:)'
-    r'([^"]+\.(?:css|js|png|ico|jpe?g|svg|webp|gif))"')
+    r'([^"]+\.(?:css|js|png|ico|jpe?g|svg|webp|gif)(?:\?[^"]*)?)"')
 REDIRECT = re.compile(r"[ \t]*<!-- lang-redirect -->.*?<!-- /lang-redirect -->\n", re.S)
 
 

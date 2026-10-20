@@ -178,9 +178,17 @@
         } else {
           y = place.ratio * (document.documentElement.scrollHeight - window.innerHeight);
         }
-        window.scrollTo({ top: Math.max(0, y), left: 0, behavior: 'instant' });
+        // Jump straight there. The site uses smooth scrolling, so switch it
+        // off for this one jump; plain scrollTo(x, y) works in every browser
+        // (some Safari versions reject behavior: 'instant').
+        const root = document.documentElement;
+        const prev = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+        window.scrollTo(0, Math.max(0, y));
+        root.style.scrollBehavior = prev;
       }
       go();
+      requestAnimationFrame(go);
       // Fonts and images can shift the layout after first paint; settle once more.
       window.addEventListener('load', function () {
         go();
