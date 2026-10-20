@@ -29,8 +29,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # file -> (sitemap priority, change frequency, Spanish title, Spanish description)
 PAGES = {
     "index.html": ("1.0", "weekly",
-        "Servicios Notariales Móviles en Denver | Notary Public en Español | Quintana Notary & Signing",
-        "Notary Public bilingüe a domicilio en el área metropolitana de Denver. Notarizo su firma en su hogar u oficina, apostillas de Colorado, traducciones certificadas y cartas de permiso de viaje. Solo con cita previa."),
+        "Notary Public Móvil en Denver, en Español e Inglés | Quintana Notary & Signing",
+        "David Quintana, Notary Public comisionado en Colorado (ID 20254044224). Voy a su casa, oficina, hospital o a una cafetería en el área metropolitana de Denver. En español y en inglés. Solo con cita previa."),
     "services.html": ("0.9", "monthly",
         "Servicios Notariales en Español en Denver | Quintana Notary & Signing",
         "Servicios notariales móviles y bilingües en el área metropolitana de Denver: notarizaciones, apostillas, traducciones certificadas, notarizaciones en el aeropuerto (DIA) y cartas de permiso de viaje para menores. Solo con cita previa."),
