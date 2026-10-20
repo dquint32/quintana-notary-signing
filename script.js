@@ -597,9 +597,48 @@
   })();
 
   // ==========================================================
+  // FLOATING LANGUAGE BUTTON
+  // ------------------------------------------------------------
+  // A second English/Español toggle that stays on screen while
+  // scrolling (bottom-left; the back-to-top and WhatsApp buttons
+  // use the bottom-right). Its two labels use the "-es"/"-en" id
+  // pattern, so it must be added BEFORE LanguageManager.init()
+  // caches the paired elements. Clicking it does exactly what the
+  // header toggle does.
+  // ==========================================================
+  const LangFloat = (function () {
+    const GLOBE =
+      '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/>' +
+      '<path d="M2.5 12h19M12 2.5c2.6 2.7 3.9 5.9 3.9 9.5s-1.3 6.8-3.9 9.5c-2.6-2.7-3.9-5.9-3.9-9.5s1.3-6.8 3.9-9.5z"/></svg>';
+
+    function init() {
+      if (document.querySelector('.lang-float')) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'lang-float';
+      btn.setAttribute('aria-label', 'Cambiar idioma / Change language');
+      btn.innerHTML = GLOBE +
+        '<span id="lang-float-label-en" lang="es">Español</span>' +
+        '<span id="lang-float-label-es" lang="en" style="display:none;">English</span>';
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        LanguageManager.toggle();
+      });
+      document.body.appendChild(btn);
+    }
+
+    return { init: init };
+  })();
+
+  // ==========================================================
   // BOOTSTRAP — wire everything up once the DOM is ready
   // ==========================================================
   document.addEventListener('DOMContentLoaded', function () {
+
+    // 0. Floating language button (must exist before the language
+    //    manager caches the "-es"/"-en" elements)
+    LangFloat.init();
 
     // 1. Apply language FIRST to prevent a flash of the wrong language
     LanguageManager.init();
