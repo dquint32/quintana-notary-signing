@@ -1923,3 +1923,39 @@ html[data-theme="dark"] img { color-scheme: light; }
 @media (min-width: 1200px) { :where(html[data-theme="dark"]) #main-nav .nav-dropdown a { color: #b9cff9 !important; } }
 :where(html[data-theme="dark"]) .footer-col-title { color: var(--white); }
 :where(html[data-theme="dark"]) .jump-links a { background: var(--surface); color: #9dbcff; }
+
+/* ============================================================
+   SHOP MAP (Tienda Salvadoreña office): home + contact
+   Colors come from the theme tokens, so dark mode follows.
+   ============================================================ */
+.shop-map-section { margin-top: var(--s-lg); }
+.shop-map-intro { max-width: 700px; margin: 0 auto 1.25rem auto; text-align: center; }
+.shop-map { max-width: 760px; margin: 0 auto; padding: 0.75rem; overflow: hidden; }
+.shop-map-svg { display: block; width: 100%; height: auto; font-family: 'Inter', system-ui, sans-serif; }
+.shop-map figcaption { font-size: 0.8rem; color: var(--gray-mid); text-align: right; margin-top: 0.35rem; font-style: italic; }
+.shop-map .sm-lot { fill: var(--gray-light); stroke: var(--gray-mid); stroke-width: 2; stroke-dasharray: 8 6; }
+.shop-map .sm-bldg { fill: var(--gray-light); stroke: var(--gray-mid); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.shop-map .sm-tienda { fill: var(--orange-light); stroke: var(--orange); stroke-width: 3; }
+.shop-map .sm-office { fill: var(--teal-light); stroke: var(--teal-ink); stroke-width: 2.5; }
+.shop-map .sm-door { fill: var(--orange); }
+.shop-map .sm-walk { fill: var(--border-gray); }
+.shop-map .sm-road { fill: #2E333B; }
+.shop-map .sm-centerline { stroke: #F2C230; stroke-width: 4; stroke-dasharray: 22 14; }
+.shop-map .sm-street { fill: #FFFFFF; font-size: 17px; font-weight: 700; letter-spacing: 3px; }
+.shop-map .sm-route { fill: none; stroke: var(--teal-ink); stroke-width: 4; stroke-dasharray: 2 9; stroke-linecap: round; stroke-linejoin: round; }
+.shop-map .sm-arrowhead { fill: var(--teal-ink); }
+.shop-map .sm-label-lg { fill: var(--gray-dark); font-size: 24px; font-weight: 700; font-family: 'Merriweather', Georgia, serif; }
+.shop-map .sm-note { fill: var(--teal-ink); font-size: 17px; font-weight: 600; }
+.shop-map .sm-muted { fill: var(--gray-mid); font-size: 17px; font-style: italic; }
+.shop-map .sm-small { fill: var(--gray-dark); font-size: 15px; font-weight: 600; }
+.shop-map .sm-store { fill: var(--orange); font-size: 24px; font-weight: 700; font-family: 'Merriweather', Georgia, serif; }
+.shop-map .sm-office-label { fill: var(--gray-dark); font-size: 17px; font-weight: 700; }
+.shop-map .sm-office-name { fill: var(--teal-ink); font-size: 16px; font-weight: 600; }
+.shop-map .sm-p rect { fill: var(--navy-dark); }
+.shop-map .sm-p text { fill: #FFFFFF; font-size: 26px; font-weight: 700; font-family: 'Merriweather', Georgia, serif; }
+.shop-map .sm-step circle { fill: var(--orange); stroke: var(--surface); stroke-width: 3; }
+.shop-map .sm-step text { fill: #FFFFFF; font-size: 15px; font-weight: 700; }
+.shop-map-steps { max-width: 640px; margin: 1.25rem auto 1.5rem auto; text-align: left; padding-left: 0; list-style: none; counter-reset: fm; }
+.shop-map-steps li { counter-increment: fm; position: relative; padding: 0.35rem 0 0.35rem 2.4rem; }
+.shop-map-steps li::before { content: counter(fm); position: absolute; left: 0; top: 0.25rem; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--orange); color: #FFFFFF; font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+html[data-theme="dark"] .shop-map .sm-road { fill: #0b0f16; }
