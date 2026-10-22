@@ -2018,3 +2018,11 @@ html[data-theme="dark"] .shop-map .sm-road { fill: #0b0f16; }
 .mission-photo { width: 100%; max-width: 320px; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 25%; border-radius: var(--r-lg); align-self: center; }
 .mission-text { min-width: 0; flex: 1 1 auto; }
 @media (min-width: 700px) { .mission-with-photo { flex-direction: row; align-items: flex-start; } .mission-photo { width: 240px; flex: 0 0 240px; aspect-ratio: 4 / 5; align-self: flex-start; } }
+
+/* Photos on phones: a centered portrait, not a full-width block */
+@media (max-width: 699px) {
+  .profile-img, .meet-david-img { width: min(240px, 68%); flex: 0 0 auto; aspect-ratio: 4 / 5; max-height: none; height: auto; align-self: center; margin: var(--space-5) auto 0; border-radius: var(--r-lg); object-position: 50% 35%; }
+  .meet-david-img { object-position: 50% 50%; }
+  .mission-photo { width: min(220px, 64%); aspect-ratio: 4 / 5; object-position: 50% 30%; }
+  .meet-david-text { padding: 0 var(--space-5) var(--space-5); }
+}
