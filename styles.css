@@ -1992,3 +1992,10 @@ html[data-theme="dark"] .shop-map .sm-road { fill: #0b0f16; }
 }
 @media (prefers-reduced-motion: reduce) { .lang-float { transition: none; } }
 @media print { .lang-float { display: none !important; } }
+
+
+/* ===== COMMISSIONED & INSURED (2026-10-21) ===== */
+.insurance-note { background: var(--teal-light); border-left: 4px solid var(--teal-ink); border-radius: 8px; padding: var(--space-4) var(--space-5); margin: var(--space-5) 0; text-align: left; }
+.insurance-note h3 { margin: 0 0 var(--space-2); text-align: left; border: none; padding: 0; }
+.insurance-note p { margin: 0; color: var(--gray-dark); }
+.footer-trust { max-width: 800px; margin: var(--space-4) auto 0; font-size: 0.9rem; line-height: 1.6; color: #d7dde5; }
