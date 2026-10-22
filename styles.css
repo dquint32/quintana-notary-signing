@@ -1999,3 +1999,16 @@ html[data-theme="dark"] .shop-map .sm-road { fill: #0b0f16; }
 .insurance-note h3 { margin: 0 0 var(--space-2); text-align: left; border: none; padding: 0; }
 .insurance-note p { margin: 0; color: var(--gray-dark); }
 .footer-trust { max-width: 800px; margin: var(--space-4) auto 0; font-size: 0.9rem; line-height: 1.6; color: #d7dde5; }
+
+/* ===== PHOTOS OF DAVID (2026-10-21) ===== */
+/* About: keep the headshot portrait-shaped and the face in view at every width */
+.profile-img { object-position: 50% 22%; }
+@media (min-width: 700px) { .profile-card { align-items: stretch; } .profile-img { width: 280px; flex: 0 0 280px; aspect-ratio: 4 / 5; height: auto; align-self: flex-start; border-radius: var(--r-xl) 0 0 var(--r-xl); } .profile-details { align-self: center; } }
+@media (max-width: 699px) { .profile-img { max-height: none; aspect-ratio: 1 / 1; } }
+/* Home: "Hi, I'm David" */
+.meet-david { display: flex; flex-direction: column; gap: var(--space-5); padding: 0; overflow: hidden; margin: 0 auto; max-width: 880px; text-align: left; }
+.meet-david-img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; display: block; }
+.meet-david-text { padding: 0 var(--space-5) var(--space-5); }
+.meet-david-text h2 { text-align: left; margin-top: 0; }
+.meet-david-cta { justify-content: flex-start; margin-top: var(--space-4); }
+@media (min-width: 700px) { .meet-david { flex-direction: row; align-items: center; } .meet-david-img { width: 300px; flex: 0 0 300px; aspect-ratio: 4 / 5; object-position: 50% 50%; } .meet-david-text { padding: var(--space-5) var(--space-5) var(--space-5) 0; } }
