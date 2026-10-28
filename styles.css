@@ -3428,3 +3428,45 @@ html[data-theme="dark"] .tr-disc-badge.is-green { color: #0B1A10; }
   .site-footer .footer-sitemap .footer-col:first-child { grid-row: span 2; }
   .site-footer .footer-col li a { min-height: 40px; padding: 0.35rem 0; line-height: 1.4; }
 }
+
+/* ============================================================
+   REMAINING PAGES v2 (2026-10-28)
+   Apostille, Airport, B2B, Aurora ICE, Contact, Privacy rebuilt
+   with the PRICING PAGE CARDS kit (+ .step-flow / .verdict from
+   CERTIFIED COPIES). Only page glue lives here.
+   ============================================================ */
+/* Boxed muted top legal bar (same look as Home / FAQ / Services) */
+:is(.page-apostille, .page-airport, .page-b2b, .page-ice, .page-contact, .page-privacy) .statutory-bar {
+  max-width: 1100px; margin: var(--space-3) auto 0;
+  background: var(--ab-legal-bg); color: var(--ab-text);
+  border: 1px solid var(--ab-line); border-left: 4px solid var(--ab-legal-line); border-radius: var(--r-lg);
+  text-align: left; font-size: 0.8rem; line-height: 1.55; padding: 0.75rem 1rem;
+}
+:is(.page-apostille, .page-airport, .page-b2b, .page-ice, .page-contact, .page-privacy) .statutory-bar :is(strong, span) { color: var(--ab-text); }
+@media (max-width: 1140px) {
+  :is(.page-apostille, .page-airport, .page-b2b, .page-ice, .page-contact, .page-privacy) .statutory-bar { margin-left: var(--space-3); margin-right: var(--space-3); }
+}
+
+/* Header: language button + "Book / Contact" were white on #D65600 (4.0:1); #B34600 is 5.3:1 */
+.toggle-btn, #main-nav a.nav-cta { background: #B34600; }
+.toggle-btn:hover, #main-nav a.nav-cta:hover { background: #8F3800; }
+
+/* Shared glue */
+.pricing-page .pb-subtitle.is-first { margin-top: 0; }
+.pricing-page .pc-panel--wide + .pc, .pricing-page .pc + .pc-panel--wide { margin-top: 1.25rem; }
+.pricing-page .pc--notice { margin: 0 0 1.25rem; }
+.pricing-page .pc-list li { font-size: 0.95rem; line-height: 1.6; color: var(--pc-text); }
+.pricing-page .pc-callout.is-warn { border-left-color: var(--pc-law-border); background: var(--pc-law-bg); }
+
+/* Apostille */
+.apx-page .tier-cta { padding-top: 0.5rem; }
+.apx-page .return-options { margin: 2rem 0 1.5rem; }
+.pricing-page .pb-jump + .price-block { margin-top: 1.5rem; padding-top: 2rem; }
+
+/* Airport (DIA) */
+.air-badges { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.4rem; }
+.air-page .air-bring { margin: 1.5rem 0 0; }
+.air-page .pc-panel .verdict-list li { font-size: 1rem; }
+:is(.apx-page, .air-page, .b2b-page, .ice-page, .ct-page, .pv-page) > .price-block:first-child { margin-top: 0.5rem; padding-top: 0; border-top: none; }
+/* Airport steps are whole sentences: keep the bold lead-in inline */
+.air-page .step-text strong { display: inline; margin: 0; font-size: inherit; }

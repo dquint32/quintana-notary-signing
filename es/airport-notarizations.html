@@ -96,7 +96,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="../styles.css?v=20261028h">
+    <link rel="stylesheet" href="../styles.css?v=20261028j">
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -106,7 +106,7 @@
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-airport">
 
 <div class="top-help-bar">
     <div class="top-help-content">
@@ -225,7 +225,7 @@
      ALT TEXT note: brand logo alt already set above; any airplane
      icon added here should be aria-hidden="true" if decorative.
      ============================================================ -->
-<section class="hero hero-with-logo" aria-labelledby="airport-h1">
+<section class="hero hero-with-logo cc-hero" aria-labelledby="airport-h1">
     <div class="hero-content">
         <div class="hero-badge">
             <span id="badge-airport-es">Aeropuerto de Denver (DIA) &middot; El mismo día si tengo espacio &middot; Comisionado y asegurado</span>
@@ -256,112 +256,135 @@
     </div>
 </section>
 
-<main class="section container">
+<main class="section container pricing-page cc-page air-page">
 
-    <!-- SERVICE OVERVIEW (semantic <article>) -->
-    <article class="section-with-icon" aria-labelledby="overview-h2-en overview-h2-es">
-        <h2 id="overview-h2-es">Cómo es una cita en el aeropuerto</h2>
-        <h2 id="overview-h2-en" style="display:none;">What an airport appointment looks like</h2>
-
-        <p id="overview-p-es" style="max-width:720px; margin:0 auto 1.5rem auto;">Nos vemos en la terminal de DIA, en un lugar que acordamos antes del control de seguridad. Reviso su identificación, usted firma frente a mí y notarizo el documento. Le doy el precio antes de salir para allá.</p>
-        <p id="overview-p-en" style="display:none; max-width:720px; margin:0 auto 1.5rem auto;">We meet in the DIA terminal, at a spot we agree on before the security checkpoint. I check your ID, you sign in front of me, and I notarize the document. You get the price before I head out.</p>
-
-        <ul class="simple-list" id="overview-list-es" style="max-width:720px; margin:0 auto;">
-            <li><strong>Viajeros de negocios</strong> &mdash; contratos, declaraciones juradas y autorizaciones entre vuelos.</li>
-            <li><strong>Viajeros internacionales</strong> &mdash; documentos de viaje y formularios que deben firmarse antes de salir.</li>
-            <li><strong>Necesidades urgentes y de último minuto</strong> &mdash; formularios con plazos que no puede resolver saliendo del aeropuerto.</li>
-        </ul>
-        <ul class="simple-list" id="overview-list-en" style="display:none; max-width:720px; margin:0 auto;">
-            <li><strong>Business travelers</strong> &mdash; contracts, affidavits, and authorizations between flights.</li>
-            <li><strong>International travelers</strong> &mdash; travel documents and forms that must be signed before departure.</li>
-            <li><strong>Last-minute &amp; urgent needs</strong> &mdash; time-sensitive forms you can&rsquo;t leave the airport to handle.</li>
-        </ul>
-    </article>
-
-    <div class="divider" role="presentation"></div>
+    <!-- SERVICE OVERVIEW -->
+    <section class="price-block" id="overview" aria-labelledby="overview-h2-en overview-h2-es">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">1</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="overview-h2-es">Cómo es una cita en el aeropuerto</h2>
+                <h2 class="pb-title" id="overview-h2-en" style="display:none;">What an airport appointment looks like</h2>
+                <p class="pb-sub" id="overview-p-es">Nos vemos en la terminal de DIA, en un lugar que acordamos antes del control de seguridad. Reviso su identificación, usted firma frente a mí y notarizo el documento. Le doy el precio antes de salir para allá.</p>
+                <p class="pb-sub" id="overview-p-en" style="display:none;">We meet in the DIA terminal, at a spot we agree on before the security checkpoint. I check your ID, you sign in front of me, and I notarize the document. You get the price before I head out.</p>
+            </div>
+        </div>
+        <div class="pc-panel pc-panel--wide">
+            <ul class="verdict-list verdict-list--yes" id="overview-list-es">
+                <li><strong>Viajeros de negocios</strong> &mdash; contratos, declaraciones juradas y autorizaciones entre vuelos.</li>
+                <li><strong>Viajeros internacionales</strong> &mdash; documentos de viaje y formularios que deben firmarse antes de salir.</li>
+                <li><strong>Necesidades urgentes y de último minuto</strong> &mdash; formularios con plazos que no puede resolver saliendo del aeropuerto.</li>
+            </ul>
+            <ul class="verdict-list verdict-list--yes" id="overview-list-en" style="display:none;">
+                <li><strong>Business travelers</strong> &mdash; contracts, affidavits, and authorizations between flights.</li>
+                <li><strong>International travelers</strong> &mdash; travel documents and forms that must be signed before departure.</li>
+                <li><strong>Last-minute &amp; urgent needs</strong> &mdash; time-sensitive forms you can&rsquo;t leave the airport to handle.</li>
+            </ul>
+        </div>
+    </section>
 
     <!-- PRICING -->
-    <section aria-labelledby="pricing-h2-en pricing-h2-es">
-        <h2 id="pricing-h2-es" class="text-center" style="border:none;">Un precio fijo para el aeropuerto</h2>
-        <h2 id="pricing-h2-en" class="text-center" style="display:none; border:none;">One flat price for the airport</h2>
+    <section class="price-block" id="price" aria-labelledby="pricing-h2-en pricing-h2-es">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">2</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="pricing-h2-es">Un precio fijo para el aeropuerto</h2>
+                <h2 class="pb-title" id="pricing-h2-en" style="display:none;">One flat price for the airport</h2>
+            </div>
+        </div>
 
-        <div class="pricing-cards">
-            <article class="card pricing-card featured">
-                <div class="pricing-card-header">
-                    <h3 id="price-card-title-es">Notarización en el aeropuerto (DIA)</h3>
-                    <h3 id="price-card-title-en" style="display:none;">DIA airport notarization</h3>
-                    <p class="pricing-amount">$95</p>
-                    <p style="text-align:center; font-weight:600;">
-                        <span id="price-flat-es">Tarifa fija &middot; estacionamiento incluido</span>
-                        <span id="price-flat-en" style="display:none;">Flat rate &middot; parking included</span>
-                    </p>
+        <div class="pc-grid pc-grid--1">
+            <article class="pc pc--featured air-price">
+                <div class="pc-head">
+                    <h3 class="pc-title" id="price-card-title-es">Notarización en el aeropuerto (DIA)</h3>
+                    <h3 class="pc-title" id="price-card-title-en" style="display:none;">DIA airport notarization</h3>
+                    <div class="air-badges">
+                        <span class="price-tag">$95<span class="price-unit"><span id="air-unit-flat-es">fijos</span><span id="air-unit-flat-en" style="display:none;">flat</span></span></span>
+                        <span class="price-tag price-tag--sm price-tag--muted">+ $10<span class="price-unit"><span id="air-unit-sig-es">por firma</span><span id="air-unit-sig-en" style="display:none;">per signature</span></span></span>
+                    </div>
                 </div>
-                <div class="pricing-description">
-                    <p id="price-per-sig-es"><strong>+ $10 por firma</strong> notarizada.</p>
-                    <p id="price-per-sig-en" style="display:none;"><strong>+ $10 per signature</strong> notarized.</p>
-                    <p id="price-detail-es">Incluye encontrarnos en la terminal, el estacionamiento y <strong>30 minutos ahí</strong>. Solo cobro tiempo extra <strong>si su vuelo se retrasa</strong> y me pide esperar, y se lo digo antes.</p>
-                    <p id="price-detail-en" style="display:none;">Covers meeting you in the terminal, parking, and <strong>30 minutes there</strong>. I only charge for extra time <strong>if your flight is delayed</strong> and you ask me to wait, and I&rsquo;ll tell you first.</p>
+                <div class="pc-tags">
+                    <span class="scope-tag scope-tag--teal"><span id="price-flat-es">Tarifa fija &middot; estacionamiento incluido</span><span id="price-flat-en" style="display:none;">Flat rate &middot; parking included</span></span>
                 </div>
+                <p class="pc-text" id="price-per-sig-es"><strong>+ $10 por firma</strong> notarizada.</p>
+                <p class="pc-text" id="price-per-sig-en" style="display:none;"><strong>+ $10 per signature</strong> notarized.</p>
+                <p class="pc-text" id="price-detail-es">Incluye encontrarnos en la terminal, el estacionamiento y <strong>30 minutos ahí</strong>. Solo cobro tiempo extra <strong>si su vuelo se retrasa</strong> y me pide esperar, y se lo digo antes.</p>
+                <p class="pc-text" id="price-detail-en" style="display:none;">Covers meeting you in the terminal, parking, and <strong>30 minutes there</strong>. I only charge for extra time <strong>if your flight is delayed</strong> and you ask me to wait, and I&rsquo;ll tell you first.</p>
             </article>
         </div>
 
-        <h3 class="subsection-title text-center">
+        <h3 class="pb-subtitle">
             <span id="incl-title-es">Qué incluye</span>
             <span id="incl-title-en" style="display:none;">What&rsquo;s included</span>
         </h3>
-        <div class="service-grid">
-            <article class="card act-card">
-                <h3 id="incl-1-es">Nos vemos en la terminal</h3>
-                <h3 id="incl-1-en" style="display:none;">Meeting in the terminal</h3>
-                <p id="incl-1d-es">En un lugar de la terminal de DIA antes del control de seguridad, o en la zona de recogida de pasajeros. Lo acordamos por mensaje.</p>
-                <p id="incl-1d-en" style="display:none;">Somewhere in the DIA terminal before the security checkpoint, or at the passenger pickup area. We settle it by text.</p>
+        <div class="pc-grid pc-grid--2 air-incl">
+            <article class="pc">
+                <div class="pc-head">
+                <h4 class="pc-title" id="incl-1-es">Nos vemos en la terminal</h4>
+                <h4 class="pc-title" id="incl-1-en" style="display:none;">Meeting in the terminal</h4>
+                </div>
+                <p class="pc-text" id="incl-1d-es">En un lugar de la terminal de DIA antes del control de seguridad, o en la zona de recogida de pasajeros. Lo acordamos por mensaje.</p>
+                <p class="pc-text" id="incl-1d-en" style="display:none;">Somewhere in the DIA terminal before the security checkpoint, or at the passenger pickup area. We settle it by text.</p>
             </article>
-            <article class="card act-card">
-                <h3 id="incl-2-es">Estacionamiento incluido</h3>
-                <h3 id="incl-2-en" style="display:none;">Parking included</h3>
-                <p id="incl-2d-es">El estacionamiento ya va en los $95. No le cobro más por eso.</p>
-                <p id="incl-2d-en" style="display:none;">Parking is already in the $95. You don&rsquo;t pay extra for it.</p>
+            <article class="pc">
+                <div class="pc-head">
+                <h4 class="pc-title" id="incl-2-es">Estacionamiento incluido</h4>
+                <h4 class="pc-title" id="incl-2-en" style="display:none;">Parking included</h4>
+                </div>
+                <p class="pc-text" id="incl-2d-es">El estacionamiento ya va en los $95. No le cobro más por eso.</p>
+                <p class="pc-text" id="incl-2d-en" style="display:none;">Parking is already in the $95. You don&rsquo;t pay extra for it.</p>
             </article>
-            <article class="card act-card">
-                <h3 id="incl-3-es">30 minutos ahí</h3>
-                <h3 id="incl-3-en" style="display:none;">30 minutes there</h3>
-                <p id="incl-3d-es">Alcanza para revisar su identificación y notarizar. Si su vuelo se retrasa y quiere que espere, el tiempo extra va aparte.</p>
-                <p id="incl-3d-en" style="display:none;">Enough to check your ID and notarize. If your flight is delayed and you&rsquo;d like me to wait, extra time is separate.</p>
+            <article class="pc">
+                <div class="pc-head">
+                <h4 class="pc-title" id="incl-3-es">30 minutos ahí</h4>
+                <h4 class="pc-title" id="incl-3-en" style="display:none;">30 minutes there</h4>
+                </div>
+                <p class="pc-text" id="incl-3d-es">Alcanza para revisar su identificación y notarizar. Si su vuelo se retrasa y quiere que espere, el tiempo extra va aparte.</p>
+                <p class="pc-text" id="incl-3d-en" style="display:none;">Enough to check your ID and notarize. If your flight is delayed and you&rsquo;d like me to wait, extra time is separate.</p>
             </article>
-            <article class="card act-card">
-                <h3 id="incl-4-es">$10 por firma</h3>
-                <h3 id="incl-4-en" style="display:none;">$10 per signature</h3>
-                <p id="incl-4d-es">$10 por cada firma que notarizo, y se lo digo por escrito antes.</p>
-                <p id="incl-4d-en" style="display:none;">$10 for each signature I notarize, given to you in writing ahead of time.</p>
+            <article class="pc">
+                <div class="pc-head">
+                <h4 class="pc-title" id="incl-4-es">$10 por firma</h4>
+                <h4 class="pc-title" id="incl-4-en" style="display:none;">$10 per signature</h4>
+                </div>
+                <p class="pc-text" id="incl-4d-es">$10 por cada firma que notarizo, y se lo digo por escrito antes.</p>
+                <p class="pc-text" id="incl-4d-en" style="display:none;">$10 for each signature I notarize, given to you in writing ahead of time.</p>
             </article>
         </div>
     </section>
 
-    <div class="divider" role="presentation"></div>
-
     <!-- HOW IT WORKS -->
-    <section aria-labelledby="how-h2-en how-h2-es">
-        <h2 id="how-h2-es" class="text-center" style="border:none;">Cómo funciona</h2>
-        <h2 id="how-h2-en" class="text-center" style="display:none; border:none;">How it works</h2>
-        <ol class="simple-list" id="how-list-es" style="max-width:640px; margin:1.5rem auto;"><li><strong>Mándeme un mensaje</strong> con su terminal, aerolínea y a qué hora sale.</li>
-<li><strong>Le mando el precio por escrito</strong> ($95 fijos + $10 por firma) y usted confirma.</li>
-<li><strong>Nos vemos en DIA.</strong> Traiga su identificación y sus documentos ya llenos, pero sin firmar.</li>
-<li><strong>Firma frente a mí</strong> y yo notarizo ahí mismo.</li></ol>
-        <ol class="simple-list" id="how-list-en" style="display:none; max-width:640px; margin:1.5rem auto;"><li><strong>Text me</strong> your terminal, airline, and departure time.</li>
-<li><strong>I send you the price in writing</strong> ($95 flat + $10 per signature) and you confirm.</li>
-<li><strong>We meet at DIA.</strong> Bring your ID and your documents filled out, but not signed.</li>
-<li><strong>You sign in front of me</strong> and I notarize it right there.</li></ol>
-    </section>
+    <section class="price-block" id="how-it-works" aria-labelledby="how-h2-en how-h2-es">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">3</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="how-h2-es">Cómo funciona</h2>
+                <h2 class="pb-title" id="how-h2-en" style="display:none;">How it works</h2>
+            </div>
+        </div>
+        <ol class="step-flow" id="how-list-es">
+<li class="step-card"><span class="step-num" aria-hidden="true">1</span><p class="step-text"><strong>Mándeme un mensaje</strong> con su terminal, aerolínea y a qué hora sale.</p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">2</span><p class="step-text"><strong>Le mando el precio por escrito</strong> ($95 fijos + $10 por firma) y usted confirma.</p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">3</span><p class="step-text"><strong>Nos vemos en DIA.</strong> Traiga su identificación y sus documentos ya llenos, pero sin firmar.</p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">4</span><p class="step-text"><strong>Firma frente a mí</strong> y yo notarizo ahí mismo.</p></li>
+        </ol>
+        <ol class="step-flow" id="how-list-en" style="display:none;">
+<li class="step-card"><span class="step-num" aria-hidden="true">1</span><p class="step-text"><strong>Text me</strong> your terminal, airline, and departure time.</p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">2</span><p class="step-text"><strong>I send you the price in writing</strong> ($95 flat + $10 per signature) and you confirm.</p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">3</span><p class="step-text"><strong>We meet at DIA.</strong> Bring your ID and your documents filled out, but not signed.</p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">4</span><p class="step-text"><strong>You sign in front of me</strong> and I notarize it right there.</p></li>
+        </ol>
 
-    <!-- COMPLIANCE NOTE (role="note") -->
-    <aside class="warning-box" role="note" aria-label="Important notary requirements / Requisitos importantes">
-        <h3 style="text-align:left; border:none; margin-top:0;">
-            <span id="bring-title-es">Qué traer</span>
-            <span id="bring-title-en" style="display:none;">What to bring</span>
-        </h3>
-        <p id="bring-desc-es">Su <strong>identificación</strong> (pasaporte, licencia u otra identificación del gobierno, vigente o vencida hace no más de un año) y sus documentos ya llenos, pero <strong>sin firmar</strong> hasta que estemos frente a frente. Como Notary Public de Colorado verifico su identidad y soy testigo de su firma; no soy abogado y no puedo darle asesoría legal ni escoger qué tipo de notarización necesita.</p>
-        <p id="bring-desc-en" style="display:none;">Your <strong>ID</strong> (passport, driver&rsquo;s license or other government ID that&rsquo;s current or expired no more than one year) and your documents filled out, but <strong>not signed</strong> until we&rsquo;re face to face. As a Colorado notary I check identity and witness signatures; I&rsquo;m not an attorney and can&rsquo;t give legal advice or choose which notarization you need.</p>
-    </aside>
+        <!-- COMPLIANCE NOTE (role="note") -->
+        <aside class="pc pc--notice air-bring" role="note" aria-label="Important notary requirements / Requisitos importantes">
+            <div class="pc-head"><h3 class="pc-title">
+                <span id="bring-title-es">Qué traer</span>
+                <span id="bring-title-en" style="display:none;">What to bring</span>
+            </h3></div>
+            <p class="pc-text" id="bring-desc-es">Su <strong>identificación</strong> (pasaporte, licencia u otra identificación del gobierno, vigente o vencida hace no más de un año) y sus documentos ya llenos, pero <strong>sin firmar</strong> hasta que estemos frente a frente. Como Notary Public de Colorado verifico su identidad y soy testigo de su firma; no soy abogado y no puedo darle asesoría legal ni escoger qué tipo de notarización necesita.</p>
+            <p class="pc-text" id="bring-desc-en" style="display:none;">Your <strong>ID</strong> (passport, driver&rsquo;s license or other government ID that&rsquo;s current or expired no more than one year) and your documents filled out, but <strong>not signed</strong> until we&rsquo;re face to face. As a Colorado notary I check identity and witness signatures; I&rsquo;m not an attorney and can&rsquo;t give legal advice or choose which notarization you need.</p>
+        </aside>
+    </section>
 
     <!-- FINAL CTA -->
     <section class="cta-card" aria-labelledby="cta-h2-en cta-h2-es">
