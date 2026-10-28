@@ -3334,3 +3334,16 @@ html[data-theme="dark"] .tr-disc-badge.is-green { color: #0B1A10; }
 .home-b2b { max-width: 820px; }
 .home-b2b .cta-buttons { justify-content: flex-start; margin-top: 0.5rem; }
 .home-page .cta-card { margin-top: 3.5rem; }
+
+/* ============================================================
+   CONTRAST FIXES (2026-10-28 check)
+   - Price-tag units ("per act", "/ mile", "flat") inherited the
+     old grey .price-unit color (≈1.1:1 on green/navy tags);
+     they now use the tag's own text color.
+   - White text on the bright orange (#D65600) was 4.05:1; small
+     badges and the Verify button now use #B34600 (5.3:1).
+   ============================================================ */
+.price-tag .price-unit { color: inherit; opacity: 0.92; }
+.premium-badge { background: #B34600; }
+.verification-action .btn { background: #B34600; border-color: #B34600; }
+.verification-action .btn:hover { background: #8F3800; border-color: #8F3800; }
