@@ -36,7 +36,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261028f">
+    <link rel="stylesheet" href="styles.css?v=20261028g">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -46,7 +46,7 @@
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-translate">
 
 <div class="top-help-bar">
     <div class="top-help-content">
@@ -161,467 +161,206 @@
 
 <section class="hero-with-logo">
     <div class="hero-content">
-        <h1 id="hero-h1-es" style="display:none;">Traducciones certificadas de español e inglés</h1>
-        <h1 id="hero-h1-en">Certified Spanish&ndash;English translations</h1>
         
         <div class="hero-badge">
             <span id="hero-badge-es" style="display:none;">Solo con cita previa &middot; Asegurado</span>
             <span id="hero-badge-en">By appointment only &middot; Insured</span>
         </div>
+        <h1 id="hero-h1-es" style="display:none;">Traducciones certificadas de español e inglés</h1>
+        <h1 id="hero-h1-en">Certified Spanish&ndash;English translations</h1>
         <p class="hero-subtitle" id="hero-h2-es" style="display:none;">Yo mismo traduzco sus documentos y firmo una certificación con cada uno. Muchos de mis clientes los presentan ante USCIS, el DMV de Colorado u otras agencias. Solo hago la traducción; no doy asesoría legal.</p>
         <p class="hero-subtitle" id="hero-h2-en">I translate your documents myself and sign a certification with each one. Many of my clients turn them in to USCIS, the Colorado DMV, or other agencies. I only do the translation; I don&rsquo;t give legal advice.</p>
+        <div class="cta-buttons">
+            <a href="sms:+13035004122" class="btn btn-primary" id="hero-text-es" style="display:none;"><span>Mandar foto por mensaje</span></a>
+            <a href="sms:+13035004122" class="btn btn-primary" id="hero-text-en"><span>Text me a photo</span></a>
+            <a href="#prices" class="btn btn-secondary" id="hero-prices-es" style="display:none;"><span>Ver precios</span></a>
+            <a href="#prices" class="btn btn-secondary" id="hero-prices-en"><span>See prices</span></a>
+        </div>
     </div>
 </section>
 
-<main class="container">
-    
-    <section class="section">
-        <div class="text-center">
-            <h2 id="intro-title-es" style="display:none;">Cómo trabajo las traducciones</h2>
-            <h2 id="intro-title-en">How I handle translations</h2>
-        </div>
-        
-        <p id="intro-p1-es" style="display:none;">Traduzco de español a inglés y de inglés a español. Lo que más me traen son actas de nacimiento, matrimonio y defunción, diplomas y expedientes escolares, y documentos que van a agencias del gobierno.</p>
-        <p id="intro-p1-en">I translate Spanish to English and English to Spanish. What people bring me most are birth, marriage and death certificates, diplomas and school records, and documents headed to government agencies.</p>
-        
-        <p id="intro-p2-es" style="display:none;"><strong>Solo hago la traducción. No doy asesoría legal ni de inmigración, y no le puedo decir qué documentos necesita para su trámite.</strong></p>
-        <p id="intro-p2-en"><strong>I only translate. I don&rsquo;t give legal or immigration advice, and I can&rsquo;t tell you which documents your case needs.</strong></p>
-        
-        <p id="intro-p3-es" style="display:none;">Le digo el precio antes de empezar y la fecha en que se la entrego.</p>
-        <p id="intro-p3-en">You get the price and the delivery date before I start.</p>
-        
-        <div class="text-center mt-4">
-            <h3 id="expect-title-es" style="display:none; color: var(--teal-dark); margin-bottom: var(--space-lg);">Lo que recibe</h3>
-            <h3 id="expect-title-en" style="color: var(--teal-dark); margin-bottom: var(--space-lg);">What you get</h3>
-        </div>
+<main class="container svc-page tr-page">
 
-        <div class="values-grid">
-            <div class="card value-item">
-                <h3 id="val-1-es" style="display:none; text-align:left;">Mi certificación firmada</h3>
-                <h3 id="val-1-en" style="text-align:left;">My signed certification</h3>
-                <p id="val-1-desc-es" style="display:none;">Cada traducción lleva una certificación firmada de que la traducción está completa y es exacta y de que domino los dos idiomas. La preparo para cumplir con los requisitos de USCIS y del DMV, pero la decisión de aceptarla es de la agencia.</p>
-                <p id="val-1-desc-en">Every translation comes with my signed statement that it&rsquo;s complete and accurate and that I&rsquo;m competent in both languages. I prepare it to meet USCIS and DMV requirements, but the agency decides whether to accept it.</p>
-            </div>
-            <div class="card value-item">
-                <h3 id="val-2-es" style="display:none; text-align:left;">El precio por adelantado</h3>
-                <h3 id="val-2-en" style="text-align:left;">The price up front</h3>
-                <p id="val-2-desc-es" style="display:none;">Cobro por página y le doy el total antes de empezar.</p>
-                <p id="val-2-desc-en">I charge by the page and give you the total before I start.</p>
-            </div>
-            <div class="card value-item">
-                <h3 id="val-3-es" style="display:none; text-align:left;">Cuándo la tiene</h3>
-                <h3 id="val-3-en" style="text-align:left;">When you&rsquo;ll have it</h3>
-                <p id="val-3-desc-es" style="display:none;">Normalmente en 3 días hábiles. Si le urge, la puedo tener en un día hábil por un cargo extra.</p>
-                <p id="val-3-desc-en">Usually 3 business days. If you&rsquo;re in a hurry, I can have it in one business day for an extra charge.</p>
-            </div>
-            <div class="card value-item">
-                <h3 id="val-4-es" style="display:none; text-align:left;">En su idioma</h3>
-                <h3 id="val-4-en" style="text-align:left;">In your language</h3>
-                <p id="val-4-desc-es" style="display:none;">Le explico el proceso en español o en inglés, como le quede mejor.</p>
-                <p id="val-4-desc-en">I&rsquo;ll walk you through it in Spanish or English, whichever works for you.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section">
-        <div class="pricing-section-title">
-            <span class="section-number">1</span>
-            <div>
-                <h2 id="price-title-es" style="display:none; margin-bottom:0; border:none;">Precio por página</h2>
-                <h2 id="price-title-en" style="margin-bottom:0; border:none;">Price per page</h2>
-                <p class="section-subtitle" id="price-sub-es" style="display:none;">Todas las traducciones llevan mi certificación firmada.</p>
-                <p class="section-subtitle" id="price-sub-en">Every translation includes my signed certification.</p>
-            </div>
-        </div>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th id="th-1-es" style="display:none;">Servicio</th>
-                    <th id="th-1-en">Service</th>
-                    <th id="th-2-es" style="display:none;">Precio</th>
-                    <th id="th-2-en">Price</th>
-                    <th id="th-3-es" style="display:none;">Detalles</th>
-                    <th id="th-3-en">Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong id="td-1-es" style="display:none;">Traducción de 1 Página</strong>
-                        <strong id="td-1-en">1‑Page Translation</strong>
-                    </td>
-                    <td><strong style="color: var(--teal); font-size: 1.3rem;">$30</strong></td>
-                    <td>
-                        <span id="td-1d-es" style="display:none;">Hasta 250 palabras. Aplica a la primera página del documento.</span>
-                        <span id="td-1d-en">Up to 250 words. Applies to the first page.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong id="td-2-es" style="display:none;">Páginas Adicionales</strong>
-                        <strong id="td-2-en">Additional Pages</strong>
-                    </td>
-                    <td>
-                        <strong id="td-2p-es" style="display:none; color: var(--teal); font-size: 1.3rem;">$25 cada una</strong>
-                        <strong id="td-2p-en" style="color: var(--teal); font-size: 1.3rem;">$25 each</strong>
-                    </td>
-                    <td>
-                        <span id="td-2d-es" style="display:none;">Precio más bajo para documentos de varias páginas.</span>
-                        <span id="td-2d-en">A lower rate for documents with several pages.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong id="td-3-es" style="display:none;">Urgente (24 horas)</strong>
-                        <strong id="td-3-en">Rush (24 hours)</strong>
-                    </td>
-                    <td>
-                        <strong id="td-3p-es" style="display:none; color: var(--orange); font-size: 1.3rem;">+$10 por pág</strong>
-                        <strong id="td-3p-en" style="color: var(--orange); font-size: 1.3rem;">+$10 per page</strong>
-                    </td>
-                    <td>
-                        <span id="td-3d-es" style="display:none;">Se la entrego en un día hábil (lunes a viernes).</span>
-                        <span id="td-3d-en">Ready in one business day (Mon&ndash;Fri).</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section">
-        <div class="pricing-section-title discount">
-            <span class="section-number">2</span>
-            <div>
-                <h2 id="bundle-title-es" style="display:none; margin-bottom:0; border:none;">Paquetes</h2>
-                <h2 id="bundle-title-en" style="margin-bottom:0; border:none;">Bundles</h2>
-                <p class="section-subtitle green" id="bundle-sub-es" style="display:none;">Para cuando trae varios documentos a la vez, como los papeles de la familia o los de la escuela. Solo traducción; sin asesoría legal.</p>
-                <p class="section-subtitle green" id="bundle-sub-en">For when you bring several documents at once, like family records or school papers. Translation only; no legal advice.</p>
-            </div>
-        </div>
-
-        <div class="discount-locations">
-            
-            <div class="card discount-card">
-                <div class="location-badge discount">
-                    <span id="badg-1-es" style="display:none;">Ahorra</span>
-                    <span id="badg-1-en">Saves</span>
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+                <div>
+                    <h2 id="intro-title-es" class="svc-module-title" style="display:none;">Cómo trabajo las traducciones</h2><h2 id="intro-title-en" class="svc-module-title">How I handle translations</h2>
+                    <p id="intro-title-sub-es" class="svc-module-sub" style="display:none;">Traduzco de español a inglés y de inglés a español. Le digo el precio y la fecha de entrega antes de empezar.</p><p id="intro-title-sub-en" class="svc-module-sub">I translate Spanish to English and English to Spanish. You get the price and the delivery date before I start.</p>
                 </div>
-                <h3 id="bun-1-es" style="display:none;">Paquete familiar</h3>
-                <h3 id="bun-1-en">Family bundle</h3>
-                
-                <div class="discount-pricing">
-                    <div class="discount-item">
-                        <span class="discount-label" id="bun-1a-es" style="display:none;">Incluye:</span>
-                        <span class="discount-label" id="bun-1a-en">Includes translations of:</span>
-                        <span class="discount-value" id="bun-1b-es" style="display:none;">3 registros vitales</span>
-                        <span class="discount-value" id="bun-1b-en">3 vital records</span>
-                    </div>
-                    <div class="discount-item">
-                        <span class="discount-label" id="bun-1c-es" style="display:none;">Precio:</span>
-                        <span class="discount-label" id="bun-1c-en">Price:</span>
-                        <span class="discount-value">$80</span>
-                    </div>
+            </div>
+            <div class="svc-grid">
+                <article class="svc-card"><h3 id="val-1-es" class="svc-card-title" style="display:none;">Mi certificación firmada</h3><h3 id="val-1-en" class="svc-card-title">My signed certification</h3><p id="val-1-desc-es" style="display:none;">Cada traducción lleva una certificación firmada de que está completa y es exacta y de que domino los dos idiomas. La preparo para cumplir con los requisitos de USCIS y del DMV, pero la decisión de aceptarla es de la agencia.</p><p id="val-1-desc-en">Every translation comes with my signed statement that it&rsquo;s complete and accurate and that I&rsquo;m competent in both languages. I prepare it to meet USCIS and DMV requirements, but the agency decides whether to accept it.</p></article>
+                <article class="svc-card"><h3 id="val-2-es" class="svc-card-title" style="display:none;">El precio por adelantado</h3><h3 id="val-2-en" class="svc-card-title">The price up front</h3><p id="val-2-desc-es" style="display:none;">Cobro por página y le doy el total antes de empezar.</p><p id="val-2-desc-en">I charge by the page and give you the total before I start.</p></article>
+                <article class="svc-card"><h3 id="val-3-es" class="svc-card-title" style="display:none;">Cuándo la tiene</h3><h3 id="val-3-en" class="svc-card-title">When you&rsquo;ll have it</h3><p id="val-3-desc-es" style="display:none;">Normalmente en 3 días hábiles. Si le urge, la puedo tener en un día hábil por un cargo extra.</p><p id="val-3-desc-en">Usually 3 business days. If you&rsquo;re in a hurry, I can have it in one business day for an extra charge.</p></article>
+                <article class="svc-card"><h3 id="val-4-es" class="svc-card-title" style="display:none;">En su idioma</h3><h3 id="val-4-en" class="svc-card-title">In your language</h3><p id="val-4-desc-es" style="display:none;">Le explico el proceso en español o en inglés, como le quede mejor.</p><p id="val-4-desc-en">I&rsquo;ll walk you through it in Spanish or English, whichever works for you.</p></article>
+            </div>
+            <p id="intro-p2-es" class="svc-note" style="display:none;"><strong>Solo hago la traducción.</strong> No doy asesoría legal ni de inmigración, y no le puedo decir qué documentos necesita para su trámite.</p><p id="intro-p2-en" class="svc-note"><strong>I only translate.</strong> I don&rsquo;t give legal or immigration advice, and I can&rsquo;t tell you which documents your case needs.</p>
+        </section>
+
+        <section class="svc-module" id="prices">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+                <div>
+                    <h2 id="price-title-es" class="svc-module-title" style="display:none;">Precio por página</h2><h2 id="price-title-en" class="svc-module-title">Price per page</h2>
+                    <p id="price-title-sub-es" class="svc-module-sub" style="display:none;">Todas las traducciones llevan mi certificación firmada.</p><p id="price-title-sub-en" class="svc-module-sub">Every translation includes my signed certification.</p>
                 </div>
-                <ul style="margin-top: 1rem; font-size: 0.95rem;">
-                    <li>
-                        <span id="bun-1d-es" style="display:none;">Acta de Nacimiento</span>
-                        <span id="bun-1d-en">Birth Certificate</span>
-                    </li>
-                    <li>
-                        <span id="bun-1e-es" style="display:none;">Acta de Matrimonio</span>
-                        <span id="bun-1e-en">Marriage Certificate</span>
-                    </li>
-                    <li>
-                        <span id="bun-1f-es" style="display:none;">Acta de Defunción</span>
-                        <span id="bun-1f-en">Death Certificate</span>
-                    </li>
-                </ul>
-                <p class="discount-note" style="display:none; margin-top: 0.5rem;" id="bun-1g-es" style="display:none;">El paquete es para documentos de 1 página. Si alguno tiene más, las páginas extra van con el precio normal.</p>
-                <p class="discount-note" style="margin-top: 0.5rem;" id="bun-1g-en">The bundle covers 1-page documents. Extra pages are charged at the regular rate.</p>
             </div>
+            <div class="svc-grid is-three">
+                <article class="svc-card tr-price">
+                    <div class="svc-tags"><span id="pr-1-b-es" class="svc-tag" style="display:none;">$30</span><span id="pr-1-b-en" class="svc-tag">$30</span></div>
+                    <h3 id="pr-1-t-es" class="svc-card-title" style="display:none;">Primera página</h3><h3 id="pr-1-t-en" class="svc-card-title">First page</h3>
+                    <p id="pr-1-v-es" class="tr-price-val" style="display:none;">$30</p><p id="pr-1-v-en" class="tr-price-val">$30</p>
+                    <p id="pr-1-d-es" style="display:none;">Hasta 250 palabras. Incluye mi certificación firmada.</p><p id="pr-1-d-en">Up to 250 words. Includes my signed certification.</p>
+                </article>
+                <article class="svc-card tr-price">
+                    <div class="svc-tags"><span id="pr-2-b-es" class="svc-tag" style="display:none;">$25</span><span id="pr-2-b-en" class="svc-tag">$25</span></div>
+                    <h3 id="pr-2-t-es" class="svc-card-title" style="display:none;">Cada página adicional</h3><h3 id="pr-2-t-en" class="svc-card-title">Each additional page</h3>
+                    <p id="pr-2-v-es" class="tr-price-val" style="display:none;">$25</p><p id="pr-2-v-en" class="tr-price-val">$25</p>
+                    <p id="pr-2-d-es" style="display:none;">Precio más bajo para documentos de varias páginas.</p><p id="pr-2-d-en">A lower rate for documents with several pages.</p>
+                </article>
+                <article class="svc-card tr-price">
+                    <div class="svc-tags"><span id="pr-3-b-es" class="svc-tag is-orange" style="display:none;">+$10</span><span id="pr-3-b-en" class="svc-tag is-orange">+$10</span></div>
+                    <h3 id="pr-3-t-es" class="svc-card-title" style="display:none;">Urgente (24 horas)</h3><h3 id="pr-3-t-en" class="svc-card-title">Rush (24 hours)</h3>
+                    <p id="pr-3-v-es" class="tr-price-val" style="display:none;">+$10 <small>por página</small></p><p id="pr-3-v-en" class="tr-price-val">+$10 <small>per page</small></p>
+                    <p id="pr-3-d-es" style="display:none;">Se la entrego en un día hábil (lunes a viernes).</p><p id="pr-3-d-en">Ready in one business day (Mon&ndash;Fri).</p>
+                </article>
+            </div>
+        </section>
 
-            <div class="card discount-card">
-                <div class="location-badge discount">
-                    <span id="badg-2-es" style="display:none;">Ahorra</span>
-                    <span id="badg-2-en">Saves</span>
+        <section class="svc-module tr-bundles-mod">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
+                <div>
+                    <h2 id="bundle-title-es" class="svc-module-title" style="display:none;">Paquetes</h2><h2 id="bundle-title-en" class="svc-module-title">Bundles</h2>
+                    <p id="bundle-title-sub-es" class="svc-module-sub" style="display:none;">Para cuando trae varios documentos a la vez, como los papeles de la familia o los de la escuela. Solo traducción; sin asesoría legal.</p><p id="bundle-title-sub-en" class="svc-module-sub">For when you bring several documents at once, like family records or school papers. Translation only; no legal advice.</p>
                 </div>
-                <h3 id="bun-2-es" style="display:none;">Paquete de 4 documentos</h3>
-                <h3 id="bun-2-en">4-document bundle</h3>
-                
-                <div class="discount-pricing">
-                    <div class="discount-item">
-                        <span class="discount-label" id="bun-2a-es" style="display:none;">Incluye:</span>
-                        <span class="discount-label" id="bun-2a-en">Includes translations of:</span>
-                        <span class="discount-value" id="bun-2b-es" style="display:none;">4 documentos</span>
-                        <span class="discount-value" id="bun-2b-en">4 documents</span>
-                    </div>
-                    <div class="discount-item">
-                        <span class="discount-label" id="bun-2c-es" style="display:none;">Precio:</span>
-                        <span class="discount-label" id="bun-2c-en">Price:</span>
-                        <span class="discount-value">$115</span>
-                    </div>
+            </div>
+            <div class="svc-grid is-three tr-bundles">
+                <article class="svc-card tr-bundle is-featured">
+                    <span id="bun-1-r-es" class="tr-ribbon is-green" style="display:none;">Mayor ahorro · Ahorra $10</span><span id="bun-1-r-en" class="tr-ribbon is-green">Biggest savings · Save $10</span>
+                    <h3 id="bun-1-t-es" class="svc-card-title" style="display:none;">Paquete familiar</h3><h3 id="bun-1-t-en" class="svc-card-title">Family bundle</h3>
+                    <p id="bun-1-v-es" class="tr-price-val" style="display:none;">$80</p><p id="bun-1-v-en" class="tr-price-val">$80</p>
+                    <p id="bun-1-inc-es" class="tr-bundle-inc" style="display:none;">3 registros vitales:</p><p id="bun-1-inc-en" class="tr-bundle-inc">3 vital records:</p>
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-1-i1-es" style="display:none;">Acta de nacimiento</span><span id="bun-1-i1-en">Birth certificate</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-1-i2-es" style="display:none;">Acta de matrimonio</span><span id="bun-1-i2-en">Marriage certificate</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-1-i3-es" style="display:none;">Acta de defunción</span><span id="bun-1-i3-en">Death certificate</span></li></ul>
+                    <p id="bun-1-n-es" class="tr-fine" style="display:none;">Para documentos de 1 página. Las páginas extra van con el precio normal.</p><p id="bun-1-n-en" class="tr-fine">For 1-page documents. Extra pages are charged at the regular rate.</p>
+                </article>
+                <article class="svc-card tr-bundle">
+                    <span id="bun-2-r-es" class="tr-ribbon" style="display:none;">Ahorra $5</span><span id="bun-2-r-en" class="tr-ribbon">Save $5</span>
+                    <h3 id="bun-2-t-es" class="svc-card-title" style="display:none;">Paquete de 4 documentos</h3><h3 id="bun-2-t-en" class="svc-card-title">4-document bundle</h3>
+                    <p id="bun-2-v-es" class="tr-price-val" style="display:none;">$115</p><p id="bun-2-v-en" class="tr-price-val">$115</p>
+                    <p id="bun-2-inc-es" class="tr-bundle-inc" style="display:none;">4 documentos:</p><p id="bun-2-inc-en" class="tr-bundle-inc">4 documents:</p>
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-2-i1-es" style="display:none;">Acta de nacimiento</span><span id="bun-2-i1-en">Birth certificate</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-2-i2-es" style="display:none;">Acta de matrimonio</span><span id="bun-2-i2-en">Marriage certificate</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-2-i3-es" style="display:none;">Declaración de apoyo (solo traducción)</span><span id="bun-2-i3-en">Affidavit of Support (translation only)</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-2-i4-es" style="display:none;">1 página adicional de evidencia</span><span id="bun-2-i4-en">One additional page of supporting evidence</span></li></ul>
+                    <p id="bun-2-n-es" class="tr-fine" style="display:none;">Las páginas extra van con el precio normal.</p><p id="bun-2-n-en" class="tr-fine">Extra pages are charged at the regular rate.</p>
+                </article>
+                <article class="svc-card tr-bundle">
+                    <span id="bun-3-r-es" class="tr-ribbon" style="display:none;">$3 menos por página</span><span id="bun-3-r-en" class="tr-ribbon">$3 less per page</span>
+                    <h3 id="bun-3-t-es" class="svc-card-title" style="display:none;">Documentos largos</h3><h3 id="bun-3-t-en" class="svc-card-title">Long documents</h3>
+                    <p id="bun-3-v-es" class="tr-price-val" style="display:none;">$22 <small>por página</small></p><p id="bun-3-v-en" class="tr-price-val">$22 <small>per page</small></p>
+                    
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-3-i1-es" style="display:none;">Para documentos de 10 páginas o más</span><span id="bun-3-i1-en">For documents with 10 or more pages</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="bun-3-i2-es" style="display:none;">Incluye mi certificación firmada</span><span id="bun-3-i2-en">Includes my signed certification</span></li></ul>
+                    <p id="bun-3-n-es" class="tr-fine" style="display:none;">Le confirmo el total antes de empezar.</p><p id="bun-3-n-en" class="tr-fine">I&rsquo;ll confirm the total before I start.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span>
+                <div>
+                    <h2 id="combo-title-es" class="svc-module-title" style="display:none;">Notarización y descuentos</h2><h2 id="combo-title-en" class="svc-module-title">Notarization and discounts</h2>
+                    
                 </div>
-                <ul style="margin-top: 1rem; font-size: 0.95rem;">
-                    <li>
-                        <span id="bun-2d-es" style="display:none;">Acta de Nacimiento</span>
-                        <span id="bun-2d-en">Birth Certificate</span>
-                    </li>
-                    <li>
-                        <span id="bun-2e-es" style="display:none;">Acta de Matrimonio</span>
-                        <span id="bun-2e-en">Marriage Certificate</span>
-                    </li>
-                    <li>
-                        <span id="bun-2f-es" style="display:none;">Declaración de Apoyo (solo traducción)</span>
-                        <span id="bun-2f-en">Affidavit of Support (translation only)</span>
-                    </li>
-                    <li>
-                        <span id="bun-2g-es" style="display:none;">1 página adicional de evidencia</span>
-                        <span id="bun-2g-en">One additional page of supporting evidence</span>
-                    </li>
-                </ul>
-                <p class="discount-note" style="display:none; margin-top: 0.5rem;" id="bun-2h-es" style="display:none;">Las páginas extra van con el precio normal.</p>
-                <p class="discount-note" style="margin-top: 0.5rem;" id="bun-2h-en">Extra pages are charged at the regular rate.</p>
             </div>
+            <div class="svc-grid is-three">
+                <article class="svc-card tr-disc">
+                    <div class="tr-disc-head"><span class="tr-disc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><span id="ds-1-b-es" class="tr-disc-badge is-teal" style="display:none;">$40 por documento</span><span id="ds-1-b-en" class="tr-disc-badge is-teal">$40 per document</span></div>
+                    <h3 id="ds-1-t-es" class="svc-card-title" style="display:none;">Traducción + firma del traductor notarizada</h3><h3 id="ds-1-t-en" class="svc-card-title">Translation + notarized translator signature</h3>
+                    <p id="ds-1-d-es" style="display:none;">Solo si la agencia pide que mi firma como traductor esté notarizada. Yo nunca notarizo mi propia firma, así que firmo mi certificación frente a otro Notary Public. Incluye la traducción y esa notarización.</p><p id="ds-1-d-en">Only when the agency wants the translator&rsquo;s signature notarized. I never notarize my own signature, so I sign my certification in front of a different Notary Public. Includes the translation and that notarization.</p>
+                </article>
+                <article class="svc-card tr-disc">
+                    <div class="tr-disc-head"><span class="tr-disc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><span id="ds-2-b-es" class="tr-disc-badge is-green" style="display:none;">10% de descuento</span><span id="ds-2-b-en" class="tr-disc-badge is-green">10% OFF</span></div>
+                    <h3 id="ds-2-t-es" class="svc-card-title" style="display:none;">Descuento para estudiantes</h3><h3 id="ds-2-t-en" class="svc-card-title">Student discount</h3>
+                    <p id="ds-2-d-es" style="display:none;">Para diplomas y certificados de estudios.</p><p id="ds-2-d-en">For diplomas and school certificates.</p>
+                </article>
+                <article class="svc-card tr-disc">
+                    <div class="tr-disc-head"><span class="tr-disc-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><span id="ds-3-b-es" class="tr-disc-badge is-green" style="display:none;">$5 de descuento</span><span id="ds-3-b-en" class="tr-disc-badge is-green">$5 OFF</span></div>
+                    <h3 id="ds-3-t-es" class="svc-card-title" style="display:none;">Descuento de Tienda Salvadoreña</h3><h3 id="ds-3-t-en" class="svc-card-title">Tienda Salvadoreña discount</h3>
+                    <p id="ds-3-d-es" style="display:none;">Enséñeme un recibo de la tienda de este mes. Aplica a paquetes de traducción de más de $50. No estoy afiliado a la tienda.</p><p id="ds-3-d-en">Show me a receipt from the store from this month. Applies to translation bundles over $50. I&rsquo;m not affiliated with the store.</p>
+                </article>
+            </div>
+        </section>
 
-            <div class="card discount-card">
-                <div class="location-badge free">
-                    <span id="badg-3-es" style="display:none;">Descuento</span>
-                    <span id="badg-3-en">Discount</span>
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+                <div>
+                    <h2 id="docs-title-es" class="svc-module-title" style="display:none;">Lo que más traduzco</h2><h2 id="docs-title-en" class="svc-module-title">What I translate most</h2>
+                    
                 </div>
-                <h3 id="bun-3-es" style="display:none;">Documentos largos (10 páginas o más)</h3>
-                <h3 id="bun-3-en">Long documents (10+ pages)</h3>
-                
-                <div class="discount-pricing">
-                    <div class="discount-item">
-                        <span class="discount-label" id="bun-3a-es" style="display:none;">Precio:</span>
-                        <span class="discount-label" id="bun-3a-en">Rate:</span>
-                        <span class="discount-value" id="bun-3b-es" style="display:none;">$22/página</span>
-                        <span class="discount-value" id="bun-3b-en">$22 per page</span>
-                    </div>
+            </div>
+            <div class="tr-doc-grid">
+                <article class="svc-card tr-doc">
+                    <div class="tr-doc-head"><span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><h3 id="doc-1-es" class="svc-card-title" style="display:none;">Registros vitales</h3><h3 id="doc-1-en" class="svc-card-title">Vital records</h3></div>
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="doc-1-a-es" style="display:none;">Actas de nacimiento, matrimonio, divorcio y defunción</span><span id="doc-1-a-en">Birth, marriage, divorce, and death certificates</span></li></ul>
+                </article>
+                <article class="svc-card tr-doc">
+                    <div class="tr-doc-head"><span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-6 10 6z"/></svg></span><h3 id="doc-2-es" class="svc-card-title" style="display:none;">Documentos del gobierno (USCIS / DMV)</h3><h3 id="doc-2-en" class="svc-card-title">Government documents (USCIS / DMV)</h3></div>
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="doc-2-a-es" style="display:none;">Documentos que se presentan ante USCIS (solo traducción)</span><span id="doc-2-a-en">Documents being turned in to USCIS (translation only)</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="doc-2-b-es" style="display:none;">Documentos para Real ID / DMV de Colorado</span><span id="doc-2-b-en">Real ID / Colorado DMV documents</span></li></ul>
+                </article>
+                <article class="svc-card tr-doc">
+                    <div class="tr-doc-head"><span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><h3 id="doc-3-es" class="svc-card-title" style="display:none;">Documentos académicos</h3><h3 id="doc-3-en" class="svc-card-title">Academic documents</h3></div>
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="doc-3-a-es" style="display:none;">Diplomas, certificados y expedientes académicos</span><span id="doc-3-a-en">Diplomas, transcripts, and academic records</span></li></ul>
+                </article>
+                <article class="svc-card tr-doc">
+                    <div class="tr-doc-head"><span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M7 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3zM17 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3z"/></svg></span><h3 id="doc-4-es" class="svc-card-title" style="display:none;">Documentos legales</h3><h3 id="doc-4-en" class="svc-card-title">Legal documents</h3></div>
+                    <ul class="tr-list"><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="doc-4-a-es" style="display:none;">Declaraciones juradas, contratos, poderes</span><span id="doc-4-a-en">Affidavits, contracts, powers of attorney</span></li><li><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span id="doc-4-b-es" style="display:none;">Cartas de permiso de viaje para menores</span><span id="doc-4-b-en">Minor travel consent letters</span></li></ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></span>
+                <div>
+                    <h2 id="notes-title-es" class="svc-module-title" style="display:none;">Lo que conviene saber</h2><h2 id="notes-title-en" class="svc-module-title">Good to know</h2>
+                    
                 </div>
-                <p style="display:none; margin-top: 1rem; font-size: 0.95rem;" id="bun-3c-es" style="display:none;">Para documentos de 10 páginas o más.</p>
-                <p style="margin-top: 1rem; font-size: 0.95rem;" id="bun-3c-en">For documents with 10+ pages.</p>
             </div>
-        </div>
-    </section>
+            <article class="svc-card">
+                <dl class="svc-kv">
+                    <div><dt><span id="td-7-es" style="display:none;">Quién traduce</span><span id="td-7-en">Who translates</span></dt><dd><span id="td-7d-es" style="display:none;">Soy bilingüe nativo en español e inglés y tengo experiencia con traducciones presentadas ante USCIS y el DMV de Colorado. Cada traducción incluye mi certificación firmada de que soy competente en ambos idiomas y de que la traducción es completa y exacta.</span><span id="td-7d-en">I&rsquo;m a native speaker of both Spanish and English, with experience in translations submitted to USCIS and the Colorado DMV. Every translation includes my signed certification that I&rsquo;m competent in both languages and that the translation is complete and accurate.</span></dd></div>
+                    <div><dt><span id="td-8-es" style="display:none;">Entrega</span><span id="td-8-en">Turnaround</span></dt><dd><span id="td-8d-es" style="display:none;">Normalmente <strong>3 días hábiles</strong> (lunes a viernes). Si le urge, hay opción de un día.</span><span id="td-8d-en">Usually <strong>3 business days</strong> (Mon&ndash;Fri). There&rsquo;s a one-day option if you&rsquo;re in a hurry.</span></dd></div>
+                    <div><dt><span id="td-9-es" style="display:none;">Notarizar algo más</span><span id="td-9-en">Notarizing something else</span></dt><dd><span id="td-9d-es" style="display:none;">Si quiere que vaya a donde usted esté para notarizar una declaración jurada u otro documento, se suma la tarifa de viaje (vea <a href="pricing.html">Precios</a>).</span><span id="td-9d-en">If you&rsquo;d like me to come to you to notarize an affidavit or another document, the travel fee applies (see <a href="pricing.html">Pricing</a>).</span></dd></div>
+                </dl>
+            </article>
+        </section>
 
-    <div class="divider"></div>
-
-    <section class="section">
-        <div class="text-center">
-            <h2 id="combo-title-es" style="display:none; border:none; margin-bottom:var(--space-md);">Notarización y descuentos</h2>
-            <h2 id="combo-title-en" style="border:none; margin-bottom:var(--space-md);">Notarization and discounts</h2>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th id="th-4-es" style="display:none;">Servicio/Descuento</th>
-                    <th id="th-4-en">Service / Discount</th>
-                    <th id="th-5-es" style="display:none;">Detalles</th>
-                    <th id="th-5-en">Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong id="td-4-es" style="display:none;">Traducción + Firma del Traductor Notarizada</strong>
-                        <strong id="td-4-en">Translation + Notarized Translator Signature</strong>
-                    </td>
-                    <td>
-                        <strong id="td-4p-es" style="display:none; color: var(--teal); font-size: 1.2rem;">$40 por documento</strong>
-                        <strong id="td-4p-en" style="color: var(--teal); font-size: 1.2rem;">$40 per document</strong>
-                        <br>
-                        <span id="td-4d-es" style="display:none;">Solo si la agencia pide que mi firma como traductor esté notarizada. Yo nunca notarizo mi propia firma, así que firmo mi certificación frente a otro Notary Public. Incluye la traducción y esa notarización.</span>
-                        <span id="td-4d-en">Only when the agency wants the translator&rsquo;s signature notarized. I never notarize my own signature, so I sign my certification in front of a different Notary Public. Includes the translation and that notarization.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong id="td-5-es" style="display:none;">Descuento para estudiantes</strong>
-                        <strong id="td-5-en">Student discount</strong>
-                    </td>
-                    <td>
-                        <strong style="color: var(--green); font-size: 1.2rem;"><span id="td-5p-es" style="display:none;">10% de descuento</span><span id="td-5p-en">10% OFF</span></strong><br>
-                        <span id="td-5d-es" style="display:none;">Para diplomas y certificados de estudios.</span>
-                        <span id="td-5d-en">For diplomas and school certificates.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong id="td-6-es" style="display:none;">Descuento de Tienda Salvadoreña</strong>
-                        <strong id="td-6-en">Tienda Salvadoreña Discount</strong>
-                    </td>
-                    <td>
-                        <strong style="color: var(--green); font-size: 1.2rem;"><span id="td-6p-es" style="display:none;">$5 de descuento</span><span id="td-6p-en">$5 OFF</span></strong><br>
-                        <span id="td-6d-es" style="display:none;">Enséñeme un recibo de la tienda de este mes. Aplica a paquetes de traducción de más de $50. No estoy afiliado a la tienda.</span>
-                        <span id="td-6d-en">Show me a receipt from the store from this month. Applies to translation bundles over $50. I&rsquo;m not affiliated with the store.</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="section">
-        <div class="text-center">
-            <h2 id="docs-title-es" style="display:none; border:none; margin-bottom:var(--space-md);">Lo que más traduzco</h2>
-            <h2 id="docs-title-en" style="border:none; margin-bottom:var(--space-md);">What I translate most</h2>
-        </div>
-        
-        <div class="guidelines-grid">
-            <div class="card guideline-card">
-                <strong id="doc-1-es" style="display:none; color:var(--navy); font-size:1.1rem;">Registros Vitales</strong>
-                <strong id="doc-1-en" style="color:var(--navy); font-size:1.1rem;">Vital Records</strong>
-                <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                    <li id="doc-1a-es" style="display:none;">Actas de nacimiento, matrimonio, divorcio y defunción</li>
-                    <li id="doc-1a-en">Birth, marriage, divorce, and death certificates</li>
-                </ul>
+        <aside class="legal-callout tr-legal" aria-label="Aviso legal / Legal notice">
+            <div class="legal-callout-head">
+                <span class="legal-callout-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M7 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3zM17 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3z"/></svg></span>
+                <div>
+                    <p class="legal-callout-cite">C.R.S. &sect; 24-21-525</p>
+                    <h2 id="legal-box-title-es" style="display:none;">Aviso legal (ley de Colorado)</h2><h2 id="legal-box-title-en">Legal notice (Colorado law)</h2>
+                </div>
             </div>
-            
-            <div class="card guideline-card">
-                <strong id="doc-2-es" style="display:none; color:var(--navy); font-size:1.1rem;">Documentos Gubernamentales</strong>
-                <strong id="doc-2-en" style="color:var(--navy); font-size:1.1rem;">Government Documents</strong>
-                <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                    <li id="doc-2a-es" style="display:none;">Documentos que se presentan ante USCIS (solo traducción)</li>
-                    <li id="doc-2a-en">Documents being turned in to USCIS (translation only)</li>
-                    <li id="doc-2b-es" style="display:none;">Documentos para Real ID / DMV de Colorado</li>
-                    <li id="doc-2b-en">Real ID / Colorado DMV documents</li>
-                </ul>
-            </div>
-            
-            <div class="card guideline-card">
-                <strong id="doc-3-es" style="display:none; color:var(--navy); font-size:1.1rem;">Documentos Académicos</strong>
-                <strong id="doc-3-en" style="color:var(--navy); font-size:1.1rem;">Academic Documents</strong>
-                <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                    <li id="doc-3a-es" style="display:none;">Diplomas, certificados y expedientes académicos</li>
-                    <li id="doc-3a-en">Diplomas, transcripts, academic records</li>
-                </ul>
-            </div>
-            
-            <div class="card guideline-card">
-                <strong id="doc-4-es" style="display:none; color:var(--navy); font-size:1.1rem;">Documentos Legales</strong>
-                <strong id="doc-4-en" style="color:var(--navy); font-size:1.1rem;">Legal Documents</strong>
-                <ul style="margin-top:0.5rem; padding-left:1.5rem;">
-                    <li id="doc-4a-es" style="display:none;">Declaraciones juradas, contratos, poderes notariales</li>
-                    <li id="doc-4a-en">Affidavits, contracts, powers of attorney</li>
-                    <li id="doc-4b-es" style="display:none;">Cartas de permiso de viaje para menores</li>
-                    <li id="doc-4b-en">Minor travel consent letters</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+            <p id="tr-legal-statute-es" class="legal-callout-statute" style="display:none;">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="tr-legal-statute-en" class="legal-callout-statute">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
+            <p id="legal-add-desc-es" class="legal-callout-note" style="display:none;"><strong>Para que quede claro:</strong> hago traducciones y notarizaciones, nada más. No doy asesoría legal, no represento a nadie y no doy consultoría de inmigración.</p><p id="legal-add-desc-en" class="legal-callout-note"><strong>To be clear:</strong> I do translations and notarizations, nothing more. I don&rsquo;t give legal advice, represent anyone, or offer immigration consulting.</p>
+        </aside>
 
-    <section class="section info-box">
-        <div class="text-center">
-            <h3 id="notes-title-es" style="display:none; margin-bottom:var(--space-md);">Lo que conviene saber</h3>
-            <h3 id="notes-title-en" style="margin-bottom:var(--space-md);">Good to know</h3>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th id="th-6-es" style="display:none;">Tema</th>
-                    <th id="th-6-en">Topic</th>
-                    <th id="th-7-es" style="display:none;">Detalle</th>
-                    <th id="th-7-en">Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <strong id="td-7-es" style="display:none;">Quién traduce</strong>
-                        <strong id="td-7-en">Who translates</strong>
-                    </td>
-                    <td>
-                        <span id="td-7d-es" style="display:none;">Soy bilingüe nativo en español e inglés y tengo experiencia con traducciones presentadas ante USCIS y el DMV de Colorado. Cada traducción incluye mi certificación firmada de que soy competente en ambos idiomas y de que la traducción es completa y exacta.</span>
-                        <span id="td-7d-en">I am a native speaker of both Spanish and English, with experience in translations submitted to USCIS and the Colorado DMV. Every translation includes my signed certification that I am competent in both languages and that the translation is complete and accurate.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong id="td-8-es" style="display:none;">Tiempo de Entrega</strong>
-                        <strong id="td-8-en">Turnaround Time</strong>
-                    </td>
-                    <td>
-                        <span id="td-8d-es" style="display:none;">Normalmente: <strong>3 días hábiles</strong> (lunes a viernes). Si le urge, hay opción de un día.</span>
-                        <span id="td-8d-en">Usually: <strong>3 business days</strong> (Mon&ndash;Fri). There&rsquo;s a one-day option if you&rsquo;re in a hurry.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <strong id="td-9-es" style="display:none;">Si también necesita notarizar algo</strong>
-                        <strong id="td-9-en">If you also need something notarized</strong>
-                    </td>
-                    <td>
-                        <span id="td-9d-es" style="display:none;">Si quiere que vaya a donde usted esté para notarizar una declaración jurada u otro documento, se suma la tarifa de viaje (vea <a href="pricing.html">Precios</a>).</span>
-                        <span id="td-9d-en">If you&rsquo;d like me to come to you to notarize an affidavit or another document, the travel fee applies (see <a href="pricing.html">Pricing</a>).</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <section class="section warning-box">
-        <div class="text-center">
-            <h3 id="legal-box-title-es" style="display:none; margin-bottom:var(--space-md);">Avisos Legales Requeridos (Ley de Colorado)</h3>
-            <h3 id="legal-box-title-en" style="margin-bottom:var(--space-md);">Legal Notice (Required by Colorado Law)</h3>
-        </div>
-
-        <div class="warning-content" style="display:flex; flex-direction:column; gap:1rem;">
-            <div class="warning-item highlight" id="legal-spanish-notice-es" style="display:none; background: rgba(255, 143, 0, 0.1); padding: 1rem; border-radius: 4px;">
-                <strong>En Español (Obligatorio):</strong><br><br>
-                "NO SOY UN ABOGADO LICENCIADO PARA EJERCER LA ABOGACÍA EN EL ESTADO DE COLORADO Y NO PUEDO DAR CONSEJOS LEGALES NI ACEPTAR HONORARIOS POR CONSEJOS LEGALES.<br><br>
-                NO SOY CONSULTOR DE INMIGRACIÓN NI EXPERTO EN ASUNTOS DE INMIGRACIÓN.<br><br>
-                SI SOSPECHA DE FRAUDE, PUEDE COMUNICARSE CON LA OFICINA DEL FISCAL GENERAL DE COLORADO O CON LA CORTE SUPREMA DE COLORADO."
+        <section class="tr-contact">
+            <h2 id="cta-ready-es" class="tr-contact-title" style="display:none;">¿Le traduzco algo?</h2><h2 id="cta-ready-en" class="tr-contact-title">Have something to translate?</h2>
+            <p id="cta-desc-es" class="tr-contact-text" style="display:none;">Mándeme una foto del documento por mensaje o correo y le digo cuánto cuesta y cuándo lo tiene.</p><p id="cta-desc-en" class="tr-contact-text">Text or email me a photo of the document and I&rsquo;ll tell you the price and when it&rsquo;ll be ready.</p>
+            <div class="tr-contact-btns">
+                <a href="sms:+13035004122" class="tr-btn is-primary"><span id="cta-btn-text-es" style="display:none;">Mandar foto por mensaje</span><span id="cta-btn-text-en">Text me a photo</span></a>
+                <a href="tel:+13035004122" class="tr-btn"><span id="cta-btn-call-es" style="display:none;">Llamar: 303-500-4122</span><span id="cta-btn-call-en">Call: 303-500-4122</span></a>
+                <a href="mailto:info@quintananotarysigning.com" class="tr-btn"><span id="cta-btn-email-es" style="display:none;">Enviar correo</span><span id="cta-btn-email-en">Email me</span></a>
             </div>
-            
-            <div class="warning-item" style="padding: 1rem; border-left: 3px solid #5A3700;">
-                <strong>In English (Required):</strong><br><br>
-                "I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.<br><br>
-                I AM NOT AN IMMIGRATION CONSULTANT, NOR AM I AN EXPERT ON IMMIGRATION MATTERS.<br><br>
-                IF YOU SUSPECT FRAUD, YOU MAY CONTACT THE COLORADO ATTORNEY GENERAL’S OFFICE OR THE COLORADO SUPREME COURT."
-            </div>
-
-            <div class="warning-item" style="padding: 1rem; background: #fff; border-radius: 4px;">
-                <strong id="legal-add-title-es" style="display:none;">Para que quede claro:</strong>
-                <strong id="legal-add-title-en">To be clear:</strong><br>
-                <span id="legal-add-desc-es" style="display:none;">Hago traducciones y notarizaciones, nada más. No doy asesoría legal, no represento a nadie y no doy consultoría de inmigración.</span>
-                <span id="legal-add-desc-en">I do translations and notarizations, nothing more. I don&rsquo;t give legal advice, represent anyone, or offer immigration consulting.</span>
-            </div>
-        </div>
-    </section>
-
-    <div class="cta-card">
-        <div class="cta-content">
-            <h2 id="cta-ready-es" style="display:none; color:white; border:none;">¿Le traduzco algo?</h2>
-            <h2 id="cta-ready-en" style="color:white; border:none;">Have something to translate?</h2>
-            
-            <p id="cta-desc-es" style="display:none; color:var(--teal-light);">Mándeme una foto del documento por mensaje o correo y le digo cuánto cuesta y cuándo lo tiene.</p>
-            <p id="cta-desc-en" style="color:var(--teal-light);">Text or email me a photo of the document and I&rsquo;ll tell you the price and when it&rsquo;ll be ready.</p>
-            
-            <div class="cta-buttons" style="margin-top:1.5rem;">
-                <a href="tel:+13035004122" class="btn btn-primary btn-large" style="background:var(--surface); color:var(--teal-ink) !important;">
-                    <span id="cta-btn-call-es" style="display:none;">Llamar/Mensaje: 303‑500‑4122</span>
-                    <span id="cta-btn-call-en">Call/Text: 303‑500‑4122</span>
-                </a>
-                <a href="mailto:info@quintananotarysigning.com" class="btn btn-secondary btn-large" style="border-color:white; color:white !important;">
-                    <span id="cta-btn-email-es" style="display:none;">Enviar Correo</span>
-                    <span id="cta-btn-email-en">Email Me</span>
-                </a>
-            </div>
-        </div>
-    </div>
+        </section>
 
 </main>
 
-<footer>
+<footer class="site-footer">
     <nav class="footer-sitemap" aria-label="Site">
         <div class="footer-col">
             <h2 class="footer-col-title"><span id="ft-svc-title-es" style="display:none;">Servicios</span><span id="ft-svc-title-en">Services</span></h2>
@@ -655,64 +394,42 @@
         </div>
     </nav>
 
-    <div class="contact-info">
-        <div class="contact-item">
-            <strong id="ft-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
-            <strong id="ft-call-en">Call/Text Me:</strong>
-            <a href="tel:+13035004122">303-500-4122</a>
-        </div>
-        <div class="contact-item">
-            <strong id="ft-email-es" style="display:none;">Correo Electrónico:</strong>
-            <strong id="ft-email-en">Email:</strong>
-            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+    <div class="footer-info">
+        <section class="footer-block" aria-labelledby="ft-brand-h-en">
+            <h2 class="footer-block-title" id="ft-brand-h-en">Quintana Notary &amp; Signing</h2>
+            <p id="ft-tagline-es" class="footer-lead" style="display:none;">Notary Public móvil en el área metropolitana de Denver, en español y en inglés.</p><p id="ft-tagline-en" class="footer-lead">Mobile Notary Public in the Denver Metro area, in English and Spanish.</p>
+            <ul class="footer-contact">
+                <li><strong id="ft-call-es" style="display:none;">Llamadas y mensajes:</strong><strong id="ft-call-en">Call or text:</strong> <a href="tel:+13035004122">303-500-4122</a></li>
+                <li><strong id="ft-email-es" style="display:none;">Correo:</strong><strong id="ft-email-en">Email:</strong> <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a></li>
+            </ul>
+            <p id="ft-llc-es" class="footer-muted" style="display:none;">Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p><p id="ft-llc-en" class="footer-muted">A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p>
+            <p id="ft-sister-es" class="footer-muted" style="display:none;">Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, ayuda con el papeleo del DMV. No es parte del DMV ni está afiliada a él.</p><p id="ft-sister-en" class="footer-muted">Sister brand: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, help with DMV paperwork. Not part of or affiliated with the DMV.</p>
+        </section>
+
+        <section class="footer-block" aria-labelledby="ft-cred-h-en">
+            <h2 id="ft-cred-h-es" class="footer-block-title" style="display:none;">Comisión y seguro</h2><h2 id="ft-cred-h-en" class="footer-block-title">Commission &amp; insurance</h2>
+            <p id="ft-commission-es" class="footer-lead" style="display:none;"><strong>Notary Public comisionado en Colorado</strong><br>ID de comisión 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a></p><p id="ft-commission-en" class="footer-lead"><strong>Colorado-commissioned Notary Public</strong><br>Commission ID 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verify with the Secretary of State</a></p>
+            <p id="footer-trust-es" class="footer-muted" style="display:none;">Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones.</p><p id="footer-trust-en" class="footer-muted">Servicios Quintana LLC is insured through The Hartford: general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and my translation work.</p>
+            <p id="ft-coi-es" class="footer-muted" style="display:none;">Certificado de seguro disponible a petición.</p><p id="ft-coi-en" class="footer-muted">Certificate of insurance available on request.</p>
+        </section>
+    </div>
+
+    <div class="footer-legal" role="region" aria-labelledby="ft-legal-h-en">
+        <div class="footer-legal-inner">
+            <h2 id="ft-legal-h-es" class="footer-block-title" style="display:none;">Aviso legal (C.R.S. § 24-21-525)</h2><h2 id="ft-legal-h-en" class="footer-block-title">Legal notice (C.R.S. § 24-21-525)</h2>
+            <p id="ft-statute-es" class="footer-statute" style="display:none;">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="ft-statute-en" class="footer-statute">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
+            <p id="disclaimer-es" class="footer-muted" style="display:none;">Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong> (C.R.S. § 24-21-529); las tarifas de viaje, conveniencia y trabajo de oficina son aparte y se acuerdan por adelantado. Un Notary Public no es abogado y no puede dar asesoría ni representación legal. No estoy afiliado a ninguna agencia del gobierno local, estatal ni federal.</p><p id="disclaimer-en" class="footer-muted">Notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong> (C.R.S. § 24-21-529); travel, convenience, and office-work fees are separate and agreed on in advance. A Notary Public is not an attorney and cannot give legal advice or legal representation. I am not affiliated with any local, state, or federal government agency.</p>
         </div>
     </div>
 
-    <p id="footer-main-es" style="display:none;">
-        © 2026 Quintana Notary &amp; Signing<br/>
-        Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-        Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a> — ayuda con trámites del DMV<br/>
-        Precios transparentes · Servicio bilingüe · Enfoque comunitario
-    </p>
-    <p id="footer-main-en">
-        © 2026 Quintana Notary &amp; Signing<br/>
-        A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-        Sister brand: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a> — DMV paperwork help<br/>
-        Transparent pricing · Bilingual service · Community focused
-    </p>
-    <p class="footer-trust" id="footer-trust-es" style="display:none;"><strong>Notary Public comisionado y asegurado.</strong> Comisión de Colorado ID 20254044224. Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones. Certificado de seguro disponible a petición.</p>
-    <p class="footer-trust" id="footer-trust-en"><strong>Commissioned &amp; Insured.</strong> Colorado notary commission ID 20254044224. Servicios Quintana LLC is insured through The Hartford: general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and my translation work. Certificate of insurance available on request.</p>
-
-    <div class="disclaimer">
-        <div id="disclaimer-es" style="display:none;">
-            <strong>Aviso Legal (ES)</strong><br/>
-            Quintana Notary &amp; Signing presta servicios notariales, de traducción certificada y de apoyo administrativo de conformidad con la ley de Colorado (C.R.S. § 24-21-525 y § 24-21-529).
-            Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong>; las tarifas de viaje, conveniencia y servicios administrativos son separadas y se acuerdan con el cliente por anticipado.
-            Un Notary Public no es abogado y no puede brindar asesoría ni representación legal.
-            No estoy afiliado con ninguna agencia gubernamental local, estatal ni federal.
-        </div>
-        <div id="disclaimer-en">
-            <strong>Legal Notice (EN)</strong><br/>
-            Quintana Notary &amp; Signing provides notary, certified translation, and administrative support services in accordance with Colorado law (C.R.S. § 24-21-525 and § 24-21-529).
-            Statutory notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong>; travel, convenience, and clerical service fees are separate and agreed upon with the client in advance.
-            Notaries are not attorneys and cannot provide legal advice or legal representation.
-            I am not affiliated with any local, state, or federal government agency.
-        </div>
+    <div class="footer-bottom">
+        <span>© 2026 Quintana Notary &amp; Signing</span>
+        <span class="footer-bottom-links">
+            <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de privacidad</a><a href="privacy.html" id="footer-privacy-en">Privacy policy</a>
+            <span aria-hidden="true">·</span>
+            <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de cookies</a><a href="#" data-cookie-settings id="footer-cookies-en">Cookie settings</a>
+        </span>
     </div>
-
-    <div class="back-to-top-container">
-        <a href="#top" class="btn btn-secondary">
-            <span id="back-top-es" style="display:none;">Volver Arriba</span>
-            <span id="back-top-en">Back to Top</span>
-        </a>
-    </div>
-    <p class="footer-legal-links">
-        <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de Privacidad</a>
-        <a href="privacy.html" id="footer-privacy-en">Privacy Policy</a>
-        ·
-        <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de Cookies</a>
-        <a href="#" data-cookie-settings id="footer-cookies-en">Cookie Settings</a>
-    </p>
 </footer>
 
 <script src="script.js?v=20261028d"></script>
