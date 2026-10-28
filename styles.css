@@ -2323,3 +2323,208 @@ html { scroll-padding-bottom: var(--float-safe); }
   height: var(--fab-size);
   min-height: var(--fab-size);
 }
+
+/* ============================================================
+   ABOUT PAGE v2 (2026-10-28)
+   Profile card → School & work grid → Strengths (primary cards)
+   → Why I do this work + How I work (secondary cards, warm band)
+   → Commission & insurance facts + legal callout.
+   Own tokens so both themes keep body text ≥ 7:1 and small
+   accent text ≥ 4.5:1 (WCAG AA).
+   ============================================================ */
+:root {
+  --ab-soft: #EEF3F9;        /* soft band fill */
+  --ab-warm: #FFF3E0;        /* warm band fill */
+  --ab-card: #FFFFFF;
+  --ab-line: #D5DEE9;
+  --ab-text: #2B3340;        /* 11.9:1 on white */
+  --ab-muted: #4F5B6B;       /* 7.0:1 on white, 6.3:1 on soft */
+  --ab-accent: #00695C;      /* teal text/icons, 6.4:1 on white */
+  --ab-accent-bg: #E0F2F1;
+  --ab-kicker: #9A3D00;      /* orange text, 6.6:1 on white */
+  --ab-legal-bg: #F4F6F8;
+  --ab-legal-line: #8A95A5;
+}
+html[data-theme="dark"] {
+  --ab-soft: #131C2B;
+  --ab-warm: #2A1D10;
+  --ab-card: #182234;
+  --ab-line: #2E3A4E;
+  --ab-text: #DCE3EC;        /* 12:1 on card */
+  --ab-muted: #AEB9C8;       /* 7.4:1 on card */
+  --ab-accent: #5FD3C3;
+  --ab-accent-bg: #133532;
+  --ab-kicker: #FFB784;
+  --ab-legal-bg: #0F1622;
+  --ab-legal-line: #5C6A7E;
+}
+
+.about-page :is(.about-profile, .about-band) { color: var(--ab-text); }
+.about-page :is(.about-profile, .about-band) p { color: var(--ab-text); }
+.about-page .about-ico { width: 22px; height: 22px; flex: none; }
+
+/* ---- Bands (break up the column) ---- */
+.about-band {
+  margin: var(--space-8) 0;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border-radius: var(--r-xl);
+}
+.about-band.is-soft { background: var(--ab-soft); border: 1px solid var(--ab-line); }
+.about-band.is-warm { background: var(--ab-warm); border: 1px solid var(--ab-line); }
+.about-band-title {
+  text-align: left;
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  border: none;
+}
+.about-band-title::after { content: none !important; }
+.about-sub { font-size: 1.1rem; text-align: left; border: none; margin: var(--space-5) 0 var(--space-2); padding: 0; color: var(--ab-kicker) !important; }
+.about-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ab-kicker) !important;
+  margin: 0;
+}
+
+/* ---- 1. Profile card ---- */
+.about-profile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: center;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  background: var(--ab-card);
+  border: 1px solid var(--ab-line);
+  border-top: 5px solid var(--teal);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  text-align: left;
+}
+.about-profile-photo {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  justify-self: center;
+  box-shadow: var(--shadow-sm);
+}
+@media (min-width: 760px) {
+  .about-profile { grid-template-columns: 280px 1fr; gap: var(--space-8); align-items: start; }
+  .about-profile-photo { max-width: none; }
+}
+.about-name { margin: 0.2rem 0 var(--space-3); padding: 0; border: none; text-align: left; font-size: clamp(1.6rem, 4vw, 2.1rem); }
+.about-name::after { content: none !important; }
+.about-lead { font-size: 1.05rem; line-height: 1.65; margin-bottom: var(--space-4); }
+
+.about-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 var(--space-5); }
+.about-badges li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--r-pill);
+  background: var(--ab-accent-bg);
+  color: var(--ab-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.about-badges li .about-ico { width: 16px; height: 16px; }
+.about-badges li.is-muted { background: transparent; border: 1px solid var(--ab-line); color: var(--ab-muted); }
+
+.about-facts { display: grid; grid-template-columns: 1fr; gap: 0; margin: 0 0 var(--space-5); border-top: 1px solid var(--ab-line); }
+@media (min-width: 520px) { .about-facts:not(.is-stacked) { grid-template-columns: 1fr 1fr; column-gap: var(--space-5); } }
+.about-fact { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--space-3); padding: 0.6rem 0; border-bottom: 1px solid var(--ab-line); }
+.about-fact dt { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ab-muted); padding-top: 0.15rem; }
+.about-fact dd { margin: 0; font-weight: 600; color: var(--ab-text); }
+.about-profile-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+.about-profile-actions .btn { width: auto; }
+.about-page a.about-link { font-weight: 700; color: var(--ab-accent); }
+
+/* ---- Card grids ---- */
+.about-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+@media (min-width: 640px) { .about-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .about-grid { grid-template-columns: repeat(3, 1fr); } .about-grid.is-four { grid-template-columns: repeat(4, 1fr); } }
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: var(--space-5);
+  background: var(--ab-card);
+  border: 1px solid var(--ab-line);
+  border-radius: var(--r-lg);
+  text-align: left;
+}
+.about-card-head { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.35rem; }
+.about-ico-wrap {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 12px;
+  background: var(--ab-accent-bg); color: var(--ab-accent);
+}
+.about-card-title { font-size: 1.08rem; line-height: 1.35; margin: 0; padding: 0; border: none; text-align: left; }
+.about-card-title::after { content: none !important; }
+.about-org { font-weight: 700; color: var(--ab-accent) !important; margin: 0; font-size: 0.92rem; }
+.about-card p { margin: 0.25rem 0 0; line-height: 1.6; }
+
+/* Primary: strengths */
+.about-card.is-primary { border-top: 4px solid var(--teal); box-shadow: var(--shadow-sm); }
+.about-stat { font-family: 'Merriweather', Georgia, serif; font-size: 2.2rem; font-weight: 700; line-height: 1; color: var(--ab-accent) !important; margin: 0.25rem 0 0 !important; }
+
+/* Secondary: values */
+.about-card.is-secondary { background: transparent; border: 1px solid var(--ab-line); border-left: 4px solid var(--orange); padding: var(--space-4) var(--space-5); }
+.about-card.is-secondary .about-ico-wrap { width: 30px; height: 30px; border-radius: 50%; background: var(--orange); color: #FFFFFF; }
+.about-card.is-secondary .about-ico { width: 16px; height: 16px; }
+.about-card.is-secondary .about-card-head { position: absolute; }
+.about-card.is-secondary { position: relative; padding-left: calc(var(--space-5) + 38px); }
+.about-card.is-secondary .about-card-head { left: var(--space-4); top: var(--space-4); }
+
+/* ---- 4. Mission band ---- */
+.about-mission { display: grid; grid-template-columns: 1fr; gap: var(--space-5); align-items: start; }
+.about-mission-photo { width: 100%; max-width: 220px; aspect-ratio: 4 / 5; height: auto; object-fit: cover; border-radius: var(--r-lg); justify-self: center; box-shadow: var(--shadow-sm); }
+.about-values { grid-column: 1 / -1; }
+@media (min-width: 760px) {
+  .about-mission { grid-template-columns: 240px 1fr; gap: var(--space-8); }
+  .about-mission-photo { max-width: none; }
+}
+.about-quote {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  border-left: 4px solid var(--orange);
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* ---- 5. Trust + legal ---- */
+.about-trust { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
+@media (min-width: 900px) { .about-trust { grid-template-columns: 1fr 1fr; align-items: start; } }
+.about-card.is-info { border-top: 4px solid var(--navy); }
+.about-facts.is-stacked { margin: var(--space-3) 0 0; }
+.about-facts.is-stacked .about-fact { grid-template-columns: 1fr; gap: 0.15rem; }
+@media (min-width: 520px) { .about-facts.is-stacked .about-fact { grid-template-columns: 7.5rem 1fr; gap: var(--space-3); } }
+.about-facts.is-stacked dd { font-weight: 500; }
+
+.legal-callout {
+  background: var(--ab-legal-bg);
+  border: 1px solid var(--ab-line);
+  border-left: 4px solid var(--ab-legal-line);
+  border-radius: var(--r-lg);
+  padding: var(--space-5);
+  font-size: 0.93rem;
+}
+.legal-callout-head { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: var(--space-3); }
+.legal-callout-ico { color: var(--ab-muted); padding-top: 0.15rem; }
+.legal-callout-cite { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; color: var(--ab-muted) !important; margin: 0; }
+.legal-callout h2 { font-size: 1.05rem; margin: 0.1rem 0 0; padding: 0; border: none; text-align: left; color: var(--ab-text) !important; }
+.legal-callout h2::after { content: none !important; }
+.legal-callout-statute { color: var(--ab-text); line-height: 1.6; margin-bottom: var(--space-3); }
+.legal-callout-list { margin: 0; padding-left: 1.2rem; color: var(--ab-muted); }
+.legal-callout-list li { margin-bottom: 0.4rem; line-height: 1.55; }
+.legal-callout-list span { color: var(--ab-text); }
+
+/* keep the last section clear of the floating buttons on phones */
+@media (max-width: 600px) { .about-page { padding-bottom: 6rem; } }
