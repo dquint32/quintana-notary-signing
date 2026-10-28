@@ -177,7 +177,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261021r">
+    <link rel="stylesheet" href="styles.css?v=20261028b">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -434,24 +434,110 @@
         </div>
         <p class="tier-fine" id="sf-note-es" style="display:none;">Usted escoge cuál al reservar. Lo que cobra el Estado va aparte, al costo, y puede cambiar si el Estado sube sus tarifas.</p>
         <p class="tier-fine" id="sf-note-en">You pick one when you book. State fees are separate, at cost, and can change if the State changes them.</p>
-        <div class="info-box" id="return-options">
-            <p id="apx-ret-title-es" style="display:none;"><strong>Cómo le regreso sus documentos en servicio normal (elija una):</strong></p>
-            <p id="apx-ret-title-en"><strong>Getting your documents back with standard processing (pick one):</strong></p>
-            <ul id="apx-ret-list-es" style="display:none;">
-                    <li><strong>Viaje de regreso &mdash; $45:</strong> un segundo viaje a la Secretaría de Estado, el manejo, el estacionamiento en el centro, la espera en ventanilla y la entrega en mano en el área metropolitana de Denver, dentro de 1 día hábil después de que el Estado los libere.</li>
-                    <li><strong>Etiqueta prepagada &mdash; $5 + la etiqueta al costo:</strong> preparo una etiqueta prepagada de FedEx/UPS para que el Estado se los mande con rastreo.</li>
-                    <li><strong>Devolución gratis por USPS &mdash; $0:</strong> el Estado se los manda por correo normal, sin rastreo y a su riesgo.</li>
-                    <li><strong>Recogida en mi oficina &mdash; $35:</strong> hago el segundo viaje a la Secretaría de Estado (manejo, estacionamiento en el centro y espera en ventanilla), traigo sus documentos a mi oficina en Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220, y le aviso cuando estén listos para que pase a recogerlos.</li>
-            </ul>
-            <ul id="apx-ret-list-en">
-                    <li><strong>Return trip &mdash; $45:</strong> a second trip to the Secretary of State, the drive, downtown parking, the counter wait, and hand delivery in the Denver Metro area within 1 business day after the State releases them.</li>
-                    <li><strong>Prepaid label &mdash; $5 + the label at cost:</strong> I prepare a prepaid FedEx/UPS label so the State mails them back with tracking.</li>
-                    <li><strong>Free USPS return &mdash; $0:</strong> the State mails them back by regular mail, with no tracking and at your risk.</li>
-                    <li><strong>Pick up at my office &mdash; $35:</strong> I make the second trip to the Secretary of State (drive, downtown parking and counter wait), bring your documents back to my office at Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220, and let you know when they are ready for you to pick up.</li>
-            </ul>
-            <p class="tier-fine" id="apx-ret-unclaimed-es" style="display:none;"><strong>Documentos no reclamados:</strong> si elige recogerlos en la oficina, los guardo hasta 30 días naturales después de avisarle que están listos. Si no se reclaman en 30 días sin un acuerdo previo, se los devuelvo a su costo por una empresa de envíos con rastreo o se destruyen de forma segura conforme a las normas de conservación de documentos.</p>
-            <p class="tier-fine" id="apx-ret-unclaimed-en"><strong>Unclaimed documents:</strong> if you choose office pickup, I hold your documents for up to 30 calendar days after I let you know they are ready. If they remain unclaimed after 30 days without prior arrangement, they will be returned to you at your expense via trackable carrier or securely shredded in accordance with document retention guidelines.</p>
-        </div>
+        <section class="return-options" id="return-options">
+            <h3 class="ret-heading" id="apx-ret-title-es" style="display:none;">Cómo le regreso sus documentos en servicio normal</h3>
+            <h3 class="ret-heading" id="apx-ret-title-en">Getting your documents back with standard processing</h3>
+            <p class="ret-intro" id="apx-ret-intro-es" style="display:none;">Elija una opción al reservar.</p>
+            <p class="ret-intro" id="apx-ret-intro-en">Pick one when you book.</p>
+            <div class="ret-grid" id="apx-ret-list-es" style="display:none;">
+            <article class="ret-card ret-card--featured">
+                <div class="ret-card-head">
+                    <h4>Recogida en mi oficina</h4>
+                    <span class="price-badge">$35</span>
+                    <span class="ret-flag">Yo hago el viaje</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>Dónde</dt><dd>Mi oficina en Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220</dd></div>
+                    <div><dt>Cuándo</dt><dd>Le aviso en cuanto estén listos para que pase a recogerlos</dd></div>
+                    <div><dt>Incluye</dt><dd>El segundo viaje a la Secretaría de Estado: manejo, estacionamiento en el centro y espera en ventanilla</dd></div>
+                </dl>
+                <p class="ret-card-note">Los guardo hasta 30 días. Vea <a href="#apx-ret-unclaimed-es">documentos no reclamados</a>.</p>
+            </article>
+            <article class="ret-card ret-card--featured">
+                <div class="ret-card-head">
+                    <h4>Viaje de regreso</h4>
+                    <span class="price-badge">$45</span>
+                    <span class="ret-flag">Entrega en mano</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>Dónde</dt><dd>Se los entrego en mano en el área metropolitana de Denver</dd></div>
+                    <div><dt>Cuándo</dt><dd>Dentro de 1 día hábil después de que el Estado los libere</dd></div>
+                    <div><dt>Incluye</dt><dd>El segundo viaje a la Secretaría de Estado: manejo, estacionamiento en el centro y espera en ventanilla</dd></div>
+                </dl>
+            </article>
+            <article class="ret-card ret-card--basic">
+                <div class="ret-card-head">
+                    <h4>Etiqueta prepagada</h4>
+                    <span class="price-badge price-badge--muted">$5 + etiqueta</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>Cómo</dt><dd>Preparo una etiqueta prepagada de FedEx/UPS y el Estado se los manda</dd></div>
+                    <div><dt>Rastreo</dt><dd>Sí</dd></div>
+                    <div><dt>Costo</dt><dd>$5 de manejo + la etiqueta al costo</dd></div>
+                </dl>
+            </article>
+            <article class="ret-card ret-card--basic">
+                <div class="ret-card-head">
+                    <h4>Devolución gratis por USPS</h4>
+                    <span class="price-badge price-badge--free">$0</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>Cómo</dt><dd>El Estado se los manda por correo normal</dd></div>
+                    <div><dt>Rastreo</dt><dd>No, y va a su riesgo</dd></div>
+                </dl>
+            </article>
+            </div>
+            <div class="ret-grid" id="apx-ret-list-en">
+            <article class="ret-card ret-card--featured">
+                <div class="ret-card-head">
+                    <h4>Pick up at my office</h4>
+                    <span class="price-badge">$35</span>
+                    <span class="ret-flag">I make the trip</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>Where</dt><dd>My office at Tienda Salvadoreña, 5128 E Colfax Ave, Denver, CO 80220</dd></div>
+                    <div><dt>When</dt><dd>I let you know as soon as they&rsquo;re ready to pick up</dd></div>
+                    <div><dt>Includes</dt><dd>The second trip to the Secretary of State: the drive, downtown parking and the counter wait</dd></div>
+                </dl>
+                <p class="ret-card-note">I hold them for up to 30 days. See <a href="#apx-ret-unclaimed-en">unclaimed documents</a>.</p>
+            </article>
+            <article class="ret-card ret-card--featured">
+                <div class="ret-card-head">
+                    <h4>Return trip</h4>
+                    <span class="price-badge">$45</span>
+                    <span class="ret-flag">Hand delivery</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>Where</dt><dd>Hand delivery anywhere in the Denver Metro area</dd></div>
+                    <div><dt>When</dt><dd>Within 1 business day after the State releases them</dd></div>
+                    <div><dt>Includes</dt><dd>The second trip to the Secretary of State: the drive, downtown parking and the counter wait</dd></div>
+                </dl>
+            </article>
+            <article class="ret-card ret-card--basic">
+                <div class="ret-card-head">
+                    <h4>Prepaid label</h4>
+                    <span class="price-badge price-badge--muted">$5 + label</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>How</dt><dd>I prepare a prepaid FedEx/UPS label and the State mails them back</dd></div>
+                    <div><dt>Tracking</dt><dd>Yes</dd></div>
+                    <div><dt>Cost</dt><dd>$5 handling + the label at cost</dd></div>
+                </dl>
+            </article>
+            <article class="ret-card ret-card--basic">
+                <div class="ret-card-head">
+                    <h4>Free USPS return</h4>
+                    <span class="price-badge price-badge--free">$0</span>
+                </div>
+                <dl class="ret-facts">
+                    <div><dt>How</dt><dd>The State mails them back by regular mail</dd></div>
+                    <div><dt>Tracking</dt><dd>No, and it&rsquo;s at your risk</dd></div>
+                </dl>
+            </article>
+            </div>
+            <p class="ret-unclaimed" id="apx-ret-unclaimed-es" style="display:none;"><strong>Documentos no reclamados:</strong> si elige recogerlos en la oficina, los guardo hasta 30 días naturales después de avisarle que están listos. Si no se reclaman en 30 días sin un acuerdo previo, se los devuelvo a su costo por una empresa de envíos con rastreo o se destruyen de forma segura conforme a las normas de conservación de documentos.</p>
+            <p class="ret-unclaimed" id="apx-ret-unclaimed-en"><strong>Unclaimed documents:</strong> if you choose office pickup, I hold your documents for up to 30 calendar days after I let you know they are ready. If they remain unclaimed after 30 days without prior arrangement, they will be returned to you at your expense via trackable carrier or securely shredded in accordance with document retention guidelines.</p>
+        </section>
         <div class="info-box itemized-receipt">
             <p id="apx-price-rcpt-es" style="display:none;"><strong>Su recibo, cargo por cargo:</strong> cada cosa que cobro en el proceso de apostilla aparece en su propia línea, desde la notarización hasta la entrega:</p>
             <p id="apx-price-rcpt-en"><strong>Your receipt, line by line:</strong> everything I charge in the apostille process gets its own line, from the notarization to the final delivery:</p>
@@ -635,7 +721,7 @@
 </main>
 
 
-<footer>
+<footer class="site-footer">
     <nav class="footer-sitemap" aria-label="Site">
         <div class="footer-col">
             <h2 class="footer-col-title"><span id="ft-svc-title-es" style="display:none;">Servicios</span><span id="ft-svc-title-en">Services</span></h2>
@@ -669,64 +755,42 @@
         </div>
     </nav>
 
-    <div class="contact-info">
-        <div class="contact-item">
-            <strong id="ft-call-es" style="display:none;">Llámame/Envíame Mensaje:</strong>
-            <strong id="ft-call-en">Call/Text Me:</strong>
-            <a href="tel:+13035004122">303-500-4122</a>
-        </div>
-        <div class="contact-item">
-            <strong id="ft-email-es" style="display:none;">Correo Electrónico:</strong>
-            <strong id="ft-email-en">Email:</strong>
-            <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a>
+    <div class="footer-info">
+        <section class="footer-block">
+            <h2 class="footer-block-title">Quintana Notary &amp; Signing</h2>
+            <p id="ft-tagline-es" class="footer-lead" style="display:none;">Notary Public móvil en el área metropolitana de Denver, en español y en inglés.</p><p id="ft-tagline-en" class="footer-lead">Mobile Notary Public in the Denver Metro area, in English and Spanish.</p>
+            <ul class="footer-contact">
+                <li><strong id="ft-call-es" style="display:none;">Llamadas y mensajes:</strong><strong id="ft-call-en">Call or text:</strong> <a href="tel:+13035004122">303-500-4122</a></li>
+                <li><strong id="ft-email-es" style="display:none;">Correo:</strong><strong id="ft-email-en">Email:</strong> <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a></li>
+            </ul>
+            <p id="ft-llc-es" class="footer-muted" style="display:none;">Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p><p id="ft-llc-en" class="footer-muted">A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p>
+            <p id="ft-sister-es" class="footer-muted" style="display:none;">Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, ayuda con el papeleo del DMV. No es parte del DMV ni está afiliada a él.</p><p id="ft-sister-en" class="footer-muted">Sister brand: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, help with DMV paperwork. Not part of or affiliated with the DMV.</p>
+        </section>
+
+        <section class="footer-block">
+            <h2 id="ft-cred-h-es" class="footer-block-title" style="display:none;">Comisión y seguro</h2><h2 id="ft-cred-h-en" class="footer-block-title">Commission &amp; insurance</h2>
+            <p id="ft-commission-es" class="footer-lead" style="display:none;"><strong>Notary Public comisionado en Colorado</strong><br>ID de comisión 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a></p><p id="ft-commission-en" class="footer-lead"><strong>Colorado-commissioned Notary Public</strong><br>Commission ID 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verify with the Secretary of State</a></p>
+            <p id="footer-trust-es" class="footer-muted" style="display:none;">Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones.</p><p id="footer-trust-en" class="footer-muted">Servicios Quintana LLC is insured through The Hartford: general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and my translation work.</p>
+            <p id="ft-coi-es" class="footer-muted" style="display:none;">Certificado de seguro disponible a petición.</p><p id="ft-coi-en" class="footer-muted">Certificate of insurance available on request.</p>
+        </section>
+    </div>
+
+    <div class="footer-legal">
+        <div class="footer-legal-inner">
+            <h2 id="ft-legal-h-es" class="footer-block-title" style="display:none;">Aviso legal (C.R.S. § 24-21-525)</h2><h2 id="ft-legal-h-en" class="footer-block-title">Legal notice (C.R.S. § 24-21-525)</h2>
+            <p id="ft-statute-es" class="footer-statute" style="display:none;">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="ft-statute-en" class="footer-statute">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
+            <p id="disclaimer-es" class="footer-muted" style="display:none;">Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong> (C.R.S. § 24-21-529); las tarifas de viaje, conveniencia y trabajo de oficina son aparte y se acuerdan por adelantado. Un Notary Public no es abogado y no puede dar asesoría ni representación legal. No estoy afiliado a ninguna agencia del gobierno local, estatal ni federal.</p><p id="disclaimer-en" class="footer-muted">Notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong> (C.R.S. § 24-21-529); travel, convenience, and office-work fees are separate and agreed on in advance. A Notary Public is not an attorney and cannot give legal advice or legal representation. I am not affiliated with any local, state, or federal government agency.</p>
         </div>
     </div>
 
-    <p id="footer-main-es" style="display:none;">
-        © 2026 Quintana Notary &amp; Signing<br/>
-        Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-        Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a> — ayuda con trámites del DMV<br/>
-        Precios transparentes · Servicio bilingüe · Enfoque comunitario
-    </p>
-    <p id="footer-main-en">
-        © 2026 Quintana Notary &amp; Signing<br/>
-        A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a><br/>
-        Sister brand: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a> — DMV paperwork help<br/>
-        Transparent pricing · Bilingual service · Community focused
-    </p>
-    <p class="footer-trust" id="footer-trust-es" style="display:none;"><strong>Notary Public comisionado y asegurado.</strong> Comisión de Colorado ID 20254044224. Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones. Certificado de seguro disponible a petición.</p>
-    <p class="footer-trust" id="footer-trust-en"><strong>Commissioned &amp; Insured.</strong> Colorado notary commission ID 20254044224. Servicios Quintana LLC is insured through The Hartford: general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and my translation work. Certificate of insurance available on request.</p>
-
-    <div class="disclaimer">
-        <div id="disclaimer-es" style="display:none;">
-            <strong>Aviso Legal (ES)</strong><br/>
-            Quintana Notary &amp; Signing presta servicios notariales, de traducción certificada y de apoyo administrativo de conformidad con la ley de Colorado (C.R.S. § 24-21-525 y § 24-21-529).
-            Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong>; las tarifas de viaje, conveniencia y servicios administrativos son separadas y se acuerdan con el cliente por anticipado.
-            Un Notary Public no es abogado y no puede brindar asesoría ni representación legal.
-            No estoy afiliado con ninguna agencia gubernamental local, estatal ni federal.
-        </div>
-        <div id="disclaimer-en">
-            <strong>Legal Notice (EN)</strong><br/>
-            Quintana Notary &amp; Signing provides notary, certified translation, and administrative support services in accordance with Colorado law (C.R.S. § 24-21-525 and § 24-21-529).
-            Statutory notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong>; travel, convenience, and clerical service fees are separate and agreed upon with the client in advance.
-            Notaries are not attorneys and cannot provide legal advice or legal representation.
-            I am not affiliated with any local, state, or federal government agency.
-        </div>
+    <div class="footer-bottom">
+        <span>© 2026 Quintana Notary &amp; Signing</span>
+        <span class="footer-bottom-links">
+            <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de privacidad</a><a href="privacy.html" id="footer-privacy-en">Privacy policy</a>
+            <span aria-hidden="true">·</span>
+            <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de cookies</a><a href="#" data-cookie-settings id="footer-cookies-en">Cookie settings</a>
+        </span>
     </div>
-
-    <div class="back-to-top-container">
-        <a href="#top" class="btn btn-secondary">
-            <span id="back-top-es" style="display:none;">Volver Arriba</span>
-            <span id="back-top-en">Back to Top</span>
-        </a>
-    </div>
-    <p class="footer-legal-links">
-        <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de Privacidad</a>
-        <a href="privacy.html" id="footer-privacy-en">Privacy Policy</a>
-        ·
-        <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de Cookies</a>
-        <a href="#" data-cookie-settings id="footer-cookies-en">Cookie Settings</a>
-    </p>
 </footer>
 
 <script src="script.js?v=20261020b"></script>

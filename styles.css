@@ -2026,3 +2026,300 @@ html[data-theme="dark"] .shop-map .sm-road { fill: #0b0f16; }
   .mission-photo { width: min(220px, 64%); aspect-ratio: 4 / 5; object-position: 50% 30%; }
   .meet-david-text { padding: 0 var(--space-5) var(--space-5); }
 }
+
+
+/* ============================================================
+   APOSTILLE RETURN OPTIONS (2026-10-28)
+   apostille.html #return-options: one card per return option.
+   Featured cards (office pickup, return trip) get a teal border
+   and white surface; basic cards (prepaid label, free USPS) are
+   flatter. Prices sit in a badge beside each title.
+   Contrast (WCAG AA, checked): every text/background pair below
+   is at least 4.5:1 in both themes.
+   ============================================================ */
+:root {
+  --ret-surface:       #FFFFFF;
+  --ret-surface-basic: #F5F7FA;
+  --ret-border:        #DDE1E7;
+  --ret-accent:        #00695C;   /* featured border + flag (6.6:1 on white) */
+  --ret-text:          #1A1A1A;
+  --ret-label:         #4A5463;   /* key labels (7.7:1 on white, 7.1:1 on #F5F7FA) */
+  --ret-badge-bg:      #0F47AF;   /* navy badge, white text 8.3:1 */
+  --ret-badge-fg:      #FFFFFF;
+  --ret-badge-muted-bg:#E8ECF2;   /* light badge, navy-dark text 11:1 */
+  --ret-badge-muted-fg:#0A2D69;
+  --ret-badge-free-bg: #1B5E20;   /* green badge, white text 7.9:1 */
+  --ret-badge-free-fg: #FFFFFF;
+  --ret-link:          #0F47AF;
+  /* Room kept clear of the fixed buttons (WhatsApp 52-56px and the
+     language pill, 1-1.25rem from the bottom edge). */
+  --float-safe: 5.5rem;
+}
+html[data-theme="dark"] {
+  --ret-surface:       #172131;
+  --ret-surface-basic: #111926;
+  --ret-border:        #2B3647;
+  --ret-accent:        #4FD1C0;   /* 8.6:1 on #172131 */
+  --ret-text:          #F8FAFC;   /* 15:1 on #172131 */
+  --ret-label:         #B4C0D0;   /* 8.6:1 on #172131 */
+  --ret-badge-bg:      #9DBCFF;
+  --ret-badge-fg:      #0A2D69;   /* 7.0:1 */
+  --ret-badge-muted-bg:#2B3647;
+  --ret-badge-muted-fg:#F8FAFC;   /* 11:1 */
+  --ret-badge-free-bg: #86D993;
+  --ret-badge-free-fg: #0B2A12;   /* 9.1:1 */
+  --ret-link:          #7FD8CA;
+}
+
+.return-options { margin: var(--space-6) 0 var(--space-5); text-align: left; }
+.return-options .ret-heading {
+  margin: 0 0 var(--space-1);
+  padding: 0;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+}
+.return-options .ret-intro { margin: 0 0 var(--space-4); color: var(--ret-label); }
+
+.ret-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+@media (min-width: 700px) {
+  .ret-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.ret-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--r-lg);
+  background: var(--ret-surface);
+  border: 1px solid var(--ret-border);
+  color: var(--ret-text);
+}
+.ret-card--featured {
+  border: 2px solid var(--ret-accent);
+  box-shadow: var(--shadow-sm);
+}
+.ret-card--basic {
+  background: var(--ret-surface-basic);
+  padding: var(--space-3) var(--space-4);
+}
+
+.ret-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-2) var(--space-3);
+}
+.ret-card-head h4 {
+  flex: 1 1 10rem;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--ret-text) !important;
+}
+.ret-card--basic .ret-card-head h4 { font-size: 1rem; }
+
+.price-badge {
+  flex: none;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--r-pill);
+  background: var(--ret-badge-bg);
+  color: var(--ret-badge-fg);
+  font: 700 1rem/1.2 'Inter', system-ui, sans-serif;
+  white-space: nowrap;
+}
+.price-badge--muted { background: var(--ret-badge-muted-bg); color: var(--ret-badge-muted-fg); font-size: 0.9rem; }
+.price-badge--free  { background: var(--ret-badge-free-bg);  color: var(--ret-badge-free-fg); }
+
+.ret-flag {
+  flex-basis: 100%;
+  order: -1;
+  font: 700 0.75rem/1 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ret-accent);
+}
+
+.ret-facts { margin: 0; display: grid; gap: var(--space-2); }
+.ret-facts > div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: var(--space-3);
+  align-items: baseline;
+}
+.ret-facts dt {
+  margin: 0;
+  font: 600 0.8rem/1.4 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ret-label);
+}
+.ret-facts dd { margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--ret-text); }
+
+.ret-card-note {
+  margin: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--ret-border);
+  font-size: 0.9rem;
+  color: var(--ret-label);
+}
+.return-options a:not(.btn) { color: var(--ret-link) !important; text-decoration: underline; text-underline-offset: 2px; }
+
+.ret-unclaimed {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 4px solid var(--ret-border);
+  border-radius: var(--r-md);
+  background: var(--ret-surface-basic);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--ret-text);
+  scroll-margin-top: 6rem;
+  scroll-margin-bottom: var(--float-safe);
+}
+.ret-unclaimed strong { color: var(--ret-text); }
+
+/* ---- Keep the fixed buttons off the text at the end of the page ----
+   On phones the language pill (bottom-left) and WhatsApp / back-to-top
+   (bottom-right) are fixed. Reserve room below the last content so
+   the final lines and the footer legal notice can scroll clear of them,
+   and so in-page jumps don't land text underneath them. */
+html { scroll-padding-bottom: var(--float-safe); }
+@media (max-width: 899px) {
+  main { padding-bottom: var(--float-safe) !important; }
+  .ret-unclaimed { margin-bottom: var(--space-2); }
+  footer { padding-bottom: calc(var(--space-8) + var(--float-safe)); }
+}
+@media print {
+  .ret-card { break-inside: avoid; box-shadow: none; }
+}
+
+/* ============================================================
+   FOOTER v2 (2026-10-28) + FLOATING BUTTON DOCK
+   ------------------------------------------------------------
+   Order: site links → brand | commission & insurance →
+   legal band (darker, full width) → copyright row.
+   Text colors are checked against #0f172a / #0a1020:
+     #f8fafc headings 17:1 · #cbd5e1 body 12:1 ·
+     #94a3b8 muted 6.9:1 · #7dd3c8 links 10:1 (all ≥ 4.5:1, WCAG AA).
+   ============================================================ */
+:root {
+  --fab-edge: 1.25rem;   /* distance of the floating buttons from the screen edge */
+  --fab-size: 56px;      /* WhatsApp + language pill height */
+  --fab-small: 48px;     /* back-to-top circle */
+  --fab-gap: 12px;
+  --footer-bg: #0f172a;
+  --footer-legal-bg: #0a1020;
+}
+@media (max-width: 600px) {
+  :root { --fab-edge: 1rem; --fab-size: 52px; --fab-small: 44px; }
+}
+
+.site-footer {
+  background: var(--footer-bg);
+  color: #cbd5e1;
+  text-align: left;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  padding: var(--space-8) var(--space-4) 0;
+  /* room under the last line so the floating buttons never cover it */
+  padding-bottom: calc(var(--fab-edge) + var(--fab-size) + var(--fab-gap) + var(--fab-small) + 1rem + env(safe-area-inset-bottom, 0px));
+}
+:where(html[data-theme="dark"]) .site-footer { background: var(--footer-bg); }
+.site-footer p { color: #cbd5e1; margin: 0 0 0.6rem; }
+.site-footer a { color: #7dd3c8; text-underline-offset: 2px; }
+.site-footer a:hover { color: #FFFFFF; }
+.site-footer strong { color: #f8fafc; }
+.site-footer .footer-sitemap { max-width: 1040px; border-bottom-color: rgba(148, 163, 184, 0.25); }
+.site-footer .footer-col-title { color: #f8fafc; }
+
+.footer-block-title {
+  color: #f8fafc !important;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 var(--space-3);
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+.footer-block-title::after { content: none !important; }
+.footer-lead { color: #e2e8f0 !important; }
+.footer-muted { color: #94a3b8 !important; font-size: 0.88rem; }
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  max-width: 1040px;
+  margin: 0 auto;
+}
+@media (min-width: 760px) {
+  .footer-info { grid-template-columns: 1.1fr 1fr; gap: var(--space-8); }
+}
+.footer-contact { list-style: none; margin: 0 0 var(--space-3); padding: 0; }
+.footer-contact li { margin: 0 0 0.25rem; }
+.footer-contact a { display: inline-block; padding: 0.5rem 0.15rem; }   /* 44px-ish tap rows on phones */
+@media (min-width: 600px) { .footer-contact a { padding: 0.1rem 0.15rem; } }
+
+/* Legal band: full width, darker, with rules above and below */
+.footer-legal {
+  background: var(--footer-legal-bg);
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  margin: var(--space-8) calc(-1 * var(--space-4)) 0;
+  padding: var(--space-6) var(--space-4);
+}
+.footer-legal-inner { max-width: 1040px; margin: 0 auto; }
+.footer-statute {
+  color: #e2e8f0 !important;
+  font-size: 0.9rem;
+  border-left: 3px solid var(--orange);
+  padding-left: var(--space-3);
+  margin-bottom: var(--space-3) !important;
+}
+
+.footer-bottom {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding-top: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.footer-bottom-links { display: inline-flex; gap: var(--space-2); align-items: center; }
+.footer-bottom-links a { display: inline-block; padding: 0.4rem 0; }
+
+/* ---- Floating buttons: one shared bottom edge.
+        Right corner: WhatsApp, with the back-to-top circle centered above it.
+        Left corner: language pill, same height as WhatsApp. ---- */
+.whatsapp-float {
+  right: calc(var(--fab-edge) + env(safe-area-inset-right, 0px));
+  bottom: calc(var(--fab-edge) + env(safe-area-inset-bottom, 0px));
+  width: var(--fab-size);
+  height: var(--fab-size);
+}
+.scroll-top-btn {
+  right: calc(var(--fab-edge) + (var(--fab-size) - var(--fab-small)) / 2 + env(safe-area-inset-right, 0px));
+  bottom: calc(var(--fab-edge) + var(--fab-size) + var(--fab-gap) + env(safe-area-inset-bottom, 0px));
+  width: var(--fab-small);
+  height: var(--fab-small);
+}
+.lang-float {
+  left: calc(var(--fab-edge) + env(safe-area-inset-left, 0px));
+  bottom: calc(var(--fab-edge) + env(safe-area-inset-bottom, 0px));
+  height: var(--fab-size);
+  min-height: var(--fab-size);
+}
