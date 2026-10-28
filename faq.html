@@ -36,7 +36,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261028c">
+    <link rel="stylesheet" href="styles.css?v=20261028f">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -46,7 +46,7 @@
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-faq">
 
 <div class="top-help-bar">
     <div class="top-help-content">
@@ -175,26 +175,42 @@
 
 <main class="section container">
 
+    <section class="faq-keyrules" aria-label="Key rules / Reglas clave">
+        <h2 id="kr-title-es" class="faq-keyrules-title" style="display:none;">Reglas clave de un vistazo</h2><h2 id="kr-title-en" class="faq-keyrules-title">Key rules at a glance</h2>
+        <ul class="faq-keyrules-list">
+            <li><a href="#faq-q9"><span class="kr-val">$15</span><span id="kr-1-es" class="kr-txt" style="display:none;">Lo máximo por acto notarial (ley de Colorado)</span><span id="kr-1-en" class="kr-txt">Most per notarial act (Colorado law)</span></a></li>
+            <li><a href="#faq-q8"><span id="kr-v2-es" class="kr-val" style="display:none;">1 año</span><span id="kr-v2-en" class="kr-val">1 yr</span><span id="kr-2-es" class="kr-txt" style="display:none;">Una identificación vencida hace no más de un año sí sirve</span><span id="kr-2-en" class="kr-txt">An ID expired no more than one year still works</span></a></li>
+            <li><a href="#faq-q21"><span class="kr-val">$95</span><span id="kr-3-es" class="kr-txt" style="display:none;">Aeropuerto DIA: fijo, más $10 por firma</span><span id="kr-3-en" class="kr-txt">DIA airport: flat, plus $10 per signature</span></a></li>
+            <li><a href="#faq-q27"><span class="kr-val">24 h</span><span id="kr-4-es" class="kr-txt" style="display:none;">ICE de Aurora: el abogado manda G-28, carta y mi identificación con anticipación</span><span id="kr-4-en" class="kr-txt">Aurora ICE: the attorney sends the G-28, a letter, and my ID ahead of time</span></a></li>
+        </ul>
+    </section>
+
     <div class="faq-controls">
-        <button class="btn btn-secondary btn-control" onclick="expandAllFaqs()">
+        <p id="faq-count-es" class="faq-count" style="display:none;">24 preguntas en 5 temas</p><p id="faq-count-en" class="faq-count">24 questions in 5 topics</p>
+        <div class="faq-control-btns">
+        <button type="button" class="faq-pill" onclick="expandAllFaqs()">
             <span id="btn-expand-es" style="display:none;">Abrir todas</span>
             <span id="btn-expand-en">Open all</span>
         </button>
-        <button class="btn btn-secondary btn-control" onclick="collapseAllFaqs()">
+        <button type="button" class="faq-pill" onclick="collapseAllFaqs()">
             <span id="btn-collapse-es" style="display:none;">Cerrar todas</span>
             <span id="btn-collapse-en">Close all</span>
         </button>
+        </div>
     </div>
 
     <div class="faq-accordion-container">
 
+        <div class="faq-cat" id="faq-cat-1">
         <h2 class="faq-section-title">
-            <span class="section-number">1</span>
+            <span class="faq-cat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg></span>
+            <span class="faq-cat-num" aria-hidden="true">1</span>
             <span id="sec-1-title-es" style="display:none;">Qué hace un Notary Public</span>
-            <span id="sec-1-title-en">What a Notary Public does</span>
-        </h2>
+            <span id="sec-1-title-en">What a Notary Public does</span>        </h2>
+        <p id="sec-1-sub-es" class="faq-cat-sub" style="display:none;">Lo básico: lo que hago y lo que no.</p><p id="sec-1-sub-en" class="faq-cat-sub">The basics: what I do and what I don&rsquo;t.</p>
+        </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q1">
             <button class="faq-question">
                 <span id="q1-es" style="display:none;">¿Qué es un Notary Public?</span>
                 <span id="q1-en">What is a Notary Public?</span>
@@ -205,7 +221,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q2">
             <button class="faq-question">
                 <span id="q2-es" style="display:none;">¿Puede un Notary Public darme asesoría legal?</span>
                 <span id="q2-en">Can a Notary give me legal advice?</span>
@@ -220,7 +236,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q28">
             <button class="faq-question">
                 <span id="q28-es" style="display:none;">¿Hace copias certificadas? ¿Puede certificar que una persona está viva?</span>
                 <span id="q28-en">Do you make certified copies? Can you certify that a person is alive?</span>
@@ -235,7 +251,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q3">
             <button class="faq-question">
                 <span id="q3-es" style="display:none;">¿Ofrece notarización en línea (RON)?</span>
                 <span id="q3-en">Do you offer Remote Online Notarization (RON)?</span>
@@ -250,7 +266,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q4">
             <button class="faq-question">
                 <span id="q4-es" style="display:none;">¿El Notary Public puede actuar como testigo?</span>
                 <span id="q4-en">Can the notary also act as a witness?</span>
@@ -265,7 +281,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q5">
             <button class="faq-question">
                 <span id="q5-es" style="display:none;">¿Cómo funciona el servicio de traducción certificada?</span>
                 <span id="q5-en">How does the certified translation service work?</span>
@@ -280,7 +296,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q19">
             <button class="faq-question">
                 <span id="q19-es" style="display:none;">¿Puede notarizar una carta de permiso de viaje para mi hijo/a?</span>
                 <span id="q19-en">Can you notarize a travel permission letter for my child?</span>
@@ -295,13 +311,16 @@
             </div>
         </div>
 
+        <div class="faq-cat" id="faq-cat-2">
         <h2 class="faq-section-title">
-            <span class="section-number">2</span>
+            <span class="faq-cat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.5 1.8-2.3 3.2-2.3s2.6.8 3.2 2.3M14 10h4M14 13.5h3"/></svg></span>
+            <span class="faq-cat-num" aria-hidden="true">2</span>
             <span id="sec-2-title-es" style="display:none;">Su identificación</span>
-            <span id="sec-2-title-en">Your ID</span>
-        </h2>
+            <span id="sec-2-title-en">Your ID</span>        </h2>
+        <p id="sec-2-sub-es" class="faq-cat-sub" style="display:none;">Qué identificación sirve para notarizar.</p><p id="sec-2-sub-en" class="faq-cat-sub">Which IDs work for a notarization.</p>
+        </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q6">
             <button class="faq-question">
                 <span id="q6-es" style="display:none;">¿Qué tipo de identificación es aceptable?</span>
                 <span id="q6-en">What kind of identification is acceptable?</span>
@@ -333,7 +352,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q7">
             <button class="faq-question">
                 <span id="q7-es" style="display:none;">¿Mi pasaporte extranjero sin traducción es válido?</span>
                 <span id="q7-en">Is my foreign passport without translation valid?</span>
@@ -348,10 +367,10 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q8">
             <button class="faq-question">
-                <span id="q8-es" style="display:none;">¿Mi pasaporte o licencia de conducir está vencido, sirve?</span>
-                <span id="q8-en">Is my expired passport or driver's license acceptable?</span>
+                <span id="q8-es" style="display:none;">¿Mi pasaporte o licencia de conducir está vencido, sirve? <span class="faq-badge">Vencida ≤ 1 año</span></span>
+                <span id="q8-en">Is my expired passport or driver's license acceptable? <span class="faq-badge">Expired ≤ 1 year</span></span>
             </button>
             <div class="faq-answer">
                 <p id="a8-es" style="display:none;">
@@ -363,16 +382,19 @@
             </div>
         </div>
 
+        <div class="faq-cat" id="faq-cat-3">
         <h2 class="faq-section-title">
-            <span class="section-number">3</span>
+            <span class="faq-cat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+            <span class="faq-cat-num" aria-hidden="true">3</span>
             <span id="sec-3-title-es" style="display:none;">Precios y citas a domicilio</span>
-            <span id="sec-3-title-en">Prices and coming to you</span>
-        </h2>
+            <span id="sec-3-title-en">Prices and coming to you</span>        </h2>
+        <p id="sec-3-sub-es" class="faq-cat-sub" style="display:none;">Tarifas, viaje, pagos y el aeropuerto.</p><p id="sec-3-sub-en" class="faq-cat-sub">Fees, travel, payment, and the airport.</p>
+        </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q9">
             <button class="faq-question">
-                <span id="q9-es" style="display:none;">¿Cuánto cobra por un sello notarial?</span>
-                <span id="q9-en">How much do you charge for a notarial seal?</span>
+                <span id="q9-es" style="display:none;">¿Cuánto cobra por un sello notarial? <span class="faq-badge">Máx. $15</span></span>
+                <span id="q9-en">How much do you charge for a notarial seal? <span class="faq-badge">$15 max</span></span>
             </button>
             <div class="faq-answer">
                 <p id="a9-es" style="display:none;"> Lo máximo que permite la ley de Colorado es <strong>$15 por cada acto notarial (cada sello)</strong>. Eso es solo por el sello. Si voy a donde usted está, se suma la tarifa de viaje. Todo está desglosado en <a href="pricing.html">Precios</a>. </p>
@@ -380,7 +402,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q10">
             <button class="faq-question">
                 <span id="q10-es" style="display:none;">¿Cómo se calcula el cargo móvil (cargo de viaje)?</span>
                 <span id="q10-en">How is the mobile fee (travel charge) calculated?</span>
@@ -391,7 +413,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q11">
             <button class="faq-question">
                 <span id="q11-es" style="display:none;">¿Puedo pagar con tarjeta de crédito?</span>
                 <span id="q11-en">Can I pay with a credit card?</span>
@@ -404,7 +426,9 @@
                     Yes. I accept most major credit cards (credit card payments have a 2% processing surcharge; debit cards have none; see the notice on <a href="pricing.html#policies">Pricing</a>), Venmo, Zelle, bank transfer (ACH), and cash. Payment is required to confirm your appointment (ICE facility visits are paid after the visit).
                 </p>
             </div>
-        <div class="faq-item">
+        </div>
+
+        <div class="faq-item" id="faq-q11c">
             <button class="faq-question">
                 <span id="q11c-es" style="display:none;">¿Qué pasa si necesito cancelar o cambiar mi cita?</span>
                 <span id="q11c-en">What if I need to cancel or reschedule?</span>
@@ -418,9 +442,8 @@
                 </p>
             </div>
         </div>
-        </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q20">
             <button class="faq-question">
                 <span id="q20-es" style="display:none;">¿Puedo llegar sin cita a una de sus ubicaciones comunitarias?</span>
                 <span id="q20-en">Can I just walk up to one of your community locations?</span>
@@ -431,10 +454,10 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q21">
             <button class="faq-question">
-                <span id="q21-es" style="display:none;">¿Notariza en el Aeropuerto Internacional de Denver (DIA)?</span>
-                <span id="q21-en">Do you notarize at Denver International Airport (DIA)?</span>
+                <span id="q21-es" style="display:none;">¿Notariza en el Aeropuerto Internacional de Denver (DIA)? <span class="faq-badge">$95 fijo</span></span>
+                <span id="q21-en">Do you notarize at Denver International Airport (DIA)? <span class="faq-badge">$95 flat</span></span>
             </button>
             <div class="faq-answer">
                 <p id="a21-es" style="display:none;"> Sí. Nos vemos en la terminal de DIA, antes del control de seguridad. Son <strong>$95 fijos (con estacionamiento) + $10 por firma</strong>, e incluye encontrarnos en la terminal y 30 minutos ahí. Mándeme un mensaje con su terminal y su hora. Más detalles en <a href="airport-notarizations.html">Notarizaciones en el Aeropuerto</a>. </p>
@@ -442,13 +465,16 @@
             </div>
         </div>
 
+        <div class="faq-cat" id="faq-cat-4">
         <h2 class="faq-section-title">
-            <span class="section-number">4</span>
+            <span class="faq-cat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+            <span class="faq-cat-num" aria-hidden="true">4</span>
             <span id="sec-4-title-es" style="display:none;">Empresas, abogados y apostillas</span>
-            <span id="sec-4-title-en">Businesses, attorneys and apostilles</span>
-        </h2>
+            <span id="sec-4-title-en">Businesses, attorneys and apostilles</span>        </h2>
+        <p id="sec-4-sub-es" class="faq-cat-sub" style="display:none;">Cierres, apostillas y visitas al centro de ICE.</p><p id="sec-4-sub-en" class="faq-cat-sub">Closings, apostilles, and ICE facility visits.</p>
+        </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q12">
             <button class="faq-question">
                 <span id="q12-es" style="display:none;">¿Maneja cierres de bienes raíces y paquetes de préstamos?</span>
                 <span id="q12-en">Do you handle real estate closings and loan packages?</span>
@@ -459,7 +485,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q13">
             <button class="faq-question">
                 <span id="q13-es" style="display:none;">¿Qué sucede si un firmante se niega a firmar en la mesa?</span>
                 <span id="q13-en">What happens if a signer refuses to sign at the table?</span>
@@ -474,7 +500,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q14">
             <button class="faq-question">
                 <span id="q14-es" style="display:none;">¿Procesa Apostillas?</span>
                 <span id="q14-en">Do you process Apostilles?</span>
@@ -489,10 +515,10 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q27">
             <button class="faq-question">
-                <span id="q27-es" style="display:none;">¿Puede notarizar para un cliente detenido en el centro de ICE de Aurora?</span>
-                <span id="q27-en">Can you notarize for a client detained at the Aurora ICE facility?</span>
+                <span id="q27-es" style="display:none;">¿Puede notarizar para un cliente detenido en el centro de ICE de Aurora? <span class="faq-badge">24 h antes</span></span>
+                <span id="q27-en">Can you notarize for a client detained at the Aurora ICE facility? <span class="faq-badge">24 h notice</span></span>
             </button>
             <div class="faq-answer">
                 <p id="a27-es" style="display:none;">
@@ -504,13 +530,16 @@
             </div>
         </div>
 
+        <div class="faq-cat" id="faq-cat-5">
         <h2 class="faq-section-title">
-            <span class="section-number">5</span>
+            <span class="faq-cat-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 16h6"/></svg></span>
+            <span class="faq-cat-num" aria-hidden="true">5</span>
             <span id="sec-5-title-es" style="display:none;">Ayuda con el pasaporte de EE. UU.</span>
-            <span id="sec-5-title-en">Help with U.S. passports</span>
-        </h2>
+            <span id="sec-5-title-en">Help with U.S. passports</span>        </h2>
+        <p id="sec-5-sub-es" class="faq-cat-sub" style="display:none;">Lo que puedo y no puedo hacer con su pasaporte.</p><p id="sec-5-sub-en" class="faq-cat-sub">What I can and can&rsquo;t do for your passport.</p>
+        </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q15">
             <button class="faq-question">
                 <span id="q15-es" style="display:none;">¿Puede enviar mi solicitud de pasaporte por mí?</span>
                 <span id="q15-en">Can you submit my passport application for me?</span>
@@ -525,7 +554,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q16">
             <button class="faq-question">
                 <span id="q16-es" style="display:none;">¿Qué incluye cuando usted me acompaña a la cita del pasaporte?</span>
                 <span id="q16-en">What do I get when you come with me to the passport appointment?</span>
@@ -536,7 +565,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q17">
             <button class="faq-question">
                 <span id="q17-es" style="display:none;">¿Sus tarifas incluyen las tarifas del pasaporte del gobierno?</span>
                 <span id="q17-en">Do your fees include the government passport fees?</span>
@@ -551,7 +580,7 @@
             </div>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" id="faq-q18">
             <button class="faq-question">
                 <span id="q18-es" style="display:none;">¿Cuánto tiempo tarda en obtener un pasaporte?</span>
                 <span id="q18-en">How long does it take to get a passport?</span>
@@ -563,6 +592,18 @@
         </div>
 
     </div>
+
+    <aside class="legal-callout faq-legal" aria-label="Aviso legal / Legal notice">
+        <div class="legal-callout-head">
+            <span class="legal-callout-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M7 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3zM17 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3z"/></svg></span>
+            <div>
+                <p class="legal-callout-cite">C.R.S. &sect; 24-21-525</p>
+                <h2 id="faq-legal-title-es" style="display:none;">Aviso legal</h2><h2 id="faq-legal-title-en">Legal notice</h2>
+            </div>
+        </div>
+        <p id="faq-legal-statute-es" class="legal-callout-statute" style="display:none;">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="faq-legal-statute-en" class="legal-callout-statute">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
+        <p id="faq-legal-note-es" class="legal-callout-note" style="display:none;">Las respuestas de esta página son información general, no asesoría legal.</p><p id="faq-legal-note-en" class="legal-callout-note">The answers on this page are general information, not legal advice.</p>
+    </aside>
 
     <div class="cta-card">
         <h2 id="cta-ready-es" style="display:none;">¿Tiene otra pregunta?</h2>
@@ -651,7 +692,7 @@
     </div>
 </footer>
 
-<script src="script.js?v=20261020b"></script>
+<script src="script.js?v=20261028d"></script>
 <script src="consent.js?v=20261020b"></script>
 
 </body>

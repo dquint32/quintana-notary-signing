@@ -2528,3 +2528,534 @@ html[data-theme="dark"] {
 
 /* keep the last section clear of the floating buttons on phones */
 @media (max-width: 600px) { .about-page { padding-bottom: 6rem; } }
+
+/* ============================================================
+   FAQ PAGE v2 (2026-10-28)
+   Key-rules strip → count + Open/Close pills → category headers
+   (icon badge, number, subtitle) → card accordions (open item:
+   teal left rule + tinted fill) → legal box → CTA.
+   Uses the --ab-* tokens from ABOUT PAGE v2 plus:
+     question text light #0A2D69 (13:1), dark #F8FAFC (15:1);
+     answer text --ab-text (≥ 11:1).
+   ============================================================ */
+:root { --faq-q: #0A2D69; --faq-open: #F2F8F7; }
+html[data-theme="dark"] { --faq-q: #F8FAFC; --faq-open: #16282E; }
+
+/* Key rules strip */
+.faq-keyrules {
+  background: var(--ab-soft);
+  border: 1px solid var(--ab-line);
+  border-radius: var(--r-xl);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  margin: 0 0 var(--space-6);
+}
+.faq-keyrules-title { font-size: 1.05rem; text-align: left; margin: 0 0 var(--space-3); padding: 0; border: none; }
+.faq-keyrules-title::after { content: none !important; }
+.faq-keyrules-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 0.6rem; }
+@media (min-width: 640px) { .faq-keyrules-list { grid-template-columns: 1fr 1fr; } }
+.faq-keyrules-list a {
+  display: flex; align-items: center; gap: 0.75rem;
+  height: 100%;
+  padding: 0.6rem 0.8rem;
+  background: var(--ab-card);
+  border: 1px solid var(--ab-line);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  color: var(--ab-text) !important;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.faq-keyrules-list a:hover { border-color: var(--teal); transform: translateY(-1px); }
+.kr-val {
+  flex: none;
+  min-width: 3.6rem;
+  text-align: center;
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--r-pill);
+  background: var(--ab-accent-bg);
+  color: var(--ab-accent);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.kr-txt { font-size: 0.9rem; line-height: 1.4; font-weight: 600; }
+
+/* Count + pills */
+.faq-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); margin: 0 0 var(--space-2); }
+.faq-count { margin: 0; font-size: 0.9rem; font-weight: 600; color: var(--ab-muted); }
+.faq-control-btns { display: flex; gap: 0.5rem; }
+.faq-pill {
+  min-height: 40px;
+  padding: 0.4rem 1.05rem;
+  border: 1.5px solid var(--ab-accent);
+  border-radius: var(--r-pill);
+  background: var(--ab-card);
+  color: var(--ab-accent);
+  font: 700 0.88rem/1 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.faq-pill:hover { background: var(--ab-accent); color: var(--ab-card); }
+.faq-pill:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+/* Category headers */
+.faq-cat { margin: var(--space-8) 0 var(--space-3); padding-top: var(--space-2); }
+.faq-accordion-container > .faq-cat:first-child { margin-top: var(--space-5); }
+.faq-accordion-container .faq-section-title { display: flex; align-items: center; gap: 0.6rem; margin: 0; color: var(--faq-q); font-size: clamp(1.1rem, 3.5vw, 1.35rem); }
+.faq-cat-ico {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--ab-accent-bg); color: var(--ab-accent);
+}
+.faq-cat-num {
+  flex: none;
+  font-size: 0.75rem; font-weight: 800;
+  width: 1.5rem; height: 1.5rem; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #B34600; color: #FFFFFF;   /* 5.3:1 */
+}
+.faq-cat-sub { margin: 0.35rem 0 0 calc(44px + 0.6rem); font-size: 0.92rem; color: var(--ab-muted) !important; }
+
+/* Accordion cards */
+.faq-accordion-container .faq-item {
+  background: var(--ab-card);
+  border: 1px solid var(--ab-line);
+  border-left: 4px solid transparent;
+  border-radius: var(--r-lg);
+  margin-bottom: 0.6rem;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-accordion-container .faq-item:hover { border-color: var(--teal); border-left-color: var(--ab-line); }
+.faq-accordion-container .faq-item.active {
+  background: var(--faq-open);
+  border-color: var(--ab-line);
+  border-left-color: var(--teal);
+  box-shadow: var(--shadow-sm);
+}
+.faq-accordion-container .faq-question {
+  background: transparent;
+  color: var(--faq-q);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 1rem 1.15rem;
+  min-height: 52px;
+}
+.faq-accordion-container .faq-question:hover { background: transparent; }
+.faq-accordion-container .faq-question:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; border-radius: var(--r-lg); }
+.faq-accordion-container .faq-question::after {
+  content: '+';
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--ab-accent-bg); color: var(--ab-accent);
+  font-size: 1.2rem; font-weight: 600;
+}
+.faq-accordion-container .faq-question.active::after { background: var(--teal); color: #FFFFFF; }
+.faq-accordion-container .faq-answer { background: transparent; }
+.faq-accordion-container .faq-answer p,
+.faq-accordion-container .faq-answer ul { color: var(--ab-text); font-size: 0.95rem; line-height: 1.65; padding: 0 1.15rem 1rem; }
+.faq-accordion-container .faq-answer ul { padding-left: 2.4rem; }
+.faq-accordion-container .faq-answer strong {
+  color: var(--ab-text);
+  background: var(--ab-accent-bg);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.faq-accordion-container .faq-answer a { color: var(--ab-accent); font-weight: 600; }
+
+/* Badges inside question text */
+.faq-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.12rem 0.55rem;
+  border-radius: var(--r-pill);
+  background: #FFF3E0;
+  color: #8A3600;            /* 6.9:1 */
+  border: 1px solid #F3C99C;
+  font-size: 0.75rem;
+  font-weight: 800;
+  white-space: nowrap;
+  vertical-align: 0.1em;
+}
+html[data-theme="dark"] .faq-badge { background: #3A2610; color: #FFC79A; border-color: #6B4520; }
+
+/* Legal: muted box at the bottom, and the top statutory bar boxed on this page */
+.faq-legal { margin: var(--space-8) 0 var(--space-6); }
+.legal-callout-note { margin: 0; font-size: 0.88rem; color: var(--ab-muted) !important; }
+.page-faq .statutory-bar {
+  max-width: 1100px;
+  margin: var(--space-3) auto 0;
+  background: var(--ab-legal-bg);
+  color: var(--ab-text);
+  border: 1px solid var(--ab-line);
+  border-left: 4px solid var(--ab-legal-line);
+  border-radius: var(--r-lg);
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  padding: 0.75rem 1rem;
+}
+.page-faq .statutory-bar strong { color: var(--ab-text); }
+@media (max-width: 1140px) { .page-faq .statutory-bar { margin-left: var(--space-3); margin-right: var(--space-3); } }
+
+/* Room for the floating buttons at the end of the list on phones */
+@media (max-width: 600px) { .page-faq main { padding-bottom: 6rem; } }
+
+/* ============================================================
+   PRICING PAGE CARDS (2026-10-28)
+   ------------------------------------------------------------
+   pricing.html: one block per fee category (.price-block),
+   uniform cards (.pc), prices as badges (.price-tag), details
+   as key/value rows (.pc-facts) or price rows (.fee-rows).
+   Featured cards: .pc--featured (ICE visit), .pc--community
+   (the $10 community rate). Legal caps get a .law-tag.
+   Text pairs checked (WCAG AA, 4.5:1 minimum):
+     light: #1A1A1A / #4A5463 on #FFF, #F0F8F7, #F1F8F2 ≥ 7:1;
+            #8A3A00 on #FFF3E0 7.1:1; #FFF on #0F47AF 8.3:1;
+            #FFF on #1B5E20 7.9:1; #00695C on #F0F8F7 6.2:1.
+     dark:  #F8FAFC on #172131 15:1; #C3CDDA on #172131 10:1;
+            #4FD1C0 on #10302C 7.6:1; #86D993 on #132A1A 9:1;
+            #FFC48A on #33210F 9.9:1; #0A2D69 on #9DBCFF 7:1.
+   ============================================================ */
+:root {
+  --pc-surface: #FFFFFF;
+  --pc-surface-alt: #F5F7FA;
+  --pc-border: #DDE1E7;
+  --pc-text: #1A1A1A;
+  --pc-muted: #4A5463;
+  --pc-title: #0A2D69;
+  --pc-link: #0F47AF;
+  --pc-feat-surface: #F0F8F7;
+  --pc-feat-border: #00695C;
+  --pc-feat-ink: #00695C;
+  --pc-comm-surface: #F1F8F2;
+  --pc-comm-border: #1B5E20;
+  --pc-comm-ink: #1B5E20;
+  --pc-price-bg: #0F47AF;
+  --pc-price-fg: #FFFFFF;
+  --pc-green-bg: #1B5E20;
+  --pc-green-fg: #FFFFFF;
+  --pc-muted-bg: #E8ECF2;
+  --pc-muted-fg: #0A2D69;
+  --pc-law-bg: #FFF3E0;
+  --pc-law-fg: #8A3A00;
+  --pc-law-border: #B34600;
+  --pc-notice-surface: #FFF8E1;
+  --pc-notice-border: #B26A00;
+}
+html[data-theme="dark"] {
+  --pc-surface: #172131;
+  --pc-surface-alt: #111926;
+  --pc-border: #2B3647;
+  --pc-text: #F8FAFC;
+  --pc-muted: #C3CDDA;
+  --pc-title: #F8FAFC;
+  --pc-link: #7FD8CA;
+  --pc-feat-surface: #10302C;
+  --pc-feat-border: #4FD1C0;
+  --pc-feat-ink: #4FD1C0;
+  --pc-comm-surface: #132A1A;
+  --pc-comm-border: #86D993;
+  --pc-comm-ink: #86D993;
+  --pc-price-bg: #9DBCFF;
+  --pc-price-fg: #0A2D69;
+  --pc-green-bg: #86D993;
+  --pc-green-fg: #0B2A12;
+  --pc-muted-bg: #2B3647;
+  --pc-muted-fg: #F8FAFC;
+  --pc-law-bg: #33210F;
+  --pc-law-fg: #FFC48A;
+  --pc-law-border: #FFC48A;
+  --pc-notice-surface: #2A2210;
+  --pc-notice-border: #E0B04A;
+}
+
+.pricing-page { padding-bottom: 6rem; }
+
+/* ---- Jump links + legend ---- */
+.pb-jump { margin: 0 0 1.25rem; }
+.pb-jump-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--pc-muted);
+}
+.pb-jump ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.pricing-page .pb-jump a {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  min-height: 44px; padding: 0.3rem 0.9rem 0.3rem 0.35rem;
+  border: 1px solid var(--pc-border); border-radius: 999px;
+  background: var(--pc-surface); color: var(--pc-title);
+  font-size: 0.9rem; font-weight: 600; text-decoration: none;
+}
+.pricing-page .pb-jump a:hover { border-color: var(--pc-feat-border); }
+.pb-jump-n {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 1.75rem; height: 1.75rem; border-radius: 50%;
+  background: var(--pc-muted-bg); color: var(--pc-muted-fg);
+  font-size: 0.8rem; font-weight: 700;
+}
+.pb-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.5rem;
+  margin: 0; font-size: 0.88rem; color: var(--pc-muted);
+}
+.pb-legend-gap { flex-basis: 100%; height: 0; }
+@media (min-width: 760px) { .pb-legend-gap { flex-basis: 1rem; } }
+
+/* ---- One block per fee category ---- */
+.price-block {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--pc-border);
+  scroll-margin-top: 6rem;
+}
+.pb-legend + .price-block { margin-top: 2rem; }
+.pb-head { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+.pb-num {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 2.6rem; height: 2.6rem; margin-top: 0.15rem; border-radius: 50%;
+  background: var(--teal); color: #FFFFFF; font-weight: 700; font-size: 1.1rem;
+}
+.pb-num--green { background: var(--green); }
+.pb-titles { min-width: 0; flex: 1; }
+.pricing-page .pb-title {
+  margin: 0 0 0.6rem; padding: 0; border: none; text-align: left;
+  font-size: clamp(1.45rem, 4.6vw, 2rem); line-height: 1.2; color: var(--pc-title);
+}
+.pricing-page .pb-title::after { content: none; }
+.pb-tags, .pc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pb-tags { margin-bottom: 0.65rem; }
+.pb-sub { margin: 0; max-width: 65ch; font-size: 1rem; line-height: 1.6; color: var(--pc-muted); }
+.pb-sub strong { color: var(--pc-text); }
+.pricing-page .pb-subtitle {
+  margin: 2.25rem 0 1rem; padding: 0 0 0.5rem; text-align: left;
+  border: none; border-bottom: 2px solid var(--pc-border);
+  font-size: clamp(1.15rem, 3.4vw, 1.4rem); color: var(--pc-title);
+  scroll-margin-top: 6rem;
+}
+.pricing-page .pb-note { margin: 1rem 0 0; }
+
+/* ---- Card grid + cards ---- */
+.pc-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 0 0 1.25rem; }
+.pc-grid--1 { max-width: 760px; }
+@media (min-width: 640px) {
+  .pc-grid--2, .pc-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .pc-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.pc, .pc-panel {
+  position: relative; min-width: 0;
+  display: flex; flex-direction: column; gap: 0.8rem;
+  padding: 1.25rem;
+  border: 1px solid var(--pc-border); border-radius: 12px;
+  background: var(--pc-surface); color: var(--pc-text);
+}
+.pc-panel { background: var(--pc-surface-alt); }
+.pc-panel--wide { margin: 0 0 1.25rem; }
+.pc--featured  { background: var(--pc-feat-surface); border: 2px solid var(--pc-feat-border); }
+.pc--community { background: var(--pc-comm-surface); border: 2px solid var(--pc-comm-border); }
+.pc--notice    { background: var(--pc-notice-surface); border-color: var(--pc-notice-border); border-left-width: 4px; }
+.pc strong, .pc-panel strong { color: var(--pc-text); }
+.pricing-page .pc a:not(.btn), .pricing-page .pc-panel a:not(.btn) { color: var(--pc-link); }
+
+.pc-flag {
+  align-self: flex-start;
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--pc-feat-ink);
+}
+.pc--community .pc-flag { color: var(--pc-comm-ink); }
+.pc-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 0.6rem 0.75rem; }
+.pricing-page .pc-title {
+  flex: 1 1 11rem; min-width: 0;
+  margin: 0; padding: 0; border: none; text-align: left;
+  font-size: 1.1rem; line-height: 1.3; color: var(--pc-title);
+}
+.pricing-page .pc-title::after { content: none; }
+.pc-text { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--pc-text); }
+.pc-fine { margin: 0; font-size: 0.86rem; line-height: 1.55; color: var(--pc-muted); }
+.pc-statute { padding-top: 0.75rem; border-top: 1px dashed var(--pc-border); }
+.pc-callout {
+  margin: 0; padding: 0.75rem 0.9rem; border-radius: 8px;
+  border-left: 3px solid var(--pc-title);
+  background: var(--pc-surface-alt); color: var(--pc-text);
+  font-size: 0.88rem; line-height: 1.55;
+}
+.pc-link { margin: auto 0 0; font-weight: 700; }
+.pc-list { margin: 0; padding-left: 1.25rem; display: grid; gap: 0.6rem; }
+
+/* ---- Price badges ---- */
+.price-tag {
+  flex: none; max-width: 100%;
+  display: inline-flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end; gap: 0.1rem 0.35rem;
+  padding: 0.4rem 0.75rem; border-radius: 10px;
+  background: var(--pc-price-bg); color: var(--pc-price-fg);
+  font-size: 1.3rem; font-weight: 800; line-height: 1.15;
+  font-variant-numeric: tabular-nums; white-space: nowrap;
+}
+.price-unit { font-size: 0.75rem; font-weight: 600; }
+.price-tag--sm { padding: 0.3rem 0.6rem; border-radius: 8px; font-size: 1rem; }
+.price-tag--law   { background: var(--pc-law-bg); color: var(--pc-law-fg); box-shadow: inset 0 0 0 2px var(--pc-law-border); }
+.price-tag--green { background: var(--pc-green-bg); color: var(--pc-green-fg); }
+.price-tag--muted { background: var(--pc-muted-bg); color: var(--pc-muted-fg); font-weight: 700; }
+
+/* ---- Label pills: legal cap vs. agreed fees ---- */
+.law-tag, .scope-tag {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.22rem 0.65rem; border-radius: 999px; border: 1px solid transparent;
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.3;
+}
+.law-tag, .scope-tag--law { background: var(--pc-law-bg); color: var(--pc-law-fg); border-color: var(--pc-law-border); }
+.law-tag::before, .scope-tag--law::before { content: "\00A7"; font-size: 0.95em; }
+.scope-tag--free  { background: var(--pc-muted-bg); color: var(--pc-muted-fg); border-color: var(--pc-border); }
+.scope-tag--green { background: var(--pc-comm-surface); color: var(--pc-comm-ink); border-color: var(--pc-comm-border); }
+.scope-tag--teal  { background: var(--pc-feat-surface); color: var(--pc-feat-ink); border-color: var(--pc-feat-border); }
+
+/* ---- Key/value facts ---- */
+.pc-facts { margin: 0; }
+.pc-fact {
+  display: grid; grid-template-columns: minmax(6.5rem, 36%) 1fr; gap: 0.75rem;
+  padding: 0.55rem 0; border-top: 1px solid var(--pc-border);
+}
+.pc-fact:first-child { border-top: none; padding-top: 0; }
+.pc-fact dt { margin: 0; font-size: 0.84rem; font-weight: 700; line-height: 1.45; color: var(--pc-muted); }
+.pc-fact dd { margin: 0; font-size: 0.95rem; line-height: 1.5; color: var(--pc-text); }
+@media (max-width: 420px) {
+  .pc-fact { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
+/* ---- Price rows (tiers, return options, deposits) ---- */
+.fee-rows { list-style: none; margin: 0; padding: 0; }
+.fee-rows li {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.75rem;
+  padding: 0.6rem 0; border-top: 1px solid var(--pc-border);
+}
+.fee-rows li:first-child { border-top: none; padding-top: 0; }
+.fr-text { flex: 1; min-width: 0; }
+.fr-text strong { display: block; font-size: 0.95rem; color: var(--pc-text); }
+.fr-detail { display: block; margin-top: 0.15rem; font-size: 0.85rem; line-height: 1.45; color: var(--pc-muted); }
+.fee-rows .price-tag { white-space: normal; text-align: right; }
+
+/* ---- Dark navy call-to-action: brighter body text ---- */
+.pricing-page .cta-card p { color: #F8FAFC; }
+.pricing-page .cta-card { margin-top: 3.5rem; }
+
+@media print {
+  .pc, .pc-panel { break-inside: avoid; }
+  .pb-jump { display: none; }
+}
+
+/* ============================================================
+   FLOATING BUTTONS ON PHONES AND TABLETS: ONE ROW (2026-10-28)
+   Below 900px the back-to-top circle sits beside WhatsApp
+   (same bottom line) instead of above it, so the buttons only
+   take one row. Language pill stays bottom-left. Page bottoms
+   reserve that one row plus a margin (about 6rem).
+   ============================================================ */
+@media (max-width: 899px) {
+  :root { --float-safe: calc(var(--fab-edge) + var(--fab-size) + 1.75rem + env(safe-area-inset-bottom, 0px)); }
+  .scroll-top-btn {
+    right: calc(var(--fab-edge) + var(--fab-size) + var(--fab-gap) + env(safe-area-inset-right, 0px));
+    bottom: calc(var(--fab-edge) + (var(--fab-size) - var(--fab-small)) / 2 + env(safe-area-inset-bottom, 0px));
+  }
+  .site-footer { padding-bottom: calc(var(--fab-edge) + var(--fab-size) + 2rem + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* ============================================================
+   CERTIFIED COPIES PAGE (2026-10-28)
+   Uses the PRICING PAGE CARDS components (.price-block, .pc,
+   .price-tag, .law-tag) plus: can/cannot verdict cards, a
+   4-step process flow, and a calmer hero watermark.
+   Contrast (WCAG AA): #1B5E20 on #FFF 7.9:1; #A3241B on #FFF 7.2:1;
+   dark #86D993 / #FF9F94 on #172131 ≥ 8:1; hero white text on
+   the 0.92 navy overlay ≥ 10:1 even over the logo's lightest pixels.
+   ============================================================ */
+:root { --cc-yes: #1B5E20; --cc-no: #A3241B; --cc-no-soft: #FDF1EF; --cc-yes-soft: #F1F8F2; }
+html[data-theme="dark"] { --cc-yes: #86D993; --cc-no: #FF9F94; --cc-no-soft: #2A1A1C; --cc-yes-soft: #132A1A; }
+
+/* Hero: quieter logo watermark so the white copy reads cleanly */
+.cc-hero::after { background: rgba(10, 45, 105, 0.92); }
+.cc-hero .hero-badge { background: rgba(10, 45, 105, 0.65); border-color: rgba(255, 255, 255, 0.75); }
+.cc-hero .hero-subtitle { line-height: 1.6; max-width: 62ch; margin-left: auto; margin-right: auto; }
+
+/* Can / cannot cards */
+.verdict-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 0 0 1.25rem; }
+@media (min-width: 760px) { .verdict-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.verdict {
+  min-width: 0; padding: 1.25rem;
+  background: var(--pc-surface); color: var(--pc-text);
+  border: 1px solid var(--pc-border); border-top: 5px solid var(--cc-yes); border-radius: 12px;
+}
+.verdict--no { border-top-color: var(--cc-no); }
+.cc-page .verdict-title {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin: 0 0 1rem; padding: 0; border: none; text-align: left;
+  font-size: 1.15rem; line-height: 1.3; color: var(--cc-yes);
+}
+.cc-page .verdict--no .verdict-title { color: var(--cc-no); }
+.cc-page .verdict-title::after { content: none; }
+.verdict-icon {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 50%;
+  background: var(--cc-yes-soft); border: 2px solid var(--cc-yes); font-size: 1rem;
+}
+.verdict--no .verdict-icon { background: var(--cc-no-soft); border-color: var(--cc-no); }
+.verdict-list { list-style: none; margin: 0; padding: 0; }
+.verdict-list li {
+  position: relative; padding: 0.65rem 0 0.65rem 1.9rem;
+  border-top: 1px solid var(--pc-border);
+  font-size: 0.95rem; line-height: 1.6; color: var(--pc-text);
+}
+.verdict-list li:first-child { border-top: none; padding-top: 0; }
+.verdict-list li::before {
+  position: absolute; left: 0.2rem; top: 0.65rem;
+  font-weight: 800; font-size: 1rem; line-height: 1.6;
+}
+.verdict-list li:first-child::before { top: 0; }
+.verdict-list--yes li::before { content: "\2714"; color: var(--cc-yes); }
+.verdict-list--no li::before  { content: "\2718"; color: var(--cc-no); }
+.verdict-list strong { color: var(--pc-text); }
+.verdict-list--no strong { color: var(--cc-no); }
+
+/* 4-step process flow */
+.step-flow {
+  list-style: none; margin: 0 0 0.5rem; padding: 0;
+  display: grid; grid-template-columns: 1fr; gap: 1rem; counter-reset: none;
+}
+@media (min-width: 640px)  { .step-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .step-flow { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.step-card {
+  position: relative; min-width: 0;
+  display: flex; flex-direction: column; gap: 0.75rem;
+  padding: 1.25rem; border-radius: 12px;
+  background: var(--pc-surface-alt); border: 1px solid var(--pc-border);
+}
+.step-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  background: var(--teal); color: #FFFFFF; font-weight: 800; font-size: 1.05rem;
+}
+.step-text { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--pc-text); }
+.step-text strong { display: block; margin-bottom: 0.25rem; font-size: 1rem; color: var(--pc-title); }
+@media (min-width: 1000px) {
+  .step-card:not(:last-child)::after {
+    content: "\2192"; position: absolute; right: -0.85rem; top: 1.6rem;
+    font-weight: 800; color: var(--pc-muted); z-index: 1;
+  }
+}
+.cc-page .consumer-apostille-link { margin: 0.5rem 0 0; color: var(--pc-text); }
+
+/* ============================================================
+   TOP HELP BAR ON NARROW PHONES (2026-10-28)
+   Keeps "Need help? · Call / Text Me · WhatsApp" on one line
+   down to 360px; below that the "Need help?" label drops and
+   the two buttons stay.
+   ============================================================ */
+@media (max-width: 480px) {
+  .top-help-bar { padding: 0.3rem 0.5rem; }
+  .top-help-content { flex-wrap: nowrap; gap: 0.35rem; font-size: 0.8rem; }
+  .top-help-message { white-space: nowrap; font-size: 0.8rem; }
+  .top-help-btn { padding: 0.3rem 0.55rem; font-size: 0.78rem; min-height: 32px; }
+}
+@media (max-width: 359px) {
+  .top-help-message { display: none; }
+}

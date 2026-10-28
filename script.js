@@ -361,6 +361,18 @@
         });
       });
 
+      // A link to "#faq-qN" (e.g. the key-rules strip) opens that question.
+      function openFromHash() {
+        const id = location.hash.slice(1);
+        if (!id) return;
+        const item = document.getElementById(id);
+        if (!item || !item.classList.contains('faq-item')) return;
+        const q = item.querySelector('.faq-question');
+        if (q && !q.classList.contains('active')) openItem(q);
+      }
+      window.addEventListener('hashchange', openFromHash);
+      openFromHash();
+
       // Recalculate open answers' heights on resize (text reflow changes scrollHeight)
       window.addEventListener('resize', function () {
         document.querySelectorAll('.faq-question.active').forEach(function (btn) {
