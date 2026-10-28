@@ -3512,3 +3512,19 @@ html[data-theme="dark"] .tr-disc-badge.is-green { color: #0B1A10; }
 .ct-page .fm-steps-title { margin: 0 0 0.75rem; padding: 0; border: none; text-align: left; font-size: 1.1rem; color: var(--pc-title); }
 .ct-page .fm-steps-title::after { content: none; }
 .ct-page .step-flow { margin-bottom: 1.25rem; }
+
+/* Privacy: readable, left-aligned headings, jump list, comfortable line length */
+.pv-page { text-align: left; }
+.pv-page h1 { text-align: left; margin-bottom: 0.25rem; color: var(--pc-title); }
+.pv-page .pv-jump { margin: 1.25rem 0 0.5rem; }
+.pv-page .pv-jump a { min-height: 40px; padding: 0.3rem 0.85rem; font-size: 0.88rem; }
+.pv-page h2.pv-h {
+  margin: 2.25rem 0 0.75rem; padding: 1.5rem 0 0; border: none; border-top: 1px solid var(--pc-border);
+  text-align: left; font-size: clamp(1.25rem, 3.8vw, 1.55rem); line-height: 1.3; color: var(--pc-title);
+  scroll-margin-top: 6rem;
+}
+.pv-page h2.pv-h::after { content: none; }
+.pv-page :is(p, li) { max-width: 72ch; font-size: 1rem; line-height: 1.7; color: var(--pc-text); }
+.pv-page ul { padding-left: 1.25rem; }
+.pv-page li { margin-bottom: 0.4rem; }
+.pv-page .pv-jump ul { padding-left: 0; } .pv-page .pv-jump li { margin: 0; max-width: none; }
