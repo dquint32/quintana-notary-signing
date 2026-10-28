@@ -3347,3 +3347,84 @@ html[data-theme="dark"] .tr-disc-badge.is-green { color: #0B1A10; }
 .premium-badge { background: #B34600; }
 .verification-action .btn { background: #B34600; border-color: #B34600; }
 .verification-action .btn:hover { background: #8F3800; border-color: #8F3800; }
+
+/* ============================================================
+   HOMEPAGE v2 (2026-10-28)
+   - Top C.R.S. § 24-21-525 bar as a boxed, muted callout (same
+     look as FAQ / Services / Translations).
+   - Service cards lift on hover; "Why work with me" sits on a
+     soft band so it reads apart from the service cards.
+   - Office map and step-by-step side by side from 900px.
+   - 6rem bottom room for the floating buttons only below 900px
+     (on desktop the buttons sit in the empty side margin).
+   Contrast: band text uses --pc-text (≥ 15:1 dark, ≥ 16:1 light);
+   orange step numbers #B34600 with white 5.3:1.
+   ============================================================ */
+.page-home .statutory-bar {
+  max-width: 1100px;
+  margin: var(--space-3) auto 0;
+  background: var(--ab-legal-bg);
+  color: var(--ab-text);
+  border: 1px solid var(--ab-line);
+  border-left: 4px solid var(--ab-legal-line);
+  border-radius: var(--r-lg);
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  padding: 0.75rem 1rem;
+}
+.page-home .statutory-bar strong, .page-home .statutory-bar span { color: var(--ab-text); }
+@media (max-width: 1140px) { .page-home .statutory-bar { margin-left: var(--space-3); margin-right: var(--space-3); } }
+
+/* Service cards: hover elevation */
+.home-page #services .pc { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.home-page #services .pc:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--pc-feat-border); }
+@media (prefers-reduced-motion: reduce) { .home-page #services .pc, .home-page #services .pc:hover { transition: none; transform: none; } }
+
+/* "Why work with me" on a soft band */
+.home-page .home-band {
+  background: var(--pc-surface-alt);
+  border: 1px solid var(--pc-border);
+  border-radius: 16px;
+  padding: 1.75rem 1.25rem 1.25rem;
+}
+.home-page .home-band .pc { border-top: 4px solid var(--teal); }
+@media (min-width: 640px) { .home-page .home-band { padding: 2rem 1.75rem 1.5rem; } }
+
+/* Finding my office: map + steps */
+.fm-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; align-items: start; }
+.fm-map .shop-map { max-width: none; margin: 0; }
+.fm-steps {
+  padding: 1.25rem; border-radius: 12px;
+  background: var(--pc-surface); border: 1px solid var(--pc-border);
+}
+.home-page .fm-steps-title {
+  margin: 0 0 0.75rem; padding: 0; border: none; text-align: left;
+  font-size: 1.1rem; color: var(--pc-title);
+}
+.home-page .fm-steps-title::after { content: none; }
+.fm-steps .shop-map-steps { max-width: none; margin: 0 0 1rem; }
+.fm-steps .shop-map-steps li { padding: 0.55rem 0 0.55rem 2.6rem; border-top: 1px solid var(--pc-border); color: var(--pc-text); line-height: 1.55; }
+.fm-steps .shop-map-steps li:first-child { border-top: none; }
+.fm-steps .shop-map-steps li::before { background: #B34600; top: 0.5rem; width: 1.9rem; height: 1.9rem; }
+.fm-steps .cta-buttons { justify-content: flex-start; margin-top: 0.5rem; }
+@media (min-width: 900px) {
+  .fm-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 1.5rem; }
+  .fm-steps .cta-buttons { flex-direction: column; }
+  .fm-steps .cta-buttons .btn { width: 100%; min-width: 0; }
+}
+.home-page .shop-map-intro { margin-left: 0; text-align: left; max-width: 70ch; }
+
+/* Bottom room for the floating buttons: phones and tablets only */
+@media (min-width: 900px) { .pricing-page { padding-bottom: var(--space-6); } }
+
+/* ============================================================
+   FOOTER LINKS ON PHONES: GROUPED (2026-10-28)
+   Services on the left, For Business + About stacked on the
+   right, so the three link groups fit in about half the height.
+   ============================================================ */
+@media (max-width: 599px) {
+  .site-footer .footer-sitemap { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5) var(--space-4); }
+  .site-footer .footer-sitemap .footer-col:first-child { grid-row: span 2; }
+  .site-footer .footer-col li a { min-height: 40px; padding: 0.35rem 0; line-height: 1.4; }
+}

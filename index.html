@@ -36,7 +36,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261028f">
+    <link rel="stylesheet" href="styles.css?v=20261028h">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -105,7 +105,7 @@
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-home">
 <div class="top-help-bar">
     <div class="top-help-content">
         <span class="top-help-message">
@@ -254,7 +254,7 @@
 <article class="pc">
 <div class="pc-head">
 <h3 class="pc-title"><span id="service-2-es" style="display:none;">Traducciones certificadas de español a inglés</span><span id="service-2-en">Certified Spanish-to-English translations</span></h3>
-
+<span class="price-tag"><span id="svc2-from-es" style="display:none;">Desde</span><span id="svc2-from-en">From</span> $30<span class="price-unit"><span id="svc2-u-es" style="display:none;">/ pág.</span><span id="svc2-u-en">/ page</span></span></span>
 </div>
 <p class="pc-text" id="service-2-desc-es" style="display:none;">Las hago yo, hablante nativo de los dos idiomas. Cada traducción lleva mi certificación firmada de que está completa y es exacta. Las preparo para cumplir con los requisitos de USCIS, pero la decisión de aceptarlas es de la agencia. <a href="translate.html">Más información</a>.</p>
             <p class="pc-text" id="service-2-desc-en">I do them myself, as a native speaker of both languages. Each one comes with my signed certification that it&rsquo;s complete and accurate. I prepare them to meet USCIS requirements, but the agency makes the final call. <a href="translate.html">More about translations</a>.</p>
@@ -381,7 +381,7 @@
         </div>
     </div>
 </section>
-<section class="price-block home-block" id="why" aria-labelledby="why-h">
+<section class="price-block home-block home-band" id="why" aria-labelledby="why-h">
 <div class="pb-head">
 <div class="pb-titles">
 <h2 class="pb-title" id="why-h"><span id="why-choose-es" style="display:none;">Por qué trabajar conmigo</span><span id="why-choose-en">Why work with me</span></h2>
@@ -421,7 +421,9 @@
 <h2 id="fm-title-en">Finding my office at Tienda Salvadoreña</h2>
         <p id="fm-intro-es" class="shop-map-intro" style="display:none;">Mi oficina está dentro de la Tienda Salvadoreña, en el 5128 E Colfax Ave, a mano izquierda al entrar. Estacione en el parqueo compartido de atrás y dé la vuelta caminando hasta la puerta del frente. Igual es con cita previa: casi todo el día ando en citas, así que mándeme un mensaje antes de venir para que me encuentre ahí.</p>
 <p id="fm-intro-en" class="shop-map-intro">My office is inside Tienda Salvadoreña at 5128 E Colfax Ave, on the left as you walk in. Park in the shared lot out back, then walk around to the front door. It&rsquo;s still by appointment only: I&rsquo;m out at appointments most of the day, so text me before you come so I&rsquo;m there when you arrive.</p>
-        <figure class="card shop-map">
+        <div class="fm-grid">
+<div class="fm-map">
+<figure class="card shop-map">
             <svg class="shop-map-svg" viewBox="0 0 640 372" role="img" aria-label="Map / Mapa: shared parking behind the building, walk around to the front door of Tienda Salvadoreña on East Colfax Ave; David's office is on the left inside. Parqueo compartido atrás del edificio; dé la vuelta hasta la puerta del frente sobre la Colfax; la oficina de David está a la izquierda al entrar.">
   <defs><marker id="sm-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="sm-arrowhead"/></marker></defs>
   <rect x="30" y="14" width="580" height="88" rx="12" class="sm-lot"/>
@@ -455,6 +457,9 @@
             <figcaption><span id="fm-scale-es" style="display:none;">Mapa no a escala.</span>
 <span id="fm-scale-en">Map not to scale.</span></figcaption>
         </figure>
+</div>
+<div class="fm-steps">
+<h3 class="fm-steps-title"><span id="fm-steps-h-es" style="display:none;">Paso a paso</span><span id="fm-steps-h-en">Step by step</span></h3>
         <ol class="shop-map-steps">
             <li><span id="fm-step1-es" style="display:none;">Estacione en el <strong>parqueo compartido de atrás</strong>.</span> <span id="fm-step1-en">Park in the <strong>shared lot behind the building</strong>.</span></li>
             <li><span id="fm-step2-es" style="display:none;">Dé la vuelta caminando por el lado del edificio hasta la banqueta de la <strong>Colfax</strong>.</span> <span id="fm-step2-en">Walk around the side of the building to the sidewalk on <strong>Colfax</strong>.</span></li>
@@ -467,6 +472,8 @@
             <a href="sms:+13035004122" class="btn btn-secondary" id="fm-text-es" style="display:none;"><span>Avisarme que va en camino</span></a>
             <a href="sms:+13035004122" class="btn btn-secondary" id="fm-text-en"><span>Text me you&rsquo;re on the way</span></a>
         </div>
+</div>
+</div>
     </section>
 </div>
 <section class="price-block home-block" id="business" aria-labelledby="business-h">
