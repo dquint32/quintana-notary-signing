@@ -3470,3 +3470,45 @@ html[data-theme="dark"] .tr-disc-badge.is-green { color: #0B1A10; }
 :is(.apx-page, .air-page, .b2b-page, .ice-page, .ct-page, .pv-page) > .price-block:first-child { margin-top: 0.5rem; padding-top: 0; border-top: none; }
 /* Airport steps are whole sentences: keep the bold lead-in inline */
 .air-page .step-text strong { display: inline; margin: 0; font-size: inherit; }
+
+/* B2B */
+.pricing-page .pc-callout.is-green { border-left-color: var(--pc-comm-border); background: var(--pc-comm-surface); }
+.b2b-page .b2b-ins { margin-bottom: 1.5rem; border-left: 4px solid var(--pc-feat-border); }
+.b2b-page .pb-sub.b2b-lead { margin: -0.25rem 0 1rem; }
+.b2b-page .b2b-case-title { margin: 0 0 0.5rem; font-weight: 700; color: var(--pc-title); }
+.b2b-page .pc-callout .pc-list { gap: 0.45rem; }
+.b2b-page .pc-callout .pc-list li { font-size: 0.9rem; }
+.b2b-page .b2b-rcpt { margin: 1rem 0 0; }
+.pricing-page .pc-panel .verdict-list li { font-size: 0.95rem; }
+
+/* Aurora ICE: long step sentences read better 2 across; no arrows */
+.ice-page .ice-crumb { margin: 0 0 1.5rem; }
+@media (min-width: 1000px) {
+  .ice-page .step-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ice-page .step-card::after { content: none; }
+}
+.ice-page .step-flow { margin-bottom: 1.25rem; }
+.ice-page .ice-legal { margin: 2.5rem 0 0; }
+/* A .pc-title placed straight in a card (no .pc-head row) must not take the 11rem flex-basis as height */
+.pricing-page :is(.pc, .pc-panel) > .pc-title { flex: none; }
+
+/* Contact */
+.ct-page > .ct-intro:first-child { margin-top: 0.5rem; }
+.ct-page .ct-reach .pc-title { font-size: 1.2rem; }
+.ct-btns { display: flex; flex-direction: column; gap: 0.75rem; }
+.ct-btns .btn, .ct-card-btns .btn { width: 100%; max-width: 100%; min-width: 0; }
+.ct-card-btns { display: flex; gap: 0.5rem; margin-top: auto; }
+.ct-card-btns .btn { flex: 1; padding: 0.55rem 0.75rem; font-size: 0.88rem; }
+.ct-page .pb-sub.ct-hub-desc { margin: -0.25rem 0 1.25rem; }
+.ct-page .ct-rate { border-left: 4px solid var(--pc-comm-border); }
+/* Finding my office: same layout as the homepage */
+.ct-page .shop-map-section { text-align: left; }
+.ct-page .shop-map-section > h2 {
+  display: block; margin: 0 0 0.75rem; padding: 0; border: none; text-align: left;
+  font-size: clamp(1.45rem, 4.6vw, 2rem); color: var(--pc-title);
+}
+.ct-page .shop-map-section > h2::after { content: none; }
+.ct-page .shop-map-intro { margin-left: 0; text-align: left; max-width: 70ch; }
+.ct-page .fm-steps-title { margin: 0 0 0.75rem; padding: 0; border: none; text-align: left; font-size: 1.1rem; color: var(--pc-title); }
+.ct-page .fm-steps-title::after { content: none; }
+.ct-page .step-flow { margin-bottom: 1.25rem; }

@@ -21,7 +21,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="../styles.css?v=20261028j">
+    <link rel="stylesheet" href="../styles.css?v=20261028m">
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -31,7 +31,7 @@
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-contact">
 
 <div class="top-help-bar">
     <div class="top-help-content">
@@ -144,7 +144,7 @@
     </span>
 </div>
 
-<section class="hero-with-logo">
+<section class="hero hero-with-logo cc-hero">
     <div class="hero-content">
         <div class="hero-badge">
             <span id="hero-badge-es">Solo con cita previa &middot; Comisionado y asegurado</span>
@@ -157,117 +157,106 @@
     </div>
 </section>
 
-<main class="section container">
+<main class="section container pricing-page cc-page ct-page">
 
-    <div class="info-box" style="margin-bottom:2rem;">
-        <p id="intro-p-es">Paso casi todo el día manejando de una cita a otra por el área metropolitana, así que trabajo solo con cita previa. Mi oficina está dentro de la Tienda Salvadoreña (abajo está el mapa), pero no atiendo sin cita porque casi siempre ando fuera.</p>
-        <p id="intro-p-en" style="display:none;">I spend most of the day driving between appointments around the metro area, so I work by appointment only. My office is inside Tienda Salvadoreña (map below), but I don&rsquo;t take walk-ins because I&rsquo;m usually out.</p>
-    </div>
+<div class="pc-panel pc-panel--wide ct-intro">
+<p class="pc-text" id="intro-p-es">Paso casi todo el día manejando de una cita a otra por el área metropolitana, así que trabajo solo con cita previa. Mi oficina está dentro de la Tienda Salvadoreña (abajo está el mapa), pero no atiendo sin cita porque casi siempre ando fuera.</p>
+<p class="pc-text" id="intro-p-en" style="display:none;">I spend most of the day driving between appointments around the metro area, so I work by appointment only. My office is inside Tienda Salvadoreña (map below), but I don&rsquo;t take walk-ins because I&rsquo;m usually out.</p>
+</div>
 
-    <div class="pricing-cards">
-        
-        <div class="card pricing-card">
-            <div class="pricing-card-header">
-                <h3 id="contact-reach-es">Cómo comunicarse conmigo</h3>
-                <h3 id="contact-reach-en" style="display:none;">How to reach me</h3>
-            </div>
-            <div style="display:flex; flex-direction:column; gap:1rem; margin-top:1rem;">
-                <a href="tel:+13035004122" class="btn btn-primary" style="width:100%; max-width:100%;">
-                    <span id="btn-call-es">Llamar 303-500-4122</span>
-                    <span id="btn-call-en" style="display:none;">Call 303-500-4122</span>
-                </a>
-                <a href="https://wa.me/13035004122" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; max-width:100%;">
-                    <span>WhatsApp</span>
-                </a>
-                <a href="mailto:info@quintananotarysigning.com" class="btn btn-secondary" style="width:100%; max-width:100%;">
-                    <span id="btn-email-es">Mandar correo</span>
-                    <span id="btn-email-en" style="display:none;">Email me</span>
-                </a>
-            </div>
-        </div>
+<div class="pc-grid pc-grid--2 ct-reach">
+<article class="pc">
+<h2 class="pc-title" id="contact-reach-es">Cómo comunicarse conmigo</h2>
+<h2 class="pc-title" id="contact-reach-en" style="display:none;">How to reach me</h2>
+<div class="ct-btns">
+<a href="tel:+13035004122" class="btn btn-primary"><span id="btn-call-es">Llamar 303-500-4122</span><span id="btn-call-en" style="display:none;">Call 303-500-4122</span></a>
+<a href="https://wa.me/13035004122" target="_blank" rel="noopener" class="btn btn-whatsapp"><span>WhatsApp</span></a>
+<a href="mailto:info@quintananotarysigning.com" class="btn btn-secondary"><span id="btn-email-es">Mandar correo</span><span id="btn-email-en" style="display:none;">Email me</span></a>
+</div>
+</article>
+<article class="pc">
+<h2 class="pc-title" id="contact-hours-es">Cuándo contesto</h2>
+<h2 class="pc-title" id="contact-hours-en" style="display:none;">When I answer</h2>
+<p class="pc-text"><strong id="hours-days-es">Lunes a Viernes</strong><strong id="hours-days-en" style="display:none;">Monday – Friday</strong><br>10:00 AM – 5:00 PM</p>
+<p class="pc-text" id="hours-desc-es">En este horario contesto llamadas y mensajes. Si no le respondo enseguida, seguramente estoy en una firma con otro cliente. Déjeme un mensaje de voz o de texto y le contesto en cuanto pueda.</p>
+<p class="pc-text" id="hours-desc-en" style="display:none;">During these hours I&rsquo;m returning calls and messages. If I don&rsquo;t pick up right away, I&rsquo;m probably at a signing with someone else. Leave a voicemail or a text and I&rsquo;ll get back to you as soon as I can.</p>
+<p class="pc-callout" id="hours-appt-es"><strong>Nota:</strong> la cita puede ser a cualquier hora que yo tenga libre, también en la noche o el fin de semana (<a href="pricing.html#premiums">con cargo extra</a>: +$20 de 7 PM a 10 AM; +$15 los fines de semana).</p>
+<p class="pc-callout" id="hours-appt-en" style="display:none;"><strong>Note:</strong> the appointment can be any time I have open, including evenings and weekends (<a href="pricing.html#premiums">extra charge</a>: +$20 from 7 PM to 10 AM; +$15 on weekends).</p>
+</article>
+</div>
 
-        <div class="card pricing-card">
-            <div class="pricing-card-header">
-                <h3 id="contact-hours-es">Cuándo contesto</h3>
-                <h3 id="contact-hours-en" style="display:none;">When I answer</h3>
-            </div>
-            <div class="pricing-description">
-                <p><strong id="hours-days-es">Lunes a Viernes</strong><strong id="hours-days-en" style="display:none;">Monday – Friday</strong><br>10:00 AM – 5:00 PM</p>
-                <p id="hours-desc-es" style="font-size:0.95rem;">En este horario contesto llamadas y mensajes. Si no le respondo enseguida, seguramente estoy en una firma con otro cliente. Déjeme un mensaje de voz o de texto y le contesto en cuanto pueda.</p>
-                <p id="hours-desc-en" style="display:none; font-size:0.95rem;">During these hours I&rsquo;m returning calls and messages. If I don&rsquo;t pick up right away, I&rsquo;m probably at a signing with someone else. Leave a voicemail or a text and I&rsquo;ll get back to you as soon as I can.</p>
-                
-                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border-gray);">
-                    <p id="hours-appt-es" style="font-size:0.9rem; color:var(--teal-dark);"><strong>Nota:</strong> la cita puede ser a cualquier hora que yo tenga libre, también en la noche o el fin de semana (<a href="pricing.html#premiums">con cargo extra</a>: +$20 de 7 PM a 10 AM; +$15 los fines de semana).</p>
-                    <p id="hours-appt-en" style="display:none; font-size:0.9rem; color:var(--teal-dark);"><strong>Note:</strong> the appointment can be any time I have open, including evenings and weekends (<a href="pricing.html#premiums">extra charge</a>: +$20 from 7 PM to 10 AM; +$15 on weekends).</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<section class="price-block" id="locations" aria-labelledby="locations-h">
+<div class="pb-head">
+<div class="pb-titles">
+<h2 class="pb-title" id="locations-h"><span id="loc-main-title-es">Dónde nos podemos ver</span><span id="loc-main-title-en" style="display:none;">Where we can meet</span></h2>
+</div>
+</div>
+<div class="pc-panel pc-panel--wide">
+<h3 class="pc-title" id="loc-mobile-title-es">Donde usted esté</h3>
+<h3 class="pc-title" id="loc-mobile-title-en" style="display:none;">Wherever you are</h3>
+<p class="pc-text" id="loc-mobile-desc-es">Su casa, su oficina, el hospital o un lugar público como una cafetería.<br><strong>Nota:</strong> la tarifa de viaje depende de las millas de ida y vuelta desde la Tienda Salvadoreña. Vea los precios exactos en <a href="pricing.html">Precios</a>.</p>
+<p class="pc-text" id="loc-mobile-desc-en" style="display:none;">Your home, your office, the hospital, or a public place like a coffee shop.<br><strong>Note:</strong> the travel fee depends on round-trip miles from Tienda Salvadoreña. The exact tiers are on the <a href="pricing.html">Pricing</a> page.</p>
+</div>
+<h3 class="pb-subtitle"><span id="loc-hub-title-es">Lugares comunitarios con precio más bajo</span><span id="loc-hub-title-en" style="display:none;">Community locations with a lower price</span></h3>
+<p class="pb-sub ct-hub-desc" id="loc-hub-desc-es">En estos lugares la notarización cuesta <strong>$10 por acto</strong> y <strong>no hay tarifa de viaje</strong>. Solo con cita previa. Son lugares públicos donde me reúno con clientes con cita, por ejemplo en una sala de estudio que reservo. No estoy afiliado, patrocinado ni respaldado por Tienda Salvadoreña, MSU Denver, la Biblioteca Auraria ni la Biblioteca Pública de Denver.</p>
+<p class="pb-sub ct-hub-desc" id="loc-hub-desc-en" style="display:none;">At these places notarization is <strong>$10 per act</strong> and there&rsquo;s <strong>no travel fee</strong>. By appointment only. They&rsquo;re public places where I meet clients by appointment, such as a study room I reserve. I am not affiliated with, sponsored by, or endorsed by Tienda Salvadoreña, MSU Denver, the Auraria Library, or Denver Public Library.</p>
+<div class="pc-grid pc-grid--3 ct-hubs">
+<article class="pc pc--community">
+<div class="pc-flag"><span id="hub-badge-es">Comunitario</span><span id="hub-badge-en" style="display:none;">Community</span></div>
+<div class="pc-head">
+<h4 class="pc-title">Tienda Salvadoreña</h4>
+<span class="price-tag price-tag--green">$10<span class="price-unit"><span id="hub-p4-u-es">por acto</span><span id="hub-p4-u-en" style="display:none;">per act</span></span></span>
+</div>
+<div class="pc-tags"><span class="scope-tag scope-tag--green"><span id="hub-p4-nt-es">Sin tarifa de viaje</span><span id="hub-p4-nt-en" style="display:none;">No travel fee</span></span></div>
+<p class="pc-text">5128 E Colfax Avenue<br>Denver, CO 80220</p>
+<div class="ct-card-btns">
+<a href="https://www.google.com/maps/search/?api=1&query=Tienda+Salvadore%C3%B1a%2C+5128+E+Colfax+Avenue%2C+Denver%2C+CO+80220" target="_blank" rel="noopener" class="btn btn-secondary"><span id="dir-4-es">Cómo llegar</span><span id="dir-4-en" style="display:none;">Directions</span></a>
+<a href="https://tiendasalvadorenadenver.com/" target="_blank" rel="noopener" class="btn btn-primary"><span id="web-4-es">Sitio Web</span><span id="web-4-en" style="display:none;">Website</span></a>
+</div>
+</article>
+<article class="pc">
+<div class="pc-head">
+<h4 class="pc-title">MSU Denver (Auraria Library)</h4>
+<span class="price-tag price-tag--green">$10<span class="price-unit"><span id="hub-p1-u-es">por acto</span><span id="hub-p1-u-en" style="display:none;">per act</span></span></span>
+</div>
+<div class="pc-tags"><span class="scope-tag scope-tag--green"><span id="hub-p1-nt-es">Sin tarifa de viaje</span><span id="hub-p1-nt-en" style="display:none;">No travel fee</span></span></div>
+<p class="pc-text">1100 Lawrence Street<br>Denver, CO 80204</p>
+<div class="ct-card-btns">
+<a href="https://www.google.com/maps/search/?api=1&query=Auraria+Library%2C+1100+Lawrence+Street%2C+Denver%2C+CO+80204" target="_blank" rel="noopener" class="btn btn-secondary"><span id="dir-1-es">Cómo llegar</span><span id="dir-1-en" style="display:none;">Directions</span></a>
+</div>
+</article>
+<article class="pc">
+<div class="pc-head">
+<h4 class="pc-title" id="dpl-name-es">Biblioteca Pública de Denver: todas las sucursales</h4>
+<h4 class="pc-title" id="dpl-name-en" style="display:none;">Denver Public Library: All Branches</h4>
+<span class="price-tag price-tag--green">$10<span class="price-unit"><span id="hub-p2-u-es">por acto</span><span id="hub-p2-u-en" style="display:none;">per act</span></span></span>
+</div>
+<div class="pc-tags"><span class="scope-tag scope-tag--green"><span id="hub-p2-nt-es">Sin tarifa de viaje</span><span id="hub-p2-nt-en" style="display:none;">No travel fee</span></span></div>
+<p class="pc-text" id="dpl-desc-es">Cualquier sucursal abierta en Denver. Cuando hacemos la cita escogemos la que le quede más cerca.</p>
+<p class="pc-text" id="dpl-desc-en" style="display:none;">Any open branch in Denver. When we book, we pick the one closest to you.</p>
+<div class="ct-card-btns">
+<a href="https://www.denverlibrary.org/locations" target="_blank" rel="noopener" class="btn btn-secondary"><span id="dir-2-es">Ver Sucursales</span><span id="dir-2-en" style="display:none;">See All Branches</span></a>
+</div>
+</article>
+</div>
+<div class="pc-panel pc-panel--wide ct-rate">
+<h3 class="pc-title" id="disc-title-es">El precio comunitario</h3>
+<h3 class="pc-title" id="disc-title-en" style="display:none;">The community rate</h3>
+<p class="pc-text" id="disc-desc-es">Si nos vemos en <strong>Tienda Salvadoreña</strong>, <strong>MSU Denver (Biblioteca Auraria)</strong> o <strong>cualquier sucursal de la Biblioteca Pública de Denver</strong>, la notarización cuesta $10 en vez de $15 ($5 menos que el máximo de ley en Colorado) y no hay tarifa de viaje.*</p>
+<p class="pc-text" id="disc-desc-en" style="display:none;">If we meet at <strong>Tienda Salvadoreña</strong>, <strong>MSU Denver (Auraria Library)</strong>, or <strong>any Denver Public Library branch</strong>, notarization is $10 instead of $15 ($5 under Colorado&rsquo;s legal maximum) and there&rsquo;s no travel fee.*</p>
+<p class="pc-fine" id="disc-note-es">*Solo para citas en esos lugares.</p>
+<p class="pc-fine" id="disc-note-en" style="display:none;">*Only for appointments at those places.</p>
+</div>
+</section>
 
-    <div class="divider"></div>
-
-    <h2 class="subsection-title" id="locations" style="text-align:center; border:none; font-size:1.8rem;">
-        <span id="loc-main-title-es">Dónde nos podemos ver</span>
-        <span id="loc-main-title-en" style="display:none;">Where we can meet</span>
-    </h2>
-
-    <div class="info-box" style="text-align:center;">
-        <h3 id="loc-mobile-title-es" style="border:none; padding:0; margin-bottom:0.5rem;">Donde usted esté</h3>
-        <h3 id="loc-mobile-title-en" style="display:none; border:none; padding:0; margin-bottom:0.5rem;">Wherever you are</h3>
-        <p id="loc-mobile-desc-es" style="margin-bottom:0;">Su casa, su oficina, el hospital o un lugar público como una cafetería.<br><strong>Nota:</strong> la tarifa de viaje depende de las millas de ida y vuelta desde la Tienda Salvadoreña. Vea los precios exactos en <a href="pricing.html">Precios</a>.</p>
-        <p id="loc-mobile-desc-en" style="display:none; margin-bottom:0;">Your home, your office, the hospital, or a public place like a coffee shop.<br><strong>Note:</strong> the travel fee depends on round-trip miles from Tienda Salvadoreña. The exact tiers are on the <a href="pricing.html">Pricing</a> page.</p>
-    </div>
-
-    <h3 class="subsection-title" style="margin-top:2.5rem;">
-        <span id="loc-hub-title-es">Lugares comunitarios con precio más bajo</span>
-        <span id="loc-hub-title-en" style="display:none;">Community locations with a lower price</span>
-    </h3>
-    <p id="loc-hub-desc-es" style="margin-bottom:1.5rem;">En estos lugares la notarización cuesta <strong>$10 por acto</strong> y <strong>no hay tarifa de viaje</strong>. Solo con cita previa. Son lugares públicos donde me reúno con clientes con cita, por ejemplo en una sala de estudio que reservo. No estoy afiliado, patrocinado ni respaldado por Tienda Salvadoreña, MSU Denver, la Biblioteca Auraria ni la Biblioteca Pública de Denver.</p>
-    <p id="loc-hub-desc-en" style="display:none; margin-bottom:1.5rem;">At these places notarization is <strong>$10 per act</strong> and there&rsquo;s <strong>no travel fee</strong>. By appointment only. They&rsquo;re public places where I meet clients by appointment, such as a study room I reserve. I am not affiliated with, sponsored by, or endorsed by Tienda Salvadoreña, MSU Denver, the Auraria Library, or Denver Public Library.</p>
-
-    <div class="pricing-cards">
-        <div class="card">
-            <strong style="color:var(--teal-dark); font-size:1.1rem; display:block; margin-bottom:0.5rem;">MSU Denver (Auraria Library)</strong>
-            <p style="font-size:0.9rem; margin-bottom:1rem;">1100 Lawrence Street<br>Denver, CO 80204</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Auraria+Library%2C+1100+Lawrence+Street%2C+Denver%2C+CO+80204" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem; width:100%;">
-                <span id="dir-1-es">Cómo llegar</span>
-                <span id="dir-1-en" style="display:none;">Directions</span>
-            </a>
-        </div>
-        
-        <div class="card">
-            <div id="dpl-name-es" style="margin-bottom:0.5rem;"><strong style="color:var(--teal-dark); font-size:1.1rem;">Biblioteca Pública de Denver: todas las sucursales</strong></div>
-            <div id="dpl-name-en" style="display:none; margin-bottom:0.5rem;"><strong style="color:var(--teal-dark); font-size:1.1rem;">Denver Public Library: All Branches</strong></div>
-            <p id="dpl-desc-es" style="font-size:0.9rem; margin-bottom:1rem;">Cualquier sucursal abierta en Denver. Cuando hacemos la cita escogemos la que le quede más cerca.</p>
-            <p id="dpl-desc-en" style="display:none; font-size:0.9rem; margin-bottom:1rem;">Any open branch in Denver. When we book, we pick the one closest to you.</p>
-            <a href="https://www.denverlibrary.org/locations" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem; width:100%;">
-                <span id="dir-2-es">Ver Sucursales</span>
-                <span id="dir-2-en" style="display:none;">See All Branches</span>
-            </a>
-        </div>
-
-        <div class="card" style="border: 2px solid var(--orange);">
-            <div class="premium-badge" style="position:absolute; top:-10px; right:-10px;"><span id="hub-badge-es">Comunitario</span><span id="hub-badge-en" style="display:none;">Community</span></div>
-            <strong style="color:var(--teal-dark); font-size:1.1rem; display:block; margin-bottom:0.5rem;">Tienda Salvadoreña</strong>
-            <p style="font-size:0.9rem; margin-bottom:1rem;">5128 E Colfax Avenue<br>Denver, CO 80220</p>
-            <div style="display:flex; gap:0.5rem;">
-                <a href="https://www.google.com/maps/search/?api=1&query=Tienda+Salvadore%C3%B1a%2C+5128+E+Colfax+Avenue%2C+Denver%2C+CO+80220" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.85rem; padding:0.5rem; flex:1;">
-                    <span id="dir-4-es">Cómo llegar</span>
-                    <span id="dir-4-en" style="display:none;">Directions</span>
-                </a>
-                <a href="https://tiendasalvadorenadenver.com/" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.85rem; padding:0.5rem; flex:1;">
-                    <span id="web-4-es">Sitio Web</span>
-                    <span id="web-4-en" style="display:none;">Website</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <section class="section-with-icon shop-map-section" id="find-me">
-        <h3 id="fm-title-es">Cómo llegar a mi oficina en la Tienda Salvadoreña</h3>
-<h3 id="fm-title-en" style="display:none;">Finding my office at Tienda Salvadoreña</h3>
-        <p id="fm-intro-es" class="shop-map-intro">Mi oficina está dentro de la Tienda Salvadoreña, en el 5128 E Colfax Ave, a mano izquierda al entrar. Estacione en el parqueo compartido de atrás y dé la vuelta caminando hasta la puerta del frente. Igual es con cita previa: casi todo el día ando en citas, así que mándeme un mensaje antes de venir para que me encuentre ahí.</p>
+<section class="section-with-icon shop-map-section price-block" id="find-me">
+<h2 id="fm-title-es">Cómo llegar a mi oficina en la Tienda Salvadoreña</h2>
+<h2 id="fm-title-en" style="display:none;">Finding my office at Tienda Salvadoreña</h2>
+<p id="fm-intro-es" class="shop-map-intro">Mi oficina está dentro de la Tienda Salvadoreña, en el 5128 E Colfax Ave, a mano izquierda al entrar. Estacione en el parqueo compartido de atrás y dé la vuelta caminando hasta la puerta del frente. Igual es con cita previa: casi todo el día ando en citas, así que mándeme un mensaje antes de venir para que me encuentre ahí.</p>
 <p id="fm-intro-en" class="shop-map-intro" style="display:none;">My office is inside Tienda Salvadoreña at 5128 E Colfax Ave, on the left as you walk in. Park in the shared lot out back, then walk around to the front door. It&rsquo;s still by appointment only: I&rsquo;m out at appointments most of the day, so text me before you come so I&rsquo;m there when you arrive.</p>
-        <figure class="card shop-map">
+<div class="fm-grid">
+<div class="fm-map">
+<figure class="card shop-map">
             <svg class="shop-map-svg" viewBox="0 0 640 372" role="img" aria-label="Map / Mapa: shared parking behind the building, walk around to the front door of Tienda Salvadoreña on East Colfax Ave; David's office is on the left inside. Parqueo compartido atrás del edificio; dé la vuelta hasta la puerta del frente sobre la Colfax; la oficina de David está a la izquierda al entrar.">
   <defs><marker id="sm-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="sm-arrowhead"/></marker></defs>
   <rect x="30" y="14" width="580" height="88" rx="12" class="sm-lot"/>
@@ -301,6 +290,9 @@
             <figcaption><span id="fm-scale-es">Mapa no a escala.</span>
 <span id="fm-scale-en" style="display:none;">Map not to scale.</span></figcaption>
         </figure>
+</div>
+<div class="fm-steps">
+<h3 class="fm-steps-title"><span id="fm-steps-h-es">Paso a paso</span><span id="fm-steps-h-en" style="display:none;">Step by step</span></h3>
         <ol class="shop-map-steps">
             <li><span id="fm-step1-es">Estacione en el <strong>parqueo compartido de atrás</strong>.</span> <span id="fm-step1-en" style="display:none;">Park in the <strong>shared lot behind the building</strong>.</span></li>
             <li><span id="fm-step2-es">Dé la vuelta caminando por el lado del edificio hasta la banqueta de la <strong>Colfax</strong>.</span> <span id="fm-step2-en" style="display:none;">Walk around the side of the building to the sidewalk on <strong>Colfax</strong>.</span></li>
@@ -313,70 +305,33 @@
             <a href="sms:+13035004122" class="btn btn-secondary" id="fm-text-es"><span>Avisarme que va en camino</span></a>
             <a href="sms:+13035004122" class="btn btn-secondary" id="fm-text-en" style="display:none;"><span>Text me you&rsquo;re on the way</span></a>
         </div>
-    </section>
+</div>
+</div>
+</section>
 
-    <div class="info-box-orange" style="text-align:center; margin-top:2rem;">
-        <h3 id="disc-title-es" style="border:none; margin-bottom:0.5rem; color:#7A2800;">El precio comunitario</h3>
-        <h3 id="disc-title-en" style="display:none; border:none; margin-bottom:0.5rem; color:#7A2800;">The community rate</h3>
-        <p id="disc-desc-es" style="margin-bottom:0.5rem;">Si nos vemos en <strong>Tienda Salvadoreña</strong>, <strong>MSU Denver (Biblioteca Auraria)</strong> o <strong>cualquier sucursal de la Biblioteca Pública de Denver</strong>, la notarización cuesta $10 en vez de $15 ($5 menos que el máximo de ley en Colorado) y no hay tarifa de viaje.*</p>
-        <p id="disc-desc-en" style="display:none; margin-bottom:0.5rem;">If we meet at <strong>Tienda Salvadoreña</strong>, <strong>MSU Denver (Auraria Library)</strong>, or <strong>any Denver Public Library branch</strong>, notarization is $10 instead of $15 ($5 under Colorado&rsquo;s legal maximum) and there&rsquo;s no travel fee.*</p>
-        <p id="disc-note-es" style="font-size:0.85rem; color:#5A3700;">*Solo para citas en esos lugares.</p>
-        <p id="disc-note-en" style="display:none; font-size:0.85rem; color:#5A3700;">*Only for appointments at those places.</p>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="pricing-cards">
-        
-        <div class="card">
-            <h3 id="pol-title-es" style="border-bottom: 2px solid var(--teal-light); padding-bottom:0.5rem;">Cómo funcionan las citas</h3>
-            <h3 id="pol-title-en" style="display:none; border-bottom: 2px solid var(--teal-light); padding-bottom:0.5rem;">How appointments work</h3>
-            
-            <ul style="padding-left:1.5rem; margin-top:1rem;">
-                <li style="margin-bottom:0.75rem;">
-                    <span id="pol-1-es"><strong>Siempre con cita:</strong> llámeme o mándeme un mensaje para apartar su hora. No atiendo sin cita.</span>
-                    <span id="pol-1-en" style="display:none;"><strong>Always by appointment:</strong> call or text me to hold your time. No walk-ins.</span>
-                </li>
-                <li style="margin-bottom:0.75rem;">
-                    <span id="pol-2-es"><strong>Pago:</strong> la cita se confirma con el pago completo por adelantado.</span>
-                    <span id="pol-2-en" style="display:none;"><strong>Payment:</strong> your appointment is confirmed once it&rsquo;s paid in full up front.</span>
-                </li>
-                <li>
-                    <span id="pol-3-es"><strong>Si se le hace tarde:</strong> lo espero 15 minutos. Después de eso, la cita cuenta como que no llegó: me quedo con el depósito (normalmente la tarifa de viaje) y el resto queda en su cuenta como saldo a favor.</span>
-                    <span id="pol-3-en" style="display:none;"><strong>If you&rsquo;re running late:</strong> I&rsquo;ll wait 15 minutes. After that, it counts as a no-show: I keep the deposit (usually the travel fee) and the rest stays on your account as credit.</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h3 id="steps-title-es" style="border-bottom: 2px solid var(--teal-light); padding-bottom:0.5rem;">Qué tiene que hacer</h3>
-            <h3 id="steps-title-en" style="display:none; border-bottom: 2px solid var(--teal-light); padding-bottom:0.5rem;">What you need to do</h3>
-            
-            <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.75rem;">
-                <div style="display:flex; gap:0.75rem; align-items:flex-start;">
-                    <span class="section-number" style="min-width:30px; height:30px; font-size:1rem;">1</span>
-                    <span id="step-1-es" style="margin-top:0.2rem;">Llámeme o mándeme un mensaje para hacer la cita.</span>
-                    <span id="step-1-en" style="display:none; margin-top:0.2rem;">Call or text me to book.</span>
-                </div>
-                <div style="display:flex; gap:0.75rem; align-items:flex-start;">
-                    <span class="section-number" style="min-width:30px; height:30px; font-size:1rem;">2</span>
-                    <span id="step-2-es" style="margin-top:0.2rem;">Escoja dónde nos vemos: donde usted esté o en un lugar comunitario sin tarifa de viaje.</span>
-                    <span id="step-2-en" style="display:none; margin-top:0.2rem;">Pick where we meet: wherever you are, or a community location with no travel fee.</span>
-                </div>
-                <div style="display:flex; gap:0.75rem; align-items:flex-start;">
-                    <span class="section-number" style="min-width:30px; height:30px; font-size:1rem;">3</span>
-                    <span id="step-3-es" style="margin-top:0.2rem;">Pague la factura para confirmar la cita.</span>
-                    <span id="step-3-en" style="display:none; margin-top:0.2rem;">Pay the invoice to confirm.</span>
-                </div>
-                <div style="display:flex; gap:0.75rem; align-items:flex-start;">
-                    <span class="section-number" style="min-width:30px; height:30px; font-size:1rem;">4</span>
-                    <span id="step-4-es" style="margin-top:0.2rem;">Traiga su identificación (vigente o vencida hace no más de un año) y sus documentos ya llenos, pero sin firmar hasta que estemos frente a frente.</span>
-                    <span id="step-4-en" style="display:none; margin-top:0.2rem;">Bring your ID (current or expired no more than one year) and your documents filled out, but don&rsquo;t sign until we&rsquo;re face to face.</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<section class="price-block" id="how-to-book" aria-labelledby="steps-title-en">
+<div class="pb-head">
+<div class="pb-titles">
+<h2 class="pb-title" id="steps-title-es">Qué tiene que hacer</h2>
+<h2 class="pb-title" id="steps-title-en" style="display:none;">What you need to do</h2>
+</div>
+</div>
+<ol class="step-flow">
+<li class="step-card"><span class="step-num" aria-hidden="true">1</span><p class="step-text"><span id="step-1-es">Llámeme o mándeme un mensaje para hacer la cita.</span><span id="step-1-en" style="display:none;">Call or text me to book.</span></p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">2</span><p class="step-text"><span id="step-2-es">Escoja dónde nos vemos: donde usted esté o en un lugar comunitario sin tarifa de viaje.</span><span id="step-2-en" style="display:none;">Pick where we meet: wherever you are, or a community location with no travel fee.</span></p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">3</span><p class="step-text"><span id="step-3-es">Pague la factura para confirmar la cita.</span><span id="step-3-en" style="display:none;">Pay the invoice to confirm.</span></p></li>
+<li class="step-card"><span class="step-num" aria-hidden="true">4</span><p class="step-text"><span id="step-4-es">Traiga su identificación (vigente o vencida hace no más de un año) y sus documentos ya llenos, pero sin firmar hasta que estemos frente a frente.</span><span id="step-4-en" style="display:none;">Bring your ID (current or expired no more than one year) and your documents filled out, but don&rsquo;t sign until we&rsquo;re face to face.</span></p></li>
+</ol>
+<div class="pc-panel pc-panel--wide ct-policies">
+<h3 class="pc-title" id="pol-title-es">Cómo funcionan las citas</h3>
+<h3 class="pc-title" id="pol-title-en" style="display:none;">How appointments work</h3>
+<ul class="pc-list">
+<li><span id="pol-1-es"><strong>Siempre con cita:</strong> llámeme o mándeme un mensaje para apartar su hora. No atiendo sin cita.</span><span id="pol-1-en" style="display:none;"><strong>Always by appointment:</strong> call or text me to hold your time. No walk-ins.</span></li>
+<li><span id="pol-2-es"><strong>Pago:</strong> la cita se confirma con el pago completo por adelantado.</span><span id="pol-2-en" style="display:none;"><strong>Payment:</strong> your appointment is confirmed once it&rsquo;s paid in full up front.</span></li>
+<li><span id="pol-3-es"><strong>Si se le hace tarde:</strong> lo espero 15 minutos. Después de eso, la cita cuenta como que no llegó: me quedo con el depósito (normalmente la tarifa de viaje) y el resto queda en su cuenta como saldo a favor.</span><span id="pol-3-en" style="display:none;"><strong>If you&rsquo;re running late:</strong> I&rsquo;ll wait 15 minutes. After that, it counts as a no-show: I keep the deposit (usually the travel fee) and the rest stays on your account as credit.</span></li>
+</ul>
+</div>
+</section>
 
 </main>
 

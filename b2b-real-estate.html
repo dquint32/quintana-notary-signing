@@ -37,7 +37,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261028j">
+    <link rel="stylesheet" href="styles.css?v=20261028m">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -47,7 +47,7 @@
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
-<body id="top">
+<body id="top" class="page-b2b">
 
 <div class="top-help-bar">
     <div class="top-help-content">
@@ -160,7 +160,7 @@
     </span>
 </div>
 
-<section class="hero hero-with-logo">
+<section class="hero hero-with-logo cc-hero">
     <div class="hero-content">
         <div class="hero-badge">
             <span id="hero-badge-es" style="display:none;">Solo con cita previa &middot; Comisionado y asegurado</span>
@@ -180,93 +180,106 @@
     </div>
 </section>
 
-<main class="section container" id="b2b-pricing">
-    <div class="insurance-note">
-        <h3 id="ins-title-es" style="display:none;">Comisionado y asegurado</h3>
-        <h3 id="ins-title-en">Commissioned &amp; Insured</h3>
-        <p id="ins-p-es" style="display:none;">Soy Notary Public comisionado en Colorado (ID 20254044224). Servicios Quintana LLC, la empresa detrás de Quintana Notary &amp; Signing, tiene seguro con The Hartford. Incluye responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y para mis traducciones. Si su compañía de títulos o su bufete necesita un certificado de seguro, pídamelo.</p>
-        <p id="ins-p-en">I&rsquo;m a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC, the company behind Quintana Notary &amp; Signing, is insured through The Hartford. That includes general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and for my translation work. If your title company or law firm needs a certificate of insurance, just ask.</p>
+<main class="section container pricing-page cc-page b2b-page" id="b2b-pricing">
+    <div class="pc-panel pc-panel--wide b2b-ins">
+        <div class="pc-head">
+            <h3 class="pc-title" id="ins-title-es" style="display:none;">Comisionado y asegurado</h3>
+            <h3 class="pc-title" id="ins-title-en">Commissioned &amp; Insured</h3>
+        </div>
+        <p class="pc-text" id="ins-p-es" style="display:none;">Soy Notary Public comisionado en Colorado (ID 20254044224). Servicios Quintana LLC, la empresa detrás de Quintana Notary &amp; Signing, tiene seguro con The Hartford. Incluye responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y para mis traducciones. Si su compañía de títulos o su bufete necesita un certificado de seguro, pídamelo.</p>
+        <p class="pc-text" id="ins-p-en">I&rsquo;m a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC, the company behind Quintana Notary &amp; Signing, is insured through The Hartford. That includes general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and for my translation work. If your title company or law firm needs a certificate of insurance, just ask.</p>
     </div>
 
-    <nav class="jump-links" aria-label="On this page">
-        <span id="jump-label-es" style="display:none;">Ir a:</span><span id="jump-label-en">Jump to:</span>
-        <a href="#real-estate"><span id="jump-re-es" style="display:none;">Títulos y Bienes Raíces</span><span id="jump-re-en">Title &amp; Real Estate</span></a>
-        <a href="#immigration-attorneys"><span id="jump-imm-es" style="display:none;">Abogados de Inmigración</span><span id="jump-imm-en">Immigration Attorneys</span></a>
-        <a href="#notary-support"><span id="jump-n2n-es" style="display:none;">Apoyo entre Colegas</span><span id="jump-n2n-en">Notary Support</span></a>
-        <a href="#professional-development"><span id="jump-dev-es" style="display:none;">Web y Mentoría</span><span id="jump-dev-en">Web &amp; Mentoring</span></a>
+    <nav class="pb-jump" aria-label="On this page">
+        <p class="pb-jump-title"><span id="jump-label-es" style="display:none;">Ir a:</span><span id="jump-label-en">Jump to:</span></p>
+        <ul>
+            <li><a href="#real-estate"><span class="pb-jump-n" aria-hidden="true">1</span><span id="jump-re-es" style="display:none;">Títulos y Bienes Raíces</span><span id="jump-re-en">Title &amp; Real Estate</span></a></li>
+            <li><a href="#immigration-attorneys"><span class="pb-jump-n" aria-hidden="true">2</span><span id="jump-imm-es" style="display:none;">Abogados de Inmigración</span><span id="jump-imm-en">Immigration Attorneys</span></a></li>
+            <li><a href="#notary-support"><span class="pb-jump-n" aria-hidden="true">3</span><span id="jump-n2n-es" style="display:none;">Apoyo entre Colegas</span><span id="jump-n2n-en">Notary Support</span></a></li>
+            <li><a href="#professional-development"><span class="pb-jump-n" aria-hidden="true">4</span><span id="jump-dev-es" style="display:none;">Web y Mentoría</span><span id="jump-dev-en">Web &amp; Mentoring</span></a></li>
+        </ul>
     </nav>
 
-    <div class="pricing-section" id="real-estate">
-        <h2 class="pricing-section-title">
-            <span class="section-number">1</span>
-            <div>
-                <span id="section-1-title-es" style="display:none;">Firmas de bienes raíces y paquetes largos</span>
-                <span id="section-1-title-en">Real estate and long signing packages</span>
-                <p class="section-subtitle" id="section-1-desc-es" style="display:none;">Para compañías de títulos, abogados y personas que necesitan firmar un paquete grande de documentos donde estén.</p>
-                <p class="section-subtitle" id="section-1-desc-en">For title companies, attorneys, and private clients who need a big document package signed wherever the signers are.</p>
+    <!-- 1. TITLE & REAL ESTATE -->
+    <section class="price-block" id="real-estate" aria-labelledby="real-estate-h">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">1</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="real-estate-h"><span id="section-1-title-es" style="display:none;">Firmas de bienes raíces y paquetes largos</span><span id="section-1-title-en">Real estate and long signing packages</span></h2>
+                <p class="pb-sub" id="section-1-desc-es" style="display:none;">Para compañías de títulos, abogados y personas que necesitan firmar un paquete grande de documentos donde estén.</p>
+                <p class="pb-sub" id="section-1-desc-en">For title companies, attorneys, and private clients who need a big document package signed wherever the signers are.</p>
             </div>
-        </h2>
-
-        <div class="info-box-orange">
-            <p><strong><span id="b2b-why-title-es" style="display:none;">¿Por qué pagarme si el banco lo hace gratis?</span><span id="b2b-why-title-en">Why pay me when the bank does it free?</span></strong></p>
-            <p style="margin-top:0.5rem;">
-                <span id="b2b-why-bank-es" style="display:none;"><strong>El banco:</strong> el Notary Public del banco le sirve mucho para un título de auto de una página. Pero muchas veces no quiere notarizar paquetes de bienes raíces, fideicomisos o documentos legales largos por la responsabilidad. Además, usted tiene que imprimir todo, conseguir sus propios testigos e ir en horario de 9 a 5.</span>
-                <span id="b2b-why-bank-en"><strong>The bank:</strong> a bank notary is great for a one-page car title. But banks often won&rsquo;t take on real estate, trust, or long legal packages because of the liability. You also have to print everything yourself, find your own witnesses, and get there between 9 and 5.</span>
-            </p>
-            <p style="margin-top:0.5rem;">
-                <span id="b2b-why-me-es" style="display:none;"><strong>Conmigo:</strong> voy a la sala, la oficina o la cafetería de su cliente. Imprimo el paquete (carta y oficio), llevo una copia completa para que los firmantes se queden con ella, mando los escaneos por un medio cifrado y dejo los originales en FedEx para envío de un día para otro. Usted se ocupa del cierre; yo me ocupo de lo demás.</span>
-                <span id="b2b-why-me-en"><strong>With me:</strong> I go to your client&rsquo;s living room, office, or coffee shop. I print the package (letter and legal), bring a full copy for the signers to keep, send scanbacks through an encrypted service, and drop the originals at FedEx for overnight delivery. You handle the closing; I handle the rest.</span>
-            </p>
         </div>
 
-        <h3 class="subsection-title">
+        <h3 class="pb-subtitle is-first"><span id="b2b-why-title-es" style="display:none;">¿Por qué pagarme si el banco lo hace gratis?</span><span id="b2b-why-title-en">Why pay me when the bank does it free?</span></h3>
+        <div class="pc-grid pc-grid--2">
+            <div class="pc-panel">
+                <p class="pc-text">
+                    <span id="b2b-why-bank-es" style="display:none;"><strong>El banco:</strong> el Notary Public del banco le sirve mucho para un título de auto de una página. Pero muchas veces no quiere notarizar paquetes de bienes raíces, fideicomisos o documentos legales largos por la responsabilidad. Además, usted tiene que imprimir todo, conseguir sus propios testigos e ir en horario de 9 a 5.</span>
+                    <span id="b2b-why-bank-en"><strong>The bank:</strong> a bank notary is great for a one-page car title. But banks often won&rsquo;t take on real estate, trust, or long legal packages because of the liability. You also have to print everything yourself, find your own witnesses, and get there between 9 and 5.</span>
+                </p>
+            </div>
+            <div class="pc pc--featured">
+                <p class="pc-text">
+                    <span id="b2b-why-me-es" style="display:none;"><strong>Conmigo:</strong> voy a la sala, la oficina o la cafetería de su cliente. Imprimo el paquete (carta y oficio), llevo una copia completa para que los firmantes se queden con ella, mando los escaneos por un medio cifrado y dejo los originales en FedEx para envío de un día para otro. Usted se ocupa del cierre; yo me ocupo de lo demás.</span>
+                    <span id="b2b-why-me-en"><strong>With me:</strong> I go to your client&rsquo;s living room, office, or coffee shop. I print the package (letter and legal), bring a full copy for the signers to keep, send scanbacks through an encrypted service, and drop the originals at FedEx for overnight delivery. You handle the closing; I handle the rest.</span>
+                </p>
+            </div>
+        </div>
+
+        <h3 class="pb-subtitle">
             <span id="sub-b2b-pricing-es" style="display:none;">Precios</span>
             <span id="sub-b2b-pricing-en">Prices</span>
         </h3>
-        <p class="section-subtitle" style="margin-bottom:1rem;">
+        <p class="pb-sub b2b-lead">
             <span id="b2b-pricing-desc-es" style="display:none;">El precio ya incluye millaje e impresión básica dentro de mi área normal de servicio. No hay cargos escondidos.</span>
             <span id="b2b-pricing-desc-en">The price already covers mileage and basic printing inside my normal service area. Nothing is tacked on later.</span>
         </p>
-
-        <div class="premium-services">
-            <div class="card premium-card featured">
-                <div class="premium-badge">
+        <div class="pc-grid pc-grid--2">
+            <article class="pc pc--featured">
+                <div class="pc-flag">
                     <span id="badge-std-pkg-es" style="display:none;">Estándar</span>
                     <span id="badge-std-pkg-en">Standard</span>
                 </div>
-                <h3 id="b2b-pkg-std-es" style="display:none;">Un paquete (hasta 30 páginas)</h3>
-                <h3 id="b2b-pkg-std-en">One package (up to 30 pages)</h3>
-                <div class="premium-price">$125</div>
-                <p class="premium-description" id="b2b-pkg-std-detail-es" style="display:none;">Incluye: ir al lugar de la firma, imprimir un paquete, una copia limpia para el firmante y las notarizaciones normales.</p>
-                <p class="premium-description" id="b2b-pkg-std-detail-en">Includes: travel to the signing, printing one package, a clean copy for the signer, and the standard notarizations.</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="b2b-pkg-multi-es" style="display:none;">Varios firmantes en una cita</h3>
-                <h3 id="b2b-pkg-multi-en">Several signers in one appointment</h3>
-                <div class="premium-price">
-                    <span id="b2b-pkg-multi-rate-es" style="display:none; font-size:1.5rem;">Precio más bajo</span>
-                    <span id="b2b-pkg-multi-rate-en" style="font-size:1.5rem;">Lower rate</span>
+                <div class="pc-head">
+                    <h4 class="pc-title" id="b2b-pkg-std-es" style="display:none;">Un paquete (hasta 30 páginas)</h4>
+                    <h4 class="pc-title" id="b2b-pkg-std-en">One package (up to 30 pages)</h4>
+                    <span class="price-tag">$125</span>
                 </div>
-                <p class="premium-description" id="b2b-pkg-multi-detail-es" style="display:none;">Por ejemplo, un cierre con 3 firmantes que serían $375 ($125 x 3) queda en $325 si se hace en una sola cita.</p>
-                <p class="premium-description" id="b2b-pkg-multi-detail-en">For example, a closing with 3 signers that would be $375 ($125 x 3) comes to $325 when it&rsquo;s done in one appointment.</p>
-            </div>
+                <p class="pc-text" id="b2b-pkg-std-detail-es" style="display:none;">Incluye: ir al lugar de la firma, imprimir un paquete, una copia limpia para el firmante y las notarizaciones normales.</p>
+                <p class="pc-text" id="b2b-pkg-std-detail-en">Includes: travel to the signing, printing one package, a clean copy for the signer, and the standard notarizations.</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="b2b-pkg-multi-es" style="display:none;">Varios firmantes en una cita</h4>
+                    <h4 class="pc-title" id="b2b-pkg-multi-en">Several signers in one appointment</h4>
+                    <span class="price-tag price-tag--muted">
+                        <span id="b2b-pkg-multi-rate-es" style="display:none;">Precio más bajo</span>
+                        <span id="b2b-pkg-multi-rate-en">Lower rate</span>
+                    </span>
+                </div>
+                <p class="pc-text" id="b2b-pkg-multi-detail-es" style="display:none;">Por ejemplo, un cierre con 3 firmantes que serían $375 ($125 x 3) queda en $325 si se hace en una sola cita.</p>
+                <p class="pc-text" id="b2b-pkg-multi-detail-en">For example, a closing with 3 signers that would be $375 ($125 x 3) comes to $325 when it&rsquo;s done in one appointment.</p>
+            </article>
         </div>
 
-        <div class="info-box" style="margin-top:1.5rem;">
-            <p style="font-weight:700; margin-bottom:0.75rem;">
-                <span id="b2b-included-title-es" style="display:none;">Incluido en cada firma:</span>
-                <span id="b2b-included-title-en">Included in every signing:</span>
-            </p>
-            <ul style="margin:0; padding-left:1.5rem;">
-                <li style="margin-bottom:0.5rem;">
+        <div class="pc-panel pc-panel--wide">
+            <div class="pc-head">
+                <h4 class="pc-title">
+                    <span id="b2b-included-title-es" style="display:none;">Incluido en cada firma:</span>
+                    <span id="b2b-included-title-en">Included in every signing:</span>
+                </h4>
+            </div>
+            <ul class="verdict-list verdict-list--yes">
+                <li>
                     <span id="b2b-inc-1-es" style="display:none;"><strong>Millaje y viaje:</strong> dentro de mi área normal en el área metropolitana de Denver.</span>
                     <span id="b2b-inc-1-en"><strong>Mileage and travel:</strong> inside my normal Denver Metro service area.</span>
                 </li>
-                <li style="margin-bottom:0.5rem;">
+                <li>
                     <span id="b2b-inc-2-es" style="display:none;"><strong>Impresión de Documentos (solo impresión):</strong> Impresión doble de todos los documentos (Copia de Retorno + Copia del Firmante) en los tamaños carta/legal correctos. No redacto ni preparo documentos legales; imprimo los que envía la compañía de títulos o el prestamista.</span>
                     <span id="b2b-inc-2-en"><strong>Document Printing (printing only):</strong> Dual printing of all documents (Return Copy + Signer Copy) on the correct letter/legal paper sizes. I do not draft or prepare legal documents; I print the ones the title company or lender sends.</span>
                 </li>
-                <li style="margin-bottom:0.5rem;">
+                <li>
                     <span id="b2b-inc-3-es" style="display:none;"><strong>Escaneos cifrados:</strong> mando los escaneos por correo cifrado y con contraseña, para cuidar los datos personales y financieros de los firmantes.</span>
                     <span id="b2b-inc-3-en"><strong>Encrypted scanbacks:</strong> I send scanbacks by encrypted, password-protected email to protect the signers&rsquo; personal and financial information.</span>
                 </li>
@@ -277,327 +290,353 @@
             </ul>
         </div>
 
-        <div class="warning-box" style="margin-top:1.5rem;">
-            <h3 style="text-align:left; border-bottom:none; margin-top:0;">
-                <span id="b2b-sop-title-es" style="display:none;">Si no se firma en la mesa: 50%</span>
-                <span id="b2b-sop-title-en">If the signing stops at the table: 50%</span>
-            </h3>
-            <p style="margin-top:0.5rem;">
+        <div class="pc pc--notice">
+            <div class="pc-head">
+                <h4 class="pc-title">
+                    <span id="b2b-sop-title-es" style="display:none;">Si no se firma en la mesa: 50%</span>
+                    <span id="b2b-sop-title-en">If the signing stops at the table: 50%</span>
+                </h4>
+            </div>
+            <p class="pc-text">
                 <span id="b2b-sop-reject-es" style="display:none;">A veces, en una firma de bienes raíces o legal, los firmantes deciden no firmar en la mesa: no están de acuerdo con el contrato, tienen dudas de último momento o falta dinero. Para ese momento ya imprimí, ya manejé y ya aparté el tiempo, así que si el cliente detiene la firma en la mesa, cobro el 50% del precio que cotizamos.</span>
                 <span id="b2b-sop-reject-en">Sometimes at a real estate or legal signing, the signers decide not to sign at the table: they disagree with the contract, have last-minute doubts, or the funds aren&rsquo;t there. By then I&rsquo;ve printed, driven, and blocked the time, so if the client stops the signing at the table, I charge 50% of the quoted price.</span>
             </p>
-            <p style="margin-top:1rem; font-weight:600; color:#004D40;">
-                <span id="b2b-sop-case-es" style="display:none;">Un ejemplo de cómo lo manejo</span>
-                <span id="b2b-sop-case-en">An example of how I handle it</span>
-            </p>
-            <ul style="margin-top:0.5rem; padding-left:1.5rem; font-size:0.95rem;">
-                <li style="margin-bottom:0.4rem;">
-                    <span id="b2b-case-1-es" style="display:none;"><strong>La cita:</strong> un paquete de bienes raíces de $325 con tres firmantes de la misma familia. Imprimí las 180 páginas, llegué y les presenté los documentos.</span>
-                    <span id="b2b-case-1-en"><strong>The appointment:</strong> a $325 real estate package with three signers from the same family. I printed all 180 pages, showed up, and set the documents out.</span>
-                </li>
-                <li style="margin-bottom:0.4rem;">
-                    <span id="b2b-case-2-es" style="display:none;"><strong>Lo que pasó:</strong> al revisar el contrato, los vendedores vieron un precio de compra con el que no estaban de acuerdo. Se pusieron tensos y dijeron que no firmaban hasta hablar con sus abogados.</span>
-                    <span id="b2b-case-2-en"><strong>What happened:</strong> going over the contract, the sellers saw a purchase price they didn&rsquo;t agree with. Things got tense, and they said they wouldn&rsquo;t sign until they talked to their attorneys.</span>
-                </li>
-                <li style="margin-bottom:0.4rem;">
-                    <span id="b2b-case-3-es" style="display:none;"><strong>Lo que hice:</strong> no presioné a nadie ni discutí. Me quedé neutral, les dije con respeto que hablaran con su abogado, guardé los documentos para cuidar su privacidad y me retiré. Enseguida le avisé a la compañía que me contrató para que pudieran resolverlo.</span>
-                    <span id="b2b-case-3-en"><strong>What I did:</strong> I didn&rsquo;t push or argue. I stayed neutral, told them respectfully to talk with their attorney, put the documents away to protect their privacy, and left. Right away I let the company that hired me know, so they could work it out.</span>
-                </li>
-                <li>
-                    <span id="b2b-case-4-es" style="display:none;"><strong>Cómo terminó:</strong> la familia sintió que la trataron con respeto, la compañía supo todo a tiempo y cobré el 50% ($150) por la impresión y el viaje.</span>
-                    <span id="b2b-case-4-en"><strong>How it ended:</strong> the family felt respected, the company knew everything right away, and I billed 50% ($150) for the printing and the trip.</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="pricing-section" id="immigration-attorneys">
-        <h2 class="pricing-section-title">
-            <span class="section-number">2</span>
-            <div>
-                <span id="section-imm-title-es" style="display:none;">Abogados de inmigración: visitas al centro de ICE de Aurora</span>
-                <span id="section-imm-title-en">Immigration attorneys: Aurora ICE facility visits</span>
-                <p class="section-subtitle" id="section-imm-desc-es" style="display:none;">Notarizaciones para sus clientes detenidos en el Centro de Procesamiento de ICE de Aurora (GEO Group), como su representante autorizado. Cada centro exige algo distinto; así funciona en Aurora.</p>
-                <p class="section-subtitle" id="section-imm-desc-en">Notarizations for your clients held at the Aurora ICE Processing Center (GEO Group), as your cleared legal proxy. Every facility requires something different; here is how Aurora works.</p>
+            <div class="pc-callout">
+                <p class="b2b-case-title">
+                    <span id="b2b-sop-case-es" style="display:none;">Un ejemplo de cómo lo manejo</span>
+                    <span id="b2b-sop-case-en">An example of how I handle it</span>
+                </p>
+                <ul class="pc-list">
+                    <li>
+                        <span id="b2b-case-1-es" style="display:none;"><strong>La cita:</strong> un paquete de bienes raíces de $325 con tres firmantes de la misma familia. Imprimí las 180 páginas, llegué y les presenté los documentos.</span>
+                        <span id="b2b-case-1-en"><strong>The appointment:</strong> a $325 real estate package with three signers from the same family. I printed all 180 pages, showed up, and set the documents out.</span>
+                    </li>
+                    <li>
+                        <span id="b2b-case-2-es" style="display:none;"><strong>Lo que pasó:</strong> al revisar el contrato, los vendedores vieron un precio de compra con el que no estaban de acuerdo. Se pusieron tensos y dijeron que no firmaban hasta hablar con sus abogados.</span>
+                        <span id="b2b-case-2-en"><strong>What happened:</strong> going over the contract, the sellers saw a purchase price they didn&rsquo;t agree with. Things got tense, and they said they wouldn&rsquo;t sign until they talked to their attorneys.</span>
+                    </li>
+                    <li>
+                        <span id="b2b-case-3-es" style="display:none;"><strong>Lo que hice:</strong> no presioné a nadie ni discutí. Me quedé neutral, les dije con respeto que hablaran con su abogado, guardé los documentos para cuidar su privacidad y me retiré. Enseguida le avisé a la compañía que me contrató para que pudieran resolverlo.</span>
+                        <span id="b2b-case-3-en"><strong>What I did:</strong> I didn&rsquo;t push or argue. I stayed neutral, told them respectfully to talk with their attorney, put the documents away to protect their privacy, and left. Right away I let the company that hired me know, so they could work it out.</span>
+                    </li>
+                    <li>
+                        <span id="b2b-case-4-es" style="display:none;"><strong>Cómo terminó:</strong> la familia sintió que la trataron con respeto, la compañía supo todo a tiempo y cobré el 50% ($150) por la impresión y el viaje.</span>
+                        <span id="b2b-case-4-en"><strong>How it ended:</strong> the family felt respected, the company knew everything right away, and I billed 50% ($150) for the printing and the trip.</span>
+                    </li>
+                </ul>
             </div>
-        </h2>
+        </div>
+    </section>
 
-        <div class="info-box-orange">
-            <p><strong><span id="imm-why-title-es" style="display:none;">¿Por qué yo y no el Notary Public del centro?</span><span id="imm-why-title-en">Why me instead of the facility&rsquo;s own notary?</span></strong></p>
-            <ul style="margin:0.5rem 0 0; padding-left:1.5rem;">
-                <li style="margin-bottom:0.5rem;"><span id="imm-why-1-es" style="display:none;"><strong>Independiente:</strong> trabajo para su bufete, no para el centro ni su contratista.</span>
-<span id="imm-why-1-en"><strong>Independent:</strong> I work for your firm, not the facility or its contractor.</span></li>
-                <li style="margin-bottom:0.5rem;"><span id="imm-why-2-es" style="display:none;"><strong>En su horario:</strong> 7 días, de 8 a.m. a 9 p.m., incluso festivos, según sus plazos.</span>
-<span id="imm-why-2-en"><strong>On your timeline:</strong> 7 days, 8 a.m.–9 p.m., holidays included, around your deadlines.</span></li>
-                <li style="margin-bottom:0.5rem;"><span id="imm-why-3-es" style="display:none;"><strong>En español:</strong> hablo directamente con su cliente, sin intérprete de por medio.</span>
-<span id="imm-why-3-en"><strong>In Spanish:</strong> I talk directly with your client, with no interpreter in between.</span></li>
-                <li><span id="imm-why-4-es" style="display:none;"><strong>Su cadena de custodia:</strong> llevo sus documentos y devuelvo los originales firmados directamente a su oficina.</span>
-<span id="imm-why-4-en"><strong>Your chain of custody:</strong> I bring your documents and return the signed originals straight to your office.</span></li>
-            </ul>
+    <!-- 2. IMMIGRATION ATTORNEYS -->
+    <section class="price-block" id="immigration-attorneys" aria-labelledby="immigration-attorneys-h">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">2</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="immigration-attorneys-h"><span id="section-imm-title-es" style="display:none;">Abogados de inmigración: visitas al centro de ICE de Aurora</span><span id="section-imm-title-en">Immigration attorneys: Aurora ICE facility visits</span></h2>
+                <p class="pb-sub" id="section-imm-desc-es" style="display:none;">Notarizaciones para sus clientes detenidos en el Centro de Procesamiento de ICE de Aurora (GEO Group), como su representante autorizado. Cada centro exige algo distinto; así funciona en Aurora.</p>
+                <p class="pb-sub" id="section-imm-desc-en">Notarizations for your clients held at the Aurora ICE Processing Center (GEO Group), as your cleared legal proxy. Every facility requires something different; here is how Aurora works.</p>
+            </div>
         </div>
 
-        <div class="info-box" style="margin-top:1.5rem;">
-            <p style="font-weight:700; margin-bottom:0.75rem;">
-                <span id="imm-packet-title-es" style="display:none;">Paquete de autorización para Aurora:</span>
-                <span id="imm-packet-title-en">Aurora clearance packet:</span>
-            </p>
-            <ul style="margin:0; padding-left:1.5rem;">
-                <li style="margin-bottom:0.5rem;"><span id="imm-pk-me-es" style="display:none;"><strong>De mí:</strong> copia escaneada de mi licencia o identificación estatal de Colorado y mi Certificado de Comisión de Notary Public en PDF (copia física a petición).</span>
+        <div class="pc-grid pc-grid--2">
+            <div class="pc-panel">
+                <div class="pc-head">
+                    <h3 class="pc-title"><span id="imm-why-title-es" style="display:none;">¿Por qué yo y no el Notary Public del centro?</span><span id="imm-why-title-en">Why me instead of the facility&rsquo;s own notary?</span></h3>
+                </div>
+                <ul class="verdict-list verdict-list--yes">
+                    <li><span id="imm-why-1-es" style="display:none;"><strong>Independiente:</strong> trabajo para su bufete, no para el centro ni su contratista.</span>
+<span id="imm-why-1-en"><strong>Independent:</strong> I work for your firm, not the facility or its contractor.</span></li>
+                    <li><span id="imm-why-2-es" style="display:none;"><strong>En su horario:</strong> 7 días, de 8 a.m. a 9 p.m., incluso festivos, según sus plazos.</span>
+<span id="imm-why-2-en"><strong>On your timeline:</strong> 7 days, 8 a.m.–9 p.m., holidays included, around your deadlines.</span></li>
+                    <li><span id="imm-why-3-es" style="display:none;"><strong>En español:</strong> hablo directamente con su cliente, sin intérprete de por medio.</span>
+<span id="imm-why-3-en"><strong>In Spanish:</strong> I talk directly with your client, with no interpreter in between.</span></li>
+                    <li><span id="imm-why-4-es" style="display:none;"><strong>Su cadena de custodia:</strong> llevo sus documentos y devuelvo los originales firmados directamente a su oficina.</span>
+<span id="imm-why-4-en"><strong>Your chain of custody:</strong> I bring your documents and return the signed originals straight to your office.</span></li>
+                </ul>
+            </div>
+            <div class="pc pc--featured">
+                <div class="pc-head">
+                    <h3 class="pc-title">
+                        <span id="imm-packet-title-es" style="display:none;">Paquete de autorización para Aurora:</span>
+                        <span id="imm-packet-title-en">Aurora clearance packet:</span>
+                    </h3>
+                    <span class="price-tag">$150<span class="price-unit"><span id="imm-unit-visit-es" style="display:none;">por visita</span><span id="imm-unit-visit-en">per visit</span></span></span>
+                </div>
+                <ul class="pc-list">
+                    <li><span id="imm-pk-me-es" style="display:none;"><strong>De mí:</strong> copia escaneada de mi licencia o identificación estatal de Colorado y mi Certificado de Comisión de Notary Public en PDF (copia física a petición).</span>
 <span id="imm-pk-me-en"><strong>From me:</strong> a scan of my Colorado driver’s license or state ID, plus my Notary Commission Certificate as a PDF (physical copy on request).</span></li>
-                <li style="margin-bottom:0.5rem;"><span id="imm-pk-you-es" style="display:none;"><strong>De usted:</strong> su Formulario G-28 y una Carta de Autorización en papel membretado que me nombra como su representante autorizado.</span>
+                    <li><span id="imm-pk-you-es" style="display:none;"><strong>De usted:</strong> su Formulario G-28 y una Carta de Autorización en papel membretado que me nombra como su representante autorizado.</span>
 <span id="imm-pk-you-en"><strong>From you:</strong> your Form G-28 and a Letter of Authorization on firm letterhead naming me as your contracted legal proxy.</span></li>
-                <li style="margin-bottom:0.5rem;"><span id="imm-pk-send-es" style="display:none;"><strong>Envío:</strong> usted manda el paquete por correo electrónico a la oficina de visitas o al Oficial Supervisor de Deportación con al menos 24 horas de anticipación.</span>
+                    <li><span id="imm-pk-send-es" style="display:none;"><strong>Envío:</strong> usted manda el paquete por correo electrónico a la oficina de visitas o al Oficial Supervisor de Deportación con al menos 24 horas de anticipación.</span>
 <span id="imm-pk-send-en"><strong>Submission:</strong> you email the packet to the visiting office or Supervisory Deportation Officer at least 24 hours in advance.</span></li>
-                <li><span id="imm-pk-day-es" style="display:none;"><strong>El día de la visita:</strong> presento la misma identificación física a los guardias y paso a la sala de reuniones legales.</span>
+                    <li><span id="imm-pk-day-es" style="display:none;"><strong>El día de la visita:</strong> presento la misma identificación física a los guardias y paso a la sala de reuniones legales.</span>
 <span id="imm-pk-day-en"><strong>Visit day:</strong> I show the guards the same physical ID and go to the legal meeting room.</span></li>
-                <li><span id="imm-pk-price-es" style="display:none;"><strong>Precio:</strong> $150 por visita (viaje, autorización y la primera hora en el lugar), $25 por cada 30 minutos después, y cada acto notarial aparte ($15 máximo). Los recargos por fuera de horario (+$20, 7 PM&ndash;10 AM) y fin de semana (+$15) se suman, como en cualquier cita. No se paga nada antes de la visita; $75 si se cancela con menos de 24 horas de aviso o no se puede completar.</span>
-<span id="imm-pk-price-en"><strong>Price:</strong> $150 per visit (travel, clearance, and the first hour on site), $25 for each 30 minutes after that, and each notarial act separately ($15 maximum). After-hours (+$20, 7 PM&ndash;10 AM) and weekend (+$15) premiums apply on top, as on any appointment. Nothing is paid before the visit; $75 if it&rsquo;s cancelled with less than 24 hours&rsquo; notice or can&rsquo;t be completed.</span></li>
-            </ul>
+                </ul>
+                <p class="pc-callout"><span id="imm-pk-price-es" style="display:none;"><strong>Precio:</strong> $150 por visita (viaje, autorización y la primera hora en el lugar), $25 por cada 30 minutos después, y cada acto notarial aparte ($15 máximo). Los recargos por fuera de horario (+$20, 7 PM&ndash;10 AM) y fin de semana (+$15) se suman, como en cualquier cita. No se paga nada antes de la visita; $75 si se cancela con menos de 24 horas de aviso o no se puede completar.</span>
+<span id="imm-pk-price-en"><strong>Price:</strong> $150 per visit (travel, clearance, and the first hour on site), $25 for each 30 minutes after that, and each notarial act separately ($15 maximum). After-hours (+$20, 7 PM&ndash;10 AM) and weekend (+$15) premiums apply on top, as on any appointment. Nothing is paid before the visit; $75 if it&rsquo;s cancelled with less than 24 hours&rsquo; notice or can&rsquo;t be completed.</span></p>
+            </div>
         </div>
 
         <p class="consumer-apostille-link">
             <span id="imm-link-es" style="display:none;"><a href="immigration-attorney-notary-aurora-ice.html">Vea la guía completa para abogados de inmigración en el Centro de ICE de Aurora &rarr;</a></span>
             <span id="imm-link-en"><a href="immigration-attorney-notary-aurora-ice.html">See the full guide for immigration attorneys at the Aurora ICE facility &rarr;</a></span>
         </p>
-    </div>
+    </section>
 
-    <div class="divider"></div>
-
-    <div class="pricing-section" id="notary-support">
-        <h2 class="pricing-section-title">
-            <span class="section-number">3</span>
-            <div>
-                <span id="section-2-title-es" style="display:none;">Apoyo para colegas</span>
-                <span id="section-2-title-en">Help for fellow notaries</span>
-                <p class="section-subtitle" id="section-2-desc-es" style="display:none;">Para cuando a usted no le alcanza el tiempo o la cita le queda lejos.</p>
-                <p class="section-subtitle" id="section-2-desc-en">For when you&rsquo;re short on time or the appointment is too far away.</p>
-            </div>
-        </h2>
-
-        <h3 class="subsection-title">
-            <span id="sub-n2n-apostille-es" style="display:none;">Apostillas en la Secretaría de Estado</span>
-            <span id="sub-n2n-apostille-en">Apostilles at the Secretary of State</span>
-        </h3>
-        <p class="section-subtitle" style="margin-bottom:1rem;">
-            <span id="n2n-apostille-desc-es" style="display:none;">Mándeme las apostillas de sus clientes y yo hago la vuelta a la Secretaría de Estado.</span>
-            <span id="n2n-apostille-desc-en">Send me your clients&rsquo; apostilles and I&rsquo;ll make the trip to the Secretary of State.</span>
-        </p>
-
-        <div class="premium-services">
-            <div class="card premium-card">
-                <h3 id="n2n-apost-std-es" style="display:none;">Por correo</h3>
-                <h3 id="n2n-apost-std-en">Mail-in</h3>
-                <div class="premium-price">$85 <span class="price-label">Base</span></div>
-                <p class="premium-description" id="n2n-apost-std-detail-es" style="display:none;">Incluye: hasta 3 documentos en la Secretaría de Estado en Denver. Usted me los manda por correo urgente a la dirección en Denver que le doy al reservar, y yo hago la vuelta.</p>
-                <p class="premium-description" id="n2n-apost-std-detail-en">Includes: up to 3 documents at the Secretary of State in Denver. You overnight them to the Denver address I give you when you book, and I do the legwork.</p>
-            </div>
-            <div class="card premium-card featured">
-                <div class="premium-badge">VIP</div>
-                <h3 id="n2n-apost-vip-es" style="display:none;">Paso a recogerlos</h3>
-                <h3 id="n2n-apost-vip-en">I pick them up</h3>
-                <div class="premium-price">$115 <span class="price-label">Base</span></div>
-                <p class="premium-description" id="n2n-apost-vip-detail-es" style="display:none;">Incluye: hasta 3 documentos. Paso a recogerlos a donde usted esté en el área metropolitana de Denver.</p>
-                <p class="premium-description" id="n2n-apost-vip-detail-en">Includes: up to 3 documents. I pick them up from you anywhere in the Denver Metro area.</p>
+    <!-- 3. NOTARY-TO-NOTARY SUPPORT -->
+    <section class="price-block" id="notary-support" aria-labelledby="notary-support-h">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">3</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="notary-support-h"><span id="section-2-title-es" style="display:none;">Apoyo para colegas</span><span id="section-2-title-en">Help for fellow notaries</span></h2>
+                <p class="pb-sub" id="section-2-desc-es" style="display:none;">Para cuando a usted no le alcanza el tiempo o la cita le queda lejos.</p>
+                <p class="pb-sub" id="section-2-desc-en">For when you&rsquo;re short on time or the appointment is too far away.</p>
             </div>
         </div>
 
-        <div class="info-box" style="margin-top:1rem;">
-            <p style="font-weight:700; margin-bottom:0.5rem;">
-                <span id="n2n-addons-title-es" style="display:none;">Extras:</span>
-                <span id="n2n-addons-title-en">Add-ons:</span>
-            </p>
-            <ul style="margin:0; padding-left:1.5rem; font-size:0.95rem;">
+        <h3 class="pb-subtitle is-first">
+            <span id="sub-n2n-apostille-es" style="display:none;">Apostillas en la Secretaría de Estado</span>
+            <span id="sub-n2n-apostille-en">Apostilles at the Secretary of State</span>
+        </h3>
+        <p class="pb-sub b2b-lead">
+            <span id="n2n-apostille-desc-es" style="display:none;">Mándeme las apostillas de sus clientes y yo hago la vuelta a la Secretaría de Estado.</span>
+            <span id="n2n-apostille-desc-en">Send me your clients&rsquo; apostilles and I&rsquo;ll make the trip to the Secretary of State.</span>
+        </p>
+        <div class="pc-grid pc-grid--2">
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="n2n-apost-std-es" style="display:none;">Por correo</h4>
+                    <h4 class="pc-title" id="n2n-apost-std-en">Mail-in</h4>
+                    <span class="price-tag">$85<span class="price-unit">Base</span></span>
+                </div>
+                <p class="pc-text" id="n2n-apost-std-detail-es" style="display:none;">Incluye: hasta 3 documentos en la Secretaría de Estado en Denver. Usted me los manda por correo urgente a la dirección en Denver que le doy al reservar, y yo hago la vuelta.</p>
+                <p class="pc-text" id="n2n-apost-std-detail-en">Includes: up to 3 documents at the Secretary of State in Denver. You overnight them to the Denver address I give you when you book, and I do the legwork.</p>
+            </article>
+            <article class="pc pc--featured">
+                <div class="pc-flag">VIP</div>
+                <div class="pc-head">
+                    <h4 class="pc-title" id="n2n-apost-vip-es" style="display:none;">Paso a recogerlos</h4>
+                    <h4 class="pc-title" id="n2n-apost-vip-en">I pick them up</h4>
+                    <span class="price-tag">$115<span class="price-unit">Base</span></span>
+                </div>
+                <p class="pc-text" id="n2n-apost-vip-detail-es" style="display:none;">Incluye: hasta 3 documentos. Paso a recogerlos a donde usted esté en el área metropolitana de Denver.</p>
+                <p class="pc-text" id="n2n-apost-vip-detail-en">Includes: up to 3 documents. I pick them up from you anywhere in the Denver Metro area.</p>
+            </article>
+        </div>
+
+        <div class="pc-panel pc-panel--wide">
+            <div class="pc-head">
+                <h4 class="pc-title">
+                    <span id="n2n-addons-title-es" style="display:none;">Extras:</span>
+                    <span id="n2n-addons-title-en">Add-ons:</span>
+                </h4>
+            </div>
+            <ul class="pc-list">
                 <li><span id="n2n-add-vol-es" style="display:none;"><strong>Más documentos:</strong> $10 por cada uno.</span><span id="n2n-add-vol-en"><strong>More documents:</strong> $10 each.</span></li>
                 <li><span id="n2n-add-sos-es" style="display:none;"><strong>Tarifas del SOS de Colorado (al costo):</strong> $15 por documento mismo día o $5 por documento estándar (ver abajo).</span><span id="n2n-add-sos-en"><strong>Colorado SOS Fees (at cost):</strong> $15 per document same-day or $5 per document standard (see below).</span></li>
                 <li><span id="n2n-add-ship-es" style="display:none;"><strong>Devolución (servicio normal):</strong> su etiqueta prepagada de FedEx/UPS + $5 de manejo, un viaje de regreso por $45 con entrega en mano en el área metropolitana de Denver, la devolución gratis por USPS desde el Estado (sin rastreo), o recogida en nuestra oficina en Tienda Salvadoreña, 5128 E Colfax Ave, por $35 (se guardan hasta 30 días naturales después del aviso).</span><span id="n2n-add-ship-en"><strong>Return (standard processing):</strong> your prepaid FedEx/UPS label + $5 handling, a $45 return trip with hand delivery in the Denver Metro area, free USPS return from the State (no tracking), or pickup at our office at Tienda Salvadoreña, 5128 E Colfax Ave, for $35 (held up to 30 calendar days after notice).</span></li>
             </ul>
         </div>
 
-        <h4 class="b2b-sub" id="n2n-sf-title-es" style="display:none;">Lo que cobra el Estado: usted escoge la rapidez</h4>
-        <h4 class="b2b-sub" id="n2n-sf-title-en">State fees: you pick the speed</h4>
-        <div class="premium-services state-fee-options">
-            <div class="card premium-card featured">
-                <div class="premium-badge"><span id="n2n-sf-fast-badge-es" style="display:none;">El más rápido</span><span id="n2n-sf-fast-badge-en">Fastest</span></div>
-                <h3 id="n2n-sf-fast-es" style="display:none;">El mismo día</h3>
-                <h3 id="n2n-sf-fast-en">Same day</h3>
-                <div class="premium-price">$15 <span class="price-label"><span id="n2n-sf-fast-unit-es" style="display:none;">por documento</span><span id="n2n-sf-fast-unit-en">per document</span></span></div>
-                <p class="premium-description" id="n2n-sf-fast-desc-es" style="display:none;">Lo entrego en la Secretaría de Estado antes de las 4:30 PM y casi siempre sale ese mismo día. Sirve cuando su cliente tiene fecha límite.</p>
-                <p class="premium-description" id="n2n-sf-fast-desc-en">I hand it in at the Secretary of State before 4:30 PM, and it usually comes back that day. Good when your client has a deadline.</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="n2n-sf-std-es" style="display:none;">Normal</h3>
-                <h3 id="n2n-sf-std-en">Standard</h3>
-                <div class="premium-price">$5 <span class="price-label"><span id="n2n-sf-std-unit-es" style="display:none;">por documento</span><span id="n2n-sf-std-unit-en">per document</span></span></div>
-                <p class="premium-description" id="n2n-sf-std-desc-es" style="display:none;">La Secretaría de Estado lo procesa por orden de llegada: suele tardar unos 5&ndash;7 días hábiles, y no se garantiza. Úselo cuando su cliente no tenga prisa.</p>
-                <p class="premium-description" id="n2n-sf-std-desc-en">The Secretary of State works in the order things come in: typically about 5&ndash;7 business days, not guaranteed. Use it when your client isn&rsquo;t in a hurry.</p>
-            </div>
+        <h4 class="pb-subtitle" id="n2n-sf-title-es" style="display:none;">Lo que cobra el Estado: usted escoge la rapidez</h4>
+        <h4 class="pb-subtitle" id="n2n-sf-title-en">State fees: you pick the speed</h4>
+        <div class="pc-grid pc-grid--2">
+            <article class="pc pc--featured">
+                <div class="pc-flag"><span id="n2n-sf-fast-badge-es" style="display:none;">El más rápido</span><span id="n2n-sf-fast-badge-en">Fastest</span></div>
+                <div class="pc-head">
+                    <h5 class="pc-title" id="n2n-sf-fast-es" style="display:none;">El mismo día</h5>
+                    <h5 class="pc-title" id="n2n-sf-fast-en">Same day</h5>
+                    <span class="price-tag">$15<span class="price-unit"><span id="n2n-sf-fast-unit-es" style="display:none;">por documento</span><span id="n2n-sf-fast-unit-en">per document</span></span></span>
+                </div>
+                <p class="pc-text" id="n2n-sf-fast-desc-es" style="display:none;">Lo entrego en la Secretaría de Estado antes de las 4:30 PM y casi siempre sale ese mismo día. Sirve cuando su cliente tiene fecha límite.</p>
+                <p class="pc-text" id="n2n-sf-fast-desc-en">I hand it in at the Secretary of State before 4:30 PM, and it usually comes back that day. Good when your client has a deadline.</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h5 class="pc-title" id="n2n-sf-std-es" style="display:none;">Normal</h5>
+                    <h5 class="pc-title" id="n2n-sf-std-en">Standard</h5>
+                    <span class="price-tag price-tag--muted">$5<span class="price-unit"><span id="n2n-sf-std-unit-es" style="display:none;">por documento</span><span id="n2n-sf-std-unit-en">per document</span></span></span>
+                </div>
+                <p class="pc-text" id="n2n-sf-std-desc-es" style="display:none;">La Secretaría de Estado lo procesa por orden de llegada: suele tardar unos 5&ndash;7 días hábiles, y no se garantiza. Úselo cuando su cliente no tenga prisa.</p>
+                <p class="pc-text" id="n2n-sf-std-desc-en">The Secretary of State works in the order things come in: typically about 5&ndash;7 business days, not guaranteed. Use it when your client isn&rsquo;t in a hurry.</p>
+            </article>
         </div>
-        <div class="info-box-orange">
+        <div class="info-box-orange pb-note">
             <p id="n2n-req-es" style="display:none;"><strong>Requisito:</strong> los documentos tienen que llegar <strong>ya notarizados por un Notary Public de Colorado</strong>. Antes de ir a la Secretaría de Estado reviso cada certificado (condado, fecha, redacción, firma y sello completo). Si veo un error, le aviso primero para que lo corrija y a su cliente no se lo rechacen. Es una revisión de cortesía, no una revisión legal; se paga el traslado, no el resultado (<a href="apostille.html#courier-terms">condiciones</a>). <a href="apostille.html#checklist">Lista de requisitos</a>.</p>
             <p id="n2n-req-en"><strong>Required:</strong> documents have to arrive <strong>already notarized by a Colorado notary</strong>. Before I go to the Secretary of State, I check every certificate (county, date, wording, signature and full stamp). If I spot a mistake, I tell you first so you can fix it before your client gets a rejection. It&rsquo;s a courtesy check, not a legal review, and the fee is for the run, not the result (<a href="apostille.html#courier-terms">terms</a>). <a href="apostille.html#checklist">Requirements list</a>.</p>
         </div>
 
-        <p class="tier-fine" id="n2n-rcpt-es" style="display:none;"><strong>Recibo por partes:</strong> cada cargo va en su propia línea (notarización a $15 por acto si aplica, servicio de apostilla, documentos extra, lo del Estado al costo y envío), para que usted le pueda pasar los costos a su cliente tal cual.</p>
-        <p class="tier-fine" id="n2n-rcpt-en"><strong>Itemized receipt:</strong> every charge gets its own line (notarization at $15 per act if any, apostille service, extra documents, State fees at cost, and shipping), so you can pass the costs straight through to your client.</p>
+        <p class="pc-fine b2b-rcpt" id="n2n-rcpt-es" style="display:none;"><strong>Recibo por partes:</strong> cada cargo va en su propia línea (notarización a $15 por acto si aplica, servicio de apostilla, documentos extra, lo del Estado al costo y envío), para que usted le pueda pasar los costos a su cliente tal cual.</p>
+        <p class="pc-fine b2b-rcpt" id="n2n-rcpt-en"><strong>Itemized receipt:</strong> every charge gets its own line (notarization at $15 per act if any, apostille service, extra documents, State fees at cost, and shipping), so you can pass the costs straight through to your client.</p>
 
-        <h3 class="subsection-title">
+        <h3 class="pb-subtitle">
             <span id="sub-n2n-runner-es" style="display:none;">Mensajería local y registros en el condado</span>
             <span id="sub-n2n-runner-en">Local courier and county recording</span>
         </h3>
-        <p class="section-subtitle" style="margin-bottom:1rem;">
+        <p class="pb-sub b2b-lead">
             <span id="n2n-runner-desc-es" style="display:none;">Las vueltas que le quitan media mañana.</span>
             <span id="n2n-runner-desc-en">The errands that eat half your morning.</span>
         </p>
-
-        <div class="premium-services">
-            <div class="card premium-card">
-                <h3 id="n2n-rec-std-es" style="display:none;">Registro en el condado (día siguiente)</h3>
-                <h3 id="n2n-rec-std-en">County recording (next day)</h3>
-                <div class="premium-price">$35 – $50</div>
-                <p class="premium-description" id="n2n-rec-std-detail-es" style="display:none;">Lo llevo en persona a la oficina del Secretario del Condado de Denver, Douglas o Arapahoe.</p>
-                <p class="premium-description" id="n2n-rec-std-detail-en">I take it in person to the Denver, Douglas, or Arapahoe County Clerk&rsquo;s office.</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="n2n-rec-rush-es" style="display:none;">Registro urgente (el mismo día)</h3>
-                <h3 id="n2n-rec-rush-en">Rush recording (same day)</h3>
-                <div class="premium-price">$60 – $75</div>
-                <div class="entry-consult-note" style="margin-top:0.75rem;">
+        <div class="pc-grid pc-grid--2">
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="n2n-rec-std-es" style="display:none;">Registro en el condado (día siguiente)</h4>
+                    <h4 class="pc-title" id="n2n-rec-std-en">County recording (next day)</h4>
+                    <span class="price-tag">$35 – $50</span>
+                </div>
+                <p class="pc-text" id="n2n-rec-std-detail-es" style="display:none;">Lo llevo en persona a la oficina del Secretario del Condado de Denver, Douglas o Arapahoe.</p>
+                <p class="pc-text" id="n2n-rec-std-detail-en">I take it in person to the Denver, Douglas, or Arapahoe County Clerk&rsquo;s office.</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="n2n-rec-rush-es" style="display:none;">Registro urgente (el mismo día)</h4>
+                    <h4 class="pc-title" id="n2n-rec-rush-en">Rush recording (same day)</h4>
+                    <span class="price-tag">$60 – $75</span>
+                </div>
+                <p class="pc-callout is-green">
                     <span id="n2n-rec-hub-es" style="display:none;"><strong>$10 menos</strong> si me entrega los documentos en persona en la Tienda Salvadoreña o en el campus de MSU Denver, con cita previa.</span>
                     <span id="n2n-rec-hub-en"><strong>$10 off</strong> if you hand me the documents in person at Tienda Salvadoreña or the MSU Denver campus, by appointment.</span>
-                </div>
-            </div>
+                </p>
+            </article>
         </div>
 
-        <h3 class="subsection-title">
+        <h3 class="pb-subtitle">
             <span id="sub-n2n-field-es" style="display:none;">Testigos y trabajo que no le alcanza</span>
             <span id="sub-n2n-field-en">Witnesses and overflow</span>
         </h3>
-        <p class="section-subtitle" style="margin-bottom:1rem;">
+        <p class="pb-sub b2b-lead">
             <span id="n2n-field-desc-es" style="display:none;">Para firmas complicadas o citas fuera de su zona.</span>
             <span id="n2n-field-desc-en">For complicated signings or appointments outside your area.</span>
         </p>
-
-        <div class="premium-services">
-            <div class="card premium-card">
-                <h3 id="n2n-wit-es" style="display:none;">Testigo independiente</h3>
-                <h3 id="n2n-wit-en">Independent witness</h3>
-                <div class="premium-price">$35 – $50</div>
-                <p class="premium-description" id="n2n-wit-detail-es" style="display:none;">Un testigo imparcial y comisionado como Notary Public para firmas de fideicomisos o planificación patrimonial. (Si el lugar queda a 15 millas o más, se suman $25 de viaje).</p>
-                <p class="premium-description" id="n2n-wit-detail-en">An impartial witness who is a commissioned notary, for trust and estate-planning signings. ($25 travel fee for locations 15+ miles away.)</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="n2n-i9-es" style="display:none;">Formularios I-9 que usted no alcanza a hacer</h3>
-                <h3 id="n2n-i9-en">I-9 overflow</h3>
-                <div class="premium-price">$40 – $55</div>
-                <p class="premium-description" id="n2n-i9-detail-es" style="display:none;">Mándeme las solicitudes de I-9 que le quedan muy lejos. Usted cobra su tarifa normal, me pasa el trabajo y mantiene su agenda libre.</p>
-                <p class="premium-description" id="n2n-i9-detail-en">Send me the I-9 requests that are too far for you. You charge your usual rate, pass the job to me, and keep your schedule clear.</p>
-            </div>
+        <div class="pc-grid pc-grid--2">
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="n2n-wit-es" style="display:none;">Testigo independiente</h4>
+                    <h4 class="pc-title" id="n2n-wit-en">Independent witness</h4>
+                    <span class="price-tag">$35 – $50</span>
+                </div>
+                <p class="pc-text" id="n2n-wit-detail-es" style="display:none;">Un testigo imparcial y comisionado como Notary Public para firmas de fideicomisos o planificación patrimonial. (Si el lugar queda a 15 millas o más, se suman $25 de viaje).</p>
+                <p class="pc-text" id="n2n-wit-detail-en">An impartial witness who is a commissioned notary, for trust and estate-planning signings. ($25 travel fee for locations 15+ miles away.)</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="n2n-i9-es" style="display:none;">Formularios I-9 que usted no alcanza a hacer</h4>
+                    <h4 class="pc-title" id="n2n-i9-en">I-9 overflow</h4>
+                    <span class="price-tag">$40 – $55</span>
+                </div>
+                <p class="pc-text" id="n2n-i9-detail-es" style="display:none;">Mándeme las solicitudes de I-9 que le quedan muy lejos. Usted cobra su tarifa normal, me pasa el trabajo y mantiene su agenda libre.</p>
+                <p class="pc-text" id="n2n-i9-detail-en">Send me the I-9 requests that are too far for you. You charge your usual rate, pass the job to me, and keep your schedule clear.</p>
+            </article>
         </div>
         <p class="consumer-apostille-link">
             <span id="n2n-consumer-link-es" style="display:none;">¿Usted es una persona o familia que necesita una apostilla? <a href="apostille.html">Vea las apostillas para clientes</a>.</span>
             <span id="n2n-consumer-link-en">Need an apostille for yourself or your family? <a href="apostille.html">See apostilles for individuals</a>.</span>
         </p>
-    </div>
+    </section>
 
-    <div class="divider"></div>
-
-    <div class="pricing-section" id="professional-development">
-        <h2 class="pricing-section-title">
-            <span class="section-number">4</span>
-            <div>
-                <span id="section-3-title-es" style="display:none;">Sitios web y mentoría para colegas</span>
-                <span id="section-3-title-en">Websites and mentoring for notaries</span>
-                <p class="section-subtitle" id="section-3-desc-es" style="display:none;">Ayuda práctica para colegas que están empezando o creciendo.</p>
-                <p class="section-subtitle" id="section-3-desc-en">Hands-on help for notaries who are starting out or growing.</p>
+    <!-- 4. WEB & MENTORING -->
+    <section class="price-block" id="professional-development" aria-labelledby="professional-development-h">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">4</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="professional-development-h"><span id="section-3-title-es" style="display:none;">Sitios web y mentoría para colegas</span><span id="section-3-title-en">Websites and mentoring for notaries</span></h2>
+                <p class="pb-sub" id="section-3-desc-es" style="display:none;">Ayuda práctica para colegas que están empezando o creciendo.</p>
+                <p class="pb-sub" id="section-3-desc-en">Hands-on help for notaries who are starting out or growing.</p>
             </div>
-        </h2>
+        </div>
 
-        <h3 class="subsection-title">
+        <h3 class="pb-subtitle is-first">
             <span id="sub-dev-web-es" style="display:none;">Sitios web</span>
             <span id="sub-dev-web-en">Websites</span>
         </h3>
-        <p class="section-subtitle" style="margin-bottom:1rem;">
+        <p class="pb-sub b2b-lead">
             <span id="dev-web-desc-es" style="display:none;">Hago sitios web que se ven bien en el teléfono y que ayudan a que lo encuentren. Pueden ser en inglés y español.</span>
             <span id="dev-web-desc-en">I build websites that work well on a phone and help people find you. They can be in English and Spanish.</span>
         </p>
-
-        <div class="premium-services">
-            <div class="card premium-card">
-                <h3 id="dev-land-es" style="display:none;">Una sola página</h3>
-                <h3 id="dev-land-en">Single page</h3>
-                <div class="premium-price">$350 – $700 <span class="price-label"><span id="dev-land-avg-es" style="display:none;">(Promedio $500)</span><span id="dev-land-avg-en">(Average $500)</span></span></div>
-                <p class="premium-description" id="dev-land-detail-es" style="display:none;">Una página con lo que hace, dónde trabaja y cómo contactarlo, pensada para que lo encuentren desde el teléfono.</p>
-                <p class="premium-description" id="dev-land-detail-en">One page with what you do, where you work, and how to reach you, set up so people find you from their phone.</p>
-            </div>
-            <div class="card premium-card featured">
-                <div class="premium-badge">Popular</div>
-                <h3 id="dev-basic-es" style="display:none;">Sitio web básico</h3>
-                <h3 id="dev-basic-en">Basic website</h3>
-                <div class="premium-price">$700 – $1,500 <span class="price-label"><span id="dev-full-avg-es" style="display:none;">(Promedio $1,000)</span><span id="dev-full-avg-en">(Average $1,000)</span></span></div>
-                <p class="premium-description" id="dev-basic-detail-es" style="display:none;">3 a 5 páginas (Inicio, Acerca de, Servicios, Contacto), fáciles de leer, con formulario de contacto.</p>
-                <p class="premium-description" id="dev-basic-detail-en">3 to 5 pages (Home, About, Services, Contact), easy to read, with a contact form.</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="dev-adv-es" style="display:none;">Herramientas extra</h3>
-                <h3 id="dev-adv-en">Extra tools</h3>
-                <div class="premium-price">$1,500+</div>
-                <p class="premium-description" id="dev-adv-detail-es" style="display:none;">Agenda en línea, un lugar seguro para que le suban documentos o formularios de admisión en dos idiomas.</p>
-                <p class="premium-description" id="dev-adv-detail-en">Online booking, a secure place for clients to upload documents, or two-language intake forms.</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="dev-maint-es" style="display:none;">Soporte y mantenimiento</h3>
-                <h3 id="dev-maint-en">Support and upkeep</h3>
-                <div class="premium-price">$75 – $150 <span class="price-label"><span id="rate-hr1-es" style="display:none;">/ hora</span><span id="rate-hr1-en">/ hr</span></span></div>
-                <p class="premium-description" id="dev-maint-detail-es" style="display:none;">Revisiones, arreglos, lo básico de SEO y su Perfil de Negocio de Google. (También hay planes mensuales).</p>
-                <p class="premium-description" id="dev-maint-detail-en">Check-ups, fixes, SEO basics, and your Google Business Profile. (Monthly plans available.)</p>
-            </div>
+        <div class="pc-grid pc-grid--2">
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="dev-land-es" style="display:none;">Una sola página</h4>
+                    <h4 class="pc-title" id="dev-land-en">Single page</h4>
+                    <span class="price-tag">$350 – $700<span class="price-unit"><span id="dev-land-avg-es" style="display:none;">(Promedio $500)</span><span id="dev-land-avg-en">(Average $500)</span></span></span>
+                </div>
+                <p class="pc-text" id="dev-land-detail-es" style="display:none;">Una página con lo que hace, dónde trabaja y cómo contactarlo, pensada para que lo encuentren desde el teléfono.</p>
+                <p class="pc-text" id="dev-land-detail-en">One page with what you do, where you work, and how to reach you, set up so people find you from their phone.</p>
+            </article>
+            <article class="pc pc--featured">
+                <div class="pc-flag">Popular</div>
+                <div class="pc-head">
+                    <h4 class="pc-title" id="dev-basic-es" style="display:none;">Sitio web básico</h4>
+                    <h4 class="pc-title" id="dev-basic-en">Basic website</h4>
+                    <span class="price-tag">$700 – $1,500<span class="price-unit"><span id="dev-full-avg-es" style="display:none;">(Promedio $1,000)</span><span id="dev-full-avg-en">(Average $1,000)</span></span></span>
+                </div>
+                <p class="pc-text" id="dev-basic-detail-es" style="display:none;">3 a 5 páginas (Inicio, Acerca de, Servicios, Contacto), fáciles de leer, con formulario de contacto.</p>
+                <p class="pc-text" id="dev-basic-detail-en">3 to 5 pages (Home, About, Services, Contact), easy to read, with a contact form.</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="dev-adv-es" style="display:none;">Herramientas extra</h4>
+                    <h4 class="pc-title" id="dev-adv-en">Extra tools</h4>
+                    <span class="price-tag">$1,500+</span>
+                </div>
+                <p class="pc-text" id="dev-adv-detail-es" style="display:none;">Agenda en línea, un lugar seguro para que le suban documentos o formularios de admisión en dos idiomas.</p>
+                <p class="pc-text" id="dev-adv-detail-en">Online booking, a secure place for clients to upload documents, or two-language intake forms.</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="dev-maint-es" style="display:none;">Soporte y mantenimiento</h4>
+                    <h4 class="pc-title" id="dev-maint-en">Support and upkeep</h4>
+                    <span class="price-tag">$75 – $150<span class="price-unit"><span id="rate-hr1-es" style="display:none;">/ hora</span><span id="rate-hr1-en">/ hr</span></span></span>
+                </div>
+                <p class="pc-text" id="dev-maint-detail-es" style="display:none;">Revisiones, arreglos, lo básico de SEO y su Perfil de Negocio de Google. (También hay planes mensuales).</p>
+                <p class="pc-text" id="dev-maint-detail-en">Check-ups, fixes, SEO basics, and your Google Business Profile. (Monthly plans available.)</p>
+            </article>
         </div>
 
-        <h3 class="subsection-title">
+        <h3 class="pb-subtitle">
             <span id="sub-dev-mentor-es" style="display:none;">Mentoría</span>
             <span id="sub-dev-mentor-en">Mentoring</span>
         </h3>
-        <p class="section-subtitle" style="margin-bottom:1rem;">
+        <p class="pb-sub b2b-lead">
             <span id="dev-mentor-desc-es" style="display:none;">Para colegas nuevos o que quieren ofrecer más servicios.</span>
             <span id="dev-mentor-desc-en">For notaries who are new or adding services.</span>
         </p>
+        <div class="pc-grid pc-grid--2">
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="dev-consult-es" style="display:none;">Cómo trabajo en dos idiomas</h4>
+                    <h4 class="pc-title" id="dev-consult-en">How I run a two-language business</h4>
+                    <span class="price-tag">$75 – $150<span class="price-unit"><span id="rate-hr2-es" style="display:none;">/ hora</span><span id="rate-hr2-en">/ hr</span></span></span>
+                </div>
+                <p class="pc-text" id="dev-consult-detail-es" style="display:none;">Le cuento cómo organizo mi negocio para atender en español: horarios, formularios, cómo explico lo que un Notary Public puede y no puede hacer. Es experiencia práctica, no asesoría legal; para dudas sobre la ley, consulte a un abogado o a la Secretaría de Estado.</p>
+                <p class="pc-text" id="dev-consult-detail-en">I walk you through how I set up my business to serve Spanish speakers: scheduling, forms, and how I explain what a notary can and can&rsquo;t do. It&rsquo;s practical know-how, not legal advice; for questions about the law, ask an attorney or the Secretary of State.</p>
+            </article>
+            <article class="pc">
+                <div class="pc-head">
+                    <h4 class="pc-title" id="dev-mock-es" style="display:none;">Práctica de firma</h4>
+                    <h4 class="pc-title" id="dev-mock-en">Practice signing</h4>
+                    <span class="price-tag">$150 – $250<span class="price-unit"><span id="rate-flat-es" style="display:none;">Tarifa Fija</span><span id="rate-flat-en">Flat Rate</span></span></span>
+                </div>
+                <p class="pc-text" id="dev-mock-detail-es" style="display:none;">Practicamos juntos un paquete de documentos completo, con algunos problemas a propósito, para que llegue con más seguridad a su primera firma real.</p>
+                <p class="pc-text" id="dev-mock-detail-en">We run through a full document package together, with a few problems thrown in on purpose, so you go into real signings feeling more ready.</p>
+            </article>
+        </div>
+    </section>
 
-        <div class="premium-services">
-            <div class="card premium-card">
-                <h3 id="dev-consult-es" style="display:none;">Cómo trabajo en dos idiomas</h3>
-                <h3 id="dev-consult-en">How I run a two-language business</h3>
-                <div class="premium-price">$75 – $150 <span class="price-label"><span id="rate-hr2-es" style="display:none;">/ hora</span><span id="rate-hr2-en">/ hr</span></span></div>
-                <p class="premium-description" id="dev-consult-detail-es" style="display:none;">Le cuento cómo organizo mi negocio para atender en español: horarios, formularios, cómo explico lo que un Notary Public puede y no puede hacer. Es experiencia práctica, no asesoría legal; para dudas sobre la ley, consulte a un abogado o a la Secretaría de Estado.</p>
-                <p class="premium-description" id="dev-consult-detail-en">I walk you through how I set up my business to serve Spanish speakers: scheduling, forms, and how I explain what a notary can and can&rsquo;t do. It&rsquo;s practical know-how, not legal advice; for questions about the law, ask an attorney or the Secretary of State.</p>
-            </div>
-            <div class="card premium-card">
-                <h3 id="dev-mock-es" style="display:none;">Práctica de firma</h3>
-                <h3 id="dev-mock-en">Practice signing</h3>
-                <div class="premium-price">$150 – $250 <span class="price-label"><span id="rate-flat-es" style="display:none;">Tarifa Fija</span><span id="rate-flat-en">Flat Rate</span></span></div>
-                <p class="premium-description" id="dev-mock-detail-es" style="display:none;">Practicamos juntos un paquete de documentos completo, con algunos problemas a propósito, para que llegue con más seguridad a su primera firma real.</p>
-                <p class="premium-description" id="dev-mock-detail-en">We run through a full document package together, with a few problems thrown in on purpose, so you go into real signings feeling more ready.</p>
+    <!-- 5. PAYMENT & NOTICES -->
+    <section class="price-block" id="policies" aria-labelledby="policies-h">
+        <div class="pb-head">
+            <span class="pb-num" aria-hidden="true">5</span>
+            <div class="pb-titles">
+                <h2 class="pb-title" id="policies-h"><span id="section-4-title-es" style="display:none;">Pagos y avisos</span><span id="section-4-title-en">Payment and notices</span></h2>
             </div>
         </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="pricing-section" id="policies">
-        <h2 class="pricing-section-title">
-            <span class="section-number">5</span>
-            <div>
-                <span id="section-4-title-es" style="display:none;">Pagos y avisos</span>
-                <span id="section-4-title-en">Payment and notices</span>
-            </div>
-        </h2>
-
-        <div class="info-box">
-            <p id="b2b-pol-es" style="display:none;">Los mismos términos se aplican a todos los servicios: <strong>pago completo por adelantado</strong> (efectivo, Venmo, Zelle, transferencia bancaria (ACH) o tarjeta; los pagos con tarjeta de crédito tienen un recargo de procesamiento de 2%; las tarjetas de débito no tienen recargo), salvo las visitas a ICE (se pagan después de la visita) y la mensajería de apostillas para socios (se factura a 7 o 15 días), <strong>24 horas</strong> de aviso para cancelar, y los honorarios cubren tiempo, viaje y labor administrativa, no la aceptación de documentos por terceros. Además, en firmas de bienes raíces y legales se aplica la <a href="#real-estate">Política de Rechazo en la Mesa del 50%</a>. <a href="pricing.html#policies">Ver políticas completas</a>.</p>
-            <p id="b2b-pol-en">The same terms apply to every service: <strong>full payment up front</strong> (cash, Venmo, Zelle, bank transfer (ACH), or card; credit card payments have a 2% processing surcharge; debit cards have none), except ICE visits (paid after the visit) and apostille courier work for partners (invoiced net 7 or net 15), <strong>24 hours'</strong> notice to cancel, and fees cover time, travel, and clerical labor, not third-party acceptance of documents. Real estate and legal signings also carry the <a href="#real-estate">50% Table Refusal Policy</a>. <a href="pricing.html#policies">See the full policies</a>.</p>
+        <div class="pc-panel pc-panel--wide">
+            <p class="pc-text" id="b2b-pol-es" style="display:none;">Los mismos términos se aplican a todos los servicios: <strong>pago completo por adelantado</strong> (efectivo, Venmo, Zelle, transferencia bancaria (ACH) o tarjeta; los pagos con tarjeta de crédito tienen un recargo de procesamiento de 2%; las tarjetas de débito no tienen recargo), salvo las visitas a ICE (se pagan después de la visita) y la mensajería de apostillas para socios (se factura a 7 o 15 días), <strong>24 horas</strong> de aviso para cancelar, y los honorarios cubren tiempo, viaje y labor administrativa, no la aceptación de documentos por terceros. Además, en firmas de bienes raíces y legales se aplica la <a href="#real-estate">Política de Rechazo en la Mesa del 50%</a>. <a href="pricing.html#policies">Ver políticas completas</a>.</p>
+            <p class="pc-text" id="b2b-pol-en">The same terms apply to every service: <strong>full payment up front</strong> (cash, Venmo, Zelle, bank transfer (ACH), or card; credit card payments have a 2% processing surcharge; debit cards have none), except ICE visits (paid after the visit) and apostille courier work for partners (invoiced net 7 or net 15), <strong>24 hours'</strong> notice to cancel, and fees cover time, travel, and clerical labor, not third-party acceptance of documents. Real estate and legal signings also carry the <a href="#real-estate">50% Table Refusal Policy</a>. <a href="pricing.html#policies">See the full policies</a>.</p>
         </div>
-    </div>
+    </section>
 
     <div class="cta-card">
         <h2 id="cta-ready-es" style="display:none;">¿Trabajamos juntos?</h2>
