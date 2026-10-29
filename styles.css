@@ -3568,3 +3568,18 @@ html[data-theme="dark"] .about-parent-logo { background: #0a1020; box-shadow: in
 }
 .about-parent .about-band-title { margin-top: 0; }
 .about-parent-link { font-weight: 700; color: var(--ab-accent) !important; text-underline-offset: 3px; }
+
+/* ============================================================
+   SEAL 2.0 LOGO  (2026-10-29)
+   Two header lockups, swapped by the theme toggle. Light mode
+   keeps the brand-blue header; dark mode deepens it so the
+   lifted seal and bright edge ring stand out.
+   ============================================================ */
+.logo-img { height: 48px; width: auto; }
+.logo-dark { display: none; }
+html[data-theme="dark"] .logo-light { display: none; }
+html[data-theme="dark"] .logo-dark { display: block; }
+html[data-theme="dark"] header { background: #0B1220; border-bottom: 1px solid #1E2A44; }
+@media (max-width: 420px) { .logo-img { height: 40px; } }
+
+.hero-with-logo { background-image: url('seal-dark.svg'); background-size: min(900px, 140vw); }
