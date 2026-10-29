@@ -3540,3 +3540,31 @@ html[data-theme="dark"] .tr-disc-badge.is-green { color: #0B1A10; }
 @media (max-width: 1140px) {
   :is(.page-about, .page-cc, .page-pricing) .statutory-bar { margin-left: var(--space-3); margin-right: var(--space-3); }
 }
+
+
+/* ============================================================
+   PARENT BRAND: SERVICIOS QUINTANA LLC (2026-10-29)
+   servicios-quintana-logo.png = full logo with tagline (About page, schema)
+   servicios-quintana-logo-sm.png = no tagline (footer, on every page)
+   The logo's tagline is light gray, so the logo always sits on navy.
+   ============================================================ */
+.footer-parent { display: flex; align-items: center; gap: var(--space-3); margin: 0 0 0.6rem; }
+.footer-parent p { margin: 0; }
+.footer-parent-logo { flex: 0 0 auto; display: block; line-height: 0; border-radius: 6px; }
+.footer-parent-logo img { display: block; width: 84px; height: auto; }
+.footer-parent-logo:focus-visible { outline: 2px solid #7dd3c8; outline-offset: 3px; }
+
+.about-parent-card { display: grid; grid-template-columns: 1fr; gap: var(--space-5); align-items: center; }
+@media (min-width: 700px) { .about-parent-card { grid-template-columns: 260px 1fr; gap: var(--space-6); } }
+.about-parent-logo {
+  display: block; box-sizing: border-box; width: 100%; max-width: 280px; margin: 0 auto;
+  padding: var(--space-5); background: #0f172a; border-radius: 16px; line-height: 0;
+}
+.about-parent-logo img { display: block; width: 100%; height: auto; }
+html[data-theme="dark"] .about-parent-logo { background: #0a1020; box-shadow: inset 0 0 0 1px var(--ab-line); }
+.about-parent-kicker {
+  margin: 0 0 0.25rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ab-kicker) !important;
+}
+.about-parent .about-band-title { margin-top: 0; }
+.about-parent-link { font-weight: 700; color: var(--ab-accent) !important; text-underline-offset: 3px; }
