@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Notary Public in Denver, English &amp; Spanish | Quintana Notary &amp; Signing</title>
-    <meta name="description" content="David Quintana, Colorado Notary Public (ID 20254044224). I come to your home, office, hospital or a coffee shop in the Denver Metro area. English and Spanish. By appointment only.">
+    <title>Mobile Notary Denver, English &amp; Spanish | Quintana Notary</title>
+    <meta name="description" content="Bilingual mobile Notary Public, Loveland to Castle Rock. $15 per act (legal max); travel quoted up front. Apostilles, translations, DIA. 303-500-4122">
     <link rel="canonical" href="https://www.quintananotarysigning.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Quintana Notary &amp; Signing">
+    <meta property="og:title" content="Mobile Notary Denver, English &amp; Spanish | Quintana Notary">
+    <meta property="og:description" content="Bilingual mobile Notary Public, Loveland to Castle Rock. $15 per act (legal max); travel quoted up front. Apostilles, translations, DIA. 303-500-4122">
+    <meta property="og:url" content="https://www.quintananotarysigning.com/">
+    <meta property="og:image" content="https://www.quintananotarysigning.com/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_US">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/">
     <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/">
     <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/">
@@ -36,7 +45,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261029b">
+    <link rel="stylesheet" href="styles.css?v=20261030a">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -44,68 +53,344 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta name="theme-color" content="#0A2D69">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <!-- ============================================================
-         LOCAL BUSINESS / NOTARY STRUCTURED DATA (schema.org JSON-LD)
-         ============================================================ -->
+    <!-- ld-json -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "additionalType": "https://www.wikidata.org/wiki/Q294126",
-      "name": "Quintana Notary & Signing",
-      "alternateName": "Servicios Quintana LLC",
-      "url": "https://www.quintananotarysigning.com/",
-      "image": "https://www.quintananotarysigning.com/quintana-seal.png",
-      "logo": "https://www.quintananotarysigning.com/quintana-seal.png",
-      "telephone": "+1-303-500-4122",
-      "email": "info@quintananotarysigning.com",
-      "description": "Mobile Notary Public in the Denver Metro area, English and Spanish, by appointment only. Notarizations at your home, office or hospital, Spanish-to-English certified translations, Colorado apostilles, DIA airport notary, loan signings and I-9 verification.",
-      "priceRange": "$15-$700",
-      "currenciesAccepted": "USD",
-      "paymentAccepted": "Cash, Venmo, Zelle, Credit Card, Debit Card",
-      "knowsLanguage": ["en", "es"],
-      "availableLanguage": ["en", "es"],
-      "areaServed": [
-        { "@type": "City", "name": "Denver, CO" },
-        { "@type": "City", "name": "Highlands Ranch, CO" },
-        { "@type": "City", "name": "Parker, CO" },
-        { "@type": "City", "name": "Aurora, CO" },
-        { "@type": "City", "name": "Loveland, CO" },
-        { "@type": "City", "name": "Castle Rock, CO" },
-        { "@type": "Airport", "name": "Denver International Airport", "iataCode": "DEN" }
-      ],
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "10:00",
-          "closes": "17:00"
+          "@type": "Notary",
+          "@id": "https://www.quintananotarysigning.com/#business",
+          "name": "Quintana Notary & Signing",
+          "url": "https://www.quintananotarysigning.com/",
+          "logo": "https://www.quintananotarysigning.com/quintana-seal.png",
+          "image": "https://www.quintananotarysigning.com/david-quintana-professional.jpg",
+          "description": "Mobile Notary Public in English and Spanish. Notarizations at your home, office or hospital, Spanish-to-English certified translations and Colorado apostilles. By appointment only.",
+          "telephone": "+1-303-500-4122",
+          "email": "info@quintananotarysigning.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5128 E Colfax Ave",
+            "addressLocality": "Denver",
+            "addressRegion": "CO",
+            "postalCode": "80220",
+            "addressCountry": "US"
+          },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=5128%20E%20Colfax%20Ave%2C%20Denver%2C%20CO%2080220",
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Denver Metro area, Loveland to Castle Rock, Colorado"
+            },
+            {
+              "@type": "City",
+              "name": "Denver, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Aurora, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Lakewood, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Thornton, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Westminster, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Arvada, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Commerce City, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Broomfield, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Boulder, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Longmont, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Loveland, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Englewood, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Littleton, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Centennial, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Highlands Ranch, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Parker, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Castle Rock, CO"
+            },
+            {
+              "@type": "Airport",
+              "name": "Denver International Airport",
+              "iataCode": "DEN"
+            }
+          ],
+          "knowsLanguage": [
+            "en",
+            "es"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "10:00",
+              "closes": "17:00"
+            }
+          ],
+          "priceRange": "$10-$700",
+          "currenciesAccepted": "USD",
+          "paymentAccepted": "Cash, Venmo, Zelle, debit card, credit card (2% surcharge)",
+          "founder": {
+            "@id": "https://www.quintananotarysigning.com/#david"
+          },
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Servicios Quintana LLC",
+            "url": "https://serviciosquintana.com/",
+            "logo": "https://www.quintananotarysigning.com/servicios-quintana-logo.png"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services and prices",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Notarial act",
+                "description": "Colorado's legal maximum per notarial act (C.R.S. § 24-21-529). Travel is separate and quoted before booking.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": 15,
+                  "maxPrice": 15,
+                  "priceCurrency": "USD",
+                  "unitText": "per notarial act"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Community rate",
+                "description": "At community locations, by appointment. No travel fee.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": 10,
+                  "priceCurrency": "USD",
+                  "unitText": "per notarial act"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Travel fee",
+                "description": "Based on round-trip distance; quoted before we confirm.",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 20,
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Certified Spanish-to-English translation",
+                "description": "With the translator's signed certification. Prepared to meet USCIS requirements; the agency decides.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "minPrice": 30,
+                  "priceCurrency": "USD",
+                  "unitText": "per page"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Colorado apostille",
+                "description": "Hand-delivered to the Colorado Secretary of State. From $85 (delivery only) or $150 (full service).",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 85,
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Airport notary at Denver International Airport (DIA)",
+                "description": "Flat $95 with parking included, plus $10 per notarized signature.",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": 95,
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Certified copy",
+                "description": "$15 per copy; $10 at community locations.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": 15,
+                  "priceCurrency": "USD",
+                  "unitText": "per copy"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.quintananotarysigning.com/#david",
+          "name": "David Quintana",
+          "jobTitle": "Notary Public",
+          "image": "https://www.quintananotarysigning.com/david-quintana-professional.jpg",
+          "url": "https://www.quintananotarysigning.com/about.html",
+          "knowsLanguage": [
+            "es",
+            "en"
+          ],
+          "worksFor": {
+            "@id": "https://www.quintananotarysigning.com/#business"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Metropolitan State University of Denver",
+            "url": "https://www.msudenver.edu/"
+          },
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Colorado Notary Public commission",
+              "credentialCategory": "State commission",
+              "identifier": "20254044224",
+              "validUntil": "2029-11-28",
+              "recognizedBy": {
+                "@type": "GovernmentOrganization",
+                "name": "Colorado Secretary of State",
+                "url": "https://www.coloradosos.gov/notary/pages/public/home.xhtml"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "B.S. in Health Informatics",
+              "credentialCategory": "degree",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Metropolitan State University of Denver"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.quintananotarysigning.com/#website",
+          "url": "https://www.quintananotarysigning.com/",
+          "name": "Quintana Notary & Signing",
+          "inLanguage": [
+            "en",
+            "es"
+          ],
+          "publisher": {
+            "@id": "https://www.quintananotarysigning.com/#business"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.quintananotarysigning.com/#faq",
+          "inLanguage": "en",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What does a Notary Public do in Colorado? Can you give legal advice?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Notary Public checks your ID and witnesses your signature. I’m not an attorney, so I can’t give legal advice or tell you which document you need or what to write in it (C.R.S. § 24-21-525)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a notary charge in Colorado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Colorado law caps the fee at $15 per notarial act (C.R.S. § 24-21-529). Travel and after-hours fees are separate, and I give them to you in writing before we book."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much is it for you to come to me?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Travel starts at $20 and depends on round-trip distance. I cover Loveland to Castle Rock; farther costs extra. After hours (7 PM – 10 AM) is +$20 and weekends are +$15."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there a cheaper option?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. If we meet at Tienda Salvadoreña (East Colfax), the Auraria Library at MSU Denver, or a Denver Public Library branch, it’s $10 per act with no travel fee, by appointment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What ID do I need?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A passport, driver’s license or other government ID that is current or expired no more than one year. If you don’t have one, ask me before we book."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will USCIS accept your translations?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "I prepare each translation to meet USCIS requirements, with my signed certification that it’s complete and accurate. The agency makes the final decision."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can you notarize at Denver International Airport?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. It’s a flat $95, parking included, plus $10 per signature. We meet in the terminal before the security checkpoint."
+              }
+            }
+          ]
         }
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "David Quintana",
-        "jobTitle": "Colorado-Commissioned Notary Public"
-      },
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Notary Public Commission",
-        "recognizedBy": {
-          "@type": "State",
-          "name": "State of Colorado"
-        }
-      },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Servicios Quintana LLC",
-        "url": "https://serviciosquintana.com/",
-        "logo": "https://www.quintananotarysigning.com/servicios-quintana-logo.png"
-      },
-      "sameAs": [
-        "https://serviciosquintana.com/"
       ]
     }
     </script>
+    <!-- /ld-json -->
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
@@ -220,24 +505,57 @@
 <section class="hero hero-with-logo home-hero">
     <div class="hero-content">
         <div class="hero-badge">
-            <span id="hero-badge-es" style="display:none;">Solo con cita previa &middot; Área metropolitana de Denver &middot; Comisionado y asegurado</span>
-            <span id="hero-badge-en">By appointment only &middot; Denver Metro area &middot; Commissioned &amp; Insured</span>
+            <span id="hero-badge-es" style="display:none;">Solo con cita previa &middot; De Loveland a Castle Rock &middot; Comisionado y asegurado</span>
+            <span id="hero-badge-en">By appointment only &middot; Loveland to Castle Rock &middot; Commissioned &amp; Insured</span>
         </div>
-        <h1 id="hero-h1-es" style="display:none;">Soy David Quintana, Notary Public móvil. Yo voy a donde usted está.</h1>
-        <h1 id="hero-h1-en">I&rsquo;m David Quintana, a mobile Notary Public. I come to you.</h1>
-        <p id="hero-h2-es" class="hero-subtitle" style="display:none;">Le atiendo en su casa, en su oficina, en el hospital o en una cafetería cerca de usted, en el área metropolitana de Denver. Solo con cita previa: llámeme o mándeme un mensaje y acordamos la hora.</p>
-        <p id="hero-h2-en" class="hero-subtitle">I&rsquo;ll meet you at your home, your office, the hospital, or a coffee shop near you in the Denver Metro area. By appointment only: call or text me and we&rsquo;ll pick a time.</p>
+        <h1 id="hero-h1-es" style="display:none;">Notary Public móvil en Denver, en español: voy a su casa, oficina u hospital</h1>
+        <h1 id="hero-h1-en">Mobile Notary in Denver, in English or Spanish: I come to your home, office or hospital</h1>
+        <p id="hero-h2-es" class="hero-subtitle" style="display:none;">Soy David Quintana, Notary Public comisionado en Colorado. Le atiendo en su casa, en su oficina, en el hospital o en una cafetería cerca de usted, de Loveland a Castle Rock. Solo con cita previa: escríbame o llámeme y acordamos la hora.</p>
+        <p id="hero-h2-en" class="hero-subtitle">I&rsquo;m David Quintana, a Colorado-commissioned Notary Public. I&rsquo;ll meet you at your home, your office, the hospital, or a coffee shop near you, anywhere from Loveland to Castle Rock. By appointment only: text or call me and we&rsquo;ll pick a time.</p>
         <p id="hero-explain-es" class="hero-subtitle hero-note" style="display:none;">Una aclaración: en Estados Unidos, un Notary Public revisa su identificación y es testigo de su firma. No soy abogado, así que no puedo decirle qué documento necesita ni qué escribir en él.</p>
         <p id="hero-explain-en" class="hero-subtitle hero-note">A quick note: in the U.S., a Notary Public checks your ID and watches you sign. I&rsquo;m not an attorney, so I can&rsquo;t tell you which document you need or what to write in it.</p>
         <div class="cta-buttons">
-            <a id="cta-book-es" href="contact.html" class="btn btn-primary" style="display:none;"><span>Hacer una cita</span></a>
-            <a id="cta-book-en" href="contact.html" class="btn btn-primary"><span>Book an appointment</span></a>
-            <a id="cta-call-es" href="tel:+13035004122" class="btn btn-secondary" style="display:none;"><span>Llame o escriba: 303-500-4122</span></a>
-            <a id="cta-call-en" href="tel:+13035004122" class="btn btn-secondary"><span>Call or text 303-500-4122</span></a>
+            <a id="cta-wa-es" href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp" style="display:none;"><span>Escríbame por WhatsApp</span></a>
+            <a id="cta-wa-en" href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener" class="btn btn-whatsapp"><span>Message me on WhatsApp</span></a>
+            <a id="cta-call-es" href="tel:+13035004122" class="btn btn-secondary" style="display:none;"><span>Llamar al 303-500-4122</span></a>
+            <a id="cta-call-en" href="tel:+13035004122" class="btn btn-secondary"><span>Call 303-500-4122</span></a>
         </div>
+        <p id="hero-micro-es" class="hero-subtitle hero-note" style="display:none;">Le doy el precio total por escrito antes de confirmar. <a href="pricing.html">Ver precios</a> &middot; <a href="contact.html">Otras formas de reservar</a></p>
+        <p id="hero-micro-en" class="hero-subtitle hero-note">You get the full price in writing before we confirm. <a href="pricing.html">See prices</a> &middot; <a href="contact.html">Other ways to book</a></p>
     </div>
 </section>
 <main class="section container pricing-page home-page">
+<section class="price-block home-block" id="key-facts" aria-labelledby="facts-title-es facts-title-en">
+<div class="pb-head">
+<div class="pb-titles">
+<h2 class="pb-title"><span id="facts-title-es" style="display:none;">Datos clave</span><span id="facts-title-en">Key facts</span></h2>
+</div>
+</div>
+<div class="pc-panel">
+<dl class="pc-facts" id="facts-list-es" style="display:none;">
+<div class="pc-fact"><dt>Quién</dt><dd>David Quintana, Notary Public comisionado en Colorado, ID 20254044224, vigente hasta el 28/11/2029. <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a>.</dd></div>
+<div class="pc-fact"><dt>Idiomas</dt><dd>Español e inglés; hablo los dos como idiomas nativos.</dd></div>
+<div class="pc-fact"><dt>Dónde</dt><dd>Voy a su casa, oficina, hospital o centro de cuidado, de Loveland a Castle Rock. Más lejos, con tarifa de viaje adicional.</dd></div>
+<div class="pc-fact"><dt>Tarifa notarial</dt><dd>$15 por acto notarial, el máximo que permite la ley de Colorado (C.R.S. § 24-21-529). La tarifa de viaje es aparte, desde $20, y se la doy antes de confirmar.</dd></div>
+<div class="pc-fact"><dt>Precio comunitario</dt><dd>$10 por acto y sin tarifa de viaje en Tienda Salvadoreña (East Colfax), la biblioteca Auraria de MSU Denver o cualquier sucursal de la Biblioteca Pública de Denver, con cita. <a href="contact.html#locations">Lugares</a>.</dd></div>
+<div class="pc-fact"><dt>Aeropuerto (DIA)</dt><dd>$95 fijos con estacionamiento incluido, más $10 por firma. Nos vemos en la terminal, antes del control de seguridad.</dd></div>
+<div class="pc-fact"><dt>Seguro</dt><dd>Servicios Quintana LLC tiene seguro con The Hartford, con responsabilidad profesional (errores y omisiones) para el trabajo notarial y de traducción. Certificado de seguro a petición.</dd></div>
+<div class="pc-fact"><dt>Lo que no hago</dt><dd>No soy abogado: no doy asesoría legal, no elijo formularios ni preparo documentos legales, y no hago notarizaciones en línea.</dd></div>
+<div class="pc-fact"><dt>Cita</dt><dd>Solo con cita previa. <a href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener">WhatsApp</a> o llamada al <a href="tel:+13035004122">303-500-4122</a>.</dd></div>
+</dl>
+<dl class="pc-facts" id="facts-list-en">
+<div class="pc-fact"><dt>Who</dt><dd>David Quintana, Colorado-commissioned Notary Public, ID 20254044224, valid through 11/28/2029. <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verify with the Secretary of State</a>.</dd></div>
+<div class="pc-fact"><dt>Languages</dt><dd>English and Spanish; both are my native languages.</dd></div>
+<div class="pc-fact"><dt>Where</dt><dd>I come to your home, office, hospital or care facility, anywhere from Loveland to Castle Rock. Farther for an added travel fee.</dd></div>
+<div class="pc-fact"><dt>Notary fee</dt><dd>$15 per notarial act, the most Colorado law allows (C.R.S. § 24-21-529). Travel is separate, from $20, and quoted before we confirm.</dd></div>
+<div class="pc-fact"><dt>Community rate</dt><dd>$10 per act and no travel fee at Tienda Salvadoreña (East Colfax), the Auraria Library at MSU Denver, or any Denver Public Library branch, by appointment. <a href="contact.html#locations">Locations</a>.</dd></div>
+<div class="pc-fact"><dt>Airport (DIA)</dt><dd>Flat $95 with parking included, plus $10 per signature. We meet in the terminal before the security checkpoint.</dd></div>
+<div class="pc-fact"><dt>Insurance</dt><dd>Servicios Quintana LLC is insured through The Hartford, including professional liability (errors &amp; omissions) for notary and translation work. Certificate of insurance on request.</dd></div>
+<div class="pc-fact"><dt>What I don&rsquo;t do</dt><dd>I&rsquo;m not an attorney: no legal advice, no choosing forms or preparing legal documents, and no online notarizations.</dd></div>
+<div class="pc-fact"><dt>Booking</dt><dd>By appointment only. <a href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener">WhatsApp</a> or call <a href="tel:+13035004122">303-500-4122</a>.</dd></div>
+</dl>
+</div>
+</section>
 <section class="price-block home-block" id="services" aria-labelledby="services-h">
 <div class="pb-head">
 <div class="pb-titles">
@@ -349,7 +667,7 @@
         </div>
 </section>
 <section class="price-block home-block home-meet" aria-label="David Quintana">
-<section class="meet-david card" aria-labelledby="meet-title-en">
+<section class="meet-david card" aria-labelledby="meet-title-es meet-title-en">
         <img src="david-quintana-seated.jpg" alt="David Quintana sitting in an armchair in a navy suit, in front of a tree with orange fall leaves" class="meet-david-img" width="800" height="1000" loading="lazy">
         <div class="meet-david-text">
             <h2 id="meet-title-es" style="display:none;">Hola, soy David</h2>
@@ -500,12 +818,100 @@
         </div>
 </div>
 </section>
+<section class="price-block home-block" id="faq" aria-labelledby="hfaq-title-es hfaq-title-en">
+<div class="pb-head">
+<div class="pb-titles">
+<h2 class="pb-title"><span id="hfaq-title-es" style="display:none;">Preguntas frecuentes</span><span id="hfaq-title-en">Common questions</span></h2>
+</div>
+</div>
+<div class="faq-accordion-container">
+<div class="faq-item" id="home-faq-q1">
+<button class="faq-question">
+<span id="hq1-es" style="display:none;">¿Qué hace un Notary Public en Colorado? ¿Me puede dar consejos legales?</span>
+<span id="hq1-en">What does a Notary Public do in Colorado? Can you give legal advice?</span>
+</button>
+<div class="faq-answer">
+<p id="ha1-es" style="display:none;">Un Notary Public verifica su identidad y es testigo de su firma. No soy abogado: no puedo darle consejos legales, decirle qué documento necesita ni qué escribir en él (C.R.S. § 24-21-525).</p>
+<p id="ha1-en">A Notary Public checks your ID and witnesses your signature. I&rsquo;m not an attorney, so I can&rsquo;t give legal advice or tell you which document you need or what to write in it (C.R.S. § 24-21-525).</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q2">
+<button class="faq-question">
+<span id="hq2-es" style="display:none;">¿Cuánto cobra un Notary Public en Colorado?</span>
+<span id="hq2-en">How much does a notary charge in Colorado?</span>
+</button>
+<div class="faq-answer">
+<p id="ha2-es" style="display:none;">La ley de Colorado permite cobrar como máximo $15 por acto notarial (C.R.S. § 24-21-529). La tarifa de viaje y los cargos por horario son aparte y se los doy por escrito antes de la cita.</p>
+<p id="ha2-en">Colorado law caps the fee at $15 per notarial act (C.R.S. § 24-21-529). Travel and after-hours fees are separate, and I give them to you in writing before we book.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q3">
+<button class="faq-question">
+<span id="hq3-es" style="display:none;">¿Cuánto cuesta que venga a mi casa?</span>
+<span id="hq3-en">How much is it for you to come to me?</span>
+</button>
+<div class="faq-answer">
+<p id="ha3-es" style="display:none;">La tarifa de viaje empieza en $20 y depende de la distancia de ida y vuelta. Atiendo de Loveland a Castle Rock; más lejos, con tarifa adicional. Fuera de horario (7 PM – 10 AM) son +$20 y en fin de semana +$15.</p>
+<p id="ha3-en">Travel starts at $20 and depends on round-trip distance. I cover Loveland to Castle Rock; farther costs extra. After hours (7 PM – 10 AM) is +$20 and weekends are +$15.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q4">
+<button class="faq-question">
+<span id="hq4-es" style="display:none;">¿Hay una opción más barata?</span>
+<span id="hq4-en">Is there a cheaper option?</span>
+</button>
+<div class="faq-answer">
+<p id="ha4-es" style="display:none;">Sí. Si nos vemos en Tienda Salvadoreña (East Colfax), en la biblioteca Auraria de MSU Denver o en una sucursal de la Biblioteca Pública de Denver, son $10 por acto y sin tarifa de viaje, con cita previa.</p>
+<p id="ha4-en">Yes. If we meet at Tienda Salvadoreña (East Colfax), the Auraria Library at MSU Denver, or a Denver Public Library branch, it&rsquo;s $10 per act with no travel fee, by appointment.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q5">
+<button class="faq-question">
+<span id="hq5-es" style="display:none;">¿Qué identificación necesito?</span>
+<span id="hq5-en">What ID do I need?</span>
+</button>
+<div class="faq-answer">
+<p id="ha5-es" style="display:none;">Pasaporte, licencia de conducir u otra identificación del gobierno, vigente o vencida hace no más de un año. Si no la tiene, pregúnteme antes de hacer la cita.</p>
+<p id="ha5-en">A passport, driver&rsquo;s license or other government ID that is current or expired no more than one year. If you don&rsquo;t have one, ask me before we book.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q6">
+<button class="faq-question">
+<span id="hq6-es" style="display:none;">¿Sus traducciones sirven para USCIS?</span>
+<span id="hq6-en">Will USCIS accept your translations?</span>
+</button>
+<div class="faq-answer">
+<p id="ha6-es" style="display:none;">Preparo cada traducción para cumplir los requisitos de USCIS, con mi certificación firmada de que es completa y exacta. La decisión de aceptarla es de la agencia.</p>
+<p id="ha6-en">I prepare each translation to meet USCIS requirements, with my signed certification that it&rsquo;s complete and accurate. The agency makes the final decision.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q7">
+<button class="faq-question">
+<span id="hq7-es" style="display:none;">¿Puede notarizar en el aeropuerto de Denver (DIA)?</span>
+<span id="hq7-en">Can you notarize at Denver International Airport?</span>
+</button>
+<div class="faq-answer">
+<p id="ha7-es" style="display:none;">Sí. Son $95 fijos con estacionamiento incluido, más $10 por firma. Nos vemos en la terminal, antes del control de seguridad.</p>
+<p id="ha7-en">Yes. It&rsquo;s a flat $95, parking included, plus $10 per signature. We meet in the terminal before the security checkpoint.</p>
+</div>
+</div>
+</div>
+<div class="cta-buttons cta-services-nudge">
+<a href="faq.html" class="btn btn-secondary" id="hfaq-all-es" style="display:none;"><span>Ver todas las preguntas</span></a>
+<a href="faq.html" class="btn btn-secondary" id="hfaq-all-en"><span>See every question</span></a>
+</div>
+</section>
 <div class="cta-card">
-<h2 id="home-cta-es" style="display:none;">¿Hacemos la cita?</h2>
-<h2 id="home-cta-en">Want to set up a time?</h2>
+<h2 id="home-cta-es" style="display:none;">¿Hacemos la cita? Dígame qué documento es y dónde está</h2>
+<h2 id="home-cta-en">Let&rsquo;s book. Tell me the document and where you are</h2>
 <p id="home-cta-d-es" style="display:none;">Llámeme o escríbame. Le mando el precio exacto por escrito y buscamos una hora.</p>
 <p id="home-cta-d-en">Call or text me. I&rsquo;ll send you the exact price in writing and we&rsquo;ll find a time.</p>
+<div class="cta-buttons">
+<a href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp btn-large" id="home-cta-wa-es" style="display:none;"><span>Escríbame por WhatsApp</span></a>
+<a href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener" class="btn btn-whatsapp btn-large" id="home-cta-wa-en"><span>Message me on WhatsApp</span></a>
 <a href="tel:+13035004122" class="btn btn-primary btn-large"><span id="home-cta-call-es" style="display:none;">Llamar 303-500-4122</span><span id="home-cta-call-en">Call 303-500-4122</span></a>
+<a href="mailto:info@quintananotarysigning.com" class="btn btn-secondary btn-large"><span id="home-cta-mail-es" style="display:none;">Correo</span><span id="home-cta-mail-en">Email</span></a>
+</div>
 </div>
 </main>
 <footer class="site-footer">
@@ -545,7 +951,7 @@
     <div class="footer-info">
         <section class="footer-block">
             <h2 class="footer-block-title">Quintana Notary &amp; Signing</h2>
-            <p id="ft-tagline-es" class="footer-lead" style="display:none;">Notary Public móvil en el área metropolitana de Denver, en español y en inglés.</p><p id="ft-tagline-en" class="footer-lead">Mobile Notary Public in the Denver Metro area, in English and Spanish.</p>
+            <p id="ft-tagline-es" class="footer-lead" style="display:none;">Notary Public móvil de Loveland a Castle Rock, en español y en inglés.</p><p id="ft-tagline-en" class="footer-lead">Mobile Notary Public from Loveland to Castle Rock, in English and Spanish.</p>
             <ul class="footer-contact">
                 <li><strong id="ft-call-es" style="display:none;">Llamadas y mensajes:</strong><strong id="ft-call-en">Call or text:</strong> <a href="tel:+13035004122">303-500-4122</a></li>
                 <li><strong id="ft-email-es" style="display:none;">Correo:</strong><strong id="ft-email-en">Email:</strong> <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a></li>

@@ -3583,3 +3583,12 @@ html[data-theme="dark"] header { background: #0B1220; border-bottom: 1px solid #
 @media (max-width: 420px) { .logo-img { height: 40px; } }
 
 .hero-with-logo { background-image: url('seal-dark.svg'); background-size: min(900px, 140vw); }
+
+/* ============================================================
+   HOME SEO/CRO PASS (2026-10-30): hero micro-links, key facts, home FAQ
+   ============================================================ */
+.home-hero .hero-note a { color: #FFC48A; text-decoration: underline; text-underline-offset: 2px; }
+.home-hero .hero-note a:hover { color: #FFFFFF; }
+#key-facts .pc-panel { margin-top: 0.5rem; }
+#faq .faq-accordion-container { margin-top: 0.5rem; }
+.cta-card .cta-buttons { justify-content: center; flex-wrap: wrap; }

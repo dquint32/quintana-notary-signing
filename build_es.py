@@ -18,6 +18,7 @@ Say "Notary Public" or "servicios notariales". The script stops if it finds
 either word (see BANNED below).
 """
 import datetime
+from html.parser import HTMLParser
 import io
 import os
 import re
@@ -29,8 +30,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # file -> (sitemap priority, change frequency, Spanish title, Spanish description)
 PAGES = {
     "index.html": ("1.0", "weekly",
-        "Notary Public Móvil en Denver, en Español e Inglés | Quintana Notary & Signing",
-        "David Quintana, Notary Public comisionado en Colorado (ID 20254044224). Voy a su casa, oficina, hospital o a una cafetería en el área metropolitana de Denver. En español y en inglés. Solo con cita previa."),
+        "Notary Public en español a domicilio en Denver | Quintana",
+        "Notarizo su firma en su casa, oficina u hospital, de Loveland a Castle Rock. $15 por acto (máximo legal). Apostillas y traducciones. 303-500-4122"),
     "services.html": ("0.9", "monthly",
         "Servicios Notariales en Español en Denver | Quintana Notary & Signing",
         "Servicios notariales móviles y bilingües en el área metropolitana de Denver: notarizaciones, apostillas, traducciones certificadas, notarizaciones en el aeropuerto (DIA) y cartas de permiso de viaje para menores. Solo con cita previa."),
@@ -74,7 +75,82 @@ LANG_TAG = re.compile(r'<[A-Za-z][^<>]*?\bid="[^"<>]*-(es|en)"[^<>]*>')
 ASSET = re.compile(
     r'\b(href|src)="(?!https?:|//|/|#|\.\./|mailto:|tel:|sms:|data:)'
     r'([^"]+\.(?:css|js|png|ico|jpe?g|svg|webp|gif)(?:\?[^"]*)?)"')
+LD_JSON = re.compile(r"[ \t]*<!-- ld-json -->.*?<!-- /ld-json -->\n", re.S)
+LD_ES_DIR = os.path.join(HERE, "_build", "ld-es")   # Spanish JSON-LD per page (Jekyll does not publish _build/)
 REDIRECT = re.compile(r"[ \t]*<!-- lang-redirect -->.*?<!-- /lang-redirect -->\n", re.S)
+
+
+VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
+        "meta", "param", "source", "track", "wbr"}
+
+
+class _LangSpans(HTMLParser):
+    """Find the start/end offsets of every element whose id ends in -<lang>."""
+    def __init__(self, html, lang):
+        super().__init__(convert_charrefs=False)
+        self.html, self.suffix, self.spans, self.stack = html, "-" + lang, [], []
+        self.lines = [0]
+        for line in html.split("\n")[:-1]:
+            self.lines.append(self.lines[-1] + len(line) + 1)
+
+    def _pos(self):
+        line, col = self.getpos()
+        return self.lines[line - 1] + col
+
+    def _drop(self, attrs):
+        return any(k == "id" and v and v.endswith(self.suffix) for k, v in attrs)
+
+    def _inside(self):
+        return any(drop for _, _, drop in self.stack)
+
+    def handle_starttag(self, tag, attrs):
+        start = self._pos()
+        drop = self._drop(attrs) and not self._inside()
+        if tag in VOID:
+            if drop:
+                self.spans.append((start, start + len(self.get_starttag_text())))
+            return
+        self.stack.append((tag, start, drop))
+
+    def handle_startendtag(self, tag, attrs):
+        start = self._pos()
+        if self._drop(attrs) and not self._inside():
+            self.spans.append((start, start + len(self.get_starttag_text())))
+
+    def handle_endtag(self, tag):
+        if not any(t == tag for t, _, _ in self.stack):
+            return
+        while self.stack:
+            t, start, drop = self.stack.pop()
+            if t == tag:
+                if drop:
+                    end = self.html.index(">", self._pos()) + 1
+                    self.spans.append((start, end))
+                return
+
+
+def strip_lang(html, lang):
+    """Remove every element whose id ends in -<lang>, e.g. the English half
+    of each pair on a Spanish page. The language button opens the twin page,
+    so the hidden copy is not needed, and leaving it in makes search engines
+    read a Spanish page as half English (two H1s, every heading twice)."""
+    finder = _LangSpans(html, lang)
+    finder.feed(html)
+    finder.close()
+    if finder.stack and any(drop for _, _, drop in finder.stack):
+        sys.exit(f"strip_lang: an element with an id ending in -{lang} was never closed")
+    for start, end in sorted(finder.spans, reverse=True):
+        # take the whole line when the element sat on a line of its own
+        ls = html.rfind("\n", 0, start) + 1
+        le = html.find("\n", end)
+        le = len(html) if le == -1 else le
+        if not html[ls:start].strip() and not html[end:le].strip():
+            start, end = ls, min(le + 1, len(html))
+        html = html[:start] + html[end:]
+    left = re.search(rf'\bid="[^"]*-{lang}"', html)
+    if left:
+        sys.exit(f"strip_lang: could not remove {left.group(0)}")
+    return html
 
 
 def url(name, lang="en"):
@@ -117,6 +193,13 @@ def set_default(html, lang):
 def spanish_page(name, html):
     _, _, title, desc = PAGES[name]
     html = set_default(html, "es")
+    html = strip_lang(html, "en")
+    ld_es = os.path.join(LD_ES_DIR, name)
+    if os.path.exists(ld_es):
+        if len(LD_JSON.findall(html)) != 1:
+            sys.exit(f"{name}: needs exactly one <!-- ld-json --> block to swap for {ld_es}")
+        spanish_ld, _ = read(ld_es)
+        html = LD_JSON.sub(lambda m: spanish_ld, html, count=1)
     html = REDIRECT.sub("", html)
     html = re.sub(r"<title>.*?</title>",
                   lambda m: "<title>" + title.replace("&", "&amp;") + "</title>", html, count=1, flags=re.S)
@@ -164,7 +247,9 @@ def sitemap():
 def main():
     for name in PAGES:
         html, crlf = read(os.path.join(HERE, name))
-        bad = BANNED.search(html) or BANNED.search(" ".join(PAGES[name][2:]))
+        ld_es = os.path.join(LD_ES_DIR, name)
+        extra = read(ld_es)[0] if os.path.exists(ld_es) else ""
+        bad = BANNED.search(html) or BANNED.search(" ".join(PAGES[name][2:])) or BANNED.search(extra)
         if bad:
             sys.exit(f"{name}: found the banned word '{bad.group(0)}'. Fix it before building.")
         if f'hreflang="es" href="{url(name, "es")}"' not in html:

@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notary Public Móvil en Denver, en Español e Inglés | Quintana Notary &amp; Signing</title>
-    <meta name="description" content="David Quintana, Notary Public comisionado en Colorado (ID 20254044224). Voy a su casa, oficina, hospital o a una cafetería en el área metropolitana de Denver. En español y en inglés. Solo con cita previa.">
+    <title>Notary Public en español a domicilio en Denver | Quintana</title>
+    <meta name="description" content="Notarizo su firma en su casa, oficina u hospital, de Loveland a Castle Rock. $15 por acto (máximo legal). Apostillas y traducciones. 303-500-4122">
     <link rel="canonical" href="https://www.quintananotarysigning.com/es/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Quintana Notary &amp; Signing">
+    <meta property="og:title" content="Notary Public en español a domicilio en Denver | Quintana">
+    <meta property="og:description" content="Notarizo su firma en su casa, oficina u hospital, de Loveland a Castle Rock. $15 por acto (máximo legal). Apostillas y traducciones. 303-500-4122">
+    <meta property="og:url" content="https://www.quintananotarysigning.com/es/">
+    <meta property="og:image" content="https://www.quintananotarysigning.com/og-image.png">
+    <meta property="og:locale" content="es_US">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/">
     <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/">
     <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/">
@@ -21,7 +30,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="../styles.css?v=20261029b">
+    <link rel="stylesheet" href="../styles.css?v=20261030a">
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -29,68 +38,344 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.png">
     <meta name="theme-color" content="#0A2D69">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <!-- ============================================================
-         LOCAL BUSINESS / NOTARY STRUCTURED DATA (schema.org JSON-LD)
-         ============================================================ -->
+    <!-- ld-json -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "additionalType": "https://www.wikidata.org/wiki/Q294126",
-      "name": "Quintana Notary & Signing",
-      "alternateName": "Servicios Quintana LLC",
-      "url": "https://www.quintananotarysigning.com/",
-      "image": "https://www.quintananotarysigning.com/quintana-seal.png",
-      "logo": "https://www.quintananotarysigning.com/quintana-seal.png",
-      "telephone": "+1-303-500-4122",
-      "email": "info@quintananotarysigning.com",
-      "description": "Mobile Notary Public in the Denver Metro area, English and Spanish, by appointment only. Notarizations at your home, office or hospital, Spanish-to-English certified translations, Colorado apostilles, DIA airport notary, loan signings and I-9 verification.",
-      "priceRange": "$15-$700",
-      "currenciesAccepted": "USD",
-      "paymentAccepted": "Cash, Venmo, Zelle, Credit Card, Debit Card",
-      "knowsLanguage": ["en", "es"],
-      "availableLanguage": ["en", "es"],
-      "areaServed": [
-        { "@type": "City", "name": "Denver, CO" },
-        { "@type": "City", "name": "Highlands Ranch, CO" },
-        { "@type": "City", "name": "Parker, CO" },
-        { "@type": "City", "name": "Aurora, CO" },
-        { "@type": "City", "name": "Loveland, CO" },
-        { "@type": "City", "name": "Castle Rock, CO" },
-        { "@type": "Airport", "name": "Denver International Airport", "iataCode": "DEN" }
-      ],
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "10:00",
-          "closes": "17:00"
+          "@type": "Notary",
+          "@id": "https://www.quintananotarysigning.com/#business",
+          "name": "Quintana Notary & Signing",
+          "url": "https://www.quintananotarysigning.com/es/",
+          "logo": "https://www.quintananotarysigning.com/quintana-seal.png",
+          "image": "https://www.quintananotarysigning.com/david-quintana-professional.jpg",
+          "description": "Notary Public móvil en español e inglés. Notarizaciones a domicilio, traducciones certificadas de español a inglés y apostillas en Colorado. Solo con cita previa.",
+          "telephone": "+1-303-500-4122",
+          "email": "info@quintananotarysigning.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5128 E Colfax Ave",
+            "addressLocality": "Denver",
+            "addressRegion": "CO",
+            "postalCode": "80220",
+            "addressCountry": "US"
+          },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=5128%20E%20Colfax%20Ave%2C%20Denver%2C%20CO%2080220",
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Área metropolitana de Denver, de Loveland a Castle Rock, Colorado"
+            },
+            {
+              "@type": "City",
+              "name": "Denver, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Aurora, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Lakewood, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Thornton, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Westminster, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Arvada, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Commerce City, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Broomfield, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Boulder, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Longmont, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Loveland, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Englewood, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Littleton, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Centennial, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Highlands Ranch, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Parker, CO"
+            },
+            {
+              "@type": "City",
+              "name": "Castle Rock, CO"
+            },
+            {
+              "@type": "Airport",
+              "name": "Denver International Airport",
+              "iataCode": "DEN"
+            }
+          ],
+          "knowsLanguage": [
+            "es",
+            "en"
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "10:00",
+              "closes": "17:00"
+            }
+          ],
+          "priceRange": "$10-$700",
+          "currenciesAccepted": "USD",
+          "paymentAccepted": "Efectivo, Venmo, Zelle, tarjeta de débito, tarjeta de crédito (recargo de 2%)",
+          "founder": {
+            "@id": "https://www.quintananotarysigning.com/#david"
+          },
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Servicios Quintana LLC",
+            "url": "https://serviciosquintana.com/",
+            "logo": "https://www.quintananotarysigning.com/servicios-quintana-logo.png"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios y precios",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Acto notarial",
+                "description": "Máximo legal por acto notarial en Colorado (C.R.S. § 24-21-529). La tarifa de viaje es aparte y se cotiza antes de la cita.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": 15,
+                  "maxPrice": 15,
+                  "priceCurrency": "USD",
+                  "unitText": "por acto notarial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Precio comunitario",
+                "description": "En lugares comunitarios, con cita previa. Sin tarifa de viaje.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": 10,
+                  "priceCurrency": "USD",
+                  "unitText": "por acto notarial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Tarifa de viaje",
+                "description": "Según la distancia de ida y vuelta; se cotiza antes de confirmar.",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 20,
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Traducción certificada español-inglés",
+                "description": "Con certificación firmada del traductor. Preparada para cumplir los requisitos de USCIS; la agencia decide si la acepta.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "minPrice": 30,
+                  "priceCurrency": "USD",
+                  "unitText": "por página"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Apostilla en Colorado",
+                "description": "Entrega en persona en la Secretaría de Estado de Colorado. Desde $85 (solo entrega) o $150 (servicio completo).",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 85,
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Notary Public en el aeropuerto de Denver (DIA)",
+                "description": "$95 fijos con estacionamiento incluido, más $10 por firma notarizada.",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": 95,
+                  "priceCurrency": "USD"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Copia certificada",
+                "description": "$15 por copia; $10 en lugares comunitarios.",
+                "priceSpecification": {
+                  "@type": "UnitPriceSpecification",
+                  "price": 15,
+                  "priceCurrency": "USD",
+                  "unitText": "por copia"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.quintananotarysigning.com/#david",
+          "name": "David Quintana",
+          "jobTitle": "Notary Public",
+          "image": "https://www.quintananotarysigning.com/david-quintana-professional.jpg",
+          "url": "https://www.quintananotarysigning.com/es/about.html",
+          "knowsLanguage": [
+            "es",
+            "en"
+          ],
+          "worksFor": {
+            "@id": "https://www.quintananotarysigning.com/#business"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Metropolitan State University of Denver",
+            "url": "https://www.msudenver.edu/"
+          },
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Comisión de Notary Public de Colorado",
+              "credentialCategory": "Comisión estatal",
+              "identifier": "20254044224",
+              "validUntil": "2029-11-28",
+              "recognizedBy": {
+                "@type": "GovernmentOrganization",
+                "name": "Colorado Secretary of State",
+                "url": "https://www.coloradosos.gov/notary/pages/public/home.xhtml"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "B.S. en Informática de la Salud (Health Informatics)",
+              "credentialCategory": "degree",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Metropolitan State University of Denver"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.quintananotarysigning.com/#website",
+          "url": "https://www.quintananotarysigning.com/",
+          "name": "Quintana Notary & Signing",
+          "inLanguage": [
+            "en",
+            "es"
+          ],
+          "publisher": {
+            "@id": "https://www.quintananotarysigning.com/#business"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.quintananotarysigning.com/es/#faq",
+          "inLanguage": "es",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué hace un Notary Public en Colorado? ¿Me puede dar consejos legales?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Un Notary Public verifica su identidad y es testigo de su firma. No soy abogado: no puedo darle consejos legales, decirle qué documento necesita ni qué escribir en él (C.R.S. § 24-21-525)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cobra un Notary Public en Colorado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La ley de Colorado permite cobrar como máximo $15 por acto notarial (C.R.S. § 24-21-529). La tarifa de viaje y los cargos por horario son aparte y se los doy por escrito antes de la cita."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuánto cuesta que venga a mi casa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La tarifa de viaje empieza en $20 y depende de la distancia de ida y vuelta. Atiendo de Loveland a Castle Rock; más lejos, con tarifa adicional. Fuera de horario (7 PM – 10 AM) son +$20 y en fin de semana +$15."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hay una opción más barata?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Si nos vemos en Tienda Salvadoreña (East Colfax), en la biblioteca Auraria de MSU Denver o en una sucursal de la Biblioteca Pública de Denver, son $10 por acto y sin tarifa de viaje, con cita previa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué identificación necesito?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pasaporte, licencia de conducir u otra identificación del gobierno, vigente o vencida hace no más de un año. Si no la tiene, pregúnteme antes de hacer la cita."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Sus traducciones sirven para USCIS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Preparo cada traducción para cumplir los requisitos de USCIS, con mi certificación firmada de que es completa y exacta. La decisión de aceptarla es de la agencia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puede notarizar en el aeropuerto de Denver (DIA)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Son $95 fijos con estacionamiento incluido, más $10 por firma. Nos vemos en la terminal, antes del control de seguridad."
+              }
+            }
+          ]
         }
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "David Quintana",
-        "jobTitle": "Colorado-Commissioned Notary Public"
-      },
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Notary Public Commission",
-        "recognizedBy": {
-          "@type": "State",
-          "name": "State of Colorado"
-        }
-      },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Servicios Quintana LLC",
-        "url": "https://serviciosquintana.com/",
-        "logo": "https://www.quintananotarysigning.com/servicios-quintana-logo.png"
-      },
-      "sameAs": [
-        "https://serviciosquintana.com/"
       ]
     }
     </script>
+    <!-- /ld-json -->
     <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
@@ -99,15 +384,12 @@
     <div class="top-help-content">
         <span class="top-help-message">
             <span id="help-text-es">¿Necesitas ayuda?</span>
-            <span id="help-text-en" style="display:none;">Need help?</span>
         </span>
         <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
             <span id="help-call-es">Llamar / Mensaje</span>
-            <span id="help-call-en" style="display:none;">Call / Text Me</span>
         </a>
         <a href="https://wa.me/13035004122" target="_blank" rel="noopener" class="top-help-btn top-help-btn-whatsapp" title="Enviar mensaje por WhatsApp">
             <span id="help-whatsapp-es">WhatsApp</span>
-            <span id="help-whatsapp-en" style="display:none;">WhatsApp</span>
         </a>
     </div>
 </div>
@@ -120,7 +402,6 @@
         </div>
 
         <button class="toggle-btn" id="lang-toggle">
-            <span id="toggle-label-en" style="display:none;">Español</span>
             <span id="toggle-label-es">English</span>
         </button>
 
@@ -135,303 +416,273 @@
 
         <nav id="main-nav" aria-label="Main">
             <a href="index.html" id="nav-home-es" aria-current="page">Inicio</a>
-                <a href="index.html" id="nav-home-en" aria-current="page" style="display:none;">Home</a>
             <div class="nav-group">
                 <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-services">
-                    <span id="navg-services-label-es">Servicios</span><span id="navg-services-label-en" style="display:none;">Services</span><span class="nav-caret" aria-hidden="true"></span>
+                    <span id="navg-services-label-es">Servicios</span><span class="nav-caret" aria-hidden="true"></span>
                 </button>
                 <div class="nav-dropdown" id="navg-services">
                 <a href="services.html" id="navd-mobile-es">Servicio Notarial Móvil</a>
-                <a href="services.html" id="navd-mobile-en" style="display:none;">Mobile Notary</a>
                 <a href="apostille.html" id="navd-apost-es">Apostillas</a>
-                <a href="apostille.html" id="navd-apost-en" style="display:none;">Apostilles</a>
                 <a href="certified-copies.html" id="navd-copies-es">Copias Certificadas</a>
-                <a href="certified-copies.html" id="navd-copies-en" style="display:none;">Certified Copies</a>
                 <a href="translate.html" id="navd-transl-es">Traducciones Certificadas</a>
-                <a href="translate.html" id="navd-transl-en" style="display:none;">Certified Translations</a>
                 <a href="airport-notarizations.html" id="navd-airport-es">Notarizaciones en el Aeropuerto (DIA)</a>
-                <a href="airport-notarizations.html" id="navd-airport-en" style="display:none;">Airport Notary (DIA)</a>
                 <a href="services.html#passport-i9" id="navd-passport-es">Ayuda con Pasaporte e I-9</a>
-                <a href="services.html#passport-i9" id="navd-passport-en" style="display:none;">Passport &amp; I-9 Help</a>
                 </div>
             </div>
             <div class="nav-group">
                 <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-business">
-                    <span id="navg-business-label-es">Para Empresas</span><span id="navg-business-label-en" style="display:none;">For Business</span><span class="nav-caret" aria-hidden="true"></span>
+                    <span id="navg-business-label-es">Para Empresas</span><span class="nav-caret" aria-hidden="true"></span>
                 </button>
                 <div class="nav-dropdown" id="navg-business">
                 <a href="b2b-real-estate.html" id="navd-realestate-es">Títulos y Bienes Raíces</a>
-                <a href="b2b-real-estate.html" id="navd-realestate-en" style="display:none;">Title &amp; Real Estate</a>
                 <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es">Abogados de Inmigración (ICE Aurora)</a>
-                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en" style="display:none;">Immigration Attorneys (Aurora ICE)</a>
                 <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es">Apoyo entre Colegas</a>
-                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en" style="display:none;">Notary-to-Notary Support</a>
                 <a href="b2b-real-estate.html#professional-development" id="navd-dev-es">Web y Mentoría</a>
-                <a href="b2b-real-estate.html#professional-development" id="navd-dev-en" style="display:none;">Web &amp; Mentoring</a>
                 </div>
             </div>
             <a href="pricing.html" id="nav-pricing-es">Precios</a>
-                <a href="pricing.html" id="nav-pricing-en" style="display:none;">Pricing</a>
             <div class="nav-group nav-dropdown-right">
                 <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-about">
-                    <span id="navg-about-label-es">Acerca de</span><span id="navg-about-label-en" style="display:none;">About</span><span class="nav-caret" aria-hidden="true"></span>
+                    <span id="navg-about-label-es">Acerca de</span><span class="nav-caret" aria-hidden="true"></span>
                 </button>
                 <div class="nav-dropdown" id="navg-about">
                 <a href="about.html" id="navd-about-es">Acerca de David</a>
-                <a href="about.html" id="navd-about-en" style="display:none;">About David</a>
                 <a href="faq.html" id="navd-faq-es">Preguntas Frecuentes</a>
-                <a href="faq.html" id="navd-faq-en" style="display:none;">FAQ</a>
                 </div>
             </div>
             <a href="contact.html" id="nav-contact-es" class="nav-cta">Reservar / Contacto</a>
-                <a href="contact.html" id="nav-contact-en" class="nav-cta" style="display:none;">Book / Contact</a>
         </nav>
     </div>
 </header>
 <div class="appointment-bar" role="note">
     <span id="appt-bar-es">Solo con cita previa &middot; Reserve primero — soy móvil y no atiendo sin cita en ningún local.</span>
-    <span id="appt-bar-en" style="display:none;">By appointment only &middot; Please book first — I'm mobile and don't take walk-ins at any location.</span>
 </div>
 <div class="statutory-bar">
     <span id="legal-disclosure-es">
         <strong>Aviso Legal (C.R.S. § 24-21-525):</strong>
         <span class="statutory-es"><strong>NO SOY ABOGADO LICENCIADO PARA EJERCER EL DERECHO EN EL ESTADO DE COLORADO Y NO PUEDO DAR CONSEJOS LEGALES NI ACEPTAR HONORARIOS POR CONSEJOS LEGALES. NO SOY CONSULTOR DE INMIGRACIÓN NI EXPERTO EN ASUNTOS DE INMIGRACIÓN. SI SOSPECHA DE FRAUDE, PUEDE COMUNICARSE CON LA OFICINA DEL FISCAL GENERAL DE COLORADO O CON LA CORTE SUPREMA DE COLORADO.</strong></span>
     </span>
-    <span id="legal-disclosure-en" style="display:none;">
-        <strong>Legal Disclosure (C.R.S. § 24-21-525):</strong>
-        <span class="statutory-en"><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE. I AM NOT AN IMMIGRATION CONSULTANT, NOR AM I AN EXPERT ON IMMIGRATION MATTERS. IF YOU SUSPECT FRAUD, YOU MAY CONTACT THE COLORADO ATTORNEY GENERAL’S OFFICE OR THE COLORADO SUPREME COURT.</strong></span>
-    </span>
 </div>
 <section class="hero hero-with-logo home-hero">
     <div class="hero-content">
         <div class="hero-badge">
-            <span id="hero-badge-es">Solo con cita previa &middot; Área metropolitana de Denver &middot; Comisionado y asegurado</span>
-            <span id="hero-badge-en" style="display:none;">By appointment only &middot; Denver Metro area &middot; Commissioned &amp; Insured</span>
+            <span id="hero-badge-es">Solo con cita previa &middot; De Loveland a Castle Rock &middot; Comisionado y asegurado</span>
         </div>
-        <h1 id="hero-h1-es">Soy David Quintana, Notary Public móvil. Yo voy a donde usted está.</h1>
-        <h1 id="hero-h1-en" style="display:none;">I&rsquo;m David Quintana, a mobile Notary Public. I come to you.</h1>
-        <p id="hero-h2-es" class="hero-subtitle">Le atiendo en su casa, en su oficina, en el hospital o en una cafetería cerca de usted, en el área metropolitana de Denver. Solo con cita previa: llámeme o mándeme un mensaje y acordamos la hora.</p>
-        <p id="hero-h2-en" class="hero-subtitle" style="display:none;">I&rsquo;ll meet you at your home, your office, the hospital, or a coffee shop near you in the Denver Metro area. By appointment only: call or text me and we&rsquo;ll pick a time.</p>
+        <h1 id="hero-h1-es">Notary Public móvil en Denver, en español: voy a su casa, oficina u hospital</h1>
+        <p id="hero-h2-es" class="hero-subtitle">Soy David Quintana, Notary Public comisionado en Colorado. Le atiendo en su casa, en su oficina, en el hospital o en una cafetería cerca de usted, de Loveland a Castle Rock. Solo con cita previa: escríbame o llámeme y acordamos la hora.</p>
         <p id="hero-explain-es" class="hero-subtitle hero-note">Una aclaración: en Estados Unidos, un Notary Public revisa su identificación y es testigo de su firma. No soy abogado, así que no puedo decirle qué documento necesita ni qué escribir en él.</p>
-        <p id="hero-explain-en" class="hero-subtitle hero-note" style="display:none;">A quick note: in the U.S., a Notary Public checks your ID and watches you sign. I&rsquo;m not an attorney, so I can&rsquo;t tell you which document you need or what to write in it.</p>
         <div class="cta-buttons">
-            <a id="cta-book-es" href="contact.html" class="btn btn-primary"><span>Hacer una cita</span></a>
-            <a id="cta-book-en" href="contact.html" class="btn btn-primary" style="display:none;"><span>Book an appointment</span></a>
-            <a id="cta-call-es" href="tel:+13035004122" class="btn btn-secondary"><span>Llame o escriba: 303-500-4122</span></a>
-            <a id="cta-call-en" href="tel:+13035004122" class="btn btn-secondary" style="display:none;"><span>Call or text 303-500-4122</span></a>
+            <a id="cta-wa-es" href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp"><span>Escríbame por WhatsApp</span></a>
+            <a id="cta-call-es" href="tel:+13035004122" class="btn btn-secondary"><span>Llamar al 303-500-4122</span></a>
         </div>
+        <p id="hero-micro-es" class="hero-subtitle hero-note">Le doy el precio total por escrito antes de confirmar. <a href="pricing.html">Ver precios</a> &middot; <a href="contact.html">Otras formas de reservar</a></p>
     </div>
 </section>
 <main class="section container pricing-page home-page">
+<section class="price-block home-block" id="key-facts" aria-labelledby="facts-title-es facts-title-en">
+<div class="pb-head">
+<div class="pb-titles">
+<h2 class="pb-title"><span id="facts-title-es">Datos clave</span></h2>
+</div>
+</div>
+<div class="pc-panel">
+<dl class="pc-facts" id="facts-list-es">
+<div class="pc-fact"><dt>Quién</dt><dd>David Quintana, Notary Public comisionado en Colorado, ID 20254044224, vigente hasta el 28/11/2029. <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a>.</dd></div>
+<div class="pc-fact"><dt>Idiomas</dt><dd>Español e inglés; hablo los dos como idiomas nativos.</dd></div>
+<div class="pc-fact"><dt>Dónde</dt><dd>Voy a su casa, oficina, hospital o centro de cuidado, de Loveland a Castle Rock. Más lejos, con tarifa de viaje adicional.</dd></div>
+<div class="pc-fact"><dt>Tarifa notarial</dt><dd>$15 por acto notarial, el máximo que permite la ley de Colorado (C.R.S. § 24-21-529). La tarifa de viaje es aparte, desde $20, y se la doy antes de confirmar.</dd></div>
+<div class="pc-fact"><dt>Precio comunitario</dt><dd>$10 por acto y sin tarifa de viaje en Tienda Salvadoreña (East Colfax), la biblioteca Auraria de MSU Denver o cualquier sucursal de la Biblioteca Pública de Denver, con cita. <a href="contact.html#locations">Lugares</a>.</dd></div>
+<div class="pc-fact"><dt>Aeropuerto (DIA)</dt><dd>$95 fijos con estacionamiento incluido, más $10 por firma. Nos vemos en la terminal, antes del control de seguridad.</dd></div>
+<div class="pc-fact"><dt>Seguro</dt><dd>Servicios Quintana LLC tiene seguro con The Hartford, con responsabilidad profesional (errores y omisiones) para el trabajo notarial y de traducción. Certificado de seguro a petición.</dd></div>
+<div class="pc-fact"><dt>Lo que no hago</dt><dd>No soy abogado: no doy asesoría legal, no elijo formularios ni preparo documentos legales, y no hago notarizaciones en línea.</dd></div>
+<div class="pc-fact"><dt>Cita</dt><dd>Solo con cita previa. <a href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener">WhatsApp</a> o llamada al <a href="tel:+13035004122">303-500-4122</a>.</dd></div>
+</dl>
+</div>
+</section>
 <section class="price-block home-block" id="services" aria-labelledby="services-h">
 <div class="pb-head">
 <div class="pb-titles">
-<h2 class="pb-title" id="services-h"><span id="services-title-es">En qué le puedo ayudar</span><span id="services-title-en" style="display:none;">What I can help with</span></h2>
+<h2 class="pb-title" id="services-h"><span id="services-title-es">En qué le puedo ayudar</span></h2>
 
 </div>
 </div>
 <div class="pc-grid pc-grid--3">
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="service-1-es">Notarizaciones generales</span><span id="service-1-en" style="display:none;">General notarization</span></h3>
-<span class="price-tag price-tag--law">$15<span class="price-unit"><span id="svc1-u-es">por acto</span><span id="svc1-u-en" style="display:none;">per act</span></span></span>
+<h3 class="pc-title"><span id="service-1-es">Notarizaciones generales</span></h3>
+<span class="price-tag price-tag--law">$15<span class="price-unit"><span id="svc1-u-es">por acto</span></span></span>
 </div>
-<div class="pc-tags"><span class="law-tag"><span id="svc1-law-es">Límite de ley</span><span id="svc1-law-en" style="display:none;">Legal maximum</span></span></div>
+<div class="pc-tags"><span class="law-tag"><span id="svc1-law-es">Límite de ley</span></span></div>
 <p class="pc-text" id="service-1-desc-es">Declaraciones juradas, juramentos, poderes, documentos de títulos de vehículos y cartas de permiso de viaje para menores. Usted trae el documento ya preparado; yo verifico su identidad y notarizo su firma. <a href="services.html">Más información</a>.</p>
-            <p class="pc-text" id="service-1-desc-en" style="display:none;">Affidavits, oaths, powers of attorney, vehicle title paperwork, and travel consent letters for minors. You bring the document already prepared; I check your ID and notarize your signature. <a href="services.html">More about this</a>.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="service-2-es">Traducciones certificadas de español a inglés</span><span id="service-2-en" style="display:none;">Certified Spanish-to-English translations</span></h3>
-<span class="price-tag"><span id="svc2-from-es">Desde</span><span id="svc2-from-en" style="display:none;">From</span> $30<span class="price-unit"><span id="svc2-u-es">/ pág.</span><span id="svc2-u-en" style="display:none;">/ page</span></span></span>
+<h3 class="pc-title"><span id="service-2-es">Traducciones certificadas de español a inglés</span></h3>
+<span class="price-tag"><span id="svc2-from-es">Desde</span> $30<span class="price-unit"><span id="svc2-u-es">/ pág.</span></span></span>
 </div>
 <p class="pc-text" id="service-2-desc-es">Las hago yo, hablante nativo de los dos idiomas. Cada traducción lleva mi certificación firmada de que está completa y es exacta. Las preparo para cumplir con los requisitos de USCIS, pero la decisión de aceptarlas es de la agencia. <a href="translate.html">Más información</a>.</p>
-            <p class="pc-text" id="service-2-desc-en" style="display:none;">I do them myself, as a native speaker of both languages. Each one comes with my signed certification that it&rsquo;s complete and accurate. I prepare them to meet USCIS requirements, but the agency makes the final call. <a href="translate.html">More about translations</a>.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="service-3-es">Apostillas</span><span id="service-3-en" style="display:none;">Apostilles</span></h3>
-<span class="price-tag"><span id="svc3-from-es">Desde</span><span id="svc3-from-en" style="display:none;">From</span> $85</span>
+<h3 class="pc-title"><span id="service-3-es">Apostillas</span></h3>
+<span class="price-tag"><span id="svc3-from-es">Desde</span> $85</span>
 </div>
 <p class="pc-text" id="service-3-desc-es">Si su documento de Colorado va a otro país, lo llevo en persona a la Secretaría de Estado de Colorado en Denver y se lo regreso. Puedo encargarme de todo o solo hacer la entrega. <a href="apostille.html">Opciones y precios</a>.</p>
-            <p class="pc-text" id="service-3-desc-en" style="display:none;">If your Colorado document is headed to another country, I hand-carry it to the Colorado Secretary of State&rsquo;s office in Denver and bring it back to you. I can handle the whole thing or just make the delivery. <a href="apostille.html">Options and prices</a>.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="service-4-es">Notarizaciones en el aeropuerto (DIA)</span><span id="service-4-en" style="display:none;">Airport notary at DIA</span></h3>
-<span class="price-tag">$95<span class="price-unit"><span id="svc4-u-es">fijo</span><span id="svc4-u-en" style="display:none;">flat</span></span></span>
+<h3 class="pc-title"><span id="service-4-es">Notarizaciones en el aeropuerto (DIA)</span></h3>
+<span class="price-tag">$95<span class="price-unit"><span id="svc4-u-es">fijo</span></span></span>
 </div>
-<div class="pc-tags"><span class="scope-tag scope-tag--free"><span id="svc4-plus-es">+ $10 por firma</span><span id="svc4-plus-en" style="display:none;">+ $10 per signature</span></span></div>
+<div class="pc-tags"><span class="scope-tag scope-tag--free"><span id="svc4-plus-es">+ $10 por firma</span></span></div>
 <p class="pc-text" id="service-4-desc-es">¿Ya va a volar y se dio cuenta de que le falta notarizar algo? Lo encuentro dentro de la terminal. Son $95 fijos por ir, con el estacionamiento incluido, más $10 por cada firma que notarice. <a href="airport-notarizations.html">Cómo funciona</a>.</p>
-            <p class="pc-text" id="service-4-desc-en" style="display:none;">About to fly out and just realized something needs a notary? I&rsquo;ll meet you inside the terminal. It&rsquo;s a flat $95 to get there, parking included, plus $10 for each signature I notarize. <a href="airport-notarizations.html">How it works</a>.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="service-5-es">Firmas de préstamos y verificación I-9</span><span id="service-5-en" style="display:none;">Loan signings and I-9 verification</span></h3>
+<h3 class="pc-title"><span id="service-5-es">Firmas de préstamos y verificación I-9</span></h3>
 
 </div>
 <p class="pc-text" id="service-5-desc-es">Las compañías de títulos y los prestamistas me envían el paquete del préstamo y yo me reúno con los prestatarios para la firma. Solo imprimo el paquete; no preparo ni explico los documentos. A los empleadores les puedo servir como representante autorizado para completar la Sección 2 del Formulario I-9 con su nuevo empleado. <a href="b2b-real-estate.html">Para empresas</a>.</p>
-            <p class="pc-text" id="service-5-desc-en" style="display:none;">Title companies and lenders send me the loan package, and I meet the borrowers for the signing. I only print the package; I don&rsquo;t prepare or explain the documents. For employers, I can act as your authorized representative and complete Section 2 of Form I-9 with your new hire. <a href="b2b-real-estate.html">For businesses</a>.</p>
 </article>
 </div>
 <div class="cta-buttons cta-services-nudge" style="margin-top: 2rem;">
             <a id="cta-services-es" href="services.html" class="btn btn-primary"><span>Ver todos los servicios</span></a>
-            <a id="cta-services-en" href="services.html" class="btn btn-primary" style="display:none;"><span>See every service</span></a>
         </div>
 </section>
 <section class="price-block home-block" id="costs" aria-labelledby="costs-h">
 <div class="pb-head">
 <div class="pb-titles">
-<h2 class="pb-title" id="costs-h"><span id="pricing-title-es">Cuánto cuesta</span><span id="pricing-title-en" style="display:none;">What it costs</span></h2>
+<h2 class="pb-title" id="costs-h"><span id="pricing-title-es">Cuánto cuesta</span></h2>
 <p id="pricing-intro-es" class="pb-sub">La ley de Colorado pone un límite a lo que un Notary Public puede cobrar por cada acto notarial. Lo demás es por mi tiempo y el viaje, y aparece en su cotización.</p>
-        <p id="pricing-intro-en" class="pb-sub" style="display:none;">Colorado law caps what a Notary Public can charge for each notarial act. Anything beyond that is for my time and the drive, and it&rsquo;s spelled out in your quote.</p>
 </div>
 </div>
 <div class="pc-grid pc-grid--2">
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="home-p-act-es">Tarifa notarial</span><span id="home-p-act-en" style="display:none;">Notary fee</span></h3>
-<span class="price-tag price-tag--law">$15<span class="price-unit"><span id="home-p-act-u-es">por acto</span><span id="home-p-act-u-en" style="display:none;">per act</span></span></span>
+<h3 class="pc-title"><span id="home-p-act-es">Tarifa notarial</span></h3>
+<span class="price-tag price-tag--law">$15<span class="price-unit"><span id="home-p-act-u-es">por acto</span></span></span>
 </div>
-<div class="pc-tags"><span class="law-tag"><span id="home-p-act-law-es">Límite de ley</span><span id="home-p-act-law-en" style="display:none;">Legal maximum</span></span></div>
+<div class="pc-tags"><span class="law-tag"><span id="home-p-act-law-es">Límite de ley</span></span></div>
 <p class="pc-text" id="home-p-act-d-es">Por acto notarial (por sello). Es lo máximo que permite la ley de Colorado.</p>
-<p class="pc-text" id="home-p-act-d-en" style="display:none;">Per notarial act (per seal). The most Colorado law allows.</p>
 </article>
 <article class="pc pc--community">
-<div class="pc-flag"><span id="home-p-com-flag-es">Lugares comunitarios</span><span id="home-p-com-flag-en" style="display:none;">Community locations</span></div>
+<div class="pc-flag"><span id="home-p-com-flag-es">Lugares comunitarios</span></div>
 <div class="pc-head">
-<h3 class="pc-title"><span id="home-p-com-es">Precio comunitario</span><span id="home-p-com-en" style="display:none;">Community rate</span></h3>
-<span class="price-tag price-tag--green">$10<span class="price-unit"><span id="home-p-com-u-es">por acto</span><span id="home-p-com-u-en" style="display:none;">per act</span></span></span>
+<h3 class="pc-title"><span id="home-p-com-es">Precio comunitario</span></h3>
+<span class="price-tag price-tag--green">$10<span class="price-unit"><span id="home-p-com-u-es">por acto</span></span></span>
 </div>
-<div class="pc-tags"><span class="scope-tag scope-tag--green"><span id="home-p-com-nt-es">Sin tarifa de viaje</span><span id="home-p-com-nt-en" style="display:none;">No travel fee</span></span></div>
+<div class="pc-tags"><span class="scope-tag scope-tag--green"><span id="home-p-com-nt-es">Sin tarifa de viaje</span></span></div>
 <p class="pc-text" id="home-p-com-d-es">Cuando nos vemos en uno de los <a href="contact.html#locations">lugares comunitarios</a>. También es con cita previa.</p>
-<p class="pc-text" id="home-p-com-d-en" style="display:none;">When we meet at one of the <a href="contact.html#locations">community locations</a>. Still by appointment.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="home-p-trv-es">Tarifa de viaje</span><span id="home-p-trv-en" style="display:none;">Travel fee</span></h3>
-<span class="price-tag"><span id="home-p-trv-from-es">Desde</span><span id="home-p-trv-from-en" style="display:none;">From</span> $20</span>
+<h3 class="pc-title"><span id="home-p-trv-es">Tarifa de viaje</span></h3>
+<span class="price-tag"><span id="home-p-trv-from-es">Desde</span> $20</span>
 </div>
-<div class="pc-tags"><span class="scope-tag scope-tag--free"><span id="home-p-trv-t-es">La ley no la regula</span><span id="home-p-trv-t-en" style="display:none;">Not set by law</span></span></div>
+<div class="pc-tags"><span class="scope-tag scope-tag--free"><span id="home-p-trv-t-es">La ley no la regula</span></span></div>
 <p class="pc-text" id="home-p-trv-d-es">Depende de la distancia de ida y vuelta, y se la doy antes de confirmar la cita.</p>
-<p class="pc-text" id="home-p-trv-d-en" style="display:none;">Based on round-trip distance and quoted before we confirm.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="home-p-xtra-es">Horario y fines de semana</span><span id="home-p-xtra-en" style="display:none;">Evenings and weekends</span></h3>
+<h3 class="pc-title"><span id="home-p-xtra-es">Horario y fines de semana</span></h3>
 
 </div>
-<div class="pc-tags"><span class="scope-tag scope-tag--free"><span id="home-p-xtra-t-es">Incluido en su cotización</span><span id="home-p-xtra-t-en" style="display:none;">Included in your quote</span></span></div>
+<div class="pc-tags"><span class="scope-tag scope-tag--free"><span id="home-p-xtra-t-es">Incluido en su cotización</span></span></div>
 <ul class="fee-rows">
-<li><div class="fr-text"><strong><span id="home-p-eve-l-es">Fuera de horario</span><span id="home-p-eve-l-en" style="display:none;">After hours</span></strong><span class="fr-detail"><span id="home-p-eve-d-es">7 PM – 10 AM</span><span id="home-p-eve-d-en" style="display:none;">7 PM – 10 AM</span></span></div><span class="price-tag price-tag--sm">+$20</span></li>
-<li><div class="fr-text"><strong><span id="home-p-wkd-l-es">Fin de semana</span><span id="home-p-wkd-l-en" style="display:none;">Weekends</span></strong><span class="fr-detail"><span id="home-p-wkd-d-es">Sábado o domingo</span><span id="home-p-wkd-d-en" style="display:none;">Saturday or Sunday</span></span></div><span class="price-tag price-tag--sm">+$15</span></li>
+<li><div class="fr-text"><strong><span id="home-p-eve-l-es">Fuera de horario</span></strong><span class="fr-detail"><span id="home-p-eve-d-es">7 PM – 10 AM</span></span></div><span class="price-tag price-tag--sm">+$20</span></li>
+<li><div class="fr-text"><strong><span id="home-p-wkd-l-es">Fin de semana</span></strong><span class="fr-detail"><span id="home-p-wkd-d-es">Sábado o domingo</span></span></div><span class="price-tag price-tag--sm">+$15</span></li>
 </ul>
 </article>
 </div>
 <div class="cta-buttons cta-services-nudge">
             <a id="cta-pricing-es" href="pricing.html" class="btn btn-primary"><span>Ver la lista completa de precios</span></a>
-            <a id="cta-pricing-en" href="pricing.html" class="btn btn-primary" style="display:none;"><span>See the full price list</span></a>
         </div>
 </section>
 <section class="price-block home-block home-meet" aria-label="David Quintana">
-<section class="meet-david card" aria-labelledby="meet-title-en">
+<section class="meet-david card" aria-labelledby="meet-title-es meet-title-en">
         <img src="../david-quintana-seated.jpg" alt="David Quintana sitting in an armchair in a navy suit, in front of a tree with orange fall leaves" class="meet-david-img" width="800" height="1000" loading="lazy">
         <div class="meet-david-text">
             <h2 id="meet-title-es">Hola, soy David</h2>
-            <h2 id="meet-title-en" style="display:none;">Hi, I&rsquo;m David</h2>
             <p id="meet-p-es">Soy yo quien llega a su cita, no un empleado ni otra persona. Español e inglés son mis dos idiomas nativos, me gradué de MSU Denver en Informática de la Salud y llevo más de 5 años ayudando a la gente con su papeleo.</p>
-            <p id="meet-p-en" style="display:none;">I&rsquo;m the one who shows up to your appointment, not an employee or someone I send. Spanish and English are both my native languages, I graduated from MSU Denver in Health Informatics, and I&rsquo;ve spent more than 5 years helping people with their paperwork.</p>
             <div class="cta-buttons meet-david-cta">
                 <a id="meet-link-es" href="about.html" class="btn btn-secondary"><span>Más sobre mí</span></a>
-                <a id="meet-link-en" href="about.html" class="btn btn-secondary" style="display:none;"><span>More about me</span></a>
             </div>
         </div>
     </section>
 <div class="verification-banner">
         <div class="verification-text">
             <h3 id="verify-h3-es">Verifique mi Comisión de Notary Public</h3>
-            <h3 id="verify-h3-en" style="display:none;">Verify My Notary Commission</h3>
             <p id="verify-p-es">Haga clic en el botón, elija "Verify a Notary" e ingrese mi ID.</p>
-            <p id="verify-p-en" style="display:none;">Click the button, select "Verify a Notary," and enter my ID.</p>
             <div class="commission-details">
                 <span id="verify-name-es"><strong>Nombre:</strong> David Quintana</span>
-                <span id="verify-name-en" style="display:none;"><strong>Name:</strong> David Quintana</span>
                 <span class="separator">|</span>
                 <span id="verify-id-es"><strong>ID:</strong> 20254044224</span>
-                <span id="verify-id-en" style="display:none;"><strong>ID:</strong> 20254044224</span>
                 <span class="separator">|</span>
                 <span id="verify-exp-es"><strong>Vence:</strong> 28/11/2029</span>
-                <span id="verify-exp-en" style="display:none;"><strong>Expires:</strong> 11/28/2029</span>
             </div>
         </div>
         <div class="verification-action">
             <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener" class="btn btn-secondary" id="verify-btn-es">Verificar Ahora</a>
-            <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener" class="btn btn-secondary" id="verify-btn-en" style="display:none;">Verify Now</a>
         </div>
     </div>
 </section>
 <section class="price-block home-block home-band" id="why" aria-labelledby="why-h">
 <div class="pb-head">
 <div class="pb-titles">
-<h2 class="pb-title" id="why-h"><span id="why-choose-es">Por qué trabajar conmigo</span><span id="why-choose-en" style="display:none;">Why work with me</span></h2>
+<h2 class="pb-title" id="why-h"><span id="why-choose-es">Por qué trabajar conmigo</span></h2>
 
 </div>
 </div>
 <div class="pc-grid pc-grid--3">
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="why-1-es">Hablo su idioma</span><span id="why-1-en" style="display:none;">Spanish or English, your call</span></h3>
+<h3 class="pc-title"><span id="why-1-es">Hablo su idioma</span></h3>
 
 </div>
 <p class="pc-text" id="why-1-desc-es">Español e inglés son mis dos idiomas nativos. Le explico cada paso de la notarización en el idioma que usted prefiera, y si viene con su familia, ellos también pueden preguntar lo que quieran.</p>
-            <p class="pc-text" id="why-1-desc-en" style="display:none;">Both are my native languages. I&rsquo;ll walk you through each step of the notarization in whichever one you&rsquo;re more comfortable with, and if your family comes along, they can ask their questions too.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="why-2-es">Sabe el precio antes de la cita</span><span id="why-2-en" style="display:none;">You know the price before I leave</span></h3>
+<h3 class="pc-title"><span id="why-2-es">Sabe el precio antes de la cita</span></h3>
 
 </div>
 <p class="pc-text" id="why-2-desc-es">Cuando hacemos la cita le doy el total: la tarifa notarial y la de viaje juntas. Si el número cambia ese día, es porque se agregó otro documento, y se lo digo antes de sellarlo.</p>
-            <p class="pc-text" id="why-2-desc-en" style="display:none;">When we book, I give you one total with the notary fee and the travel fee together. If that number changes on the day, it&rsquo;s because another document got added, and I&rsquo;ll tell you before I stamp it.</p>
 </article>
 <article class="pc">
 <div class="pc-head">
-<h3 class="pc-title"><span id="why-3-es">Precio comunitario</span><span id="why-3-en" style="display:none;">A lower price at community spots</span></h3>
+<h3 class="pc-title"><span id="why-3-es">Precio comunitario</span></h3>
 
 </div>
 <p class="pc-text" id="why-3-desc-es">Si puede verme en la Tienda Salvadoreña de la Colfax Este, en la biblioteca Auraria de MSU Denver o en cualquier sucursal de la Biblioteca Pública de Denver, le cobro $10 por acto notarial y nada de viaje. Son lugares públicos donde me reúno con clientes con cita previa. No estoy afiliado a ninguno de ellos, ni me patrocinan ni me respaldan.</p>
-            <p class="pc-text" id="why-3-desc-en" style="display:none;">If you can meet me at Tienda Salvadoreña on East Colfax, the Auraria Library at MSU Denver, or any Denver Public Library branch, it&rsquo;s $10 per notarial act and no travel fee. These are public places where I meet clients by appointment. I&rsquo;m not affiliated with, sponsored by, or endorsed by any of them.</p>
 </article>
 </div>
 </section>
 <div class="price-block home-block">
 <section class="section-with-icon shop-map-section" id="find-me">
         <h2 id="fm-title-es">Cómo llegar a mi oficina en la Tienda Salvadoreña</h2>
-<h2 id="fm-title-en" style="display:none;">Finding my office at Tienda Salvadoreña</h2>
         <p id="fm-intro-es" class="shop-map-intro">Mi oficina está dentro de la Tienda Salvadoreña, en el 5128 E Colfax Ave, a mano izquierda al entrar. Estacione en el parqueo compartido de atrás y dé la vuelta caminando hasta la puerta del frente. Igual es con cita previa: casi todo el día ando en citas, así que mándeme un mensaje antes de venir para que me encuentre ahí.</p>
-<p id="fm-intro-en" class="shop-map-intro" style="display:none;">My office is inside Tienda Salvadoreña at 5128 E Colfax Ave, on the left as you walk in. Park in the shared lot out back, then walk around to the front door. It&rsquo;s still by appointment only: I&rsquo;m out at appointments most of the day, so text me before you come so I&rsquo;m there when you arrive.</p>
         <div class="fm-grid">
 <div class="fm-map">
 <figure class="card shop-map">
             <svg class="shop-map-svg" viewBox="0 0 640 372" role="img" aria-label="Map / Mapa: shared parking behind the building, walk around to the front door of Tienda Salvadoreña on East Colfax Ave; David's office is on the left inside. Parqueo compartido atrás del edificio; dé la vuelta hasta la puerta del frente sobre la Colfax; la oficina de David está a la izquierda al entrar.">
   <defs><marker id="sm-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="sm-arrowhead"/></marker></defs>
   <rect x="30" y="14" width="580" height="88" rx="12" class="sm-lot"/>
-  <text id="fm-lot-es" x="54" y="50" class="sm-label-lg">Parqueo compartido</text><text id="fm-lot-en" x="54" y="50" class="sm-label-lg" style="display:none;">Shared parking lot</text>
-  <text id="fm-lot2-es" x="54" y="76" class="sm-note">Estacione aquí, atrás del edificio</text><text id="fm-lot2-en" x="54" y="76" class="sm-note" style="display:none;">Park here, behind the building</text>
+  <text id="fm-lot-es" x="54" y="50" class="sm-label-lg">Parqueo compartido</text>
+  <text id="fm-lot2-es" x="54" y="76" class="sm-note">Estacione aquí, atrás del edificio</text>
   <g class="sm-p"><rect x="476" y="36" width="40" height="40" rx="8"/><text x="496" y="65" text-anchor="middle">P</text></g>
   <g class="sm-p"><rect x="536" y="36" width="40" height="40" rx="8"/><text x="556" y="65" text-anchor="middle">P</text></g>
   <rect x="30" y="134" width="140" height="112" class="sm-bldg"/>
   <rect x="170" y="134" width="140" height="112" class="sm-bldg"/>
-  <text id="fm-nb1-es" x="100" y="196" class="sm-muted" text-anchor="middle">vecino</text><text id="fm-nb1-en" x="100" y="196" class="sm-muted" text-anchor="middle" style="display:none;">neighbor</text>
-  <text id="fm-nb2-es" x="240" y="196" class="sm-muted" text-anchor="middle">vecino</text><text id="fm-nb2-en" x="240" y="196" class="sm-muted" text-anchor="middle" style="display:none;">neighbor</text>
+  <text id="fm-nb1-es" x="100" y="196" class="sm-muted" text-anchor="middle">vecino</text>
+  <text id="fm-nb2-es" x="240" y="196" class="sm-muted" text-anchor="middle">vecino</text>
   <rect x="310" y="134" width="300" height="112" class="sm-tienda"/>
   <rect x="322" y="146" width="100" height="88" rx="6" class="sm-office"/>
-  <text id="fm-office-es" x="372" y="184" class="sm-office-label" text-anchor="middle">Mi oficina</text><text id="fm-office-en" x="372" y="184" class="sm-office-label" text-anchor="middle" style="display:none;">My office</text>
+  <text id="fm-office-es" x="372" y="184" class="sm-office-label" text-anchor="middle">Mi oficina</text>
   <text x="372" y="206" class="sm-office-name" text-anchor="middle">David</text>
   <text x="518" y="180" class="sm-store" text-anchor="middle">Tienda</text>
   <text x="518" y="204" class="sm-store" text-anchor="middle">Salvadoreña</text>
   <rect x="466" y="240" width="56" height="9" rx="2" class="sm-door"/>
-  <text id="fm-door-es" x="530" y="238" class="sm-small">entrada</text><text id="fm-door-en" x="530" y="238" class="sm-small" style="display:none;">entrance</text>
+  <text id="fm-door-es" x="530" y="238" class="sm-small">entrada</text>
   <rect x="0" y="249" width="640" height="27" class="sm-walk"/>
   <rect x="0" y="276" width="640" height="96" class="sm-road"/>
   <line x1="0" y1="322" x2="640" y2="322" class="sm-centerline"/>
@@ -444,22 +695,20 @@
   <g class="sm-step"><circle cx="422" cy="146" r="13"/><text x="422" y="151" text-anchor="middle">4</text></g>
 </svg>
             <figcaption><span id="fm-scale-es">Mapa no a escala.</span>
-<span id="fm-scale-en" style="display:none;">Map not to scale.</span></figcaption>
+</figcaption>
         </figure>
 </div>
 <div class="fm-steps">
-<h3 class="fm-steps-title"><span id="fm-steps-h-es">Paso a paso</span><span id="fm-steps-h-en" style="display:none;">Step by step</span></h3>
+<h3 class="fm-steps-title"><span id="fm-steps-h-es">Paso a paso</span></h3>
         <ol class="shop-map-steps">
-            <li><span id="fm-step1-es">Estacione en el <strong>parqueo compartido de atrás</strong>.</span> <span id="fm-step1-en" style="display:none;">Park in the <strong>shared lot behind the building</strong>.</span></li>
-            <li><span id="fm-step2-es">Dé la vuelta caminando por el lado del edificio hasta la banqueta de la <strong>Colfax</strong>.</span> <span id="fm-step2-en" style="display:none;">Walk around the side of the building to the sidewalk on <strong>Colfax</strong>.</span></li>
-            <li><span id="fm-step3-es">Entre por la <strong>puerta del frente</strong> de la Tienda Salvadoreña.</span> <span id="fm-step3-en" style="display:none;">Go in the <strong>front door</strong> of Tienda Salvadoreña.</span></li>
-            <li><span id="fm-step4-es">Mi oficina está <strong>a su izquierda</strong> al entrar.</span> <span id="fm-step4-en" style="display:none;">My office is <strong>on your left</strong> as you walk in.</span></li>
+            <li><span id="fm-step1-es">Estacione en el <strong>parqueo compartido de atrás</strong>.</span> </li>
+            <li><span id="fm-step2-es">Dé la vuelta caminando por el lado del edificio hasta la banqueta de la <strong>Colfax</strong>.</span> </li>
+            <li><span id="fm-step3-es">Entre por la <strong>puerta del frente</strong> de la Tienda Salvadoreña.</span> </li>
+            <li><span id="fm-step4-es">Mi oficina está <strong>a su izquierda</strong> al entrar.</span> </li>
         </ol>
         <div class="cta-buttons cta-services-nudge">
             <a href="https://www.google.com/maps/search/?api=1&amp;query=Tienda+Salvadore%C3%B1a%2C+5128+E+Colfax+Avenue%2C+Denver%2C+CO+80220" target="_blank" rel="noopener" class="btn btn-primary" id="fm-dir-es"><span>Cómo llegar (Google Maps)</span></a>
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Tienda+Salvadore%C3%B1a%2C+5128+E+Colfax+Avenue%2C+Denver%2C+CO+80220" target="_blank" rel="noopener" class="btn btn-primary" id="fm-dir-en" style="display:none;"><span>Get directions (Google Maps)</span></a>
             <a href="sms:+13035004122" class="btn btn-secondary" id="fm-text-es"><span>Avisarme que va en camino</span></a>
-            <a href="sms:+13035004122" class="btn btn-secondary" id="fm-text-en" style="display:none;"><span>Text me you&rsquo;re on the way</span></a>
         </div>
 </div>
 </div>
@@ -468,61 +717,127 @@
 <section class="price-block home-block" id="business" aria-labelledby="business-h">
 <div class="pb-head">
 <div class="pb-titles">
-<h2 class="pb-title" id="business-h"><span id="b2b-title-es">Para Empresas, Abogados y Colegas</span><span id="b2b-title-en" style="display:none;">For Businesses, Attorneys &amp; Notaries</span></h2>
+<h2 class="pb-title" id="business-h"><span id="b2b-title-es">Para Empresas, Abogados y Colegas</span></h2>
 
 </div>
 </div>
 <div class="pc-panel home-b2b">
 <p id="b2b-desc-es" class="pc-text">Apoyo notarial para <a href="b2b-real-estate.html">compañías de títulos y bienes raíces</a>, <a href="immigration-attorney-notary-aurora-ice.html">abogados de inmigración</a> (visitas al centro de ICE de Aurora), <a href="b2b-real-estate.html#notary-support">colegas que prestan servicios notariales</a> y empleadores (I-9).</p>
-        <p id="b2b-desc-en" class="pc-text" style="display:none;">Notary support for <a href="b2b-real-estate.html">title companies and real estate</a>, <a href="immigration-attorney-notary-aurora-ice.html">immigration attorneys</a> (Aurora ICE facility visits), <a href="b2b-real-estate.html#notary-support">fellow notaries</a>, and employers (I-9).</p>
         <div class="cta-buttons cta-services-nudge">
             <a href="b2b-real-estate.html" class="btn btn-primary" id="cta-b2b-es">
                 <span>Ver Servicios para Empresas</span>
             </a>
-            <a href="b2b-real-estate.html" class="btn btn-primary" id="cta-b2b-en" style="display:none;">
-                <span>View Business Services</span>
-            </a>
         </div>
 </div>
 </section>
+<section class="price-block home-block" id="faq" aria-labelledby="hfaq-title-es hfaq-title-en">
+<div class="pb-head">
+<div class="pb-titles">
+<h2 class="pb-title"><span id="hfaq-title-es">Preguntas frecuentes</span></h2>
+</div>
+</div>
+<div class="faq-accordion-container">
+<div class="faq-item" id="home-faq-q1">
+<button class="faq-question">
+<span id="hq1-es">¿Qué hace un Notary Public en Colorado? ¿Me puede dar consejos legales?</span>
+</button>
+<div class="faq-answer">
+<p id="ha1-es">Un Notary Public verifica su identidad y es testigo de su firma. No soy abogado: no puedo darle consejos legales, decirle qué documento necesita ni qué escribir en él (C.R.S. § 24-21-525).</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q2">
+<button class="faq-question">
+<span id="hq2-es">¿Cuánto cobra un Notary Public en Colorado?</span>
+</button>
+<div class="faq-answer">
+<p id="ha2-es">La ley de Colorado permite cobrar como máximo $15 por acto notarial (C.R.S. § 24-21-529). La tarifa de viaje y los cargos por horario son aparte y se los doy por escrito antes de la cita.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q3">
+<button class="faq-question">
+<span id="hq3-es">¿Cuánto cuesta que venga a mi casa?</span>
+</button>
+<div class="faq-answer">
+<p id="ha3-es">La tarifa de viaje empieza en $20 y depende de la distancia de ida y vuelta. Atiendo de Loveland a Castle Rock; más lejos, con tarifa adicional. Fuera de horario (7 PM – 10 AM) son +$20 y en fin de semana +$15.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q4">
+<button class="faq-question">
+<span id="hq4-es">¿Hay una opción más barata?</span>
+</button>
+<div class="faq-answer">
+<p id="ha4-es">Sí. Si nos vemos en Tienda Salvadoreña (East Colfax), en la biblioteca Auraria de MSU Denver o en una sucursal de la Biblioteca Pública de Denver, son $10 por acto y sin tarifa de viaje, con cita previa.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q5">
+<button class="faq-question">
+<span id="hq5-es">¿Qué identificación necesito?</span>
+</button>
+<div class="faq-answer">
+<p id="ha5-es">Pasaporte, licencia de conducir u otra identificación del gobierno, vigente o vencida hace no más de un año. Si no la tiene, pregúnteme antes de hacer la cita.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q6">
+<button class="faq-question">
+<span id="hq6-es">¿Sus traducciones sirven para USCIS?</span>
+</button>
+<div class="faq-answer">
+<p id="ha6-es">Preparo cada traducción para cumplir los requisitos de USCIS, con mi certificación firmada de que es completa y exacta. La decisión de aceptarla es de la agencia.</p>
+</div>
+</div>
+<div class="faq-item" id="home-faq-q7">
+<button class="faq-question">
+<span id="hq7-es">¿Puede notarizar en el aeropuerto de Denver (DIA)?</span>
+</button>
+<div class="faq-answer">
+<p id="ha7-es">Sí. Son $95 fijos con estacionamiento incluido, más $10 por firma. Nos vemos en la terminal, antes del control de seguridad.</p>
+</div>
+</div>
+</div>
+<div class="cta-buttons cta-services-nudge">
+<a href="faq.html" class="btn btn-secondary" id="hfaq-all-es"><span>Ver todas las preguntas</span></a>
+</div>
+</section>
 <div class="cta-card">
-<h2 id="home-cta-es">¿Hacemos la cita?</h2>
-<h2 id="home-cta-en" style="display:none;">Want to set up a time?</h2>
+<h2 id="home-cta-es">¿Hacemos la cita? Dígame qué documento es y dónde está</h2>
 <p id="home-cta-d-es">Llámeme o escríbame. Le mando el precio exacto por escrito y buscamos una hora.</p>
-<p id="home-cta-d-en" style="display:none;">Call or text me. I&rsquo;ll send you the exact price in writing and we&rsquo;ll find a time.</p>
-<a href="tel:+13035004122" class="btn btn-primary btn-large"><span id="home-cta-call-es">Llamar 303-500-4122</span><span id="home-cta-call-en" style="display:none;">Call 303-500-4122</span></a>
+<div class="cta-buttons">
+<a href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp btn-large" id="home-cta-wa-es"><span>Escríbame por WhatsApp</span></a>
+<a href="tel:+13035004122" class="btn btn-primary btn-large"><span id="home-cta-call-es">Llamar 303-500-4122</span></a>
+<a href="mailto:info@quintananotarysigning.com" class="btn btn-secondary btn-large"><span id="home-cta-mail-es">Correo</span></a>
+</div>
 </div>
 </main>
 <footer class="site-footer">
     <nav class="footer-sitemap" aria-label="Site">
         <div class="footer-col">
-            <h2 class="footer-col-title"><span id="ft-svc-title-es">Servicios</span><span id="ft-svc-title-en" style="display:none;">Services</span></h2>
+            <h2 class="footer-col-title"><span id="ft-svc-title-es">Servicios</span></h2>
             <ul>
-                <li><a href="services.html" id="ft-svc-mobile-es">Servicio Notarial Móvil</a><a href="services.html" id="ft-svc-mobile-en" style="display:none;">Mobile Notary</a></li>
-                <li><a href="apostille.html" id="ft-svc-apost-es">Apostillas</a><a href="apostille.html" id="ft-svc-apost-en" style="display:none;">Apostilles</a></li>
-                <li><a href="certified-copies.html" id="ft-svc-copies-es">Copias Certificadas</a><a href="certified-copies.html" id="ft-svc-copies-en" style="display:none;">Certified Copies</a></li>
-                <li><a href="translate.html" id="ft-svc-transl-es">Traducciones Certificadas</a><a href="translate.html" id="ft-svc-transl-en" style="display:none;">Certified Translations</a></li>
-                <li><a href="airport-notarizations.html" id="ft-svc-airport-es">Notarizaciones en el Aeropuerto (DIA)</a><a href="airport-notarizations.html" id="ft-svc-airport-en" style="display:none;">Airport Notary (DIA)</a></li>
-                <li><a href="services.html#passport-i9" id="ft-svc-passport-es">Ayuda con Pasaporte e I-9</a><a href="services.html#passport-i9" id="ft-svc-passport-en" style="display:none;">Passport &amp; I-9 Help</a></li>
-                <li><a href="pricing.html" id="ft-svc-pricing-es">Precios</a><a href="pricing.html" id="ft-svc-pricing-en" style="display:none;">Pricing</a></li>
+                <li><a href="services.html" id="ft-svc-mobile-es">Servicio Notarial Móvil</a></li>
+                <li><a href="apostille.html" id="ft-svc-apost-es">Apostillas</a></li>
+                <li><a href="certified-copies.html" id="ft-svc-copies-es">Copias Certificadas</a></li>
+                <li><a href="translate.html" id="ft-svc-transl-es">Traducciones Certificadas</a></li>
+                <li><a href="airport-notarizations.html" id="ft-svc-airport-es">Notarizaciones en el Aeropuerto (DIA)</a></li>
+                <li><a href="services.html#passport-i9" id="ft-svc-passport-es">Ayuda con Pasaporte e I-9</a></li>
+                <li><a href="pricing.html" id="ft-svc-pricing-es">Precios</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <h2 class="footer-col-title"><span id="ft-biz-title-es">Para Empresas</span><span id="ft-biz-title-en" style="display:none;">For Business</span></h2>
+            <h2 class="footer-col-title"><span id="ft-biz-title-es">Para Empresas</span></h2>
             <ul>
-                <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en" style="display:none;">Title &amp; Real Estate</a></li>
-                <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en" style="display:none;">Immigration Attorneys (Aurora ICE)</a></li>
-                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es">Apoyo entre Colegas</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en" style="display:none;">Notary-to-Notary Support</a></li>
-                <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en" style="display:none;">Web &amp; Mentoring</a></li>
+                <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es">Títulos y Bienes Raíces</a></li>
+                <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es">Abogados de Inmigración (ICE Aurora)</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es">Apoyo entre Colegas</a></li>
+                <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es">Web y Mentoría</a></li>
             </ul>
         </div>
         <div class="footer-col">
-            <h2 class="footer-col-title"><span id="ft-co-title-es">Acerca de</span><span id="ft-co-title-en" style="display:none;">About</span></h2>
+            <h2 class="footer-col-title"><span id="ft-co-title-es">Acerca de</span></h2>
             <ul>
-                <li><a href="about.html" id="ft-co-about-es">Acerca de David</a><a href="about.html" id="ft-co-about-en" style="display:none;">About David</a></li>
-                <li><a href="faq.html" id="ft-co-faq-es">Preguntas Frecuentes</a><a href="faq.html" id="ft-co-faq-en" style="display:none;">FAQ</a></li>
-                <li><a href="contact.html#locations" id="ft-co-contact-es">Contacto y Ubicaciones</a><a href="contact.html#locations" id="ft-co-contact-en" style="display:none;">Contact &amp; Locations</a></li>
-                <li><a href="privacy.html" id="ft-co-privacy-es">Política de Privacidad</a><a href="privacy.html" id="ft-co-privacy-en" style="display:none;">Privacy Policy</a></li>
+                <li><a href="about.html" id="ft-co-about-es">Acerca de David</a></li>
+                <li><a href="faq.html" id="ft-co-faq-es">Preguntas Frecuentes</a></li>
+                <li><a href="contact.html#locations" id="ft-co-contact-es">Contacto y Ubicaciones</a></li>
+                <li><a href="privacy.html" id="ft-co-privacy-es">Política de Privacidad</a></li>
             </ul>
         </div>
     </nav>
@@ -530,37 +845,37 @@
     <div class="footer-info">
         <section class="footer-block">
             <h2 class="footer-block-title">Quintana Notary &amp; Signing</h2>
-            <p id="ft-tagline-es" class="footer-lead">Notary Public móvil en el área metropolitana de Denver, en español y en inglés.</p><p id="ft-tagline-en" class="footer-lead" style="display:none;">Mobile Notary Public in the Denver Metro area, in English and Spanish.</p>
+            <p id="ft-tagline-es" class="footer-lead">Notary Public móvil de Loveland a Castle Rock, en español y en inglés.</p>
             <ul class="footer-contact">
-                <li><strong id="ft-call-es">Llamadas y mensajes:</strong><strong id="ft-call-en" style="display:none;">Call or text:</strong> <a href="tel:+13035004122">303-500-4122</a></li>
-                <li><strong id="ft-email-es">Correo:</strong><strong id="ft-email-en" style="display:none;">Email:</strong> <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a></li>
+                <li><strong id="ft-call-es">Llamadas y mensajes:</strong> <a href="tel:+13035004122">303-500-4122</a></li>
+                <li><strong id="ft-email-es">Correo:</strong> <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a></li>
             </ul>
-            <div class="footer-parent"><a class="footer-parent-logo" href="https://serviciosquintana.com/" target="_blank" rel="noopener"><img src="../servicios-quintana-logo-sm.png" alt="Servicios Quintana LLC" width="320" height="226" loading="lazy" decoding="async"></a><p id="ft-llc-es" class="footer-muted">Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p><p id="ft-llc-en" class="footer-muted" style="display:none;">A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p></div>
-            <p id="ft-sister-es" class="footer-muted">Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, ayuda con el papeleo del DMV. No es parte del DMV ni está afiliada a él.</p><p id="ft-sister-en" class="footer-muted" style="display:none;">Sister brand: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, help with DMV paperwork. Not part of or affiliated with the DMV.</p>
+            <div class="footer-parent"><a class="footer-parent-logo" href="https://serviciosquintana.com/" target="_blank" rel="noopener"><img src="../servicios-quintana-logo-sm.png" alt="Servicios Quintana LLC" width="320" height="226" loading="lazy" decoding="async"></a><p id="ft-llc-es" class="footer-muted">Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p></div>
+            <p id="ft-sister-es" class="footer-muted">Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, ayuda con el papeleo del DMV. No es parte del DMV ni está afiliada a él.</p>
         </section>
 
         <section class="footer-block">
-            <h2 id="ft-cred-h-es" class="footer-block-title">Comisión y seguro</h2><h2 id="ft-cred-h-en" class="footer-block-title" style="display:none;">Commission &amp; insurance</h2>
-            <p id="ft-commission-es" class="footer-lead"><strong>Notary Public comisionado en Colorado</strong><br>ID de comisión 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a></p><p id="ft-commission-en" class="footer-lead" style="display:none;"><strong>Colorado-commissioned Notary Public</strong><br>Commission ID 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verify with the Secretary of State</a></p>
-            <p id="footer-trust-es" class="footer-muted">Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones.</p><p id="footer-trust-en" class="footer-muted" style="display:none;">Servicios Quintana LLC is insured through The Hartford: general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and my translation work.</p>
-            <p id="ft-coi-es" class="footer-muted">Certificado de seguro disponible a petición.</p><p id="ft-coi-en" class="footer-muted" style="display:none;">Certificate of insurance available on request.</p>
+            <h2 id="ft-cred-h-es" class="footer-block-title">Comisión y seguro</h2>
+            <p id="ft-commission-es" class="footer-lead"><strong>Notary Public comisionado en Colorado</strong><br>ID de comisión 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a></p>
+            <p id="footer-trust-es" class="footer-muted">Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones.</p>
+            <p id="ft-coi-es" class="footer-muted">Certificado de seguro disponible a petición.</p>
         </section>
     </div>
 
     <div class="footer-legal">
         <div class="footer-legal-inner">
-            <h2 id="ft-legal-h-es" class="footer-block-title">Aviso legal (C.R.S. § 24-21-525)</h2><h2 id="ft-legal-h-en" class="footer-block-title" style="display:none;">Legal notice (C.R.S. § 24-21-525)</h2>
-            <p id="ft-statute-es" class="footer-statute">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="ft-statute-en" class="footer-statute" style="display:none;">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
-            <p id="disclaimer-es" class="footer-muted">Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong> (C.R.S. § 24-21-529); las tarifas de viaje, conveniencia y trabajo de oficina son aparte y se acuerdan por adelantado. Un Notary Public no es abogado y no puede dar asesoría ni representación legal. No estoy afiliado a ninguna agencia del gobierno local, estatal ni federal.</p><p id="disclaimer-en" class="footer-muted" style="display:none;">Notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong> (C.R.S. § 24-21-529); travel, convenience, and office-work fees are separate and agreed on in advance. A Notary Public is not an attorney and cannot give legal advice or legal representation. I am not affiliated with any local, state, or federal government agency.</p>
+            <h2 id="ft-legal-h-es" class="footer-block-title">Aviso legal (C.R.S. § 24-21-525)</h2>
+            <p id="ft-statute-es" class="footer-statute">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p>
+            <p id="disclaimer-es" class="footer-muted">Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong> (C.R.S. § 24-21-529); las tarifas de viaje, conveniencia y trabajo de oficina son aparte y se acuerdan por adelantado. Un Notary Public no es abogado y no puede dar asesoría ni representación legal. No estoy afiliado a ninguna agencia del gobierno local, estatal ni federal.</p>
         </div>
     </div>
 
     <div class="footer-bottom">
         <span>© 2026 Quintana Notary &amp; Signing</span>
         <span class="footer-bottom-links">
-            <a href="privacy.html" id="footer-privacy-es">Política de privacidad</a><a href="privacy.html" id="footer-privacy-en" style="display:none;">Privacy policy</a>
+            <a href="privacy.html" id="footer-privacy-es">Política de privacidad</a>
             <span aria-hidden="true">·</span>
-            <a href="#" data-cookie-settings id="footer-cookies-es">Preferencias de cookies</a><a href="#" data-cookie-settings id="footer-cookies-en" style="display:none;">Cookie settings</a>
+            <a href="#" data-cookie-settings id="footer-cookies-es">Preferencias de cookies</a>
         </span>
     </div>
 </footer>
