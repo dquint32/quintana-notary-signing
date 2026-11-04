@@ -3907,3 +3907,71 @@ html[data-theme="dark"] .h3-final { background: #24221F; border: 1px solid #3B37
 .h3-block .h3-sub { color: var(--h3-muted); font-size: 1.02rem; max-width: 62ch; margin: 0; }
 .h3-block .h3-more { margin: 1rem 0 0; color: var(--h3-muted); }
 .pricing-page > .h3-block#costs { margin: 0.5rem 0 3rem; }
+
+/* ============================================================
+   SITE v4 (2026-11-04): warm header, one loud button, price formula
+   - Header: warm ink (#1F2622) instead of brand blue, every page.
+     White nav text on ink = 15.6:1.
+   - Language button is now a quiet outline; "Book / Contact" is
+     the only filled button in the header (clay #9C3F17, 6.6:1).
+   - Homepage: "Need it today?" line under the hero button, and a
+     one-line price formula (.h3-formula) above the estimator.
+   ============================================================ */
+header { background: #1F2622; box-shadow: 0 1px 0 rgba(0,0,0,0.25); }
+html[data-theme="dark"] header { background: #121110; border-bottom: 1px solid #3B3731; }
+#main-nav { background: #1F2622; }
+html[data-theme="dark"] #main-nav { background: #121110; }
+@media (min-width: 1200px) { #main-nav, html[data-theme="dark"] #main-nav { background: transparent; } }
+
+.toggle-btn {
+  background: transparent !important; color: #F2ECE2 !important;
+  border: 1px solid rgba(242,236,226,0.45); font-weight: 600;
+}
+.toggle-btn:hover { background: rgba(242,236,226,0.1) !important; }
+#main-nav a.nav-cta { background: #9C3F17; color: #FFFFFF !important; }
+#main-nav a.nav-cta:hover { background: #7E3212; }
+.nav-group-btn:focus-visible, .toggle-btn:focus-visible { outline: 3px solid #F2A27B; outline-offset: 2px; }
+@media (min-width: 1200px) {
+  #main-nav .nav-dropdown a { color: #1F2622 !important; }
+  #main-nav .nav-dropdown a:hover,
+  #main-nav .nav-dropdown a[aria-current="page"] { background: #F2E8D8; }
+  html[data-theme="dark"] .nav-dropdown { background: #24221F; border: 1px solid #3B3731; }
+  html[data-theme="dark"] #main-nav .nav-dropdown a { color: #F2ECE2 !important; }
+  html[data-theme="dark"] #main-nav .nav-dropdown a:hover,
+  html[data-theme="dark"] #main-nav .nav-dropdown a[aria-current="page"] { background: #3B3731; }
+}
+
+/* "Need it today?" */
+.h3-today { margin: 1rem 0 0; font-size: 1rem; color: var(--h3-ink); max-width: 62ch; }
+.h3-today strong { color: var(--h3-clay); }
+.h3-today + .h3-micro { margin-top: 0.35rem; }
+
+/* Price formula: $15 + travel + timing = total */
+.h3-formula {
+  display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.5rem;
+  margin: 0 0 1.25rem; padding: 0.9rem; position: relative;
+  background: var(--h3-card); border: 1px solid var(--h3-line); border-radius: 14px;
+}
+.h3-f-title {
+  flex-basis: 100%; margin: 0 0 0.1rem; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--h3-muted);
+}
+.h3-f-part {
+  flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 0.15rem;
+  padding: 0.6rem 0.75rem; background: var(--h3-paper); border-radius: 10px;
+}
+.h3-f-amt { font-family: Merriweather, Georgia, serif; font-weight: 700; font-size: 1.35rem; color: var(--h3-ink); line-height: 1.2; }
+.h3-f-lbl { font-size: 0.9rem; color: var(--h3-ink); line-height: 1.35; }
+.h3-f-lbl small { display: block; font-size: 0.8rem; color: var(--h3-muted); }
+.h3-f-op { align-self: center; font-size: 1.3rem; font-weight: 700; color: var(--h3-clay); }
+.h3-f-total { background: var(--h3-pine); }
+.h3-f-total .h3-f-amt, .h3-f-total .h3-f-lbl { color: #FFFFFF; }
+html[data-theme="dark"] .h3-f-total .h3-f-amt, html[data-theme="dark"] .h3-f-total .h3-f-lbl { color: #10261A; }
+@media (max-width: 719px) {
+  .h3-formula { flex-direction: column; gap: 0.35rem; }
+  .h3-f-op { display: none; }
+  .h3-f-part { flex-direction: row; align-items: center; justify-content: space-between; gap: 0.75rem; }
+  .h3-f-part .h3-f-amt { order: 2; font-size: 1.15rem; white-space: nowrap; }
+  .h3-f-part .h3-f-lbl { order: 1; }
+  .h3-f-part + .h3-f-op + .h3-f-part:not(.h3-f-total) .h3-f-amt::before { content: "+ "; color: var(--h3-clay); }
+}
