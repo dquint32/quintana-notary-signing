@@ -36,7 +36,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261103a">
+    <link rel="stylesheet" href="styles.css?v=20261103b">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -48,22 +48,6 @@
     <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
 </head>
 <body id="top" class="page-pricing">
-<div class="top-help-bar">
-    <div class="top-help-content">
-        <span class="top-help-message">
-            <span id="help-text-es" style="display:none;">¿Necesitas ayuda?</span>
-            <span id="help-text-en">Need help?</span>
-        </span>
-        <a href="tel:+13035004122" class="top-help-btn top-help-btn-call">
-            <span id="help-call-es" style="display:none;">Llamar / Mensaje</span>
-            <span id="help-call-en">Call / Text Me</span>
-        </a>
-        <a href="https://wa.me/13035004122" target="_blank" rel="noopener" class="top-help-btn top-help-btn-whatsapp">
-            <span id="help-whatsapp-es" style="display:none;">WhatsApp</span>
-            <span id="help-whatsapp-en">WhatsApp</span>
-        </a>
-    </div>
-</div>
 <header>
     <div class="header-container">
         <div id="brand-logo">
@@ -141,10 +125,6 @@
         </nav>
     </div>
 </header>
-<div class="appointment-bar" role="note">
-    <span id="appt-bar-es" style="display:none;">Solo con cita previa &middot; Reserve primero — soy móvil y no atiendo sin cita en ningún local.</span>
-    <span id="appt-bar-en">By appointment only &middot; Please book first — I'm mobile and don't take walk-ins at any location.</span>
-</div>
 <div class="statutory-bar">
     <span id="legal-disclosure-es" style="display:none;">
         <strong>Aviso Legal (C.R.S. § 24-21-525):</strong>
@@ -157,19 +137,87 @@
         <span class="statutory-sub">I provide notarial and administrative services only. I do not provide legal advice, representation, or opinion, and I am not affiliated with any government agency.</span>
     </span>
 </div>
-<section class="hero hero-with-logo">
-    <div class="hero-content">
-        <div class="hero-badge">
-            <span id="hero-badge-es" style="display:none;">Solo con cita previa &middot; Comisionado y asegurado</span>
-            <span id="hero-badge-en">By appointment only &middot; Commissioned &amp; Insured</span>
-        </div>
-        <h1 id="hero-h1-es" style="display:none;">Lo que cobro, sin letra chiquita</h1>
-        <h1 id="hero-h1-en">What I charge, written out</h1>
-        <p class="hero-subtitle" id="hero-h2-es" style="display:none;">Antes de confirmar la cita le mando el total por escrito. Ese total es la <strong>tarifa por acto notarial</strong> (que la ley de Colorado limita) <strong>más</strong> la <strong>tarifa de viaje</strong>, si voy a donde usted está, y cualquier servicio de oficina que usted pida.</p>
-        <p class="hero-subtitle" id="hero-h2-en">Before you confirm, I send you the total in writing. That total is the <strong>notarial act fee</strong> (which Colorado law caps) <strong>plus</strong> a <strong>travel fee</strong> if I&rsquo;m coming to you, and any office-type services you ask for.</p>
-    </div>
+<section class="h3-hero h3-hero--page">
+<div class="h3-hero-inner">
+<div class="h3-hero-text">
+<p class="h3-kicker"><span id="hc-kick-es" style="display:none;">Precios &middot; La ley de Colorado limita la tarifa notarial a $15</span><span id="hc-kick-en">Prices &middot; Colorado caps the notary fee at $15</span></p>
+<h1 id="hero-h1-es" style="display:none;">Lo que cobro, sin letra chiquita</h1>
+<h1 id="hero-h1-en">What I charge, written out</h1>
+<p class="h3-lead" id="hero-h2-es" style="display:none;">Antes de confirmar le mando un solo total por escrito: $15 por firma (lo máximo que permite la ley de Colorado), más el viaje si voy a donde usted está. Calcule el suyo aquí abajo.</p>
+<p class="h3-lead" id="hero-h2-en">You get one total in writing before you confirm: $15 per signature (the most Colorado law allows), plus travel if I come to you. Figure yours out below.</p>
+<div class="h3-cta" id="hero-cta">
+<a id="hc-wa-es" href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn" style="display:none;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Escríbame por WhatsApp</span></a>
+<a id="hc-wa-en" href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Text me on WhatsApp</span></a>
+<a href="tel:+13035004122" class="h3-call"><span id="hc-call-es" style="display:none;">o llame al <strong>303-500-4122</strong></span><span id="hc-call-en">or call <strong>303-500-4122</strong></span></a>
+</div>
+<p id="hc-micro-es" class="h3-micro" style="display:none;">Solo con cita. Le doy el total por escrito antes de salir para allá.</p>
+<p id="hc-micro-en" class="h3-micro">By appointment only. You get the total in writing before I head out.</p>
+<p class="h3-alt"><a href="#costs"><span id="hc-alt-es" style="display:none;">Calcule su total</span><span id="hc-alt-en">Figure out your total</span></a></p>
+</div>
+</div>
+<svg class="h3-ridge" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="rt-peaks-far" d="M0 40 L60 26 L110 34 L165 8 L200 20 L240 14 L300 34 L360 24 L430 38 L500 28 L580 40 L660 30 L740 42 L820 34 L900 44 L980 38 L1060 46 L1100 40 L1120 30 L1150 30 L1162 40 L1200 44 V60 H0 Z"/><path class="rt-peaks" d="M0 50 L80 40 L130 46 L185 24 L220 36 L290 44 L380 40 L470 48 L560 44 L660 50 L760 48 L860 52 L960 50 L1060 54 L1200 54 V60 H0 Z"/></svg>
 </section>
 <main class="section container pricing-page">
+<section class="h3-block" id="costs" aria-labelledby="costs-h">
+    <div class="h3-head">
+        <h2 id="costs-h"><span id="pricing-title-es" style="display:none;">Calcule su total</span><span id="pricing-title-en">Figure out your total</span></h2>
+        <p id="pricing-intro-es" class="h3-sub" style="display:none;">Son tres cosas: cuántas firmas, dónde nos vemos y a qué hora. Elija las suyas y le doy el número.</p>
+        <p id="pricing-intro-en" class="h3-sub">It comes down to three things: how many signatures, where we meet, and when. Pick yours and you&rsquo;ll see the number.</p>
+    </div>
+
+    <form class="h3-est" id="estimator" onsubmit="return false;" aria-describedby="est-fine-es est-fine-en">
+        <div class="h3-est-steps">
+            <fieldset class="h3-step">
+                <legend><span class="h3-step-n" aria-hidden="true">1</span><span id="est-q1-es" style="display:none;">¿Cuántas firmas se notarizan?</span><span id="est-q1-en">How many signatures get notarized?</span></legend>
+                <div class="h3-count">
+                    <button type="button" class="h3-count-btn" data-step="-1" aria-label="&minus;1">&minus;</button>
+                    <input type="number" id="est-count" name="count" value="1" min="1" max="20" inputmode="numeric" aria-labelledby="est-q1-es est-q1-en">
+                    <button type="button" class="h3-count-btn" data-step="1" aria-label="+1">+</button>
+                    <span class="h3-count-price"><strong>$15</strong> <span id="est-each-es" style="display:none;">cada una &middot; el máximo que permite la ley de Colorado</span><span id="est-each-en">each &middot; the most Colorado law allows</span></span>
+                </div>
+                <p class="h3-hint"><span id="est-h1-es" style="display:none;">Cada firma lleva su propio sello. Dos personas que firman un documento = 2.</span><span id="est-h1-en">Every signature gets its own stamp. Two people signing one document = 2.</span></p>
+            </fieldset>
+
+            <fieldset class="h3-step">
+                <legend><span class="h3-step-n" aria-hidden="true">2</span><span id="est-q2-es" style="display:none;">¿Dónde nos vemos?</span><span id="est-q2-en">Where do we meet?</span></legend>
+                <div class="h3-chips">
+                    <label class="h3-chip h3-chip--save"><input type="radio" name="where" value="community" data-travel="0" data-act="10"><span class="h3-chip-l"><span id="est-w0-es" style="display:none;">En un lugar comunitario</span><span id="est-w0-en">At a community spot</span><small><span id="est-w0d-es" style="display:none;">Mi oficina en Colfax, MSU Denver o una biblioteca de Denver</span><span id="est-w0d-en">My office on Colfax, MSU Denver, or a Denver library</span></small></span><span class="h3-chip-p"><span id="est-w0p-es" style="display:none;">$10 por firma, sin viaje</span><span id="est-w0p-en">$10 a signature, no travel</span></span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="20" data-travel="20" checked><span class="h3-chip-l"><span id="est-w1-es" style="display:none;">Cerca</span><span id="est-w1-en">Close by</span><small><span id="est-w1d-es" style="display:none;">Hasta 20 millas ida y vuelta</span><span id="est-w1d-en">Up to 20 miles round trip</span></small></span><span class="h3-chip-p">$20</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="35" data-travel="35"><span class="h3-chip-l"><span id="est-w2-es" style="display:none;">Un poco más lejos</span><span id="est-w2-en">A bit farther</span><small><span id="est-w2d-es" style="display:none;">21 a 35 millas</span><span id="est-w2d-en">21 to 35 miles</span></small></span><span class="h3-chip-p">$35</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es" style="display:none;">Afueras del metro</span><span id="est-w3-en">Outer metro</span><small><span id="est-w3d-es" style="display:none;">36 a 50 millas</span><span id="est-w3d-en">36 to 50 miles</span></small></span><span class="h3-chip-p">$50</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="75" data-travel="75"><span class="h3-chip-l"><span id="est-w4-es" style="display:none;">Extremos del área</span><span id="est-w4-en">Edge of the area</span><small><span id="est-w4d-es" style="display:none;">51 a 75 millas</span><span id="est-w4d-en">51 to 75 miles</span></small></span><span class="h3-chip-p">$75</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="far" data-travel="far"><span class="h3-chip-l"><span id="est-w5-es" style="display:none;">Más lejos</span><span id="est-w5-en">Farther</span><small><span id="est-w5d-es" style="display:none;">Más de 75 millas</span><span id="est-w5d-en">Over 75 miles</span></small></span><span class="h3-chip-p"><span id="est-w5p-es" style="display:none;">$1.35 / milla</span><span id="est-w5p-en">$1.35 / mile</span></span></label>
+                </div>
+                <p class="h3-hint"><span id="est-h2-es" style="display:none;">Las millas se cuentan ida y vuelta desde mi oficina en la Colfax Este, y el viaje se cobra una vez por cita. ¿No está seguro? Elija la más cercana y yo se la confirmo.</span><span id="est-h2-en">Miles are counted round trip from my office on East Colfax, and travel is charged once per visit. Not sure? Pick your best guess and I&rsquo;ll confirm it.</span></p>
+            </fieldset>
+
+            <fieldset class="h3-step">
+                <legend><span class="h3-step-n" aria-hidden="true">3</span><span id="est-q3-es" style="display:none;">¿Cuándo?</span><span id="est-q3-en">When?</span></legend>
+                <div class="h3-chips h3-chips--when">
+                    <label class="h3-chip"><input type="radio" name="when" value="day" data-extra="0" checked><span class="h3-chip-l"><span id="est-t0-es" style="display:none;">Entre semana, de día</span><span id="est-t0-en">Weekday, daytime</span><small>10 AM – 7 PM</small></span><span class="h3-chip-p">+$0</span></label>
+                    <label class="h3-chip"><input type="radio" name="when" value="eve" data-extra="20"><span class="h3-chip-l"><span id="est-t1-es" style="display:none;">Entre semana, temprano o de noche</span><span id="est-t1-en">Weekday, early or evening</span><small>7 PM – 10 AM</small></span><span class="h3-chip-p">+$20</span></label>
+                    <label class="h3-chip"><input type="radio" name="when" value="wkd" data-extra="15"><span class="h3-chip-l"><span id="est-t2-es" style="display:none;">Fin de semana, de día</span><span id="est-t2-en">Weekend, daytime</span><small><span id="est-t2d-es" style="display:none;">Sábado o domingo</span><span id="est-t2d-en">Saturday or Sunday</span></small></span><span class="h3-chip-p">+$15</span></label>
+                    <label class="h3-chip"><input type="radio" name="when" value="wkd-eve" data-extra="35"><span class="h3-chip-l"><span id="est-t3-es" style="display:none;">Fin de semana, temprano o de noche</span><span id="est-t3-en">Weekend, early or evening</span><small>+$15 +$20</small></span><span class="h3-chip-p">+$35</span></label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="h3-receipt" id="est-receipt" aria-live="polite" hidden>
+            <p class="h3-receipt-title"><span id="est-r-title-es" style="display:none;">Su estimado</span><span id="est-r-title-en">Your estimate</span></p>
+            <ul class="h3-receipt-lines">
+                <li><span><span id="est-r1-es" style="display:none;">Firmas</span><span id="est-r1-en">Signatures</span> <span class="h3-r-calc" id="est-calc-act"></span></span><span id="est-v-act"></span></li>
+                <li><span><span id="est-r2-es" style="display:none;">Viaje</span><span id="est-r2-en">Travel</span></span><span id="est-v-travel"></span></li>
+                <li><span><span id="est-r3-es" style="display:none;">Horario</span><span id="est-r3-en">Timing</span></span><span id="est-v-extra"></span></li>
+            </ul>
+            <p class="h3-receipt-total"><span>Total</span><span id="est-v-total"></span></p>
+            <a id="est-send-es" href="https://wa.me/13035004122" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn h3-btn--full" style="display:none;"><span>Mandarle esto a David</span></a>
+            <a id="est-send-en" href="https://wa.me/13035004122" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn h3-btn--full"><span>Send this to David</span></a>
+            <p class="h3-receipt-fine" id="est-fine-es" style="display:none;">Es un estimado. Le confirmo el total exacto por escrito antes de la cita. Con tarjeta de crédito se suma un 2%; con débito, efectivo, Venmo o Zelle, no.</p>
+            <p class="h3-receipt-fine" id="est-fine-en">This is an estimate. I confirm the exact total in writing before the visit. Credit cards add 2%; debit, cash, Venmo and Zelle don&rsquo;t.</p>
+        </div>
+    </form>
+    <p class="h3-more"><span id="cta-pricing-es" style="display:none;">Abajo está cada tarifa con todos los detalles, más apostillas, traducciones, visitas a ICE y las políticas de pago.</span><span id="cta-pricing-en">Below is every fee in detail, plus apostilles, translations, ICE visits and payment policies.</span></p>
+</section>
 <div class="info-box" style="margin-bottom:2rem;">
 <p id="b2b-redirect-es" style="display:none;">¿Trabaja en una compañía de títulos, es abogado o Notary Public? Sus precios están en <a href="b2b-real-estate.html"><strong>Para Empresas</strong></a> y en la página para <a href="immigration-attorney-notary-aurora-ice.html"><strong>abogados de inmigración</strong></a>.</p>
 <p id="b2b-redirect-en">With a title company, a law office, or a fellow notary? Your prices are on <a href="b2b-real-estate.html"><strong>For Business</strong></a> and the page for <a href="immigration-attorney-notary-aurora-ice.html"><strong>immigration attorneys</strong></a>.</p>
@@ -270,8 +318,8 @@
 <p id="disc-appt-en"><strong>By appointment only:</strong> I&rsquo;m not set up at these places full-time. We meet there <strong>only at a time we&rsquo;ve agreed on</strong>, so call or text first and nobody ends up waiting. <a href="contact.html#locations">Addresses &amp; directions</a>.</p>
 </div>
 <div class="info-box pb-note">
-<p id="disc-note-es" style="display:none;"><strong>Para que quede claro:</strong> los $10 son un descuento que yo decido dar. El máximo de ley en Colorado sigue siendo $15 por acto notarial. El precio comunitario aplica cuando nos vemos <strong>en uno de estos lugares</strong> a la hora de su cita. Son lugares públicos donde me reúno con clientes con cita previa, por ejemplo en una sala de estudio que reservo. No estoy afiliado, patrocinado ni respaldado por Tienda Salvadoreña, MSU Denver, la Biblioteca Auraria ni la Biblioteca Pública de Denver.</p>
-<p id="disc-note-en"><strong>To be clear:</strong> the $10 rate is a discount I choose to give. Colorado&rsquo;s legal maximum is still $15 per notarial act. The community rate applies when we meet <strong>at one of these places</strong> at your appointment time. They&rsquo;re public places where I meet clients by appointment, such as a study room I reserve. I am not affiliated with, sponsored by, or endorsed by Tienda Salvadoreña, MSU Denver, the Auraria Library, or Denver Public Library.</p>
+<p id="disc-note-es" style="display:none;">Los $10 son un descuento que yo decido dar. El máximo de ley en Colorado sigue siendo $15 por acto notarial. El precio comunitario aplica cuando nos vemos <strong>en uno de estos lugares</strong> a la hora de su cita. Son lugares públicos donde me reúno con clientes con cita previa, por ejemplo en una sala de estudio que reservo. No estoy afiliado, patrocinado ni respaldado por Tienda Salvadoreña, MSU Denver, la Biblioteca Auraria ni la Biblioteca Pública de Denver.</p>
+<p id="disc-note-en">The $10 rate is a discount I choose to give. Colorado&rsquo;s legal maximum is still $15 per notarial act. The community rate applies when we meet <strong>at one of these places</strong> at your appointment time. They&rsquo;re public places where I meet clients by appointment, such as a study room I reserve. I am not affiliated with, sponsored by, or endorsed by Tienda Salvadoreña, MSU Denver, the Auraria Library, or Denver Public Library.</p>
 </div>
 </section>
 <section class="price-block" id="travel-fees" aria-labelledby="travel-fees-h">
@@ -683,16 +731,17 @@
 </article>
 </div>
 </section>
-<div class="cta-card">
+<section class="h3-final">
 <h2 id="cta-ready-es" style="display:none;">¿Hacemos la cita?</h2>
 <h2 id="cta-ready-en">Want to set up a time?</h2>
 <p id="cta-desc-es" style="display:none;">Llámeme o escríbame. Le mando el precio exacto por escrito y buscamos una hora.</p>
 <p id="cta-desc-en">Call or text me. I&rsquo;ll send you the exact price in writing and we&rsquo;ll find a time.</p>
-<a href="tel:+13035004122" class="btn btn-primary btn-large">
-<span id="cta-call-es" style="display:none;">Llamar 303-500-4122</span>
-<span id="cta-call-en">Call 303-500-4122</span>
-</a>
+<div class="h3-cta h3-cta--center">
+<a id="fc-wa-es" href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn" style="display:none;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Escríbame por WhatsApp</span></a>
+<a id="fc-wa-en" href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Text me on WhatsApp</span></a>
+<a href="tel:+13035004122" class="h3-call"><span id="fc-call-es" style="display:none;">o llame al <strong>303-500-4122</strong></span><span id="fc-call-en">or call <strong>303-500-4122</strong></span></a>
 </div>
+</section>
 </main>
 <footer class="site-footer">
     <nav class="footer-sitemap" aria-label="Site">
@@ -765,7 +814,7 @@
         </span>
     </div>
 </footer>
-<script src="script.js?v=20261028d"></script>
+<script src="script.js?v=20261103a"></script>
 <script src="consent.js?v=20261020b"></script>
 </body>
 </html>

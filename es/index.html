@@ -30,7 +30,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="../styles.css?v=20261103a">
+    <link rel="stylesheet" href="../styles.css?v=20261103b">
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -812,76 +812,7 @@
         </span>
     </div>
 </footer>
-<script src="../script.js?v=20261028d"></script>
+<script src="../script.js?v=20261103a"></script>
 <script src="../consent.js?v=20261020b"></script>
-<script>
-/* Homepage: price estimator + hide the floating WhatsApp button while the hero button is on screen. */
-(function () {
-    var form = document.getElementById('estimator');
-    if (form) {
-        var receipt = document.getElementById('est-receipt');
-        var count = document.getElementById('est-count');
-        var $ = function (id) { return document.getElementById(id); };
-        var es = function () { return (document.documentElement.getAttribute('data-lang') || 'en') === 'es'; };
-        var money = function (n) { return '$' + n; };
-        var picked = function (name) { return form.querySelector('input[name="' + name + '"]:checked'); };
-        var clamp = function () {
-            var n = parseInt(count.value, 10);
-            if (isNaN(n) || n < 1) n = 1;
-            if (n > 20) n = 20;
-            return n;
-        };
-        var update = function () {
-            var n = clamp();
-            var where = picked('where'), when = picked('when');
-            var act = where && where.getAttribute('data-act') ? parseInt(where.getAttribute('data-act'), 10) : 15;
-            var travel = where ? where.getAttribute('data-travel') : '20';
-            var extra = when ? parseInt(when.getAttribute('data-extra'), 10) : 0;
-            var acts = n * act;
-            var far = travel === 'far';
-            var t = far ? 0 : parseInt(travel, 10);
-            var total = acts + t + extra;
-            $('est-calc-act').textContent = n + ' × ' + money(act);
-            $('est-v-act').textContent = money(acts);
-            $('est-v-travel').textContent = far ? (es() ? '$1.35 / milla' : '$1.35 / mile') : (t === 0 ? (es() ? 'Sin cargo' : 'None') : money(t));
-            $('est-v-extra').textContent = '+' + money(extra);
-            $('est-v-total').textContent = far ? money(total) + (es() ? ' + millas' : ' + miles') : money(total);
-            form.querySelectorAll('.h3-chip').forEach(function (c) {
-                c.classList.toggle('is-on', c.querySelector('input').checked);
-            });
-            var placeEs = { community: 'en un lugar comunitario', '20': 'cerca (hasta 20 millas)', '35': 'a 21–35 millas', '50': 'a 36–50 millas', '75': 'a 51–75 millas', far: 'a más de 75 millas' };
-            var placeEn = { community: 'at a community spot', '20': 'close by (under 20 mi)', '35': '21–35 mi out', '50': '36–50 mi out', '75': '51–75 mi out', far: 'over 75 mi out' };
-            var whenEs = { day: 'entre semana de día', eve: 'entre semana temprano o de noche', wkd: 'en fin de semana de día', 'wkd-eve': 'en fin de semana temprano o de noche' };
-            var whenEn = { day: 'a weekday daytime', eve: 'a weekday early or evening', wkd: 'a weekend daytime', 'wkd-eve': 'a weekend early or evening' };
-            var w = where ? where.value : '20', h = when ? when.value : 'day';
-            var tot = $('est-v-total').textContent;
-            var msgEs = 'Hola David, necesito notarizar ' + n + (n === 1 ? ' firma' : ' firmas') + ', ' + placeEs[w] + ', ' + whenEs[h] + '. Estoy en (ciudad). Su página me da un estimado de ' + tot + '. ¿Tiene cita disponible?';
-            var msgEn = 'Hi David, I need ' + n + (n === 1 ? ' signature' : ' signatures') + ' notarized, ' + placeEn[w] + ', ' + whenEn[h] + '. I’m in (city). Your site estimate says ' + tot + '. Do you have an opening?';
-            var sEs = $('est-send-es'), sEn = $('est-send-en');
-            if (sEs) sEs.href = 'https://wa.me/13035004122?text=' + encodeURIComponent(msgEs);
-            if (sEn) sEn.href = 'https://wa.me/13035004122?text=' + encodeURIComponent(msgEn);
-        };
-        form.querySelectorAll('.h3-count-btn').forEach(function (b) {
-            b.addEventListener('click', function () {
-                count.value = Math.min(20, Math.max(1, clamp() + parseInt(b.getAttribute('data-step'), 10)));
-                update();
-            });
-        });
-        form.addEventListener('input', update);
-        form.addEventListener('change', update);
-        count.addEventListener('blur', function () { count.value = clamp(); update(); });
-        new MutationObserver(update).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
-        receipt.hidden = false;
-        update();
-    }
-
-    var heroCta = document.getElementById('hero-cta');
-    if (heroCta && 'IntersectionObserver' in window) {
-        new IntersectionObserver(function (entries) {
-            document.body.classList.toggle('hero-cta-visible', entries[0].isIntersecting);
-        }).observe(heroCta);
-    }
-})();
-</script>
 </body>
 </html>

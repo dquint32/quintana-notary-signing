@@ -3823,3 +3823,87 @@ main.home3 { max-width: 1100px; padding-left: 0; padding-right: 0; }
   .h3-chip--save .h3-chip-l { flex-basis: calc(100% - 2rem); }
   .h3-chip--save .h3-chip-p { flex-basis: 100%; max-width: none; text-align: left; padding-left: 1.9rem; }
 }
+
+/* ============================================================
+   SITE v3 (2026-11-03): the homepage v3 look on every page
+   - Warm palette: the card-kit tokens (--pc-*, --ab-*) and the
+     teal brand tokens are remapped to the --h3-* paper / ink /
+     clay / pine colors, light and dark. Navy stays in the header.
+   - Pages: no top help bar, no appointment bar (removed from the
+     HTML), no floating language pill; one hero button (WhatsApp)
+     + "or call" link; one closing card (.h3-final).
+   - Page heroes: .h3-hero--page on a paper band with a Front
+     Range ridge (.h3-ridge) along the bottom.
+   ============================================================ */
+:root {
+  --ab-soft: #F2E8D8; --ab-warm: #F7E4D5; --ab-card: #FFFDF8; --ab-line: #E3D6C1;
+  --ab-text: #1F2622; --ab-muted: #545B55; --ab-accent: #24493A; --ab-accent-bg: #E2EDE5;
+  --ab-kicker: #9C3F17; --ab-legal-bg: #F2E8D8; --ab-legal-line: #9C3F17;
+  --pc-surface: #FFFDF8; --pc-surface-alt: #F2E8D8; --pc-border: #E3D6C1;
+  --pc-text: #1F2622; --pc-muted: #545B55; --pc-title: #1F2622; --pc-link: #9C3F17;
+  --pc-feat-surface: #EEF3EF; --pc-feat-border: #24493A; --pc-feat-ink: #24493A;
+  --pc-comm-surface: #EEF3EF; --pc-comm-border: #2E5E3A; --pc-comm-ink: #2E5E3A;
+  --pc-price-bg: #1F2622; --pc-price-fg: #FAF5EC; --pc-green-bg: #2E5E3A; --pc-green-fg: #FFFFFF;
+  --pc-muted-bg: #EDE3D3; --pc-muted-fg: #1F2622;
+  --pc-law-bg: #F7E4D5; --pc-law-fg: #8A3510; --pc-law-border: #9C3F17;
+  --teal: #24493A; --teal-dark: #1A362B; --teal-light: #E2EDE5; --teal-ink: #24493A;
+  --faq-q: #1F2622; --faq-open: #FFFDF8;
+}
+html[data-theme="dark"] {
+  --ab-soft: #201E1B; --ab-warm: #2E241D; --ab-card: #24221F; --ab-line: #3B3731;
+  --ab-text: #F2ECE2; --ab-muted: #C7BDAE; --ab-accent: #A9D0B9; --ab-accent-bg: #1E2C25;
+  --ab-kicker: #F2A27B; --ab-legal-bg: #201E1B; --ab-legal-line: #F2A27B;
+  --pc-surface: #24221F; --pc-surface-alt: #1B1A17; --pc-border: #3B3731;
+  --pc-text: #F2ECE2; --pc-muted: #C7BDAE; --pc-title: #F2ECE2; --pc-link: #F2A27B;
+  --pc-feat-surface: #1E2C25; --pc-feat-border: #A9D0B9; --pc-feat-ink: #A9D0B9;
+  --pc-comm-surface: #1E2C25; --pc-comm-border: #9CD3A6; --pc-comm-ink: #9CD3A6;
+  --pc-price-bg: #F2ECE2; --pc-price-fg: #1F2622; --pc-green-bg: #9CD3A6; --pc-green-fg: #10261A;
+  --pc-muted-bg: #3B3731; --pc-muted-fg: #F2ECE2;
+  --pc-law-bg: #3A2A22; --pc-law-fg: #F2B48F; --pc-law-border: #F2A27B;
+  --teal: #A9D0B9; --teal-dark: #A9D0B9; --teal-light: #1E2C25; --teal-ink: #A9D0B9;
+  --faq-q: #F2ECE2; --faq-open: #24221F;
+}
+html[data-theme="dark"] .btn-primary { color: #10261A !important; }
+body { --help-bar-h: 0px; background: var(--h3-paper); color: var(--h3-ink); }
+.lang-float { display: none !important; }
+.whatsapp-float, .scroll-top-btn { transition: opacity .2s ease, transform .2s ease; }
+body.hero-cta-visible .whatsapp-float,
+body.hero-cta-visible .scroll-top-btn { opacity: 0; pointer-events: none; transform: translateY(12px); }
+main.section { background: transparent; box-shadow: none; }
+main :is(h1, h2, h3, h4) { color: var(--h3-ink); }
+main strong { color: inherit; }
+main a:not(.btn) { text-decoration-color: color-mix(in srgb, var(--h3-clay) 45%, transparent); }
+
+/* Legal notice: boxed, warm, same on every page */
+html body .statutory-bar {
+  max-width: 1100px; margin: 0.75rem auto 0; background: var(--h3-paper-2); color: var(--h3-ink);
+  border: 1px solid var(--h3-line); border-left: 4px solid var(--h3-clay); border-radius: 12px;
+  text-align: left; font-size: 0.8rem; line-height: 1.55; padding: 0.75rem 1rem;
+}
+html body .statutory-bar :is(strong, span) { color: var(--h3-ink); }
+@media (max-width: 1140px) { html body .statutory-bar { margin-left: 0.75rem; margin-right: 0.75rem; } }
+
+/* Page heroes */
+.h3-hero--page { background: var(--h3-paper); padding: 2rem 1rem 0; }
+.h3-hero--page .h3-hero-inner { grid-template-columns: minmax(0, 1fr) !important; }
+.h3-hero--page .h3-hero-text { max-width: 760px; }
+.h3-hero--page h1 { max-width: 26ch; font-size: clamp(1.65rem, 5.4vw, 2.5rem); }
+.h3-lead strong { color: inherit; }
+.h3-alt { margin: 0.6rem 0 0; font-weight: 600; }
+.h3-alt a { color: var(--h3-clay); text-underline-offset: 3px; }
+.h3-ridge { display: block; width: 100%; height: 44px; margin-top: 1.75rem; }
+@media (min-width: 880px) { .h3-hero--page { padding-top: 2.75rem; } .h3-ridge { height: 56px; } }
+.h3-hero--page + main, .h3-hero--page ~ main { margin-top: 0; }
+
+/* Closing card + estimator outside the homepage */
+.h3-final { text-align: center; background: #1F2622; border-radius: 18px; padding: 2rem 1.25rem; margin: 2.5rem 0 1rem; }
+.h3-final h2 { color: #FFFFFF !important; text-align: center; border: none; padding: 0; }
+.h3-final h2::after { content: none !important; }
+.h3-final p { color: #E9E2D6 !important; margin: 0 auto 1.25rem; max-width: 50ch; }
+html[data-theme="dark"] .h3-final { background: #24221F; border: 1px solid #3B3731; }
+.h3-block .h3-head { margin-bottom: 1.25rem; }
+.h3-block .h3-head h2 { font-size: clamp(1.45rem, 4.6vw, 2rem); margin: 0 0 0.5rem; text-align: left; padding: 0; border: none; }
+.h3-block .h3-head h2::after { content: none !important; }
+.h3-block .h3-sub { color: var(--h3-muted); font-size: 1.02rem; max-width: 62ch; margin: 0; }
+.h3-block .h3-more { margin: 1rem 0 0; color: var(--h3-muted); }
+.pricing-page > .h3-block#costs { margin: 0.5rem 0 3rem; }
