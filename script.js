@@ -804,7 +804,7 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
             var extra = when ? parseInt(when.getAttribute('data-extra'), 10) : 0;
             var acts = n * act;
             var far = travel === 'far';
-            var knownMi = parseInt(form.dataset.miles || '', 10);
+            var knownMi = parseFloat(form.dataset.miles || '');
             var farKnown = far && knownMi > 0;
             var t = farKnown ? Math.round(knownMi * 1.35 * 100) / 100 : (far ? 0 : parseInt(travel, 10));
             var total = Math.round((acts + t + extra) * 100) / 100;
@@ -816,15 +816,15 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
             form.querySelectorAll('.h3-chip').forEach(function (c) {
                 c.classList.toggle('is-on', c.querySelector('input').checked);
             });
-            var placeEs = { community: 'en un lugar comunitario', '20': 'cerca (hasta 20 millas)', '35': 'a 21–35 millas', '50': 'a 36–50 millas', '75': 'a 51–75 millas', far: 'a más de 75 millas' };
-            var placeEn = { community: 'at a community spot', '20': 'close by (under 20 mi)', '35': '21–35 mi out', '50': '36–50 mi out', '75': '51–75 mi out', far: 'over 75 mi out' };
+            var placeEs = { community: 'en un lugar comunitario', '20': 'cerca (hasta 20 millas)', '35': 'a 21–35 millas', '50': 'a 36–50 millas', '75': 'a 51–75 millas', far: 'a más de 75 millas', dia: 'en el aeropuerto DIA' };
+            var placeEn = { community: 'at a community spot', '20': 'close by (under 20 mi)', '35': '21–35 mi out', '50': '36–50 mi out', '75': '51–75 mi out', far: 'over 75 mi out', dia: 'at DIA airport' };
             var whenEs = { day: 'entre semana de día', eve: 'entre semana temprano o de noche', wkd: 'en fin de semana de día', 'wkd-eve': 'en fin de semana temprano o de noche' };
             var whenEn = { day: 'a weekday daytime', eve: 'a weekday early or evening', wkd: 'a weekend daytime', 'wkd-eve': 'a weekend early or evening' };
             var w = where ? where.value : '20', h = when ? when.value : 'day';
             var tot = $('est-v-total').textContent;
             var addr = form.dataset.addr, addrMi = form.dataset.miles, chk = form.dataset.check;
-            var hereEs = 'Estoy en (ciudad).', hereEn = 'I’m in (city).';
-            if (addr && w !== 'community') {
+            var hereEs = w === 'dia' ? 'Nos vemos en el aeropuerto.' : 'Estoy en (ciudad).', hereEn = w === 'dia' ? 'We’d meet at the airport.' : 'I’m in (city).';
+            if (addr && w !== 'community' && w !== 'dia') {
                 if (!addrMi) {
                     hereEs = 'Mi dirección: ' + addr + ' (su página no la encontró; ¿me confirma el costo del viaje?).';
                     hereEn = 'My address: ' + addr + ' (your site couldn’t find it; can you confirm my travel fee?).';
@@ -918,10 +918,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function fromPhoton(f) {
         var pr = f.properties || {};
-        var street = pr.street || pr.name || '';
-        var line1 = (pr.housenumber ? pr.housenumber + ' ' : '') + street;
+        var street = pr.street || '';
+        var line1 = pr.housenumber ? pr.housenumber + ' ' + street : (pr.name || street);
         var line2 = [pr.city || pr.district || pr.county, 'CO' + (pr.postcode ? ' ' + pr.postcode : '')].filter(Boolean).join(', ');
-        return { lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], line1: line1, line2: line2, label: [line1, line2].filter(Boolean).join(', '), inCO: pr.state === 'Colorado', approx: !pr.housenumber, hasStreet: !!street };
+        return { lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], line1: line1, line2: line2, label: [line1, line2].filter(Boolean).join(', '), inCO: pr.state === 'Colorado', approx: !pr.housenumber && !pr.name, hasStreet: !!(street || pr.name), name: pr.name || '' };
     }
 
     function photon(q, limit, signal) {
@@ -966,9 +966,27 @@ document.addEventListener('DOMContentLoaded', function () {
         return 2 * R * Math.asin(Math.sqrt(h)) * 2 * 1.3; // there and back, roads ≈ 1.3× a straight line
     }
 
+    // Same rule as the dashboard (mileage.tier_for): round-trip miles to the
+    // tenth, first tier whose max it doesn't exceed; past 75, every mile x $1.35.
     function tierFor(mi) {
-        var m = Math.round(mi);
+        var m = Math.round(mi * 10) / 10;
         return m <= 20 ? '20' : m <= 35 ? '35' : m <= 50 ? '50' : m <= 75 ? '75' : 'far';
+    }
+
+    // DIA flat rate (dashboard travel_fees.json "flat_locations"): $95 flat,
+    // parking included, replaces the mileage tiers; $10 per signature.
+    function isAirport(text) {
+        var t = ' ' + String(text || '').toLowerCase().replace(/ñ/g, 'n').replace(/[^a-z0-9]+/g, ' ') + ' ';
+        return / (dia|denver international airport|denver airport|airport) /.test(t) || / 8500 pena (blvd|boulevard) /.test(t);
+    }
+
+    function applyAirport() {
+        closeList();
+        setForm(); 
+        var chip = form.querySelector('input[name="where"][value="dia"]');
+        if (chip) chip.checked = true;
+        change();
+        last = { state: 'dia' }; render();
     }
 
     // ---------- suggestions ----------
@@ -1015,6 +1033,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function pick(i) {
         var s = sugs[i];
         if (!s) return;
+        if (isAirport(s.label + ' ' + s.name)) { input.value = s.label; applyAirport(); return; }
         input.value = s.label;
         closeList();
         measure(Promise.resolve(s), s.label.toLowerCase(), 'pick');
@@ -1027,10 +1046,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (last.state === 'busy') html = e ? 'Buscando su dirección…' : 'Looking up your address…';
         else if (last.state === 'empty') html = e ? 'Escriba su dirección con número, calle, ciudad y código postal.' : 'Type your street address, city and ZIP.';
         else if (last.state === 'notfound') html = e ? 'No encontré esa dirección. Puede revisarla, o mandarme su estimado por WhatsApp o mensaje de texto (abajo): su dirección va en el mensaje y yo le confirmo el viaje.' : 'I couldn’t find that address. You can check it, or send me your estimate by WhatsApp or text (below): your address goes in the message and I’ll confirm the travel fee.';
+        else if (last.state === 'dia') html = e ? '<strong>Aeropuerto DIA</strong><br>En el aeropuerto no se cobra por millas: son <strong>$95 fijos</strong> (estacionamiento incluido) y <strong>$10 por firma</strong>. Ya marqué esa opción abajo.' : '<strong>DIA airport</strong><br>The airport isn’t priced by miles: it’s <strong>$95 flat</strong> (parking included) plus <strong>$10 a signature</strong>. I picked that option below for you.';
         else if (last.state === 'outside') html = e ? 'Esa dirección parece estar fuera de Colorado. Mándeme un mensaje y lo vemos.' : 'That address looks like it’s outside Colorado. Text me and we’ll work it out.';
         else if (last.state === 'error') html = e ? 'La búsqueda de direcciones no responde ahora. Mándeme su estimado por WhatsApp o mensaje de texto (abajo): su dirección va en el mensaje y yo le confirmo el viaje.' : 'The address lookup isn’t answering right now. Send me your estimate by WhatsApp or text (below): your address goes in the message and I’ll confirm the travel fee.';
         else {
-            var mi = Math.round(last.miles);
+            var mi = Math.round(last.miles * 10) / 10;
             var fee = last.tier === 'far' ? money(Math.round(mi * 1.35 * 100) / 100) + ' (' + mi + (e ? ' millas' : ' mi') + ' × $1.35)' : '$' + last.tier;
             html = '<strong>' + esc(last.label) + '</strong><br>' +
                 (e ? 'Unas <strong>' + mi + ' millas ida y vuelta</strong>' : 'About <strong>' + mi + ' miles round trip</strong>') +
@@ -1040,13 +1060,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 (last.check === 'typed' ? '<br><span class="h3-addr-confirm">' + (e ? '¿Es su dirección? Si no, elíjala de la lista. Como no la eligió de la lista, mándeme su estimado por WhatsApp o mensaje de texto (abajo) y le confirmo las millas.' : 'Is that your address? If not, pick it from the list. Since it wasn’t picked from the list, send me your estimate by WhatsApp or text (below) and I’ll confirm the miles.') + '</span>' : '');
         }
         out.innerHTML = html;
-        out.className = 'h3-addr-out' + (last.state === 'ok' ? ' is-ok' : last.state === 'busy' ? '' : ' is-warn');
+        out.className = 'h3-addr-out' + (last.state === 'ok' || last.state === 'dia' ? ' is-ok' : last.state === 'busy' ? '' : ' is-warn');
         out.hidden = false;
     }
 
     function setForm(addr, miles, check) {
         if (addr) form.dataset.addr = addr; else delete form.dataset.addr;
-        if (miles) form.dataset.miles = String(Math.round(miles)); else delete form.dataset.miles;
+        if (miles) form.dataset.miles = String(Math.round(miles * 10) / 10); else delete form.dataset.miles;
         if (check) form.dataset.check = check; else delete form.dataset.check;
     }
 
@@ -1065,6 +1085,7 @@ document.addEventListener('DOMContentLoaded', function () {
         Promise.all([getOffice(), placeP]).then(function (res) {
             var from = res[0], to = res[1];
             if (!to) { setForm(typed, 0, 'none'); change(); last = { state: 'notfound' }; return; }
+            if (isAirport(to.label)) { applyAirport(); return; }
             if (!to.inCO) { setForm(typed, 0, 'none'); change(); last = { state: 'outside' }; return; }
             return roadMiles(from, to).then(function (mi) { return { mi: mi, rough: false }; }, function () { return { mi: straightMiles(from, to), rough: true }; })
                 .then(function (m) {
@@ -1081,6 +1102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (active >= 0) { pick(active); return; }
         closeList();
         var q = input.value.trim();
+        if (isAirport(q)) { applyAirport(); return; }
         if (q.length < 6) { last = { state: 'empty' }; render(); return; }
         if (!/\b(co|colorado)\b/i.test(q)) q += ', CO';
         measure(findTyped(q), q.toLowerCase(), 'typed');
