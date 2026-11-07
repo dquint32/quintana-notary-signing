@@ -30,7 +30,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="../styles.css?v=20261104a">
+    <link rel="stylesheet" href="../styles.css?v=20261106b">
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -546,15 +546,25 @@
 
             <fieldset class="h3-step">
                 <legend><span class="h3-step-n" aria-hidden="true">2</span><span id="est-q2-es">¿Dónde nos vemos?</span></legend>
+                <p class="h3-hint h3-hint--from"><span id="est-from-es">Las millas se cuentan <strong>ida y vuelta</strong> (de ida y de regreso) desde <strong><a href="https://www.google.com/maps/dir/?api=1&amp;origin=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a></strong>, mi oficina en Tienda Salvadoreña.</span></p>
+                <div class="h3-addr" id="est-addr" data-clarity-mask="true">
+                    <label for="est-addr-input" class="h3-addr-l"><span id="est-addr-l-es">¿No sabe cuántas millas son? Escriba su dirección y se las calculo.</span></label>
+                    <div class="h3-addr-row">
+                        <input type="text" id="est-addr-input" name="address" autocomplete="street-address" enterkeyhint="search" placeholder="Street, city and ZIP" data-clarity-mask="true">
+                        <button type="button" id="est-addr-go" class="h3-addr-btn"><span id="est-addr-b-es">Calcular</span></button>
+                    </div>
+                    <p class="h3-addr-out" id="est-addr-out" aria-live="polite" hidden></p>
+                    <p class="h3-addr-note"><span id="est-addr-n-es">Para contar las millas, su dirección se envía al servicio gratuito de direcciones de la Oficina del Censo de EE.&nbsp;UU., y los puntos del mapa al servicio de rutas de OpenStreetMap. Yo no la guardo. Rutas &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a>.</span></p>
+                </div>
                 <div class="h3-chips">
                     <label class="h3-chip h3-chip--save"><input type="radio" name="where" value="community" data-travel="0" data-act="10"><span class="h3-chip-l"><span id="est-w0-es">En un lugar comunitario</span><small><span id="est-w0d-es">Mi oficina en Colfax, MSU Denver o una biblioteca de Denver</span></small></span><span class="h3-chip-p"><span id="est-w0p-es">$10 por firma, sin viaje</span></span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="20" data-travel="20" checked><span class="h3-chip-l"><span id="est-w1-es">Cerca</span><small><span id="est-w1d-es">Hasta 20 millas ida y vuelta</span></small></span><span class="h3-chip-p">$20</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="35" data-travel="35"><span class="h3-chip-l"><span id="est-w2-es">Un poco más lejos</span><small><span id="est-w2d-es">21 a 35 millas</span></small></span><span class="h3-chip-p">$35</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es">Afueras del metro</span><small><span id="est-w3d-es">36 a 50 millas</span></small></span><span class="h3-chip-p">$50</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="75" data-travel="75"><span class="h3-chip-l"><span id="est-w4-es">Extremos del área</span><small><span id="est-w4d-es">51 a 75 millas</span></small></span><span class="h3-chip-p">$75</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="far" data-travel="far"><span class="h3-chip-l"><span id="est-w5-es">Más lejos</span><small><span id="est-w5d-es">Más de 75 millas</span></small></span><span class="h3-chip-p"><span id="est-w5p-es">$1.35 / milla</span></span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="35" data-travel="35"><span class="h3-chip-l"><span id="est-w2-es">Un poco más lejos</span><small><span id="est-w2d-es">21 a 35 millas ida y vuelta</span></small></span><span class="h3-chip-p">$35</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es">Afueras del metro</span><small><span id="est-w3d-es">36 a 50 millas ida y vuelta</span></small></span><span class="h3-chip-p">$50</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="75" data-travel="75"><span class="h3-chip-l"><span id="est-w4-es">Extremos del área</span><small><span id="est-w4d-es">51 a 75 millas ida y vuelta</span></small></span><span class="h3-chip-p">$75</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="far" data-travel="far"><span class="h3-chip-l"><span id="est-w5-es">Más lejos</span><small><span id="est-w5d-es">Más de 75 millas ida y vuelta</span></small></span><span class="h3-chip-p"><span id="est-w5p-es">$1.35 / milla</span></span></label>
                 </div>
-                <p class="h3-hint"><span id="est-h2-es">Las millas se cuentan ida y vuelta desde mi oficina en la Colfax Este, y el viaje se cobra una vez por cita. ¿No está seguro? Elija la más cercana y yo se la confirmo.</span></p>
+                <p class="h3-hint"><span id="est-h2-es"><strong>Ejemplo:</strong> si usted está a 15 millas de la tienda, son 30 millas ida y vuelta, así que elija «Un poco más lejos». El viaje se cobra una vez por cita. ¿No está seguro? Elija la más cercana y yo se la confirmo.</span></p>
             </fieldset>
 
             <fieldset class="h3-step">
@@ -836,7 +846,7 @@
         </span>
     </div>
 </footer>
-<script src="../script.js?v=20261103a"></script>
+<script src="../script.js?v=20261106b"></script>
 <script src="../consent.js?v=20261020b"></script>
 </body>
 </html>

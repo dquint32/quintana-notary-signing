@@ -36,7 +36,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261104a">
+    <link rel="stylesheet" href="styles.css?v=20261106b">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -180,15 +180,25 @@
 
             <fieldset class="h3-step">
                 <legend><span class="h3-step-n" aria-hidden="true">2</span><span id="est-q2-es" style="display:none;">¿Dónde nos vemos?</span><span id="est-q2-en">Where do we meet?</span></legend>
+                <p class="h3-hint h3-hint--from"><span id="est-from-es" style="display:none;">Las millas se cuentan <strong>ida y vuelta</strong> (de ida y de regreso) desde <strong><a href="https://www.google.com/maps/dir/?api=1&amp;origin=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a></strong>, mi oficina en Tienda Salvadoreña.</span><span id="est-from-en">Miles are counted <strong>round trip</strong> (there and back) from <strong><a href="https://www.google.com/maps/dir/?api=1&amp;origin=5128+E+Colfax+Ave,+Denver,+CO+80220" target="_blank" rel="noopener noreferrer">5128 E Colfax Ave, Denver, CO 80220</a></strong>, my office at Tienda Salvadoreña.</span></p>
+                <div class="h3-addr" id="est-addr" data-clarity-mask="true">
+                    <label for="est-addr-input" class="h3-addr-l"><span id="est-addr-l-es" style="display:none;">¿No sabe cuántas millas son? Escriba su dirección y se las calculo.</span><span id="est-addr-l-en">Not sure how far? Type your address and I&rsquo;ll work out the miles.</span></label>
+                    <div class="h3-addr-row">
+                        <input type="text" id="est-addr-input" name="address" autocomplete="street-address" enterkeyhint="search" placeholder="Street, city and ZIP" data-clarity-mask="true">
+                        <button type="button" id="est-addr-go" class="h3-addr-btn"><span id="est-addr-b-es" style="display:none;">Calcular</span><span id="est-addr-b-en">Check my address</span></button>
+                    </div>
+                    <p class="h3-addr-out" id="est-addr-out" aria-live="polite" hidden></p>
+                    <p class="h3-addr-note"><span id="est-addr-n-es" style="display:none;">Para contar las millas, su dirección se envía al servicio gratuito de direcciones de la Oficina del Censo de EE.&nbsp;UU., y los puntos del mapa al servicio de rutas de OpenStreetMap. Yo no la guardo. Rutas &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a>.</span><span id="est-addr-n-en">To count the miles, your address goes to the U.S. Census Bureau&rsquo;s free address lookup, and the map points go to OpenStreetMap&rsquo;s route service. I don&rsquo;t save it. Routes &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>.</span></p>
+                </div>
                 <div class="h3-chips">
                     <label class="h3-chip h3-chip--save"><input type="radio" name="where" value="community" data-travel="0" data-act="10"><span class="h3-chip-l"><span id="est-w0-es" style="display:none;">En un lugar comunitario</span><span id="est-w0-en">At a community spot</span><small><span id="est-w0d-es" style="display:none;">Mi oficina en Colfax, MSU Denver o una biblioteca de Denver</span><span id="est-w0d-en">My office on Colfax, MSU Denver, or a Denver library</span></small></span><span class="h3-chip-p"><span id="est-w0p-es" style="display:none;">$10 por firma, sin viaje</span><span id="est-w0p-en">$10 a signature, no travel</span></span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="20" data-travel="20" checked><span class="h3-chip-l"><span id="est-w1-es" style="display:none;">Cerca</span><span id="est-w1-en">Close by</span><small><span id="est-w1d-es" style="display:none;">Hasta 20 millas ida y vuelta</span><span id="est-w1d-en">Up to 20 miles round trip</span></small></span><span class="h3-chip-p">$20</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="35" data-travel="35"><span class="h3-chip-l"><span id="est-w2-es" style="display:none;">Un poco más lejos</span><span id="est-w2-en">A bit farther</span><small><span id="est-w2d-es" style="display:none;">21 a 35 millas</span><span id="est-w2d-en">21 to 35 miles</span></small></span><span class="h3-chip-p">$35</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es" style="display:none;">Afueras del metro</span><span id="est-w3-en">Outer metro</span><small><span id="est-w3d-es" style="display:none;">36 a 50 millas</span><span id="est-w3d-en">36 to 50 miles</span></small></span><span class="h3-chip-p">$50</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="75" data-travel="75"><span class="h3-chip-l"><span id="est-w4-es" style="display:none;">Extremos del área</span><span id="est-w4-en">Edge of the area</span><small><span id="est-w4d-es" style="display:none;">51 a 75 millas</span><span id="est-w4d-en">51 to 75 miles</span></small></span><span class="h3-chip-p">$75</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="far" data-travel="far"><span class="h3-chip-l"><span id="est-w5-es" style="display:none;">Más lejos</span><span id="est-w5-en">Farther</span><small><span id="est-w5d-es" style="display:none;">Más de 75 millas</span><span id="est-w5d-en">Over 75 miles</span></small></span><span class="h3-chip-p"><span id="est-w5p-es" style="display:none;">$1.35 / milla</span><span id="est-w5p-en">$1.35 / mile</span></span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="35" data-travel="35"><span class="h3-chip-l"><span id="est-w2-es" style="display:none;">Un poco más lejos</span><span id="est-w2-en">A bit farther</span><small><span id="est-w2d-es" style="display:none;">21 a 35 millas ida y vuelta</span><span id="est-w2d-en">21 to 35 miles round trip</span></small></span><span class="h3-chip-p">$35</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es" style="display:none;">Afueras del metro</span><span id="est-w3-en">Outer metro</span><small><span id="est-w3d-es" style="display:none;">36 a 50 millas ida y vuelta</span><span id="est-w3d-en">36 to 50 miles round trip</span></small></span><span class="h3-chip-p">$50</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="75" data-travel="75"><span class="h3-chip-l"><span id="est-w4-es" style="display:none;">Extremos del área</span><span id="est-w4-en">Edge of the area</span><small><span id="est-w4d-es" style="display:none;">51 a 75 millas ida y vuelta</span><span id="est-w4d-en">51 to 75 miles round trip</span></small></span><span class="h3-chip-p">$75</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="far" data-travel="far"><span class="h3-chip-l"><span id="est-w5-es" style="display:none;">Más lejos</span><span id="est-w5-en">Farther</span><small><span id="est-w5d-es" style="display:none;">Más de 75 millas ida y vuelta</span><span id="est-w5d-en">Over 75 miles round trip</span></small></span><span class="h3-chip-p"><span id="est-w5p-es" style="display:none;">$1.35 / milla</span><span id="est-w5p-en">$1.35 / mile</span></span></label>
                 </div>
-                <p class="h3-hint"><span id="est-h2-es" style="display:none;">Las millas se cuentan ida y vuelta desde mi oficina en la Colfax Este, y el viaje se cobra una vez por cita. ¿No está seguro? Elija la más cercana y yo se la confirmo.</span><span id="est-h2-en">Miles are counted round trip from my office on East Colfax, and travel is charged once per visit. Not sure? Pick your best guess and I&rsquo;ll confirm it.</span></p>
+                <p class="h3-hint"><span id="est-h2-es" style="display:none;"><strong>Ejemplo:</strong> si usted está a 15 millas de la tienda, son 30 millas ida y vuelta, así que elija «Un poco más lejos». El viaje se cobra una vez por cita. ¿No está seguro? Elija la más cercana y yo se la confirmo.</span><span id="est-h2-en"><strong>Example:</strong> if you&rsquo;re 15 miles from the store, that&rsquo;s 30 miles round trip, so pick &ldquo;A bit farther.&rdquo; Travel is charged once per visit. Not sure? Pick your best guess and I&rsquo;ll confirm it.</span></p>
             </fieldset>
 
             <fieldset class="h3-step">
@@ -336,7 +346,7 @@
 <h3 class="pc-title"><span id="travel-how-es" style="display:none;">Cómo se calcula</span><span id="travel-how-en">How it&rsquo;s figured</span></h3>
 <dl class="pc-facts">
 <div class="pc-fact"><dt><span id="travel-f1-k-es" style="display:none;">Se cobra</span><span id="travel-f1-k-en">Charged</span></dt><dd><span id="travel-f1-v-es" style="display:none;"><strong>Una vez por cita</strong>, no por firma</span><span id="travel-f1-v-en"><strong>Once per appointment</strong>, not per signature</span></dd></div>
-<div class="pc-fact"><dt><span id="travel-f2-k-es" style="display:none;">Se mide desde</span><span id="travel-f2-k-en">Measured from</span></dt><dd><span id="travel-f2-v-es" style="display:none;">Millas de ida y vuelta desde la <strong>Tienda Salvadoreña</strong>, 5128 E Colfax Ave, Denver</span><span id="travel-f2-v-en">Round-trip miles from <strong>Tienda Salvadoreña</strong>, 5128 E Colfax Ave, Denver</span></dd></div>
+<div class="pc-fact"><dt><span id="travel-f2-k-es" style="display:none;">Se mide desde</span><span id="travel-f2-k-en">Measured from</span></dt><dd><span id="travel-f2-v-es" style="display:none;">Millas de ida y vuelta desde la <strong>Tienda Salvadoreña</strong>, 5128 E Colfax Ave, Denver, CO 80220</span><span id="travel-f2-v-en">Round-trip miles from <strong>Tienda Salvadoreña</strong>, 5128 E Colfax Ave, Denver, CO 80220</span></dd></div>
 <div class="pc-fact"><dt><span id="travel-f3-k-es" style="display:none;">¿La fija la ley?</span><span id="travel-f3-k-en">Set by law?</span></dt><dd><span id="travel-f3-v-es" style="display:none;">No. La ley de Colorado no la regula.</span><span id="travel-f3-v-en">No. Colorado law doesn&rsquo;t set it.</span></dd></div>
 <div class="pc-fact"><dt><span id="travel-f4-k-es" style="display:none;">Por escrito</span><span id="travel-f4-k-en">In writing</span></dt><dd><span id="travel-f4-v-es" style="display:none;">Antes de la cita</span><span id="travel-f4-v-en">Before the appointment</span></dd></div>
 </dl>
@@ -872,7 +882,7 @@
         </span>
     </div>
 </footer>
-<script src="script.js?v=20261103a"></script>
+<script src="script.js?v=20261106b"></script>
 <script src="consent.js?v=20261020b"></script>
 </body>
 </html>

@@ -3716,6 +3716,8 @@ html[data-theme="dark"] .h3-idcard-seal { filter: invert(1); opacity: 0.08; }
 .h3-step legend { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.05rem; color: var(--h3-ink); padding: 0 0.35rem; }
 .h3-step-n { width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; background: var(--h3-pine); color: var(--h3-paper); font-size: 0.9rem; flex: none; }
 .h3-hint { font-size: 0.86rem; color: var(--h3-muted) !important; margin: 0.6rem 0 0; line-height: 1.5; }
+.h3-hint--from { margin: 0 0 0.75rem; font-size: 0.92rem; color: var(--h3-ink) !important; }
+.h3-hint--from a { color: inherit; text-underline-offset: 0.18em; }
 .h3-count { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
 .h3-count-btn { width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--h3-line); background: var(--h3-paper); color: var(--h3-ink); font-size: 1.4rem; font-weight: 700; cursor: pointer; line-height: 1; }
 .h3-count-btn:hover { border-color: var(--h3-pine); }
@@ -3975,3 +3977,23 @@ html[data-theme="dark"] .h3-f-total .h3-f-amt, html[data-theme="dark"] .h3-f-tot
   .h3-f-part .h3-f-lbl { order: 1; }
   .h3-f-part + .h3-f-op + .h3-f-part:not(.h3-f-total) .h3-f-amt::before { content: "+ "; color: var(--h3-clay); }
 }
+
+/* ==========================================================
+   ADDRESS MILEAGE LOOKUP (2026-11-06) - #est-addr in the estimator
+   ========================================================== */
+.h3-addr { margin: 0 0 0.9rem; padding: 0.85rem 0.9rem; border: 1px dashed var(--h3-line); border-radius: 12px; background: var(--h3-paper); }
+.h3-addr-l { display: block; font-weight: 600; font-size: 0.95rem; color: var(--h3-ink); margin: 0 0 0.5rem; }
+.h3-addr-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.h3-addr-row input { flex: 1 1 14rem; min-width: 0; height: 46px; padding: 0 0.8rem; font: 400 1rem Inter, sans-serif; color: var(--h3-ink); background: var(--h3-card); border: 1px solid var(--h3-line); border-radius: 10px; }
+.h3-addr-row input::placeholder { color: var(--h3-muted); opacity: 1; }
+.h3-addr-row input:focus-visible { outline: 3px solid var(--h3-clay); outline-offset: 1px; border-color: var(--h3-pine); }
+.h3-addr-btn { flex: 0 0 auto; height: 46px; padding: 0 1.1rem; border: none; border-radius: 10px; background: var(--h3-pine); color: var(--h3-paper); font: 700 0.95rem Inter, sans-serif; cursor: pointer; }
+.h3-addr-btn:hover { filter: brightness(1.12); }
+.h3-addr-btn:focus-visible { outline: 3px solid var(--h3-clay); outline-offset: 2px; }
+.h3-addr-btn:disabled { opacity: 0.6; cursor: progress; }
+.h3-addr-out { margin: 0.65rem 0 0; padding: 0.6rem 0.75rem; border-radius: 10px; font-size: 0.92rem; line-height: 1.5; color: var(--h3-ink) !important; background: var(--h3-paper-2); }
+.h3-addr-out.is-ok { background: var(--h3-pine-soft); border-left: 4px solid var(--h3-pine); }
+.h3-addr-out.is-warn { background: var(--h3-clay-soft); border-left: 4px solid var(--h3-clay); }
+.h3-addr-note { margin: 0.55rem 0 0; font-size: 0.78rem; line-height: 1.45; color: var(--h3-muted) !important; }
+.h3-addr-note a { color: inherit !important; }
+@media (max-width: 479px) { .h3-addr-btn { flex: 1 1 100%; } }

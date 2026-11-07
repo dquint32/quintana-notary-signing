@@ -788,7 +788,7 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
         var count = document.getElementById('est-count');
         var $ = function (id) { return document.getElementById(id); };
         var es = function () { return (document.documentElement.getAttribute('data-lang') || 'en') === 'es'; };
-        var money = function (n) { return '$' + n; };
+        var money = function (n) { return '$' + (n % 1 ? n.toFixed(2) : n); };
         var picked = function (name) { return form.querySelector('input[name="' + name + '"]:checked'); };
         var clamp = function () {
             var n = parseInt(count.value, 10);
@@ -804,13 +804,15 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
             var extra = when ? parseInt(when.getAttribute('data-extra'), 10) : 0;
             var acts = n * act;
             var far = travel === 'far';
-            var t = far ? 0 : parseInt(travel, 10);
-            var total = acts + t + extra;
+            var knownMi = parseInt(form.dataset.miles || '', 10);
+            var farKnown = far && knownMi > 0;
+            var t = farKnown ? Math.round(knownMi * 1.35 * 100) / 100 : (far ? 0 : parseInt(travel, 10));
+            var total = Math.round((acts + t + extra) * 100) / 100;
             $('est-calc-act').textContent = n + ' × ' + money(act);
             $('est-v-act').textContent = money(acts);
-            $('est-v-travel').textContent = far ? (es() ? '$1.35 / milla' : '$1.35 / mile') : (t === 0 ? (es() ? 'Sin cargo' : 'None') : money(t));
+            $('est-v-travel').textContent = farKnown ? money(t) + ' (' + knownMi + (es() ? ' millas' : ' mi') + ')' : far ? (es() ? '$1.35 / milla' : '$1.35 / mile') : (t === 0 ? (es() ? 'Sin cargo' : 'None') : money(t));
             $('est-v-extra').textContent = '+' + money(extra);
-            $('est-v-total').textContent = far ? money(total) + (es() ? ' + millas' : ' + miles') : money(total);
+            $('est-v-total').textContent = far && !farKnown ? money(total) + (es() ? ' + millas' : ' + miles') : money(total);
             form.querySelectorAll('.h3-chip').forEach(function (c) {
                 c.classList.toggle('is-on', c.querySelector('input').checked);
             });
@@ -820,8 +822,11 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
             var whenEn = { day: 'a weekday daytime', eve: 'a weekday early or evening', wkd: 'a weekend daytime', 'wkd-eve': 'a weekend early or evening' };
             var w = where ? where.value : '20', h = when ? when.value : 'day';
             var tot = $('est-v-total').textContent;
-            var msgEs = 'Hola David, necesito notarizar ' + n + (n === 1 ? ' firma' : ' firmas') + ', ' + placeEs[w] + ', ' + whenEs[h] + '. Estoy en (ciudad). Su página me da un estimado de ' + tot + '. ¿Tiene cita disponible?';
-            var msgEn = 'Hi David, I need ' + n + (n === 1 ? ' signature' : ' signatures') + ' notarized, ' + placeEn[w] + ', ' + whenEn[h] + '. I’m in (city). Your site estimate says ' + tot + '. Do you have an opening?';
+            var addr = form.dataset.addr, addrMi = form.dataset.miles;
+            var hereEs = addr && w !== 'community' ? 'Mi dirección: ' + addr + ' (unas ' + addrMi + ' millas ida y vuelta según su página).' : 'Estoy en (ciudad).';
+            var hereEn = addr && w !== 'community' ? 'My address: ' + addr + ' (about ' + addrMi + ' miles round trip per your site).' : 'I’m in (city).';
+            var msgEs = 'Hola David, necesito notarizar ' + n + (n === 1 ? ' firma' : ' firmas') + ', ' + placeEs[w] + ', ' + whenEs[h] + '. ' + hereEs + ' Su página me da un estimado de ' + tot + '. ¿Tiene cita disponible?';
+            var msgEn = 'Hi David, I need ' + n + (n === 1 ? ' signature' : ' signatures') + ' notarized, ' + placeEn[w] + ', ' + whenEn[h] + '. ' + hereEn + ' Your site estimate says ' + tot + '. Do you have an opening?';
             var sEs = $('est-send-es'), sEn = $('est-send-en');
             if (sEs) sEs.href = 'https://wa.me/13035004122?text=' + encodeURIComponent(msgEs);
             if (sEn) sEn.href = 'https://wa.me/13035004122?text=' + encodeURIComponent(msgEn);
@@ -846,4 +851,155 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
             document.body.classList.toggle('hero-cta-visible', entries[0].isIntersecting);
         }).observe(heroCta);
     }
+});
+// ==========================================================
+// ADDRESS → ROUND-TRIP MILES (#est-addr, inside #estimator)
+// Free, no API key, nothing loads until the visitor clicks:
+//  1. U.S. Census Bureau geocoder (JSONP; it has no CORS) turns
+//     the address into map coordinates.
+//  2. FOSSGIS OSRM server (routing.openstreetmap.de, max 1 req/s)
+//     measures office → address → office by road.
+// Sets the matching travel chip; over 75 mi it stores the miles
+// on the form (data-miles) so the receipt shows miles × $1.35.
+// ==========================================================
+document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('estimator');
+    var box = document.getElementById('est-addr');
+    if (!form || !box) return;
+    var input = document.getElementById('est-addr-input');
+    var go = document.getElementById('est-addr-go');
+    var out = document.getElementById('est-addr-out');
+    var es = function () { return (document.documentElement.getAttribute('data-lang') || 'en') === 'es'; };
+    var OFFICE_ADDR = '5128 E Colfax Ave, Denver, CO 80220';
+    var OFFICE_FALLBACK = { lat: 39.7401, lon: -104.9268 };
+    var office = null;
+    var cache = {};
+    var last = null;
+    var busy = false;
+    var lastCall = 0;
+
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var money = function (n) { return '$' + (n % 1 ? n.toFixed(2) : n); };
+
+    function census(address) {
+        return new Promise(function (resolve, reject) {
+            var cb = 'qnsGeo' + Date.now() + Math.floor(Math.random() * 1000);
+            var s = document.createElement('script');
+            var done = function () { delete window[cb]; s.remove(); clearTimeout(timer); };
+            var timer = setTimeout(function () { done(); reject(new Error('timeout')); }, 12000);
+            window[cb] = function (data) {
+                done();
+                var m = data && data.result && data.result.addressMatches;
+                resolve(m && m.length ? { lat: m[0].coordinates.y, lon: m[0].coordinates.x, label: m[0].matchedAddress } : null);
+            };
+            s.onerror = function () { done(); reject(new Error('network')); };
+            s.src = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=jsonp&callback=' + cb + '&address=' + encodeURIComponent(address);
+            document.head.appendChild(s);
+        });
+    }
+
+    function getOffice() {
+        if (office) return Promise.resolve(office);
+        try { var saved = JSON.parse(sessionStorage.getItem('qnsOffice') || 'null'); if (saved) { office = saved; return Promise.resolve(office); } } catch (e) {}
+        return census(OFFICE_ADDR).then(function (p) {
+            office = p ? { lat: p.lat, lon: p.lon } : OFFICE_FALLBACK;
+            try { sessionStorage.setItem('qnsOffice', JSON.stringify(office)); } catch (e) {}
+            return office;
+        }, function () { return OFFICE_FALLBACK; });
+    }
+
+    function roadMiles(a, b) {
+        var wait = Math.max(0, 1100 - (Date.now() - lastCall));
+        return new Promise(function (r) { setTimeout(r, wait); }).then(function () {
+            lastCall = Date.now();
+            var ctl = 'AbortController' in window ? new AbortController() : null;
+            var t = ctl ? setTimeout(function () { ctl.abort(); }, 10000) : null;
+            var pts = [a, b, a].map(function (p) { return p.lon.toFixed(6) + ',' + p.lat.toFixed(6); }).join(';');
+            return fetch('https://routing.openstreetmap.de/routed-car/route/v1/driving/' + pts + '?overview=false', ctl ? { signal: ctl.signal } : {})
+                .then(function (res) { if (t) clearTimeout(t); if (!res.ok) throw new Error('route ' + res.status); return res.json(); })
+                .then(function (d) {
+                    if (!d.routes || !d.routes.length) throw new Error('no route');
+                    return d.routes[0].distance / 1609.344;
+                });
+        });
+    }
+
+    function straightMiles(a, b) {
+        var R = 3958.8, rad = Math.PI / 180;
+        var dLat = (b.lat - a.lat) * rad, dLon = (b.lon - a.lon) * rad;
+        var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return 2 * R * Math.asin(Math.sqrt(h)) * 2 * 1.3; // there and back, roads ≈ 1.3× a straight line
+    }
+
+    function tierFor(mi) {
+        var m = Math.round(mi);
+        if (m <= 20) return '20';
+        if (m <= 35) return '35';
+        if (m <= 50) return '50';
+        if (m <= 75) return '75';
+        return 'far';
+    }
+
+    function render() {
+        if (!last) { out.hidden = true; return; }
+        var e = es(), html;
+        if (last.state === 'busy') html = e ? 'Buscando su dirección…' : 'Looking up your address…';
+        else if (last.state === 'empty') html = e ? 'Escriba su dirección con número, calle, ciudad y código postal.' : 'Type your street address, city and ZIP.';
+        else if (last.state === 'notfound') html = e ? 'No encontré esa dirección. Revise el número y la calle y agregue la ciudad y el código postal. O mándeme un mensaje y yo la busco.' : 'I couldn’t find that address. Check the number and street, and add the city and ZIP. Or just text me and I’ll look it up.';
+        else if (last.state === 'outside') html = e ? 'Esa dirección parece estar fuera de Colorado. Mándeme un mensaje y lo vemos.' : 'That address looks like it’s outside Colorado. Text me and we’ll work it out.';
+        else if (last.state === 'error') html = e ? 'La búsqueda de direcciones no responde ahora. Elija abajo la opción que le parezca, o mándeme su dirección por WhatsApp.' : 'The address lookup isn’t answering right now. Pick your best guess below, or text me your address.';
+        else {
+            var mi = Math.round(last.miles);
+            var fee = last.tier === 'far' ? money(Math.round(mi * 1.35 * 100) / 100) + ' (' + mi + (e ? ' millas' : ' mi') + ' × $1.35)' : '$' + last.tier;
+            html = '<strong>' + esc(last.label) + '</strong><br>' +
+                (e ? 'Unas <strong>' + mi + ' millas ida y vuelta</strong>' : 'About <strong>' + mi + ' miles round trip</strong>') +
+                (last.rough ? (e ? ' (cálculo aproximado: el servicio de rutas no respondió)' : ' (rough guess: the route service didn’t answer)') : (e ? ' por carretera' : ' by road')) +
+                (e ? ' → viaje: <strong>' + fee + '</strong>. Ya marqué esa opción abajo.' : ' → travel: <strong>' + fee + '</strong>. I picked that option below for you.');
+        }
+        out.innerHTML = html;
+        out.className = 'h3-addr-out' + (last.state === 'ok' ? ' is-ok' : last.state === 'busy' ? '' : ' is-warn');
+        out.hidden = false;
+    }
+
+    function setPlaceholder() { input.placeholder = es() ? 'Calle, ciudad y código postal' : 'Street, city and ZIP'; }
+
+    function clearForm() { delete form.dataset.miles; delete form.dataset.addr; }
+
+    function apply(r) {
+        form.dataset.miles = String(Math.round(r.miles));
+        form.dataset.addr = r.label;
+        var chip = form.querySelector('input[name="where"][value="' + r.tier + '"]');
+        if (chip) { chip.checked = true; }
+        form.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    function lookup() {
+        if (busy) return;
+        var q = input.value.trim();
+        if (q.length < 6) { last = { state: 'empty' }; render(); return; }
+        if (!/\b(co|colorado)\b/i.test(q)) q += ', CO';
+        var key = q.toLowerCase();
+        if (cache[key]) { last = cache[key]; apply(last); render(); return; }
+        busy = true; go.disabled = true;
+        last = { state: 'busy' }; render();
+        Promise.all([getOffice(), census(q)]).then(function (res) {
+            var from = res[0], to = res[1];
+            if (!to) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'notfound' }; return; }
+            if (!/,\s*CO,?\s*\d{5}/.test(to.label)) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'outside' }; return; }
+            return roadMiles(from, to).then(function (mi) { return { mi: mi, rough: false }; }, function () { return { mi: straightMiles(from, to), rough: true }; })
+                .then(function (m) {
+                    last = { state: 'ok', label: to.label, miles: m.mi, rough: m.rough, tier: tierFor(m.mi) };
+                    if (!m.rough) cache[key] = last;
+                    apply(last);
+                });
+        }).catch(function () { last = { state: 'error' }; })
+          .then(function () { busy = false; go.disabled = false; render(); });
+    }
+
+    go.addEventListener('click', lookup);
+    input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); lookup(); } });
+    // Typing a new address clears the old miles so a stale per-mile price isn't sent.
+    input.addEventListener('input', function () { if (form.dataset.miles) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); } if (last && last.state !== 'busy') { last = null; render(); } });
+    new MutationObserver(function () { setPlaceholder(); render(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
+    setPlaceholder();
 });
