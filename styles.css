@@ -4011,3 +4011,29 @@ html[data-theme="dark"] .h3-f-total .h3-f-amt, html[data-theme="dark"] .h3-f-tot
 .h3-sms { margin: 0.6rem 0 0; text-align: center; font-size: 0.95rem; }
 .h3-sms a { color: var(--h3-ink) !important; font-weight: 600; text-decoration: underline; text-decoration-color: var(--h3-clay); text-underline-offset: 0.2em; }
 .h3-sms a:hover { color: var(--h3-clay) !important; }
+
+/* ============================================================
+   SITE v5 (2026-11-07): LANGUAGE BUTTON MOVES TO BOTTOM LEFT
+   The header Español/English button is hidden on every page;
+   the floating .lang-float pill (injected by script.js) is shown
+   again at the bottom left, opposite WhatsApp. Warm palette:
+   light = ink pill with cream text (13:1), dark = cream pill
+   with ink text. Stays visible while the homepage hero CTA is
+   on screen (only WhatsApp + back-to-top step aside).
+   ============================================================ */
+header .toggle-btn { display: none !important; }
+html body .lang-float.lang-float {
+  display: inline-flex !important;
+  background: #1F2622;
+  color: #F2ECE2;
+  border: 1px solid rgba(242,236,226,0.5);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+  font-weight: 600;
+}
+html body .lang-float.lang-float:hover { background: #9C3F17; color: #FFFFFF; }
+html body .lang-float.lang-float:focus-visible { outline: 3px solid #9C3F17; outline-offset: 2px; }
+html[data-theme="dark"] body .lang-float.lang-float { background: #F2ECE2; color: #1F2622; border-color: #F2ECE2; }
+html[data-theme="dark"] body .lang-float.lang-float:hover { background: #F2A27B; color: #1F2622; }
+html[data-theme="dark"] body .lang-float.lang-float:focus-visible { outline-color: #F2A27B; }
+
+@media print { html body .lang-float.lang-float { display: none !important; } }
