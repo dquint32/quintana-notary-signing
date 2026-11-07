@@ -890,12 +890,36 @@ document.addEventListener('DOMContentLoaded', function () {
             window[cb] = function (data) {
                 done();
                 var m = data && data.result && data.result.addressMatches;
-                resolve(m && m.length ? { lat: m[0].coordinates.y, lon: m[0].coordinates.x, label: m[0].matchedAddress } : null);
+                resolve(m && m.length ? { lat: m[0].coordinates.y, lon: m[0].coordinates.x, label: m[0].matchedAddress, inCO: /,\s*CO,?\s*\d{5}/.test(m[0].matchedAddress) } : null);
             };
             s.onerror = function () { done(); reject(new Error('network')); };
             s.src = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=jsonp&callback=' + cb + '&address=' + encodeURIComponent(address);
             document.head.appendChild(s);
         });
+    }
+
+    // Backup lookup when Census has no match (its street files miss many newer
+    // streets, e.g. parts of Central Park). Photon = free OpenStreetMap search
+    // by komoot, limited to a box around Colorado. No key; fair use only.
+    function photon(address) {
+        var ctl = 'AbortController' in window ? new AbortController() : null;
+        var t = ctl ? setTimeout(function () { ctl.abort(); }, 10000) : null;
+        var url = 'https://photon.komoot.io/api/?limit=1&lang=en&bbox=-109.06,36.99,-102.04,41.01&q=' + encodeURIComponent(address);
+        return fetch(url, ctl ? { signal: ctl.signal } : {})
+            .then(function (res) { if (t) clearTimeout(t); if (!res.ok) throw new Error('photon ' + res.status); return res.json(); })
+            .then(function (d) {
+                var f = d && d.features && d.features[0];
+                if (!f) return null;
+                var pr = f.properties || {};
+                var street = pr.street || pr.name || '';
+                var line1 = (pr.housenumber ? pr.housenumber + ' ' : '') + street;
+                var label = [line1, pr.city || pr.district || pr.county, 'CO' + (pr.postcode ? ' ' + pr.postcode : '')].filter(Boolean).join(', ');
+                return { lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], label: label, inCO: pr.state === 'Colorado', approx: !pr.housenumber };
+            });
+    }
+
+    function findAddress(q) {
+        return census(q).then(function (r) { return r || photon(q); }, function () { return photon(q); });
     }
 
     function getOffice() {
@@ -954,6 +978,7 @@ document.addEventListener('DOMContentLoaded', function () {
             html = '<strong>' + esc(last.label) + '</strong><br>' +
                 (e ? 'Unas <strong>' + mi + ' millas ida y vuelta</strong>' : 'About <strong>' + mi + ' miles round trip</strong>') +
                 (last.rough ? (e ? ' (cálculo aproximado: el servicio de rutas no respondió)' : ' (rough guess: the route service didn’t answer)') : (e ? ' por carretera' : ' by road')) +
+                (last.approx ? (e ? ' (encontré la calle, no el número exacto, así que las millas son aproximadas)' : ' (I found the street but not the exact house number, so the miles are close, not exact)') : '') +
                 (e ? ' → viaje: <strong>' + fee + '</strong>. Ya marqué esa opción abajo.' : ' → travel: <strong>' + fee + '</strong>. I picked that option below for you.');
         }
         out.innerHTML = html;
@@ -982,13 +1007,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (cache[key]) { last = cache[key]; apply(last); render(); return; }
         busy = true; go.disabled = true;
         last = { state: 'busy' }; render();
-        Promise.all([getOffice(), census(q)]).then(function (res) {
+        Promise.all([getOffice(), findAddress(q)]).then(function (res) {
             var from = res[0], to = res[1];
             if (!to) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'notfound' }; return; }
-            if (!/,\s*CO,?\s*\d{5}/.test(to.label)) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'outside' }; return; }
+            if (!to.inCO) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'outside' }; return; }
             return roadMiles(from, to).then(function (mi) { return { mi: mi, rough: false }; }, function () { return { mi: straightMiles(from, to), rough: true }; })
                 .then(function (m) {
-                    last = { state: 'ok', label: to.label, miles: m.mi, rough: m.rough, tier: tierFor(m.mi) };
+                    last = { state: 'ok', label: to.label, miles: m.mi, rough: m.rough, approx: to.approx, tier: tierFor(m.mi) };
                     if (!m.rough) cache[key] = last;
                     apply(last);
                 });
