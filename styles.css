@@ -3997,3 +3997,17 @@ html[data-theme="dark"] .h3-f-total .h3-f-amt, html[data-theme="dark"] .h3-f-tot
 .h3-addr-note { margin: 0.55rem 0 0; font-size: 0.78rem; line-height: 1.45; color: var(--h3-muted) !important; }
 .h3-addr-note a { color: inherit !important; }
 @media (max-width: 479px) { .h3-addr-btn { flex: 1 1 100%; } }
+
+/* Address suggestions + text-message link (2026-11-06) */
+.h3-addr-list { list-style: none; margin: 0.35rem 0 0; padding: 0.25rem; border: 1px solid var(--h3-line); border-radius: 10px; background: var(--h3-card); box-shadow: 0 10px 24px -18px rgba(60, 40, 20, 0.55); max-height: 18rem; overflow-y: auto; }
+.h3-addr-opt { display: flex; flex-direction: column; gap: 0.1rem; padding: 0.6rem 0.7rem; border-radius: 8px; cursor: pointer; color: var(--h3-ink); min-height: 44px; justify-content: center; }
+.h3-addr-opt + .h3-addr-opt { border-top: 1px solid var(--h3-line); }
+.h3-addr-opt:hover, .h3-addr-opt.is-active { background: var(--h3-pine-soft); }
+.h3-addr-opt.is-active { box-shadow: inset 3px 0 0 var(--h3-pine); }
+.h3-addr-opt-1 { font-weight: 600; font-size: 0.95rem; }
+.h3-addr-opt-2 { font-size: 0.82rem; color: var(--h3-muted); }
+.h3-addr-opt-hint { padding: 0.5rem 0.7rem 0.35rem; font-size: 0.8rem; color: var(--h3-muted); border-top: 1px dashed var(--h3-line); }
+.h3-addr-confirm { display: inline-block; margin-top: 0.35rem; font-weight: 600; }
+.h3-sms { margin: 0.6rem 0 0; text-align: center; font-size: 0.95rem; }
+.h3-sms a { color: var(--h3-ink) !important; font-weight: 600; text-decoration: underline; text-decoration-color: var(--h3-clay); text-underline-offset: 0.2em; }
+.h3-sms a:hover { color: var(--h3-clay) !important; }

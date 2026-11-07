@@ -30,7 +30,7 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
-    <link rel="stylesheet" href="../styles.css?v=20261106b">
+    <link rel="stylesheet" href="../styles.css?v=20261106d">
     <link rel="icon" href="../favicon.ico" sizes="any">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -550,11 +550,12 @@
                 <div class="h3-addr" id="est-addr" data-clarity-mask="true">
                     <label for="est-addr-input" class="h3-addr-l"><span id="est-addr-l-es">¿No sabe cuántas millas son? Escriba su dirección y se las calculo.</span></label>
                     <div class="h3-addr-row">
-                        <input type="text" id="est-addr-input" name="address" autocomplete="street-address" enterkeyhint="search" placeholder="Street, city and ZIP" data-clarity-mask="true">
+                        <input type="text" id="est-addr-input" name="address" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="search" placeholder="Start typing: street, city&hellip;" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="est-addr-list" data-clarity-mask="true">
                         <button type="button" id="est-addr-go" class="h3-addr-btn"><span id="est-addr-b-es">Calcular</span></button>
                     </div>
+                    <ul id="est-addr-list" class="h3-addr-list" role="listbox" aria-label="Address suggestions" hidden></ul>
                     <p class="h3-addr-out" id="est-addr-out" aria-live="polite" hidden></p>
-                    <p class="h3-addr-note"><span id="est-addr-n-es">Para contar las millas, su dirección se envía al servicio gratuito de direcciones de la Oficina del Censo de EE.&nbsp;UU. (si no la encuentra, a la búsqueda de OpenStreetMap de komoot), y los puntos del mapa al servicio de rutas de OpenStreetMap. Yo no la guardo. Rutas &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a>.</span></p>
+                    <p class="h3-addr-note"><span id="est-addr-n-es">Para contar las millas, lo que escribe se envía a la búsqueda de direcciones de OpenStreetMap de komoot (para las sugerencias) y, si no elige una, al servicio gratuito de direcciones de la Oficina del Censo de EE.&nbsp;UU. Los puntos del mapa van al servicio de rutas de OpenStreetMap. Yo no guardo su dirección. Datos &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a>.</span></p>
                 </div>
                 <div class="h3-chips">
                     <label class="h3-chip h3-chip--save"><input type="radio" name="where" value="community" data-travel="0" data-act="10"><span class="h3-chip-l"><span id="est-w0-es">En un lugar comunitario</span><small><span id="est-w0d-es">Mi oficina en Colfax, MSU Denver o una biblioteca de Denver</span></small></span><span class="h3-chip-p"><span id="est-w0p-es">$10 por firma, sin viaje</span></span></label>
@@ -587,6 +588,7 @@
             </ul>
             <p class="h3-receipt-total"><span>Total</span><span id="est-v-total"></span></p>
             <a id="est-send-es" href="https://wa.me/13035004122" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn h3-btn--full"><span>Mandarle esto a David</span></a>
+            <p class="h3-sms"><a id="est-sms-es" href="sms:+13035004122">o mándelo por mensaje de texto</a></p>
             <p class="h3-receipt-fine" id="est-fine-es">Es un estimado. Le confirmo el total exacto por escrito antes de la cita. Con tarjeta de crédito se suma un 2%; con débito, efectivo, Venmo o Zelle, no.</p>
         </div>
     </form>
@@ -846,7 +848,7 @@
         </span>
     </div>
 </footer>
-<script src="../script.js?v=20261106c"></script>
+<script src="../script.js?v=20261106d"></script>
 <script src="../consent.js?v=20261020b"></script>
 </body>
 </html>

@@ -822,14 +822,28 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
             var whenEn = { day: 'a weekday daytime', eve: 'a weekday early or evening', wkd: 'a weekend daytime', 'wkd-eve': 'a weekend early or evening' };
             var w = where ? where.value : '20', h = when ? when.value : 'day';
             var tot = $('est-v-total').textContent;
-            var addr = form.dataset.addr, addrMi = form.dataset.miles;
-            var hereEs = addr && w !== 'community' ? 'Mi dirección: ' + addr + ' (unas ' + addrMi + ' millas ida y vuelta según su página).' : 'Estoy en (ciudad).';
-            var hereEn = addr && w !== 'community' ? 'My address: ' + addr + ' (about ' + addrMi + ' miles round trip per your site).' : 'I’m in (city).';
+            var addr = form.dataset.addr, addrMi = form.dataset.miles, chk = form.dataset.check;
+            var hereEs = 'Estoy en (ciudad).', hereEn = 'I’m in (city).';
+            if (addr && w !== 'community') {
+                if (!addrMi) {
+                    hereEs = 'Mi dirección: ' + addr + ' (su página no la encontró; ¿me confirma el costo del viaje?).';
+                    hereEn = 'My address: ' + addr + ' (your site couldn’t find it; can you confirm my travel fee?).';
+                } else if (chk === 'typed') {
+                    hereEs = 'Mi dirección: ' + addr + ' (su página calculó unas ' + addrMi + ' millas ida y vuelta, pero no la elegí de la lista; ¿me confirma las millas?).';
+                    hereEn = 'My address: ' + addr + ' (your site worked out about ' + addrMi + ' miles round trip, but I didn’t pick it from the list; can you confirm the miles?).';
+                } else {
+                    hereEs = 'Mi dirección: ' + addr + ' (unas ' + addrMi + ' millas ida y vuelta según su página).';
+                    hereEn = 'My address: ' + addr + ' (about ' + addrMi + ' miles round trip per your site).';
+                }
+            }
             var msgEs = 'Hola David, necesito notarizar ' + n + (n === 1 ? ' firma' : ' firmas') + ', ' + placeEs[w] + ', ' + whenEs[h] + '. ' + hereEs + ' Su página me da un estimado de ' + tot + '. ¿Tiene cita disponible?';
             var msgEn = 'Hi David, I need ' + n + (n === 1 ? ' signature' : ' signatures') + ' notarized, ' + placeEn[w] + ', ' + whenEn[h] + '. ' + hereEn + ' Your site estimate says ' + tot + '. Do you have an opening?';
             var sEs = $('est-send-es'), sEn = $('est-send-en');
             if (sEs) sEs.href = 'https://wa.me/13035004122?text=' + encodeURIComponent(msgEs);
             if (sEn) sEn.href = 'https://wa.me/13035004122?text=' + encodeURIComponent(msgEn);
+            var tEs = $('est-sms-es'), tEn = $('est-sms-en');
+            if (tEs) tEs.href = 'sms:+13035004122?&body=' + encodeURIComponent(msgEs);
+            if (tEn) tEn.href = 'sms:+13035004122?&body=' + encodeURIComponent(msgEn);
         };
         form.querySelectorAll('.h3-count-btn').forEach(function (b) {
             b.addEventListener('click', function () {
@@ -854,13 +868,16 @@ document.addEventListener('DOMContentLoaded', function () {/* Homepage: price es
 });
 // ==========================================================
 // ADDRESS → ROUND-TRIP MILES (#est-addr, inside #estimator)
-// Free, no API key, nothing loads until the visitor clicks:
-//  1. U.S. Census Bureau geocoder (JSONP; it has no CORS) turns
-//     the address into map coordinates.
-//  2. FOSSGIS OSRM server (routing.openstreetmap.de, max 1 req/s)
-//     measures office → address → office by road.
-// Sets the matching travel chip; over 75 mi it stores the miles
-// on the form (data-miles) so the receipt shows miles × $1.35.
+// Free, no API key, nothing loads until the visitor types or clicks.
+//  - Suggestions while typing: Photon (photon.komoot.io, OpenStreetMap
+//    search by komoot), Colorado only, waits 350 ms after typing stops,
+//    one request at a time, cached.
+//  - "Check my address" without picking: U.S. Census geocoder (JSONP;
+//    it has no CORS), then Photon as a backup. Those results are marked
+//    "typed" so the WhatsApp message asks David to confirm the miles.
+//  - Road miles: FOSSGIS OSRM (routing.openstreetmap.de, max 1 req/s),
+//    office → address → office.
+// The estimator's update() reads form.dataset.miles / addr / check.
 // ==========================================================
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementById('estimator');
@@ -869,18 +886,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var input = document.getElementById('est-addr-input');
     var go = document.getElementById('est-addr-go');
     var out = document.getElementById('est-addr-out');
+    var list = document.getElementById('est-addr-list');
     var es = function () { return (document.documentElement.getAttribute('data-lang') || 'en') === 'es'; };
     var OFFICE_ADDR = '5128 E Colfax Ave, Denver, CO 80220';
     var OFFICE_FALLBACK = { lat: 39.7401, lon: -104.9268 };
-    var office = null;
-    var cache = {};
-    var last = null;
-    var busy = false;
-    var lastCall = 0;
+    var CO_BOX = '-109.06,36.99,-102.04,41.01';
+    var office = null, cache = {}, sugCache = {}, last = null, busy = false, lastRoute = 0;
+    var sugs = [], active = -1, sugTimer = null, sugCtl = null, sugSeq = 0;
 
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
     var money = function (n) { return '$' + (n % 1 ? n.toFixed(2) : n); };
+    var change = function () { form.dispatchEvent(new Event('change', { bubbles: true })); };
 
+    // ---------- lookups ----------
     function census(address) {
         return new Promise(function (resolve, reject) {
             var cb = 'qnsGeo' + Date.now() + Math.floor(Math.random() * 1000);
@@ -898,28 +916,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Backup lookup when Census has no match (its street files miss many newer
-    // streets, e.g. parts of Central Park). Photon = free OpenStreetMap search
-    // by komoot, limited to a box around Colorado. No key; fair use only.
-    function photon(address) {
-        var ctl = 'AbortController' in window ? new AbortController() : null;
-        var t = ctl ? setTimeout(function () { ctl.abort(); }, 10000) : null;
-        var url = 'https://photon.komoot.io/api/?limit=1&lang=en&bbox=-109.06,36.99,-102.04,41.01&q=' + encodeURIComponent(address);
-        return fetch(url, ctl ? { signal: ctl.signal } : {})
-            .then(function (res) { if (t) clearTimeout(t); if (!res.ok) throw new Error('photon ' + res.status); return res.json(); })
-            .then(function (d) {
-                var f = d && d.features && d.features[0];
-                if (!f) return null;
-                var pr = f.properties || {};
-                var street = pr.street || pr.name || '';
-                var line1 = (pr.housenumber ? pr.housenumber + ' ' : '') + street;
-                var label = [line1, pr.city || pr.district || pr.county, 'CO' + (pr.postcode ? ' ' + pr.postcode : '')].filter(Boolean).join(', ');
-                return { lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], label: label, inCO: pr.state === 'Colorado', approx: !pr.housenumber };
-            });
+    function fromPhoton(f) {
+        var pr = f.properties || {};
+        var street = pr.street || pr.name || '';
+        var line1 = (pr.housenumber ? pr.housenumber + ' ' : '') + street;
+        var line2 = [pr.city || pr.district || pr.county, 'CO' + (pr.postcode ? ' ' + pr.postcode : '')].filter(Boolean).join(', ');
+        return { lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], line1: line1, line2: line2, label: [line1, line2].filter(Boolean).join(', '), inCO: pr.state === 'Colorado', approx: !pr.housenumber, hasStreet: !!street };
     }
 
-    function findAddress(q) {
-        return census(q).then(function (r) { return r || photon(q); }, function () { return photon(q); });
+    function photon(q, limit, signal) {
+        var url = 'https://photon.komoot.io/api/?lang=en&limit=' + limit + '&lat=39.74&lon=-104.93&bbox=' + CO_BOX + '&q=' + encodeURIComponent(q);
+        return fetch(url, signal ? { signal: signal } : {})
+            .then(function (res) { if (!res.ok) throw new Error('photon ' + res.status); return res.json(); })
+            .then(function (d) { return (d && d.features || []).map(fromPhoton).filter(function (p) { return p.inCO && p.hasStreet; }); });
+    }
+
+    function findTyped(q) {
+        var backup = function () { return photon(q, 1).then(function (r) { return r[0] || null; }); };
+        return census(q).then(function (r) { return r || backup(); }, backup);
     }
 
     function getOffice() {
@@ -933,18 +947,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function roadMiles(a, b) {
-        var wait = Math.max(0, 1100 - (Date.now() - lastCall));
+        var wait = Math.max(0, 1100 - (Date.now() - lastRoute));
         return new Promise(function (r) { setTimeout(r, wait); }).then(function () {
-            lastCall = Date.now();
+            lastRoute = Date.now();
             var ctl = 'AbortController' in window ? new AbortController() : null;
             var t = ctl ? setTimeout(function () { ctl.abort(); }, 10000) : null;
             var pts = [a, b, a].map(function (p) { return p.lon.toFixed(6) + ',' + p.lat.toFixed(6); }).join(';');
             return fetch('https://routing.openstreetmap.de/routed-car/route/v1/driving/' + pts + '?overview=false', ctl ? { signal: ctl.signal } : {})
                 .then(function (res) { if (t) clearTimeout(t); if (!res.ok) throw new Error('route ' + res.status); return res.json(); })
-                .then(function (d) {
-                    if (!d.routes || !d.routes.length) throw new Error('no route');
-                    return d.routes[0].distance / 1609.344;
-                });
+                .then(function (d) { if (!d.routes || !d.routes.length) throw new Error('no route'); return d.routes[0].distance / 1609.344; });
         });
     }
 
@@ -957,21 +968,67 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function tierFor(mi) {
         var m = Math.round(mi);
-        if (m <= 20) return '20';
-        if (m <= 35) return '35';
-        if (m <= 50) return '50';
-        if (m <= 75) return '75';
-        return 'far';
+        return m <= 20 ? '20' : m <= 35 ? '35' : m <= 50 ? '50' : m <= 75 ? '75' : 'far';
     }
 
+    // ---------- suggestions ----------
+    function closeList() {
+        list.hidden = true; list.innerHTML = ''; sugs = []; active = -1;
+        input.setAttribute('aria-expanded', 'false'); input.removeAttribute('aria-activedescendant');
+    }
+
+    function showList(items) {
+        sugs = items; active = -1;
+        if (!items.length || document.activeElement !== input) { closeList(); return; }
+        var e = es();
+        list.innerHTML = items.map(function (s, i) {
+            return '<li role="option" id="est-addr-opt-' + i + '" class="h3-addr-opt" aria-selected="false"><span class="h3-addr-opt-1">' + esc(s.line1) + '</span><span class="h3-addr-opt-2">' + esc(s.line2) + (s.approx ? (e ? ' · solo la calle' : ' · street only') : '') + '</span></li>';
+        }).join('') + '<li class="h3-addr-opt-hint" role="presentation">' + (e ? '¿No aparece? Termine de escribir su dirección y toque «Calcular».' : 'Not listed? Finish typing your address and tap “Check my address.”') + '</li>';
+        list.hidden = false; input.setAttribute('aria-expanded', 'true');
+    }
+
+    function setActive(i) {
+        var opts = list.querySelectorAll('.h3-addr-opt');
+        if (!opts.length) return;
+        active = (i + opts.length) % opts.length;
+        opts.forEach(function (o, k) { o.setAttribute('aria-selected', k === active ? 'true' : 'false'); o.classList.toggle('is-active', k === active); });
+        input.setAttribute('aria-activedescendant', 'est-addr-opt-' + active);
+        opts[active].scrollIntoView({ block: 'nearest' });
+    }
+
+    function suggest() {
+        var q = input.value.trim();
+        if (q.length < 4 || !/[a-z]/i.test(q)) { closeList(); return; }
+        var key = q.toLowerCase();
+        if (sugCache[key]) { showList(sugCache[key]); return; }
+        if (sugCtl) sugCtl.abort();
+        sugCtl = 'AbortController' in window ? new AbortController() : null;
+        var seq = ++sugSeq;
+        photon(q, 5, sugCtl && sugCtl.signal).then(function (items) {
+            var seen = {};
+            items = items.filter(function (s) { var k = s.label.toLowerCase(); if (seen[k]) return false; seen[k] = 1; return true; });
+            sugCache[key] = items;
+            if (seq === sugSeq) showList(items);
+        }, function () { if (seq === sugSeq) closeList(); });
+    }
+
+    function pick(i) {
+        var s = sugs[i];
+        if (!s) return;
+        input.value = s.label;
+        closeList();
+        measure(Promise.resolve(s), s.label.toLowerCase(), 'pick');
+    }
+
+    // ---------- result ----------
     function render() {
         if (!last) { out.hidden = true; return; }
         var e = es(), html;
         if (last.state === 'busy') html = e ? 'Buscando su dirección…' : 'Looking up your address…';
         else if (last.state === 'empty') html = e ? 'Escriba su dirección con número, calle, ciudad y código postal.' : 'Type your street address, city and ZIP.';
-        else if (last.state === 'notfound') html = e ? 'No encontré esa dirección. Revise el número y la calle y agregue la ciudad y el código postal. O mándeme un mensaje y yo la busco.' : 'I couldn’t find that address. Check the number and street, and add the city and ZIP. Or just text me and I’ll look it up.';
+        else if (last.state === 'notfound') html = e ? 'No encontré esa dirección. Puede revisarla, o mandarme su estimado por WhatsApp o mensaje de texto (abajo): su dirección va en el mensaje y yo le confirmo el viaje.' : 'I couldn’t find that address. You can check it, or send me your estimate by WhatsApp or text (below): your address goes in the message and I’ll confirm the travel fee.';
         else if (last.state === 'outside') html = e ? 'Esa dirección parece estar fuera de Colorado. Mándeme un mensaje y lo vemos.' : 'That address looks like it’s outside Colorado. Text me and we’ll work it out.';
-        else if (last.state === 'error') html = e ? 'La búsqueda de direcciones no responde ahora. Elija abajo la opción que le parezca, o mándeme su dirección por WhatsApp.' : 'The address lookup isn’t answering right now. Pick your best guess below, or text me your address.';
+        else if (last.state === 'error') html = e ? 'La búsqueda de direcciones no responde ahora. Mándeme su estimado por WhatsApp o mensaje de texto (abajo): su dirección va en el mensaje y yo le confirmo el viaje.' : 'The address lookup isn’t answering right now. Send me your estimate by WhatsApp or text (below): your address goes in the message and I’ll confirm the travel fee.';
         else {
             var mi = Math.round(last.miles);
             var fee = last.tier === 'far' ? money(Math.round(mi * 1.35 * 100) / 100) + ' (' + mi + (e ? ' millas' : ' mi') + ' × $1.35)' : '$' + last.tier;
@@ -979,52 +1036,79 @@ document.addEventListener('DOMContentLoaded', function () {
                 (e ? 'Unas <strong>' + mi + ' millas ida y vuelta</strong>' : 'About <strong>' + mi + ' miles round trip</strong>') +
                 (last.rough ? (e ? ' (cálculo aproximado: el servicio de rutas no respondió)' : ' (rough guess: the route service didn’t answer)') : (e ? ' por carretera' : ' by road')) +
                 (last.approx ? (e ? ' (encontré la calle, no el número exacto, así que las millas son aproximadas)' : ' (I found the street but not the exact house number, so the miles are close, not exact)') : '') +
-                (e ? ' → viaje: <strong>' + fee + '</strong>. Ya marqué esa opción abajo.' : ' → travel: <strong>' + fee + '</strong>. I picked that option below for you.');
+                (e ? ' → viaje: <strong>' + fee + '</strong>. Ya marqué esa opción abajo.' : ' → travel: <strong>' + fee + '</strong>. I picked that option below for you.') +
+                (last.check === 'typed' ? '<br><span class="h3-addr-confirm">' + (e ? '¿Es su dirección? Si no, elíjala de la lista. Como no la eligió de la lista, mándeme su estimado por WhatsApp o mensaje de texto (abajo) y le confirmo las millas.' : 'Is that your address? If not, pick it from the list. Since it wasn’t picked from the list, send me your estimate by WhatsApp or text (below) and I’ll confirm the miles.') + '</span>' : '');
         }
         out.innerHTML = html;
         out.className = 'h3-addr-out' + (last.state === 'ok' ? ' is-ok' : last.state === 'busy' ? '' : ' is-warn');
         out.hidden = false;
     }
 
-    function setPlaceholder() { input.placeholder = es() ? 'Calle, ciudad y código postal' : 'Street, city and ZIP'; }
-
-    function clearForm() { delete form.dataset.miles; delete form.dataset.addr; }
+    function setForm(addr, miles, check) {
+        if (addr) form.dataset.addr = addr; else delete form.dataset.addr;
+        if (miles) form.dataset.miles = String(Math.round(miles)); else delete form.dataset.miles;
+        if (check) form.dataset.check = check; else delete form.dataset.check;
+    }
 
     function apply(r) {
-        form.dataset.miles = String(Math.round(r.miles));
-        form.dataset.addr = r.label;
+        setForm(r.label, r.miles, r.check);
         var chip = form.querySelector('input[name="where"][value="' + r.tier + '"]');
-        if (chip) { chip.checked = true; }
-        form.dispatchEvent(new Event('change', { bubbles: true }));
+        if (chip) chip.checked = true;
+        change();
+    }
+
+    function measure(placeP, key, check) {
+        if (cache[key] && cache[key].check === check) { last = cache[key]; apply(last); render(); return; }
+        busy = true; go.disabled = true;
+        last = { state: 'busy' }; render();
+        var typed = input.value.trim();
+        Promise.all([getOffice(), placeP]).then(function (res) {
+            var from = res[0], to = res[1];
+            if (!to) { setForm(typed, 0, 'none'); change(); last = { state: 'notfound' }; return; }
+            if (!to.inCO) { setForm(typed, 0, 'none'); change(); last = { state: 'outside' }; return; }
+            return roadMiles(from, to).then(function (mi) { return { mi: mi, rough: false }; }, function () { return { mi: straightMiles(from, to), rough: true }; })
+                .then(function (m) {
+                    last = { state: 'ok', label: to.label, miles: m.mi, rough: m.rough, approx: to.approx, tier: tierFor(m.mi), check: check };
+                    if (!m.rough) cache[key] = last;
+                    apply(last);
+                });
+        }).catch(function () { setForm(typed, 0, 'none'); change(); last = { state: 'error' }; })
+          .then(function () { busy = false; go.disabled = false; render(); });
     }
 
     function lookup() {
         if (busy) return;
+        if (active >= 0) { pick(active); return; }
+        closeList();
         var q = input.value.trim();
         if (q.length < 6) { last = { state: 'empty' }; render(); return; }
         if (!/\b(co|colorado)\b/i.test(q)) q += ', CO';
-        var key = q.toLowerCase();
-        if (cache[key]) { last = cache[key]; apply(last); render(); return; }
-        busy = true; go.disabled = true;
-        last = { state: 'busy' }; render();
-        Promise.all([getOffice(), findAddress(q)]).then(function (res) {
-            var from = res[0], to = res[1];
-            if (!to) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'notfound' }; return; }
-            if (!to.inCO) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); last = { state: 'outside' }; return; }
-            return roadMiles(from, to).then(function (mi) { return { mi: mi, rough: false }; }, function () { return { mi: straightMiles(from, to), rough: true }; })
-                .then(function (m) {
-                    last = { state: 'ok', label: to.label, miles: m.mi, rough: m.rough, approx: to.approx, tier: tierFor(m.mi) };
-                    if (!m.rough) cache[key] = last;
-                    apply(last);
-                });
-        }).catch(function () { last = { state: 'error' }; })
-          .then(function () { busy = false; go.disabled = false; render(); });
+        measure(findTyped(q), q.toLowerCase(), 'typed');
     }
 
+    // ---------- events ----------
     go.addEventListener('click', lookup);
-    input.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); lookup(); } });
-    // Typing a new address clears the old miles so a stale per-mile price isn't sent.
-    input.addEventListener('input', function () { if (form.dataset.miles) { clearForm(); form.dispatchEvent(new Event('change', { bubbles: true })); } if (last && last.state !== 'busy') { last = null; render(); } });
-    new MutationObserver(function () { setPlaceholder(); render(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
+    input.addEventListener('keydown', function (ev) {
+        if (ev.key === 'ArrowDown' && !list.hidden) { ev.preventDefault(); setActive(active + 1); }
+        else if (ev.key === 'ArrowUp' && !list.hidden) { ev.preventDefault(); setActive(active - 1); }
+        else if (ev.key === 'Escape') { closeList(); }
+        else if (ev.key === 'Enter') { ev.preventDefault(); lookup(); }
+    });
+    input.addEventListener('input', function () {
+        if (form.dataset.addr) { setForm(); change(); }
+        if (last && last.state !== 'busy') { last = null; render(); }
+        clearTimeout(sugTimer);
+        sugTimer = setTimeout(suggest, 350);
+    });
+    input.addEventListener('blur', function () { setTimeout(closeList, 150); });
+    // mousedown (not click) so the input doesn't blur and close the list first
+    list.addEventListener('mousedown', function (ev) {
+        var li = ev.target.closest('.h3-addr-opt');
+        if (!li) return;
+        ev.preventDefault();
+        pick(Array.prototype.indexOf.call(list.querySelectorAll('.h3-addr-opt'), li));
+    });
+    var setPlaceholder = function () { input.placeholder = es() ? 'Empiece a escribir: calle, ciudad…' : 'Start typing: street, city…'; };
+    new MutationObserver(function () { setPlaceholder(); render(); if (!list.hidden) showList(sugs); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-lang'] });
     setPlaceholder();
 });
