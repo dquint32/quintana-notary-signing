@@ -51,6 +51,7 @@ For questions about this project or services:
 **David Quintana**  
 Quintana Notary & Signing – Mobile Colorado Notary  
 MSU Denver – Health Informatics (B.S.) graduate  
+CSU Global – Graduate Certificate in Information Systems Auditing (student since November 2026, expected finish late 2027)  
 
 🌐 Languages (English and Spanish pages)
 
