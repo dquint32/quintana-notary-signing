@@ -33,42 +33,68 @@ PAGES = {
         "Notary Public en español a domicilio en Denver | Quintana",
         "Notarizo su firma en su casa, oficina u hospital, de Loveland a Castle Rock. $15 por acto (máximo legal). Apostillas y traducciones. 303-500-4122"),
     "services.html": ("0.9", "monthly",
-        "Servicios Notariales en Español en Denver | Quintana Notary & Signing",
+        "Servicios notariales en español en Denver | Quintana Notary & Signing",
         "Servicios notariales móviles y bilingües en el área metropolitana de Denver: notarizaciones, apostillas, traducciones certificadas, notarizaciones en el aeropuerto (DIA) y cartas de permiso de viaje para menores. Solo con cita previa."),
     "apostille.html": ("0.9", "monthly",
         "Apostillas de Colorado en Denver | Quintana Notary & Signing",
         "Apostillas de Colorado entregadas en mano en la Secretaría de Estado en Denver. Servicio completo ($150, local), mensajería en Denver ($85) o estatal ($115). Atención en español y lista de requisitos."),
     "certified-copies.html": ("0.8", "monthly",
-        "Copias Certificadas en Denver | Servicios Notariales | Quintana Notary & Signing",
+        "Copias certificadas en Denver | Servicios notariales | Quintana Notary & Signing",
         "Copias certificadas en el área metropolitana de Denver: $15 por copia, $10 en lugares comunitarios. Qué puede certificar un Notary Public de Colorado (diplomas, pasaportes, identificaciones) y qué no."),
     "airport-notarizations.html": ("0.9", "monthly",
-        "Notarizaciones en el Aeropuerto de Denver (DIA) | Quintana Notary & Signing",
-        "Notary Public móvil en el Aeropuerto Internacional de Denver (DIA), el mismo día si tengo espacio. $95 fijos más $10 por firma, estacionamiento incluido. Mándeme un mensaje con su terminal y su hora."),
+        "Notarizaciones en el aeropuerto de Denver (DIA) | Quintana Notary & Signing",
+        "Notary Public móvil en el Aeropuerto Internacional de Denver (DIA), el mismo día si estoy disponible. $95 fijos más $10 por firma, estacionamiento incluido. Mándeme un mensaje con su terminal y su hora."),
     "pricing.html": ("0.8", "monthly",
-        "Lo que Cobro por Servicios Notariales en Denver | Quintana Notary & Signing",
+        "Lo que cobro por servicios notariales en Denver | Quintana Notary & Signing",
         "Precios transparentes de servicios notariales móviles y bilingües en el área metropolitana de Denver: $15 por acto notarial, tarifas de viaje por millaje, apostillas, notarizaciones en el aeropuerto (DIA $95) y más. Solo con cita previa."),
     "translate.html": ("0.8", "monthly",
-        "Traducciones Certificadas Español–Inglés en Denver | Quintana Notary & Signing",
+        "Traducciones certificadas español–inglés en Denver | Quintana Notary & Signing",
         "Traducciones certificadas español–inglés en Denver desde $30 por página: actas de nacimiento, matrimonio y defunción, diplomas y documentos para el DMV. Solo traducción, sin asesoría legal."),
     "b2b-real-estate.html": ("0.8", "monthly",
-        "Para Compañías de Títulos, Abogados y Colegas en Denver | Quintana Notary & Signing",
+        "Para compañías de títulos, abogados y colegas en Denver | Quintana Notary & Signing",
         "Apoyo notarial para empresas en el área metropolitana de Denver: firmas de préstamos para compañías de títulos, visitas notariales al centro de ICE de Aurora para abogados de inmigración y trámite de apostillas."),
     "about.html": ("0.6", "yearly",
-        "Acerca de David Quintana, Notary Public Bilingüe en Denver | Quintana Notary & Signing",
+        "Acerca de David Quintana, Notary Public bilingüe en Denver | Quintana Notary & Signing",
         "Soy David Quintana, Notary Public comisionado en Colorado y traductor de español e inglés. Trabajo por mi cuenta en el área metropolitana de Denver. Solo con cita previa."),
     "faq.html": ("0.7", "monthly",
-        "Preguntas Frecuentes sobre Servicios Notariales en Denver | Quintana Notary & Signing",
+        "Preguntas frecuentes sobre servicios notariales en Denver | Quintana Notary & Signing",
         "Respuestas sobre notarización en Denver, Colorado: identificación aceptada, tarifas ($15 por acto), servicio móvil, apostillas, copias certificadas y traducciones."),
     "contact.html": ("0.7", "monthly",
-        "Contacto y Ubicaciones | Servicios Notariales en Denver | Quintana Notary & Signing",
+        "Contacto y ubicaciones | Servicios notariales en Denver | Quintana Notary & Signing",
         "Reserve servicios notariales móviles en el área metropolitana de Denver: llame o envíe un mensaje al 303-500-4122. $10 por acto en lugares comunitarios. Atención en español. Solo con cita previa."),
     "privacy.html": ("0.2", "yearly",
-        "Política de Privacidad | Quintana Notary & Signing",
+        "Política de privacidad | Quintana Notary & Signing",
         "Política de privacidad y cookies de Quintana Notary & Signing: qué datos recopilamos, cómo usamos Microsoft Clarity y sus derechos de privacidad en Colorado."),
     "immigration-attorney-notary-aurora-ice.html": ("0.8", "monthly",
-        "Servicio Notarial para Abogados de Inmigración en el Centro de ICE de Aurora | Quintana Notary & Signing",
+        "Servicio notarial para abogados de inmigración en el centro de ICE de Aurora | Quintana Notary & Signing",
         "Notary Public bilingüe y móvil para abogados de inmigración en el Centro de Procesamiento de ICE de Aurora (GEO). Autorizado como su representante mediante el G-28 y una carta de autorización. 7 días, de 8 a.m. a 9 p.m."),
 }
+
+# Screen-reader / tooltip text that is not split into -es/-en elements.
+# On es/ pages these exact attribute values are swapped for Spanish.
+ATTR_ES = {
+    "Toggle menu": "Abrir o cerrar el menú",
+    "Switch to dark mode": "Cambiar a modo oscuro",
+    "Light / dark": "Claro / oscuro",
+    "Main": "Principal",
+    "Site": "Sitio",
+    "On this page": "En esta página",
+    "Address suggestions": "Sugerencias de direcciones",
+    "Start typing: street, city…": "Empiece a escribir: calle, ciudad…",
+    "Quintana Notary & Signing — home": "Quintana Notary & Signing — inicio",
+    "David Quintana, Notary Public, in a navy button-up shirt": "David Quintana, Notary Public, con camisa azul marino",
+    "David Quintana smiling, in a navy suit and bow tie": "David Quintana sonriendo, con traje azul marino y corbata de moño",
+}
+ATTR_RE = re.compile(r'\b(aria-label|alt|title|placeholder)="([^"]*)"')
+
+
+def translate_attrs(html):
+    def sub(m):
+        val = m.group(2).replace("&amp;", "&")
+        es = ATTR_ES.get(val)
+        return f'{m.group(1)}="{es.replace("&", "&amp;")}"' if es else m.group(0)
+    return ATTR_RE.sub(sub, html)
+
 
 BANNED = re.compile(r"\bnotar[ií][oa]s?\b", re.I)
 LANG_TAG = re.compile(r'<[A-Za-z][^<>]*?\bid="[^"<>]*-(es|en)"[^<>]*>')
@@ -201,6 +227,7 @@ def spanish_page(name, html):
         spanish_ld, _ = read(ld_es)
         html = LD_JSON.sub(lambda m: spanish_ld, html, count=1)
     html = REDIRECT.sub("", html)
+    html = translate_attrs(html)
     html = re.sub(r"<title>.*?</title>",
                   lambda m: "<title>" + title.replace("&", "&amp;") + "</title>", html, count=1, flags=re.S)
     html, n = re.subn(r'<meta name="description" content="[^"]*">',

@@ -319,7 +319,7 @@
               "name": "¿Puede venir hoy?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Si tengo un espacio, sí. Escríbame dónde está y para cuándo lo necesita, y le digo la primera hora que tengo. Antes de las 10 AM o después de las 7 PM se suman $20, y en fin de semana $15."
+                "text": "Si tengo tiempo libre, sí. Escríbame dónde está y para cuándo lo necesita, y le digo la primera hora que tengo. Antes de las 10 AM o después de las 7 PM se suman $20, y en fin de semana $15."
               }
             },
             {
@@ -376,7 +376,7 @@
     <div class="header-container">
         <div id="brand-logo">
             <a href="index.html">
-                <img src="../logo-header-light.svg" alt="Quintana Notary &amp; Signing — home" class="logo-img logo-light" width="424" height="104"><img src="../logo-header-dark.svg" alt="" aria-hidden="true" class="logo-img logo-dark" width="424" height="104">
+                <img src="../logo-header-light.svg" alt="Quintana Notary &amp; Signing — inicio" class="logo-img logo-light" width="424" height="104"><img src="../logo-header-dark.svg" alt="" aria-hidden="true" class="logo-img logo-dark" width="424" height="104">
             </a>
         </div>
 
@@ -384,16 +384,16 @@
             <span id="toggle-label-es">English</span>
         </button>
 
-        <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Light / dark">
+        <button type="button" class="theme-btn" id="theme-toggle" aria-label="Cambiar a modo oscuro" title="Claro / oscuro">
             <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
             <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
         </button>
 
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <button class="hamburger" id="hamburger" aria-label="Abrir o cerrar el menú" aria-expanded="false" aria-controls="main-nav">
             <span></span><span></span><span></span>
         </button>
 
-        <nav id="main-nav" aria-label="Main">
+        <nav id="main-nav" aria-label="Principal">
             <a href="index.html" id="nav-home-es" aria-current="page">Inicio</a>
             <div class="nav-group">
                 <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-services">
@@ -553,7 +553,7 @@
                         <input type="text" id="est-addr-input" name="address" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="search" placeholder="Start typing: street, city&hellip;" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="est-addr-list" data-clarity-mask="true">
                         <button type="button" id="est-addr-go" class="h3-addr-btn"><span id="est-addr-b-es">Calcular</span></button>
                     </div>
-                    <ul id="est-addr-list" class="h3-addr-list" role="listbox" aria-label="Address suggestions" hidden></ul>
+                    <ul id="est-addr-list" class="h3-addr-list" role="listbox" aria-label="Sugerencias de direcciones" hidden></ul>
                     <p class="h3-addr-out" id="est-addr-out" aria-live="polite" hidden></p>
                     <p class="h3-addr-note"><span id="est-addr-n-es">Para contar las millas, lo que escribe se envía a la búsqueda de direcciones de OpenStreetMap de komoot (para las sugerencias) y, si no elige una, al servicio gratuito de direcciones de la Oficina del Censo de EE.&nbsp;UU. Los puntos del mapa van al servicio de rutas de OpenStreetMap. Yo no guardo su dirección. Datos &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores de OpenStreetMap</a>.</span></p>
                 </div>
@@ -561,12 +561,12 @@
                     <label class="h3-chip h3-chip--save"><input type="radio" name="where" value="community" data-travel="0" data-act="10"><span class="h3-chip-l"><span id="est-w0-es">En un lugar comunitario</span><small><span id="est-w0d-es">Mi oficina en Colfax, MSU Denver o una biblioteca de Denver</span></small></span><span class="h3-chip-p"><span id="est-w0p-es">$10 por firma, sin viaje</span></span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="20" data-travel="20" checked><span class="h3-chip-l"><span id="est-w1-es">Cerca</span><small><span id="est-w1d-es">Hasta 20 millas ida y vuelta</span></small></span><span class="h3-chip-p">$20</span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="35" data-travel="35"><span class="h3-chip-l"><span id="est-w2-es">Un poco más lejos</span><small><span id="est-w2d-es">21 a 35 millas ida y vuelta</span></small></span><span class="h3-chip-p">$35</span></label>
-                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es">Afueras del metro</span><small><span id="est-w3d-es">36 a 50 millas ida y vuelta</span></small></span><span class="h3-chip-p">$50</span></label>
+                    <label class="h3-chip"><input type="radio" name="where" value="50" data-travel="50"><span class="h3-chip-l"><span id="est-w3-es">Afueras del área metropolitana</span><small><span id="est-w3d-es">36 a 50 millas ida y vuelta</span></small></span><span class="h3-chip-p">$50</span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="75" data-travel="75"><span class="h3-chip-l"><span id="est-w4-es">Extremos del área</span><small><span id="est-w4d-es">51 a 75 millas ida y vuelta</span></small></span><span class="h3-chip-p">$75</span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="far" data-travel="far"><span class="h3-chip-l"><span id="est-w5-es">Más lejos</span><small><span id="est-w5d-es">Más de 75 millas ida y vuelta</span></small></span><span class="h3-chip-p"><span id="est-w5p-es">$1.35 / milla</span></span></label>
                     <label class="h3-chip"><input type="radio" name="where" value="dia" data-travel="95" data-act="10"><span class="h3-chip-l"><span id="est-w6-es">Aeropuerto DIA</span><small><span id="est-w6d-es">Tarifa fija, estacionamiento incluido · $10 por firma</span></small></span><span class="h3-chip-p"><span id="est-w6p-es">$95 fijo</span></span></label>
                 </div>
-                <p class="h3-hint"><span id="est-h2-es"><strong>Ejemplo:</strong> si usted está a 15 millas de la tienda, son 30 millas ida y vuelta, así que elija «Un poco más lejos». El viaje se cobra una vez por cita. ¿No está seguro? Elija la más cercana y yo se la confirmo.</span></p>
+                <p class="h3-hint"><span id="est-h2-es"><strong>Ejemplo:</strong> si usted está a 15 millas de la tienda, son 30 millas ida y vuelta, así que elija «Un poco más lejos». El viaje se cobra una vez por cita. ¿No está seguro? Elija la que le parezca y yo se la confirmo.</span></p>
             </fieldset>
 
             <fieldset class="h3-step">
@@ -659,10 +659,10 @@
     <div class="fm-grid">
 <div class="fm-map">
 <figure class="card shop-map">
-            <svg class="shop-map-svg" viewBox="0 0 640 372" role="img" aria-label="Map / Mapa: shared parking behind the building, walk around to the front door of Tienda Salvadoreña on East Colfax Ave; David's office is on the left inside. Parqueo compartido atrás del edificio; dé la vuelta hasta la puerta del frente sobre la Colfax; la oficina de David está a la izquierda al entrar.">
+            <svg class="shop-map-svg" viewBox="0 0 640 372" role="img" aria-label="Map / Mapa: shared parking behind the building, walk around to the front door of Tienda Salvadoreña on East Colfax Ave; David's office is on the left inside. Estacionamiento compartido atrás del edificio; dé la vuelta hasta la puerta del frente sobre la Colfax; la oficina de David está a la izquierda al entrar.">
   <defs><marker id="sm-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="sm-arrowhead"/></marker></defs>
   <rect x="30" y="14" width="580" height="88" rx="12" class="sm-lot"/>
-  <text id="fm-lot-es" x="54" y="50" class="sm-label-lg">Parqueo compartido</text>
+  <text id="fm-lot-es" x="54" y="50" class="sm-label-lg">Estacionamiento compartido</text>
   <text id="fm-lot2-es" x="54" y="76" class="sm-note">Estacione aquí, atrás del edificio</text>
   <g class="sm-p"><rect x="476" y="36" width="40" height="40" rx="8"/><text x="496" y="65" text-anchor="middle">P</text></g>
   <g class="sm-p"><rect x="536" y="36" width="40" height="40" rx="8"/><text x="556" y="65" text-anchor="middle">P</text></g>
@@ -696,7 +696,7 @@
 <div class="fm-steps">
 <h3 class="fm-steps-title"><span id="fm-steps-h-es">Para llegar a mi oficina</span></h3>
         <ol class="shop-map-steps">
-            <li><span id="fm-step1-es">Estacione en el <strong>parqueo compartido de atrás</strong>.</span> </li>
+            <li><span id="fm-step1-es">Estacione en el <strong>estacionamiento compartido de atrás</strong>.</span> </li>
             <li><span id="fm-step2-es">Dé la vuelta caminando hasta la banqueta de la <strong>Colfax</strong>.</span> </li>
             <li><span id="fm-step3-es">Entre por la <strong>puerta del frente</strong> de la Tienda Salvadoreña.</span> </li>
             <li><span id="fm-step4-es">Mi oficina está <strong>a su izquierda</strong>.</span> </li>
@@ -717,7 +717,7 @@
 <span id="hq1-es">¿Puede venir hoy?</span>
 </button>
 <div class="faq-answer">
-<p id="ha1-es">Si tengo un espacio, sí. Escríbame dónde está y para cuándo lo necesita, y le digo la primera hora que tengo. Antes de las 10 AM o después de las 7 PM se suman $20, y en fin de semana $15.</p>
+<p id="ha1-es">Si tengo tiempo libre, sí. Escríbame dónde está y para cuándo lo necesita, y le digo la primera hora que tengo. Antes de las 10 AM o después de las 7 PM se suman $20, y en fin de semana $15.</p>
 </div>
 </div>
 <div class="faq-item" id="home-faq-q2">
@@ -779,7 +779,7 @@
 </section>
 </main>
 <footer class="site-footer">
-    <nav class="footer-sitemap" aria-label="Site">
+    <nav class="footer-sitemap" aria-label="Sitio">
         <div class="footer-col">
             <h2 class="footer-col-title"><span id="ft-svc-title-es">Servicios</span></h2>
             <ul>
