@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
-"""Build the Spanish pages (es/*.html) and sitemap.xml.
+"""Build the English pages (root), the Spanish pages (es/*.html) and sitemap.xml.
 
-Every page in this folder holds BOTH languages: English is the visible one in
-the file, Spanish is hidden until the language button is used. Search engines
-read a page as an English visitor, so Spanish text that only exists hidden on
-an English address is hard to find. This script therefore writes a Spanish
-twin of each page under es/ where Spanish is the visible language, with a
-Spanish title and description and its own address.
+The editable pages live in _src/. Each one holds BOTH languages: every
+paired element has an id ending in -es or -en. This script writes two
+single-language pages from each source:
 
-    Edit the pages in this folder, never the copies in es/.
+    _src/about.html  ->  about.html      (English only: every -es element removed)
+                     ->  es/about.html   (Spanish only: every -en element removed,
+                                          Spanish title, description and address)
+
+So search engines see one language per address, with one H1. The language
+button opens the twin page. Jekyll does not publish folders whose names
+start with "_", so _src/ never goes live.
+
+    Edit the pages in _src/, never the root copies or the copies in es/.
     Then run:   python build_es.py
-    Then commit everything, including the es/ folder and sitemap.xml.
+    Then commit everything: _src/, the root pages, es/ and sitemap.xml.
 
 Wording rule (C.R.S. 24-21-525): the Spanish noun for a notary, and the word
 for a notary's office, must never appear in any title, description or text.
@@ -26,6 +31,7 @@ import sys
 
 BASE = "https://www.quintananotarysigning.com"
 HERE = os.path.dirname(os.path.abspath(__file__))
+SRC = os.path.join(HERE, "_src")   # editable two-language pages
 
 # file -> (sitemap priority, change frequency, Spanish title, Spanish description)
 PAGES = {
@@ -33,41 +39,41 @@ PAGES = {
         "Notary Public en español a domicilio en Denver | Quintana",
         "Notarizo su firma en su casa, oficina u hospital, de Loveland a Castle Rock. $15 por acto (máximo legal). Apostillas y traducciones. 303-500-4122"),
     "services.html": ("0.9", "monthly",
-        "Servicios notariales en español en Denver | Quintana Notary & Signing",
-        "Servicios notariales móviles y bilingües en el área metropolitana de Denver: notarizaciones, apostillas, traducciones certificadas, notarizaciones en el aeropuerto (DIA) y cartas de permiso de viaje para menores. Solo con cita previa."),
+        "Servicios notariales en español en Denver | Quintana",
+        "Notary Public móvil en español en el área de Denver: notarizaciones, copias certificadas, apostillas, traducciones, aeropuerto DIA e I-9. Solo con cita."),
     "apostille.html": ("0.9", "monthly",
-        "Apostillas de Colorado en Denver | Quintana Notary & Signing",
-        "Apostillas de Colorado entregadas en mano en la Secretaría de Estado en Denver. Servicio completo ($150, local), mensajería en Denver ($85) o estatal ($115). Atención en español y lista de requisitos."),
+        "Apostillas de Colorado en Denver | Quintana Notary",
+        "Llevo en persona sus documentos a la Secretaría de Estado de Colorado. Servicio completo $150 (local), mensajería en Denver $85 o estatal $115."),
     "certified-copies.html": ("0.8", "monthly",
-        "Copias certificadas en Denver | Servicios notariales | Quintana Notary & Signing",
-        "Copias certificadas en el área metropolitana de Denver: $15 por copia, $10 en lugares comunitarios. Qué puede certificar un Notary Public de Colorado (diplomas, pasaportes, identificaciones) y qué no."),
+        "Copias certificadas en Denver | Quintana Notary",
+        "Copias certificadas en el área de Denver: $15 por copia, $10 en lugares comunitarios. Qué puede certificar un Notary Public de Colorado y qué no."),
     "airport-notarizations.html": ("0.9", "monthly",
-        "Notarizaciones en el aeropuerto de Denver (DIA) | Quintana Notary & Signing",
-        "Notary Public móvil en el Aeropuerto Internacional de Denver (DIA), el mismo día si estoy disponible. $95 fijos más $10 por firma, estacionamiento incluido. Mándeme un mensaje con su terminal y su hora."),
+        "Notary Public en el aeropuerto de Denver (DIA) | Quintana",
+        "Notary Public en el Aeropuerto Internacional de Denver (DIA): $95 fijos con estacionamiento, más $10 por firma. Mándeme su terminal y su hora."),
     "pricing.html": ("0.8", "monthly",
-        "Lo que cobro por servicios notariales en Denver | Quintana Notary & Signing",
-        "Precios transparentes de servicios notariales móviles y bilingües en el área metropolitana de Denver: $15 por acto notarial, tarifas de viaje por millaje, apostillas, notarizaciones en el aeropuerto (DIA $95) y más. Solo con cita previa."),
+        "Precios de servicios notariales en Denver | Quintana",
+        "$15 por acto notarial (máximo legal en Colorado) más viaje por millas, $10 en lugares comunitarios, DIA $95 fijos, apostillas y traducciones. Por escrito."),
     "translate.html": ("0.8", "monthly",
-        "Traducciones certificadas español–inglés en Denver | Quintana Notary & Signing",
-        "Traducciones certificadas español–inglés en Denver desde $30 por página: actas de nacimiento, matrimonio y defunción, diplomas y documentos para el DMV. Solo traducción, sin asesoría legal."),
+        "Traducciones certificadas español–inglés en Denver",
+        "Traducciones certificadas español–inglés en Denver desde $30 por página: actas de nacimiento, matrimonio y defunción, diplomas y papeles del DMV."),
     "b2b-real-estate.html": ("0.8", "monthly",
-        "Para compañías de títulos, abogados y colegas en Denver | Quintana Notary & Signing",
-        "Apoyo notarial para empresas en el área metropolitana de Denver: firmas de préstamos para compañías de títulos, visitas notariales al centro de ICE de Aurora para abogados de inmigración y trámite de apostillas."),
+        "Para compañías de títulos y abogados en Denver | Quintana",
+        "Firmas de préstamos para compañías de títulos, visitas al centro de ICE de Aurora para abogados y apostillas para colegas en el área de Denver."),
     "about.html": ("0.6", "yearly",
-        "Acerca de David Quintana, Notary Public bilingüe en Denver | Quintana Notary & Signing",
-        "Soy David Quintana, Notary Public comisionado en Colorado y traductor de español e inglés. Trabajo por mi cuenta en el área metropolitana de Denver. Solo con cita previa."),
+        "David Quintana, Notary Public bilingüe en Denver",
+        "Soy David Quintana, Notary Public comisionado en Colorado y traductor de español e inglés, asegurado. Trabajo de Loveland a Castle Rock, con cita."),
     "faq.html": ("0.7", "monthly",
-        "Preguntas frecuentes sobre servicios notariales en Denver | Quintana Notary & Signing",
-        "Respuestas sobre notarización en Denver, Colorado: identificación aceptada, tarifas ($15 por acto), servicio móvil, apostillas, copias certificadas y traducciones."),
+        "Preguntas frecuentes: Notary Public en Denver | Quintana",
+        "Respuestas sobre notarización en Denver: identificación aceptada, tarifas ($15 por acto), servicio a domicilio, apostillas, copias y traducciones."),
     "contact.html": ("0.7", "monthly",
-        "Contacto y ubicaciones | Servicios notariales en Denver | Quintana Notary & Signing",
-        "Reserve servicios notariales móviles en el área metropolitana de Denver: llame o envíe un mensaje al 303-500-4122. $10 por acto en lugares comunitarios. Atención en español. Solo con cita previa."),
+        "Haga su cita con un Notary Public en Denver | Quintana",
+        "Llame o escriba al 303-500-4122 para hacer una cita con un Notary Public bilingüe en Denver. $10 por acto en lugares comunitarios. Solo con cita."),
     "privacy.html": ("0.2", "yearly",
         "Política de privacidad | Quintana Notary & Signing",
-        "Política de privacidad y cookies de Quintana Notary & Signing: qué datos recopilamos, cómo usamos Microsoft Clarity y sus derechos de privacidad en Colorado."),
+        "Política de privacidad y cookies: qué datos recopilamos, cómo usamos Microsoft Clarity y sus derechos de privacidad en Colorado."),
     "immigration-attorney-notary-aurora-ice.html": ("0.8", "monthly",
-        "Servicio notarial para abogados de inmigración en el centro de ICE de Aurora | Quintana Notary & Signing",
-        "Notary Public bilingüe y móvil para abogados de inmigración en el Centro de Procesamiento de ICE de Aurora (GEO). Autorizado como su representante mediante el G-28 y una carta de autorización. 7 días, de 8 a.m. a 9 p.m."),
+        "Notary Public para abogados en ICE de Aurora | Quintana",
+        "Notary Public bilingüe para abogados de inmigración en ICE de Aurora. Autorizado con G-28 y carta. $150 por visita, todos los días de 8 a.m. a 9 p.m."),
 }
 
 # Screen-reader / tooltip text that is not split into -es/-en elements.
@@ -82,6 +88,7 @@ ATTR_ES = {
     "Address suggestions": "Sugerencias de direcciones",
     "Start typing: street, city…": "Empiece a escribir: calle, ciudad…",
     "Quintana Notary & Signing — home": "Quintana Notary & Signing — inicio",
+    "David Quintana, bilingual Colorado Notary Public in Denver": "David Quintana, Notary Public bilingüe de Colorado en Denver",
     "David Quintana, Notary Public, in a navy button-up shirt": "David Quintana, Notary Public, con camisa azul marino",
     "David Quintana smiling, in a navy suit and bow tie": "David Quintana sonriendo, con traje azul marino y corbata de moño",
 }
@@ -216,6 +223,29 @@ def set_default(html, lang):
     return re.sub(r"<html\b[^>]*>", f'<html lang="{lang}" data-lang="{lang}">', html, count=1)
 
 
+LABELLEDBY = re.compile(r'aria-labelledby="([^"]*)"')
+
+
+def drop_missing_labels(html):
+    """aria-labelledby often lists both "x-es x-en"; keep only ids left on the page."""
+    ids = set(re.findall(r'\bid="([^"]+)"', html))
+    def fix(m):
+        keep = [i for i in m.group(1).split() if i in ids]
+        return 'aria-labelledby="' + " ".join(keep) + '"' if keep else ""
+    return LABELLEDBY.sub(fix, html)
+
+
+def generated(html, name, prefix):
+    return html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n<!-- GENERATED by build_es.py from " + prefix
+                        + "_src/" + name + " -- edit that file, then run: python build_es.py -->\n", 1)
+
+
+def english_page(name, html):
+    html = set_default(html, "en")
+    html = strip_lang(html, "es")
+    return generated(drop_missing_labels(html), name, "")
+
+
 def spanish_page(name, html):
     _, _, title, desc = PAGES[name]
     html = set_default(html, "es")
@@ -245,8 +275,7 @@ def spanish_page(name, html):
     html = html.replace('<meta property="og:locale" content="en_US">', '<meta property="og:locale" content="es_US">')
     html = html.replace('<meta property="og:locale:alternate" content="es_US">', '<meta property="og:locale:alternate" content="en_US">')
     html = ASSET.sub(lambda m: f'{m.group(1)}="../{m.group(2)}"', html)
-    return html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n<!-- GENERATED by build_es.py from ../"
-                        + name + " -- edit that file, then run: python build_es.py -->\n", 1)
+    return generated(drop_missing_labels(html), name, "../")
 
 
 def sitemap():
@@ -272,8 +301,12 @@ def sitemap():
 
 
 def main():
+    if not os.path.isdir(SRC):
+        sys.exit("No _src/ folder: the editable pages live in _src/.")
     for name in PAGES:
-        html, crlf = read(os.path.join(HERE, name))
+        html, crlf = read(os.path.join(SRC, name))
+        if "GENERATED by build_es.py" in html:
+            sys.exit(f"_src/{name} is a generated copy. Restore the two-language source first.")
         ld_es = os.path.join(LD_ES_DIR, name)
         extra = read(ld_es)[0] if os.path.exists(ld_es) else ""
         bad = BANNED.search(html) or BANNED.search(" ".join(PAGES[name][2:])) or BANNED.search(extra)
@@ -281,10 +314,11 @@ def main():
             sys.exit(f"{name}: found the banned word '{bad.group(0)}'. Fix it before building.")
         if f'hreflang="es" href="{url(name, "es")}"' not in html:
             sys.exit(f"{name}: the hreflang=\"es\" link must point to {url(name, 'es')}")
+        write(os.path.join(HERE, name), english_page(name, html), crlf)
         write(os.path.join(HERE, "es", name), spanish_page(name, html), crlf)
     _, crlf = read(os.path.join(HERE, "sitemap.xml"))
     write(os.path.join(HERE, "sitemap.xml"), sitemap(), crlf)
-    print(f"Built {len(PAGES)} Spanish pages in es/ and sitemap.xml")
+    print(f"Built {len(PAGES)} English pages, {len(PAGES)} Spanish pages in es/, and sitemap.xml")
 
 
 if __name__ == "__main__":

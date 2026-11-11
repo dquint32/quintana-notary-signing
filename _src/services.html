@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Notary Services in Denver, CO | Quintana Notary</title>
+    <meta name="description" content="Mobile notary in the Denver Metro area, in English or Spanish: notarizations, certified copies, apostilles, translations, DIA airport visits and I-9s.">
+    <link rel="canonical" href="https://www.quintananotarysigning.com/services.html">
+    <link rel="alternate" hreflang="en" href="https://www.quintananotarysigning.com/services.html">
+    <link rel="alternate" hreflang="es" href="https://www.quintananotarysigning.com/es/services.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.quintananotarysigning.com/services.html">
+    <!-- lang-redirect -->
+    <script>
+        /* Spanish devices start on the Spanish page (es/). A choice made with the language button wins. Runs before paint. */
+        (function () {
+            try {
+                var saved = null;
+                try { saved = localStorage.getItem('qns_lang'); } catch (e) {}
+                var dev = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+                var wantEs = saved ? saved === 'es' : /^es\b/i.test(dev);
+                if (!wantEs) return;
+                var file = location.pathname.split('/').pop() || 'index.html';
+                location.replace('es/' + (file === 'index.html' ? '' : file) + location.search + location.hash);
+            } catch (e) {}
+        })();
+    </script>
+    <!-- /lang-redirect -->
+    <script>
+        /* Light/dark: saved choice, else the visitor's system setting. Runs before paint. */
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('qnsTheme'); } catch (e) {}
+            if (t !== 'light' && t !== 'dark') {
+                t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20261107a">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#1F2622">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <!-- Visit counter for the Servicios Quintana dashboard (see ANALYTICS_SETUP.md in the dashboard repo) -->
+    <script defer data-consent-key="qns_consent" src="https://web-production-d60e6.up.railway.app/api/analytics/t.js"></script>
+</head>
+<body id="top" class="page-services">
+    <header>
+    <div class="header-container">
+        <div id="brand-logo">
+            <a href="index.html">
+                <img src="logo-header-light.svg" alt="Quintana Notary &amp; Signing — home" class="logo-img logo-light" width="424" height="104"><img src="logo-header-dark.svg" alt="" aria-hidden="true" class="logo-img logo-dark" width="424" height="104">
+            </a>
+        </div>
+
+        <button class="toggle-btn" id="lang-toggle">
+            <span id="toggle-label-en">Español</span>
+            <span id="toggle-label-es" style="display:none;">English</span>
+        </button>
+
+        <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Light / dark">
+            <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+            <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="main-nav" aria-label="Main">
+            <a href="index.html" id="nav-home-es" style="display:none;">Inicio</a>
+                <a href="index.html" id="nav-home-en">Home</a>
+            <div class="nav-group active">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-services">
+                    <span id="navg-services-label-es" style="display:none;">Servicios</span><span id="navg-services-label-en">Services</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-services">
+                <a href="services.html" id="navd-mobile-es" aria-current="page" style="display:none;">Servicio Notarial Móvil</a>
+                <a href="services.html" id="navd-mobile-en" aria-current="page">Mobile Notary</a>
+                <a href="apostille.html" id="navd-apost-es" style="display:none;">Apostillas</a>
+                <a href="apostille.html" id="navd-apost-en">Apostilles</a>
+                <a href="certified-copies.html" id="navd-copies-es" style="display:none;">Copias Certificadas</a>
+                <a href="certified-copies.html" id="navd-copies-en">Certified Copies</a>
+                <a href="translate.html" id="navd-transl-es" style="display:none;">Traducciones Certificadas</a>
+                <a href="translate.html" id="navd-transl-en">Certified Translations</a>
+                <a href="airport-notarizations.html" id="navd-airport-es" style="display:none;">Notarizaciones en el Aeropuerto (DIA)</a>
+                <a href="airport-notarizations.html" id="navd-airport-en">Airport Notary (DIA)</a>
+                <a href="services.html#passport-i9" id="navd-passport-es" style="display:none;">Ayuda con Pasaporte e I-9</a>
+                <a href="services.html#passport-i9" id="navd-passport-en">Passport &amp; I-9 Help</a>
+                </div>
+            </div>
+            <div class="nav-group">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-business">
+                    <span id="navg-business-label-es" style="display:none;">Para Empresas</span><span id="navg-business-label-en">For Business</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-business">
+                <a href="b2b-real-estate.html" id="navd-realestate-es" style="display:none;">Títulos y Bienes Raíces</a>
+                <a href="b2b-real-estate.html" id="navd-realestate-en">Title &amp; Real Estate</a>
+                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a>
+                <a href="immigration-attorney-notary-aurora-ice.html" id="navd-ice-en">Immigration Attorneys (Aurora ICE)</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-es" style="display:none;">Apoyo entre Colegas</a>
+                <a href="b2b-real-estate.html#notary-support" id="navd-n2n-en">Notary-to-Notary Support</a>
+                <a href="b2b-real-estate.html#professional-development" id="navd-dev-es" style="display:none;">Web y Mentoría</a>
+                <a href="b2b-real-estate.html#professional-development" id="navd-dev-en">Web &amp; Mentoring</a>
+                </div>
+            </div>
+            <a href="pricing.html" id="nav-pricing-es" style="display:none;">Precios</a>
+                <a href="pricing.html" id="nav-pricing-en">Pricing</a>
+            <div class="nav-group nav-dropdown-right">
+                <button type="button" class="nav-group-btn" aria-expanded="false" aria-controls="navg-about">
+                    <span id="navg-about-label-es" style="display:none;">Acerca de</span><span id="navg-about-label-en">About</span><span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <div class="nav-dropdown" id="navg-about">
+                <a href="about.html" id="navd-about-es" style="display:none;">Acerca de David</a>
+                <a href="about.html" id="navd-about-en">About David</a>
+                <a href="faq.html" id="navd-faq-es" style="display:none;">Preguntas Frecuentes</a>
+                <a href="faq.html" id="navd-faq-en">FAQ</a>
+                </div>
+            </div>
+            <a href="contact.html" id="nav-contact-es" class="nav-cta" style="display:none;">Reservar / Contacto</a>
+                <a href="contact.html" id="nav-contact-en" class="nav-cta">Book / Contact</a>
+        </nav>
+    </div>
+</header>
+
+    
+    <div class="statutory-bar">
+        <span id="legal-disclosure-es" style="display:none;">
+            <strong>Aviso Legal (C.R.S. § 24-21-525):</strong>
+            <span class="statutory-es"><strong>NO SOY ABOGADO LICENCIADO PARA EJERCER EL DERECHO EN EL ESTADO DE COLORADO Y NO PUEDO DAR CONSEJOS LEGALES NI ACEPTAR HONORARIOS POR CONSEJOS LEGALES. NO SOY CONSULTOR DE INMIGRACIÓN NI EXPERTO EN ASUNTOS DE INMIGRACIÓN. SI SOSPECHA DE FRAUDE, PUEDE COMUNICARSE CON LA OFICINA DEL FISCAL GENERAL DE COLORADO O CON LA CORTE SUPREMA DE COLORADO.</strong></span>
+        </span>
+        <span id="legal-disclosure-en">
+            <strong>Legal Disclosure (C.R.S. § 24-21-525):</strong>
+            <span class="statutory-en"><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF COLORADO AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE. I AM NOT AN IMMIGRATION CONSULTANT, NOR AM I AN EXPERT ON IMMIGRATION MATTERS. IF YOU SUSPECT FRAUD, YOU MAY CONTACT THE COLORADO ATTORNEY GENERAL’S OFFICE OR THE COLORADO SUPREME COURT.</strong></span>
+        </span>
+    </div>
+    <section class="h3-hero h3-hero--page">
+<div class="h3-hero-inner">
+<div class="h3-hero-text">
+<p class="h3-kicker"><span id="hc-kick-es" style="display:none;">Notary Public móvil &middot; De Loveland a Castle Rock</span><span id="hc-kick-en">Mobile notary &middot; Loveland to Castle Rock</span></p>
+<h1 id="hero-h1-es" style="display:none;">Lo que hago y dónde le puedo atender</h1>
+<h1 id="hero-h1-en">What I do, and where I can meet you</h1>
+<p class="h3-lead" id="hero-sub-es" style="display:none;">Voy a su casa, a su oficina o a donde le quede mejor en el área metropolitana de Denver. Le atiendo en español o en inglés.</p>
+<p class="h3-lead" id="hero-sub-en">I come to your home, your office, or wherever works for you in the Denver Metro area. We can do it in English or Spanish.</p>
+<div class="h3-cta" id="hero-cta">
+<a id="hc-wa-es" href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn" style="display:none;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Escríbame por WhatsApp</span></a>
+<a id="hc-wa-en" href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Text me on WhatsApp</span></a>
+<a href="tel:+13035004122" class="h3-call"><span id="hc-call-es" style="display:none;">o llame al <strong>303-500-4122</strong></span><span id="hc-call-en">or call <strong>303-500-4122</strong></span></a>
+</div>
+<p id="hc-micro-es" class="h3-micro" style="display:none;">Solo con cita. Le doy el total por escrito antes de salir para allá.</p>
+<p id="hc-micro-en" class="h3-micro">By appointment only. You get the total in writing before I head out.</p>
+<p class="h3-alt"><a href="pricing.html"><span id="hc-alt-es" style="display:none;">Ver precios</span><span id="hc-alt-en">See prices</span></a></p>
+</div>
+</div>
+<svg class="h3-ridge" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="rt-peaks-far" d="M0 40 L60 26 L110 34 L165 8 L200 20 L240 14 L300 34 L360 24 L430 38 L500 28 L580 40 L660 30 L740 42 L820 34 L900 44 L980 38 L1060 46 L1100 40 L1120 30 L1150 30 L1162 40 L1200 44 V60 H0 Z"/><path class="rt-peaks" d="M0 50 L80 40 L130 46 L185 24 L220 36 L290 44 L380 40 L470 48 L560 44 L660 50 L760 48 L860 52 L960 50 L1060 54 L1200 54 V60 H0 Z"/></svg>
+</section>
+    <main class="container svc-page">
+
+        <ul class="svc-quick" aria-label="Precios clave / Key prices">
+            <li><span class="svc-quick-val">$15</span><span id="q-15-es" style="display:none;">máximo por acto notarial (ley de Colorado)</span><span id="q-15-en">max per notarial act (Colorado law)</span></li>
+            <li class="is-green"><span class="svc-quick-val">$10</span><span id="q-10-es" style="display:none;">por acto en lugares comunitarios, sin viaje</span><span id="q-10-en">per act at community locations, no travel fee</span></li>
+            <li class="is-orange"><span class="svc-quick-val">$95</span><span id="q-95-es" style="display:none;">fijo en el aeropuerto DIA, + $10 por firma</span><span id="q-95-en">flat at DIA airport, + $10 per signature</span></li>
+            <li><span class="svc-quick-val" aria-hidden="true">✓</span><span id="q-ins-es" style="display:none;">Comisionado en Colorado y asegurado</span><span id="q-ins-en">Colorado-commissioned &amp; insured</span></li>
+        </ul>
+
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg></span>
+                <div>
+                    <p class="svc-module-num"><span id="mod1-n-es" style="display:none;">Parte 1 de 3</span><span id="mod1-n-en">Part 1 of 3</span></p>
+                    <h2 id="mod1-es" class="svc-module-title" style="display:none;">Actos notariales</h2><h2 id="mod1-en" class="svc-module-title">Standard notarial acts</h2>
+                    <p id="mod1-sub-es" class="svc-module-sub" style="display:none;">Le explico cada paso en español o en inglés, como prefiera.</p><p id="mod1-sub-en" class="svc-module-sub">I&rsquo;ll walk you through each step in English or Spanish, whichever you prefer.</p>
+                </div>
+            </div>
+            <div class="svc-grid">
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-ack-es" class="svc-tag" style="display:none;">Máx. $15 por acto</span><span id="tg-ack-en" class="svc-tag">$15 max per act</span></div>
+                    <h3 id="svc-ack-t-es" class="svc-card-title" style="display:none;">Reconocimientos de firma</h3><h3 id="svc-ack-t-en" class="svc-card-title">Acknowledgments</h3>
+                    <p id="svc-ack-p-es" style="display:none;">Usted confirma frente a mí que firmó el documento por su propia voluntad.</p><p id="svc-ack-p-en">You tell me, in person, that you signed the document of your own free will.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-jur-es" class="svc-tag" style="display:none;">Máx. $15 por acto</span><span id="tg-jur-en" class="svc-tag">$15 max per act</span></div>
+                    <h3 id="svc-jur-t-es" class="svc-card-title" style="display:none;">Juramentos y afirmaciones</h3><h3 id="svc-jur-t-en" class="svc-card-title">Oaths &amp; affirmations (jurats)</h3>
+                    <p id="svc-jur-p-es" style="display:none;">Usted jura o afirma frente a mí que lo que dice el documento es verdad, y luego firma.</p><p id="svc-jur-p-en">You swear or affirm in front of me that what the document says is true, and then you sign.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-wit-es" class="svc-tag" style="display:none;">Máx. $15 por acto</span><span id="tg-wit-en" class="svc-tag">$15 max per act</span></div>
+                    <h3 id="svc-wit-t-es" class="svc-card-title" style="display:none;">Testigo de firmas</h3><h3 id="svc-wit-t-en" class="svc-card-title">Signature witnessing</h3>
+                    <p id="svc-wit-p-es" style="display:none;">Reviso su identificación y lo veo firmar en persona.</p><p id="svc-wit-p-en">I check your ID and watch you sign in person.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-copy-es" class="svc-tag" style="display:none;">$15 por copia</span><span id="tg-copy-en" class="svc-tag">$15 per copy</span></div>
+                    <h3 id="svc-copy-t-es" class="svc-card-title" style="display:none;">Certificación de copias</h3><h3 id="svc-copy-t-en" class="svc-card-title">Copy certifications</h3>
+                    <p id="svc-copy-p-es" style="display:none;">Certifico que la copia de su documento es fiel al original: diplomas, pasaportes, identificaciones y actas de otros estados. No puedo certificar actas de Colorado ni que una persona está viva. <a href="certified-copies.html">Qué puedo y no puedo certificar</a>.</p><p id="svc-copy-p-en">I certify that a copy of your document is true to the original: diplomas, passports, IDs and out-of-state records. I can&rsquo;t certify Colorado vital records or that a person is alive. <a href="certified-copies.html">What I can and can&rsquo;t certify</a>.</p>
+                </article>
+            </div>
+
+            <h3 id="meet-title-es" class="svc-subhead" style="display:none;">Dónde nos vemos</h3><h3 id="meet-title-en" class="svc-subhead">Where we can meet</h3>
+            <div class="svc-meet">
+                <article class="svc-card svc-option">
+                    <div class="svc-option-head"><span class="svc-option-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg></span><h4 id="meet-mob-es" class="svc-option-title" style="display:none;">Donde usted esté</h4><h4 id="meet-mob-en" class="svc-option-title">Wherever you are</h4></div>
+                    <div class="svc-tags"><span id="tg-mob-es" class="svc-tag is-neutral" style="display:none;">Tarifa de viaje desde $20</span><span id="tg-mob-en" class="svc-tag is-neutral">Travel fee from $20</span></div>
+                    <dl class="svc-kv">
+                        <div><dt><span id="kv-mob-w-es" style="display:none;">Dónde</span><span id="kv-mob-w-en">Where</span></dt><dd><span id="kv-mob-wv-es" style="display:none;">Su casa, su oficina, el hospital o una cafetería cercana</span><span id="kv-mob-wv-en">Your home, your office, the hospital, or a coffee shop nearby</span></dd></div>
+                        <div><dt><span id="kv-mob-p-es" style="display:none;">Precio</span><span id="kv-mob-p-en">Price</span></dt><dd><span id="kv-mob-pv-es" style="display:none;">Hasta $15 por acto notarial, más el viaje (según las millas)</span><span id="kv-mob-pv-en">Up to $15 per notarial act, plus travel (by mileage)</span></dd></div>
+                    </dl>
+                    <p id="meet-mob-link-es" class="svc-more" style="display:none;"><a href="pricing.html#travel-fees">Tarifas de viaje</a></p><p id="meet-mob-link-en" class="svc-more"><a href="pricing.html#travel-fees">Travel fees</a></p>
+                </article>
+                <article class="svc-card svc-option is-community">
+                    <div class="svc-option-head"><span class="svc-option-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><h4 id="meet-com-es" class="svc-option-title" style="display:none;">Lugares comunitarios</h4><h4 id="meet-com-en" class="svc-option-title">Community locations</h4></div>
+                    <div class="svc-tags"><span id="tg-com-es" class="svc-tag is-green" style="display:none;">$10 por acto</span><span id="tg-com-en" class="svc-tag is-green">$10 per act</span><span id="tg-com2-es" class="svc-tag is-green" style="display:none;">Sin tarifa de viaje</span><span id="tg-com2-en" class="svc-tag is-green">No travel fee</span></div>
+                    <dl class="svc-kv">
+                        <div><dt><span id="kv-com-w-es" style="display:none;">Dónde</span><span id="kv-com-w-en">Where</span></dt><dd><span id="kv-com-wv-es" style="display:none;">Tienda Salvadoreña, MSU Denver (Biblioteca Auraria) y cualquier sucursal de la Biblioteca Pública de Denver</span><span id="kv-com-wv-en">Tienda Salvadoreña, MSU Denver (Auraria Library), and any Denver Public Library branch</span></dd></div>
+                        <div><dt><span id="kv-com-n-es" style="display:none;">Nota</span><span id="kv-com-n-en">Note</span></dt><dd><span id="kv-com-nv-es" style="display:none;">Son lugares públicos donde me reúno con clientes; no estoy afiliado a ellos</span><span id="kv-com-nv-en">Public places where I meet clients; I&rsquo;m not affiliated with them</span></dd></div>
+                    </dl>
+                    <p id="meet-com-link-es" class="svc-more" style="display:none;"><a href="contact.html#locations">Ver direcciones</a></p><p id="meet-com-link-en" class="svc-more"><a href="contact.html#locations">See addresses</a></p>
+                </article>
+            </div>
+            <p id="meet-appt-es" class="svc-note" style="display:none;"><strong>Siempre con cita previa.</strong> No estoy de planta en ningún lugar. Llámeme o escríbame primero para que nadie tenga que esperar.</p><p id="meet-appt-en" class="svc-note"><strong>Always by appointment.</strong> I&rsquo;m not set up anywhere full-time. Call or text first so nobody ends up waiting.</p>
+        </section>
+
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
+                <div>
+                    <p class="svc-module-num"><span id="mod2-n-es" style="display:none;">Parte 2 de 3</span><span id="mod2-n-en">Part 2 of 3</span></p>
+                    <h2 id="mod2-es" class="svc-module-title" style="display:none;">Servicios especiales y de viaje</h2><h2 id="mod2-en" class="svc-module-title">Specialized &amp; travel services</h2>
+                    <p id="mod2-sub-es" class="svc-module-sub" style="display:none;">Cuando un documento sale del país, se firma en el aeropuerto o necesita algo más que un sello.</p><p id="mod2-sub-en" class="svc-module-sub">When a document is leaving the country, gets signed at the airport, or needs more than a stamp.</p>
+                </div>
+            </div>
+            <div class="svc-grid">
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-minor-es" class="svc-tag is-neutral" style="display:none;">Solo firmas</span><span id="tg-minor-en" class="svc-tag is-neutral">Signatures only</span></div>
+                    <h3 id="svc-minor-t-es" class="svc-card-title" style="display:none;">Cartas de permiso de viaje para menores</h3><h3 id="svc-minor-t-en" class="svc-card-title">Minor travel consent letters</h3>
+                    <p id="svc-minor-p-es" style="display:none;">Notarizo las firmas de los padres o tutores en cartas de permiso de viaje, que muchas veces se piden para viajar a América Latina. Usted trae la carta ya escrita; yo no la redacto ni doy asesoría legal. Si la necesita en el otro idioma, también se la puedo traducir.</p><p id="svc-minor-p-en">I notarize parents&rsquo; or guardians&rsquo; signatures on travel consent letters, often needed for trips to Latin America. You bring the letter already written; I don&rsquo;t write it or give legal advice. If you need it in Spanish too, I can translate it.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-dia-es" class="svc-tag is-orange" style="display:none;">$95 fijo</span><span id="tg-dia-en" class="svc-tag is-orange">$95 flat</span><span id="tg-dia2-es" class="svc-tag is-neutral" style="display:none;">+$10 por firma</span><span id="tg-dia2-en" class="svc-tag is-neutral">+$10 per signature</span></div>
+                    <h3 id="svc-dia-t-es" class="svc-card-title" style="display:none;">Aeropuerto de Denver (DIA)</h3><h3 id="svc-dia-t-en" class="svc-card-title">Denver airport (DIA)</h3>
+                    <p id="svc-dia-p-es" style="display:none;">Lo encuentro dentro de la terminal. Son $95 fijos, con el estacionamiento incluido, más $10 por cada firma que notarice. <a href="airport-notarizations.html">Cómo funciona</a>.</p><p id="svc-dia-p-en">I&rsquo;ll meet you inside the terminal. It&rsquo;s a flat $95, parking included, plus $10 for each signature I notarize. <a href="airport-notarizations.html">How it works</a>.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-loan-es" class="svc-tag is-neutral" style="display:none;">Para compañías de títulos</span><span id="tg-loan-en" class="svc-tag is-neutral">For title companies</span></div>
+                    <h3 id="svc-loan-t-es" class="svc-card-title" style="display:none;">Firmas de préstamos</h3><h3 id="svc-loan-t-en" class="svc-card-title">Loan signings</h3>
+                    <p id="svc-loan-p-es" style="display:none;">Compras, refinanciamientos y HELOCs. La compañía de títulos me envía el paquete y yo me reúno con usted para firmar. Solo imprimo el paquete; no lo preparo. <a href="b2b-real-estate.html">Para empresas</a>.</p><p id="svc-loan-p-en">Purchases, refinances, and HELOCs. The title company sends me the package and I meet you to sign it. I only print the package; I don&rsquo;t prepare it. <a href="b2b-real-estate.html">For business</a>.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-tr-es" class="svc-tag" style="display:none;">Desde $30 por página</span><span id="tg-tr-en" class="svc-tag">From $30 per page</span></div>
+                    <h3 id="svc-tr-t-es" class="svc-card-title" style="display:none;">Traducciones certificadas</h3><h3 id="svc-tr-t-en" class="svc-card-title">Certified translations</h3>
+                    <p id="svc-tr-p-es" style="display:none;">Traduzco documentos personales y oficiales entre español e inglés, y firmo una certificación con cada uno. <a href="translate.html">Precios y paquetes</a>.</p><p id="svc-tr-p-en">I translate personal and official documents between Spanish and English, and sign a certification with each one. <a href="translate.html">Prices &amp; bundles</a>.</p>
+                </article>
+            </div>
+            <aside class="svc-tip">
+                <h3 id="svc-atty-t-es" class="svc-tip-title" style="display:none;">Si su abogado le dio instrucciones</h3><h3 id="svc-atty-t-en" class="svc-tip-title">If your attorney gave you instructions</h3>
+                <p id="svc-atty-p-es" style="display:none;">Si su abogado, aquí o en otro país, le dio instrucciones sobre cómo debe quedar la notarización, tráigalas a la cita. Yo hago la notarización conforme a la ley de Colorado; los requisitos del otro país los decide su abogado o la agencia que recibe el documento.</p><p id="svc-atty-p-en">If your attorney, here or abroad, told you how the notarization needs to look, bring those instructions to the appointment. I notarize under Colorado law; what the other country requires is for your attorney or the receiving agency to decide.</p>
+            </aside>
+        </section>
+
+        <section class="svc-apostille apostille-section" id="apostille">
+            <div class="text-center">
+                <h2 id="apx-title-es" style="display:none;">🌐 Apostillas ante la Secretaría de Estado de Colorado</h2>
+                <h2 id="apx-title-en">🌐 Colorado Secretary of State Apostilles</h2>
+                <p id="apx-intro-es" style="display:none;">Cuatro opciones: <strong>Servicio Completo</strong> (notarizo y entrego; solo local, desde $150), <strong>Mensajería Local en Denver</strong> ($85) y <strong>Mensajería Exprés Estatal</strong> ($115) para documentos ya notarizados. Si vive fuera del país, también hay <strong>Servicio internacional a distancia</strong> ($180). Entrego todo en mano en la Secretaría de Estado.</p>
+                <p id="apx-intro-en">Four options: <strong>Full-Service</strong> (I notarize and deliver; local only, from $150), <strong>Local Denver Courier</strong> ($85), and <strong>Statewide Expedited Courier</strong> ($115) for documents that are already notarized. Living abroad? There&rsquo;s also <strong>International Remote</strong> ($180). I hand-deliver everything to the Secretary of State.</p>
+                <div class="cta-buttons" style="justify-content:center; margin-top:1rem;">
+                    <a href="apostille.html" class="btn btn-primary" id="apx-go-es" style="display:none;"><span>Opciones, precios y lista de requisitos</span></a>
+                    <a href="apostille.html" class="btn btn-primary" id="apx-go-en"><span>Options, Prices &amp; Requirements Checklist</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="svc-module">
+            <div class="svc-module-head">
+                <span class="svc-module-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+                <div>
+                    <p class="svc-module-num"><span id="passport-i9-n-es" style="display:none;">Parte 3 de 3</span><span id="passport-i9-n-en">Part 3 of 3</span></p>
+                    <h2 id="passport-i9-es" class="svc-module-title" style="display:none;">Servicios de oficina y para empleadores</h2><h2 id="passport-i9-en" class="svc-module-title">Office &amp; employer services</h2>
+                    <p id="passport-i9-sub-es" class="svc-module-sub" style="display:none;">Trabajo que no lleva sello notarial, para empleadores y personas. Los formularios del gobierno son gratis; mi tarifa cubre la mecanografía y mi tiempo.</p><p id="passport-i9-sub-en" class="svc-module-sub">Work that doesn&rsquo;t need a notary seal, for employers and individuals. Government forms are free; my fee covers typing and my time.</p>
+                </div>
+            </div>
+            <div class="svc-grid is-three">
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-i9-es" class="svc-tag is-neutral" style="display:none;">Sin sello notarial</span><span id="tg-i9-en" class="svc-tag is-neutral">No notary seal</span></div>
+                    <h3 id="svc-i9-t-es" class="svc-card-title" style="display:none;">Verificación de empleo I-9</h3><h3 id="svc-i9-t-en" class="svc-card-title">I-9 employment verification</h3>
+                    <p id="svc-i9-p-es" style="display:none;">Puedo servir como su representante autorizado para revisar los documentos de su nuevo empleado y completar la Sección 2 del Formulario I-9. <a href="pricing.html#clerical">Precio</a>.</p><p id="svc-i9-p-en">I can act as your authorized representative to look at your new hire&rsquo;s documents and complete Section 2 of Form I-9. <a href="pricing.html#clerical">Pricing</a>.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-pp-es" class="svc-tag is-neutral" style="display:none;">Formularios gratis del gobierno</span><span id="tg-pp-en" class="svc-tag is-neutral">Forms are free from the government</span></div>
+                    <h3 id="svc-pp-t-es" class="svc-card-title" style="display:none;">Ayuda con el pasaporte de EE. UU.</h3><h3 id="svc-pp-t-en" class="svc-card-title">U.S. passport form help</h3>
+                    <p id="svc-pp-p-es" style="display:none;">Escribo a máquina sus respuestas en los formularios DS-11 o DS-82 y, si quiere, lo acompaño a su cita para ayudarle con el idioma. Solo cobro por la mecanografía y mi tiempo. <a href="pricing.html#passport">Opciones y precios</a>.</p><p id="svc-pp-p-en">I type your answers into the DS-11 or DS-82 form and, if you&rsquo;d like, go with you to your appointment to help with the language. I charge only for typing and my time. <a href="pricing.html#passport">Options &amp; pricing</a>.</p>
+                </article>
+                <article class="svc-card">
+                    <div class="svc-tags"><span id="tg-dmv-es" class="svc-tag is-neutral" style="display:none;">Formularios gratis del gobierno</span><span id="tg-dmv-en" class="svc-tag is-neutral">Forms are free from the government</span></div>
+                    <h3 id="svc-dmv-t-es" class="svc-card-title" style="display:none;">Papeles para el DMV</h3><h3 id="svc-dmv-t-en" class="svc-card-title">DMV paperwork</h3>
+                    <p id="svc-dmv-p-es" style="display:none;">Le ayudo a ordenar sus papeles antes de ir al DMV para que no le falte nada. Solo cobro por la mecanografía y mi tiempo. Para ayuda completa con trámites del DMV, visite <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>.</p><p id="svc-dmv-p-en">I help you get your papers in order before you go to the DMV, so you don&rsquo;t get turned away for something missing. I charge only for typing and my time. For full DMV paperwork help, visit <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="svc-module svc-prep">
+            <h2 id="prep-title-es" class="svc-module-title" style="display:none;">Antes de la cita</h2><h2 id="prep-title-en" class="svc-module-title">Before your appointment</h2>
+            <div class="svc-check-grid">
+                <div class="svc-check-col is-yes">
+                    <h3 id="bring-t-es" class="svc-check-title" style="display:none;">Qué traer</h3><h3 id="bring-t-en" class="svc-check-title">What to bring</h3>
+                    <ul class="svc-check">
+                        <li><span class="svc-mark is-yes" aria-hidden="true">✓</span><span><strong><span id="bring-1-k-es" style="display:none;">Su identificación:</span><span id="bring-1-k-en">Your ID:</span></strong> <span id="bring-1-es" style="display:none;">pasaporte, licencia de conducir u otra identificación del gobierno, vigente o vencida hace no más de un año.</span><span id="bring-1-en">a passport, driver&rsquo;s license, or other government ID that&rsquo;s current or expired no more than one year.</span></span></li>
+                        <li><span class="svc-mark is-yes" aria-hidden="true">✓</span><span><strong><span id="bring-2-k-es" style="display:none;">El documento ya lleno:</span><span id="bring-2-k-en">The document, filled out:</span></strong> <span id="bring-2-es" style="display:none;">todo menos la firma y la fecha. Esas las pone frente a mí.</span><span id="bring-2-en">everything except the signature and date. You&rsquo;ll add those in front of me.</span></span></li>
+                        <li><span class="svc-mark is-yes" aria-hidden="true">✓</span><span><strong><span id="bring-3-k-es" style="display:none;">Idioma:</span><span id="bring-3-k-en">Language:</span></strong> <span id="bring-3-es" style="display:none;">puedo notarizar documentos en cualquier idioma, pero el certificado notarial (la parte que yo firmo) va en inglés, como pide la ley de Colorado.</span><span id="bring-3-en">I can notarize documents in any language, but the notarial certificate (the part I sign) will be in English, as Colorado law requires.</span></span></li>
+                    </ul>
+                </div>
+                <div class="svc-check-col is-no">
+                    <h3 id="cant-t-es" class="svc-check-title" style="display:none;">Lo que no puedo hacer</h3><h3 id="cant-t-en" class="svc-check-title">What I can&rsquo;t do</h3>
+                    <ul class="svc-check">
+                        <li><span class="svc-mark is-no" aria-hidden="true">✗</span><span><span id="cant-1-es" style="display:none;">Explicarle términos legales o decirle qué significa un contrato.</span><span id="cant-1-en">Explain legal terms or tell you what a contract means.</span></span></li>
+                        <li><span class="svc-mark is-no" aria-hidden="true">✗</span><span><span id="cant-2-es" style="display:none;">Escoger qué tipo de notarización necesita. Eso se lo dice la agencia o la persona que va a recibir el documento.</span><span id="cant-2-en">Pick which type of notarization you need. The agency or person receiving the document will tell you.</span></span></li>
+                        <li><span class="svc-mark is-no" aria-hidden="true">✗</span><span><span id="cant-3-es" style="display:none;">Llenar espacios en blanco o corregir errores en sus formularios.</span><span id="cant-3-en">Fill in blanks or fix mistakes on your forms.</span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <aside class="legal-callout svc-legal" aria-label="Aviso legal / Legal notice">
+            <div class="legal-callout-head">
+                <span class="legal-callout-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M7 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3zM17 7l-3 7c0 1.7 1.3 3 3 3s3-1.3 3-3z"/></svg></span>
+                <div>
+                    <p class="legal-callout-cite">C.R.S. &sect; 24-21-525</p>
+                    <h2 id="svc-legal-title-es" style="display:none;">Aviso legal</h2><h2 id="svc-legal-title-en">Legal notice</h2>
+                </div>
+            </div>
+            <p id="svc-legal-statute-es" class="legal-callout-statute" style="display:none;">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="svc-legal-statute-en" class="legal-callout-statute">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
+            <p id="svc-legal-note-es" class="legal-callout-note" style="display:none;">Tampoco puedo decirle qué formularios necesita ni explicarle cómo llenarlos para lograr un resultado legal.</p><p id="svc-legal-note-en" class="legal-callout-note">I also can&rsquo;t tell you which forms you need or explain how to complete forms to achieve a legal result.</p>
+        </aside>
+
+        <section class="svc-module svc-howi">
+            <h2 id="howi-title-es" class="svc-module-title" style="display:none;">Para que sepa cómo trabajo</h2><h2 id="howi-title-en" class="svc-module-title">How I work</h2>
+            <div class="svc-grid is-three">
+                <article class="svc-card is-quiet">
+                    <h3 id="ins-title-es" class="svc-card-title" style="display:none;">Comisionado y asegurado</h3><h3 id="ins-title-en" class="svc-card-title">Commissioned &amp; insured</h3>
+                    <p id="ins-p-es" style="display:none;">Soy Notary Public comisionado en Colorado (ID 20254044224). Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones. Si necesita un certificado de seguro, pídamelo.</p><p id="ins-p-en">I&rsquo;m a Notary Public commissioned in Colorado (ID 20254044224). Servicios Quintana LLC is insured through The Hartford: general liability, data breach, and professional liability (errors &amp; omissions) for my notary and translation work. If you need a certificate of insurance, just ask.</p>
+                </article>
+                <article class="svc-card is-quiet">
+                    <h3 id="ai-t-es" class="svc-card-title" style="display:none;">Uso de IA</h3><h3 id="ai-t-en" class="svc-card-title">AI disclosure</h3>
+                    <p id="ai-p-es" style="display:none;">A veces uso inteligencia artificial como herramienta de oficina para organizar o traducir documentos. Yo reviso y edito cada resultado y hago todo lo que está en mi poder para que sea correcto; soy humano y me puedo equivocar, y si encuentra un error, lo corrijo. Nunca pongo su información personal (número de Seguro Social, dirección, etc.) en sistemas públicos de IA.</p><p id="ai-p-en">I sometimes use artificial intelligence as an office tool to help organize or translate documents. I review and edit every result and do everything in my power to make it correct; I&rsquo;m human and can make mistakes, and if you find one, I&rsquo;ll fix it. I never put your personal information (Social Security numbers, addresses, and so on) into public AI systems.</p>
+                </article>
+                <article class="svc-card is-quiet">
+                    <h3 id="brand-t-es" class="svc-card-title" style="display:none;">Aviso de marca</h3><h3 id="brand-t-en" class="svc-card-title">Brand notice</h3>
+                    <p id="brand-p-es" style="display:none;">Quintana Notary &amp; Signing es una marca de Servicios Quintana LLC.</p><p id="brand-p-en">Quintana Notary &amp; Signing is a brand of Servicios Quintana LLC.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="h3-final">
+<h2 id="svc-cta-t-es" style="display:none;">¿Hacemos la cita?</h2>
+<h2 id="svc-cta-t-en">Want to set up a time?</h2>
+<p id="svc-cta-p-es" style="display:none;">Llámeme o escríbame. Le doy el precio exacto y buscamos una hora que le funcione.</p>
+<p id="svc-cta-p-en">Call or text me. I&rsquo;ll give you the exact price and we&rsquo;ll find a time that works.</p>
+<div class="h3-cta h3-cta--center">
+<a id="fc-wa-es" href="https://wa.me/13035004122?text=Hola%20David%2C%20necesito%20notarizar%20un%20documento.%20Estoy%20en%20%28ciudad%29.%20%C2%BFTiene%20cita%20disponible%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn" style="display:none;"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Escríbame por WhatsApp</span></a>
+<a id="fc-wa-en" href="https://wa.me/13035004122?text=Hi%20David%2C%20I%20need%20something%20notarized.%20I%27m%20in%20%28city%29.%20Do%20you%20have%20an%20opening%3F" target="_blank" rel="noopener" class="btn btn-whatsapp h3-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.945c0 2.096.547 4.142 1.588 5.945L0 24l6.304-1.654a11.881 11.881 0 005.674 1.446h.005c6.585 0 11.946-5.359 11.949-11.945a11.9 11.9 0 00-3.485-8.436"/></svg><span>Text me on WhatsApp</span></a>
+<a href="tel:+13035004122" class="h3-call"><span id="fc-call-es" style="display:none;">o llame al <strong>303-500-4122</strong></span><span id="fc-call-en">or call <strong>303-500-4122</strong></span></a>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+    <nav class="footer-sitemap" aria-label="Site">
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-svc-title-es" style="display:none;">Servicios</span><span id="ft-svc-title-en">Services</span></h2>
+            <ul>
+                <li><a href="services.html" id="ft-svc-mobile-es" style="display:none;">Servicio Notarial Móvil</a><a href="services.html" id="ft-svc-mobile-en">Mobile Notary</a></li>
+                <li><a href="apostille.html" id="ft-svc-apost-es" style="display:none;">Apostillas</a><a href="apostille.html" id="ft-svc-apost-en">Apostilles</a></li>
+                <li><a href="certified-copies.html" id="ft-svc-copies-es" style="display:none;">Copias Certificadas</a><a href="certified-copies.html" id="ft-svc-copies-en">Certified Copies</a></li>
+                <li><a href="translate.html" id="ft-svc-transl-es" style="display:none;">Traducciones Certificadas</a><a href="translate.html" id="ft-svc-transl-en">Certified Translations</a></li>
+                <li><a href="airport-notarizations.html" id="ft-svc-airport-es" style="display:none;">Notarizaciones en el Aeropuerto (DIA)</a><a href="airport-notarizations.html" id="ft-svc-airport-en">Airport Notary (DIA)</a></li>
+                <li><a href="services.html#passport-i9" id="ft-svc-passport-es" style="display:none;">Ayuda con Pasaporte e I-9</a><a href="services.html#passport-i9" id="ft-svc-passport-en">Passport &amp; I-9 Help</a></li>
+                <li><a href="pricing.html" id="ft-svc-pricing-es" style="display:none;">Precios</a><a href="pricing.html" id="ft-svc-pricing-en">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-biz-title-es" style="display:none;">Para Empresas</span><span id="ft-biz-title-en">For Business</span></h2>
+            <ul>
+                <li><a href="b2b-real-estate.html" id="ft-biz-realestate-es" style="display:none;">Títulos y Bienes Raíces</a><a href="b2b-real-estate.html" id="ft-biz-realestate-en">Title &amp; Real Estate</a></li>
+                <li><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-es" style="display:none;">Abogados de Inmigración (ICE Aurora)</a><a href="immigration-attorney-notary-aurora-ice.html" id="ft-biz-ice-en">Immigration Attorneys (Aurora ICE)</a></li>
+                <li><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-es" style="display:none;">Apoyo entre Colegas</a><a href="b2b-real-estate.html#notary-support" id="ft-biz-n2n-en">Notary-to-Notary Support</a></li>
+                <li><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-es" style="display:none;">Web y Mentoría</a><a href="b2b-real-estate.html#professional-development" id="ft-biz-dev-en">Web &amp; Mentoring</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-col-title"><span id="ft-co-title-es" style="display:none;">Acerca de</span><span id="ft-co-title-en">About</span></h2>
+            <ul>
+                <li><a href="about.html" id="ft-co-about-es" style="display:none;">Acerca de David</a><a href="about.html" id="ft-co-about-en">About David</a></li>
+                <li><a href="faq.html" id="ft-co-faq-es" style="display:none;">Preguntas Frecuentes</a><a href="faq.html" id="ft-co-faq-en">FAQ</a></li>
+                <li><a href="contact.html#locations" id="ft-co-contact-es" style="display:none;">Contacto y Ubicaciones</a><a href="contact.html#locations" id="ft-co-contact-en">Contact &amp; Locations</a></li>
+                <li><a href="privacy.html" id="ft-co-privacy-es" style="display:none;">Política de Privacidad</a><a href="privacy.html" id="ft-co-privacy-en">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="footer-info">
+        <section class="footer-block">
+            <h2 class="footer-block-title">Quintana Notary &amp; Signing</h2>
+            <p id="ft-tagline-es" class="footer-lead" style="display:none;">Notary Public móvil de Loveland a Castle Rock, en español y en inglés.</p><p id="ft-tagline-en" class="footer-lead">Mobile Notary Public from Loveland to Castle Rock, in English and Spanish.</p>
+            <ul class="footer-contact">
+                <li><strong id="ft-call-es" style="display:none;">Llamadas y mensajes:</strong><strong id="ft-call-en">Call or text:</strong> <a href="tel:+13035004122">303-500-4122</a></li>
+                <li><strong id="ft-email-es" style="display:none;">Correo:</strong><strong id="ft-email-en">Email:</strong> <a href="mailto:info@quintananotarysigning.com">info@quintananotarysigning.com</a></li>
+            </ul>
+            <div class="footer-parent"><a class="footer-parent-logo" href="https://serviciosquintana.com/" target="_blank" rel="noopener"><img src="servicios-quintana-logo-sm.png" alt="Servicios Quintana LLC" width="320" height="226" loading="lazy" decoding="async"></a><p id="ft-llc-es" class="footer-muted" style="display:none;">Una marca de <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p><p id="ft-llc-en" class="footer-muted">A brand of <a href="https://serviciosquintana.com/" target="_blank" rel="noopener">Servicios Quintana LLC</a>.</p></div>
+            <p id="ft-sister-es" class="footer-muted" style="display:none;">Marca hermana: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, ayuda con el papeleo del DMV. No es parte del DMV ni está afiliada a él.</p><p id="ft-sister-en" class="footer-muted">Sister brand: <a href="https://ayudadmv.com/" target="_blank" rel="noopener">Ayuda DMV</a>, help with DMV paperwork. Not part of or affiliated with the DMV.</p>
+        </section>
+
+        <section class="footer-block">
+            <h2 id="ft-cred-h-es" class="footer-block-title" style="display:none;">Comisión y seguro</h2><h2 id="ft-cred-h-en" class="footer-block-title">Commission &amp; insurance</h2>
+            <p id="ft-commission-es" class="footer-lead" style="display:none;"><strong>Notary Public comisionado en Colorado</strong><br>ID de comisión 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verificar en la Secretaría de Estado</a></p><p id="ft-commission-en" class="footer-lead"><strong>Colorado-commissioned Notary Public</strong><br>Commission ID 20254044224 · <a href="https://www.coloradosos.gov/notary/pages/public/home.xhtml" target="_blank" rel="noopener">Verify with the Secretary of State</a></p>
+            <p id="footer-trust-es" class="footer-muted" style="display:none;">Servicios Quintana LLC tiene seguro con The Hartford: responsabilidad civil general, cobertura por filtración de datos y responsabilidad profesional (errores y omisiones) para mis servicios notariales y mis traducciones.</p><p id="footer-trust-en" class="footer-muted">Servicios Quintana LLC is insured through The Hartford: general liability, data breach coverage, and professional liability (errors &amp; omissions) for my notary work and my translation work.</p>
+            <p id="ft-coi-es" class="footer-muted" style="display:none;">Certificado de seguro disponible a petición.</p><p id="ft-coi-en" class="footer-muted">Certificate of insurance available on request.</p>
+        </section>
+    </div>
+
+    <div class="footer-legal">
+        <div class="footer-legal-inner">
+            <h2 id="ft-legal-h-es" class="footer-block-title" style="display:none;">Aviso legal (C.R.S. § 24-21-525)</h2><h2 id="ft-legal-h-en" class="footer-block-title">Legal notice (C.R.S. § 24-21-525)</h2>
+            <p id="ft-statute-es" class="footer-statute" style="display:none;">No soy abogado licenciado para ejercer el derecho en el estado de Colorado y no puedo dar consejos legales ni aceptar honorarios por consejos legales. No soy consultor de inmigración ni experto en asuntos de inmigración. Si sospecha de fraude, puede comunicarse con la oficina del Fiscal General de Colorado o con la Corte Suprema de Colorado.</p><p id="ft-statute-en" class="footer-statute">I am not an attorney licensed to practice law in the state of Colorado and I may not give legal advice or accept fees for legal advice. I am not an immigration consultant, nor am I an expert on immigration matters. If you suspect fraud, you may contact the Colorado attorney general&rsquo;s office or the Colorado supreme court.</p>
+            <p id="disclaimer-es" class="footer-muted" style="display:none;">Las tarifas notariales están limitadas por ley a un <strong>máximo de $15 por acto notarial</strong> (C.R.S. § 24-21-529); las tarifas de viaje, conveniencia y trabajo de oficina son aparte y se acuerdan por adelantado. Un Notary Public no es abogado y no puede dar asesoría ni representación legal. No estoy afiliado a ninguna agencia del gobierno local, estatal ni federal.</p><p id="disclaimer-en" class="footer-muted">Notary fees are limited by law to a <strong>maximum of $15 per notarial act</strong> (C.R.S. § 24-21-529); travel, convenience, and office-work fees are separate and agreed on in advance. A Notary Public is not an attorney and cannot give legal advice or legal representation. I am not affiliated with any local, state, or federal government agency.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2026 Quintana Notary &amp; Signing</span>
+        <span class="footer-bottom-links">
+            <a href="privacy.html" id="footer-privacy-es" style="display:none;">Política de privacidad</a><a href="privacy.html" id="footer-privacy-en">Privacy policy</a>
+            <span aria-hidden="true">·</span>
+            <a href="#" data-cookie-settings id="footer-cookies-es" style="display:none;">Preferencias de cookies</a><a href="#" data-cookie-settings id="footer-cookies-en">Cookie settings</a>
+        </span>
+    </div>
+</footer>
+    <script src="script.js?v=20261106e"></script>
+<script src="consent.js?v=20261020b"></script>
+</body>
+</html>

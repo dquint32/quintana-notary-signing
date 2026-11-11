@@ -55,11 +55,11 @@ CSU Global – Graduate Certificate in Information Systems Auditing (graduate st
 
 🌐 Languages (English and Spanish pages)
 
-Every page in this folder holds both languages. English is the one visible in the file; the Spanish twin of each page lives in `es/` and is **generated**:
+The editable pages live in `_src/`. Each one holds both languages (ids ending in `-es` / `-en`). The English pages in this folder and the Spanish pages in `es/` are **generated** from them, one language per page:
 
-1. Edit the pages in this folder (never the copies in `es/`).
-2. Run `python build_es.py`. It rebuilds `es/*.html` and `sitemap.xml`.
-3. Commit everything, including the `es/` folder.
+1. Edit the pages in `_src/` (never the copies in this folder or in `es/`). Spanish JSON-LD for a page goes in `_build/ld-es/<page>.html`.
+2. Run `python build_es.py`. It rebuilds the English pages, `es/*.html` and `sitemap.xml`.
+3. Commit everything: `_src/`, the root pages, `es/` and `sitemap.xml`. Jekyll does not publish `_src/` or `_build/`.
 
 How visitors get their language:
 

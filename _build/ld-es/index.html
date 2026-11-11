@@ -4,7 +4,10 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Notary",
+          "@type": [
+            "LocalBusiness",
+            "ProfessionalService"
+          ],
           "@id": "https://www.quintananotarysigning.com/#business",
           "name": "Quintana Notary & Signing",
           "url": "https://www.quintananotarysigning.com/es/",
@@ -126,10 +129,19 @@
             "@id": "https://www.quintananotarysigning.com/#david"
           },
           "parentOrganization": {
+            "@id": "https://serviciosquintana.com/#org",
             "@type": "Organization",
             "name": "Servicios Quintana LLC",
             "url": "https://serviciosquintana.com/",
-            "logo": "https://www.quintananotarysigning.com/servicios-quintana-logo.png"
+            "logo": "https://www.quintananotarysigning.com/servicios-quintana-logo.png",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "Colorado Secretary of State entity ID",
+              "value": "20261010294"
+            },
+            "sameAs": [
+              "https://www.coloradosos.gov/biz/BusinessEntityDetail.do?masterFileId=20261010294"
+            ]
           },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -211,6 +223,16 @@
                 }
               }
             ]
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.74008,
+            "longitude": -104.92744
+          },
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "Colorado Secretary of State trade name ID",
+            "value": "20261010446"
           }
         },
         {
@@ -238,12 +260,12 @@
               "name": "Comisión de Notary Public de Colorado",
               "credentialCategory": "Comisión estatal",
               "identifier": "20254044224",
-              "validUntil": "2029-11-28",
               "recognizedBy": {
                 "@type": "GovernmentOrganization",
                 "name": "Colorado Secretary of State",
                 "url": "https://www.coloradosos.gov/notary/pages/public/home.xhtml"
-              }
+              },
+              "expires": "2029-11-28"
             },
             {
               "@type": "EducationalOccupationalCredential",
